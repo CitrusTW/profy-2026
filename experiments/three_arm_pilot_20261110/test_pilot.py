@@ -8,6 +8,7 @@ from contextlib import redirect_stdout
 from pathlib import Path
 from unittest.mock import Mock, patch
 from pilot import DEV, INPUTS, SKILL, Pilot, candidate_document, decode_file, exported_file, proposal_gate, public_writer_evidence, shared_experience, sha, skill_read_evidence, tool_calls
+from report_v2 import invoice_diagnostic
 
 class PilotTests(unittest.TestCase):
     def test_output_transport_requires_exact_hash(self):
@@ -116,6 +117,27 @@ class PilotTests(unittest.TestCase):
         self.assertTrue(skill_read_evidence(events,skill)['verified'])
         self.assertFalse(skill_read_evidence(events,'Different old skill')['verified'])
         self.assertFalse(skill_read_evidence(events[:1],skill)['verified'])
+
+    def test_report_diagnostic_keeps_original_output_unchanged(self):
+        with tempfile.TemporaryDirectory() as temp:
+            folder=Path(temp); (folder/'scoring_only').mkdir()
+            reference=[{'invoice_page_number':1,'reason':'Issue','po_number':None},
+                       {'invoice_page_number':2,'reason':'Issue','po_number':'x'},
+                       {'invoice_page_number':3,'reason':'Clean','po_number':'y'}]
+            actual=[{'invoice_page_number':1,'reason':'Issue','po_number':'invalid'},
+                    {'invoice_page_number':3,'reason':'Issue','po_number':'y'}]
+            (folder/'scoring_only/ground_truth.json').write_text(json.dumps(reference))
+            output=folder/'fraud_report.json'; output.write_text(json.dumps(actual))
+            before=output.read_bytes(); diagnostic=invoice_diagnostic(folder)
+            self.assertEqual(diagnostic['missed_pages'],1)
+            self.assertEqual(diagnostic['extra_pages'],1)
+            self.assertEqual(diagnostic['exact_field_differences'],{'po_number':1})
+            self.assertEqual(output.read_bytes(),before)
+
+    def test_candidate_rejects_development_only_instructions(self):
+        for body in ['Write /root/diff_report.json','Compare employee fields','Prepare the HR report']:
+            with self.assertRaisesRegex(ValueError,'GENERAL record-reconciliation'):
+                candidate_document(body,'x'*2000)
 
 if __name__ == '__main__':
     unittest.main()

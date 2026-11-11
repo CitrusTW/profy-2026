@@ -140,6 +140,8 @@ def candidate_document(body, old_text):
         raise ValueError(f'Candidate is {len(content.encode())} UTF-8 bytes; must be below {len(old_text.encode())}. Rewrite more concisely; do not truncate steps.')
     if re.search(r'EMP\d{3,}|PO-\d{3,}|Vendor\s+\d+|/verifier|ground_truth|expected_output',content,re.I):
         raise ValueError('Candidate contains task-specific IDs or grading references')
+    if re.search(r'\bemployees?\b|\bHR\b|/root/|employees_backup\.pdf|employees_current\.xlsx|diff_report\.json',body,re.I):
+        raise ValueError('Rewrite as a GENERAL record-reconciliation procedure, not an employee/HR procedure. Remove development filenames, paths and output names. Refer to the current task contract instead.')
     return content
 
 def skill_read_evidence(events, expected_text):
@@ -227,7 +229,7 @@ class Pilot:
             raise RuntimeError('Attempt already reserved; do not launch twice: '+label)
         with self.lock:
             self.reservations += 1
-            assert self.reservations <= 5, 'At most five Profy model invocations'
+            assert self.reservations <= getattr(self,'max_profy_invocations',5), 'Profy invocation limit reached'
         save(folder/'started.json',{'label':label,'task':task,'model':MODEL,'utc':dt.datetime.now(dt.timezone.utc).isoformat()})
         end_user = 'cgl-three-arm-'+self.out.name+'-'+label
         src = self.dev_inputs if task == DEV else self.bench/task/'environment'
@@ -367,15 +369,28 @@ Write the original requested JSON output file. Return its exact bytes through ba
         save(stage/'receipt.json',result)
         return result
 
-    def propose(self, before, old_text, experience):
+    def propose(self, before, old_text, experience, start_attempt=1):
         prompt = '''Propose a compact reusable workflow for reconciling records across a document and a current table, informed only by this PUBLIC development task and numeric execution results. This is a new research prototype, not native product evolution. Return only JSON {"body": "Markdown workflow without YAML header", "rationale": "brief"}. Aim for 500-700 ASCII bytes in body, always stay below max_body_utf8_bytes. Use 4-6 short steps, no headings or examples. Keep source evidence, distinguish missing from zero, use stable IDs and explicit normalization, do not modify originals, and obey each current task's output contract. Do not memorize people, row IDs, exact answers, amounts, filenames, benchmark checks or output values. Do not change identity, Soul or permissions. You receive no private expert content, raw tool results, answers or hidden tests. A separate real development execution decides acceptance; your own estimates do not prove improvement.\n'''
         header = SKILL_HEADER
         evidence = public_writer_evidence(before['score'],experience,len(old_text.encode())-len(header.encode())-1)
         messages = [{'role':'user','content':prompt+json.dumps(evidence,ensure_ascii=False)}]
-        for attempt in range(1,MAX_WRITER_REQUESTS+1):
+        if start_attempt > 1:
+            assert start_attempt == 2, 'Only one bounded development revision'
+            previous = json.loads((self.out/'writer_response.json').read_text())['choices'][0]['message']['content']
+            try:
+                candidate_document(json.loads(previous)['body'],old_text)
+            except (ValueError,KeyError,TypeError) as exc:
+                feedback = str(exc)
+            else:
+                raise ValueError('Cannot resume revision without a rejected first candidate')
+            save(self.out/'candidate_rejection_1.json',{'reason':feedback,'phase':'development-only correction before held-out testing'})
+            messages = json.loads((self.out/'writer_request.json').read_text())['messages']
+            messages.extend([{'role':'assistant','content':previous},{'role':'user','content':feedback+' Return revised JSON with body and rationale, under the original byte budget. No test-task feedback is available.'}])
+        for attempt in range(start_attempt,MAX_WRITER_REQUESTS+1):
             request = {'model':WRITER,'temperature':0,'max_tokens':1200,'messages':list(messages),
                        'response_format':{'type':'json_object'}}
             suffix = '' if attempt == 1 else '_'+str(attempt)
+            assert not (self.out/('writer_request'+suffix+'.json')).exists(), 'No repeated writer request'
             save(self.out/('writer_request'+suffix+'.json'),request)
             req = urllib.request.Request('https://openrouter.ai/api/v1/chat/completions',data=json.dumps(request).encode(),
                   headers={'Authorization':'Bearer '+self.router_key,'Content-Type':'application/json'},method='POST')

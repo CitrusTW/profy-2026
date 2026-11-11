@@ -76,6 +76,8 @@ python pilot.py --workspace /path/to/CogniLife --out /path/to/local-results --de
 
 原程序的strict分数是整道任务通过=1、没通过=0. pytest通过项数只是诊断, 不是字段准确率. 一个考试task只能提供一次小样例证据, 不做显著性或广泛泛化结论.
 
+修正版的离线报告用report_v2.py生成. 它读取summary.json、原生事件和原评分结果, 不调用模型, 不修改答案. 执行时传入结果目录和执行代码commit: `python report_v2.py /path/to/local-results --source-commit COMMIT`. 输出RESULTS_V2.md和RESULTS_V2.json; 同时检查no-skills的输入与调用、新旧expert包的文件差异、第三组skill的真实读取证据.
+
 ## 代码来源
 
-pilot.py、test_pilot.py、recover_outputs.py和analyze_results.py是本次新写. 后两份只处理已保存的数据, 不调用模型, 专门用于本轮首版记录; analyze_results.py会拒绝把首版结论套到v2. archive/只保存此前本助手写过、未用于论文的研究脚本. 不含袋袋源码、expert文件、benchmark题面/附件/答案、官方grader或他人代码. 相关来源只写外部路径和出处, 不把内容复制进来.
+pilot.py、test_pilot.py、recover_outputs.py、analyze_results.py和report_v2.py是本次新写. 后三份只处理已保存的数据, 不调用模型. recover_outputs.py和analyze_results.py专门用于首版记录; analyze_results.py会拒绝把首版结论套到v2. archive/只保存此前本助手写过、未用于论文的研究脚本. 不含袋袋源码、expert文件、benchmark题面/附件/答案、官方grader或他人代码. 相关来源只写外部路径和出处, 不把内容复制进来.
