@@ -1,0 +1,32 @@
+{
+  "scores": {
+    "grid-dispatch-operator": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "strict": 1,
+      "original_returncode": 0,
+      "source_sha256": "efe68ec3340394872251179295c9f3e426d3aed26008f0864b0bb381b41942fd",
+      "original_test_script_sha256": "e5e6feff7539e874cd070669556b03bd96d88ff91755973262dfec6cae9c6c05",
+      "verifier_unmodified": true,
+      "grader_image": "cognilife-sb-grid-grader-20261111",
+      "oracle_environment_check": true
+    },
+    "energy-market-pricing": {
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "skipped": 0,
+      "strict": 1,
+      "original_returncode": 0,
+      "source_sha256": "72049be44ff8228ce8380efe5ffcb89adef8629845b762b929570d122b428066",
+      "original_test_script_sha256": "55a257735b8acd4fb23fdd06ebff92593842bb6dc8ee6ec67d60c06eb5382b1a",
+      "verifier_unmodified": true,
+      "grader_image": "cognilife-sb-grid-grader-20261111",
+      "oracle_environment_check": true
+    }
+  },
+  "model_calls": 0,
+  "oracle_never_sent_to_evolution": true
+}

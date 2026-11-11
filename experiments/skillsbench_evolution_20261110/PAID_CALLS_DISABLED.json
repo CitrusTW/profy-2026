@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-11",
+  "paid_calls_allowed": false,
+  "reason": "Latest user instruction: do not spend money. Earlier paid-run permission no longer applies.",
+  "affects": [
+    "Profy paid solver calls",
+    "OpenRouter paid Evolution calls"
+  ],
+  "restart_requires": "New explicit authorization to spend on model API calls",
+  "currently_running_paid_calls": 0,
+  "new_network_family_model_calls": 0
+}

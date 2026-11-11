@@ -1,5 +1,7 @@
 # SkillsBench skill evolution 小验证
 
+最新执行限制: 用户随后要求不花钱, 已写入PAID_CALLS_DISABLED.json. Profy和OpenRouter付费入口均被锁住, 即使旧命令带--allow-paid也会拒绝. 只继续离线准备; 新批次尚无付费模型结果.
+
 最新进度(2026-11-11): 第5轮达到预定的小范围目标并再次确认, 随后冻结skill, 完成2道配套题的三组对照, 共6次新求解. 原版和进化版都通过两题全部原测试; 执行tokens合计分别为237638和217326, 本次进化版少8.55%. 单OBJ题少26.7%, 分部件题反而多18.2%, 收益不是每题都有. 已在第5轮停止进化, 未启动87题全库. 看[最终数字和说明](../../results/run-04-up-to30/full-compatible-two/REPORT.md)、[逐轮进度](../../results/run-04-up-to30/PROGRESS.md)与[小范围记录](../../results/run-04-up-to30/SMALL_SCOPE_REPORT.md). 两题已用于开发, 这次结果不算独立泛化验证; 也不是完整CogniLife平台复现. 论文未改.
 
 **旧结果解释纠正:** [INDEXING_DIAGNOSIS.md](INDEXING_DIAGNOSIS.md)已定位run-03第2份skill的官方1/3原因: 保留索引改变顶点重复方式, 原verifier只抽v列表且不读f索引, 对等价OBJ表示敏感. 158份输出在原评分float32精度下按f展开的三角形角点全部匹配. 官方分数不改, 但不能再直接称为几何质量退步. 该诊断没有付费调用; 上面的新结果来自诊断后获准的第4至5轮及冻结对照.

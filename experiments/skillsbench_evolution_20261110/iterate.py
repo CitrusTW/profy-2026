@@ -10,9 +10,9 @@ from native_evolution import evolve, require_paid
 from run import Study, DEV, TEST, save
 
 
-def evidence(folder, text):
+def evidence(folder, text, dev_task=DEV, test_task=TEST):
     row = json.loads((folder/'result.json').read_text())
-    if row['task'] != DEV:
+    if row['task'] != dev_task:
         raise ValueError('Only DEV records may enter evolution')
     if not (row['completed'] and row['output_received'] and row['target_skill_read_verified'] and row['error'] is None and not row['external_skill_tools_observed']):
         raise ValueError('Incomplete or contaminated DEV attempt')
@@ -21,7 +21,7 @@ def evidence(folder, text):
     history = {'request': json.loads((folder/'request.json').read_text()),
                'events': [json.loads(s) for s in (folder/'events.jsonl').read_text().splitlines()]}
     payload = json.dumps(history, ensure_ascii=False)
-    if any(marker in payload for marker in [TEST, 'coordinate_diagnostic.json', 'gen_ground_truth.mjs', 'test_outputs.py']):
+    if any(marker in payload for marker in [test_task, 'coordinate_diagnostic.json', 'gen_ground_truth.mjs', 'test_outputs.py']):
         raise ValueError('Evaluation/scoring marker in DEV evidence')
     metrics = {**row['tokens'], 'strict': row['score']['strict'], 'skill_chars': len(text),
                'skill_version_note': 'DEV skill sha256='+row['skill_sha256'][:20]}

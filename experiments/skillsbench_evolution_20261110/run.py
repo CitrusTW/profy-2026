@@ -94,8 +94,11 @@ class Study:
         self.strings = old.strings
         self.args, self.old = args, old
         self._transport = None
-        self.target = self.bench/DEV/'environment/skills/threejs/SKILL.md'
-        assert self.target.read_bytes() == (self.bench/TEST/'environment/skills/threejs/SKILL.md').read_bytes()
+        self.dev_task = getattr(args, 'dev_task', DEV)
+        self.skill_name = getattr(args, 'skill_name', 'threejs')
+        self.target = self.bench/self.dev_task/'environment/skills'/self.skill_name/'SKILL.md'
+        if self.dev_task == DEV:
+            assert self.target.read_bytes() == (self.bench/TEST/'environment/skills/threejs/SKILL.md').read_bytes()
 
     @property
     def transport(self):
@@ -103,6 +106,9 @@ class Study:
         if self._transport is None:
             self._transport = ProfyTransport(self.old, self.args.keys_file)
         return self._transport
+
+    def input_file(self, task):
+        return self.bench/task/'environment/data/object.js', 'data/object.js'
 
     def setup_grader(self, task):
         dest = self.out/'grader_environment'/task
@@ -159,8 +165,9 @@ class Study:
         save(f/'started.json', {'task': task, 'model': MODEL, 'label': label})
         user = 'sb-evo-'+self.out.name+'-'+label
         source = self.bench/task/'environment'
+        input_path, input_name = self.input_file(task)
         with zipfile.ZipFile(f/'task_input.zip', 'w', compression=zipfile.ZIP_DEFLATED) as z:
-            z.write(source/'data/object.js', 'data/object.js')
+            z.write(input_path, input_name)
         files = [f/'task_input.zip']
         expected = {}
         if not no_skills:
@@ -168,7 +175,7 @@ class Study:
                 for p in sorted((source/'skills').rglob('*')):
                     if p.is_file() and not p.name.startswith('.'):
                         rel = p.relative_to(source/'skills').as_posix()
-                        raw = candidate.encode() if candidate is not None and rel == 'threejs/SKILL.md' else p.read_bytes()
+                        raw = candidate.encode() if candidate is not None and rel == self.skill_name+'/SKILL.md' else p.read_bytes()
                         z.writestr('bench_skills/'+rel, raw)
                         expected['bench_skills/'+rel] = sha(raw)
             files.append(f/'benchmark_skills.zip')
@@ -177,6 +184,11 @@ class Study:
         session = self.transport.api('/v1/sessions', {'agent': self.transport.expert_id, 'title': 'SkillsBench '+label}, user)['id']
         save(f/'session.json', {'id': session})
         tasktext = (self.bench/task/'task.md').read_text().split('---', 2)[2].strip()
+        setup, common = self.instructions(task, no_skills)
+        body = {'agent': {'id': self.transport.expert_id, 'model': MODEL, 'tools': []}, 'rules': [], 'environment': {'type': 'profy_hosted', 'skills': []}, 'enable_memory': False, 'expert_partner': [], 'input': tasktext+'\n\n'+setup+common, 'stream': True, 'session_id': session, 'attachment_file_ids': [r['file_id'] for r in receipts]}
+        return self.execute(f, label, task, candidate, no_skills, body, session, user, input_path)
+
+    def instructions(self, task, no_skills):
         version = '0.175.0' if task == DEV else '0.170.0'
         setup = ('Unzip benchmark_skills.zip into this session. Use read to load bench_skills/threejs/SKILL.md and bench_skills/obj-exporter/SKILL.md in full before solving; follow relevant supplied instructions and references. Compute and print SBP_ACTIVE_SKILL_SHA256:<computed hash> of bench_skills/threejs/SKILL.md with bash. '
                  if not no_skills else 'No benchmark skills are supplied. Solve with ordinary code/file tools. Do not discover or activate any other expert/user/builtin skill packages. ')
@@ -184,7 +196,9 @@ class Study:
 Execution adapter instructions (same in all groups): Unzip task_input.zip into this session directory, so data/object.js exists. Paths /root/ in the original task mean this session directory. Preserve that input unchanged. Node.js/npm are available; use the task-pinned three@VERSION if installation is needed. No web search, Memory, delegation, other sessions, benchmark tests, oracle or reference answers. Do not ask questions; produce the best supported original deliverables. Use at most 48 tool calls and 24 model turns.
 After writing the original requested outputs under output/, package only those actual files into deliverables.zip. Include manifest.json at ZIP root containing {"input_sha256": "computed SHA256 of data/object.js", "files": {"output/path.obj": "computed SHA256 of those exact bytes", ...}}. Use Python zipfile to put the actual output/ files and manifest.json into deliverables.zip, without altering/reformatting the output bytes. Print [OUTPUT] deliverables.zip and SBP_NATIVE_ZIP_SHA256:<computed SHA256 of deliverables.zip>. This is only file transport after solving, not a new deliverable requirement for the original grader. Final response briefly names the output file(s).
 '''.replace('VERSION', version)
-        body = {'agent': {'id': self.transport.expert_id, 'model': MODEL, 'tools': []}, 'rules': [], 'environment': {'type': 'profy_hosted', 'skills': []}, 'enable_memory': False, 'expert_partner': [], 'input': tasktext+'\n\n'+setup+common, 'stream': True, 'session_id': session, 'attachment_file_ids': [r['file_id'] for r in receipts]}
+        return setup, common
+
+    def execute(self, f, label, task, candidate, no_skills, body, session, user, input_path):
         save(f/'request.json', body)
         stop = threading.Event()
         def interrupt():
@@ -235,7 +249,7 @@ After writing the original requested outputs under output/, package only those a
             (f/'deliverables.zip').write_bytes(archive)
             if not hashes or sha(archive) != hashes[-1]: raise ValueError('Native ZIP hash does not match download')
             manifest = unpack_output(archive, f)
-            assert manifest['input_sha256'] == sha((source/'data/object.js').read_bytes())
+            assert manifest['input_sha256'] == sha(input_path.read_bytes())
         target_hash = sha((candidate if candidate is not None else self.target.read_text()).encode()) if not no_skills else None
         read_match = any(e.get('type') == 'tool_call.result' and e.get('tool_name') == 'read' and (candidate if candidate is not None else self.target.read_text()).strip() in '\n'.join(self.strings(e.get('result'))) for e in events) if not no_skills else None
         seen_hashes = re.findall(r'SBP_ACTIVE_SKILL_SHA256:\s*([0-9a-f]{64})', texts)

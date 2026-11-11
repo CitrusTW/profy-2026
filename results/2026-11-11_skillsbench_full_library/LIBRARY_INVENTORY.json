@@ -1,0 +1,2788 @@
+{
+  "task_count": 87,
+  "paid_calls": 0,
+  "keys_read": false,
+  "scoring_or_oracle_read": false,
+  "tasks_with_license_review_flag": 23,
+  "scope": "Static source inventory, not executed benchmark results or a legal clearance",
+  "rows": [
+    {
+      "task": "3d-scan-calc",
+      "task_sha256": "99d7ef3e5ebe2785cd936f269be6d8f179831f6fd788f484146ffffa6fad91b8",
+      "public_environment_bytes": 18646,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "mesh-analysis",
+          "sha256": "b0c908a5e74b53e73d53105526a57949b90a3e733ea35c14fe8406342b84f7fe",
+          "body_bytes": 2230,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "ada-bathroom-plan-repair",
+      "task_sha256": "b68a30f4ca0d8fa45a3ff58208d5d0aac1e2d31b04c760abfcd74f1c1f9ae6e9",
+      "public_environment_bytes": 785863,
+      "public_environment_file_count": 10,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "ada-plan-view-accessibility",
+          "sha256": "d6177e0345a6b98f8d6f085a1dc8ccaad6ea4f5f3404387ece958d3c9af6ac83",
+          "body_bytes": 3947,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "architectural-dxf-extraction",
+          "sha256": "843682ecc8b8230245fa52e3e1f00f48bec3df2e669516fb7a0ac3ead62ebb98",
+          "body_bytes": 5534,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "geometric-layout-repair",
+          "sha256": "9fc46125c19311703f6c752ad2cffd9ad9f9cd2db6983fcb9b76800f8b7d9c8a",
+          "body_bytes": 5163,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "adaptive-cruise-control",
+      "task_sha256": "facc7bde3820837e58f1739176272249e4923170a5031f240e3f8a20b3238e46",
+      "public_environment_bytes": 29406,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "csv-processing",
+          "sha256": "bba82e4a401fefe9cd040ff6ba9ccaaed6062876264e358c306089fdb7a13cee",
+          "body_bytes": 1819,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pid-controller",
+          "sha256": "d274422849bf5f73b7f643db36f9ebd23e488271ad69f0f62a457b3ee0b2b828",
+          "body_bytes": 2690,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "simulation-metrics",
+          "sha256": "9e145fd19a2c4e7c20cda3343a7156caecb7b7660592c8f655de83d8e814b351",
+          "body_bytes": 2157,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "vehicle-dynamics",
+          "sha256": "bc320079e421dfea427609d9e369283a8a74c5aa520204300bd70dad1c40f1cb",
+          "body_bytes": 2261,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "yaml-config",
+          "sha256": "6a53aad718ab75c93dfc00ed0644b06a85a55e516fc7a1ed716ee4889396eff8",
+          "body_bytes": 1580,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "azure-bgp-oscillation-route-leak",
+      "task_sha256": "928f6d33162bb994b7a0e4ee858383d307585df097c4e5efac312716f7beab27",
+      "public_environment_bytes": 150806,
+      "public_environment_file_count": 6,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "azure-bgp",
+          "sha256": "f66f553092bf7831bf944f4d26690c8e2825b1640c5ce0993bad6f9251d3d669",
+          "body_bytes": 9824,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "bike-rebalance",
+      "task_sha256": "f03115b34093cbb29c2424fb29a7c96a90257b4a57f7e4adad9d7caec15bf87f",
+      "public_environment_bytes": 3514,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "geospatial-routing-data",
+          "sha256": "0e278fce8dbfa2f6092826592b7eb0d740472ce5ae97bd2e05bd310933b3bda2",
+          "body_bytes": 5879,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "logistics-rules-to-optimization",
+          "sha256": "d7702a4eb61d1135a89824cd59e33901eb838db4412aaa0972142bcfd0174510",
+          "body_bytes": 11015,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "routing-subtour-elimination",
+          "sha256": "211306948184411fc1f63aee8c7a59b02673a44f942a7e86cc60ebaa6ab0d12a",
+          "body_bytes": 8701,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "scip-opt",
+          "sha256": "17f98241df7040646ec6a5ba7285aa3337b99cb5a03efa0c38f65e6ebadb3ff2",
+          "body_bytes": 7101,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "citation-check",
+      "task_sha256": "8699c59d1ae337f72d137be07381eabb7450ec2835cd1b0693183b2fef7b2eb1",
+      "public_environment_bytes": 17864,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "citation-management",
+          "sha256": "2dff78725d4952afe1cc83240649b9240a4ef3d5fb817d076ddd930d574f831d",
+          "body_bytes": 33415,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "civ6-adjacency-optimizer",
+      "task_sha256": "ad2f61b362a2953179c59cc325eb4270e7a061b9e688b3a3bab5938b119ba558",
+      "public_environment_bytes": 320487,
+      "public_environment_file_count": 5,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "civ6lib",
+          "sha256": "488097528b9dfca403fd079eb673c8303b1826514ea7b73e825df759d1ff12ee",
+          "body_bytes": 6917,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "hex-grid-spatial",
+          "sha256": "3370ef7f3f47f86c9ea84a336c90706da4bc8c1a95daf5801e2c4fc133e0aefc",
+          "body_bytes": 2757,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "map-optimization-strategy",
+          "sha256": "7d712d7dd4e6ddcf0d871ce5e93081342d2477e8f83229205a739fae8b7e46ef",
+          "body_bytes": 4446,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "sqlite-map-parser",
+          "sha256": "a6694d231676963073b1891422262cad009303569adbee2be7fa20a3d85dd870",
+          "body_bytes": 4160,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "court-form-filling",
+      "task_sha256": "a1040cb3564a91e9e3a7d8e7351f014637b42ba4854666617a456edc2d96f5cb",
+      "public_environment_bytes": 295509,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "crystallographic-wyckoff-position-analysis",
+      "task_sha256": "654663a5bde548cb6965379ec553f963749de5fc352ce5bcab0d83e1197f32fe",
+      "public_environment_bytes": 34061,
+      "public_environment_file_count": 12,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pymatgen",
+          "sha256": "eeb3616b03e293072332847795e055413becfa42d74dfaeb48ac6aa90e21654f",
+          "body_bytes": 21099,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "sympy",
+          "sha256": "1464cb81c992472072bdd66249623f55fa1709a74ca4148f7f5f40fa6cbb6616",
+          "body_bytes": 14287,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "dapt-intrusion-detection",
+      "task_sha256": "22833fe635378943177105589b4ce1ef03f248b245a7f496b9e40e293b2a6abb",
+      "public_environment_bytes": 32750657,
+      "public_environment_file_count": 6,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pcap-analysis",
+          "sha256": "26c80622440b880cd8ac10c0f9990b9ee3686ca9dc48f317d0f66c22f4969fb9",
+          "body_bytes": 15020,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "threat-detection",
+          "sha256": "456e491ca6f033a77e871005f913d04a119992ad8ea834669b145ddc66d0de86",
+          "body_bytes": 5136,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "data-to-d3",
+      "task_sha256": "af1f8fcb233292d078ce5171ba3a980f5210b359d6677054cc70047e1f2c94df",
+      "public_environment_bytes": 2443744,
+      "public_environment_file_count": 52,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "d3-visualization",
+          "sha256": "6f056e2ab0cfc36461f27747ceabf72cff51e8776ba2d2deb1cdacd894e39f19",
+          "body_bytes": 6202,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "debug-trl-grpo",
+      "task_sha256": "ae20c68633deca5953986606beb01f2f2db3ccdc074e9b1fefcecfe6f3724f0c",
+      "public_environment_bytes": 364234,
+      "public_environment_file_count": 4,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "grpo",
+          "sha256": "90ef5f123f4b6107d85c69d53d6878aec29e5c08950dc52b9bd6fd872187804c",
+          "body_bytes": 4441,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "rl-post-training",
+          "sha256": "3ff7177b02003bb50dc6a9783fec7a7835b3aeb184b0f161d649de498f65eb99",
+          "body_bytes": 6612,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "trl",
+          "sha256": "96e11df1379f5488435028ea9c073006917319d29540cd42baca0a97c6f2edcd",
+          "body_bytes": 4090,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "dialogue-parser",
+      "task_sha256": "f96d2d4f1332d6bb55d699e654f05a81334db8015b875af44f6f473565b8a390",
+      "public_environment_bytes": 23214,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "dialogue-graph",
+          "sha256": "03d711b93219cec1cd70d823d595e7c5adffc058c5910b94886fe6cc374f08d8",
+          "body_bytes": 2386,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "drone-planning-control",
+      "task_sha256": "0f872a982f7e785a8fbf9e1c545fe9815650505654a2880cf842b84976bf932d",
+      "public_environment_bytes": 2899,
+      "public_environment_file_count": 33,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "attitude-controller-planner",
+          "sha256": "e2f325e78f3f31db9d39857d2f7a6e87cacb81c7d60d570a250e7c576495a19f",
+          "body_bytes": 2881,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "flight-plan-parser",
+          "sha256": "74acf1d6c9d8ebbebdf5509169a6bdde674faf874968ec55e383e56a11b1f127",
+          "body_bytes": 3087,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "motor-model-dynamics",
+          "sha256": "f4e773904e97fc13334b4001bb6c4c63be5867584297e2167dd4b6e27b0602ca",
+          "body_bytes": 3440,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "plot-quadrotor",
+          "sha256": "d02c76fb625a42eb856a481cb0fb976faad91a03ab65eda9511e0b2faec9cd08",
+          "body_bytes": 2620,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "position-controller-trajectory-planner",
+          "sha256": "ec6d098be4ef7e024109a16d3adedbdf4806085cfd8936b8ef826eb1bbabf555",
+          "body_bytes": 5845,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "stepinfo-3d",
+          "sha256": "e139d7322aaaeeb261b2dd008920435caa375f9632137c8acc7a642605477c32",
+          "body_bytes": 3048,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "dynamic-object-aware-egomotion",
+      "task_sha256": "83e6093c4ea969e48089297f20c7c85d396dbee22a82e39756cf1c7c16e600e5",
+      "public_environment_bytes": 936090,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "dyn-object-masks",
+          "sha256": "f39ddb6700d3a0c4626b3764c3921fba7e0557433690294d852f9127b5c7c870",
+          "body_bytes": 2068,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "egomotion-estimation",
+          "sha256": "ae9c89b1c228c3868938cd71d474e3ac20766991d2ed94a45721842a03ad4d70",
+          "body_bytes": 2006,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "output-validation",
+          "sha256": "fccdbde222731c06fcd34838a39b9ba4c6fe660d57a9a2b2b3f5546188545f7a",
+          "body_bytes": 1847,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "sampling-and-indexing",
+          "sha256": "317046cac52d42837875d1d4a24d30b3597f4bcfd67ab42fde25aaf2bf4a26f9",
+          "body_bytes": 1479,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "earthquake-phase-association",
+      "task_sha256": "a8a647a4a676fd2cd8304d09f37e4dd5cac465640a080f9b3eabd50d2df65e08",
+      "public_environment_bytes": 28779558,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "gamma-phase-associator",
+          "sha256": "ce2c7375fccbf2e99c921e979437e77b91fb39573f6bcb2b7ce4a1136fe46526",
+          "body_bytes": 10107,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "obspy-data-api",
+          "sha256": "669584da3b2f685dc8939449b6f8c09dc9e857ed335154739aaf78f03b9a67df",
+          "body_bytes": 5488,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "seisbench-model-api",
+          "sha256": "32923bed92731f01669a29f9f3db964efc052a0ee5f4b6fc0115573fc99657e1",
+          "body_bytes": 7410,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "seismic-picker-selection",
+          "sha256": "20ff09362d2154c6424b3b533238440bcfcf6d81f1de97d6903197577a9a174a",
+          "body_bytes": 4109,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "earthquake-plate-calculation",
+      "task_sha256": "7e74700780429be4ca3e2722749224ce761c2e864a3aed97e96fce7f4b2c9d88",
+      "public_environment_bytes": 1678717,
+      "public_environment_file_count": 4,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "geospatial-analysis",
+          "sha256": "9ec15d10424e46ab4339f8a1ca9bb0f3b71a76659d69e652e846abfdfd258336",
+          "body_bytes": 7543,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "econ-detrending-correlation",
+      "task_sha256": "7956e369eb1bce4db2000e3fad9f7d564269505061ccb5c28d21f90ef51a47a4",
+      "public_environment_bytes": 101896,
+      "public_environment_file_count": 4,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "timeseries-detrending",
+          "sha256": "1169a82443b6b4571dbc37017c41e1b2b1e05e86e9d0b304af726c711111d4cd",
+          "body_bytes": 4658,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "edit-pdf",
+      "task_sha256": "26b3084faaf8c1674ee67c5c1e8baeb1186e0f5ca466f57d2a803a80bf59ed29",
+      "public_environment_bytes": 125070,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pdf-editing",
+          "sha256": "7e0f4a10b79463733a43b80d2325e7f7ccd717d0485db7453ffb244b02c0ae88",
+          "body_bytes": 9935,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "text-parser",
+          "sha256": "42da49f3d8f0d2ddef67fc6b7b1438fc8919b80f137f4c8efdce5f5327862123",
+          "body_bytes": 1006,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "energy-ac-optimal-power-flow",
+      "task_sha256": "19cda3fb55a79bbc8bb07f7cfec4a2dbf6dc8ffe67c4ca940cd432f556f8e79b",
+      "public_environment_bytes": 142436,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "ac-branch-pi-model",
+          "sha256": "90202c50b81adcfc4f61e5352c2d01824c4d45f849f1ad520161635f1a24da32",
+          "body_bytes": 4298,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "casadi-ipopt-nlp",
+          "sha256": "f207a0b131e41bb3d2954038e08d491b6674d87358537c8331d6d5996622ff0c",
+          "body_bytes": 4928,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "power-flow-data",
+          "sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "body_bytes": 4367,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "energy-market-pricing",
+      "task_sha256": "42b51ce40b3e09bf7db1b4b4fd5e335686b8608dad80591336491c033f640e5f",
+      "public_environment_bytes": 1428825,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "dc-power-flow",
+          "sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "body_bytes": 2882,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "economic-dispatch",
+          "sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "body_bytes": 4932,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "locational-marginal-prices",
+          "sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+          "body_bytes": 4746,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "power-flow-data",
+          "sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "body_bytes": 4367,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "energy-unit-commitment",
+      "task_sha256": "9060ce077a80d9a31482c0dd2a37a72e363b1dadc27bbc3bb9cb4ceb9eca736d",
+      "public_environment_bytes": 91245,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "milp-solver-workflow",
+          "sha256": "a7952b16cfda72bd0576f0f1ff1c222a0c05d5343195d00013e81ed56b8eddc4",
+          "body_bytes": 6563,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "unit-commitment-data-modeling",
+          "sha256": "b67192fb7fccb9c6e04df287bf2049fbc0f26571d7d702f7bcacc1c1b0566d19",
+          "body_bytes": 6924,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "unit-commitment-operating-rules",
+          "sha256": "e44bbc07a1f2b53a11ac0773962fc6dbf9daf1534244f358878919971d9caa2c",
+          "body_bytes": 8199,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "enterprise-information-search",
+      "task_sha256": "c5331e604c2dcf021d5fd43c7c1cb90ae0869008f12f74c900dc852d59f467ac",
+      "public_environment_bytes": 26625901,
+      "public_environment_file_count": 35,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "enterprise-artifact-search",
+          "sha256": "00e31df6ee3a502e9636cdbd3ce45350a8bb307c1840e7aa75823f6da4e0ef41",
+          "body_bytes": 10126,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "exam-block-sequencing",
+      "task_sha256": "f038ac85fcb442ea35607d529f729be9a66833fc7436096b3420f8495e825059",
+      "public_environment_bytes": 139651,
+      "public_environment_file_count": 8,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "mip-solver-and-solution-audit",
+          "sha256": "34ab1c8cd80ab01f65ad7287776994efeceb15fe454c36216d7d4ba2fee442f7",
+          "body_bytes": 10797,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "ordered-window-sequencing-mip",
+          "sha256": "0e1aa2b96b164e0cb06045b8d6b3fdd56d693c002a7dbbf8fb093bca3216c514",
+          "body_bytes": 10905,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "exceltable-in-ppt",
+      "task_sha256": "4056e2263dc15e48730a523ce6400312a075a62b2e5fba2b953ed2ea426e8ae2",
+      "public_environment_bytes": 72217,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pptx",
+          "sha256": "7d39d6f9917d87886ebb89a3696394d7295f2dc1dd9bc1376bfa31d81e139532",
+          "body_bytes": 25552,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pptx/LICENSE.txt"
+          ]
+        },
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "exoplanet-detection-period",
+      "task_sha256": "b3b69d1f037c04b3c3c9ec3be564774d256b2c24e992b7de82a4979ac95935e4",
+      "public_environment_bytes": 767729,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "box-least-squares",
+          "sha256": "211179df6fb03596447dca91ce90146237ae0cbd8b9fecd305a97187760def7c",
+          "body_bytes": 10281,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "exoplanet-workflows",
+          "sha256": "5ebc272409994a9b8289ba90e861244c1d25299e72ff49f3c40e8f95f14d027c",
+          "body_bytes": 6363,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "light-curve-preprocessing",
+          "sha256": "a3f2f7dfdaf171bba27f1a5da7ee340d2755fba6061089defec29f85535a4177",
+          "body_bytes": 5511,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "lomb-scargle-periodogram",
+          "sha256": "9c99004068e8b93eab3d0c389e1972d7355d6dcd0c7771a95efeef4659a706b9",
+          "body_bytes": 3529,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "transit-least-squares",
+          "sha256": "8ecf66396843055834c29bc31c3fbb66c854ece54977a64a6152daebd60d200a",
+          "body_bytes": 7895,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "financial-modeling-qa",
+      "task_sha256": "690ceaa6ef695d75e36fa61e57f8bf57d2aa27012f360c1381dda5883f57c463",
+      "public_environment_bytes": 567131,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "xlsx",
+          "sha256": "020ccdb5932257b66c638ec1157ea248d57fa52c8c01f1f68b559b5970c7df35",
+          "body_bytes": 10632,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "fix-build-agentops",
+      "task_sha256": "f1826ae6d9b1a0bdd3740368027b110d1307accb03c4fc0913e9b12f075a5308",
+      "public_environment_bytes": 3577,
+      "public_environment_file_count": 1,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "analyze-ci",
+          "sha256": "f59a07dcffe019f17cfa6ec211cbfb070e6292257be7119ed55ffa0b9bce7197",
+          "body_bytes": 958,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "temporal-python-testing",
+          "sha256": "21e5d2382d474553eadb2771c764f4aa2b55a12bd75bc40894e68630c02db7bb",
+          "body_bytes": 4937,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "testing-python",
+          "sha256": "2741f4b02a7021658993213ce85095871e30ebfc1eba2bbef9d56f0bb71dea32",
+          "body_bytes": 5362,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "uv-package-manager",
+          "sha256": "85c71e75e63966eb06a72dc0a7ed2046c45c38bb5574d748603917c4a3801878",
+          "body_bytes": 16048,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "fix-build-google-auto",
+      "task_sha256": "6eeb316a41f60ef49e381328f32f6544a5809794c5292254601ddbad3f31067c",
+      "public_environment_bytes": 2819,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "maven-build-lifecycle",
+          "sha256": "8d65a5ace544deb6beafebe9275eaa9f0673ac1286899c7f7ddecd3dfce03974",
+          "body_bytes": 11521,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "maven-dependency-management",
+          "sha256": "d5a95c61cb189750beafbd7fea8e8ca8159ccf905d90974637b0a3e5495c7846",
+          "body_bytes": 12272,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "maven-plugin-configuration",
+          "sha256": "ff8b766a8283c035d0fba5cf71f0dd194c14a21e136c2a2916bf7bff3fcdd01c",
+          "body_bytes": 19193,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "fix-druid-loophole-cve",
+      "task_sha256": "865deb321230927877d3a50b64954905967e31ffc2966739e9040c5e792e3c06",
+      "public_environment_bytes": 2155,
+      "public_environment_file_count": 1,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "jackson-security",
+          "sha256": "30227192653488b41c91c5824d0b4a62bf780e9e9040600172687ab563d21c57",
+          "body_bytes": 4182,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "senior-java",
+          "sha256": "c22b277c5a72e4f3ae5e23daedee1b354b59c97cb9375e3874e29214e9e2c5e5",
+          "body_bytes": 20202,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "fix-erlang-ssh-cve",
+      "task_sha256": "8d998c0d8d66ebe29b383a82bc3784b313c1553053494b9340236d552341f21e",
+      "public_environment_bytes": 1708,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "erlang-concurrency",
+          "sha256": "eb762a07fbdc3162047bed8bab4674f7e3b8676c698b6c2afdfe10179237b36b",
+          "body_bytes": 8540,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "erlang-distribution",
+          "sha256": "4d49e72f775b25fd5a64dfa0dbc36177a275a0a069812ecd5f1d81fcaf9b6b1b",
+          "body_bytes": 13301,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "erlang-otp-behaviors",
+          "sha256": "7ecab88cc814a45a9aa328ecf9c1faa4fc46033242ca30db8d7ddf8cf7a1a0c7",
+          "body_bytes": 17914,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "find-bugs",
+          "sha256": "edad456696ade7d64c855594e55b9064689a6ce354e667dc2a64e83362a56a8e",
+          "body_bytes": 2767,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "senior-security",
+          "sha256": "d7e26f159d81a9e5ca9a7bc9ff3af116876068349d727b894c6b50020efbd7a7",
+          "body_bytes": 4530,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "ssh-penetration-testing",
+          "sha256": "a7605138ec97cfe2fa54af6d3b0bd08c7246028dbc0bfb580b8dd0bfa9c53be3",
+          "body_bytes": 11880,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "fix-visual-stability",
+      "task_sha256": "24e11b934500784d0aba3cb2134f4e9a4ae2ddd23568cf081588ac12cb7a4f79",
+      "public_environment_bytes": 116045,
+      "public_environment_file_count": 24,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "browser-testing",
+          "sha256": "cb1a9611c3d062555c6779d641d02f56cc5ecef5d769c0abbb4a9506149ee80a",
+          "body_bytes": 6476,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "react-best-practices",
+          "sha256": "66e4e2f0be453c3082087a0c52e1f702c43355c4e46a68ed5c649ebb10c65f3c",
+          "body_bytes": 5282,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "web-interface-guidelines",
+          "sha256": "4ecd4428603ab5e53bf8c9b31a5da738a77a3bccc77db1ebd92831ef414ed795",
+          "body_bytes": 2892,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": [
+            "skills/web-interface-guidelines/LICENSE"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "flink-query",
+      "task_sha256": "4b1296d9a0d2d06b0646a26885cf896bc24a13b81b99a63aa119da1a28dff3a7",
+      "public_environment_bytes": 1463005,
+      "public_environment_file_count": 9,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        },
+        {
+          "name": "senior-data-engineer",
+          "sha256": "ee543c63131cf0a853dff39adeb54e0d0901990f234d2891a78970de3d541fd6",
+          "body_bytes": 23665,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "flood-risk-analysis",
+      "task_sha256": "d2008e9045067d83d359e50f67f55a39117fbc97ea8ccc722e23777c74828713",
+      "public_environment_bytes": 1081,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "flood-detection",
+          "sha256": "14e55948af7ac9e90e039985d116fbc2c605f12bb3996c8b49d52167ddf4696d",
+          "body_bytes": 3688,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "nws-flood-thresholds",
+          "sha256": "f0a534dad20748e094e2188b2fb8078264a4c0451757827b54f921146453418f",
+          "body_bytes": 4091,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "usgs-data-download",
+          "sha256": "82f0ec56e7bbfdeadac0bf05a51683d3e90e183d9b27165923f70860183a825e",
+          "body_bytes": 3543,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "glm-lake-mendota",
+      "task_sha256": "d115cffe42dce0833f2b888c576736c99ed595cac9c772c01d6a6d8081e889f1",
+      "public_environment_bytes": 7650217,
+      "public_environment_file_count": 8,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "glm-basics",
+          "sha256": "77fc4c820ce8689c90bdbaa364e9e9b50f26fd0c285b869588f9b0a16dc8d054",
+          "body_bytes": 2158,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "glm-calibration",
+          "sha256": "a1342ccb629765767821481333fcbf2b5fd25d93fa8f4a41ed78c62d022a4ed1",
+          "body_bytes": 3144,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "glm-output",
+          "sha256": "26530fb95a70059f6071734cca709db018dcc00ade4fe34011a7229d82bf1187",
+          "body_bytes": 4009,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "gravitational-wave-detection",
+      "task_sha256": "9809601c659888f40f6ae3d97703f016a08e440da1b97ab5ff7914a40f22a9dd",
+      "public_environment_bytes": 4025505,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "conditioning",
+          "sha256": "bf7580c93e48e3215442820bfb8e77f372450bf56182b5efe1b8b73d875b03d2",
+          "body_bytes": 5373,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "matched-filtering",
+          "sha256": "9daa057b05d878189bd5556dca8a6a18a65839ff0a5b8313fbdaa2ba10a6f4b4",
+          "body_bytes": 6404,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "grid-dispatch-operator",
+      "task_sha256": "9ab0e8f76e05f655417929f24b45a04efe472944627ba3f311dfd125a23a0573",
+      "public_environment_bytes": 1428825,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "dc-power-flow",
+          "sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+          "body_bytes": 2882,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "economic-dispatch",
+          "sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+          "body_bytes": 4932,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "power-flow-data",
+          "sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+          "body_bytes": 4367,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "hvac-control",
+      "task_sha256": "2387a314e831ccf6e3c9eb8ce28881a504f38e18560bb5a885edd646560a7f85",
+      "public_environment_bytes": 6563,
+      "public_environment_file_count": 4,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "excitation-signal-design",
+          "sha256": "2a95543b6a10befec4f4ab98c9912d93af2c3fa54397a2a1d421db5c2e59d7c9",
+          "body_bytes": 2569,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "first-order-model-fitting",
+          "sha256": "96c792fe902e2a22ba2afb5bd0b02823fe200a4fb40197825f4e06cd49d0c865",
+          "body_bytes": 2606,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "imc-tuning-rules",
+          "sha256": "2388dcb94f078c67d69acd615adb336d4604aecfdb198302ce880f872282e7cf",
+          "body_bytes": 3613,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "safety-interlocks",
+          "sha256": "2f655c05c1a8262b23af135f24e72fed0f0bee9634ad84efa4c3f94c2bf9da45",
+          "body_bytes": 4114,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "scipy-curve-fit",
+          "sha256": "a250a563dcb8cd453070bc47db9e520e70bfb7253b5abb13b8b02afe0e57ef85",
+          "body_bytes": 4095,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "invoice-fraud-detection",
+      "task_sha256": "f37803e2c0221b47fe2cd206ea1c995a4c320de3d4ece97cf36d6f3ef88fc44b",
+      "public_environment_bytes": 97075,
+      "public_environment_file_count": 4,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "fuzzy-match",
+          "sha256": "531e4f484546b24db8a2aa76143e488b487ce4619f9f331bedb5d84751da6907",
+          "body_bytes": 3173,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        },
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "jax-computing-basics",
+      "task_sha256": "fc9f4e9cf8b3c97d88dd3b7e563910d6050a51afe37c2bb5d8380bea151ab66b",
+      "public_environment_bytes": 9985,
+      "public_environment_file_count": 12,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "jax-skills",
+          "sha256": "2cff1fe8e449fe60ab8009980c4e44eaf0d6bc7ca14ae03fc1e5c7f7e82eb6d1",
+          "body_bytes": 4203,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "jpg-ocr-stat",
+      "task_sha256": "00b1e8f22790db41e2d0026c24a194da285adf93da87ca27a99ed2ca213b8be2",
+      "public_environment_bytes": 8262237,
+      "public_environment_file_count": 23,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "image-ocr",
+          "sha256": "69dd1065075d53f02c33d3c9c7b3f07eaab26686048675a971fb3a2f8c297359",
+          "body_bytes": 11348,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "openai-vision",
+          "sha256": "5023bf779904e73d82cd1a55373eedb001fff59fc97410e22671991c63a83e3c",
+          "body_bytes": 20003,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        },
+        {
+          "name": "video-frame-extraction",
+          "sha256": "b8109889c9b72953b52c55d17d0fa1d6f1083f6a6d1d378cdda6b6509c38fa18",
+          "body_bytes": 14016,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "lab-unit-harmonization",
+      "task_sha256": "404f728e536a6351cf18caa593abb7d446479f295c8b37455f7fda4d047a9731",
+      "public_environment_bytes": 1287607,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "lab-unit-harmonization",
+          "sha256": "60eea92e906b140bafcfb50d7c26ecac645f2a434418080fe07ee5b8af115afe",
+          "body_bytes": 10764,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "lake-warming-attribution",
+      "task_sha256": "39e13eda873d3793847ae87a1629f18e660c5b402e011094422f1ffbbdf24b32",
+      "public_environment_bytes": 3335,
+      "public_environment_file_count": 5,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "contribution-analysis",
+          "sha256": "ec9531b6b06a4e7a699da04bf0e86279af14cc0b7aba77476adbfc4766015c63",
+          "body_bytes": 2959,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "meteorology-driver-classification",
+          "sha256": "5faebbffdf7c5a5a46c22a11b08d5950f378e71f3a4c967c9495ffb70f64fc2f",
+          "body_bytes": 1946,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pca-decomposition",
+          "sha256": "651fe7e01b2bc9abcf21a51d213398ef27c225ad2ea1a49b5bd681e934015ac2",
+          "body_bytes": 3961,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "trend-analysis",
+          "sha256": "eec026677dd73c7407170d01fc2358ba10dacfd4b8b3b9bf669b8f922491514f",
+          "body_bytes": 2788,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "latex-formula-extraction",
+      "task_sha256": "ca601e918a6404b8f7286bdbce7cc0067e00c57a7fe02e5798e9c632a884897d",
+      "public_environment_bytes": 253594,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "marker",
+          "sha256": "c931b6398d4a9fe59126c8fda56e5c0d275550e907726820547ea9e84302843d",
+          "body_bytes": 2080,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "lean4-proof",
+      "task_sha256": "2ab16bc3d8cd559ea27c06542cdbd850800d2303262eddc5af5a4c129372e096",
+      "public_environment_bytes": 57984,
+      "public_environment_file_count": 32,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "lean4-memories",
+          "sha256": "158e14b3e8a10b5a09eecda01d3a83fe4fade2ceca0272d78e4946563b2450bd",
+          "body_bytes": 12785,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "lean4-theorem-proving",
+          "sha256": "ccdf91ca8b6e496b7a484668b80f749fc81b3090393448decafd9b6468a14fd8",
+          "body_bytes": 9006,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "llm-prefix-cache-replay",
+      "task_sha256": "58ccdd143fa2f59440c9d37ad171b44df61adf9541434e8b48255a998acdcfe8",
+      "public_environment_bytes": 515573,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "cache-policy-comparison",
+          "sha256": "353a7215727695b01e48ea69e63ed92c0b32174534a6bda38cee9b91382e5963",
+          "body_bytes": 5970,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "prefix-cache-replay",
+          "sha256": "28ced940ec272cc01cf06519912077492d948b10e08a933acba12dd9907220cf",
+          "body_bytes": 9283,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "manufacturing-codebook-normalization",
+      "task_sha256": "6554e3e0172bb3ae9ace14b4728a194e0be0cea1fe5e3c726c5b8759d3b4ee62",
+      "public_environment_bytes": 2667384,
+      "public_environment_file_count": 5,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "manufacturing-failure-reason-codebook-normalization",
+          "sha256": "3aba5be4d0f33208d296198fef4bad8816d191bbdd3ec8594cda1de7aab055f0",
+          "body_bytes": 4475,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "manufacturing-equipment-maintenance",
+      "task_sha256": "ac23030507203692094cf245bee71c6690bc4a8b6970d7778b9e627b18206638",
+      "public_environment_bytes": 3201988,
+      "public_environment_file_count": 5,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "reflow-machine-maintenance-guidance",
+          "sha256": "133b383e8c2d573c8c834b7d4c4acfd8a6fba688356ed5ad649f6dd0c1a678fb",
+          "body_bytes": 4663,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "reflow-profile-compliance-toolkit",
+          "sha256": "b21118d8a8c8acb65e26355e97eeba06e26feb183bf02ac75d3b63097e9f5192",
+          "body_bytes": 7420,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "task_sha256": "4803646a11b8dd33037c0bef8ac8f36ddf82843ef9204c5ab6dff8dc95f50ffd",
+      "public_environment_bytes": 2627,
+      "public_environment_file_count": 6,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "fjsp-baseline-repair-with-downtime-and-policy",
+          "sha256": "2668bd6b9c6977ccedcf1f1d4af4401afdfe215666d68f82df41b662852b2125",
+          "body_bytes": 4824,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "mario-coin-counting",
+      "task_sha256": "4f42df3f7bca987090b5574c9649a57d01571ae8bf2fcf6f77493dab133b4ba7",
+      "public_environment_bytes": 15381771,
+      "public_environment_file_count": 5,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "ffmpeg-keyframe-extraction",
+          "sha256": "67d169e60ca71c40cd3aca75b8f6ca6d9dba8ba64fa4b15eb6ef50880f84e92e",
+          "body_bytes": 1993,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "image-editing",
+          "sha256": "31e664a2fadbaf7506eef21d6faaeca95953453159c24f05cbee82be9dfdcf90",
+          "body_bytes": 4327,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "object-counter",
+          "sha256": "f2dca9d7b54d80cd7bb173f98d73db31f723e0ba800dc606d5a50da90e37a450",
+          "body_bytes": 557,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "mars-clouds-clustering",
+      "task_sha256": "c806cdf66f204868a99acd2ff378e4433efd10e31de1b4b40598eb55139ebf3f",
+      "public_environment_bytes": 49311253,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "custom-distance-metrics",
+          "sha256": "da204a3ce17e6a7e2eeb72e744346228284de017cb4d5c8a7082b0b37dd41370",
+          "body_bytes": 2696,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "parallel-processing",
+          "sha256": "28428c421676d35e1342ff2240e08ccbe54ce5df6326424b35a9fa02bc270cca",
+          "body_bytes": 2042,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pareto-optimization",
+          "sha256": "ac1ed3486e61346b04f05ca7e75054593eb9aa59c874df53e912c7a0feb83b45",
+          "body_bytes": 4166,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "multilingual-video-dubbing",
+      "task_sha256": "906c66aa6abcd2d38285a2b8fe3adb1bacfe04cb5ac292470c4a6cf35f7fda13",
+      "public_environment_bytes": 360447,
+      "public_environment_file_count": 6,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "ffmpeg-audio-processing",
+          "sha256": "001943d16329f201ce46274cc4984604fd84130fc159b2bc23aa1cde2ffc074c",
+          "body_bytes": 3836,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "ffmpeg-format-conversion",
+          "sha256": "6fcdc408c24f7de69852def7a49f9c58ad00bb9dda8ec763df44618628251f4c",
+          "body_bytes": 2790,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "ffmpeg-media-info",
+          "sha256": "38f1012b7e72fbaccae2a90e66da8c8832c3b33dab59796a513974efbd8b9c0a",
+          "body_bytes": 2794,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "ffmpeg-video-editing",
+          "sha256": "707848935613f497d9d4a8992ec4184695ba2c9a1ac46b0a05ee7fd5d0067483",
+          "body_bytes": 2509,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "ffmpeg-video-filters",
+          "sha256": "8881bfa5b93551a93ba1658f1123bb4e564ef331b370c9fd23bd658d61db1507",
+          "body_bytes": 3468,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "text-to-speech",
+          "sha256": "91e8f7dc19ff697fbdbc57d8c1228177ad1e60731b88fd7938e4d2f44444f60d",
+          "body_bytes": 2328,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "offer-letter-generator",
+      "task_sha256": "a3ce086d3b605fcb45cfe553b31ce45071d95047ba839c6a67add358a40cb772",
+      "public_environment_bytes": 39913,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "docx",
+          "sha256": "65c3442f51953a6b987e8aefa9abcb458f110344e80cc16c7c7efb931a13efea",
+          "body_bytes": 7869,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "organize-messy-files",
+      "task_sha256": "013833bacf27d1e907faa4d0a4e8964784d4f9e2fd21f6ee7b039a6d02666dc8",
+      "public_environment_bytes": 35185608,
+      "public_environment_file_count": 5,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "docx",
+          "sha256": "f63920be5bf299e6ba2fc77d57363425a9d9b88418318cd6a821fc2cfbd381a2",
+          "body_bytes": 10151,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/docx/LICENSE.txt"
+          ]
+        },
+        {
+          "name": "file-organizer",
+          "sha256": "bfd190964b2c4dfdd0c747d914db477bd15ffba2e136a540546a9f08cd7239a2",
+          "body_bytes": 11175,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        },
+        {
+          "name": "planning-with-files",
+          "sha256": "e22c50c824e6b99ac10ed311a1e7aec8944a2fdfda0708f67462c8c51897ba15",
+          "body_bytes": 6681,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pptx",
+          "sha256": "7d39d6f9917d87886ebb89a3696394d7295f2dc1dd9bc1376bfa31d81e139532",
+          "body_bytes": 25552,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pptx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "paper-anonymizer",
+      "task_sha256": "92bf98a8a8980959ee726b4e3d2c5dd4f94d34d89ff6b2d471b42a7dde0c8710",
+      "public_environment_bytes": 7611422,
+      "public_environment_file_count": 4,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "academic-pdf-redaction",
+          "sha256": "587dbb503749a037f1f51983a1c7bca4177f8f647be82b25e5751b5408a52a8c",
+          "body_bytes": 3741,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "parallel-tfidf-search",
+      "task_sha256": "003f37c9066f268bb7d8dd695f7474b04a6987375956868d0e8562a3c7c54c6a",
+      "public_environment_bytes": 32846,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "memory-optimization",
+          "sha256": "cc56c4b8119265a50ae48506c20f6e495bcb7972dfb7e78adc5405b840fb2ba8",
+          "body_bytes": 6012,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "python-parallelization",
+          "sha256": "cade40ed1ab5ae28c52ef8ebeaaf0d72b0323d73aa1886f54f5a995685a48a79",
+          "body_bytes": 5491,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "workload-balancing",
+          "sha256": "28260b9d369855ee36fab41bc2c084bb08e0473787888a3d20ca67d25d62ad5c",
+          "body_bytes": 8341,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "paratransit-routing",
+      "task_sha256": "ac16bc8b7fba81f3e15099339e3989316eb84df771b4c8f6f43b92b1a56e4149",
+      "public_environment_bytes": 2872339,
+      "public_environment_file_count": 5,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "ortools-pickup-delivery-routing",
+          "sha256": "cad3ae9d92bd49da1426f612761fde5ff6aa9f0ffab5a6447ba8643af6c1473f",
+          "body_bytes": 7920,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "ortools-routing-modeling",
+          "sha256": "c563c6cdd94a278ca7c22bf172d20875198b9c618ecb111d5545ae10cdf53754",
+          "body_bytes": 11200,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "pddl-airport-planning",
+      "task_sha256": "267e092388b4a42a1ec8f6b1d9d950dac70b7dbc6fb59280e83e478cb7fec3bd",
+      "public_environment_bytes": 10675468,
+      "public_environment_file_count": 64,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pddl-skills",
+          "sha256": "adc4db64d2554074650a49a11f008698c7e95f69967e300ba219c5777f9ced4b",
+          "body_bytes": 3095,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "pddl-tpp-planning",
+      "task_sha256": "1b8c398fa95fd900410f177f79dfc5379396da774fee7c3625e2f93517a031f6",
+      "public_environment_bytes": 219725,
+      "public_environment_file_count": 35,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pddl-skills",
+          "sha256": "adc4db64d2554074650a49a11f008698c7e95f69967e300ba219c5777f9ced4b",
+          "body_bytes": 3095,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "pdf-excel-diff",
+      "task_sha256": "625db911a5491cdc6c87e14b405537faa2e67f92793a9519958c465d98e6e39d",
+      "public_environment_bytes": 879,
+      "public_environment_file_count": 1,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        },
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "powerlifting-coef-calc",
+      "task_sha256": "41be2fd6f1fd35d3f501cfe92a7bdc58c1bb1eb03910f89e5d12a70bfab20c67",
+      "public_environment_bytes": 20251,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "powerlifting",
+          "sha256": "8767b92aa10814cc7504b78c5c053d68925a1d33e1ac7c68e7f4d46f353949d6",
+          "body_bytes": 14910,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "senior-data-scientist",
+          "sha256": "1e6974ea60451055b3b11ff8b12d6bbb8ef90ab2bf973830718271c8ed53de06",
+          "body_bytes": 5630,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "pptx-reference-formatting",
+      "task_sha256": "320a93c2bfe866153137801ef19ec604f56f212612e3a8ffaa0b9e6ba38e54ac",
+      "public_environment_bytes": 287737,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pptx",
+          "sha256": "7d39d6f9917d87886ebb89a3696394d7295f2dc1dd9bc1376bfa31d81e139532",
+          "body_bytes": 25552,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pptx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "protein-expression-analysis",
+      "task_sha256": "52407120f9c01d53dcfff15fdc92f11310bbaaef7871b9be246991335304374f",
+      "public_environment_bytes": 118132,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "python-scala-translation",
+      "task_sha256": "ea195f201626627f9f93e4e315243ea754a71bdaba5a0910706935e9d0ffc698",
+      "public_environment_bytes": 133129,
+      "public_environment_file_count": 12,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "python-scala-collections",
+          "sha256": "bf85562526377b25585f66c85f6ac4edc40fb446bd7185a1323c9c1664e45377",
+          "body_bytes": 6394,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "python-scala-functional",
+          "sha256": "cf0986337f4b190b744a51ca7803fd3249ced2483439455a2f8efc1cdc526ddc",
+          "body_bytes": 7983,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "python-scala-idioms",
+          "sha256": "fda000e8ebe06ec507e965bdfb1b2de5027e0a017322d0de9e45a8c204404529",
+          "body_bytes": 7510,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "python-scala-libraries",
+          "sha256": "aab0e5fdfc3331397ce6a679f7efc4882d39919b437407eb95798e5df066a374",
+          "body_bytes": 8947,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "python-scala-oop",
+          "sha256": "71b407928329bbe26e55edc1adca846898c4c7ddb1e840634d75036a2e68fc29",
+          "body_bytes": 7605,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "python-scala-syntax-mapping",
+          "sha256": "431bcff1cc97010dd1414ffb3d923a6168f4fe92e242224369f7179909683edc",
+          "body_bytes": 4050,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "quantum-numerical-simulation",
+      "task_sha256": "a625ebc90663ac32498251664811f0ded635647ad76b7e6864d28cf3d1c1c19b",
+      "public_environment_bytes": 4380,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "qutip",
+          "sha256": "25d79e95290fe27f6e7360dfb816fb0f0082b6c9c846e02d94402d93c3974673",
+          "body_bytes": 9310,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "r2r-mpc-control",
+      "task_sha256": "0d63d1cc65751d4f4b90f746dd404cd46c43a7c7dd71ca29b209aa69c51b9082",
+      "public_environment_bytes": 7474,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "finite-horizon-lqr",
+          "sha256": "8ce87c503270a401f9bce17518a8f11d8cc421de2f15984678ddeb0b8c27575f",
+          "body_bytes": 1078,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "integral-action-design",
+          "sha256": "e3368f03c7c53e47f650272a2225602b0d437ae82c825b049291b02006d43220",
+          "body_bytes": 1104,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "mpc-horizon-tuning",
+          "sha256": "fa85a6c22e728d92176f4aace0a3ad65e280bd4ecd061d1037a042b29ec47123",
+          "body_bytes": 1197,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "state-space-linearization",
+          "sha256": "1cd18b96f4f55ff004aa92c0acbf0cab2744032c94a42d750ce749055038835b",
+          "body_bytes": 1018,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "radar-vital-signs",
+      "task_sha256": "d5da2965cfafa62274b8a2d0755aef090ffe8144e5f5b54262e45f1af06e67f3",
+      "public_environment_bytes": 14404123,
+      "public_environment_file_count": 31,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "radar-signal-processing",
+          "sha256": "0f1194ad676bf02d4477fc14ffd799fe913dde632572cd5378788314c18f9e0f",
+          "body_bytes": 2353,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "radar-vital-signs",
+          "sha256": "b003f824a41198da0d5d3a373646edfa231d3d6a43ef4d94cb95578f5c97551a",
+          "body_bytes": 6336,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "vital-sign-extraction",
+          "sha256": "aff09b876c5c3069161e3b8637cb63db5b4e32904dc3671ed91e66251942c673",
+          "body_bytes": 3742,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "react-performance-debugging",
+      "task_sha256": "c6851c3f2cb91b4b04a1ef27ed5a3bffe459374bfb72b5329d787018222f1bd2",
+      "public_environment_bytes": 145260,
+      "public_environment_file_count": 22,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "browser-testing",
+          "sha256": "2fbcf10778c9b00e8fcefc18f2e5762a95e9d7ca7844edc4c80eb0ff49b38bde",
+          "body_bytes": 6424,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "react-best-practices",
+          "sha256": "0cc7e763ebc97e1fda8f41f9ae28a1c0ff0de2911450654505f11b13b41762a1",
+          "body_bytes": 5364,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "reserves-at-risk-calc",
+      "task_sha256": "6a16211f48b23e175f8be81c56f7d45d9a725fa949ec004cbec8a888a144a932",
+      "public_environment_bytes": 108345,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "sales-pivot-analysis",
+      "task_sha256": "aed27c7a62b1307a6d3dbdc89abacd373150fffd5f02e5e6df30c7ad84ee3232",
+      "public_environment_bytes": 265716,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pdf",
+          "sha256": "332f39fecedcfef2fa73108937e1b2d8c6789a53067a92fed8cadd9ec9e62305",
+          "body_bytes": 6452,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "xlsx",
+          "sha256": "845c73412be7cb9c1fcba4236a2102e8a52f0a83732496f03b3d95a0458c1ace",
+          "body_bytes": 7845,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "sec-financial-report",
+      "task_sha256": "e3578ad5d7c671490acd28ac9b2452156968841963ae6103f132c053f4a12c6c",
+      "public_environment_bytes": 171913880,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "13f-analyzer",
+          "sha256": "fac0b5f05405e1e8631f0dcc8f34649e1eaf3252ae3dd8ef7eb9aadaf3c5290d",
+          "body_bytes": 1340,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "fuzzy-name-search",
+          "sha256": "d3a1180be787f8d19bc5bcb4a234b4db145ab88ba5ee1bdb1acde99bc97fef98",
+          "body_bytes": 2383,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "seismic-phase-picking",
+      "task_sha256": "43d677698df1c43d68263c05f711a931b739e67f85d417c6dd1a20eafc119c17",
+      "public_environment_bytes": 10326261,
+      "public_environment_file_count": 101,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "obspy-data-api",
+          "sha256": "669584da3b2f685dc8939449b6f8c09dc9e857ed335154739aaf78f03b9a67df",
+          "body_bytes": 5488,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "obspy-datacenter-client",
+          "sha256": "e17630a6c637bdb9732924c2af0965061c6d78fc953c0d00023da0e8f69adf25",
+          "body_bytes": 4658,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "seisbench-model-api",
+          "sha256": "32923bed92731f01669a29f9f3db964efc052a0ee5f4b6fc0115573fc99657e1",
+          "body_bytes": 7410,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "seismic-picker-selection",
+          "sha256": "20ff09362d2154c6424b3b533238440bcfcf6d81f1de97d6903197577a9a174a",
+          "body_bytes": 4109,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "setup-fuzzing-py",
+      "task_sha256": "cb8fe424a97eb61e05207407d399f55a5e9a94ba3b62d2a8c07907e8e85c468b",
+      "public_environment_bytes": 1324,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "discover-important-function",
+          "sha256": "d935cc481fe8700ecfec482810dbf7fb56d0ee7e5fec7221ca5a77519d29ce29",
+          "body_bytes": 14358,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "fuzzing-python",
+          "sha256": "718882130de22873f00e422d1c8d4d67febd002d5ee0163f314fea8890c0b835",
+          "body_bytes": 16925,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "setup-env",
+          "sha256": "7b95dc92985ab21b131c5f1d14ec05cf27d145c5384e28bbf3022c7ea89f4202",
+          "body_bytes": 1773,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "shock-analysis-demand",
+      "task_sha256": "a4451cdb101f4575e4edb75c64a6211a72aab1fa77a3d70e8445b1eee25d1ec9",
+      "public_environment_bytes": 16834,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "shock-analysis-supply",
+      "task_sha256": "00c1e21b7a8e794e93ad2150cef6c9df31f37d7c0390ee0bb7bd5979510c6cd0",
+      "public_environment_bytes": 62520,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "simpo-code-reproduction",
+      "task_sha256": "53666dc932ba08495963f937c062565fdc26f7fe331ced36e8c4ba7dd67a1b45",
+      "public_environment_bytes": 5728881,
+      "public_environment_file_count": 64,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "nlp-research-repo-package-installment",
+          "sha256": "65c77284858ffc4544dd8d85dbae5771855e6df44c37812f2877490e3afa70b2",
+          "body_bytes": 2032,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pdf",
+          "sha256": "38d8559d4899602f82f3560052132aa0c40cfca80203037729756bdb4fb8e0cb",
+          "body_bytes": 7068,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/pdf/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "software-dependency-audit",
+      "task_sha256": "37e4052173bedf8a8c05e744c18841a6874289bab77daddc9730093537c9937e",
+      "public_environment_bytes": 560614,
+      "public_environment_file_count": 3,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "cvss-score-extraction",
+          "sha256": "5f9e2a22ec2a8230c9d6ed234fb7c48742e257631d397eb9bcabd5d12b7798d2",
+          "body_bytes": 9163,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "trivy-offline-vulnerability-scanning",
+          "sha256": "594389f6d5d0d58c1c7714592bfce7f871154827a4b65f948d9829f2af3108a3",
+          "body_bytes": 7180,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "vulnerability-csv-reporting",
+          "sha256": "80c79f8543d118a2c4625cdcdb4b7576b3e834f9cb7f9adbe3ace6c7040a3439",
+          "body_bytes": 12202,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "spring-boot-jakarta-migration",
+      "task_sha256": "0757faa3f3e8d02f3ac6fb0b7ef637f93c12f482721f42777c10b8b69a7cfd31",
+      "public_environment_bytes": 42050,
+      "public_environment_file_count": 18,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "hibernate-upgrade",
+          "sha256": "b54208d472482e218ff9cd16e8e4bed12fa8df7f801af8aea22184df954f8bcd",
+          "body_bytes": 7507,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "jakarta-namespace",
+          "sha256": "6af9ccbf16fff0f7cb65ed15a2433256cb48ca2328ebd86f5e556570f86f93a1",
+          "body_bytes": 7656,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "restclient-migration",
+          "sha256": "eb2568b08d96c567b2aaa15f7adfea49a1f71db5ef769a7245be92d2b8e9088e",
+          "body_bytes": 8515,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "spring-boot-migration",
+          "sha256": "0cc93cde9cc7cfd0d5af62edce6cedab6395f24b60de883cf5eb36a994e94b78",
+          "body_bytes": 8735,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "spring-security-6",
+          "sha256": "d4522347dbc38ba3280929376b054066fa5b202ca845b6fead78c085debb622d",
+          "body_bytes": 12988,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "suricata-custom-exfil",
+      "task_sha256": "892824294e1e088c4ccb08aac2269573188c7db991200dfe11ce09e81fa12e0f",
+      "public_environment_bytes": 8065,
+      "public_environment_file_count": 4,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "pcap-triage-tshark",
+          "sha256": "1070842f53661264a2e881666d586710a91e8ca463d703af1012645bde1b7e28",
+          "body_bytes": 1309,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "suricata-offline-evejson",
+          "sha256": "5ef330a5329e945c26aec25cef8b896e6e9fd74f6bbbe1e9d8da4432b6c4a4f1",
+          "body_bytes": 1913,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "suricata-rules-basics",
+          "sha256": "12311a48a3bda4a363a9debbcf52c0bb978273aa10c472a2cff72593831f223d",
+          "body_bytes": 3429,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "syzkaller-ppdev-syzlang",
+      "task_sha256": "9fa8b16fc212f42de3601c478d47e7558137bf550c2e168b7f44d86a7076294d",
+      "public_environment_bytes": 1024,
+      "public_environment_file_count": 1,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "syz-extract-constants",
+          "sha256": "2fc1affd7993d5e0223033fdb8083cd26601994d4686b4e49feca7d83cc1a733",
+          "body_bytes": 3136,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "syzkaller-build-loop",
+          "sha256": "36d455ae98e5dfe11fcdce15b4abac58b3d37b3322ecde27b6bebbb2b619c6d6",
+          "body_bytes": 1824,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "syzlang-ioctl-basics",
+          "sha256": "f733ad59a34b426d8cc02fda55228feb88c15f8af40baae7b2944812d236c1c5",
+          "body_bytes": 2125,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "threejs-structure-parser",
+      "task_sha256": "ecd5bb26740662db050464fd6b4553d65e8d5c6c3d0b048215bbe6d042680145",
+      "public_environment_bytes": 11031,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "obj-exporter",
+          "sha256": "92f851fcd69db38dc72e85f789f06557fc3e82c59d33d580fb977a72f8e587aa",
+          "body_bytes": 4576,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "threejs",
+          "sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+          "body_bytes": 3268,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "threejs-to-obj",
+      "task_sha256": "7fd36dcddabb1509f4c6ad2d9aa51a5e124c9ad617f06a2ffafc24c7283ae9b7",
+      "public_environment_bytes": 6267,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "obj-exporter",
+          "sha256": "e6681249baeab46443a2ddd1ef7983099dced6851b18dba3572b3967e5548056",
+          "body_bytes": 2055,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "threejs",
+          "sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+          "body_bytes": 3268,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "tictoc-unnecessary-abort-detection",
+      "task_sha256": "614716c469108598a526ab532009d9012b0624ed0f8ce45281839ff06ec8f126",
+      "public_environment_bytes": 8255710,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "transaction-concurrency-control-foundations",
+          "sha256": "e547c7f2b5ae65f6543d34c58d5b5db71145ee9f8dc8683a845671258937282e",
+          "body_bytes": 4960,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "transaction-protocol-reasoning",
+          "sha256": "8ce9b3a2c3b86940063505013d15bb477c2bb164fcc0fe6f0736383476da103b",
+          "body_bytes": 4145,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "transaction-trace-analysis",
+          "sha256": "c44409caad70c655144b26ec53e50d727dc2c9d0e0c244d648a0f99e5d51b929",
+          "body_bytes": 3414,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "travel-planning",
+      "task_sha256": "91644100404d0ead95d1ee6f7725a4c944c7610d31f8d927bd22b83e7388ab93",
+      "public_environment_bytes": 33308642,
+      "public_environment_file_count": 10,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "search-accommodations",
+          "sha256": "b4d84f0d8f5ca68d6d9da711041be8208d509a8137c01cd7edcb9726b03a9e81",
+          "body_bytes": 515,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "search-attractions",
+          "sha256": "1a022a9c7ddfaed2f02a668535c491bd44e3196258258d5d84f00d8a26c0e7d8",
+          "body_bytes": 451,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "search-cities",
+          "sha256": "93df8526bfaa429af0770e9c8483ba4d183e6ab259dfb26c60ca4dcd5fcc0b0f",
+          "body_bytes": 478,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "search-driving-distance",
+          "sha256": "4d5c8c0b4249c47cda8d8b5c6400a085999c437c7c6837dfd81dd4ea01ec91d2",
+          "body_bytes": 579,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "search-flights",
+          "sha256": "455734cb845620f57b39341a6f4372d28a084e70c741ce277a6a6f4323d46e06",
+          "body_bytes": 510,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "search-restaurants",
+          "sha256": "6a33f2c46d214f14ad02ad0c47613d2cf4ce816a3aaf41adc1ac549c755780d6",
+          "body_bytes": 447,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "video-silence-remover",
+      "task_sha256": "f200dfe10873a88cea005f043853cc4aec680e0211f592bcbdb9811f9ea488a8",
+      "public_environment_bytes": 32731701,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "audio-extractor",
+          "sha256": "519c65b662030cf4e67e1babbbafad4484e9c8f4d8dd03a931e4a8f9023b1aaa",
+          "body_bytes": 1436,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "energy-calculator",
+          "sha256": "4eb4e3e82f5044b38e934dee98cf66735bb3fa54ee0896e1369188354dda349f",
+          "body_bytes": 1747,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "pause-detector",
+          "sha256": "3d8095f46ef213b6f0e4d5987a29bbcc709ae2e0caa326f2af7e8486ec900889",
+          "body_bytes": 2568,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "report-generator",
+          "sha256": "33367acf4fed65325f60120cc54662e5c814562a49040f66f966270b19aa9d11",
+          "body_bytes": 1795,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "segment-combiner",
+          "sha256": "cc716f88354c1447f71f38890ae1efeb4a5ceed9c67b545831a58ea04afc1212",
+          "body_bytes": 1643,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "silence-detector",
+          "sha256": "c5e4e03d8eb94edffbc0ddf09df7a07260d349041408dd12204d2d5b67a309ef",
+          "body_bytes": 2396,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "video-processor",
+          "sha256": "33d90344f81f15d1da43d8b41231167c39c8f8d5f3a929d41ce051992b415148",
+          "body_bytes": 3211,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        }
+      ],
+      "requires_license_review_before_derivation": false
+    },
+    {
+      "task": "weighted-gdp-calc",
+      "task_sha256": "9eebfad48cbbd71113906e0ff0bbe35bb82711077f513a7c24adfc1706ad5a30",
+      "public_environment_bytes": 143634,
+      "public_environment_file_count": 2,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    },
+    {
+      "task": "xlsx-recover-data",
+      "task_sha256": "1fa882f4c2ccee0356c5e1798b6fd65a6b9bf1a7a40ddf8f97ca9618e1120fec",
+      "public_environment_bytes": 30247,
+      "public_environment_file_count": 6,
+      "dockerfile_exists": true,
+      "skills": [
+        {
+          "name": "data-reconciliation",
+          "sha256": "341dd818dfc713e5413bb74923c905f9990996c0876037a3918bce826b6a0c8d",
+          "body_bytes": 2695,
+          "declares_proprietary": false,
+          "bundled_license_explicit_derivative_prohibition": false,
+          "license_files": []
+        },
+        {
+          "name": "xlsx",
+          "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+          "body_bytes": 10631,
+          "declares_proprietary": true,
+          "bundled_license_explicit_derivative_prohibition": true,
+          "license_files": [
+            "skills/xlsx/LICENSE.txt"
+          ]
+        }
+      ],
+      "requires_license_review_before_derivation": true
+    }
+  ]
+}

@@ -27,6 +27,8 @@ MISSING_IMPLEMENTATIONS = {
 
 
 def require_paid(allowed):
+    if Path(__file__).with_name('PAID_CALLS_DISABLED.json').exists():
+        raise RuntimeError('Paid operations disabled by the latest user instruction. A new explicit authorization is required before removing the stop file.')
     if not allowed:
         raise RuntimeError('Paid operations disabled. Offline checks do not require keys.')
 

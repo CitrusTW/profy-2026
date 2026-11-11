@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-11",
+  "scope": "SkillsBench default full library, pinned local source; expand in batches after the completed threejs group",
+  "task_count": 87,
+  "threejs_completed": 2,
+  "remaining_task_count": 85,
+  "evolution_provider": "OpenRouter owner API key",
+  "evolution_model": "openai/gpt-6.1-sol",
+  "solver_provider": "Profy owner API key",
+  "solver_model": "gpt-6.1-sol",
+  "xlsx_group": {
+    "same_original_skill_tasks": [
+      "exceltable-in-ppt",
+      "invoice-fraud-detection",
+      "jpg-ocr-stat",
+      "pdf-excel-diff",
+      "powerlifting-coef-calc",
+      "protein-expression-analysis",
+      "reserves-at-risk-calc",
+      "shock-analysis-demand",
+      "shock-analysis-supply",
+      "weighted-gdp-calc",
+      "xlsx-recover-data"
+    ],
+    "development": [
+      "weighted-gdp-calc"
+    ],
+    "adaptive_confirmation": [
+      "protein-expression-analysis"
+    ],
+    "frozen_evaluation": [
+      "exceltable-in-ppt",
+      "invoice-fraud-detection",
+      "jpg-ocr-stat",
+      "pdf-excel-diff",
+      "powerlifting-coef-calc",
+      "reserves-at-risk-calc",
+      "shock-analysis-demand",
+      "shock-analysis-supply",
+      "xlsx-recover-data"
+    ],
+    "selection_basis": "Identical original public skill hash and available public inputs, not observed model scores",
+    "paid_calls_started": 0,
+    "status": "not_started: bundled LICENSE.txt expressly prohibits derivative works; no model calls or exports"
+  },
+  "rules": [
+    "No gold/verifier/oracle or evaluation answers in evolution inputs",
+    "Never author evolved skill text in this chat; every candidate through original Evolution core and owner OpenRouter key",
+    "Freeze before evaluating remaining tasks; report development separately",
+    "Per-round checkpoints in private repository, no third-party code or skill full text",
+    "No paper/OpenReview changes"
+  ],
+  "status": "paid_calls_disabled_by_latest_user_instruction; offline preparation only",
+  "next_group": {
+    "tasks": [
+      "grid-dispatch-operator",
+      "energy-market-pricing"
+    ],
+    "target_skill": "economic-dispatch",
+    "development": "grid-dispatch-operator",
+    "frozen_evaluation": "energy-market-pricing",
+    "public_shared_skills": [
+      "economic-dispatch",
+      "dc-power-flow",
+      "power-flow-data"
+    ],
+    "candidate_text_source": "owner OpenRouter key, openai/gpt-6.1-sol, received original Evolution core",
+    "max_combined_round_id": 30,
+    "paid_calls_started": 0,
+    "license_basis": "SkillsBench root Apache-2.0; no per-skill license override found in these skill folders",
+    "status": "original_oracle_environment_check_passed; all paid solver/evolution calls disabled"
+  },
+  "paid_calls_allowed": false,
+  "offline_checks_passed": 27
+}
