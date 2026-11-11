@@ -1,0 +1,90 @@
+{
+  "audit_date": "2026-11-10",
+  "timezone": "America/Los_Angeles",
+  "new_model_calls": 0,
+  "new_benchmark_runs": 0,
+  "original_gate_replay": {
+    "accepted": true,
+    "suggestion_content_exactly_matches_previous_pending": true,
+    "raw_result": "Suggestion submitted (id: external-adapter-pending-1). Score: 73.41 → 97.0 (+23.59). Creator will review before any skill changes take effect.",
+    "kind": "offline function replay using existing payload, local pending fixture only"
+  },
+  "source_hash_checks": [
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/prompts/EVOLUTION.md",
+      "same_as_executed_source": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/skills/evolution/SKILL.md",
+      "same_as_executed_source": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/tools/evolution_log.py",
+      "same_as_executed_source": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/skill/tools/skill.py",
+      "same_as_executed_source": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/api/agent.py",
+      "same_as_executed_source": true
+    }
+  ],
+  "exact_reuse": {
+    "EVOLUTION_system_prompt_exact": true,
+    "workflow_full_text_present": true,
+    "target_original_full_text_present": true
+  },
+  "adapter_differences": {
+    "original_full_context_pipeline_used": false,
+    "development_history_embedded_as_one_user_JSON": true,
+    "evolution_model": "openai/gpt-4.1",
+    "solver_model": "gpt-6.1-sol",
+    "all_benchmark_skills_in_evolution_catalog": false,
+    "evolution_expert_targets": [
+      "threejs"
+    ],
+    "native_creator_acceptance_or_promotion_called": false,
+    "paper_capability_gap_classifier_executed": false,
+    "actual_efficiency_used_in_freeze_gate": false
+  },
+  "development_observations": {
+    "original_strict": 1,
+    "candidate_strict": 1,
+    "original_tokens": 152865,
+    "candidate_tokens": 162213,
+    "original_tools": 9,
+    "candidate_tools": 11
+  },
+  "original_artifacts_before": {
+    "04_项目数据与代码/辅助代码/skillsbench_evolution_20261110/run.py": "ba95801f135497e3b0777606ea753bb347f492a13af907fe4c9fc8eb51ae8747",
+    "04_项目数据与代码/辅助代码/skillsbench_evolution_20261110/native_evolution.py": "9d2a0373e73b5de5c58e06c9804a2acbf87b7c443561aa49cedfd6a2bb52bef3",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/evolution/candidate_SKILL.md": "c166463db05619ec61b5d74556fa94d7efdc00ab5094060d51ed33515ca3a946",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/evolution/pending.json": "b6f61cb657fe6d4614ab435548f0bf55f52e6e689670753475e7f987ddd60823",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/evolution/tool_transcript.json": "4e04a790a59fe0d197b4965edcf4ddc98b27258c680e2e43174b9ad59a4ea788",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/RESULTS.json": "0ba0e1b77f5436c423e6a4a65d42d1b4e7dc103c0670b83c540acd61ab084daf",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/dev_original/result.json": "a04dcefb71fb6d863ebc12624d148adead92c521d162f5aac83e24b4f4a8b2d2",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/dev_original/deliverables.zip": "b0cd992379272fcfe726c3436104f473cfa673e76228ac5c87178970ef868ceb",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/dev_candidate/result.json": "11bf89768387269aba501ee51e3b6efbd6a26df007810d1c6e674201fff4d700",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/dev_candidate/deliverables.zip": "64da1aecb98bd81562d9a16f23d96d06490055b1a5f54ec9ce8b537a477498b2",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/no-skills/result.json": "3a890488e4132de719762ed079437ca77d6d7cb6c471e6a97c1914581da16d53",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/no-skills/deliverables.zip": "ecbfc5ea6f4876aa95a15b181c36429beb524e6d8d33d4e82bf5ed39c70be4e7",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/with-skills/result.json": "8ed7dc77771fe1c9945ee310e5c98cec32b091e691a56be7eaeacc8b5e79b142",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/with-skills/deliverables.zip": "fc2a32412737f6a2e61bad33c64cdfb97d478d5c556e9d1fbcea2dcf97f099b8",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/with-CogniLife-skills/result.json": "1a6bab5b80d702fa5f33f39ffd12402a2ebecf718b5228716f1da36c0237da3a",
+    "01_任务结果/2026-11-10_skillsbench_evolution/run-01/with-CogniLife-skills/deliverables.zip": "90c7bd6372d0134001698da9161c4000e384a0687e1798400164510acbdc677d",
+    "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/task.md": "7fd36dcddabb1509f4c6ad2d9aa51a5e124c9ad617f06a2ffafc24c7283ae9b7",
+    "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/data/object.js": "ab0685be0319d853d001af87c3f4d7cc9fde7f384bb46d2364582d4fc771c182",
+    "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/threejs/SKILL.md": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+    "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/verifier/test_outputs.py": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+    "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/verifier/gen_ground_truth.mjs": "210b32a6b77aa02b5bba4ec008be836f5c96bf3daa2511e9a42a1f069d2efecd",
+    "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/task.md": "ecd5bb26740662db050464fd6b4553d65e8d5c6c3d0b048215bbe6d042680145",
+    "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/data/object.js": "2de9dacd93a02e43c0699a03a1ee2b75ce0366d418c095e9be49b964ead7c3f4",
+    "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/threejs/SKILL.md": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+    "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/verifier/test_outputs.py": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+    "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/verifier/gen_ground_truth.mjs": "d467bee99a9ce693665c8490df78753e7b05840c0437402769943b4c7e16307c"
+  },
+  "original_artifacts_unchanged": true,
+  "attribution_limit": "Existing artifacts demonstrate candidate regression, inherited proposal-filter limitations and adapter divergences; they do not identify the isolated causal contribution of each divergence or establish failure of the complete paper method."
+}
