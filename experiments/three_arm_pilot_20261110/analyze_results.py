@@ -1,4 +1,4 @@
-"""Summarize native events and original grader results; contains no benchmark code."""
+"""Summarize the archived v1 pilot; contains no benchmark code."""
 import argparse
 import collections
 import json
@@ -36,6 +36,8 @@ def diagnostics(root):
 def summarize(root):
     root = Path(root)
     study = json.loads((root/'summary.json').read_text())
+    if study['protocol'].get('protocol_version',1) != 1:
+        raise ValueError('This report is for the archived v1 run only. Read summary.json and gate.json for a v2 run; do not reuse v1 conclusions.')
     runs = []
     for group in ['dev_before','dev_candidate'] + study['protocol']['conditions']:
         folder = root/group

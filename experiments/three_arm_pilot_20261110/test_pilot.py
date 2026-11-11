@@ -1,7 +1,13 @@
 import base64
 import gzip
+import io
+import json
+import tempfile
 import unittest
-from pilot import decode_file, exported_file, proposal_gate, public_writer_evidence, shared_experience, sha, tool_calls
+from contextlib import redirect_stdout
+from pathlib import Path
+from unittest.mock import Mock, patch
+from pilot import DEV, INPUTS, SKILL, Pilot, candidate_document, decode_file, exported_file, proposal_gate, public_writer_evidence, shared_experience, sha, tool_calls
 
 class PilotTests(unittest.TestCase):
     def test_output_transport_requires_exact_hash(self):
@@ -57,6 +63,50 @@ class PilotTests(unittest.TestCase):
         self.assertNotIn('PRIVATE_SKILL',str(shared))
         self.assertNotIn('PILOT_PART',str(shared))
         self.assertNotIn('DO_NOT_SEND',str(shared))
+
+    def test_long_proposal_gets_one_bounded_revision_before_development(self):
+        def response(body):
+            return io.BytesIO(json.dumps({'choices':[{'message':{'content':json.dumps({'body':body,'rationale':'fixture'})}}]}).encode())
+        with tempfile.TemporaryDirectory() as temp:
+            pilot = Pilot.__new__(Pilot)
+            pilot.out = Path(temp)
+            pilot.router_key = 'TEST_CREDENTIAL_NOT_REAL'
+            pilot.scrub = lambda value:value
+            before = {'score':{'tests':1,'passed':1,'failed':0,'strict':1}}
+            experience = {'public_task':'PUBLIC TASK','run_completed':True,'elapsed_sec':1,'tools':[]}
+            old = 'PRIVATE_ORIGINAL_SKILL_TEXT\n'*10
+            with patch('pilot.urllib.request.urlopen',side_effect=[response('x'*1000),response('Compare by stable IDs; preserve evidence.')]) as request:
+                candidate = pilot.propose(before,old,experience)
+            self.assertEqual(request.call_count,2)
+            self.assertLess(len(candidate.encode()),len(old.encode()))
+            second = json.loads((pilot.out/'writer_request_2.json').read_text())
+            self.assertIn('UTF-8 bytes',second['messages'][-1]['content'])
+            self.assertNotIn('PRIVATE_ORIGINAL_SKILL_TEXT',str(second))
+            self.assertTrue((pilot.out/'candidate_rejection_1.json').exists())
+
+    def test_invalid_update_stops_before_any_heldout_test(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root=Path(temp)
+            pilot=Pilot.__new__(Pilot)
+            pilot.out=root/'results'; pilot.out.mkdir()
+            pilot.bench=root/'tasks'; pilot.expert=root/'expert'; pilot.dev_inputs=root/'dev'
+            skill=pilot.expert/SKILL; skill.parent.mkdir(parents=True); skill.write_text('initial skill')
+            for task,names in INPUTS.items():
+                folder=pilot.dev_inputs if task==DEV else pilot.bench/task/'environment'
+                folder.mkdir(parents=True)
+                for name in names: (folder/name).write_bytes(b'fixture')
+            taskfile=pilot.bench/DEV/'task.md'; taskfile.parent.mkdir(parents=True)
+            taskfile.write_text('---\nname: fixture\n---\nPUBLIC TASK')
+            pilot.reservations=1
+            pilot.solve=Mock(return_value={'score':{'tests':1,'passed':1},'completed':True,
+                                          'error':None,'elapsed_sec':1,'tool_names':[],'output_received':True})
+            pilot.propose=Mock(side_effect=ValueError('candidate rejected'))
+            with redirect_stdout(io.StringIO()): pilot.run()
+            self.assertEqual(pilot.solve.call_count,1)
+            summary=json.loads((pilot.out/'summary.json').read_text())
+            self.assertEqual(summary['status'],'stopped_before_heldout_test')
+            self.assertEqual(summary['test_results'],[])
+            self.assertFalse((pilot.out/'frozen_test_configuration.json').exists())
 
 if __name__ == '__main__':
     unittest.main()

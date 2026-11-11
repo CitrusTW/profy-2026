@@ -35,6 +35,7 @@ DEV = 'pdf-excel-diff'
 TEST = 'invoice-fraud-detection'
 SKILL = 'skills/expense-record-reconciliation/SKILL.md'
 SKILL_HEADER = '---\nname: expense-record-reconciliation\ndescription: Reconcile source records and preserve evidence.\n---\n'
+MAX_WRITER_REQUESTS = 2
 CONDITIONS = ['no-skills', 'with-skills', 'with-skills-cognilife-method']
 INPUTS = {DEV:['employees_backup.pdf','employees_current.xlsx'],
           TEST:['invoices.pdf','vendors.xlsx','purchase_orders.csv']}
@@ -130,6 +131,16 @@ def shared_experience(public_task, result):
     return {'task':DEV,'public_task':public_task,'run_completed':result['completed'],
             'error':result['error'],'elapsed_sec':result['elapsed_sec'],
             'tools':result['tool_names'],'output_received':result['output_received']}
+
+def candidate_document(body, old_text):
+    if not isinstance(body,str) or not body.strip():
+        raise ValueError('Candidate body must be nonempty Markdown')
+    content = SKILL_HEADER + body
+    if len(content.encode()) >= len(old_text.encode()):
+        raise ValueError(f'Candidate is {len(content.encode())} UTF-8 bytes; must be below {len(old_text.encode())}. Rewrite more concisely; do not truncate steps.')
+    if re.search(r'EMP\d{3,}|PO-\d{3,}|Vendor\s+\d+|/verifier|ground_truth|expected_output',content,re.I):
+        raise ValueError('Candidate contains task-specific IDs or grading references')
+    return content
 
 class Pilot:
     def __init__(self, args):
@@ -336,21 +347,29 @@ Write the original requested JSON output file. Return its exact bytes through ba
         prompt = '''Propose a compact reusable workflow for reconciling records across a document and a current table, informed only by this PUBLIC development task and numeric execution results. This is a new research prototype, not native product evolution. Return only JSON {"body": "Markdown workflow without YAML header", "rationale": "brief"}. Stay strictly below max_body_utf8_bytes. Keep source evidence, distinguish missing from zero, use stable IDs and explicit normalization, do not modify originals, and obey each current task's output contract. Do not memorize people, row IDs, exact answers, amounts, filenames, benchmark checks or output values. Do not change identity, Soul or permissions. You receive no private expert content, raw tool results, answers or hidden tests. A separate real development execution decides acceptance; your own estimates do not prove improvement.\n'''
         header = SKILL_HEADER
         evidence = public_writer_evidence(before['score'],experience,len(old_text.encode())-len(header.encode())-1)
-        request = {'model':WRITER,'temperature':0,'max_tokens':1200,'messages':[{'role':'user','content':prompt+json.dumps(evidence,ensure_ascii=False)}],
-                   'response_format':{'type':'json_object'}}
-        save(self.out/'writer_request.json',request)
-        req = urllib.request.Request('https://openrouter.ai/api/v1/chat/completions',data=json.dumps(request).encode(),
-              headers={'Authorization':'Bearer '+self.router_key,'Content-Type':'application/json'},method='POST')
-        with urllib.request.urlopen(req,timeout=120) as response:
-            result = json.load(response)
-        save(self.out/'writer_response.json',self.scrub(result))
-        content = header + json.loads(result['choices'][0]['message']['content'])['body']
-        if not isinstance(content,str) or 'name: expense-record-reconciliation' not in content or len(content.encode()) >= len(old_text.encode()):
-            raise ValueError('Candidate must keep skill name and strictly reduce footprint')
-        if re.search(r'EMP\d{3,}|PO-\d{3,}|Vendor\s+\d+|/verifier|ground_truth|expected_output',content,re.I):
-            raise ValueError('Candidate contains task-specific IDs or grading references')
-        (self.out/'candidate_SKILL.md').write_text(content)
-        return content
+        messages = [{'role':'user','content':prompt+json.dumps(evidence,ensure_ascii=False)}]
+        for attempt in range(1,MAX_WRITER_REQUESTS+1):
+            request = {'model':WRITER,'temperature':0,'max_tokens':1200,'messages':list(messages),
+                       'response_format':{'type':'json_object'}}
+            suffix = '' if attempt == 1 else '_'+str(attempt)
+            save(self.out/('writer_request'+suffix+'.json'),request)
+            req = urllib.request.Request('https://openrouter.ai/api/v1/chat/completions',data=json.dumps(request).encode(),
+                  headers={'Authorization':'Bearer '+self.router_key,'Content-Type':'application/json'},method='POST')
+            with urllib.request.urlopen(req,timeout=120) as response:
+                result = json.load(response)
+            save(self.out/('writer_response'+suffix+'.json'),self.scrub(result))
+            reply = result['choices'][0]['message']['content']
+            try:
+                content = candidate_document(json.loads(reply)['body'],old_text)
+            except (ValueError,KeyError,TypeError) as exc:
+                save(self.out/('candidate_rejection_'+str(attempt)+'.json'),{'reason':str(exc)})
+                if attempt == MAX_WRITER_REQUESTS:
+                    raise ValueError('No valid candidate after bounded development revision') from exc
+                messages.extend([{'role':'assistant','content':reply},
+                                 {'role':'user','content':str(exc)+' Return revised JSON with body and rationale. Use only the same public development evidence. No test-task feedback is available.'}])
+                continue
+            (self.out/'candidate_SKILL.md').write_text(content)
+            return content
 
     def run(self):
         assert not (self.out/'protocol.json').exists(), 'Already launched; no implicit retries'
@@ -358,8 +377,9 @@ Write the original requested JSON output file. Return its exact bytes through ba
             root = self.dev_inputs if task == DEV else self.bench/task/'environment'
             assert all((root/n).exists() for n in names)
         old = (self.expert/SKILL).read_text()
-        protocol = {'model':MODEL,'updater_model':WRITER,'development_task':DEV,'heldout_task':TEST,
-                    'conditions':CONDITIONS,'max_profy_invocations':5,'max_writer_invocations':1,
+        protocol = {'protocol_version':2,'model':MODEL,'updater_model':WRITER,'development_task':DEV,'heldout_task':TEST,
+                    'conditions':CONDITIONS,'max_profy_invocations':5,'max_writer_invocations':MAX_WRITER_REQUESTS,
+                    'invalid_update_policy':'stop before held-out testing; never substitute original skill for third arm',
                     'attempt_timeout_sec':900,'retries':0,'test_concurrency':2,
                     'method':'new procedural skill-refinement prototype; actual dev validation + nondegradation and footprint gate',
                     'not_native_product_evolution':True,'cross_expert_attribution_tested':False,
@@ -379,10 +399,19 @@ Write the original requested JSON output file. Return its exact bytes through ba
             gate = proposal_gate(before['score'],after['score'],old,candidate)
             accepted = gate['accepted']
         except Exception as exc:
-            gate = {'accepted':False,'error_type':type(exc).__name__,'fallback':'unchanged original skill'}
+            gate = {'accepted':False,'error_type':type(exc).__name__,'reason':str(exc),
+                    'action':'stop before held-out testing'}
         save(self.out/'gate.json',gate)
-        used = candidate if accepted else None
-        save(self.out/'frozen_test_configuration.json',{'candidate_accepted':accepted,'active_skill_sha256':sha((used or old).encode()),
+        if not accepted:
+            save(self.out/'summary.json',{'protocol':protocol,'gate':gate,'development_before':before,
+                 'development_candidate':after,'test_results':[],
+                 'profy_model_invocations_reserved':self.reservations,
+                 'status':'stopped_before_heldout_test',
+                 'scope':'No valid third-arm update; no three-arm effectiveness comparison executed.'})
+            print('PILOT_STOPPED: no adopted update; held-out test not launched',flush=True)
+            return
+        used = candidate
+        save(self.out/'frozen_test_configuration.json',{'candidate_accepted':accepted,'active_skill_sha256':sha(used.encode()),
               'original_skill_sha256':sha(old.encode()),'experience_sha256':sha((self.out/'development_experience.json').read_bytes()),
               'test_answers_or_scores_used_for_update':False})
         def one(condition):
