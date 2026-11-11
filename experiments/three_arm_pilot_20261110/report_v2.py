@@ -21,15 +21,19 @@ def invoice_diagnostic(folder):
     expected = {x['invoice_page_number']:x for x in gold if x['reason'] != 'Clean'}
     predicted = {x['invoice_page_number']:x for x in actual}
     differences = collections.Counter()
-    for page in expected.keys() & predicted.keys():
-        for field in expected[page].keys() | predicted[page].keys():
+    examples = []
+    for page in sorted(expected.keys() & predicted.keys()):
+        for field in sorted(expected[page].keys() | predicted[page].keys()):
             if expected[page].get(field) != predicted[page].get(field):
                 differences[field] += 1
+                if len(examples)<1:
+                    examples.append({'page':page,'field':field,'expected':expected[page].get(field),'actual':predicted[page].get(field)})
     return {'reference_pages':len(gold),'expected_fraud_pages':len(expected),
             'predicted_fraud_pages':len(predicted),'duplicate_output_pages':len(actual)-len(predicted),
             'missed_pages':len(expected.keys()-predicted.keys()),
             'extra_pages':len(predicted.keys()-expected.keys()),
             'exact_field_differences':dict(differences),
+            'difference_example':examples[0] if examples else None,
             'note':'Offline exact JSON diagnostic only; original grader score unchanged.'}
 
 
@@ -73,7 +77,7 @@ def summarize(root, source_commit):
         audits['no_skills_no_expert_zip_uploaded'] = all(r['filename']!='expert.zip' for r in load(a/'uploads.json'))
         events=[json.loads(x) for x in (a/'events.jsonl').read_text().splitlines()]
         audits['no_skills_no_skill_tool_call'] = not any('skill' in n.lower() for n in tool_calls(events))
-        read_paths=[e.get('result',{}).get('file_path','') for e in events if e.get('type')=='tool_call.result' and e.get('tool_name')=='read' and isinstance(e.get('result'),dict)]
+        read_paths=[e.get('result',{}).get('file_path') or '' for e in events if e.get('type')=='tool_call.result' and e.get('tool_name')=='read' and isinstance(e.get('result'),dict)]
         audits['no_skills_no_skill_file_read'] = not any('/expert/' in p or '/skills/' in p or p.endswith('SKILL.md') for p in read_paths)
     if all((f/'development_experience.json').exists() for f in test_folders):
         hashes=[sha((f/'development_experience.json').read_bytes()) for f in test_folders]
@@ -107,7 +111,7 @@ def summarize(root, source_commit):
             'tasks':{'development':study['protocol']['development_task'],'test':study['protocol']['heldout_task']},
             'gate':study['gate'],'runs':runs,'audits':audits,'three_arm_execution_verified':complete,
             'profy_invocations':study['profy_model_invocations_reserved'],'openrouter_requests':len(writer_responses),
-            'openrouter_reported_cost_usd':sum(costs) if costs and all(isinstance(x,(int,float)) for x in costs) else None,
+            'openrouter_reported_cost_usd':round(sum(costs),10) if costs and all(isinstance(x,(int,float)) for x in costs) else None,
             'profy_cost_usd':None,'scope':'One development task, one previously seen test task, one attempt per arm. New procedural-update prototype, not native Profy evolution or cross-expert attribution.',
             'paper_modified':False,'openreview_submitted':False}
     (root/'RESULTS_V2.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
@@ -117,22 +121,45 @@ def summarize(root, source_commit):
            '这是本助手新增的skill更新研究原型. 不是袋袋原生evolution, 也没有测试跨expert归因. 测试题此前已经跑过, 不称全新未见任务; 更新器不接收测试答案或评分反馈.','',
            '| 阶段/组别 | 原整题strict | 原pytest通过/总数 | 客户端秒数 | 工具调用 |',
            '| --- | --- | --- | --- | --- |']
+    stage_names={'dev_before':'开发题: 原skill','dev_candidate':'开发题: 首个候选(弃用)',
+                 'dev_candidate_revised':'开发题: 通用候选(采用)'}
     for r in runs:
         score=r['score']
-        lines.append(f'| {r["condition"]} | {score["strict"]} | {score.get("passed",0)}/{score.get("tests",0)} | {r["elapsed_sec"]:.3f} | {r["tool_calls"]} |')
+        lines.append(f'| {stage_names.get(r["condition"],r["condition"])} | {score["strict"]} | {score.get("passed",0)}/{score.get("tests",0)} | {r["elapsed_sec"]:.3f} | {r["tool_calls"]} |')
     lines += ['', '整题strict是整份输出通过=1、没通过=0. pytest包含文件存在和整份内容等测试, 通过项比例不是字段准确率. 客户端秒数含任务运行和文件回传, 不含上传.', '',
               '## 新版skill有没有真的进入第三组','',
-              '开发采用检查: '+json.dumps(study['gate'],ensure_ascii=False)+'.',
-              '如果表中出现dev_candidate_revised, dev_candidate是开发阶段弃用的第一次候选: 它写入了开发题专用文件名, 因而不进入正式测试. dev_candidate_revised才是纠正后做开发复测的候选. 原skill没有因此重跑. 纠正在测试启动前完成, 未向更新器提供测试反馈.',
+              '采用检查结果: '+('通过, 新版已在测试前冻结.' if study['gate'].get('accepted') else '未通过, 不应启动第三组测试.'),
+              '新版是根据公开开发题和开发运行统计生成的一份通用记录核对说明, 替换expense-record-reconciliation/SKILL.md. 更新器没有阅读私有原skill正文; 原skill只在本地用于体积比较. 因此这里测的是有开发检查的候选替换原型, 不能称为袋袋原生完整学习机制.',
+              '表中的首个候选在开发阶段弃用: 它写入了开发题专用文件名, 因而不进入正式测试. 通用候选才是纠正后做开发复测并采用的版本. 原skill没有因此重跑. 纠正在测试启动前完成, 未向更新器提供测试反馈.',
               '检查同时核对了上传包里只改目标skill、与旧版哈希不同、原生read返回包含新版全文、bash计算的实际文件SHA256一致. 它能证明新版被加载和读取, 不能单独证明模型每一步都遵循它.', '',
               '## no-skills有没有夹带skill','',
               '共用经验只保留公开开发题面和运行统计. 检查附件中没有expert.zip, 原生调用中没有skill工具或skill文件读取. 这表示没有提供本项目expert包或片段; 平台基础指令仍存在, 不把它叫作完全没有任何平台基础skill的裸模型.', '',
               '## 原输出哪里没通过','',
-              '以下只对保存下来的JSON作离线诊断, 没改答案、没放宽原评分.']
+              '以下只对保存下来的JSON作离线诊断, 没改答案、没放宽原评分.','']
     for label in CONDITIONS:
         d=by_label.get(label,{}).get('invoice_diagnostic')
         if d:
             lines.append(f'- {label}: 参考答案标记{d["expected_fraud_pages"]}页有问题, 输出{d["predicted_fraud_pages"]}页, 漏报{d["missed_pages"]}页, 多报{d["extra_pages"]}页; 全字段精确比对差异计数为{json.dumps(d["exact_field_differences"],ensure_ascii=False)}.')
+    example=(by_label.get(CONDITIONS[0],{}).get('invoice_diagnostic') or {}).get('difference_example')
+    if example:
+        lines += ['',f'差异例子: 第{example["page"]}页的{example["field"]}, 输出是{json.dumps(example["actual"],ensure_ascii=False)}, 参考答案是{json.dumps(example["expected"],ensure_ascii=False)}. po_number就是采购订单号.']
+    lines += ['', '## 这次实际说明什么','']
+    if complete:
+        a_run,b_run,c_run=[by_label[c] for c in CONDITIONS]
+        lines.append(f'原整题strict: no-skills={a_run["score"]["strict"]}, with-skills={b_run["score"]["strict"]}, with-skills-cognilife-method={c_run["score"]["strict"]}.')
+        if c_run['score']['strict'] > b_run['score']['strict']:
+            lines.append('在这一个测试任务上, 更新后组通过、初始skill组未通过. 这是单任务观察, 还不能说方法普遍提高成功率.')
+        elif c_run['score']['strict'] < b_run['score']['strict']:
+            lines.append('在这一个测试任务上, 更新后组未通过、初始skill组通过. 本轮没有补到方法提升的证据, 反而提示开发题检查没有保证这道测试题的表现.')
+        else:
+            lines.append('更新后组与初始skill组的整题通过情况相同. 本题没有观察到整题得分提升, 不把新版加载成功写成方法效果提升.')
+        if len({r['output_sha256'] for r in [a_run,b_run,c_run]})==1:
+            lines.append('三组输出的SHA256完全相同, 即交付JSON的字节也相同.')
+        lines.append(f'测试任务客户端耗时: 初始skill组{b_run["elapsed_sec"]:.3f}秒、更新后组{c_run["elapsed_sec"]:.3f}秒. 本次更新后组耗时'+('更长' if c_run['elapsed_sec']>b_run['elapsed_sec'] else '更短或持平')+', 只报告这一次观察, 不据此推广为稳定性能差异.')
+        gate=study['gate']
+        lines.append(f'开发题原测试通过数没有下降; skill文档从{gate["before_utf8_bytes"]}减至{gate["after_utf8_bytes"]} UTF-8字节, 减少{(1-gate["after_utf8_bytes"]/gate["before_utf8_bytes"])*100:.1f}%. 这是文档体积变化, 不是已证明的调用费用或执行效率提升.')
+    else:
+        lines.append('执行检查没有全部通过, 因此不把本轮称为完成的三组方法效果对照. 具体缺项见检查明细.')
     lines += ['', '## 费用和调用量','',
               f'Profy任务{report["profy_invocations"]}次, OpenRouter请求{report["openrouter_requests"]}次. OpenRouter返回费用合计{report["openrouter_reported_cost_usd"]} USD. Profy货币账单未知, 不填0.', '',
               '| 阶段/组别 | prompt tokens事件合计 | completion tokens事件合计 |',
