@@ -1,8 +1,17 @@
 # profy-2026
 
+## 最新: SkillsBench自带skills的三组小跑
+
+[实际数字与结论](experiments/skillsbench_evolution_20261110/RESULTS.md) · [计划](experiments/skillsbench_evolution_20261110/PLAN.md) · [运行说明](experiments/skillsbench_evolution_20261110/README.md)
+
+2026-11-10: 已完成5次Profy求解和4次OpenRouter进化请求. 开发原题原版/候选均3/3; 新原题no-skills 1/3、原版skills 3/3、进化版1/3. 进化把开发题专用坐标旋转泛化到了新题, 原生输出和只读坐标诊断支持该解释. 当前版本不扩大, 不改论文或提交OpenReview.
+
+本轮使用收到的原Evolution prompt、workflow、skill工具函数和ratchet的外部适配, 没用自写提取prompt. 不声称调用了Profy内部Evolution/promotion服务或完成完整CogniLife复现. 原skills、派生skill正文和第三方代码均未提交.
+
+
 这里保存本助手写的实验代码、说明和数字摘要. 不放收到的Profy源码、expert包、benchmark源码、原附件、gold或密钥.
 
-## 现在先看什么
+## 此前的原生链路核对
 
 [原方法、已有代码和API核对](experiments/native_method_feasibility_20261110/METHOD_CODE_API_MAP.md)和[接通原方法后的小跑计划](experiments/native_method_feasibility_20261110/PILOT_PLAN.md).
 

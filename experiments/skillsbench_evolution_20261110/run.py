@@ -237,8 +237,11 @@ def main():
         assert candidate['score']['strict'] >= original['score']['strict'] and candidate['target_skill_read_verified'] and candidate['output_received'] and not candidate['external_skill_tools_observed'], 'Candidate comparison not eligible'
         frozen = (study.out/'evolution/candidate_SKILL.md').read_text()
         save(study.out/'frozen.json', {'before_sha256': sha(study.target.read_bytes()), 'after_sha256': sha(frozen.encode()), 'development_before': original['score'], 'development_after': candidate['score'], 'native_promotion_called': False})
-        for label, skills in [('no-skills', False), ('with-skills', True), ('with-CogniLife-skills', True)]:
-            study.solve(label, TEST, frozen if label == 'with-CogniLife-skills' else None, not skills)
+        labels = ['no-skills', 'with-skills', 'with-CogniLife-skills']
+        with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+            futures = [pool.submit(study.solve, label, TEST, frozen if label == 'with-CogniLife-skills' else None, label == 'no-skills') for label in labels]
+            for future in futures:
+                future.result()
     else:
         rows = [json.loads(f.read_text()) for f in study.out.glob('*/result.json')]
         save(study.out/'results_summary.json', rows)

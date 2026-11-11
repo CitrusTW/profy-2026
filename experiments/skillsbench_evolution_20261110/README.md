@@ -1,6 +1,6 @@
 # SkillsBench原skills的三组小验证
 
-先看[PLAN.md](PLAN.md). 这次不使用6个expert包, 只用SkillsBench原题、原附件和配套skills. 三组是no-skills、with-skills、with-CogniLife-skills.
+先看[实际数字与结论](RESULTS.md): 小跑已完成, 原版skills通过3/3, 进化版1/3, 当前不扩大. 计划见[PLAN.md](PLAN.md). 这次不使用6个expert包, 只用SkillsBench原题、原附件和配套skills. 三组是no-skills、with-skills、with-CogniLife-skills.
 
 开发题threejs-to-obj要求导出整个3D物体. 验证题threejs-structure-parser要求把另一份3D物体按部件分别导出. 两题都带同一份threejs/SKILL.md, 可以用开发经历进化它, 再检查新任务. 验证题其他原skills及资源在后两组完全相同.
 

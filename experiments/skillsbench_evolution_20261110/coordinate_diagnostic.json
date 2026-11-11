@@ -1,0 +1,34 @@
+{
+  "kind": "posthoc analysis of existing outputs, not rescore or learning",
+  "model_calls": 0,
+  "files": [
+    {
+      "file": "part_meshes/cabin_2/cabin_floor_2.obj",
+      "original_chamfer": 157.72274780273438,
+      "diagnostic_inverse_rotation_chamfer": 0.0,
+      "original_threshold": 0.0002,
+      "changed_output_or_score": false
+    },
+    {
+      "file": "links/cabin_3.obj",
+      "original_chamfer": 170.21575927734375,
+      "diagnostic_inverse_rotation_chamfer": 0.0,
+      "original_threshold": 0.0002,
+      "changed_output_or_score": false
+    },
+    {
+      "file": "part_meshes/wheel_structure/outer_rim.obj",
+      "original_chamfer": 51.74726104736328,
+      "diagnostic_inverse_rotation_chamfer": 8.572527968096175e-17,
+      "original_threshold": 0.0002,
+      "changed_output_or_score": false
+    },
+    {
+      "file": "links/wheel_structure.obj",
+      "original_chamfer": 48.002967834472656,
+      "diagnostic_inverse_rotation_chamfer": 1.408343814298494e-16,
+      "original_threshold": 0.0002,
+      "changed_output_or_score": false
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "date": "2026-11-10",
+  "status": "small_validation_completed_negative_transfer",
+  "development": {
+    "dev_original": {
+      "label": "dev_original",
+      "task": "threejs-to-obj",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 156.874,
+      "output_received": true,
+      "native_zip_sha256": "b0cd992379272fcfe726c3436104f473cfa673e76228ac5c87178970ef868ceb",
+      "skill_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 149383,
+        "output_tokens": 3482,
+        "total_tokens": 152865,
+        "cache_read_tokens": 125771,
+        "cache_write_tokens": 23588,
+        "llm_turns": 8,
+        "tool_calls": 9
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+        "assertions_unchanged": 8
+      },
+      "output_file_count": 2,
+      "full_file_hashes_location": "Original native deliverables.zip manifest in archived evidence"
+    },
+    "dev_candidate": {
+      "label": "dev_candidate",
+      "task": "threejs-to-obj",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 150.217,
+      "output_received": true,
+      "native_zip_sha256": "64da1aecb98bd81562d9a16f23d96d06490055b1a5f54ec9ce8b537a477498b2",
+      "skill_sha256": "c166463db05619ec61b5d74556fa94d7efdc00ab5094060d51ed33515ca3a946",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 158936,
+        "output_tokens": 3277,
+        "total_tokens": 162213,
+        "cache_read_tokens": 137164,
+        "cache_write_tokens": 21745,
+        "llm_turns": 9,
+        "tool_calls": 11
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+        "assertions_unchanged": 8
+      },
+      "output_file_count": 2,
+      "full_file_hashes_location": "Original native deliverables.zip manifest in archived evidence"
+    }
+  },
+  "validation": {
+    "no-skills": {
+      "label": "no-skills",
+      "task": "threejs-structure-parser",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 106.606,
+      "output_received": true,
+      "native_zip_sha256": "ecbfc5ea6f4876aa95a15b181c36429beb524e6d8d33d4e82bf5ed39c70be4e7",
+      "skill_sha256": null,
+      "target_skill_read_verified": null,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": false,
+      "tokens": {
+        "input_tokens": 80786,
+        "output_tokens": 1690,
+        "total_tokens": 82476,
+        "cache_read_tokens": 59520,
+        "cache_write_tokens": 21251,
+        "llm_turns": 5,
+        "tool_calls": 4
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 1,
+        "failed": 2,
+        "skipped": 0,
+        "strict": 0,
+        "original_returncode": 1,
+        "source_sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+        "assertions_unchanged": 19
+      },
+      "output_file_count": 158,
+      "full_file_hashes_location": "Original native deliverables.zip manifest in archived evidence"
+    },
+    "with-skills": {
+      "label": "with-skills",
+      "task": "threejs-structure-parser",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 132.231,
+      "output_received": true,
+      "native_zip_sha256": "fc2a32412737f6a2e61bad33c64cdfb97d478d5c556e9d1fbcea2dcf97f099b8",
+      "skill_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 116736,
+        "output_tokens": 2433,
+        "total_tokens": 119169,
+        "cache_read_tokens": 93146,
+        "cache_write_tokens": 23572,
+        "llm_turns": 6,
+        "tool_calls": 8
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+        "assertions_unchanged": 19
+      },
+      "output_file_count": 158,
+      "full_file_hashes_location": "Original native deliverables.zip manifest in archived evidence"
+    },
+    "with-CogniLife-skills": {
+      "label": "with-CogniLife-skills",
+      "task": "threejs-structure-parser",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 125.9,
+      "output_received": true,
+      "native_zip_sha256": "90c7bd6372d0134001698da9161c4000e384a0687e1798400164510acbdc677d",
+      "skill_sha256": "c166463db05619ec61b5d74556fa94d7efdc00ab5094060d51ed33515ca3a946",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 110843,
+        "output_tokens": 2313,
+        "total_tokens": 113156,
+        "cache_read_tokens": 85800,
+        "cache_write_tokens": 25025,
+        "llm_turns": 6,
+        "tool_calls": 7
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 1,
+        "failed": 2,
+        "skipped": 0,
+        "strict": 0,
+        "original_returncode": 1,
+        "source_sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+        "assertions_unchanged": 19
+      },
+      "output_file_count": 158,
+      "full_file_hashes_location": "Original native deliverables.zip manifest in archived evidence"
+    }
+  },
+  "evolution": {
+    "requests": 4,
+    "elapsed_sec": 8.769,
+    "openrouter_cost_usd": "0.089368",
+    "rubric_totals_model_estimates": {
+      "before": {
+        "quality": 54.5,
+        "efficiency": 18.91,
+        "total": 73.41
+      },
+      "after": {
+        "quality": 67.0,
+        "efficiency": 30.0,
+        "total": 97.0
+      }
+    },
+    "before_chars": 3226,
+    "after_chars": 2212
+  },
+  "profy_logical_solves": 5,
+  "profy_cost_usd": null,
+  "paper_changed": false,
+  "openreview_submitted": false,
+  "expanded": false,
+  "new_model_calls_after_validation": 0
+}
