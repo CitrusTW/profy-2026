@@ -13,5 +13,5 @@ for name in ['API_AUTHORIZATION.json','SCOPE.json','PLAN.md','OFFLINE_STATUS.md'
 f=r/'network-family/frozen-evaluation/RESULTS.json'
 if f.exists():entries.append({'path':'results/2026-11-11_skillsbench_full_library/network-family/frozen-evaluation/RESULTS.json','mode':'100644','type':'blob','content':f.read_text()})
 assert not re.search(r'\bsk-(?:pro|or)-[A-Za-z0-9._-]{20,}',json.dumps(entries))
-entries.append({'path':'experiments/skillsbench_evolution_20261110/PAID_CALLS_DISABLED.json','mode':'100644','type':'blob','sha':None})
+# Stop file already removed in resume commit.
 p=Path('/private/tmp/cgl-network-git-entries.json');p.write_text(json.dumps(entries,ensure_ascii=False));print(len(p.read_text()))
