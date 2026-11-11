@@ -7,7 +7,7 @@ import unittest
 from contextlib import redirect_stdout
 from pathlib import Path
 from unittest.mock import Mock, patch
-from pilot import DEV, INPUTS, SKILL, Pilot, candidate_document, decode_file, exported_file, proposal_gate, public_writer_evidence, shared_experience, sha, tool_calls
+from pilot import DEV, INPUTS, SKILL, Pilot, candidate_document, decode_file, exported_file, proposal_gate, public_writer_evidence, shared_experience, sha, skill_read_evidence, tool_calls
 
 class PilotTests(unittest.TestCase):
     def test_output_transport_requires_exact_hash(self):
@@ -107,6 +107,15 @@ class PilotTests(unittest.TestCase):
             self.assertEqual(summary['status'],'stopped_before_heldout_test')
             self.assertEqual(summary['test_results'],[])
             self.assertFalse((pilot.out/'frozen_test_configuration.json').exists())
+
+    def test_runtime_skill_requires_exact_read_and_computed_hash(self):
+        skill='A new reusable procedure.'
+        events=[{'type':'tool_call.result','tool_name':'read','tool_call_id':'read-one',
+                 'result':{'file_path':'/session/expert/'+SKILL,'content':{'data':skill}}},
+                {'type':'tool_call.result','tool_name':'bash','result':{'content':{'data':'PILOT_ACTIVE_SKILL_SHA256:'+sha(skill.encode())}}}]
+        self.assertTrue(skill_read_evidence(events,skill)['verified'])
+        self.assertFalse(skill_read_evidence(events,'Different old skill')['verified'])
+        self.assertFalse(skill_read_evidence(events[:1],skill)['verified'])
 
 if __name__ == '__main__':
     unittest.main()

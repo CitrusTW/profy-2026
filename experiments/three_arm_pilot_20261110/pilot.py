@@ -142,6 +142,26 @@ def candidate_document(body, old_text):
         raise ValueError('Candidate contains task-specific IDs or grading references')
     return content
 
+def skill_read_evidence(events, expected_text):
+    matches = []
+    observed_hashes = []
+    for event in events:
+        if event.get('type') != 'tool_call.result' or event.get('is_error'):
+            continue
+        result = event.get('result') or {}
+        if event.get('tool_name') == 'read' and isinstance(result,dict):
+            path = result.get('file_path','')
+            content = '\n'.join(strings(result.get('content')))
+            if path.endswith('/expert/'+SKILL) and expected_text.strip() in content:
+                matches.append(event.get('tool_call_id'))
+        if event.get('tool_name') == 'bash':
+            observed_hashes.extend(re.findall(r'PILOT_ACTIVE_SKILL_SHA256:\s*([a-f0-9]{64})','\n'.join(strings(result))))
+    expected_hash = sha(expected_text.encode())
+    return {'expected_sha256':expected_hash,'native_read_call_ids':matches,
+            'native_read_matches_expected':bool(matches),
+            'bash_hash_matches_expected':expected_hash in observed_hashes,
+            'verified':bool(matches) and expected_hash in observed_hashes}
+
 class Pilot:
     def __init__(self, args):
         self.root, self.out = Path(args.workspace).resolve(), Path(args.out).resolve()
@@ -223,7 +243,9 @@ class Pilot:
         sid = self.api('/v1/sessions',{'agent':self.expert_id,'title':'Three-arm '+label},end_user)['id']
         save(folder/'session.json',{'id':sid})
         instruction = (self.bench/task/'task.md').read_text().split('---',2)[2].strip()
-        setup = ('Unzip expert.zip into the current session directory. Read expert/IDENTITY.md, SOUL.md, AGENTS.md, USER.md and MEMORY.md, and the relevant expert/skills instructions. Follow the original task output contract over default expert formats. '
+        setup = ('Unzip expert.zip into the current session directory. Read expert/IDENTITY.md, SOUL.md, AGENTS.md, USER.md and MEMORY.md, and the relevant expert/skills instructions. '
+                 'Before solving, use the read tool to read expert/skills/expense-record-reconciliation/SKILL.md in full. Then use bash to compute SHA256 of that exact file and print PILOT_ACTIVE_SKILL_SHA256:<computed 64 hex>. Do not retype or guess its hash. Apply that procedure while obeying the current original task contract. '
+                 'Follow the original task output contract over default expert formats. '
                  if use_expert else 'No project expert package is supplied. Use the original task and ordinary file/code tools. Do not discover or activate any project/expert skills. ')
         notes = '''\nExecution instructions common to all conditions:
 Use only this session's attached files and supplied development experience, if present. No web, product Memory, external expert skills, other sessions, delegation or persistent expert modifications. read/bash are allowed. Paths /root/ in the original task mean the current session directory. Preserve original inputs. Do not ask for missing facts; return the best supported output. You may write analysis code from the public task, but do not search for benchmark tests, gold or oracle. Use at most 32 tool calls.
@@ -306,6 +328,8 @@ Write the original requested JSON output file. Return its exact bytes through ba
                   'output_sha256':sha(output) if output else None,'events':dict(counts),'tool_names':tool_names,
                   'platform_skill_tool_observed':any('skill' in n.lower() for n in tool_names),
                   'money_usd':None,'money_note':'No auditable Profy currency bill obtained; do not treat missing as zero'}
+        if use_expert:
+            result['active_skill_evidence'] = skill_read_evidence(logged_events,candidate if candidate is not None else (self.expert/SKILL).read_text())
         save(folder/'usage.json',usage)
         save(folder/'run_summary.json',result)
         result['score'] = self.grade(folder,task)
@@ -344,7 +368,7 @@ Write the original requested JSON output file. Return its exact bytes through ba
         return result
 
     def propose(self, before, old_text, experience):
-        prompt = '''Propose a compact reusable workflow for reconciling records across a document and a current table, informed only by this PUBLIC development task and numeric execution results. This is a new research prototype, not native product evolution. Return only JSON {"body": "Markdown workflow without YAML header", "rationale": "brief"}. Stay strictly below max_body_utf8_bytes. Keep source evidence, distinguish missing from zero, use stable IDs and explicit normalization, do not modify originals, and obey each current task's output contract. Do not memorize people, row IDs, exact answers, amounts, filenames, benchmark checks or output values. Do not change identity, Soul or permissions. You receive no private expert content, raw tool results, answers or hidden tests. A separate real development execution decides acceptance; your own estimates do not prove improvement.\n'''
+        prompt = '''Propose a compact reusable workflow for reconciling records across a document and a current table, informed only by this PUBLIC development task and numeric execution results. This is a new research prototype, not native product evolution. Return only JSON {"body": "Markdown workflow without YAML header", "rationale": "brief"}. Aim for 500-700 ASCII bytes in body, always stay below max_body_utf8_bytes. Use 4-6 short steps, no headings or examples. Keep source evidence, distinguish missing from zero, use stable IDs and explicit normalization, do not modify originals, and obey each current task's output contract. Do not memorize people, row IDs, exact answers, amounts, filenames, benchmark checks or output values. Do not change identity, Soul or permissions. You receive no private expert content, raw tool results, answers or hidden tests. A separate real development execution decides acceptance; your own estimates do not prove improvement.\n'''
         header = SKILL_HEADER
         evidence = public_writer_evidence(before['score'],experience,len(old_text.encode())-len(header.encode())-1)
         messages = [{'role':'user','content':prompt+json.dumps(evidence,ensure_ascii=False)}]
@@ -378,9 +402,12 @@ Write the original requested JSON output file. Return its exact bytes through ba
             assert all((root/n).exists() for n in names)
         old = (self.expert/SKILL).read_text()
         protocol = {'protocol_version':2,'model':MODEL,'updater_model':WRITER,'development_task':DEV,'heldout_task':TEST,
+                    'driver_sha256':sha(Path(__file__).read_bytes()),
                     'conditions':CONDITIONS,'max_profy_invocations':5,'max_writer_invocations':MAX_WRITER_REQUESTS,
                     'invalid_update_policy':'stop before held-out testing; never substitute original skill for third arm',
                     'attempt_timeout_sec':900,'retries':0,'test_concurrency':2,
+                    'active_skill_verification':'native full read of exact skill content plus bash file SHA256; mandatory for development adoption and third-arm validity',
+                    'common_experience_scope':'public development task plus numeric/status/tool-name metrics only; no raw skill or tool output text',
                     'method':'new procedural skill-refinement prototype; actual dev validation + nondegradation and footprint gate',
                     'not_native_product_evolution':True,'cross_expert_attribution_tested':False,
                     'openrouter_data_scope':'public task text + numeric metrics only; no private expert content, tool result text or answers',
@@ -397,6 +424,9 @@ Write the original requested JSON output file. Return its exact bytes through ba
             candidate = self.propose(before,old,experience)
             after = self.solve('dev_candidate',DEV,candidate)
             gate = proposal_gate(before['score'],after['score'],old,candidate)
+            gate['initial_skill_read_verified'] = before.get('active_skill_evidence',{}).get('verified',False)
+            gate['updated_skill_read_verified'] = after.get('active_skill_evidence',{}).get('verified',False)
+            gate['accepted'] = gate['accepted'] and gate['initial_skill_read_verified'] and gate['updated_skill_read_verified']
             accepted = gate['accepted']
         except Exception as exc:
             gate = {'accepted':False,'error_type':type(exc).__name__,'reason':str(exc),
