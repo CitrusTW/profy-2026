@@ -1,0 +1,10 @@
+{
+  "source_file": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/tools/evolution_log.py",
+  "source_sha256": "45271cadd44dc83f08e0ab76e0f055e4dab8713eed9e21de1149943a52bb075f",
+  "score_computed_from_exact_local_source_function": true,
+  "original_chars": 517,
+  "updated_chars": 1105,
+  "original_context_footprint_score": 100.0,
+  "updated_context_footprint_score": 100.0,
+  "production_deployment_version_verified": false
+}

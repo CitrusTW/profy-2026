@@ -8,3 +8,4 @@ private repo saving Profy related code
 运行方法看[三组小实验说明](experiments/three_arm_pilot_20261110/README.md). 这里只验证新增研究原型, 不称袋袋原生evolution或跨expert归因已被验证. 原文件、完整输出和日志留在仓库外; 仓库保存代码、说明和数字摘要.
 
 [首版无效对照](experiments/three_arm_pilot_20261110/RESULTS.md)保留归档. 此前本助手写的PersonaMem探索脚本在同目录的archive/personamem, 不作为论文方法效果证据.
+\n\n**方法身份更正:** 第三组实际是自写prompt生成候选、开发检查后替换skill的原型, 不是原论文的skill evolution实现. [只读诊断](experiments/three_arm_pilot_20261110/DIAGNOSIS_V2.md)解释了三组答案相同的原因、原方法没有实现的部分, 以及字节长度门槛与收到的Profy代码不一致的问题. 这次诊断没有新增模型调用, 没有改论文或原实验分数.\n

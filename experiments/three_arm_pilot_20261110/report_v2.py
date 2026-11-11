@@ -106,6 +106,8 @@ def summarize(root, source_commit):
     writer_responses=[load(p) for p in sorted(root.glob('writer_response*.json'))]
     costs=[r.get('usage',{}).get('cost') for r in writer_responses]
     report={'run_id':root.name,'source_commit':source_commit,'driver_sha256':study['protocol']['driver_sha256'],
+            'original_paper_method_reproduced':False,
+            'condition_3_actual_method':'Self-written prompt generates a procedural replacement; custom dev gate and ZIP substitution. Not native evolution or the original paper method.',
             'initial_source_commit':study['protocol'].get('initial_source_commit',source_commit),
             'model':study['protocol']['model'],'updater_model':study['protocol']['updater_model'],
             'tasks':{'development':study['protocol']['development_task'],'test':study['protocol']['heldout_task']},
@@ -117,6 +119,7 @@ def summarize(root, source_commit):
     (root/'RESULTS_V2.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
     lines=['# 修正版三组小实验: 实际结果','',
            '三组执行检查: '+('通过' if complete else '未全部通过, 不能把本轮叫作有效三组对照')+'.',
+           '这些是文件和执行检查, 不是原论文方法的复现验证. 第三组实际是自写prompt生成候选、开发检查后替换文件的原型. 方法对应关系和输出相同的原因见[DIAGNOSIS_V2.md](DIAGNOSIS_V2.md).',
            '开发题是SkillsBench的pdf-excel-diff: 核对员工PDF和Excel. 测试题是invoice-fraud-detection: 核对发票、供应商和采购订单. 三组用同一个Profy gpt-6.1-sol, 各自使用独立session.',
            '这是本助手新增的skill更新研究原型. 不是袋袋原生evolution, 也没有测试跨expert归因. 测试题此前已经跑过, 不称全新未见任务; 更新器不接收测试答案或评分反馈.','',
            '| 阶段/组别 | 原整题strict | 原pytest通过/总数 | 客户端秒数 | 工具调用 |',

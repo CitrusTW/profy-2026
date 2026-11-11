@@ -1,6 +1,7 @@
 # 修正版三组小实验: 实际结果
 
 三组执行检查: 通过.
+这些是文件和执行检查, 不是原论文方法的复现验证. 第三组实际是自写prompt生成候选、开发检查后替换文件的原型. 方法对应关系和输出相同的原因见[DIAGNOSIS_V2.md](DIAGNOSIS_V2.md).
 开发题是SkillsBench的pdf-excel-diff: 核对员工PDF和Excel. 测试题是invoice-fraud-detection: 核对发票、供应商和采购订单. 三组用同一个Profy gpt-6.1-sol, 各自使用独立session.
 这是本助手新增的skill更新研究原型. 不是袋袋原生evolution, 也没有测试跨expert归因. 测试题此前已经跑过, 不称全新未见任务; 更新器不接收测试答案或评分反馈.
 

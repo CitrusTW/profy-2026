@@ -2,6 +2,8 @@
   "run_id": "run-20261110-02",
   "source_commit": "8a7b51f81cd2cf5cf82a46462af6c164b90c3912",
   "driver_sha256": "2a2455dc512cef2b49cfebcfe57c5c41ea954bb70f9cf9ef55fbc1776051ad80",
+  "original_paper_method_reproduced": false,
+  "condition_3_actual_method": "Self-written prompt generates a procedural replacement; custom dev gate and ZIP substitution. Not native evolution or the original paper method.",
   "initial_source_commit": "0d9d8754e1f3bb7681ddea85a0cbbc5d489269c2",
   "model": "gpt-6.1-sol",
   "updater_model": "openai/gpt-4.1-mini",

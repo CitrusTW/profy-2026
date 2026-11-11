@@ -1,0 +1,111 @@
+{
+  "new_model_calls": 0,
+  "network_calls": 0,
+  "records": [
+    {
+      "condition": "no-skills",
+      "solver_sha256": "4c8fc210513519c1824d07d9ba3671a0da556458c4bd7328040d0cbe3504217a",
+      "solver_tool_call_id": "call_Wdyv9bDVDITtvI5GADecycDi",
+      "solver_native_event_seq": 423,
+      "output_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "native_export_matches_local_file": true,
+      "final_text_contains_same_hash": true,
+      "session_sha256": "0406f60f8a04354c87c231d00a43e6a6b58e6773b7f59ee06e696e429daa2b94",
+      "raw_answer_literal_present_in_solver": false,
+      "imports": [
+        "base64",
+        "collections",
+        "csv",
+        "decimal",
+        "difflib",
+        "gzip",
+        "hashlib",
+        "json",
+        "openpyxl",
+        "pathlib",
+        "pypdf",
+        "re",
+        "unicodedata"
+      ],
+      "local_replay_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "local_replay_matches_native_output": true,
+      "native_style_root_output_created_by_solver": false,
+      "replay_record_reused_without_execution": true
+    },
+    {
+      "condition": "with-skills",
+      "solver_sha256": "9e394d1db891c7f11bb19296a4f77093e5cf44021ff2bba487d5d182ead5127d",
+      "solver_tool_call_id": "call_0xFCyDtcoZweSq31ZhxlgPFr",
+      "solver_native_event_seq": 525,
+      "output_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "native_export_matches_local_file": true,
+      "final_text_contains_same_hash": true,
+      "session_sha256": "86304750f19dd6acbd50df9859e41ecd19e13043d9e2894cbcc46013ccda2d33",
+      "raw_answer_literal_present_in_solver": false,
+      "imports": [
+        "collections",
+        "csv",
+        "decimal",
+        "difflib",
+        "json",
+        "pandas",
+        "pathlib",
+        "pypdf",
+        "re",
+        "unicodedata"
+      ],
+      "local_replay_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "local_replay_matches_native_output": true,
+      "native_style_root_output_created_by_solver": true,
+      "replay_record_reused_without_execution": true
+    },
+    {
+      "condition": "with-skills-cognilife-method",
+      "solver_sha256": "c5b13a5f3e4ecf0e4b489be7b8e3e880149d0ebf9d650dc0795ce1221303faa8",
+      "solver_tool_call_id": "call_NUGo8GqZhQ5ws0WRlTlSB4Eu",
+      "solver_native_event_seq": 964,
+      "output_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "native_export_matches_local_file": true,
+      "final_text_contains_same_hash": true,
+      "session_sha256": "3bdf2e90da3677712cf3af0a61ee613e403fb9456f3a89378ee15c50659a52e1",
+      "raw_answer_literal_present_in_solver": false,
+      "imports": [
+        "collections",
+        "csv",
+        "decimal",
+        "difflib",
+        "hashlib",
+        "json",
+        "openpyxl",
+        "pathlib",
+        "pypdf",
+        "re"
+      ],
+      "local_replay_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "local_replay_matches_native_output": true,
+      "native_style_root_output_created_by_solver": true,
+      "replay_record_reused_without_execution": true
+    }
+  ],
+  "distinct_solver_count": 3,
+  "distinct_session_count": 3,
+  "distinct_output_count": 1,
+  "all_transport_hashes_verified": true,
+  "all_reviewed_local_replays_match": true,
+  "original_skill": {
+    "sha256": "ddeb39f3a9ce7b478c3e6df4977b903bd7a5f398a19ce337d562f042655f4a25",
+    "utf8_bytes": 1191,
+    "characters": 517
+  },
+  "updated_skill": {
+    "sha256": "c1afb21fb7a78858ccf6e67bef2e03286d02f04809d83dd4f56eb6e5172940d5",
+    "utf8_bytes": 1105,
+    "characters": 1105
+  },
+  "submitted_paper": {
+    "filename": " naacl 2027 提交版.pdf",
+    "sha256": "dce538935e9c911415b305f62e9413626f0fd82ecf28504af78b451a6ecf4819",
+    "method_page": 4
+  },
+  "original_scorer_or_answers_modified": false
+}
