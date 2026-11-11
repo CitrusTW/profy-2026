@@ -235,13 +235,28 @@ def prepare_evolution(workspace, target, out, trajectory, metrics):
     gate, skill, config, store, stats, start, evolution_prompt = original_components(workspace, target, out)
     functions = [skill['skill'], gate['evolution_log']]
     system, context = build_system(workspace, config['configurable']['skill_context'], functions, evolution_prompt)
-    stat = SimpleNamespace(run_index=0, **{k: metrics.get(k) for k in ['total_tokens', 'input_tokens', 'output_tokens', 'llm_turns', 'tool_calls']}, skill_chars=len(Path(target).read_text()), success=bool(metrics['strict']), skill_version_note='original SkillsBench skill')
-    messages = [{'role': 'system', 'content': system}, *development_messages(trajectory['request'], trajectory['events']), {'role': 'user', 'content': start+stats['_format_run_stats']([stat])}]
+    histories = trajectory if isinstance(trajectory, list) else [trajectory]
+    measurements = metrics if isinstance(metrics, list) else [metrics]
+    if len(histories) != len(measurements) or not 1 <= len(measurements) <= 20:
+        raise ValueError('Expected 1..20 matching DEV histories and measured run records')
+    model_path = Path(workspace)/'04_项目数据与代码/Profy-main/services/agent-runtime/src/models/evolution.py'
+    native_stats = runpy.run_path(str(model_path))['EvolutionRunStats']
+    runs = [native_stats(run_index=i, **{k: m.get(k) for k in ['total_tokens', 'input_tokens', 'output_tokens', 'llm_turns', 'tool_calls']},
+                        skill_chars=m.get('skill_chars', len(Path(target).read_text())), success=bool(m['strict']),
+                        skill_version_note=m.get('skill_version_note', 'original SkillsBench skill')) for i, m in enumerate(measurements)]
+    messages = [{'role': 'system', 'content': system}]
+    for history in histories:
+        messages.extend(development_messages(history['request'], history['events']))
+    call_ids = [call['id'] for message in messages for call in message.get('tool_calls', [])]
+    if len(call_ids) != len(set(call_ids)):
+        raise ValueError('Tool call IDs collide across development histories')
+    messages.append({'role': 'user', 'content': start+stats['_format_run_stats'](runs)})
     request = {'model': EVOLUTION_WIRE_MODEL, 'max_tokens': 6500, 'messages': messages,
                'tools': [tool_schema(f) for f in functions], 'tool_choice': 'auto'}
     provenance = {'model': EVOLUTION_MODEL, 'wire_model': EVOLUTION_WIRE_MODEL, 'endpoint': EVOLUTION_URL,
                   'parent_sha256': hashlib.sha256(Path(target).read_bytes()).hexdigest(),
                   'request_sha256': hashlib.sha256(json.dumps(request, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
+                  'development_history_runs': len(runs),
                   'context': context, 'missing_implementations': MISSING_IMPLEMENTATIONS,
                   'history_adapter': 'public DEV SSE roles and complete tool-call/result pairs; not native DB replay'}
     return request, provenance, (gate, skill, config, store)

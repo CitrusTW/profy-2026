@@ -1,8 +1,10 @@
 # SkillsBench skill evolution 小验证
 
-最新文档核查见[DOC_REVIEW.md](DOC_REVIEW.md): 上一轮候选没有达到实测效率目标. 新增的开发tokens检查会阻止该候选继续进入付费验证, 11项离线测试通过. 这是新增实验检查, 不是修改Profy原评分门控. 未重跑模型或benchmark.
+最新多轮结果见[ITERATIVE_RESULTS.md](ITERATIVE_RESULTS.md): 新增3份候选和1次最佳候选确认, 开发成本改善, 最后benchmark仍是原版3/3、进化版1/3. 不采用进化版, 不改论文. 新流程见[ITERATION_PLAN.md](ITERATION_PLAN.md); iterate.py仅用DEV历史选择, 18项离线测试通过.
 
-2026-11-10更新: 已获准付费小跑. gpt-6.1-sol已生成新skill并完成验证. 新skill开发题3/3, 验证题1/3; 原版验证3/3, 本轮没有收益, 不扩大. 看[实际数字](PAID_RESULTS.md)和[结果JSON](PAID_RESULTS.json). 本次计划见[PAID_RUN_PLAN.md](PAID_RUN_PLAN.md). 上一轮的[离线修复记录](OFFLINE_FIX_REPORT.md)和[检查数字](OFFLINE_FIX_FACTS.json)继续保留, 记录的是付费前状态.
+此前文档核查见[DOC_REVIEW.md](DOC_REVIEW.md): 上一轮候选没有达到实测效率目标. 新增的开发tokens检查会阻止该候选继续进入付费验证, 11项离线测试通过. 这是新增实验检查, 不是修改Profy原评分门控. 未重跑模型或benchmark.
+
+上一轮run-02结果(2026-11-10): 已获准付费小跑. gpt-6.1-sol已生成新skill并完成验证. 新skill开发题3/3, 验证题1/3; 原版验证3/3, 本轮没有收益, 不扩大. 看[实际数字](PAID_RESULTS.md)和[结果JSON](PAID_RESULTS.json). 本次计划见[PAID_RUN_PLAN.md](PAID_RUN_PLAN.md). 上一轮的[离线修复记录](OFFLINE_FIX_REPORT.md)和[检查数字](OFFLINE_FIX_FACTS.json)继续保留, 记录的是付费前状态.
 
 旧小跑的数字保留在[RESULTS.md](RESULTS.md): 原版skills通过3/3, 旧进化版1/3. 旧候选由gpt-4.1生成, 不会被改名当成gpt-6.1-sol的结果. 修好代码不等于已经测出新skill有效.
 
