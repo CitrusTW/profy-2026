@@ -231,7 +231,7 @@ def development_messages(request, events):
     return messages
 
 
-def prepare_evolution(workspace, target, out, trajectory, metrics):
+def prepare_evolution(workspace, target, out, trajectory, metrics, adapter_contract=None):
     gate, skill, config, store, stats, start, evolution_prompt = original_components(workspace, target, out)
     functions = [skill['skill'], gate['evolution_log']]
     system, context = build_system(workspace, config['configurable']['skill_context'], functions, evolution_prompt)
@@ -250,6 +250,9 @@ def prepare_evolution(workspace, target, out, trajectory, metrics):
     call_ids = [call['id'] for message in messages for call in message.get('tool_calls', [])]
     if len(call_ids) != len(set(call_ids)):
         raise ValueError('Tool call IDs collide across development histories')
+    if adapter_contract is not None:
+        messages.append({'role':'user','content':json.dumps({'external_experiment_contract':adapter_contract,
+            'origin':'New experiment compatibility constraint; not part of received original Evolution algorithm.'},ensure_ascii=False)})
     messages.append({'role': 'user', 'content': start+stats['_format_run_stats'](runs)})
     request = {'model': EVOLUTION_WIRE_MODEL, 'max_tokens': 6500, 'messages': messages,
                'tools': [tool_schema(f) for f in functions], 'tool_choice': 'auto'}
@@ -257,6 +260,7 @@ def prepare_evolution(workspace, target, out, trajectory, metrics):
                   'parent_sha256': hashlib.sha256(Path(target).read_bytes()).hexdigest(),
                   'request_sha256': hashlib.sha256(json.dumps(request, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
                   'development_history_runs': len(runs),
+                  'adapter_contract': adapter_contract,
                   'context': context, 'missing_implementations': MISSING_IMPLEMENTATIONS,
                   'history_adapter': 'public DEV SSE roles and complete tool-call/result pairs; not native DB replay'}
     return request, provenance, (gate, skill, config, store)
@@ -281,12 +285,12 @@ def evolution_http_request(body, key, end_user):
         'X-Title': 'SkillsBench evolution '+end_user}, method='POST')
 
 
-def evolve(workspace, target, out, trajectory, metrics, api_key, scrub, *, allow_paid=False):
+def evolve(workspace, target, out, trajectory, metrics, api_key, scrub, *, allow_paid=False, adapter_contract=None):
     require_paid(allow_paid)
     out = Path(out); out.mkdir(exist_ok=True)
     if any(out.iterdir()):
         raise RuntimeError('Evolution directory must be new; preserve existing evidence')
-    prepared, provenance, components = prepare_evolution(workspace, target, out, trajectory, metrics)
+    prepared, provenance, components = prepare_evolution(workspace, target, out, trajectory, metrics, adapter_contract)
     gate, skill, config, store = components
     (out/'provenance.json').write_text(json.dumps(provenance, ensure_ascii=False, indent=2))
     messages = prepared['messages']

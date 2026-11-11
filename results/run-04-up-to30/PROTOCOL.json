@@ -1,0 +1,18 @@
+{
+  "client_date": "2026-11-10",
+  "timezone": "America/Los_Angeles",
+  "round_start": 4,
+  "round_max_including_previous": 30,
+  "stop": "30 total rounds or small-scope quality and token improvement confirmed twice",
+  "models": {
+    "evolution": "openai/gpt-6.1-sol via explicitly authorized OpenRouter",
+    "solving": "gpt-6.1-sol via Profy"
+  },
+  "new_extension": "Preserve original public SKILL.md nonindexed serialization line; check actual output vertex-use counts without reference geometry; no postprocessing or score changes. This is new experimental compatibility protection, not original Profy code.",
+  "proposer_data": "DEV histories and original public skill only. Target outputs, verifier, reference coordinates and diagnostic gold-derived data are excluded.",
+  "adaptive_check_role": "Previously inspected task used for iterative development checks, not independent held-out evaluation.",
+  "small_scope_success": "Both compatible public tasks pass all original tests and output contract, total reported tokens below fixed original baseline; repeat both tasks once and require same conditions.",
+  "full_scope": "Pending user clarification: 2 compatible tasks versus all 87 SkillsBench tasks with corresponding skills. No 261-call full-library job is authorized by assumption.",
+  "checkpoint": "Each round is a separate command with STARTED/evolution/ROUND records; checkpoint private repo before another round.",
+  "paper_changed": false
+}

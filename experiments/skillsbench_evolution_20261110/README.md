@@ -1,5 +1,7 @@
 # SkillsBench skill evolution 小验证
 
+**结果解释纠正:** [INDEXING_DIAGNOSIS.md](INDEXING_DIAGNOSIS.md)已定位run-03第2份skill的官方1/3原因: 保留索引改变顶点重复方式, 原verifier只抽v列表且不读f索引, 对等价OBJ表示敏感. 158份输出在原评分float32精度下按f展开的三角形角点全部匹配. 官方分数不改, 但不能再直接称为几何质量退步. 本轮只作离线诊断, 未付费重跑.
+
 最新多轮结果见[ITERATIVE_RESULTS.md](ITERATIVE_RESULTS.md): 新增3份候选和1次最佳候选确认, 开发成本改善, 最后benchmark仍是原版3/3、进化版1/3. 不采用进化版, 不改论文. 新流程见[ITERATION_PLAN.md](ITERATION_PLAN.md); iterate.py仅用DEV历史选择, 18项离线测试通过.
 
 此前文档核查见[DOC_REVIEW.md](DOC_REVIEW.md): 上一轮候选没有达到实测效率目标. 新增的开发tokens检查会阻止该候选继续进入付费验证, 11项离线测试通过. 这是新增实验检查, 不是修改Profy原评分门控. 未重跑模型或benchmark.
