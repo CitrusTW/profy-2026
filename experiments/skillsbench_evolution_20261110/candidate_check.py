@@ -10,6 +10,16 @@ def digest(raw):
     return hashlib.sha256(raw).hexdigest()
 
 
+def development_efficiency_gate(before, after):
+    """New experiment safeguard, not the original self-score ratchet or native acceptance."""
+    b, a = before.get('tokens', {}), after.get('tokens', {})
+    valid = all(type(row.get('total_tokens')) is int and row['total_tokens'] > 0 for row in [b, a])
+    improved = valid and a['total_tokens'] < b['total_tokens']
+    return {'measured_total_tokens_available': valid, 'measured_total_tokens_strictly_lower': improved,
+            'scope': 'Single DEV observation, not statistical evidence or dollar-cost comparison.',
+            'rule_origin': 'New external experiment safeguard motivated by documented objective; not a received original implementation.'}
+
+
 def check_candidate(run_dir, target):
     run_dir, target = Path(run_dir), Path(target)
     evo = run_dir/'evolution'
@@ -56,10 +66,13 @@ def check_candidate(run_dir, target):
     for key in ['total_tokens', 'tool_calls', 'llm_turns']:
         bv, av = before.get('tokens', {}).get(key), after.get('tokens', {}).get(key)
         measured[key] = {'before': bv, 'after': av, 'delta': av-bv if bv is not None and av is not None else None}
+    efficiency = development_efficiency_gate(before, after)
     return {'kind': 'offline structural and DEV evidence check, not semantic verification',
             'checks': checks, 'structural_and_dev_pass': all(checks.values()),
             'failed_checks': [k for k, v in checks.items() if not v],
             'measured_development': measured,
+            'development_efficiency_gate': efficiency,
+            'eligible_for_paid_evaluation': all(checks.values()) and efficiency['measured_total_tokens_strictly_lower'],
             'measured_efficiency_is_original_gate': False,
             'semantic_applicability_verified': False, 'native_promoted': False,
             'full_paper_method_verified': False, 'missing_implementations': MISSING_IMPLEMENTATIONS,

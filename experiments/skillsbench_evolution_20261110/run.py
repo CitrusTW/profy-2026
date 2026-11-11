@@ -321,8 +321,8 @@ def main():
             raise RuntimeError('Frozen candidate already exists; preserve the old experiment')
         eligibility = check_candidate(study.out, study.target)
         save(study.out/'candidate_check.json', eligibility)
-        if not eligibility['structural_and_dev_pass']:
-            raise RuntimeError('Candidate check failed: '+', '.join(eligibility['failed_checks']))
+        if not eligibility['eligible_for_paid_evaluation']:
+            raise RuntimeError('Candidate not eligible: structural/DEV quality checks and the new measured-token safeguard must pass. No validation run started.')
         original = json.loads((study.out/'dev_original/result.json').read_text()); candidate = json.loads((study.out/'dev_candidate/result.json').read_text())
         frozen = (study.out/'evolution/candidate_SKILL.md').read_text()
         save(study.out/'frozen.json', {'before_sha256': sha(study.target.read_bytes()), 'after_sha256': sha(frozen.encode()), 'development_before': original['score'], 'development_after': candidate['score'], 'native_promotion_called': False, 'semantic_applicability_verified': False, 'claim_scope': 'external skill-refinement adapter, not verified full paper method'})

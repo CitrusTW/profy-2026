@@ -1,0 +1,133 @@
+{
+  "client_date": "2026-11-10",
+  "timezone": "America/Los_Angeles",
+  "new_model_calls": 0,
+  "new_benchmark_runs": 0,
+  "unit_tests_passed": 11,
+  "sources": [
+    {
+      "title": "自进化系统",
+      "url": "https://docs.profy.cn/zh/documentation/how-it-works/darwin-evolution",
+      "kind": "live public documentation fetched directly; browser extractor failed",
+      "snapshot_sha256": "fe5482225f658dee7006709093b84626edaf43111b6f1ab1e38f9116ab75933f"
+    },
+    {
+      "title": "专家进化",
+      "url": "https://docs.profy.cn/zh/creators/darwin-evolution",
+      "kind": "live public documentation fetched directly",
+      "snapshot_sha256": "a6956eab03c18676292eb1d35198750f1e2b9b7bab36e39414704270a5e55b47"
+    },
+    {
+      "title": "技能",
+      "url": "https://docs.profy.cn/zh/documentation/concepts/skills",
+      "kind": "live public documentation fetched directly",
+      "snapshot_sha256": "7cf5d42850f705ff75533c82dddbbc866446cbebe6daf4a87e021a8cb0a386b5"
+    }
+  ],
+  "evolution_tool_calls": [
+    {
+      "tool": "skill",
+      "action": "activate",
+      "name": "builtin/evolution"
+    },
+    {
+      "tool": "skill",
+      "action": "discover",
+      "name": null
+    },
+    {
+      "tool": "skill",
+      "action": "activate",
+      "name": "expert/threejs"
+    },
+    {
+      "tool": "evolution_log",
+      "action": "suggest_skill_improvement",
+      "name": "threejs"
+    }
+  ],
+  "evolution_resource_execute_calls": 0,
+  "dev_original_exercised_link_exporter": false,
+  "candidate_self_scores": {
+    "before": {
+      "quality": 44.45,
+      "efficiency": 18.47,
+      "total": 62.92
+    },
+    "after": {
+      "quality": 58.91,
+      "efficiency": 26.04,
+      "total": 84.95
+    }
+  },
+  "development_check_under_new_safeguard": {
+    "kind": "offline structural and DEV evidence check, not semantic verification",
+    "checks": {
+      "configured_evolver_model": true,
+      "configured_evolver_endpoint": true,
+      "original_gate_admitted": true,
+      "parent_version_matches": true,
+      "recorded_request_model": true,
+      "first_request_matches_provenance": true,
+      "candidate_matches_pending": true,
+      "preselected_target_only": true,
+      "candidate_body_size": true,
+      "candidate_frontmatter": true,
+      "dev_original execution": true,
+      "dev_original skill read": true,
+      "dev_original scoring complete": true,
+      "dev_original strict consistent": true,
+      "dev_candidate execution": true,
+      "dev_candidate skill read": true,
+      "dev_candidate scoring complete": true,
+      "dev_candidate strict consistent": true,
+      "development_quality_nondegrading": true
+    },
+    "structural_and_dev_pass": true,
+    "failed_checks": [],
+    "measured_development": {
+      "total_tokens": {
+        "before": 152865,
+        "after": 287965,
+        "delta": 135100
+      },
+      "tool_calls": {
+        "before": 9,
+        "after": 15,
+        "delta": 6
+      },
+      "llm_turns": {
+        "before": 8,
+        "after": 14,
+        "delta": 6
+      }
+    },
+    "development_efficiency_gate": {
+      "measured_total_tokens_available": true,
+      "measured_total_tokens_strictly_lower": false,
+      "scope": "Single DEV observation, not statistical evidence or dollar-cost comparison.",
+      "rule_origin": "New external experiment safeguard motivated by documented objective; not a received original implementation."
+    },
+    "eligible_for_paid_evaluation": false,
+    "measured_efficiency_is_original_gate": false,
+    "semantic_applicability_verified": false,
+    "native_promoted": false,
+    "full_paper_method_verified": false,
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    },
+    "candidate_sha256": "d94e59830e1c21c4d7b4ad379b134794d91e2dba7eb14a254b1afeea7c5c291b",
+    "parent_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663"
+  },
+  "conclusions": {
+    "candidate_does_not_meet_measured_efficiency_objective": true,
+    "single_invocation_is_not_by_itself_a_doc_violation": true,
+    "native_creator_review_not_run": true,
+    "unverified_script_preference_is_a_grounding_concern_not_proven_sole_failure_cause": true,
+    "new_gate_is_experiment_extension_not_original_implementation": true,
+    "validation_feedback_not_used_to_generate_rules": true,
+    "paper_changed": false
+  }
+}

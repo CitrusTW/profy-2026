@@ -10,7 +10,7 @@ from unittest.mock import patch
 from pathlib import Path
 
 from native_evolution import original_components, tool_schema, prepare_evolution, development_messages, evolve, EVOLUTION_MODEL, EVOLUTION_WIRE_MODEL, EVOLUTION_URL, evolution_http_request
-from candidate_check import check_candidate
+from candidate_check import check_candidate, development_efficiency_gate
 from run import sha, unpack_output, Study, ProfyTransport, load_own_transport, replay_original_gate
 
 WORKSPACE = Path(__file__).resolve().parents[3]
@@ -89,6 +89,16 @@ class AdapterChecks(unittest.TestCase):
         self.assertTrue(result['checks']['candidate_matches_pending'])
         self.assertFalse(result['semantic_applicability_verified'])
         self.assertEqual(result['measured_development']['total_tokens']['delta'], 9348)
+
+    def test_measured_efficiency_safeguard_uses_dev_tokens_only(self):
+        baseline = {'tokens': {'total_tokens': 100}}
+        for value in [None, True, 0, 100, 150]:
+            self.assertFalse(development_efficiency_gate(baseline, {'tokens': {'total_tokens': value}})['measured_total_tokens_strictly_lower'])
+        self.assertTrue(development_efficiency_gate(baseline, {'tokens': {'total_tokens': 90}})['measured_total_tokens_strictly_lower'])
+        result = check_candidate(OLD_RUN.parent/'run-02-gpt61', TARGET)
+        self.assertTrue(result['structural_and_dev_pass'])
+        self.assertFalse(result['eligible_for_paid_evaluation'])
+        self.assertEqual(result['measured_development']['total_tokens']['delta'], 135100)
 
     def test_frozen_payload_original_gate_replay(self):
         result = replay_original_gate(WORKSPACE, TARGET, OLD_RUN/'evolution/pending.json')
