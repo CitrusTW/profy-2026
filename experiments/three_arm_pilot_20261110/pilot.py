@@ -34,6 +34,7 @@ WRITER = 'openai/gpt-4.1-mini'
 DEV = 'pdf-excel-diff'
 TEST = 'invoice-fraud-detection'
 SKILL = 'skills/expense-record-reconciliation/SKILL.md'
+SKILL_HEADER = '---\nname: expense-record-reconciliation\ndescription: Reconcile source records and preserve evidence.\n---\n'
 CONDITIONS = ['no-skills', 'with-skills', 'with-skills-cognilife-method']
 INPUTS = {DEV:['employees_backup.pdf','employees_current.xlsx'],
           TEST:['invoices.pdf','vendors.xlsx','purchase_orders.csv']}
@@ -81,6 +82,32 @@ def strings(value):
         for v in value:
             yield from strings(v)
 
+def exported_file(events):
+    # A read of prior experience may contain an older file-export packet.
+    # Only bash export results from this attempt carry the current file bytes.
+    texts = []
+    final_text = []
+    for event in events:
+        if event.get('type') == 'tool_call.result' and event.get('tool_name') == 'bash':
+            texts.extend(strings(event.get('result')))
+        if event.get('type') == 'output.text.delta':
+            final_text.append(event.get('delta') or event.get('content') or '')
+    raw = decode_file(texts)
+    stated = re.findall(r'SHA256[^a-f0-9]{0,12}([a-f0-9]{64})', ''.join(final_text), re.I)
+    if raw is not None and stated and sha(raw) != stated[-1].lower():
+        raise ValueError('Export differs from final stated output hash')
+    return raw
+
+def tool_calls(events):
+    found = {}
+    for event in events:
+        if event.get('type') not in ['tool_call.created','tool_call.in_progress']:
+            continue
+        key = event.get('tool_call_id')
+        if key and event.get('tool_name'):
+            found.setdefault(key,event['tool_name'])
+    return list(found.values())
+
 def proposal_gate(before, after, old_text, new_text):
     quality = before['tests'] > 0 and after['tests'] == before['tests'] and after['passed'] >= before['passed']
     efficiency = len(new_text.encode()) < len(old_text.encode())
@@ -97,6 +124,12 @@ def public_writer_evidence(score, experience, max_bytes):
                                  'elapsed_sec':experience['elapsed_sec'],
                                  'tool_call_count':len(experience['tools'])},
             'max_body_utf8_bytes':max_bytes}
+
+def shared_experience(public_task, result):
+    # Raw read results can contain private skills and old file-export packets.
+    return {'task':DEV,'public_task':public_task,'run_completed':result['completed'],
+            'error':result['error'],'elapsed_sec':result['elapsed_sec'],
+            'tools':result['tool_names'],'output_received':result['output_received']}
 
 class Pilot:
     def __init__(self, args):
@@ -204,6 +237,7 @@ Write the original requested JSON output file. Return its exact bytes through ba
         timer.start()
         start = time.monotonic()
         counts = collections.Counter()
+        observed_tools = {}
         text, usage, tool_names = [], [], []
         completed, error = False, None
         print('START',label,task,flush=True)
@@ -229,10 +263,13 @@ Write the original requested JSON output file. Return its exact bytes through ba
                         text.extend(strings(event))
                     if kind == 'usage.token':
                         usage.append(self.scrub(event))
-                    if kind == 'tool_call.created':
-                        tool_names.append(event.get('tool_name',''))
-                        print('TOOL',label,tool_names[-1],flush=True)
-                    if counts['tool_call.created'] > 32 or counts['run.in_progress'] > 16:
+                    if kind in ['tool_call.created','tool_call.in_progress'] and event.get('tool_call_id') and event.get('tool_name'):
+                        call_id = event['tool_call_id']
+                        if call_id not in observed_tools:
+                            observed_tools[call_id] = event['tool_name']
+                            tool_names.append(event['tool_name'])
+                            print('TOOL',label,tool_names[-1],flush=True)
+                    if len(observed_tools) > 32 or counts['run.in_progress'] > 16:
                         error = 'call_or_turn_budget'
                         interrupt(error)
                     if kind in ['run.failed','request_user_input']:
@@ -245,7 +282,12 @@ Write the original requested JSON output file. Return its exact bytes through ba
             interrupt(error)
         finally:
             timer.cancel()
-        output = decode_file(text)
+        logged_events = [json.loads(line) for line in (folder/'events.jsonl').read_text().splitlines()] if (folder/'events.jsonl').exists() else []
+        try:
+            output = exported_file(logged_events)
+        except ValueError as exc:
+            output = None
+            error = 'output_transport_'+type(exc).__name__
         if output is not None:
             (folder/OUTPUTS[task]).write_bytes(output)
         result = {'label':label,'task':task,'completed':completed,'error':error,
@@ -292,7 +334,7 @@ Write the original requested JSON output file. Return its exact bytes through ba
 
     def propose(self, before, old_text, experience):
         prompt = '''Propose a compact reusable workflow for reconciling records across a document and a current table, informed only by this PUBLIC development task and numeric execution results. This is a new research prototype, not native product evolution. Return only JSON {"body": "Markdown workflow without YAML header", "rationale": "brief"}. Stay strictly below max_body_utf8_bytes. Keep source evidence, distinguish missing from zero, use stable IDs and explicit normalization, do not modify originals, and obey each current task's output contract. Do not memorize people, row IDs, exact answers, amounts, filenames, benchmark checks or output values. Do not change identity, Soul or permissions. You receive no private expert content, raw tool results, answers or hidden tests. A separate real development execution decides acceptance; your own estimates do not prove improvement.\n'''
-        header = '---\nname: expense-record-reconciliation\ndescription: Reconcile source records and preserve evidence.\n---\n'
+        header = SKILL_HEADER
         evidence = public_writer_evidence(before['score'],experience,len(old_text.encode())-len(header.encode())-1)
         request = {'model':WRITER,'temperature':0,'max_tokens':1200,'messages':[{'role':'user','content':prompt+json.dumps(evidence,ensure_ascii=False)}],
                    'response_format':{'type':'json_object'}}
@@ -326,18 +368,7 @@ Write the original requested JSON output file. Return its exact bytes through ba
                     'inputs':{task:{n:sha(((self.dev_inputs if task==DEV else self.bench/task/'environment')/n).read_bytes()) for n in names} for task,names in INPUTS.items()}}
         save(self.out/'protocol.json',protocol)
         before = self.solve('dev_before',DEV)
-        experience = {'task':DEV,'public_task':(self.bench/DEV/'task.md').read_text().split('---',2)[2],
-                      'run_completed':before['completed'],'error':before['error'],'elapsed_sec':before['elapsed_sec'],
-                      'tools':before['tool_names'],'output_received':before['output_received']}
-        # Only observed execution excerpts, never verifier failure text or gold.
-        events = self.out/'dev_before/events.jsonl'
-        observations = []
-        if events.exists():
-            for line in events.read_text().splitlines():
-                event = json.loads(line)
-                if event.get('type') == 'tool_call.result':
-                    observations.append('\n'.join(strings(event))[:1500])
-        experience['observed_tool_results'] = observations[-6:]
+        experience = shared_experience((self.bench/DEV/'task.md').read_text().split('---',2)[2],before)
         save(self.out/'development_experience.json',experience)
         accepted, candidate, after = False, None, None
         try:

@@ -2,11 +2,13 @@
 
 日期: 2026-11-10.
 
+执行状态: 已结束. 本轮第三组没有采用候选, no-skills的共同经验又夹带了skill片段, 所以没有得到有效的三组方法对照. 原数字和原因见[RESULTS.md](RESULTS.md). 以下保留原计划的意图, 不把意图写成完成.
+
 先只做1道开发原题、1道新测试原题、3个条件, 不扩大题量. 想回答的是: 一段真正经过开发执行与检查的skill更新, 能不能接进Profy文件任务, 并在另一道原题上产生可评分的结果.
 
 初始材料: 收到的财务报销管家. 开发task: pdf-excel-diff. 测试task: invoice-fraud-detection. 原题、原附件和原评分不改. 本地SkillsBench版本f860ecf02ef53412a030f8661c83d644b739ff01.
 
-主要看with-skills和第三组. no-skills作为起点参考. 三组考试可用原始开发经验相同;model、工具上限和900秒期限相同. 只修改expense-record-reconciliation这一个skill文件, 不改身份、Soul或其他文件. 新版在测试启动前冻结, 不读测试答案或分数再改方法.
+主要看with-skills和第三组. no-skills作为起点参考. 三组考试可用的开发经验相同;model、工具上限和900秒期限相同. 首版经验错误地包含skill读取片段, 当前代码已改为只共享公开题面和运行统计, 没有回头改原输入或追加付费重跑. 计划只修改expense-record-reconciliation这一个skill文件, 不改身份、Soul或其他文件. 实际候选被拒绝, 新版未启用. 测试启动前冻结配置, 不读测试答案或分数再改方法.
 
 主要结果是原verifier的strict通过情况. 辅助结果包括原pytest通过/失败项数、实际完成、耗时、usage、输出hash、可见skill读取. 学习阶段与考试阶段开销分开, 失败也保留.
 

@@ -1,0 +1,171 @@
+{
+  "runs": [
+    {
+      "condition": "dev_before",
+      "task": "pdf-excel-diff",
+      "completed": true,
+      "output_received": true,
+      "score": {
+        "tests": 11,
+        "passed": 11,
+        "failed": 0,
+        "strict": 1,
+        "status": "scored",
+        "original_scorer_sha256": "4ac05115f9c9d9555f37849434de0ec9a74ac2e3cb53946c0b27c57bf300b5d0",
+        "path_binding_only": true
+      },
+      "elapsed_sec": 249.492,
+      "tool_calls": 15,
+      "native_event_span_sec": 247.151,
+      "timing_basis": "Client task duration; excludes upload",
+      "output_sha256": "0656aa53dc1c992068aa94e9fcdafcf9ee944879ed69523e5a5651fc879bc25f",
+      "tool_names": {
+        "bash": 4,
+        "read": 9,
+        "skills_read": 2
+      },
+      "native_token_totals": {
+        "prompt_tokens": 218992,
+        "completion_tokens": 2572,
+        "total_tokens": 221564,
+        "cache_read_tokens": 183748,
+        "cache_write_tokens": 35217
+      },
+      "usage_event_count": 9,
+      "profy_cost_usd": null
+    },
+    {
+      "condition": "no-skills",
+      "task": "invoice-fraud-detection",
+      "completed": true,
+      "output_received": true,
+      "score": {
+        "tests": 2,
+        "passed": 1,
+        "failed": 1,
+        "strict": 0,
+        "status": "scored",
+        "original_scorer_sha256": "51365f014273d149a67c19484dadb9f494083fd82f242d524a15014838fd8649",
+        "path_binding_only": true
+      },
+      "elapsed_sec": 63.63,
+      "tool_calls": 6,
+      "native_event_span_sec": 63.63,
+      "timing_basis": "native event span; excludes upload",
+      "output_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "tool_names": {
+        "read": 4,
+        "bash": 2
+      },
+      "native_token_totals": {
+        "prompt_tokens": 122679,
+        "completion_tokens": 2201,
+        "total_tokens": 124880,
+        "cache_read_tokens": 82810,
+        "cache_write_tokens": 39857
+      },
+      "usage_event_count": 4,
+      "profy_cost_usd": null
+    },
+    {
+      "condition": "with-skills",
+      "task": "invoice-fraud-detection",
+      "completed": true,
+      "output_received": true,
+      "score": {
+        "tests": 2,
+        "passed": 1,
+        "failed": 1,
+        "strict": 0,
+        "status": "scored",
+        "original_scorer_sha256": "51365f014273d149a67c19484dadb9f494083fd82f242d524a15014838fd8649",
+        "path_binding_only": true
+      },
+      "elapsed_sec": 92.535,
+      "tool_calls": 21,
+      "native_event_span_sec": 92.535,
+      "timing_basis": "native event span; excludes upload",
+      "output_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "tool_names": {
+        "bash": 4,
+        "read": 13,
+        "skills_read": 4
+      },
+      "native_token_totals": {
+        "prompt_tokens": 251212,
+        "completion_tokens": 3149,
+        "total_tokens": 254361,
+        "cache_read_tokens": 207512,
+        "cache_write_tokens": 43673
+      },
+      "usage_event_count": 9,
+      "profy_cost_usd": null
+    },
+    {
+      "condition": "with-skills-cognilife-method",
+      "task": "invoice-fraud-detection",
+      "completed": true,
+      "output_received": true,
+      "score": {
+        "tests": 2,
+        "passed": 1,
+        "failed": 1,
+        "strict": 0,
+        "status": "scored",
+        "original_scorer_sha256": "51365f014273d149a67c19484dadb9f494083fd82f242d524a15014838fd8649",
+        "path_binding_only": true
+      },
+      "elapsed_sec": 89.667,
+      "tool_calls": 21,
+      "native_event_span_sec": 89.667,
+      "timing_basis": "native event span; excludes upload",
+      "output_sha256": "e6f244cffe7f41716da1c256b76d5be0888335ad8e9f3a868660221d95e58ab6",
+      "tool_names": {
+        "bash": 4,
+        "read": 13,
+        "skills_read": 4
+      },
+      "native_token_totals": {
+        "prompt_tokens": 257077,
+        "completion_tokens": 3394,
+        "total_tokens": 260471,
+        "cache_read_tokens": 214649,
+        "cache_write_tokens": 42401
+      },
+      "usage_event_count": 9,
+      "profy_cost_usd": null
+    }
+  ],
+  "gate": {
+    "accepted": false,
+    "error_type": "ValueError",
+    "fallback": "unchanged original skill"
+  },
+  "diagnostics": {
+    "candidate_utf8_bytes": 1525,
+    "original_utf8_bytes_derived_from_recorded_budget": 1191,
+    "development_candidate_executed": false,
+    "shared_experience_expert_excerpt_count": 1,
+    "shared_experience_old_export_count": 1,
+    "clean_no_skills_control": false,
+    "test_diagnostic": {
+      "reference_pages": 53,
+      "expected_fraud_pages": 50,
+      "predicted_fraud_pages": 50,
+      "missed_pages": 0,
+      "extra_pages": 0,
+      "exact_value_differences": {
+        "po_number": 5
+      },
+      "scope": "Offline exact JSON comparison of no-skills output; all three output hashes match. Not a replacement official metric."
+    }
+  },
+  "valid_method_effect_comparison": false,
+  "validity_note": "Rejected update fell back to original skill; no-skills received an expert skill excerpt in shared experience. Not evidence for or against CogniLife effectiveness.",
+  "updater_model": "openai/gpt-4.1-mini",
+  "openrouter_reported_cost_usd": 0.0009308,
+  "profy_cost_note": "Currency bill unavailable; not reported as zero or inferred from tokens.",
+  "executed_code_commit": "e68a13ba60bc2ccf7b19a6cb3a0fc01a0203d950",
+  "scope": "One development task and one held-out task. No significance or broad generalization claim. No cross-expert attribution or native Memory/evolution claim.",
+  "event_counter_note": "Native tools emit in_progress. Tool totals here are deduplicated from actual event IDs; the first driver version counted created events only. Original outputs and grader scores are unchanged."
+}
