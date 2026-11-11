@@ -3,11 +3,14 @@
   "timezone": "America/Los_Angeles",
   "stopped_after_round": 5,
   "reason": "Small-scope success confirmed on both compatible tasks with unchanged original scoring and public serialization contract.",
-  "no_more_evolution": false,
+  "no_more_evolution": true,
   "success_record": "round-05/ROUND.json",
   "skill_sha256": "b8a1c4e2150c4895f416d45a5e1033d6c36db7a942a75461a9bea9b6dc21e7e8",
   "full_scope_started": "two compatible tasks x three groups; other 85 tasks await scope clarification",
   "paper_changed": false,
-  "status": "frozen_for_full_comparison",
-  "resume_if_full_comparison_fails": true
+  "status": "completed_compatible_two_frozen_comparison",
+  "resume_if_full_comparison_fails": false,
+  "full_two_goal_met": true,
+  "aggregate_token_change_pct": -8.547454531682641,
+  "full_87_started": false
 }

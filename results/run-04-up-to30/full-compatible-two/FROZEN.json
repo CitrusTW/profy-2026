@@ -1,0 +1,7 @@
+{
+  "scope": "All two compatible SkillsBench tasks, not all 87 tasks",
+  "skill_sha256": "b8a1c4e2150c4895f416d45a5e1033d6c36db7a942a75461a9bea9b6dc21e7e8",
+  "selected_round": 5,
+  "new_optimization_after_freeze": false,
+  "evaluation_role": "Both tasks were used for adaptive development; this is an in-sample frozen comparison, not unseen generalization."
+}

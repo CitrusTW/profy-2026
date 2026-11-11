@@ -1,8 +1,8 @@
 # SkillsBench skill evolution 小验证
 
-最新进度: 第5轮小范围两题均3/3并再次确认, 执行tokens合计两次分别降低约9.7%和1.6%. 已冻结, 正跑2道配套题的完整三组, 并非87题全库. 看[逐轮进度](../../results/run-04-up-to30/PROGRESS.md)与[小范围记录](../../results/run-04-up-to30/SMALL_SCOPE_REPORT.md). 若完整对照未保住质量/成本, 会在总计30轮上限内继续.
+最新进度(2026-11-11): 第5轮达到预定的小范围目标并再次确认, 随后冻结skill, 完成2道配套题的三组对照, 共6次新求解. 原版和进化版都通过两题全部原测试; 执行tokens合计分别为237638和217326, 本次进化版少8.55%. 单OBJ题少26.7%, 分部件题反而多18.2%, 收益不是每题都有. 已在第5轮停止进化, 未启动87题全库. 看[最终数字和说明](../../results/run-04-up-to30/full-compatible-two/REPORT.md)、[逐轮进度](../../results/run-04-up-to30/PROGRESS.md)与[小范围记录](../../results/run-04-up-to30/SMALL_SCOPE_REPORT.md). 两题已用于开发, 这次结果不算独立泛化验证; 也不是完整CogniLife平台复现. 论文未改.
 
-**结果解释纠正:** [INDEXING_DIAGNOSIS.md](INDEXING_DIAGNOSIS.md)已定位run-03第2份skill的官方1/3原因: 保留索引改变顶点重复方式, 原verifier只抽v列表且不读f索引, 对等价OBJ表示敏感. 158份输出在原评分float32精度下按f展开的三角形角点全部匹配. 官方分数不改, 但不能再直接称为几何质量退步. 本轮只作离线诊断, 未付费重跑.
+**旧结果解释纠正:** [INDEXING_DIAGNOSIS.md](INDEXING_DIAGNOSIS.md)已定位run-03第2份skill的官方1/3原因: 保留索引改变顶点重复方式, 原verifier只抽v列表且不读f索引, 对等价OBJ表示敏感. 158份输出在原评分float32精度下按f展开的三角形角点全部匹配. 官方分数不改, 但不能再直接称为几何质量退步. 该诊断没有付费调用; 上面的新结果来自诊断后获准的第4至5轮及冻结对照.
 
 此前3轮结果见[ITERATIVE_RESULTS.md](ITERATIVE_RESULTS.md): 新增3份候选和1次最佳候选确认, 开发成本改善, 最后benchmark仍是原版3/3、进化版1/3. 不采用进化版, 不改论文. 新流程见[ITERATION_PLAN.md](ITERATION_PLAN.md); iterate.py仅用DEV历史选择, 18项离线测试通过.
 
