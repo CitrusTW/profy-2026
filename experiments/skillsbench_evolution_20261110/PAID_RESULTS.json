@@ -1,0 +1,297 @@
+{
+  "client_date": "2026-11-10",
+  "timezone": "America/Los_Angeles",
+  "run_id": "run-02-gpt61",
+  "kind": "real API pilot; previously inspected evaluation task, diagnostic repeat",
+  "development_baseline_reused": true,
+  "new_solver_attempts": 4,
+  "solver_model_requested": "gpt-6.1-sol",
+  "evolution_model_reported": "openai/gpt-6.1-sol",
+  "evolution": {
+    "created_before_evaluation": true,
+    "candidate_sha256": "d94e59830e1c21c4d7b4ad379b134794d91e2dba7eb14a254b1afeea7c5c291b",
+    "candidate_chars": 3619,
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "requests": 4,
+    "elapsed_sec": 32.386,
+    "total_tokens": 157616,
+    "reported_cost_usd": 0.1262168,
+    "accepted_by_original_gate": true,
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    }
+  },
+  "candidate_check": {
+    "kind": "offline structural and DEV evidence check, not semantic verification",
+    "checks": {
+      "configured_evolver_model": true,
+      "configured_evolver_endpoint": true,
+      "original_gate_admitted": true,
+      "parent_version_matches": true,
+      "recorded_request_model": true,
+      "first_request_matches_provenance": true,
+      "candidate_matches_pending": true,
+      "preselected_target_only": true,
+      "candidate_body_size": true,
+      "candidate_frontmatter": true,
+      "dev_original execution": true,
+      "dev_original skill read": true,
+      "dev_original scoring complete": true,
+      "dev_original strict consistent": true,
+      "dev_candidate execution": true,
+      "dev_candidate skill read": true,
+      "dev_candidate scoring complete": true,
+      "dev_candidate strict consistent": true,
+      "development_quality_nondegrading": true
+    },
+    "structural_and_dev_pass": true,
+    "failed_checks": [],
+    "measured_development": {
+      "total_tokens": {
+        "before": 152865,
+        "after": 287965,
+        "delta": 135100
+      },
+      "tool_calls": {
+        "before": 9,
+        "after": 15,
+        "delta": 6
+      },
+      "llm_turns": {
+        "before": 8,
+        "after": 14,
+        "delta": 6
+      }
+    },
+    "measured_efficiency_is_original_gate": false,
+    "semantic_applicability_verified": false,
+    "native_promoted": false,
+    "full_paper_method_verified": false,
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    },
+    "candidate_sha256": "d94e59830e1c21c4d7b4ad379b134794d91e2dba7eb14a254b1afeea7c5c291b",
+    "parent_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663"
+  },
+  "rows": [
+    {
+      "label": "dev_original",
+      "task": "threejs-to-obj",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 156.874,
+      "output_received": true,
+      "native_zip_sha256": "b0cd992379272fcfe726c3436104f473cfa673e76228ac5c87178970ef868ceb",
+      "skill_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 149383,
+        "output_tokens": 3482,
+        "total_tokens": 152865,
+        "cache_read_tokens": 125771,
+        "cache_write_tokens": 23588,
+        "llm_turns": 8,
+        "tool_calls": 9
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+        "assertions_unchanged": 8
+      }
+    },
+    {
+      "label": "dev_candidate",
+      "task": "threejs-to-obj",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 173.908,
+      "output_received": true,
+      "native_zip_sha256": "f243f96f0877949be716e56b9f8fc7134775dce7918ac1667f41f1dbcc21a88d",
+      "skill_sha256": "d94e59830e1c21c4d7b4ad379b134794d91e2dba7eb14a254b1afeea7c5c291b",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 283279,
+        "output_tokens": 4686,
+        "total_tokens": 287965,
+        "cache_read_tokens": 257674,
+        "cache_write_tokens": 25563,
+        "llm_turns": 14,
+        "tool_calls": 15
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+        "assertions_unchanged": 8
+      }
+    },
+    {
+      "label": "no-skills",
+      "task": "threejs-structure-parser",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 145.204,
+      "output_received": true,
+      "native_zip_sha256": "5158e3f88fdc8b04fbd199e3cc1fd5c39c4ce4e6c8b15732da1e7f50b225b611",
+      "skill_sha256": null,
+      "target_skill_read_verified": null,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": false,
+      "tokens": {
+        "input_tokens": 102504,
+        "output_tokens": 2409,
+        "total_tokens": 104913,
+        "cache_read_tokens": 80014,
+        "cache_write_tokens": 22472,
+        "llm_turns": 6,
+        "tool_calls": 5
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 1,
+        "failed": 2,
+        "skipped": 0,
+        "strict": 0,
+        "original_returncode": 1,
+        "source_sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+        "assertions_unchanged": 19
+      }
+    },
+    {
+      "label": "with-skills",
+      "task": "threejs-structure-parser",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 146.394,
+      "output_received": true,
+      "native_zip_sha256": "9224da338208cfdef7c4a842771069e95f61f3b4b4612f6d25ff6bbc55ba5a8d",
+      "skill_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 133357,
+        "output_tokens": 2874,
+        "total_tokens": 136231,
+        "cache_read_tokens": 107095,
+        "cache_write_tokens": 26241,
+        "llm_turns": 7,
+        "tool_calls": 10
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+        "assertions_unchanged": 19
+      }
+    },
+    {
+      "label": "with-CogniLife-skills",
+      "task": "threejs-structure-parser",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 147.377,
+      "output_received": true,
+      "native_zip_sha256": "5206cd3c86ea35b335c99adad3433bb5376211cbf3723c17e600fd63521d09b8",
+      "skill_sha256": "d94e59830e1c21c4d7b4ad379b134794d91e2dba7eb14a254b1afeea7c5c291b",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 185681,
+        "output_tokens": 3192,
+        "total_tokens": 188873,
+        "cache_read_tokens": 157436,
+        "cache_write_tokens": 28218,
+        "llm_turns": 9,
+        "tool_calls": 10
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 1,
+        "failed": 2,
+        "skipped": 0,
+        "strict": 0,
+        "original_returncode": 1,
+        "source_sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+        "assertions_unchanged": 19
+      }
+    }
+  ],
+  "package_differences": [
+    "bench_skills/threejs/SKILL.md"
+  ],
+  "evolution_request_marker_absence": {
+    "threejs-structure-parser": true,
+    "coordinate_diagnostic.json": true,
+    "gen_ground_truth.mjs": true,
+    "test_outputs.py": true
+  },
+  "marker_check_limit": "String checks supplement the DEV-only input construction; not a general semantic leak detector.",
+  "after_evaluation_candidate_edits": false,
+  "paper_changed": false,
+  "profy_total_cost_usd": null,
+  "claim_limit": "One previously inspected task and one attempt per group; not full paper reproduction or independent generalization evidence.",
+  "status": "completed_negative_result",
+  "received_original_source_unchanged": [
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/prompts/EVOLUTION.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/skills/evolution/SKILL.md",
+      "sha256_matches": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/tools/evolution_log.py",
+      "sha256_matches": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/skill/tools/skill.py",
+      "sha256_matches": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/api/agent.py",
+      "sha256_matches": true
+    }
+  ],
+  "prior_original_files_unchanged": {
+    "checked": 787,
+    "changed": []
+  },
+  "diagnostics": {
+    "dns_failures_before_send": 1,
+    "http_400_rejections": 2,
+    "http_502_provider_errors": 5,
+    "successful_minimal_chat_probe_tokens": 14,
+    "profy_dollar_billing": "unknown; no dollar ledger returned, including failed calls",
+    "openrouter_evolution_cost_usd": 0.1262168
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "file": "results/run-02-gpt61/PAID_OUTPUTS_ONLY.zip",
+  "bytes": 2338547,
+  "sha256": "c69cba3b5d17ec161ce92d5c9f9e3e0e4e05e6c6ffa4b4c1f46dc39066494205",
+  "contains": "Three evaluation native ZIPs; exact OBJ bytes from two development runs; assistant-written result metadata. No third-party code, skills, original inputs, tests or keys."
+}

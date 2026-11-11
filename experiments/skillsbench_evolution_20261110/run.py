@@ -47,11 +47,15 @@ def load_own_transport(workspace):
 
 class ProfyTransport:
     def __init__(self, previous, keys_file):
+        self.keys_file = Path(keys_file)
         secret = Path(keys_file).read_text()
         self.key = next(k for k in re.findall(r'\bsk-[A-Za-z0-9._-]+', secret) if k.startswith('sk-pro-'))
         self.expert_id = re.search(r'expert identifier\s*:\s*([A-Za-z0-9_-]+)', secret, re.I)[1]
         self.api = previous.Pilot.api.__get__(self)
         self.upload = previous.Pilot.upload.__get__(self)
+
+    def evolution_key(self):
+        return next(k for k in re.findall(r'\bsk-[A-Za-z0-9._-]+', self.keys_file.read_text()) if k.startswith('sk-or-'))
 
     def scrub(self, value):
         if isinstance(value, str):
@@ -256,7 +260,7 @@ After writing the original requested outputs under output/, package only those a
     def evolve(self):
         require_paid(self.args.allow_paid)
         trajectory, metrics = self.development_evidence()
-        return evolve(self.workspace, self.target, self.out/'evolution', trajectory, metrics, self.transport.key, self.transport.scrub, allow_paid=self.args.allow_paid)
+        return evolve(self.workspace, self.target, self.out/'evolution', trajectory, metrics, self.transport.evolution_key(), self.transport.scrub, allow_paid=self.args.allow_paid)
 
     def offline_check(self):
         trajectory, metrics = self.development_evidence()

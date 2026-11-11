@@ -1,6 +1,6 @@
 # SkillsBench skill evolution 小验证
 
-2026-11-10更新: 适配代码和候选核验已修, 9项离线测试通过. 这轮没有调用模型, 没有生成新的skill. 看[改动和检查结果](OFFLINE_FIX_REPORT.md)和[检查数字](OFFLINE_FIX_FACTS.json).
+2026-11-10更新: 已获准付费小跑. gpt-6.1-sol已生成新skill并完成验证. 新skill开发题3/3, 验证题1/3; 原版验证3/3, 本轮没有收益, 不扩大. 看[实际数字](PAID_RESULTS.md)和[结果JSON](PAID_RESULTS.json). 本次计划见[PAID_RUN_PLAN.md](PAID_RUN_PLAN.md). 上一轮的[离线修复记录](OFFLINE_FIX_REPORT.md)和[检查数字](OFFLINE_FIX_FACTS.json)继续保留, 记录的是付费前状态.
 
 旧小跑的数字保留在[RESULTS.md](RESULTS.md): 原版skills通过3/3, 旧进化版1/3. 旧候选由gpt-4.1生成, 不会被改名当成gpt-6.1-sol的结果. 修好代码不等于已经测出新skill有效.
 
@@ -12,7 +12,7 @@
 
 ## 修到了哪里
 
-- Evolution固定走Profy `/v1/chat/completions`, 请求模型为gpt-6.1-sol. 求解也使用gpt-6.1-sol. 不再走OpenRouter, 没有4.1备用路线.
+- Evolution通过OpenRouter的openai/gpt-6.1-sol运行; 求解通过Profy的gpt-6.1-sol运行. 没有4.1备用路线. Profy plain chat带工具的请求实际返回provider错误, 用户明确允许改用OpenRouter, 才切换入口.
 - 用原ContextManager组装静态context, 用原skill metadata parser和discovery输出. Evolution能发现开发题的threejs和obj-exporter, 但本实验只允许修改预先选好的threejs.
 - 开发历史保留user、assistant、tool角色和完整工具参数/结果. 缺结果、重复调用或对不上的tool ID会停止, 不补造记录.
 - 原EVOLUTION.md、evolution workflow、skill工具和evolution_log门控仍从收到的Profy-main读取. 原权重和接受条件不变.
@@ -22,7 +22,7 @@
 
 ## 环境和离线检查
 
-需要CogniLife工作区里的SkillsBench与收到的Profy-main源码, Python 3.12、pydantic 2和PyYAML. 此机器可复用已安装的PyYAML; 换机器需要正常安装该依赖. 本地不运行大模型, 不需要GPU. 只有实际求解和生成候选时才需要Profy key与expert identifier; 不需要OpenRouter key.
+需要CogniLife工作区里的SkillsBench与收到的Profy-main源码, Python 3.12、pydantic 2和PyYAML. 此机器可复用已安装的PyYAML; 换机器需要正常安装该依赖. 本地不运行大模型, 不需要GPU. 实际求解需要Profy key与expert identifier; 当前Evolution入口还需要OpenRouter key. 离线检查不读key.
 
 ```bash
 python /path/to/skillsbench_evolution_20261110/test_adapter.py
@@ -31,17 +31,17 @@ python /path/to/skillsbench_evolution_20261110/run.py check --workspace /path/to
 
 check读取dev_original、dev_candidate和evolution的已有记录, 不读取key. 输出写到结果目录的adapter_fix_checks. prepared_request_local_only.json含原context和开发轨迹, 只留本地, 不提交代码仓库.
 
-9项测试覆盖原context、历史配对、付费关闭、旧模型拦截、候选hash篡改、执行失败、原门控重放、输出字节与ZIP路径检查, 以及key脱敏. fixture只测试代码边界, 不算实验成绩.
+10项测试覆盖原context、历史配对、付费关闭、旧模型拦截、候选hash篡改、执行失败、原门控重放、输出字节与ZIP路径检查, 以及key脱敏. fixture只测试代码边界, 不算实验成绩.
 
 ## 将来实际运行时
 
-当前所有付费phase默认关闭. 只有另行允许后才加 `--allow-paid`, 并用 `--keys-file` 填密钥文件位置. 不把key值写入命令. 每个新候选使用新结果目录; 不覆盖旧evolution或frozen.json.
+付费phase默认关闭, 需要 `--allow-paid` 和 `--keys-file` 密钥文件位置. 本次小跑已获准, 不自动扩大. 不把key值写入命令. 每个新候选使用新结果目录; 不覆盖旧evolution或frozen.json.
 
-顺序是setup、dev、evolve、candidate、test、report. setup只准备原评分依赖, 需要Node/npm及原pytest/numpy环境; dev跑开发题; evolve最多8次Profy模型请求; candidate跑候选的开发检查; test在核验通过后才运行三组. 当前这对题的验证结果已被看过, 所以不据此启动新的独立验证或全量批次.
+顺序是setup、dev、evolve、candidate、test、report. setup只准备原评分依赖, 需要Node/npm及原pytest/numpy环境; dev跑开发题; evolve最多8次Profy模型请求; candidate跑候选的开发检查; test在核验通过后才运行三组. 当前这对题的验证结果已被看过, 本次明确标为diagnostic repeat, 不称独立held-out验证, 不自动启动全量批次.
 
 原verifier和reference generator只绑定运行路径, 不改断言或容差, 不上传给模型. 输出通过原生ZIP传回并逐文件核对hash. 默认最多5次求解, 每次15分钟、48次工具调用、24个模型回合, 不自动重发.
 
-Profy plain chat endpoint的gpt-6.1-sol工具调用协议只核对了文档和收到的路由源码, 本轮没有在线试调用. 不能把离线组装成功说成线上已跑通或新候选已变好.
+Profy plain chat的极短纯文本请求成功, 带tools或max_tokens的极短请求返回502. 返回内容没有底层错误细节, 不据此断言所有Profy模型都不能调用工具. 本次Evolution改走已实际返回gpt-6.1-sol响应的OpenRouter入口, 三组求解继续走Profy agents/run. 接口诊断单列, 不当作benchmark成绩.
 
 ## 保存边界
 

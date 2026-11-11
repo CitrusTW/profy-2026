@@ -1,6 +1,6 @@
 # SkillsBench三组小跑
 
-2026-11-10, America/Los_Angeles. 当前只修适配代码并做离线检查, 暂停付费重跑、不改论文、不提交OpenReview. 旧小跑已结束, 其结果单独保留. 修复详情见[OFFLINE_FIX_REPORT.md](OFFLINE_FIX_REPORT.md).
+2026-11-10, America/Los_Angeles. 用户现已明确允许付费小跑, 以及把原context和开发轨迹发到OpenRouter运行gpt-6.1-sol. 本次不改论文、不提交OpenReview. 旧小跑已结束, 其结果单独保留. 本次范围见[PAID_RUN_PLAN.md](PAID_RUN_PLAN.md). 修复详情见[OFFLINE_FIX_REPORT.md](OFFLINE_FIX_REPORT.md).
 
 只问一个问题: SkillsBench原版skill经过论文的skill-refinement核心流程更新后, 另一道任务能否做得更准, 或在质量不降时更省? 不从expert包提取任何内容.
 
@@ -31,7 +31,7 @@
 4. plugins/builtin/evolution/tools/evolution_log.py原函数体, 包括维度校验、字符footprint、质量组不降/效率组严格提高的ratchet. 不改权重、阈值或接受条件.
 5. api/agent.py中的原启动消息和_format_run_stats渲染; 输入实际工具操作记录与测得用量.
 
-修复后的代码把开发题的完整skill目录接到原读取接口, 用原ContextManager和plugin registry组装静态context, 保留历史消息角色及工具调用配对. Evolution改为Profy `/v1/chat/completions`, 请求模型固定gpt-6.1-sol, 不再走OpenRouter或回退4.1. 原pending仍只保存在实验目录. expert/threejs是外部适配器的技能作用域, 不代表平台数据库注册或promotion. plain chat的6.1工具调用尚未在线试跑. 旧小跑实际使用4.1, 不改旧记录.
+修复后的代码把开发题的完整skill目录接到原读取接口, 用原ContextManager和plugin registry组装静态context, 保留历史消息角色及工具调用配对. Evolution通过OpenRouter `/api/v1/chat/completions`, 请求模型固定openai/gpt-6.1-sol, 不回退4.1. Profy plain chat工具请求实际返回provider错误, 切换目的地已获明确授权. 原pending仍只保存在实验目录. expert/threejs是外部适配器的技能作用域, 不代表平台数据库注册或promotion. Profy plain chat的6.1工具请求已试跑并返回502; OpenRouter同模型已实际完成生成. 旧小跑实际使用4.1, 不改旧记录.
 
 这是收到版本的skill-refinement核心外部适配, 不是完整CogniLife复现. 收到代码中尚未找到capability-gap classifier和自动语义适用性检查的对应实现; native acceptance / promotion没有接入. 三项缺口写入机器可读检查结果, 不补写prompt冒充原实现. 原门控分数多为模型估计, 只决定接收建议. 新核验另查模型、请求hash、父版本、候选正文、开发执行和评分一致性, 同时报告实测tokens/工具数; 不把这些新核验说成原门控已经有的功能, 也不把结构核验说成语义核验.
 
@@ -44,7 +44,7 @@
 5. 冻结后验证题三组各一次, 复用原评分. 更新模型不接触这些结果. 如没有可用候选, 第三组标not_run, 不用原skill换名充数.
 6. 交实际数字与方法范围, 再讨论扩大. 不根据验证题分数继续改skill后报成独立测试.
 
-将来另行允许付费后, 上限仍为5次Profy求解(原开发1+候选开发1+验证3), 每次15分钟、48个工具调用、24个模型回合. 不自动重发; Evolution最多8次Profy模型请求, 无独立judge. Profy真实货币费用没有账单就写unknown. 旧OpenRouter费用保持历史记录. 无GPU需求, 本机只调度/取文件/程序评分. 当前所有付费phase默认关闭, 不因离线核验通过而自动启动.
+将来另行允许付费后, 上限仍为5次Profy求解(原开发1+候选开发1+验证3), 每次15分钟、48个工具调用、24个模型回合. 不自动重发; Evolution最多8次OpenRouter模型请求, 无独立judge. Profy真实货币费用没有账单就写unknown. 旧OpenRouter费用保持历史记录. 无GPU需求, 本机只调度/取文件/程序评分. 付费phase默认需要显式开关; 本次小跑已获准, 不自动扩大. 旧验证题只能作为diagnostic repeat, 不当作新的独立验证.
 
 原评分只允许绑定运行路径, 不改断言、预期值或容差. 报告passed/failed/skipped和返回码, 关键skip不能视作通过. 输入/输出hash、真实文件取回、skill读取/版本与潜在污染分别保存. 两个原task的小跑只能支持小案例判断, 不能当完整SkillsBench成绩或跨expert归因证据.
 

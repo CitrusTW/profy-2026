@@ -10,13 +10,15 @@ import runpy
 import sys
 import time
 import typing
+import urllib.error
 import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 from types import SimpleNamespace
 
 EVOLUTION_MODEL = 'gpt-6.1-sol'
-EVOLUTION_URL = 'https://api.profy.cn/v1/chat/completions'
+EVOLUTION_WIRE_MODEL = 'openai/gpt-6.1-sol'
+EVOLUTION_URL = 'https://openrouter.ai/api/v1/chat/completions'
 MISSING_IMPLEMENTATIONS = {
     'capability_gap_classifier': 'No callable implementation identified in the received source.',
     'semantic_applicability_check': 'No executable check that learned advice applies to another task was identified.',
@@ -235,9 +237,9 @@ def prepare_evolution(workspace, target, out, trajectory, metrics):
     system, context = build_system(workspace, config['configurable']['skill_context'], functions, evolution_prompt)
     stat = SimpleNamespace(run_index=0, **{k: metrics.get(k) for k in ['total_tokens', 'input_tokens', 'output_tokens', 'llm_turns', 'tool_calls']}, skill_chars=len(Path(target).read_text()), success=bool(metrics['strict']), skill_version_note='original SkillsBench skill')
     messages = [{'role': 'system', 'content': system}, *development_messages(trajectory['request'], trajectory['events']), {'role': 'user', 'content': start+stats['_format_run_stats']([stat])}]
-    request = {'model': EVOLUTION_MODEL, 'max_tokens': 6500, 'messages': messages,
+    request = {'model': EVOLUTION_WIRE_MODEL, 'max_tokens': 6500, 'messages': messages,
                'tools': [tool_schema(f) for f in functions], 'tool_choice': 'auto'}
-    provenance = {'model': EVOLUTION_MODEL, 'endpoint': EVOLUTION_URL,
+    provenance = {'model': EVOLUTION_MODEL, 'wire_model': EVOLUTION_WIRE_MODEL, 'endpoint': EVOLUTION_URL,
                   'parent_sha256': hashlib.sha256(Path(target).read_bytes()).hexdigest(),
                   'request_sha256': hashlib.sha256(json.dumps(request, ensure_ascii=False, sort_keys=True).encode()).hexdigest(),
                   'context': context, 'missing_implementations': MISSING_IMPLEMENTATIONS,
@@ -256,7 +258,15 @@ def tool_schema(fn):
     return {'type': 'function', 'function': {'name': fn.__name__, 'description': inspect.getdoc(fn), 'parameters': {'type': 'object', 'properties': props, 'required': required, 'additionalProperties': False}}}
 
 
-def evolve(workspace, target, out, trajectory, metrics, profy_key, scrub, *, allow_paid=False):
+def evolution_http_request(body, key, end_user):
+    if not end_user:
+        raise ValueError('Evolution requires a stable run identifier')
+    return urllib.request.Request(EVOLUTION_URL, data=json.dumps(body).encode(), headers={
+        'Authorization': 'Bearer '+key, 'Content-Type': 'application/json',
+        'X-Title': 'SkillsBench evolution '+end_user}, method='POST')
+
+
+def evolve(workspace, target, out, trajectory, metrics, api_key, scrub, *, allow_paid=False):
     require_paid(allow_paid)
     out = Path(out); out.mkdir(exist_ok=True)
     if any(out.iterdir()):
@@ -270,9 +280,14 @@ def evolve(workspace, target, out, trajectory, metrics, profy_key, scrub, *, all
     for turn in range(8):
         request = {**prepared, 'messages': messages}
         (out/f'request_{turn+1}.json').write_text(json.dumps(request, ensure_ascii=False, indent=2))
-        req = urllib.request.Request(EVOLUTION_URL, data=json.dumps(request).encode(), headers={'Authorization': 'Bearer '+profy_key, 'Content-Type': 'application/json'}, method='POST')
-        with urllib.request.urlopen(req, timeout=180) as response:
-            result = json.load(response)
+        req = evolution_http_request(request, api_key, 'sb-evolution-'+out.parent.name)
+        try:
+            with urllib.request.urlopen(req, timeout=180) as response:
+                result = json.load(response)
+        except urllib.error.HTTPError as exc:
+            detail = scrub(exc.read(65536).decode(errors='replace'))
+            (out/f'transport_error_{turn+1}.json').write_text(json.dumps({'status': exc.code, 'detail': detail}, ensure_ascii=False, indent=2))
+            raise RuntimeError('Evolution HTTP '+str(exc.code)+'; saved error, no automatic retry') from None
         (out/f'response_{turn+1}.json').write_text(json.dumps(scrub(result), ensure_ascii=False, indent=2))
         receipts.append(result.get('usage') or {})
         reply = result['choices'][0]['message']
@@ -295,7 +310,7 @@ def evolve(workspace, target, out, trajectory, metrics, profy_key, scrub, *, all
         if store.rows:
             break
     (out/'tool_transcript.json').write_text(json.dumps(messages, ensure_ascii=False, indent=2))
-    summary = {'accepted_by_original_gate': bool(store.rows), 'model': EVOLUTION_MODEL, 'endpoint': EVOLUTION_URL, 'requests': len(receipts), 'usage': receipts, 'elapsed_sec': round(time.monotonic()-began, 3), 'storage': 'external adapter local pending, not Profy database', 'source_functions_modified': False, 'native_promoted': False, 'semantic_applicability_verified': False, 'missing_implementations': MISSING_IMPLEMENTATIONS}
+    summary = {'accepted_by_original_gate': bool(store.rows), 'model': EVOLUTION_MODEL, 'wire_model': EVOLUTION_WIRE_MODEL, 'endpoint': EVOLUTION_URL, 'requests': len(receipts), 'usage': receipts, 'elapsed_sec': round(time.monotonic()-began, 3), 'storage': 'external adapter local pending, not Profy database', 'source_functions_modified': False, 'native_promoted': False, 'semantic_applicability_verified': False, 'missing_implementations': MISSING_IMPLEMENTATIONS}
     (out/'summary.json').write_text(json.dumps(summary, ensure_ascii=False, indent=2))
     if not store.rows:
         return None, summary

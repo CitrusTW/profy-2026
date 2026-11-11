@@ -3,7 +3,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from native_evolution import EVOLUTION_MODEL, EVOLUTION_URL, MISSING_IMPLEMENTATIONS, yaml_module
+from native_evolution import EVOLUTION_MODEL, EVOLUTION_WIRE_MODEL, EVOLUTION_URL, MISSING_IMPLEMENTATIONS, yaml_module
 
 
 def digest(raw):
@@ -31,7 +31,7 @@ def check_candidate(run_dir, target):
     checks['parent_version_matches'] = provenance.get('parent_sha256') == digest(target.read_bytes())
     requests = sorted(evo.glob('request_*.json'))
     request_rows = [json.loads(p.read_text()) for p in requests]
-    checks['recorded_request_model'] = bool(request_rows) and all(r.get('model') == EVOLUTION_MODEL for r in request_rows)
+    checks['recorded_request_model'] = bool(request_rows) and all(r.get('model') == EVOLUTION_WIRE_MODEL for r in request_rows)
     checks['first_request_matches_provenance'] = bool(request_rows) and provenance.get('request_sha256') == digest(json.dumps(request_rows[0], ensure_ascii=False, sort_keys=True).encode())
     checks['candidate_matches_pending'] = bool(raw) and raw == pending.get('improved_content', '').encode()
     checks['preselected_target_only'] = pending.get('skill_name') == target.parent.name

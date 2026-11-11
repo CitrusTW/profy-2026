@@ -9,7 +9,7 @@ import argparse
 from unittest.mock import patch
 from pathlib import Path
 
-from native_evolution import original_components, tool_schema, prepare_evolution, development_messages, evolve, EVOLUTION_MODEL, EVOLUTION_URL
+from native_evolution import original_components, tool_schema, prepare_evolution, development_messages, evolve, EVOLUTION_MODEL, EVOLUTION_WIRE_MODEL, EVOLUTION_URL, evolution_http_request
 from candidate_check import check_candidate
 from run import sha, unpack_output, Study, ProfyTransport, load_own_transport, replay_original_gate
 
@@ -23,6 +23,14 @@ class AdapterChecks(unittest.TestCase):
         self.network = patch('urllib.request.urlopen', side_effect=AssertionError('Offline check attempted a network request'))
         self.network.start()
         self.addCleanup(self.network.stop)
+
+    def test_evolution_http_requires_stable_end_user(self):
+        request = evolution_http_request({'model': EVOLUTION_MODEL}, 'synthetic-key', 'fixture-run-id')
+        self.assertIn('fixture-run-id', request.get_header('X-title'))
+        self.assertEqual(request.full_url, EVOLUTION_URL)
+        self.assertEqual(json.loads(request.data)['model'], EVOLUTION_MODEL)
+        with self.assertRaises(ValueError):
+            evolution_http_request({}, 'synthetic-key', '')
 
     def test_original_context_and_development_history(self):
         result = json.loads((OLD_RUN/'dev_original/result.json').read_text())
@@ -39,9 +47,9 @@ class AdapterChecks(unittest.TestCase):
             again, provenance2, _ = prepare_evolution(WORKSPACE, TARGET, tmp, trajectory, metrics)
         self.assertEqual(request, again)
         self.assertEqual(provenance, provenance2)
-        self.assertEqual(request['model'], 'gpt-6.1-sol')
+        self.assertEqual(request['model'], EVOLUTION_WIRE_MODEL)
         self.assertEqual(provenance['endpoint'], EVOLUTION_URL)
-        self.assertNotIn('openrouter', json.dumps(request))
+        self.assertNotIn('gpt-4.1', json.dumps(request))
         system = request['messages'][0]['content']
         for name in ['security_fence', 'identity', 'soul', 'tool_calling', 'workflow', 'plugin_registry', 'skill_registry']:
             self.assertIsNotNone(provenance['context']['layers'][name])
@@ -97,7 +105,7 @@ class AdapterChecks(unittest.TestCase):
                 path.write_text(json.dumps(value))
             write(root/'evolution/pending.json', {'suggestion_content': {'skill_name': 'threejs', 'improved_content': body}})
             write(root/'evolution/summary.json', {'model': EVOLUTION_MODEL, 'endpoint': EVOLUTION_URL, 'accepted_by_original_gate': True})
-            request = {'model': EVOLUTION_MODEL, 'messages': [{'role': 'user', 'content': 'synthetic fixture only'}]}
+            request = {'model': EVOLUTION_WIRE_MODEL, 'messages': [{'role': 'user', 'content': 'synthetic fixture only'}]}
             write(root/'evolution/request_1.json', request)
             write(root/'evolution/provenance.json', {'model': EVOLUTION_MODEL, 'endpoint': EVOLUTION_URL, 'parent_sha256': sha(TARGET.read_bytes()), 'request_sha256': sha(json.dumps(request, ensure_ascii=False, sort_keys=True).encode())})
             base = {'task': 'threejs-to-obj', 'completed': True, 'error': None, 'output_received': True,
