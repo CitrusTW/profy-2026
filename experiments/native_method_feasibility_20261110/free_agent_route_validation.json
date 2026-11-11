@@ -1,0 +1,11 @@
+{
+  "method": "POST",
+  "route": "/v1/agents",
+  "request_body": {},
+  "expected_documented_validation": "400 Missing name before creation",
+  "http_status": 404,
+  "content_type": "text/plain; charset=UTF-8",
+  "response_excerpt": "404 Not Found",
+  "model_calls": 0,
+  "intended_mutation": false
+}

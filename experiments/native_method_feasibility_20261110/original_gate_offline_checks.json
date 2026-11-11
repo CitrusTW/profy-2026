@@ -1,0 +1,80 @@
+{
+  "status": "offline_source_checks_passed",
+  "new_model_calls": 0,
+  "network_calls": 0,
+  "test_count": 10,
+  "passed": 10,
+  "cases": [
+    {
+      "case": "quality_same_efficiency_increases",
+      "expected_accept": true,
+      "actual_accept": true,
+      "pass": true,
+      "message": "Suggestion submitted (id: local-fixture-1). Score: 53.62 → 58.42 (+4.8). Creator will review before any skill changes take effect."
+    },
+    {
+      "case": "quality_drops_even_with_efficiency_gain",
+      "expected_accept": false,
+      "actual_accept": false,
+      "pass": true,
+      "message": "Ratchet rule violation (quality regression): quality group score dropped 35.0 → 28.0. Efficiency gains cannot compensate quality loss — the improvement must keep quality at least equal."
+    },
+    {
+      "case": "quality_improves_but_efficiency_flat",
+      "expected_accept": false,
+      "actual_accept": false,
+      "pass": true,
+      "message": "Ratchet rule violation (efficiency must strictly improve): efficiency group score went 18.62 → 18.62. Quality gains cannot compensate — the next run must be cheaper (fewer steps, less exploration, smaller context footprint)."
+    },
+    {
+      "case": "all_scores_flat",
+      "expected_accept": false,
+      "actual_accept": false,
+      "pass": true,
+      "message": "Ratchet rule violation (efficiency must strictly improve): efficiency group score went 18.62 → 18.62. Quality gains cannot compensate — the next run must be cheaper (fewer steps, less exploration, smaller context footprint)."
+    },
+    {
+      "case": "missing_score_dimension",
+      "expected_accept": false,
+      "actual_accept": false,
+      "pass": true,
+      "message": "Error in after_scores: Missing dimension: frontmatter_quality"
+    },
+    {
+      "case": "non_expert_target",
+      "expected_accept": false,
+      "actual_accept": false,
+      "pass": true,
+      "message": "Error: 'not-owned' is not an expert-scoped skill. Evolution can only improve expert/* skills. Available expert skills: xlsx."
+    },
+    {
+      "case": "qualified_name_rejected",
+      "expected_accept": false,
+      "actual_accept": false,
+      "pass": true,
+      "message": "Error: skill_name must be bare (no scope prefix). Got 'expert/xlsx'. Use just the name part."
+    },
+    {
+      "case": "model_cannot_fake_document_footprint",
+      "expected_accept": false,
+      "actual_accept": false,
+      "pass": true,
+      "message": "Ratchet rule violation (efficiency must strictly improve): efficiency group score went 18.62 → 11.0. Quality gains cannot compensate — the next run must be cheaper (fewer steps, less exploration, smaller context footprint)."
+    },
+    {
+      "case": "evolution_activation_internal_False",
+      "expected_active": false,
+      "actual_active": false,
+      "pass": true
+    },
+    {
+      "case": "evolution_activation_internal_True",
+      "expected_active": true,
+      "actual_active": true,
+      "pass": true
+    }
+  ],
+  "source_sha256": "45271cadd44dc83f08e0ab76e0f055e4dab8713eed9e21de1149943a52bb075f",
+  "registry_sha256": "24e9cfdb440597377a26b308097da04e9595d7392e50ecbe2bf39e655066089b",
+  "limits": "Local fixture only. No real candidate, real expert state, production authentication, authority, promotion or benchmark effectiveness tested."
+}

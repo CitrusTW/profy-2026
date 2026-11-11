@@ -1,0 +1,323 @@
+{
+  "client_audit_date": "2026-11-10",
+  "client_timezone": "America/Los_Angeles",
+  "manifest_created_utc": "2026-11-11T04:33:13.176374+00:00",
+  "status": "blocked_before_paid_native_pilot",
+  "new_model_calls": 0,
+  "paper": {
+    "path": " naacl 2027 提交版.pdf",
+    "bytes": 14628167,
+    "sha256": "dce538935e9c911415b305f62e9413626f0fd82ecf28504af78b451a6ecf4819"
+  },
+  "received_implementation": [
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/prompts/EVOLUTION.md",
+      "bytes": 2525,
+      "sha256": "44a34f22f816eba1a3367287d5f9093309ccd2ca49c35e188584909282fb3b97"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/skills/evolution/SKILL.md",
+      "bytes": 5426,
+      "sha256": "cf97259519637de06506baa87a070245f1fce03dddf3d7afdb70ec1aef9f682c"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/tools/evolution_log.py",
+      "bytes": 14642,
+      "sha256": "45271cadd44dc83f08e0ab76e0f055e4dab8713eed9e21de1149943a52bb075f"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/plugin.json",
+      "bytes": 644,
+      "sha256": "ad9ed449998baf2518ca52b289713fd40057dd7dd4cb6b0f52aadb7f55cde3be"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/registry.py",
+      "bytes": 25518,
+      "sha256": "24e9cfdb440597377a26b308097da04e9595d7392e50ecbe2bf39e655066089b"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/api/agent.py",
+      "bytes": 20660,
+      "sha256": "840613051a2e684e2399fcd2701da272d7e670963759c20fe0b35d7ea25aaf38"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/models/evolution.py",
+      "bytes": 2061,
+      "sha256": "d65b3ea50c40c3c597ab7e9f7068ff3498b9dd7c26a6ceb64061aee3f535304c"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/skill/tools/skill.py",
+      "bytes": 53913,
+      "sha256": "bfde4dc3b87f751c922fbf75a97ee699c6cb7b0527c3e440cc13967de4db8263"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/core/src/db/service/expert-evolution.ts",
+      "bytes": 16487,
+      "sha256": "e9d97d5603f16673e5e0ebeb06b1dc82ec6ce5eb27ca7872ad33d45e6d0c9597"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/core/src/workers/evolution-scheduler.ts",
+      "bytes": 5689,
+      "sha256": "35767d431f5458435519ee6c6fe5b100b49e3d332229efaa7ab8ddd17eab0146"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/knowledge/decisions/adr-0024-darwin-efficiency-objective.md",
+      "bytes": 6359,
+      "sha256": "d99b62aa12fc366d305943ccf32356164607db4b846e81282810d03709b629d5"
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/knowledge/benchmarks/sea-eval-runbook.md",
+      "bytes": 20119,
+      "sha256": "cc1592918cca695573e57310af41203a6de031520338f570da7024527dca3255"
+    }
+  ],
+  "received_target_skill": {
+    "path": "04_项目数据与代码/experts/02-员工服务助手/skills/xlsx/SKILL.md",
+    "bytes": 10631,
+    "sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+    "characters": 10627
+  },
+  "benchmark": {
+    "repository": "benchflow-ai/skillsbench",
+    "commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+    "scope": "4 proposed task subset; not a full benchmark",
+    "tasks": [
+      {
+        "task_id": "xlsx-recover-data",
+        "role": "development",
+        "inputs_allowlist": [
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/xlsx-recover-data/environment/nasa_budget_incomplete.xlsx",
+            "bytes": 9896,
+            "sha256": "d15aeb8720d52525d99e7196f8c00dd5daddf90e4262255a98177da0ffb573bf"
+          }
+        ],
+        "expected_output_basename": "nasa_budget_recovered.xlsx",
+        "task": {
+          "path": "04_项目数据与代码/skillsbench/tasks/xlsx-recover-data/task.md",
+          "bytes": 1072,
+          "sha256": "1fa882f4c2ccee0356c5e1798b6fd65a6b9bf1a7a40ddf8f97ca9618e1120fec"
+        },
+        "environment": {
+          "path": "04_项目数据与代码/skillsbench/tasks/xlsx-recover-data/environment/Dockerfile",
+          "bytes": 520,
+          "sha256": "67526a29388bceee7b09a9a05aaae19356f52de42c0f77a7b85a1391b679c712"
+        },
+        "original_verifier": [
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/xlsx-recover-data/verifier/test.sh",
+            "bytes": 631,
+            "sha256": "98c0db99d835fa80e2c748233e71aa9b7bd6d1969fed615707181013b5a5b244"
+          },
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/xlsx-recover-data/verifier/test_outputs.py",
+            "bytes": 4847,
+            "sha256": "8bb25e42832dc540674dd8f1fe5603288f1f72a801e58c424a8aee07c5a64ee9"
+          }
+        ],
+        "oracle_transmitted": false,
+        "hidden_gold_transmitted": false,
+        "new_model_runs": 0
+      },
+      {
+        "task_id": "financial-modeling-qa",
+        "role": "validation",
+        "inputs_allowlist": [
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/financial-modeling-qa/environment/data.xlsx",
+            "bytes": 390301,
+            "sha256": "b07809fca2e61dfe75dd3b43f0f6d5839d64697ed2f0a34c78367cf6dd204195"
+          },
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/financial-modeling-qa/environment/background.pdf",
+            "bytes": 176266,
+            "sha256": "832ea5a99da6aeba8ed25f719c7d3ed035720871493a07ed43cae030463d8273"
+          }
+        ],
+        "expected_output_basename": "answer.txt",
+        "task": {
+          "path": "04_项目数据与代码/skillsbench/tasks/financial-modeling-qa/task.md",
+          "bytes": 1357,
+          "sha256": "690ceaa6ef695d75e36fa61e57f8bf57d2aa27012f360c1381dda5883f57c463"
+        },
+        "environment": {
+          "path": "04_项目数据与代码/skillsbench/tasks/financial-modeling-qa/environment/Dockerfile",
+          "bytes": 564,
+          "sha256": "1a96660506b8ff1bd2ed9b87f1e756bad4c4a05ddd38be4b645b36ed3a3a3f53"
+        },
+        "original_verifier": [
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/financial-modeling-qa/verifier/test.sh",
+            "bytes": 604,
+            "sha256": "fe7195562321b71ace6e1f6858994939238cc7ce0ec2d0ae3b610278489a42b7"
+          },
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/financial-modeling-qa/verifier/test_outputs.py",
+            "bytes": 2072,
+            "sha256": "66550d2f2b83314342c8ea8c81a867d06bbc0b177c23f34b44161f022d64f5ec"
+          }
+        ],
+        "oracle_transmitted": false,
+        "hidden_gold_transmitted": false,
+        "new_model_runs": 0
+      },
+      {
+        "task_id": "sales-pivot-analysis",
+        "role": "held_out",
+        "inputs_allowlist": [
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/sales-pivot-analysis/environment/population.pdf",
+            "bytes": 157563,
+            "sha256": "cfa3c33ba4468bcad811b8782de412d927a4a2357ac01fc1a9e93a44f5cc5ec3"
+          },
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/sales-pivot-analysis/environment/income.xlsx",
+            "bytes": 107556,
+            "sha256": "4ea46473be5e9e380a2ba3d5c80e87f1d0d6375c607092d5758a8107fbc4c730"
+          }
+        ],
+        "expected_output_basename": "demographic_analysis.xlsx",
+        "task": {
+          "path": "04_项目数据与代码/skillsbench/tasks/sales-pivot-analysis/task.md",
+          "bytes": 1989,
+          "sha256": "aed27c7a62b1307a6d3dbdc89abacd373150fffd5f02e5e6df30c7ad84ee3232"
+        },
+        "environment": {
+          "path": "04_项目数据与代码/skillsbench/tasks/sales-pivot-analysis/environment/Dockerfile",
+          "bytes": 597,
+          "sha256": "385cb88d95271d73b72796dc0e66387997ff08d9e3a00a09afc02cade91349b2"
+        },
+        "original_verifier": [
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/sales-pivot-analysis/verifier/test.sh",
+            "bytes": 431,
+            "sha256": "89a25f079630a5015cafce30c8bd9d94b314de7efeaf95fbe3b6dffdae1797a1"
+          },
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/sales-pivot-analysis/verifier/test_outputs.py",
+            "bytes": 8768,
+            "sha256": "e8cf8f07ba92961daa3eb5a2f8f173378770e5f80aafdf3626305643040d4ba9"
+          }
+        ],
+        "oracle_transmitted": false,
+        "hidden_gold_transmitted": false,
+        "new_model_runs": 0
+      },
+      {
+        "task_id": "exceltable-in-ppt",
+        "role": "held_out",
+        "inputs_allowlist": [
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/exceltable-in-ppt/environment/input.pptx",
+            "bytes": 71685,
+            "sha256": "23983c078eed6dcff8ed70dd260454be0acdfc7a890db68549e74c12d24a82b7"
+          }
+        ],
+        "expected_output_basename": "results.pptx",
+        "task": {
+          "path": "04_项目数据与代码/skillsbench/tasks/exceltable-in-ppt/task.md",
+          "bytes": 1471,
+          "sha256": "4056e2263dc15e48730a523ce6400312a075a62b2e5fba2b953ed2ea426e8ae2"
+        },
+        "environment": {
+          "path": "04_项目数据与代码/skillsbench/tasks/exceltable-in-ppt/environment/Dockerfile",
+          "bytes": 532,
+          "sha256": "4a8346450bb5616eeef949e1404fe6f0c0f1d7d3ce7f9658bf3d18e374fa13bf"
+        },
+        "original_verifier": [
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/exceltable-in-ppt/verifier/test.sh",
+            "bytes": 1031,
+            "sha256": "e1360fbfb1e7577ff66793b3ec27a5953a8e708b8e35d5040086c72e6f315b2f"
+          },
+          {
+            "path": "04_项目数据与代码/skillsbench/tasks/exceltable-in-ppt/verifier/test_outputs.py",
+            "bytes": 7142,
+            "sha256": "5c69a1cb8c95ceb39ff2da566fc24f26ebc90715b8cac8ac92991760ee2ad1ad"
+          }
+        ],
+        "oracle_transmitted": false,
+        "hidden_gold_transmitted": false,
+        "new_model_runs": 0
+      }
+    ]
+  },
+  "public_document_snapshots": [
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/agents-run.md",
+      "bytes": 14446,
+      "sha256": "087df41b0d3367441715daafc95cb3b1d482fa4f37d0a15729a7ef7ba235f9b4",
+      "url": "https://docs.profy.cn/zh/developers/api/agents-run.md"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/agents.md",
+      "bytes": 3391,
+      "sha256": "87c2e66417fa71f03699c4ab1f43dc49a446a838eb4e6254855bcf809ae08a1d",
+      "url": "https://docs.profy.cn/zh/developers/api/agents.md"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/environments.md",
+      "bytes": 3010,
+      "sha256": "56e0fe829e8d5f10109c8c2e48998116f71ec93bd57d5a7fbcf633e09ce354f7",
+      "url": "https://docs.profy.cn/zh/developers/api/environments.md"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/sessions.md",
+      "bytes": 6135,
+      "sha256": "43005f73f9afedf4f62e4ce9c0a7843c0351fd625ff2afd511848500408f484a",
+      "url": "https://docs.profy.cn/zh/developers/api/sessions.md"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/mcp-server.md",
+      "bytes": 6956,
+      "sha256": "dce0d5aa2f9a73ac8a2efaea0983dea50d35e5bc69d3b6a2420b609f5edfacc4",
+      "url": "https://docs.profy.cn/zh/developers/mcp-server.md"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/mcp-tools.md",
+      "bytes": 8493,
+      "sha256": "3a99dd87f0d51232edc7ccfa375d6ac6bd8d7589a137d42fda745ebd35c1d9d2",
+      "url": "https://docs.profy.cn/zh/developers/reference/mcp-tools.md"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/evolution-system.md",
+      "bytes": 11420,
+      "sha256": "ca6f956fec648737ad3c8b2c06ba9c482f8f312f70471cdf5cfb84f614e0c229",
+      "url": "https://docs.profy.cn/zh/documentation/how-it-works/darwin-evolution.md"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/evolution-creator.md",
+      "bytes": 19055,
+      "sha256": "771b35c5c3938ea2e1ff091c78b2fc390b9fdc2c1465689c1e629f65bf155fce",
+      "url": "https://docs.profy.cn/zh/creators/darwin-evolution.md"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/public_docs/openapi.json",
+      "bytes": 75274,
+      "sha256": "58ac57acee1cdd2661c9c8f15f25f86dfcbaaec55eff687486a7ca8fba3ba65a",
+      "url": "https://docs.profy.cn/openapi.json"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/free_api_read_checks.json",
+      "bytes": 447,
+      "sha256": "6c0516b601bb2dd69f3fbd6ae6b92289d80ff4f9f9ed748ec7e243c992a8a185"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/free_agent_route_validation.json",
+      "bytes": 299,
+      "sha256": "4c6b0c5281af0215da1f5700fb305fa9a0359d48b108786b5d37bac8f632da11"
+    },
+    {
+      "path": "01_任务结果/2026-11-10_original_method_feasibility/original_gate_offline_checks.json",
+      "bytes": 3333,
+      "sha256": "b24c8d418fb498bb8245aff1078ec3624945e0c4da935e3d67079250d73b40d1"
+    }
+  ],
+  "limits": [
+    "Hashes are provenance, not authorization or proof of deployed-version equivalence.",
+    "Offline function checks use fixtures and do not establish native integration or effectiveness.",
+    "Original source, skill contents, task inputs, graders, gold and credentials are not copied to the private code archive."
+  ]
+}

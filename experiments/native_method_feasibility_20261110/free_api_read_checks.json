@@ -1,0 +1,26 @@
+[
+  {
+    "method": "GET",
+    "route": "/v1/agents?page=1&page_size=10",
+    "http_status": 404,
+    "top_level_keys": [],
+    "model_calls": 0,
+    "code": null,
+    "data_keys": [],
+    "message": ""
+  },
+  {
+    "method": "GET",
+    "route": "/v1/models",
+    "http_status": 200,
+    "top_level_keys": [
+      "models"
+    ],
+    "model_calls": 0,
+    "code": null,
+    "data_keys": [
+      "models"
+    ],
+    "returned_item_count": 274
+  }
+]
