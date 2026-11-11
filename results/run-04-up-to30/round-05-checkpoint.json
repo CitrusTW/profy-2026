@@ -1,0 +1,3626 @@
+{
+  "state": {
+    "round": 5,
+    "model": "gpt-6.1-sol",
+    "evolution": {
+      "accepted_by_original_gate": true,
+      "model": "gpt-6.1-sol",
+      "wire_model": "openai/gpt-6.1-sol",
+      "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+      "requests": 4,
+      "usage": [
+        {
+          "prompt_tokens": 64730,
+          "completion_tokens": 23,
+          "total_tokens": 64753,
+          "cost": 0.1620535,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 64727,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.1620535,
+            "upstream_inference_prompt_cost": 0.1618235,
+            "upstream_inference_completions_cost": 0.00023
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        {
+          "prompt_tokens": 66083,
+          "completion_tokens": 17,
+          "total_tokens": 66100,
+          "cost": 0.0100312,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 64727,
+            "cache_write_tokens": 1353,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0100312,
+            "upstream_inference_prompt_cost": 0.0098612,
+            "upstream_inference_completions_cost": 0.00017
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        {
+          "prompt_tokens": 66263,
+          "completion_tokens": 24,
+          "total_tokens": 66287,
+          "cost": 0.007304,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 66080,
+            "cache_write_tokens": 180,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.007304,
+            "upstream_inference_prompt_cost": 0.007064,
+            "upstream_inference_completions_cost": 0.00024
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 0,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        },
+        {
+          "prompt_tokens": 67594,
+          "completion_tokens": 1691,
+          "total_tokens": 69285,
+          "cost": 0.0268695,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 66260,
+            "cache_write_tokens": 1331,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0268695,
+            "upstream_inference_prompt_cost": 0.0099595,
+            "upstream_inference_completions_cost": 0.01691
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 252,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      ],
+      "elapsed_sec": 33.873,
+      "storage": "external adapter local pending, not Profy database",
+      "source_functions_modified": false,
+      "native_promoted": false,
+      "semantic_applicability_verified": false,
+      "missing_implementations": {
+        "capability_gap_classifier": "No callable implementation identified in the received source.",
+        "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+        "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+      }
+    },
+    "new_contract_is_extension": true,
+    "inputs": "DEV histories plus original public skill contract, no target answers",
+    "baseline_total_tokens": 267583,
+    "development": {
+      "label": "development",
+      "task": "threejs-to-obj",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 133.03,
+      "output_received": true,
+      "native_zip_sha256": "9ba25550027561962ee356259e57e04b168e3b555604ebda77123af4136e7ef4",
+      "file_hashes": {
+        "output/export_object.mjs": "b5c6de8e6b6d8f647bf4bbbb2cd05b033671f97bd57cb79439c781d41802c71e",
+        "output/object.obj": "78e0bcb59934916afde24bb6ddb05b1e68450365460b6f7f559fdca6f711a96f"
+      },
+      "skill_sha256": "b8a1c4e2150c4895f416d45a5e1033d6c36db7a942a75461a9bea9b6dc21e7e8",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 123041,
+        "output_tokens": 3269,
+        "total_tokens": 126310,
+        "cache_read_tokens": 101440,
+        "cache_write_tokens": 21580,
+        "llm_turns": 7,
+        "tool_calls": 9
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+        "assertions_unchanged": 8
+      }
+    },
+    "development_contract": {
+      "passed": true,
+      "files": [
+        {
+          "file": "output/object.obj",
+          "vertices": 24516,
+          "triangle_corners": 24516,
+          "public_original_nonindexed_convention": true
+        }
+      ],
+      "origin": "New compatibility guard derived from original public SKILL.md. No reference geometry used."
+    },
+    "adaptive_check": {
+      "label": "adaptive-check",
+      "task": "threejs-structure-parser",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 157.877,
+      "output_received": true,
+      "native_zip_sha256": "f38f52f1b3ef75f5309122d1953a8ab6a988688fa6631f692973697e9ac72cc8",
+      "file_hashes": {
+        "output/links/cabin_0.obj": "8298409a8a6cb12ea2c31953b9d8c6dbd1b4350c0eaa0563a9d0a1d14d90a4c7",
+        "output/links/cabin_1.obj": "9c24bd16b5d0cb0ac7b26ec71c88930010a59a11db1de91b833feae3f094e0b4",
+        "output/links/cabin_10.obj": "4e806cbbc0a38cc7c602096b8fb6d39adc94ae863cd0c1960417bb14105acf44",
+        "output/links/cabin_11.obj": "b9beb37676bb4410756c013265b5aa8d4f2fc20d0e3a83fb59690077681ec36c",
+        "output/links/cabin_12.obj": "3dc17c78a82edf192fe8d46b8921fb5cdde50bb8b835eae42489f6420a35d6eb",
+        "output/links/cabin_13.obj": "b0e93a0327ed76dbfef71be034c5673ea377a4e015f3aac2fba54c91c9aa71f6",
+        "output/links/cabin_14.obj": "3b600152b59e74abe446b17e107a474c08e1de7792d6290f92fb60c0b911631d",
+        "output/links/cabin_15.obj": "326357b2b924a1a012f11e30eb24d54c3a4afa22b0636a6d9fe8f8cbeedf4246",
+        "output/links/cabin_2.obj": "bf80b14d1f0ff53bdb2b5befa2c6717102dbcf55e1d180133f46b0d0e0f37eab",
+        "output/links/cabin_3.obj": "98646904df7de991591437ad55026cdf32253d499b96e09fadc1d0b142283a0d",
+        "output/links/cabin_4.obj": "a44379ccb968ad9f6562763ca8ee5dd8aa9c5ce1c1f4aba2f2ab83d6fcd3de3c",
+        "output/links/cabin_5.obj": "546a0dc4a99c65556403af6db7a3f53718e4a782a69042766859d526a917b995",
+        "output/links/cabin_6.obj": "de63ce68261fb556339fa089193e5eb1a8fc2e5cb810317c98d277c1569833be",
+        "output/links/cabin_7.obj": "60bc8d00304d5108192de6b1090fd5c9b5dedcd2e63af3c40e721f6c20d300e8",
+        "output/links/cabin_8.obj": "c07e285a45c5f305aa40cc9c95f4cba123843ee38a4a17c11ed6a86b354a546c",
+        "output/links/cabin_9.obj": "4507d6e1d582b56e0a5f03ca686d66409548059acd7aa53df3c0d153fe355bcf",
+        "output/links/support_structure.obj": "b394af4709be7e4a9fa202f8d99adcc16cfc7861859f4db5ca0a13754543956a",
+        "output/links/wheel_structure.obj": "b28bbde20a7e1f9b685b9f18057eb4671d57020026391ef2ed3ae2bfba613210",
+        "output/part_meshes/cabin_0/cabin_arm_0.obj": "3c2243a395d1872cc5bfd24ab4cb5a98251c3c679e9c4ce11e7dc3cb9c93f652",
+        "output/part_meshes/cabin_0/cabin_body_0.obj": "28b40adc3c6e8575b32a0ed3fc5d500cf3e86db17dd85b8a79fd5c025ab6b3dd",
+        "output/part_meshes/cabin_0/cabin_floor_0.obj": "50ce7f43e57a80f446584eaad586e5aac7b2bfd4129e639027a606eee09a2724",
+        "output/part_meshes/cabin_0/cabin_roof_0.obj": "8226ea7ce48674cc688c76ff624c06fa553f1095b5c89e01c0b3ddbe2a4aaf11",
+        "output/part_meshes/cabin_1/cabin_arm_1.obj": "65f2b29472e4844b97a9ad351abd821733402842b1d9b009b4bb135dfd090c82",
+        "output/part_meshes/cabin_1/cabin_body_1.obj": "2ddaf3a00b61a646d3c07650fe9afd0eb243d5bcb3fc1211c5782b04759024fc",
+        "output/part_meshes/cabin_1/cabin_floor_1.obj": "55e11e4ac41f18665ac73d5874971c0d4fd866223fb073c36c8de75506cf7587",
+        "output/part_meshes/cabin_1/cabin_roof_1.obj": "409a17ae280687d75aa546676b9e038c9aa322bd1708ebb0cc8af22240569740",
+        "output/part_meshes/cabin_10/cabin_arm_10.obj": "99b8c9e0ec2f4315bf29a6b3f618a79fa7e045bd656666a86aba4d626368cfe4",
+        "output/part_meshes/cabin_10/cabin_body_10.obj": "45ad6afe7ef156bfe4aab27e7116709d0d968ccd382164548cf9b9c02f26ca34",
+        "output/part_meshes/cabin_10/cabin_floor_10.obj": "552252b653ab11404c42f62f7413200538add23075b2538b79181d3dee6a5ed1",
+        "output/part_meshes/cabin_10/cabin_roof_10.obj": "ae335453bb6972a5e69a974f24823e471b501385d4d1fa0ed49a90650a35198d",
+        "output/part_meshes/cabin_11/cabin_arm_11.obj": "6157c2236e5c4f2e7323e8507cb8829cf7c45f92e1a4742066334ecffba228ea",
+        "output/part_meshes/cabin_11/cabin_body_11.obj": "e7aa1eb6bf0fe2a4b20ad53a31ea114d623ef77b4761c2d16949d409fca68da1",
+        "output/part_meshes/cabin_11/cabin_floor_11.obj": "d43da287c730a742be08c19b6e4de195e55129bf91f0ba834078a5e8aefe4c1d",
+        "output/part_meshes/cabin_11/cabin_roof_11.obj": "88ad7d3a08444a925175bb2b97671e24e9cec5fd840e738d91f452be4d4eb759",
+        "output/part_meshes/cabin_12/cabin_arm_12.obj": "fcdbd4004efe1df7d89b6e864d32fcc0630f98d86d37f93d62d2ec61b934e771",
+        "output/part_meshes/cabin_12/cabin_body_12.obj": "6e1a4382e5af967be16302392f415860eaa9b3680d0d603a5f6238d2be63dca8",
+        "output/part_meshes/cabin_12/cabin_floor_12.obj": "0d24b11a446ff4bcaf879b089513e4a5701a276b27430923ee2f21d891cc1117",
+        "output/part_meshes/cabin_12/cabin_roof_12.obj": "c765c907f6ed47563e825e6bec9b3d14b2567b27436162162c329e207a2a08d6",
+        "output/part_meshes/cabin_13/cabin_arm_13.obj": "ba1177e692e703ce38ae48559574cceda38d4537b1467a1db6c7b11380194f80",
+        "output/part_meshes/cabin_13/cabin_body_13.obj": "d393890a5decb2418cebc2961a37cfe49f5750bb593cb6b6700013a710d351e7",
+        "output/part_meshes/cabin_13/cabin_floor_13.obj": "94f3f8b4bfedf1e1b724497317b498b7e63193ea20ac8793a6e15ddf3745e957",
+        "output/part_meshes/cabin_13/cabin_roof_13.obj": "a2f7683b669ce3f6707c992a3b5367afe714955281e4e6e6fdd8fc642d8a67ad",
+        "output/part_meshes/cabin_14/cabin_arm_14.obj": "503f072996e84d502d22faf44e3e081d7cb3990f4cfd9a50f2311a10e795793c",
+        "output/part_meshes/cabin_14/cabin_body_14.obj": "45050bcab1de55e9c78e0d3a3e5b74aa16f1e391c16f2876610f99ae60c56522",
+        "output/part_meshes/cabin_14/cabin_floor_14.obj": "3d8a870daa5db22771fb12c1902f94e65d94864ab04790a01ac738b55d9650d1",
+        "output/part_meshes/cabin_14/cabin_roof_14.obj": "61979cda234670f9f0ada83c858e50f25ac3b217637f85f2c0c45710f361b56e",
+        "output/part_meshes/cabin_15/cabin_arm_15.obj": "1681df3dd8e51c52fca01e054db1fc8cb6c3ea965c3a5ad30ec549e1825cff30",
+        "output/part_meshes/cabin_15/cabin_body_15.obj": "5c9836d908f5554cf14f6d8e6445b4137efef168e04dfe6f343618069369a831",
+        "output/part_meshes/cabin_15/cabin_floor_15.obj": "303ca293e15297e881b3dd4fde8d0c3248e0f2091c5c025df420e54a18498682",
+        "output/part_meshes/cabin_15/cabin_roof_15.obj": "759a4121eacfcd54efab6a59d10310e9ce056c20ee4261d51522da63c63f61ec",
+        "output/part_meshes/cabin_2/cabin_arm_2.obj": "1e756ddd7e0386c3b2ad4e3178a00b2f9a1322abe9ff65de4d5c81f6313498e3",
+        "output/part_meshes/cabin_2/cabin_body_2.obj": "d18047cfa1bf859bda81c862101de801ba31af70e289df6c37265eed13e3dc3a",
+        "output/part_meshes/cabin_2/cabin_floor_2.obj": "206dc3ceefe2e5049552b108730001e4289208bd5090811fdd0fb1885bdeede3",
+        "output/part_meshes/cabin_2/cabin_roof_2.obj": "7ed6c92f5147b955a57f6693acb3b1cb5bee29a06b4d5b7d7eacfd7a1cd2adcc",
+        "output/part_meshes/cabin_3/cabin_arm_3.obj": "f42959388b37a9d5f49fe72555bd08c83f32a8bb40b22f448aa767e9d5cc9253",
+        "output/part_meshes/cabin_3/cabin_body_3.obj": "8d43f92145e9dc3a04f3892ae7a1cc306e32ffec1ab4fe7246f6bc5692a451c2",
+        "output/part_meshes/cabin_3/cabin_floor_3.obj": "63494ad024cb954406512c3973729e9f5c490982076d38735ede67ffc8c9240e",
+        "output/part_meshes/cabin_3/cabin_roof_3.obj": "ff68ed2f73dc8132b44b75b09f013b92ede2adb1332578adf3962bb0cf277f0b",
+        "output/part_meshes/cabin_4/cabin_arm_4.obj": "d163805f4148dda7f34655bda791e180f7ba429290a913e04894782589075ff9",
+        "output/part_meshes/cabin_4/cabin_body_4.obj": "8d5c764f3dbfc0044a65f6dd89764d97016a9b545797abacf8b27272fb6af5d3",
+        "output/part_meshes/cabin_4/cabin_floor_4.obj": "51dfe6d538193d4dbdaee25a54477685a244df64ed6ca0e85b8a2452f090e5c3",
+        "output/part_meshes/cabin_4/cabin_roof_4.obj": "d7d8441d39e1ea30cdc482ee7e485635eece266b256badbdf8c806c7d0469082",
+        "output/part_meshes/cabin_5/cabin_arm_5.obj": "3da381919cc0f19edf9053a4665c80279a0c93ab47423f380995cae22f002f81",
+        "output/part_meshes/cabin_5/cabin_body_5.obj": "f9fe8726aef1cb19b61a0f532a3e21f90a673880e070460a265ae7c645c8c3b5",
+        "output/part_meshes/cabin_5/cabin_floor_5.obj": "b1de2527b3dbc1a1dbec9a788e2a082d6c22f2ba69ab31fe62bbe3f5548acc3a",
+        "output/part_meshes/cabin_5/cabin_roof_5.obj": "2f7b30a034c2a6cef0823623ca8ad0f0205f4fa5ad2a0d27bc3c3feca650ee97",
+        "output/part_meshes/cabin_6/cabin_arm_6.obj": "72e28904126adcaea1749d065d2bce4d428c9a64335ca21a208811f0f5f1a883",
+        "output/part_meshes/cabin_6/cabin_body_6.obj": "6937918c7145c9de38e5effd44d4b383c6f4f38a006ce6e7b4d77f2eaa79926b",
+        "output/part_meshes/cabin_6/cabin_floor_6.obj": "2c8e85f89a802e30f4900149b41ec507282403065ce2a70865e3b4650acfa533",
+        "output/part_meshes/cabin_6/cabin_roof_6.obj": "01952d0e0aaf1a514a3a70d3fbcca91b1bdfcdd76db48e39d3fd368701acf372",
+        "output/part_meshes/cabin_7/cabin_arm_7.obj": "4fb9a1a8f844acd8a4e801c91dc7a64eefea7c1349d91bf51086952440d7c946",
+        "output/part_meshes/cabin_7/cabin_body_7.obj": "cf825db7a83038ec70053056adb54bab4243063f79d8a96661050590aaab6afb",
+        "output/part_meshes/cabin_7/cabin_floor_7.obj": "2a015db4a0ff426670fdcd067a46aa368d43f29e53943eecc18e5b55f5a8570c",
+        "output/part_meshes/cabin_7/cabin_roof_7.obj": "1d7bd32a497c00180d357330a49997191173ddb58709f88df9afaff3c198b918",
+        "output/part_meshes/cabin_8/cabin_arm_8.obj": "a61a17d8989d49ce612c4bdf89cff686f181e24c454933b11155cd69dd2a3582",
+        "output/part_meshes/cabin_8/cabin_body_8.obj": "4d820f6205069d3ea416bf7702a62860fab9ee3f36eb10fb909360f66e205373",
+        "output/part_meshes/cabin_8/cabin_floor_8.obj": "0bef10f6bc1e4df0d3a3075d02d91cb4f2f786b73f6c4697f1fee09439da5870",
+        "output/part_meshes/cabin_8/cabin_roof_8.obj": "4a5d5c64d48b19be7bad47cb6ce1e54e3b8c45ca82f3fdec0c2b0003bdfed11e",
+        "output/part_meshes/cabin_9/cabin_arm_9.obj": "73b711635146e368eab3bb31556f0cac2f5ed66ae4aae8b11a2d7b9614dc37ef",
+        "output/part_meshes/cabin_9/cabin_body_9.obj": "014ea8d047306039cd061d52a5d56fcd44ba16ba3050b9b8b74635ccea8a0b08",
+        "output/part_meshes/cabin_9/cabin_floor_9.obj": "257412e0ab703faca76c6d7cc7a073997422da4d3e37c8437c6061882bb14281",
+        "output/part_meshes/cabin_9/cabin_roof_9.obj": "23fe0db65dd2cca8d8faaabc0fb981f4a8e409d7f873362d4e4cb902b3938edb",
+        "output/part_meshes/support_structure/axle_housing.obj": "af3d5ee92fc5d7071fa1f794e4d6e1f9d27124c2944276a58eb9f533fbe9958c",
+        "output/part_meshes/support_structure/base_platform.obj": "844e5f9a4cf306e703078556f65f04365edf1da541450f2c252eddbd0feaa4dd",
+        "output/part_meshes/support_structure/cross_brace_back.obj": "715fb339fd17f0b60bfe1d64bc76043194a75e0774a46c262c90678729c1bb28",
+        "output/part_meshes/support_structure/cross_brace_front.obj": "c41fa24725233b4088e667aa7fb2918b4aa43bbb4784726ad9e96bcab7501f09",
+        "output/part_meshes/support_structure/cross_brace_left.obj": "43af9f13369f967343daa1c05f6ebffb1105f1ac85908096b1aebe4971b0b96c",
+        "output/part_meshes/support_structure/cross_brace_right.obj": "203e3330c747add6a060d3001f65ee3b2ba1d2b67d9a61bdd4c9bba0e7adb6a9",
+        "output/part_meshes/support_structure/support_leg_back_left.obj": "40118b7a8ac40b41f929e03eb338cee5f68f4cb63e85fdde27c3c1bb97c119ee",
+        "output/part_meshes/support_structure/support_leg_back_right.obj": "dce9aab211c0b602f4652eedd3ed4638da3029cf52a596dc8eb69627371fd1b2",
+        "output/part_meshes/support_structure/support_leg_front_left.obj": "ce84aa86cf6dc0e1745ff701efbd11e45f20a6cd299c424fb9e759b13d7355f0",
+        "output/part_meshes/support_structure/support_leg_front_right.obj": "068e082e9a8919abde6f90fb4254a77c99ba4ed8c620b269496424f28f5ae94f",
+        "output/part_meshes/wheel_structure/central_hub.obj": "77eee1669c6339edd4b039ccc810d488301a072b19c9b9017de12fa86baa725d",
+        "output/part_meshes/wheel_structure/outer_rim.obj": "983eaf4b01f31092e7021c21f127a08d55e0baaaba70bd776dee04f1aff130ee",
+        "output/part_meshes/wheel_structure/spoke_back_0.obj": "950fa9bfb9626626dfd97f02ae3d43251c9952f06279cfc8daab9fba6485f44d",
+        "output/part_meshes/wheel_structure/spoke_back_1.obj": "1b8b8905726cfca3e531aecf0e696eda671a1761cf8e252eca09c2d35d345290",
+        "output/part_meshes/wheel_structure/spoke_back_10.obj": "842401fdbf5e268b3d10d5fbce46e92a5d913154cffeb6e92df6522269146b96",
+        "output/part_meshes/wheel_structure/spoke_back_11.obj": "f12ae762111364b742b4b586f5f7298f2199aaccbbf90a0b6f2b0ce99a59b0f8",
+        "output/part_meshes/wheel_structure/spoke_back_12.obj": "72836242613cc2b418d017b5b322b3f8b510f419b7da63c4406f29b9cdf628c8",
+        "output/part_meshes/wheel_structure/spoke_back_13.obj": "ba8466f2633a704726ac8c4334410688b34f05e51824bfe2306ea0db9538c028",
+        "output/part_meshes/wheel_structure/spoke_back_14.obj": "9223fa34af15af5ab03b7ed539522689efe348a36c9e168e7418cb37055c06b2",
+        "output/part_meshes/wheel_structure/spoke_back_15.obj": "c9af2e8fcca93d7baf70d554ad8a77b4eed792c8770c98590e514adc15a2566d",
+        "output/part_meshes/wheel_structure/spoke_back_16.obj": "3fd64cdc17d6a2df3a91d1f69138e59bd79bfa9bf5cdcf77a9f7889ae9b647fc",
+        "output/part_meshes/wheel_structure/spoke_back_17.obj": "a065b40ad3bf40f3228cc44be6298e2df76f072e31d87a6cae1f58f542a9b4d4",
+        "output/part_meshes/wheel_structure/spoke_back_18.obj": "78896f2b5e5ac999a86801aaa14672b41488a06c350a1fa98d76e269d02fc359",
+        "output/part_meshes/wheel_structure/spoke_back_19.obj": "e1145e8075a18c610b8351e164a2b6eeea778289d19b4a86b8565f28274c396e",
+        "output/part_meshes/wheel_structure/spoke_back_2.obj": "85c10ee79ff084b8229b0decabebbd010817e0c0e62fc5ecb25aaeae4c16116f",
+        "output/part_meshes/wheel_structure/spoke_back_20.obj": "aa3fa9eeff384b0d282683a0f6c15fb22e350dbfbf4ff1de672e265efdd24b40",
+        "output/part_meshes/wheel_structure/spoke_back_21.obj": "d895f91a63274f7f986b85cf0cf40b8babb3ab53c2a75144462e57562f2a02c9",
+        "output/part_meshes/wheel_structure/spoke_back_22.obj": "ab1ac93d89f9d74136f4a53fa8b0b5f31322f3dea1a69c9ed9d9ed9ed7aa3359",
+        "output/part_meshes/wheel_structure/spoke_back_23.obj": "1082e48ffaf644bbc9c30c48f809b4a01aecbafc4ed7ce279639dc9819158f2a",
+        "output/part_meshes/wheel_structure/spoke_back_24.obj": "204d10a96a737e1281f55f5aa946b1a1a559cd736ddc4305ad2454dca69ff730",
+        "output/part_meshes/wheel_structure/spoke_back_25.obj": "597017fb42ba9155eb332055bb474e4d8af98c6fa25fa2fe9849484c46834de1",
+        "output/part_meshes/wheel_structure/spoke_back_26.obj": "323ded9a633bbde0752b8ffe07620e9cbbaf53b1c782d57bd8ffe43327aa702a",
+        "output/part_meshes/wheel_structure/spoke_back_27.obj": "0efea0d176b7e50f2f1efcf71f9044580e93773c5ddded0ec132963b55c0ce39",
+        "output/part_meshes/wheel_structure/spoke_back_28.obj": "6d1520441a70a480191b283b2227029ab7484b2d5a5c2ca8d64a76ee373c85b2",
+        "output/part_meshes/wheel_structure/spoke_back_29.obj": "a3c3d934e8e7d4ce8a1af231b5de4a9ae1eb21e2e6337edc250f53a745c35466",
+        "output/part_meshes/wheel_structure/spoke_back_3.obj": "dc3b8bb704bd57e1004928d01a5881b3348fa9c80b3e2bc50db34d27774a67b9",
+        "output/part_meshes/wheel_structure/spoke_back_30.obj": "cf0e865eed489057d175bec82deaf344903675604a28cfe1d7d8de1c895c31eb",
+        "output/part_meshes/wheel_structure/spoke_back_31.obj": "c73488cebdebf8e75203d4d9055a460c3682e4bc9278e712dd4595f6262c6195",
+        "output/part_meshes/wheel_structure/spoke_back_4.obj": "54507b5d56f3ba6b5d3ca419a9626787426e75f609083a74baf8b22c8f108a5f",
+        "output/part_meshes/wheel_structure/spoke_back_5.obj": "bdcca048267dbaba79fcea87a35dc0ad822e25e7331b71ab57fcd1c790d2c702",
+        "output/part_meshes/wheel_structure/spoke_back_6.obj": "7f03a543f2427bcfd7ec8793eb07848d8497800541b0fae810eedb6d30598262",
+        "output/part_meshes/wheel_structure/spoke_back_7.obj": "248b4bea5e0ab06cbddfd22475cae15dfd68a47b2772dcc469dc99e45293c344",
+        "output/part_meshes/wheel_structure/spoke_back_8.obj": "91702917d88c83d50c44ae2b8cd1744a28ec524c9a3599ff4b30163ca932f818",
+        "output/part_meshes/wheel_structure/spoke_back_9.obj": "9d8bb3a651bb69e3a8e1ea77c8b1dedf070b8c66390c72e3a2e82884653867bb",
+        "output/part_meshes/wheel_structure/spoke_front_0.obj": "147babb211efacb0b0b6e3b478da26e57cd2ab1342f5a6005022e94d446a07a8",
+        "output/part_meshes/wheel_structure/spoke_front_1.obj": "b67fdeea1e7af82853e53a3ff6dccdff4e382abbec047b2aac244391b5403e86",
+        "output/part_meshes/wheel_structure/spoke_front_10.obj": "1882831021cb679c6e61f6bc5c05751cf001f9e1b3607bbb14160a8c5c5d4867",
+        "output/part_meshes/wheel_structure/spoke_front_11.obj": "247bcfcb82f1dafb665b38cea4971b048cf27f9af903646f2214c7c86372b42e",
+        "output/part_meshes/wheel_structure/spoke_front_12.obj": "fe59aaedb923c62c74108ed5524d843b4ba77d06af45a0958492b3c5b8061a07",
+        "output/part_meshes/wheel_structure/spoke_front_13.obj": "46b0ba88a19ded28e57022cbb624271d7fe1920e546d6160094a0f88263ac5ac",
+        "output/part_meshes/wheel_structure/spoke_front_14.obj": "955ef13e2ba5b00e90a483768709f371b98eb8fa5994f2ec00c29340fec89896",
+        "output/part_meshes/wheel_structure/spoke_front_15.obj": "569cec9f818990bc1794cd00591bf34c102435e2a876fef1984b0b50a19b6410",
+        "output/part_meshes/wheel_structure/spoke_front_16.obj": "75d45024bbd0f08e84a134e4565dd9bedaca6a2b4e67249c05d7508391304501",
+        "output/part_meshes/wheel_structure/spoke_front_17.obj": "9ca54016ea3156437b809d526a35b1ab631ab335faaf763fcba5a81a96196a12",
+        "output/part_meshes/wheel_structure/spoke_front_18.obj": "72846a99f685171cde869aff7fcf275b93746c77dd34c5a3c1be617dd54ed460",
+        "output/part_meshes/wheel_structure/spoke_front_19.obj": "2d16aa7263e28f38a4a8da656ac593bfa622cac0e2c6e6e9a7beedcb83565eb6",
+        "output/part_meshes/wheel_structure/spoke_front_2.obj": "ca18ce1ff06eb90559d9a895a8c59e5ac608fac4cfe983d8926098630e19b38c",
+        "output/part_meshes/wheel_structure/spoke_front_20.obj": "b321395334095e2e1b95587ec9b048e503fa86069f17929457ace12f422726f8",
+        "output/part_meshes/wheel_structure/spoke_front_21.obj": "86d0408a666f6bfc07f1b0d67363dd078a5a076ce7b875c22c594815f1508dbf",
+        "output/part_meshes/wheel_structure/spoke_front_22.obj": "14f400c08c44ae70dd2bcbdb05eeffdc861904a298831ee84ce05b0541035bf1",
+        "output/part_meshes/wheel_structure/spoke_front_23.obj": "4d15af4baf9d9156eddfc369cee308db37972737e8761cf84e415c9418f67d16",
+        "output/part_meshes/wheel_structure/spoke_front_24.obj": "f484d835d0eef92be3ff95c57f01525ec1f86752e1496782ec25710d9deef16e",
+        "output/part_meshes/wheel_structure/spoke_front_25.obj": "5c6fe8bd66bc07509c32390d36fa2e6b7271fdce2ff2cde0096c45f7c8566a56",
+        "output/part_meshes/wheel_structure/spoke_front_26.obj": "2150f6f7ce2084ee95a7baf0eef838c406b61e11c7b16c4ed09c693d6fa896e2",
+        "output/part_meshes/wheel_structure/spoke_front_27.obj": "c46a60b4a7524a092ecccb8b5dddd5c1129b531583a776ecd0ad86a24714db9f",
+        "output/part_meshes/wheel_structure/spoke_front_28.obj": "ae4d1450c45ac154df6da37bf9143556549854fb0c7e028215170fd391712f14",
+        "output/part_meshes/wheel_structure/spoke_front_29.obj": "ab4627cad145e7c01499b0d03134bd41285add9d0493d0e58c256326aac70980",
+        "output/part_meshes/wheel_structure/spoke_front_3.obj": "7d256601bbbf4af359a57472c5f6330eb270c9d8285e438a4c378c13389060f2",
+        "output/part_meshes/wheel_structure/spoke_front_30.obj": "2e98d54d87bcb53b093ff0993a56b1b2c02fb49f8bd7d5d3aee3e443fdf0da9f",
+        "output/part_meshes/wheel_structure/spoke_front_31.obj": "386fd9a970a38d3fab95f6bf4efdffff7dd5511ea32a4708ea47014f8fa594ef",
+        "output/part_meshes/wheel_structure/spoke_front_4.obj": "45ba38934bca88faf682e513b29057be6f527680df107c595a969ee8442c7293",
+        "output/part_meshes/wheel_structure/spoke_front_5.obj": "d4cf6ae151ec80a233c5a21554be10b847ed880e6fe883b1208c433c4f72114a",
+        "output/part_meshes/wheel_structure/spoke_front_6.obj": "02baac04cc1322ad3289a13e62ea934bc26bce497dbe924d8d570d63adba81e8",
+        "output/part_meshes/wheel_structure/spoke_front_7.obj": "6379b4767c136180aeba52086f851aa7868ba09036d49a10c3ac87b7a91d1f2d",
+        "output/part_meshes/wheel_structure/spoke_front_8.obj": "c1743fc657cda035d82c41caedcd511ebf1482dc8a7bf9c3bf2fda716d53b1b7",
+        "output/part_meshes/wheel_structure/spoke_front_9.obj": "2ccc4d549b039070ff46bbd87961308e981efce7ab710476df7943da84bdc91b"
+      },
+      "skill_sha256": "b8a1c4e2150c4895f416d45a5e1033d6c36db7a942a75461a9bea9b6dc21e7e8",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 112811,
+        "output_tokens": 2624,
+        "total_tokens": 115435,
+        "cache_read_tokens": 87516,
+        "cache_write_tokens": 25277,
+        "llm_turns": 6,
+        "tool_calls": 8
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+        "assertions_unchanged": 19
+      }
+    },
+    "adaptive_contract": {
+      "passed": true,
+      "files": [
+        {
+          "file": "output/links/cabin_0.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_1.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_10.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_11.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_12.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_13.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_14.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_15.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_2.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_3.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_4.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_5.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_6.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_7.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_8.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/cabin_9.obj",
+          "vertices": 432,
+          "triangle_corners": 432,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/support_structure.obj",
+          "vertices": 1608,
+          "triangle_corners": 1608,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/links/wheel_structure.obj",
+          "vertices": 22272,
+          "triangle_corners": 22272,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_0/cabin_arm_0.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_0/cabin_body_0.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_0/cabin_floor_0.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_0/cabin_roof_0.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_1/cabin_arm_1.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_1/cabin_body_1.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_1/cabin_floor_1.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_1/cabin_roof_1.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_10/cabin_arm_10.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_10/cabin_body_10.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_10/cabin_floor_10.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_10/cabin_roof_10.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_11/cabin_arm_11.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_11/cabin_body_11.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_11/cabin_floor_11.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_11/cabin_roof_11.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_12/cabin_arm_12.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_12/cabin_body_12.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_12/cabin_floor_12.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_12/cabin_roof_12.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_13/cabin_arm_13.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_13/cabin_body_13.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_13/cabin_floor_13.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_13/cabin_roof_13.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_14/cabin_arm_14.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_14/cabin_body_14.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_14/cabin_floor_14.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_14/cabin_roof_14.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_15/cabin_arm_15.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_15/cabin_body_15.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_15/cabin_floor_15.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_15/cabin_roof_15.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_2/cabin_arm_2.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_2/cabin_body_2.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_2/cabin_floor_2.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_2/cabin_roof_2.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_3/cabin_arm_3.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_3/cabin_body_3.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_3/cabin_floor_3.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_3/cabin_roof_3.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_4/cabin_arm_4.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_4/cabin_body_4.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_4/cabin_floor_4.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_4/cabin_roof_4.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_5/cabin_arm_5.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_5/cabin_body_5.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_5/cabin_floor_5.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_5/cabin_roof_5.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_6/cabin_arm_6.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_6/cabin_body_6.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_6/cabin_floor_6.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_6/cabin_roof_6.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_7/cabin_arm_7.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_7/cabin_body_7.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_7/cabin_floor_7.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_7/cabin_roof_7.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_8/cabin_arm_8.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_8/cabin_body_8.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_8/cabin_floor_8.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_8/cabin_roof_8.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_9/cabin_arm_9.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_9/cabin_body_9.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_9/cabin_floor_9.obj",
+          "vertices": 96,
+          "triangle_corners": 96,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/cabin_9/cabin_roof_9.obj",
+          "vertices": 48,
+          "triangle_corners": 48,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/axle_housing.obj",
+          "vertices": 36,
+          "triangle_corners": 36,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/base_platform.obj",
+          "vertices": 36,
+          "triangle_corners": 36,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/cross_brace_back.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/cross_brace_front.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/cross_brace_left.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/cross_brace_right.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/support_leg_back_left.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/support_leg_back_right.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/support_leg_front_left.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/support_structure/support_leg_front_right.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/central_hub.obj",
+          "vertices": 384,
+          "triangle_corners": 384,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/outer_rim.obj",
+          "vertices": 9600,
+          "triangle_corners": 9600,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_0.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_1.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_10.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_11.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_12.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_13.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_14.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_15.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_16.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_17.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_18.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_19.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_2.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_20.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_21.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_22.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_23.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_24.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_25.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_26.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_27.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_28.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_29.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_3.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_30.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_31.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_4.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_5.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_6.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_7.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_8.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_back_9.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_0.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_1.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_10.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_11.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_12.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_13.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_14.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_15.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_16.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_17.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_18.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_19.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_2.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_20.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_21.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_22.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_23.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_24.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_25.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_26.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_27.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_28.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_29.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_3.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_30.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_31.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_4.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_5.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_6.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_7.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_8.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        },
+        {
+          "file": "output/part_meshes/wheel_structure/spoke_front_9.obj",
+          "vertices": 192,
+          "triangle_corners": 192,
+          "public_original_nonindexed_convention": true
+        }
+      ],
+      "origin": "New compatibility guard derived from original public SKILL.md. No reference geometry used."
+    },
+    "target_role": "Adaptive development check on a previously inspected task, not independent held-out evidence.",
+    "two_task_tokens": 241745,
+    "confirmation": [
+      {
+        "result": {
+          "label": "development",
+          "task": "threejs-to-obj",
+          "completed": true,
+          "error": null,
+          "elapsed_sec": 117.777,
+          "output_received": true,
+          "native_zip_sha256": "844169e44431b272b610fd7d0ccdbfea9b47636cffdf17fc722324419e0b2031",
+          "file_hashes": {
+            "output/export_object.mjs": "e9604e48d673090fc693de7c3cf9d689aec038c35215310f70fe28fbace2be52",
+            "output/object.obj": "78e0bcb59934916afde24bb6ddb05b1e68450365460b6f7f559fdca6f711a96f"
+          },
+          "skill_sha256": "b8a1c4e2150c4895f416d45a5e1033d6c36db7a942a75461a9bea9b6dc21e7e8",
+          "target_skill_read_verified": true,
+          "external_skill_tools_observed": [],
+          "supplied_benchmark_skills": true,
+          "tokens": {
+            "input_tokens": 120807,
+            "output_tokens": 2772,
+            "total_tokens": 123579,
+            "cache_read_tokens": 100038,
+            "cache_write_tokens": 20748,
+            "llm_turns": 7,
+            "tool_calls": 8
+          },
+          "profy_cost_usd": null,
+          "score": {
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "strict": 1,
+            "original_returncode": 0,
+            "source_sha256": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+            "assertions_unchanged": 8
+          }
+        },
+        "contract": {
+          "passed": true,
+          "files": [
+            {
+              "file": "output/object.obj",
+              "vertices": 24516,
+              "triangle_corners": 24516,
+              "public_original_nonindexed_convention": true
+            }
+          ],
+          "origin": "New compatibility guard derived from original public SKILL.md. No reference geometry used."
+        }
+      },
+      {
+        "result": {
+          "label": "adaptive-check",
+          "task": "threejs-structure-parser",
+          "completed": true,
+          "error": null,
+          "elapsed_sec": 141.042,
+          "output_received": true,
+          "native_zip_sha256": "000a80ce4cbc8e3249e6b8e3ce8a6247ef5651f0aeb53a0209dcb32979a927fb",
+          "file_hashes": {
+            "output/links/cabin_0.obj": "8298409a8a6cb12ea2c31953b9d8c6dbd1b4350c0eaa0563a9d0a1d14d90a4c7",
+            "output/links/cabin_1.obj": "9c24bd16b5d0cb0ac7b26ec71c88930010a59a11db1de91b833feae3f094e0b4",
+            "output/links/cabin_10.obj": "4e806cbbc0a38cc7c602096b8fb6d39adc94ae863cd0c1960417bb14105acf44",
+            "output/links/cabin_11.obj": "b9beb37676bb4410756c013265b5aa8d4f2fc20d0e3a83fb59690077681ec36c",
+            "output/links/cabin_12.obj": "3dc17c78a82edf192fe8d46b8921fb5cdde50bb8b835eae42489f6420a35d6eb",
+            "output/links/cabin_13.obj": "b0e93a0327ed76dbfef71be034c5673ea377a4e015f3aac2fba54c91c9aa71f6",
+            "output/links/cabin_14.obj": "3b600152b59e74abe446b17e107a474c08e1de7792d6290f92fb60c0b911631d",
+            "output/links/cabin_15.obj": "326357b2b924a1a012f11e30eb24d54c3a4afa22b0636a6d9fe8f8cbeedf4246",
+            "output/links/cabin_2.obj": "bf80b14d1f0ff53bdb2b5befa2c6717102dbcf55e1d180133f46b0d0e0f37eab",
+            "output/links/cabin_3.obj": "98646904df7de991591437ad55026cdf32253d499b96e09fadc1d0b142283a0d",
+            "output/links/cabin_4.obj": "a44379ccb968ad9f6562763ca8ee5dd8aa9c5ce1c1f4aba2f2ab83d6fcd3de3c",
+            "output/links/cabin_5.obj": "546a0dc4a99c65556403af6db7a3f53718e4a782a69042766859d526a917b995",
+            "output/links/cabin_6.obj": "de63ce68261fb556339fa089193e5eb1a8fc2e5cb810317c98d277c1569833be",
+            "output/links/cabin_7.obj": "60bc8d00304d5108192de6b1090fd5c9b5dedcd2e63af3c40e721f6c20d300e8",
+            "output/links/cabin_8.obj": "c07e285a45c5f305aa40cc9c95f4cba123843ee38a4a17c11ed6a86b354a546c",
+            "output/links/cabin_9.obj": "4507d6e1d582b56e0a5f03ca686d66409548059acd7aa53df3c0d153fe355bcf",
+            "output/links/support_structure.obj": "b394af4709be7e4a9fa202f8d99adcc16cfc7861859f4db5ca0a13754543956a",
+            "output/links/wheel_structure.obj": "b28bbde20a7e1f9b685b9f18057eb4671d57020026391ef2ed3ae2bfba613210",
+            "output/part_meshes/cabin_0/cabin_arm_0.obj": "3c2243a395d1872cc5bfd24ab4cb5a98251c3c679e9c4ce11e7dc3cb9c93f652",
+            "output/part_meshes/cabin_0/cabin_body_0.obj": "28b40adc3c6e8575b32a0ed3fc5d500cf3e86db17dd85b8a79fd5c025ab6b3dd",
+            "output/part_meshes/cabin_0/cabin_floor_0.obj": "50ce7f43e57a80f446584eaad586e5aac7b2bfd4129e639027a606eee09a2724",
+            "output/part_meshes/cabin_0/cabin_roof_0.obj": "8226ea7ce48674cc688c76ff624c06fa553f1095b5c89e01c0b3ddbe2a4aaf11",
+            "output/part_meshes/cabin_1/cabin_arm_1.obj": "65f2b29472e4844b97a9ad351abd821733402842b1d9b009b4bb135dfd090c82",
+            "output/part_meshes/cabin_1/cabin_body_1.obj": "2ddaf3a00b61a646d3c07650fe9afd0eb243d5bcb3fc1211c5782b04759024fc",
+            "output/part_meshes/cabin_1/cabin_floor_1.obj": "55e11e4ac41f18665ac73d5874971c0d4fd866223fb073c36c8de75506cf7587",
+            "output/part_meshes/cabin_1/cabin_roof_1.obj": "409a17ae280687d75aa546676b9e038c9aa322bd1708ebb0cc8af22240569740",
+            "output/part_meshes/cabin_10/cabin_arm_10.obj": "99b8c9e0ec2f4315bf29a6b3f618a79fa7e045bd656666a86aba4d626368cfe4",
+            "output/part_meshes/cabin_10/cabin_body_10.obj": "45ad6afe7ef156bfe4aab27e7116709d0d968ccd382164548cf9b9c02f26ca34",
+            "output/part_meshes/cabin_10/cabin_floor_10.obj": "552252b653ab11404c42f62f7413200538add23075b2538b79181d3dee6a5ed1",
+            "output/part_meshes/cabin_10/cabin_roof_10.obj": "ae335453bb6972a5e69a974f24823e471b501385d4d1fa0ed49a90650a35198d",
+            "output/part_meshes/cabin_11/cabin_arm_11.obj": "6157c2236e5c4f2e7323e8507cb8829cf7c45f92e1a4742066334ecffba228ea",
+            "output/part_meshes/cabin_11/cabin_body_11.obj": "e7aa1eb6bf0fe2a4b20ad53a31ea114d623ef77b4761c2d16949d409fca68da1",
+            "output/part_meshes/cabin_11/cabin_floor_11.obj": "d43da287c730a742be08c19b6e4de195e55129bf91f0ba834078a5e8aefe4c1d",
+            "output/part_meshes/cabin_11/cabin_roof_11.obj": "88ad7d3a08444a925175bb2b97671e24e9cec5fd840e738d91f452be4d4eb759",
+            "output/part_meshes/cabin_12/cabin_arm_12.obj": "fcdbd4004efe1df7d89b6e864d32fcc0630f98d86d37f93d62d2ec61b934e771",
+            "output/part_meshes/cabin_12/cabin_body_12.obj": "6e1a4382e5af967be16302392f415860eaa9b3680d0d603a5f6238d2be63dca8",
+            "output/part_meshes/cabin_12/cabin_floor_12.obj": "0d24b11a446ff4bcaf879b089513e4a5701a276b27430923ee2f21d891cc1117",
+            "output/part_meshes/cabin_12/cabin_roof_12.obj": "c765c907f6ed47563e825e6bec9b3d14b2567b27436162162c329e207a2a08d6",
+            "output/part_meshes/cabin_13/cabin_arm_13.obj": "ba1177e692e703ce38ae48559574cceda38d4537b1467a1db6c7b11380194f80",
+            "output/part_meshes/cabin_13/cabin_body_13.obj": "d393890a5decb2418cebc2961a37cfe49f5750bb593cb6b6700013a710d351e7",
+            "output/part_meshes/cabin_13/cabin_floor_13.obj": "94f3f8b4bfedf1e1b724497317b498b7e63193ea20ac8793a6e15ddf3745e957",
+            "output/part_meshes/cabin_13/cabin_roof_13.obj": "a2f7683b669ce3f6707c992a3b5367afe714955281e4e6e6fdd8fc642d8a67ad",
+            "output/part_meshes/cabin_14/cabin_arm_14.obj": "503f072996e84d502d22faf44e3e081d7cb3990f4cfd9a50f2311a10e795793c",
+            "output/part_meshes/cabin_14/cabin_body_14.obj": "45050bcab1de55e9c78e0d3a3e5b74aa16f1e391c16f2876610f99ae60c56522",
+            "output/part_meshes/cabin_14/cabin_floor_14.obj": "3d8a870daa5db22771fb12c1902f94e65d94864ab04790a01ac738b55d9650d1",
+            "output/part_meshes/cabin_14/cabin_roof_14.obj": "61979cda234670f9f0ada83c858e50f25ac3b217637f85f2c0c45710f361b56e",
+            "output/part_meshes/cabin_15/cabin_arm_15.obj": "1681df3dd8e51c52fca01e054db1fc8cb6c3ea965c3a5ad30ec549e1825cff30",
+            "output/part_meshes/cabin_15/cabin_body_15.obj": "5c9836d908f5554cf14f6d8e6445b4137efef168e04dfe6f343618069369a831",
+            "output/part_meshes/cabin_15/cabin_floor_15.obj": "303ca293e15297e881b3dd4fde8d0c3248e0f2091c5c025df420e54a18498682",
+            "output/part_meshes/cabin_15/cabin_roof_15.obj": "759a4121eacfcd54efab6a59d10310e9ce056c20ee4261d51522da63c63f61ec",
+            "output/part_meshes/cabin_2/cabin_arm_2.obj": "1e756ddd7e0386c3b2ad4e3178a00b2f9a1322abe9ff65de4d5c81f6313498e3",
+            "output/part_meshes/cabin_2/cabin_body_2.obj": "d18047cfa1bf859bda81c862101de801ba31af70e289df6c37265eed13e3dc3a",
+            "output/part_meshes/cabin_2/cabin_floor_2.obj": "206dc3ceefe2e5049552b108730001e4289208bd5090811fdd0fb1885bdeede3",
+            "output/part_meshes/cabin_2/cabin_roof_2.obj": "7ed6c92f5147b955a57f6693acb3b1cb5bee29a06b4d5b7d7eacfd7a1cd2adcc",
+            "output/part_meshes/cabin_3/cabin_arm_3.obj": "f42959388b37a9d5f49fe72555bd08c83f32a8bb40b22f448aa767e9d5cc9253",
+            "output/part_meshes/cabin_3/cabin_body_3.obj": "8d43f92145e9dc3a04f3892ae7a1cc306e32ffec1ab4fe7246f6bc5692a451c2",
+            "output/part_meshes/cabin_3/cabin_floor_3.obj": "63494ad024cb954406512c3973729e9f5c490982076d38735ede67ffc8c9240e",
+            "output/part_meshes/cabin_3/cabin_roof_3.obj": "ff68ed2f73dc8132b44b75b09f013b92ede2adb1332578adf3962bb0cf277f0b",
+            "output/part_meshes/cabin_4/cabin_arm_4.obj": "d163805f4148dda7f34655bda791e180f7ba429290a913e04894782589075ff9",
+            "output/part_meshes/cabin_4/cabin_body_4.obj": "8d5c764f3dbfc0044a65f6dd89764d97016a9b545797abacf8b27272fb6af5d3",
+            "output/part_meshes/cabin_4/cabin_floor_4.obj": "51dfe6d538193d4dbdaee25a54477685a244df64ed6ca0e85b8a2452f090e5c3",
+            "output/part_meshes/cabin_4/cabin_roof_4.obj": "d7d8441d39e1ea30cdc482ee7e485635eece266b256badbdf8c806c7d0469082",
+            "output/part_meshes/cabin_5/cabin_arm_5.obj": "3da381919cc0f19edf9053a4665c80279a0c93ab47423f380995cae22f002f81",
+            "output/part_meshes/cabin_5/cabin_body_5.obj": "f9fe8726aef1cb19b61a0f532a3e21f90a673880e070460a265ae7c645c8c3b5",
+            "output/part_meshes/cabin_5/cabin_floor_5.obj": "b1de2527b3dbc1a1dbec9a788e2a082d6c22f2ba69ab31fe62bbe3f5548acc3a",
+            "output/part_meshes/cabin_5/cabin_roof_5.obj": "2f7b30a034c2a6cef0823623ca8ad0f0205f4fa5ad2a0d27bc3c3feca650ee97",
+            "output/part_meshes/cabin_6/cabin_arm_6.obj": "72e28904126adcaea1749d065d2bce4d428c9a64335ca21a208811f0f5f1a883",
+            "output/part_meshes/cabin_6/cabin_body_6.obj": "6937918c7145c9de38e5effd44d4b383c6f4f38a006ce6e7b4d77f2eaa79926b",
+            "output/part_meshes/cabin_6/cabin_floor_6.obj": "2c8e85f89a802e30f4900149b41ec507282403065ce2a70865e3b4650acfa533",
+            "output/part_meshes/cabin_6/cabin_roof_6.obj": "01952d0e0aaf1a514a3a70d3fbcca91b1bdfcdd76db48e39d3fd368701acf372",
+            "output/part_meshes/cabin_7/cabin_arm_7.obj": "4fb9a1a8f844acd8a4e801c91dc7a64eefea7c1349d91bf51086952440d7c946",
+            "output/part_meshes/cabin_7/cabin_body_7.obj": "cf825db7a83038ec70053056adb54bab4243063f79d8a96661050590aaab6afb",
+            "output/part_meshes/cabin_7/cabin_floor_7.obj": "2a015db4a0ff426670fdcd067a46aa368d43f29e53943eecc18e5b55f5a8570c",
+            "output/part_meshes/cabin_7/cabin_roof_7.obj": "1d7bd32a497c00180d357330a49997191173ddb58709f88df9afaff3c198b918",
+            "output/part_meshes/cabin_8/cabin_arm_8.obj": "a61a17d8989d49ce612c4bdf89cff686f181e24c454933b11155cd69dd2a3582",
+            "output/part_meshes/cabin_8/cabin_body_8.obj": "4d820f6205069d3ea416bf7702a62860fab9ee3f36eb10fb909360f66e205373",
+            "output/part_meshes/cabin_8/cabin_floor_8.obj": "0bef10f6bc1e4df0d3a3075d02d91cb4f2f786b73f6c4697f1fee09439da5870",
+            "output/part_meshes/cabin_8/cabin_roof_8.obj": "4a5d5c64d48b19be7bad47cb6ce1e54e3b8c45ca82f3fdec0c2b0003bdfed11e",
+            "output/part_meshes/cabin_9/cabin_arm_9.obj": "73b711635146e368eab3bb31556f0cac2f5ed66ae4aae8b11a2d7b9614dc37ef",
+            "output/part_meshes/cabin_9/cabin_body_9.obj": "014ea8d047306039cd061d52a5d56fcd44ba16ba3050b9b8b74635ccea8a0b08",
+            "output/part_meshes/cabin_9/cabin_floor_9.obj": "257412e0ab703faca76c6d7cc7a073997422da4d3e37c8437c6061882bb14281",
+            "output/part_meshes/cabin_9/cabin_roof_9.obj": "23fe0db65dd2cca8d8faaabc0fb981f4a8e409d7f873362d4e4cb902b3938edb",
+            "output/part_meshes/support_structure/axle_housing.obj": "af3d5ee92fc5d7071fa1f794e4d6e1f9d27124c2944276a58eb9f533fbe9958c",
+            "output/part_meshes/support_structure/base_platform.obj": "844e5f9a4cf306e703078556f65f04365edf1da541450f2c252eddbd0feaa4dd",
+            "output/part_meshes/support_structure/cross_brace_back.obj": "715fb339fd17f0b60bfe1d64bc76043194a75e0774a46c262c90678729c1bb28",
+            "output/part_meshes/support_structure/cross_brace_front.obj": "c41fa24725233b4088e667aa7fb2918b4aa43bbb4784726ad9e96bcab7501f09",
+            "output/part_meshes/support_structure/cross_brace_left.obj": "43af9f13369f967343daa1c05f6ebffb1105f1ac85908096b1aebe4971b0b96c",
+            "output/part_meshes/support_structure/cross_brace_right.obj": "203e3330c747add6a060d3001f65ee3b2ba1d2b67d9a61bdd4c9bba0e7adb6a9",
+            "output/part_meshes/support_structure/support_leg_back_left.obj": "40118b7a8ac40b41f929e03eb338cee5f68f4cb63e85fdde27c3c1bb97c119ee",
+            "output/part_meshes/support_structure/support_leg_back_right.obj": "dce9aab211c0b602f4652eedd3ed4638da3029cf52a596dc8eb69627371fd1b2",
+            "output/part_meshes/support_structure/support_leg_front_left.obj": "ce84aa86cf6dc0e1745ff701efbd11e45f20a6cd299c424fb9e759b13d7355f0",
+            "output/part_meshes/support_structure/support_leg_front_right.obj": "068e082e9a8919abde6f90fb4254a77c99ba4ed8c620b269496424f28f5ae94f",
+            "output/part_meshes/wheel_structure/central_hub.obj": "77eee1669c6339edd4b039ccc810d488301a072b19c9b9017de12fa86baa725d",
+            "output/part_meshes/wheel_structure/outer_rim.obj": "983eaf4b01f31092e7021c21f127a08d55e0baaaba70bd776dee04f1aff130ee",
+            "output/part_meshes/wheel_structure/spoke_back_0.obj": "950fa9bfb9626626dfd97f02ae3d43251c9952f06279cfc8daab9fba6485f44d",
+            "output/part_meshes/wheel_structure/spoke_back_1.obj": "1b8b8905726cfca3e531aecf0e696eda671a1761cf8e252eca09c2d35d345290",
+            "output/part_meshes/wheel_structure/spoke_back_10.obj": "842401fdbf5e268b3d10d5fbce46e92a5d913154cffeb6e92df6522269146b96",
+            "output/part_meshes/wheel_structure/spoke_back_11.obj": "f12ae762111364b742b4b586f5f7298f2199aaccbbf90a0b6f2b0ce99a59b0f8",
+            "output/part_meshes/wheel_structure/spoke_back_12.obj": "72836242613cc2b418d017b5b322b3f8b510f419b7da63c4406f29b9cdf628c8",
+            "output/part_meshes/wheel_structure/spoke_back_13.obj": "ba8466f2633a704726ac8c4334410688b34f05e51824bfe2306ea0db9538c028",
+            "output/part_meshes/wheel_structure/spoke_back_14.obj": "9223fa34af15af5ab03b7ed539522689efe348a36c9e168e7418cb37055c06b2",
+            "output/part_meshes/wheel_structure/spoke_back_15.obj": "c9af2e8fcca93d7baf70d554ad8a77b4eed792c8770c98590e514adc15a2566d",
+            "output/part_meshes/wheel_structure/spoke_back_16.obj": "3fd64cdc17d6a2df3a91d1f69138e59bd79bfa9bf5cdcf77a9f7889ae9b647fc",
+            "output/part_meshes/wheel_structure/spoke_back_17.obj": "a065b40ad3bf40f3228cc44be6298e2df76f072e31d87a6cae1f58f542a9b4d4",
+            "output/part_meshes/wheel_structure/spoke_back_18.obj": "78896f2b5e5ac999a86801aaa14672b41488a06c350a1fa98d76e269d02fc359",
+            "output/part_meshes/wheel_structure/spoke_back_19.obj": "e1145e8075a18c610b8351e164a2b6eeea778289d19b4a86b8565f28274c396e",
+            "output/part_meshes/wheel_structure/spoke_back_2.obj": "85c10ee79ff084b8229b0decabebbd010817e0c0e62fc5ecb25aaeae4c16116f",
+            "output/part_meshes/wheel_structure/spoke_back_20.obj": "aa3fa9eeff384b0d282683a0f6c15fb22e350dbfbf4ff1de672e265efdd24b40",
+            "output/part_meshes/wheel_structure/spoke_back_21.obj": "d895f91a63274f7f986b85cf0cf40b8babb3ab53c2a75144462e57562f2a02c9",
+            "output/part_meshes/wheel_structure/spoke_back_22.obj": "ab1ac93d89f9d74136f4a53fa8b0b5f31322f3dea1a69c9ed9d9ed9ed7aa3359",
+            "output/part_meshes/wheel_structure/spoke_back_23.obj": "1082e48ffaf644bbc9c30c48f809b4a01aecbafc4ed7ce279639dc9819158f2a",
+            "output/part_meshes/wheel_structure/spoke_back_24.obj": "204d10a96a737e1281f55f5aa946b1a1a559cd736ddc4305ad2454dca69ff730",
+            "output/part_meshes/wheel_structure/spoke_back_25.obj": "597017fb42ba9155eb332055bb474e4d8af98c6fa25fa2fe9849484c46834de1",
+            "output/part_meshes/wheel_structure/spoke_back_26.obj": "323ded9a633bbde0752b8ffe07620e9cbbaf53b1c782d57bd8ffe43327aa702a",
+            "output/part_meshes/wheel_structure/spoke_back_27.obj": "0efea0d176b7e50f2f1efcf71f9044580e93773c5ddded0ec132963b55c0ce39",
+            "output/part_meshes/wheel_structure/spoke_back_28.obj": "6d1520441a70a480191b283b2227029ab7484b2d5a5c2ca8d64a76ee373c85b2",
+            "output/part_meshes/wheel_structure/spoke_back_29.obj": "a3c3d934e8e7d4ce8a1af231b5de4a9ae1eb21e2e6337edc250f53a745c35466",
+            "output/part_meshes/wheel_structure/spoke_back_3.obj": "dc3b8bb704bd57e1004928d01a5881b3348fa9c80b3e2bc50db34d27774a67b9",
+            "output/part_meshes/wheel_structure/spoke_back_30.obj": "cf0e865eed489057d175bec82deaf344903675604a28cfe1d7d8de1c895c31eb",
+            "output/part_meshes/wheel_structure/spoke_back_31.obj": "c73488cebdebf8e75203d4d9055a460c3682e4bc9278e712dd4595f6262c6195",
+            "output/part_meshes/wheel_structure/spoke_back_4.obj": "54507b5d56f3ba6b5d3ca419a9626787426e75f609083a74baf8b22c8f108a5f",
+            "output/part_meshes/wheel_structure/spoke_back_5.obj": "bdcca048267dbaba79fcea87a35dc0ad822e25e7331b71ab57fcd1c790d2c702",
+            "output/part_meshes/wheel_structure/spoke_back_6.obj": "7f03a543f2427bcfd7ec8793eb07848d8497800541b0fae810eedb6d30598262",
+            "output/part_meshes/wheel_structure/spoke_back_7.obj": "248b4bea5e0ab06cbddfd22475cae15dfd68a47b2772dcc469dc99e45293c344",
+            "output/part_meshes/wheel_structure/spoke_back_8.obj": "91702917d88c83d50c44ae2b8cd1744a28ec524c9a3599ff4b30163ca932f818",
+            "output/part_meshes/wheel_structure/spoke_back_9.obj": "9d8bb3a651bb69e3a8e1ea77c8b1dedf070b8c66390c72e3a2e82884653867bb",
+            "output/part_meshes/wheel_structure/spoke_front_0.obj": "147babb211efacb0b0b6e3b478da26e57cd2ab1342f5a6005022e94d446a07a8",
+            "output/part_meshes/wheel_structure/spoke_front_1.obj": "b67fdeea1e7af82853e53a3ff6dccdff4e382abbec047b2aac244391b5403e86",
+            "output/part_meshes/wheel_structure/spoke_front_10.obj": "1882831021cb679c6e61f6bc5c05751cf001f9e1b3607bbb14160a8c5c5d4867",
+            "output/part_meshes/wheel_structure/spoke_front_11.obj": "247bcfcb82f1dafb665b38cea4971b048cf27f9af903646f2214c7c86372b42e",
+            "output/part_meshes/wheel_structure/spoke_front_12.obj": "fe59aaedb923c62c74108ed5524d843b4ba77d06af45a0958492b3c5b8061a07",
+            "output/part_meshes/wheel_structure/spoke_front_13.obj": "46b0ba88a19ded28e57022cbb624271d7fe1920e546d6160094a0f88263ac5ac",
+            "output/part_meshes/wheel_structure/spoke_front_14.obj": "955ef13e2ba5b00e90a483768709f371b98eb8fa5994f2ec00c29340fec89896",
+            "output/part_meshes/wheel_structure/spoke_front_15.obj": "569cec9f818990bc1794cd00591bf34c102435e2a876fef1984b0b50a19b6410",
+            "output/part_meshes/wheel_structure/spoke_front_16.obj": "75d45024bbd0f08e84a134e4565dd9bedaca6a2b4e67249c05d7508391304501",
+            "output/part_meshes/wheel_structure/spoke_front_17.obj": "9ca54016ea3156437b809d526a35b1ab631ab335faaf763fcba5a81a96196a12",
+            "output/part_meshes/wheel_structure/spoke_front_18.obj": "72846a99f685171cde869aff7fcf275b93746c77dd34c5a3c1be617dd54ed460",
+            "output/part_meshes/wheel_structure/spoke_front_19.obj": "2d16aa7263e28f38a4a8da656ac593bfa622cac0e2c6e6e9a7beedcb83565eb6",
+            "output/part_meshes/wheel_structure/spoke_front_2.obj": "ca18ce1ff06eb90559d9a895a8c59e5ac608fac4cfe983d8926098630e19b38c",
+            "output/part_meshes/wheel_structure/spoke_front_20.obj": "b321395334095e2e1b95587ec9b048e503fa86069f17929457ace12f422726f8",
+            "output/part_meshes/wheel_structure/spoke_front_21.obj": "86d0408a666f6bfc07f1b0d67363dd078a5a076ce7b875c22c594815f1508dbf",
+            "output/part_meshes/wheel_structure/spoke_front_22.obj": "14f400c08c44ae70dd2bcbdb05eeffdc861904a298831ee84ce05b0541035bf1",
+            "output/part_meshes/wheel_structure/spoke_front_23.obj": "4d15af4baf9d9156eddfc369cee308db37972737e8761cf84e415c9418f67d16",
+            "output/part_meshes/wheel_structure/spoke_front_24.obj": "f484d835d0eef92be3ff95c57f01525ec1f86752e1496782ec25710d9deef16e",
+            "output/part_meshes/wheel_structure/spoke_front_25.obj": "5c6fe8bd66bc07509c32390d36fa2e6b7271fdce2ff2cde0096c45f7c8566a56",
+            "output/part_meshes/wheel_structure/spoke_front_26.obj": "2150f6f7ce2084ee95a7baf0eef838c406b61e11c7b16c4ed09c693d6fa896e2",
+            "output/part_meshes/wheel_structure/spoke_front_27.obj": "c46a60b4a7524a092ecccb8b5dddd5c1129b531583a776ecd0ad86a24714db9f",
+            "output/part_meshes/wheel_structure/spoke_front_28.obj": "ae4d1450c45ac154df6da37bf9143556549854fb0c7e028215170fd391712f14",
+            "output/part_meshes/wheel_structure/spoke_front_29.obj": "ab4627cad145e7c01499b0d03134bd41285add9d0493d0e58c256326aac70980",
+            "output/part_meshes/wheel_structure/spoke_front_3.obj": "7d256601bbbf4af359a57472c5f6330eb270c9d8285e438a4c378c13389060f2",
+            "output/part_meshes/wheel_structure/spoke_front_30.obj": "2e98d54d87bcb53b093ff0993a56b1b2c02fb49f8bd7d5d3aee3e443fdf0da9f",
+            "output/part_meshes/wheel_structure/spoke_front_31.obj": "386fd9a970a38d3fab95f6bf4efdffff7dd5511ea32a4708ea47014f8fa594ef",
+            "output/part_meshes/wheel_structure/spoke_front_4.obj": "45ba38934bca88faf682e513b29057be6f527680df107c595a969ee8442c7293",
+            "output/part_meshes/wheel_structure/spoke_front_5.obj": "d4cf6ae151ec80a233c5a21554be10b847ed880e6fe883b1208c433c4f72114a",
+            "output/part_meshes/wheel_structure/spoke_front_6.obj": "02baac04cc1322ad3289a13e62ea934bc26bce497dbe924d8d570d63adba81e8",
+            "output/part_meshes/wheel_structure/spoke_front_7.obj": "6379b4767c136180aeba52086f851aa7868ba09036d49a10c3ac87b7a91d1f2d",
+            "output/part_meshes/wheel_structure/spoke_front_8.obj": "c1743fc657cda035d82c41caedcd511ebf1482dc8a7bf9c3bf2fda716d53b1b7",
+            "output/part_meshes/wheel_structure/spoke_front_9.obj": "2ccc4d549b039070ff46bbd87961308e981efce7ab710476df7943da84bdc91b"
+          },
+          "skill_sha256": "b8a1c4e2150c4895f416d45a5e1033d6c36db7a942a75461a9bea9b6dc21e7e8",
+          "target_skill_read_verified": true,
+          "external_skill_tools_observed": [],
+          "supplied_benchmark_skills": true,
+          "tokens": {
+            "input_tokens": 136217,
+            "output_tokens": 3372,
+            "total_tokens": 139589,
+            "cache_read_tokens": 110285,
+            "cache_write_tokens": 25911,
+            "llm_turns": 7,
+            "tool_calls": 8
+          },
+          "profy_cost_usd": null,
+          "score": {
+            "tests": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "strict": 1,
+            "original_returncode": 0,
+            "source_sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+            "assertions_unchanged": 19
+          }
+        },
+        "contract": {
+          "passed": true,
+          "files": [
+            {
+              "file": "output/links/cabin_0.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_1.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_10.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_11.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_12.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_13.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_14.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_15.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_2.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_3.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_4.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_5.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_6.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_7.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_8.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/cabin_9.obj",
+              "vertices": 432,
+              "triangle_corners": 432,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/support_structure.obj",
+              "vertices": 1608,
+              "triangle_corners": 1608,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/links/wheel_structure.obj",
+              "vertices": 22272,
+              "triangle_corners": 22272,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_0/cabin_arm_0.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_0/cabin_body_0.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_0/cabin_floor_0.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_0/cabin_roof_0.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_1/cabin_arm_1.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_1/cabin_body_1.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_1/cabin_floor_1.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_1/cabin_roof_1.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_10/cabin_arm_10.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_10/cabin_body_10.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_10/cabin_floor_10.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_10/cabin_roof_10.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_11/cabin_arm_11.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_11/cabin_body_11.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_11/cabin_floor_11.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_11/cabin_roof_11.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_12/cabin_arm_12.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_12/cabin_body_12.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_12/cabin_floor_12.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_12/cabin_roof_12.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_13/cabin_arm_13.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_13/cabin_body_13.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_13/cabin_floor_13.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_13/cabin_roof_13.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_14/cabin_arm_14.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_14/cabin_body_14.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_14/cabin_floor_14.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_14/cabin_roof_14.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_15/cabin_arm_15.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_15/cabin_body_15.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_15/cabin_floor_15.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_15/cabin_roof_15.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_2/cabin_arm_2.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_2/cabin_body_2.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_2/cabin_floor_2.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_2/cabin_roof_2.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_3/cabin_arm_3.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_3/cabin_body_3.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_3/cabin_floor_3.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_3/cabin_roof_3.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_4/cabin_arm_4.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_4/cabin_body_4.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_4/cabin_floor_4.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_4/cabin_roof_4.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_5/cabin_arm_5.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_5/cabin_body_5.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_5/cabin_floor_5.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_5/cabin_roof_5.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_6/cabin_arm_6.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_6/cabin_body_6.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_6/cabin_floor_6.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_6/cabin_roof_6.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_7/cabin_arm_7.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_7/cabin_body_7.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_7/cabin_floor_7.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_7/cabin_roof_7.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_8/cabin_arm_8.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_8/cabin_body_8.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_8/cabin_floor_8.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_8/cabin_roof_8.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_9/cabin_arm_9.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_9/cabin_body_9.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_9/cabin_floor_9.obj",
+              "vertices": 96,
+              "triangle_corners": 96,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/cabin_9/cabin_roof_9.obj",
+              "vertices": 48,
+              "triangle_corners": 48,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/axle_housing.obj",
+              "vertices": 36,
+              "triangle_corners": 36,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/base_platform.obj",
+              "vertices": 36,
+              "triangle_corners": 36,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/cross_brace_back.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/cross_brace_front.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/cross_brace_left.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/cross_brace_right.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/support_leg_back_left.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/support_leg_back_right.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/support_leg_front_left.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/support_structure/support_leg_front_right.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/central_hub.obj",
+              "vertices": 384,
+              "triangle_corners": 384,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/outer_rim.obj",
+              "vertices": 9600,
+              "triangle_corners": 9600,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_0.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_1.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_10.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_11.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_12.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_13.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_14.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_15.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_16.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_17.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_18.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_19.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_2.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_20.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_21.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_22.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_23.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_24.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_25.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_26.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_27.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_28.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_29.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_3.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_30.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_31.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_4.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_5.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_6.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_7.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_8.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_back_9.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_0.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_1.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_10.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_11.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_12.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_13.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_14.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_15.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_16.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_17.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_18.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_19.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_2.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_20.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_21.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_22.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_23.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_24.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_25.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_26.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_27.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_28.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_29.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_3.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_30.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_31.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_4.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_5.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_6.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_7.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_8.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            },
+            {
+              "file": "output/part_meshes/wheel_structure/spoke_front_9.obj",
+              "vertices": 192,
+              "triangle_corners": 192,
+              "public_original_nonindexed_convention": true
+            }
+          ],
+          "origin": "New compatibility guard derived from original public SKILL.md. No reference geometry used."
+        }
+      }
+    ],
+    "status": "small_scope_success_confirmed",
+    "stop_optimization": true
+  },
+  "artifact_hashes": [
+    {
+      "path": "round-05/ROUND.json",
+      "bytes": 115043,
+      "sha256": "d91c333131eec8e79eff0638835095b9bfb2e0018fe176fbd8573b319f110521"
+    },
+    {
+      "path": "round-05/STARTED.json",
+      "bytes": 221,
+      "sha256": "0dbfef47737dcb9b5f235a3d93553ebb78dfa18f8de1b2b85f27e02a2306239a"
+    },
+    {
+      "path": "round-05/adaptive-check/benchmark_skills.zip",
+      "bytes": 9691,
+      "sha256": "dd4cb30a4eae5288b96c4dd4f6d1fb77716e79f428054e51fa4eeefad27863b5"
+    },
+    {
+      "path": "round-05/adaptive-check/deliverables.zip",
+      "bytes": 819938,
+      "sha256": "f38f52f1b3ef75f5309122d1953a8ab6a988688fa6631f692973697e9ac72cc8"
+    },
+    {
+      "path": "round-05/adaptive-check/events.jsonl",
+      "bytes": 186599,
+      "sha256": "14fa6fd424def116cf022a31e25920d2ff167ac5e002f8d2ce5a94c60552201d"
+    },
+    {
+      "path": "round-05/adaptive-check/manifest.json",
+      "bytes": 19397,
+      "sha256": "caccb08335976208656bf15a6ea077070bd4050d0e6eafe1556dea7109547ee2"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_0.obj",
+      "bytes": 38915,
+      "sha256": "8298409a8a6cb12ea2c31953b9d8c6dbd1b4350c0eaa0563a9d0a1d14d90a4c7"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_1.obj",
+      "bytes": 46421,
+      "sha256": "9c24bd16b5d0cb0ac7b26ec71c88930010a59a11db1de91b833feae3f094e0b4"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_10.obj",
+      "bytes": 46955,
+      "sha256": "4e806cbbc0a38cc7c602096b8fb6d39adc94ae863cd0c1960417bb14105acf44"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_11.obj",
+      "bytes": 46867,
+      "sha256": "b9beb37676bb4410756c013265b5aa8d4f2fc20d0e3a83fb59690077681ec36c"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_12.obj",
+      "bytes": 42465,
+      "sha256": "3dc17c78a82edf192fe8d46b8921fb5cdde50bb8b835eae42489f6420a35d6eb"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_13.obj",
+      "bytes": 45779,
+      "sha256": "b0e93a0327ed76dbfef71be034c5673ea377a4e015f3aac2fba54c91c9aa71f6"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_14.obj",
+      "bytes": 46215,
+      "sha256": "3b600152b59e74abe446b17e107a474c08e1de7792d6290f92fb60c0b911631d"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_15.obj",
+      "bytes": 46761,
+      "sha256": "326357b2b924a1a012f11e30eb24d54c3a4afa22b0636a6d9fe8f8cbeedf4246"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_2.obj",
+      "bytes": 46421,
+      "sha256": "bf80b14d1f0ff53bdb2b5befa2c6717102dbcf55e1d180133f46b0d0e0f37eab"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_3.obj",
+      "bytes": 46085,
+      "sha256": "98646904df7de991591437ad55026cdf32253d499b96e09fadc1d0b142283a0d"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_4.obj",
+      "bytes": 42589,
+      "sha256": "a44379ccb968ad9f6562763ca8ee5dd8aa9c5ce1c1f4aba2f2ab83d6fcd3de3c"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_5.obj",
+      "bytes": 46599,
+      "sha256": "546a0dc4a99c65556403af6db7a3f53718e4a782a69042766859d526a917b995"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_6.obj",
+      "bytes": 46805,
+      "sha256": "de63ce68261fb556339fa089193e5eb1a8fc2e5cb810317c98d277c1569833be"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_7.obj",
+      "bytes": 46469,
+      "sha256": "60bc8d00304d5108192de6b1090fd5c9b5dedcd2e63af3c40e721f6c20d300e8"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_8.obj",
+      "bytes": 43955,
+      "sha256": "c07e285a45c5f305aa40cc9c95f4cba123843ee38a4a17c11ed6a86b354a546c"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/cabin_9.obj",
+      "bytes": 47181,
+      "sha256": "4507d6e1d582b56e0a5f03ca686d66409548059acd7aa53df3c0d153fe355bcf"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/support_structure.obj",
+      "bytes": 222818,
+      "sha256": "b394af4709be7e4a9fa202f8d99adcc16cfc7861859f4db5ca0a13754543956a"
+    },
+    {
+      "path": "round-05/adaptive-check/output/links/wheel_structure.obj",
+      "bytes": 3551172,
+      "sha256": "b28bbde20a7e1f9b685b9f18057eb4671d57020026391ef2ed3ae2bfba613210"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_0/cabin_arm_0.obj",
+      "bytes": 17616,
+      "sha256": "3c2243a395d1872cc5bfd24ab4cb5a98251c3c679e9c4ce11e7dc3cb9c93f652"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_0/cabin_body_0.obj",
+      "bytes": 7402,
+      "sha256": "28b40adc3c6e8575b32a0ed3fc5d500cf3e86db17dd85b8a79fd5c025ab6b3dd"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_0/cabin_floor_0.obj",
+      "bytes": 8843,
+      "sha256": "50ce7f43e57a80f446584eaad586e5aac7b2bfd4129e639027a606eee09a2724"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_0/cabin_roof_0.obj",
+      "bytes": 4253,
+      "sha256": "8226ea7ce48674cc688c76ff624c06fa553f1095b5c89e01c0b3ddbe2a4aaf11"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_1/cabin_arm_1.obj",
+      "bytes": 21106,
+      "sha256": "65f2b29472e4844b97a9ad351abd821733402842b1d9b009b4bb135dfd090c82"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_1/cabin_body_1.obj",
+      "bytes": 9562,
+      "sha256": "2ddaf3a00b61a646d3c07650fe9afd0eb243d5bcb3fc1211c5782b04759024fc"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_1/cabin_floor_1.obj",
+      "bytes": 9611,
+      "sha256": "55e11e4ac41f18665ac73d5874971c0d4fd866223fb073c36c8de75506cf7587"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_1/cabin_roof_1.obj",
+      "bytes": 5341,
+      "sha256": "409a17ae280687d75aa546676b9e038c9aa322bd1708ebb0cc8af22240569740"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_10/cabin_arm_10.obj",
+      "bytes": 21469,
+      "sha256": "99b8c9e0ec2f4315bf29a6b3f618a79fa7e045bd656666a86aba4d626368cfe4"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_10/cabin_body_10.obj",
+      "bytes": 9671,
+      "sha256": "45ad6afe7ef156bfe4aab27e7116709d0d968ccd382164548cf9b9c02f26ca34"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_10/cabin_floor_10.obj",
+      "bytes": 9624,
+      "sha256": "552252b653ab11404c42f62f7413200538add23075b2538b79181d3dee6a5ed1"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_10/cabin_roof_10.obj",
+      "bytes": 5390,
+      "sha256": "ae335453bb6972a5e69a974f24823e471b501385d4d1fa0ed49a90650a35198d"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_11/cabin_arm_11.obj",
+      "bytes": 21317,
+      "sha256": "6157c2236e5c4f2e7323e8507cb8829cf7c45f92e1a4742066334ecffba228ea"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_11/cabin_body_11.obj",
+      "bytes": 9671,
+      "sha256": "e7aa1eb6bf0fe2a4b20ad53a31ea114d623ef77b4761c2d16949d409fca68da1"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_11/cabin_floor_11.obj",
+      "bytes": 9720,
+      "sha256": "d43da287c730a742be08c19b6e4de195e55129bf91f0ba834078a5e8aefe4c1d"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_11/cabin_roof_11.obj",
+      "bytes": 5358,
+      "sha256": "88ad7d3a08444a925175bb2b97671e24e9cec5fd840e738d91f452be4d4eb759"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_12/cabin_arm_12.obj",
+      "bytes": 18695,
+      "sha256": "fcdbd4004efe1df7d89b6e864d32fcc0630f98d86d37f93d62d2ec61b934e771"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_12/cabin_body_12.obj",
+      "bytes": 8327,
+      "sha256": "6e1a4382e5af967be16302392f415860eaa9b3680d0d603a5f6238d2be63dca8"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_12/cabin_floor_12.obj",
+      "bytes": 9816,
+      "sha256": "0d24b11a446ff4bcaf879b089513e4a5701a276b27430923ee2f21d891cc1117"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_12/cabin_roof_12.obj",
+      "bytes": 4826,
+      "sha256": "c765c907f6ed47563e825e6bec9b3d14b2567b27436162162c329e207a2a08d6"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_13/cabin_arm_13.obj",
+      "bytes": 20773,
+      "sha256": "ba1177e692e703ce38ae48559574cceda38d4537b1467a1db6c7b11380194f80"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_13/cabin_body_13.obj",
+      "bytes": 9391,
+      "sha256": "d393890a5decb2418cebc2961a37cfe49f5750bb593cb6b6700013a710d351e7"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_13/cabin_floor_13.obj",
+      "bytes": 9584,
+      "sha256": "94f3f8b4bfedf1e1b724497317b498b7e63193ea20ac8793a6e15ddf3745e957"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_13/cabin_roof_13.obj",
+      "bytes": 5230,
+      "sha256": "a2f7683b669ce3f6707c992a3b5367afe714955281e4e6e6fdd8fc642d8a67ad"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_14/cabin_arm_14.obj",
+      "bytes": 21105,
+      "sha256": "503f072996e84d502d22faf44e3e081d7cb3990f4cfd9a50f2311a10e795793c"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_14/cabin_body_14.obj",
+      "bytes": 9479,
+      "sha256": "45050bcab1de55e9c78e0d3a3e5b74aa16f1e391c16f2876610f99ae60c56522"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_14/cabin_floor_14.obj",
+      "bytes": 9528,
+      "sha256": "3d8a870daa5db22771fb12c1902f94e65d94864ab04790a01ac738b55d9650d1"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_14/cabin_roof_14.obj",
+      "bytes": 5302,
+      "sha256": "61979cda234670f9f0ada83c858e50f25ac3b217637f85f2c0c45710f361b56e"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_15/cabin_arm_15.obj",
+      "bytes": 21299,
+      "sha256": "1681df3dd8e51c52fca01e054db1fc8cb6c3ea965c3a5ad30ec549e1825cff30"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_15/cabin_body_15.obj",
+      "bytes": 9659,
+      "sha256": "5c9836d908f5554cf14f6d8e6445b4137efef168e04dfe6f343618069369a831"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_15/cabin_floor_15.obj",
+      "bytes": 9612,
+      "sha256": "303ca293e15297e881b3dd4fde8d0c3248e0f2091c5c025df420e54a18498682"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_15/cabin_roof_15.obj",
+      "bytes": 5390,
+      "sha256": "759a4121eacfcd54efab6a59d10310e9ce056c20ee4261d51522da63c63f61ec"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_2/cabin_arm_2.obj",
+      "bytes": 21106,
+      "sha256": "1e756ddd7e0386c3b2ad4e3178a00b2f9a1322abe9ff65de4d5c81f6313498e3"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_2/cabin_body_2.obj",
+      "bytes": 9562,
+      "sha256": "d18047cfa1bf859bda81c862101de801ba31af70e289df6c37265eed13e3dc3a"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_2/cabin_floor_2.obj",
+      "bytes": 9611,
+      "sha256": "206dc3ceefe2e5049552b108730001e4289208bd5090811fdd0fb1885bdeede3"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_2/cabin_roof_2.obj",
+      "bytes": 5341,
+      "sha256": "7ed6c92f5147b955a57f6693acb3b1cb5bee29a06b4d5b7d7eacfd7a1cd2adcc"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_3/cabin_arm_3.obj",
+      "bytes": 20914,
+      "sha256": "f42959388b37a9d5f49fe72555bd08c83f32a8bb40b22f448aa767e9d5cc9253"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_3/cabin_body_3.obj",
+      "bytes": 9466,
+      "sha256": "8d43f92145e9dc3a04f3892ae7a1cc306e32ffec1ab4fe7246f6bc5692a451c2"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_3/cabin_floor_3.obj",
+      "bytes": 9611,
+      "sha256": "63494ad024cb954406512c3973729e9f5c490982076d38735ede67ffc8c9240e"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_3/cabin_roof_3.obj",
+      "bytes": 5293,
+      "sha256": "ff68ed2f73dc8132b44b75b09f013b92ede2adb1332578adf3962bb0cf277f0b"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_4/cabin_arm_4.obj",
+      "bytes": 18842,
+      "sha256": "d163805f4148dda7f34655bda791e180f7ba429290a913e04894782589075ff9"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_4/cabin_body_4.obj",
+      "bytes": 8380,
+      "sha256": "8d5c764f3dbfc0044a65f6dd89764d97016a9b545797abacf8b27272fb6af5d3"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_4/cabin_floor_4.obj",
+      "bytes": 9725,
+      "sha256": "51dfe6d538193d4dbdaee25a54477685a244df64ed6ca0e85b8a2452f090e5c3"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_4/cabin_roof_4.obj",
+      "bytes": 4841,
+      "sha256": "d7d8441d39e1ea30cdc482ee7e485635eece266b256badbdf8c806c7d0469082"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_5/cabin_arm_5.obj",
+      "bytes": 21156,
+      "sha256": "3da381919cc0f19edf9053a4665c80279a0c93ab47423f380995cae22f002f81"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_5/cabin_body_5.obj",
+      "bytes": 9582,
+      "sha256": "f9fe8726aef1cb19b61a0f532a3e21f90a673880e070460a265ae7c645c8c3b5"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_5/cabin_floor_5.obj",
+      "bytes": 9727,
+      "sha256": "b1de2527b3dbc1a1dbec9a788e2a082d6c22f2ba69ab31fe62bbe3f5548acc3a"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_5/cabin_roof_5.obj",
+      "bytes": 5333,
+      "sha256": "2f7b30a034c2a6cef0823623ca8ad0f0205f4fa5ad2a0d27bc3c3feca650ee97"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_6/cabin_arm_6.obj",
+      "bytes": 21298,
+      "sha256": "72e28904126adcaea1749d065d2bce4d428c9a64335ca21a208811f0f5f1a883"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_6/cabin_body_6.obj",
+      "bytes": 9638,
+      "sha256": "6937918c7145c9de38e5effd44d4b383c6f4f38a006ce6e7b4d77f2eaa79926b"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_6/cabin_floor_6.obj",
+      "bytes": 9687,
+      "sha256": "2c8e85f89a802e30f4900149b41ec507282403065ce2a70865e3b4650acfa533"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_6/cabin_roof_6.obj",
+      "bytes": 5381,
+      "sha256": "01952d0e0aaf1a514a3a70d3fbcca91b1bdfcdd76db48e39d3fd368701acf372"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_7/cabin_arm_7.obj",
+      "bytes": 21106,
+      "sha256": "4fb9a1a8f844acd8a4e801c91dc7a64eefea7c1349d91bf51086952440d7c946"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_7/cabin_body_7.obj",
+      "bytes": 9562,
+      "sha256": "cf825db7a83038ec70053056adb54bab4243063f79d8a96661050590aaab6afb"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_7/cabin_floor_7.obj",
+      "bytes": 9659,
+      "sha256": "2a015db4a0ff426670fdcd067a46aa368d43f29e53943eecc18e5b55f5a8570c"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_7/cabin_roof_7.obj",
+      "bytes": 5341,
+      "sha256": "1d7bd32a497c00180d357330a49997191173ddb58709f88df9afaff3c198b918"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_8/cabin_arm_8.obj",
+      "bytes": 20496,
+      "sha256": "a61a17d8989d49ce612c4bdf89cff686f181e24c454933b11155cd69dd2a3582"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_8/cabin_body_8.obj",
+      "bytes": 8890,
+      "sha256": "4d820f6205069d3ea416bf7702a62860fab9ee3f36eb10fb909360f66e205373"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_8/cabin_floor_8.obj",
+      "bytes": 8891,
+      "sha256": "0bef10f6bc1e4df0d3a3075d02d91cb4f2f786b73f6c4697f1fee09439da5870"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_8/cabin_roof_8.obj",
+      "bytes": 4877,
+      "sha256": "4a5d5c64d48b19be7bad47cb6ce1e54e3b8c45ca82f3fdec0c2b0003bdfed11e"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_9/cabin_arm_9.obj",
+      "bytes": 21490,
+      "sha256": "73b711635146e368eab3bb31556f0cac2f5ed66ae4aae8b11a2d7b9614dc37ef"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_9/cabin_body_9.obj",
+      "bytes": 9754,
+      "sha256": "014ea8d047306039cd061d52a5d56fcd44ba16ba3050b9b8b74635ccea8a0b08"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_9/cabin_floor_9.obj",
+      "bytes": 9707,
+      "sha256": "257412e0ab703faca76c6d7cc7a073997422da4d3e37c8437c6061882bb14281"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/cabin_9/cabin_roof_9.obj",
+      "bytes": 5429,
+      "sha256": "23fe0db65dd2cca8d8faaabc0fb981f4a8e409d7f873362d4e4cb902b3938edb"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/axle_housing.obj",
+      "bytes": 1470,
+      "sha256": "af3d5ee92fc5d7071fa1f794e4d6e1f9d27124c2944276a58eb9f533fbe9958c"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/base_platform.obj",
+      "bytes": 1399,
+      "sha256": "844e5f9a4cf306e703078556f65f04365edf1da541450f2c252eddbd0feaa4dd"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/cross_brace_back.obj",
+      "bytes": 25224,
+      "sha256": "715fb339fd17f0b60bfe1d64bc76043194a75e0774a46c262c90678729c1bb28"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/cross_brace_front.obj",
+      "bytes": 25033,
+      "sha256": "c41fa24725233b4088e667aa7fb2918b4aa43bbb4784726ad9e96bcab7501f09"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/cross_brace_left.obj",
+      "bytes": 25118,
+      "sha256": "43af9f13369f967343daa1c05f6ebffb1105f1ac85908096b1aebe4971b0b96c"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/cross_brace_right.obj",
+      "bytes": 24927,
+      "sha256": "203e3330c747add6a060d3001f65ee3b2ba1d2b67d9a61bdd4c9bba0e7adb6a9"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/support_leg_back_left.obj",
+      "bytes": 28945,
+      "sha256": "40118b7a8ac40b41f929e03eb338cee5f68f4cb63e85fdde27c3c1bb97c119ee"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/support_leg_back_right.obj",
+      "bytes": 28887,
+      "sha256": "dce9aab211c0b602f4652eedd3ed4638da3029cf52a596dc8eb69627371fd1b2"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/support_leg_front_left.obj",
+      "bytes": 28775,
+      "sha256": "ce84aa86cf6dc0e1745ff701efbd11e45f20a6cd299c424fb9e759b13d7355f0"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/support_structure/support_leg_front_right.obj",
+      "bytes": 28675,
+      "sha256": "068e082e9a8919abde6f90fb4254a77c99ba4ed8c620b269496424f28f5ae94f"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/central_hub.obj",
+      "bytes": 47413,
+      "sha256": "77eee1669c6339edd4b039ccc810d488301a072b19c9b9017de12fa86baa725d"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/outer_rim.obj",
+      "bytes": 1540336,
+      "sha256": "983eaf4b01f31092e7021c21f127a08d55e0baaaba70bd776dee04f1aff130ee"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_0.obj",
+      "bytes": 29230,
+      "sha256": "950fa9bfb9626626dfd97f02ae3d43251c9952f06279cfc8daab9fba6485f44d"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_1.obj",
+      "bytes": 29203,
+      "sha256": "1b8b8905726cfca3e531aecf0e696eda671a1761cf8e252eca09c2d35d345290"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_10.obj",
+      "bytes": 29304,
+      "sha256": "842401fdbf5e268b3d10d5fbce46e92a5d913154cffeb6e92df6522269146b96"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_11.obj",
+      "bytes": 29145,
+      "sha256": "f12ae762111364b742b4b586f5f7298f2199aaccbbf90a0b6f2b0ce99a59b0f8"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_12.obj",
+      "bytes": 29204,
+      "sha256": "72836242613cc2b418d017b5b322b3f8b510f419b7da63c4406f29b9cdf628c8"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_13.obj",
+      "bytes": 29226,
+      "sha256": "ba8466f2633a704726ac8c4334410688b34f05e51824bfe2306ea0db9538c028"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_14.obj",
+      "bytes": 29181,
+      "sha256": "9223fa34af15af5ab03b7ed539522689efe348a36c9e168e7418cb37055c06b2"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_15.obj",
+      "bytes": 29396,
+      "sha256": "c9af2e8fcca93d7baf70d554ad8a77b4eed792c8770c98590e514adc15a2566d"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_16.obj",
+      "bytes": 29842,
+      "sha256": "3fd64cdc17d6a2df3a91d1f69138e59bd79bfa9bf5cdcf77a9f7889ae9b647fc"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_17.obj",
+      "bytes": 29403,
+      "sha256": "a065b40ad3bf40f3228cc44be6298e2df76f072e31d87a6cae1f58f542a9b4d4"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_18.obj",
+      "bytes": 29287,
+      "sha256": "78896f2b5e5ac999a86801aaa14672b41488a06c350a1fa98d76e269d02fc359"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_19.obj",
+      "bytes": 29288,
+      "sha256": "e1145e8075a18c610b8351e164a2b6eeea778289d19b4a86b8565f28274c396e"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_2.obj",
+      "bytes": 29199,
+      "sha256": "85c10ee79ff084b8229b0decabebbd010817e0c0e62fc5ecb25aaeae4c16116f"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_20.obj",
+      "bytes": 29371,
+      "sha256": "aa3fa9eeff384b0d282683a0f6c15fb22e350dbfbf4ff1de672e265efdd24b40"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_21.obj",
+      "bytes": 29296,
+      "sha256": "d895f91a63274f7f986b85cf0cf40b8babb3ab53c2a75144462e57562f2a02c9"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_22.obj",
+      "bytes": 29198,
+      "sha256": "ab1ac93d89f9d74136f4a53fa8b0b5f31322f3dea1a69c9ed9d9ed9ed7aa3359"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_23.obj",
+      "bytes": 29256,
+      "sha256": "1082e48ffaf644bbc9c30c48f809b4a01aecbafc4ed7ce279639dc9819158f2a"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_24.obj",
+      "bytes": 29749,
+      "sha256": "204d10a96a737e1281f55f5aa946b1a1a559cd736ddc4305ad2454dca69ff730"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_25.obj",
+      "bytes": 29218,
+      "sha256": "597017fb42ba9155eb332055bb474e4d8af98c6fa25fa2fe9849484c46834de1"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_26.obj",
+      "bytes": 29144,
+      "sha256": "323ded9a633bbde0752b8ffe07620e9cbbaf53b1c782d57bd8ffe43327aa702a"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_27.obj",
+      "bytes": 29115,
+      "sha256": "0efea0d176b7e50f2f1efcf71f9044580e93773c5ddded0ec132963b55c0ce39"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_28.obj",
+      "bytes": 29302,
+      "sha256": "6d1520441a70a480191b283b2227029ab7484b2d5a5c2ca8d64a76ee373c85b2"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_29.obj",
+      "bytes": 29124,
+      "sha256": "a3c3d934e8e7d4ce8a1af231b5de4a9ae1eb21e2e6337edc250f53a745c35466"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_3.obj",
+      "bytes": 29170,
+      "sha256": "dc3b8bb704bd57e1004928d01a5881b3348fa9c80b3e2bc50db34d27774a67b9"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_30.obj",
+      "bytes": 29195,
+      "sha256": "cf0e865eed489057d175bec82deaf344903675604a28cfe1d7d8de1c895c31eb"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_31.obj",
+      "bytes": 29372,
+      "sha256": "c73488cebdebf8e75203d4d9055a460c3682e4bc9278e712dd4595f6262c6195"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_4.obj",
+      "bytes": 29190,
+      "sha256": "54507b5d56f3ba6b5d3ca419a9626787426e75f609083a74baf8b22c8f108a5f"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_5.obj",
+      "bytes": 29087,
+      "sha256": "bdcca048267dbaba79fcea87a35dc0ad822e25e7331b71ab57fcd1c790d2c702"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_6.obj",
+      "bytes": 29093,
+      "sha256": "7f03a543f2427bcfd7ec8793eb07848d8497800541b0fae810eedb6d30598262"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_7.obj",
+      "bytes": 29239,
+      "sha256": "248b4bea5e0ab06cbddfd22475cae15dfd68a47b2772dcc469dc99e45293c344"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_8.obj",
+      "bytes": 29598,
+      "sha256": "91702917d88c83d50c44ae2b8cd1744a28ec524c9a3599ff4b30163ca932f818"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_back_9.obj",
+      "bytes": 29234,
+      "sha256": "9d8bb3a651bb69e3a8e1ea77c8b1dedf070b8c66390c72e3a2e82884653867bb"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_0.obj",
+      "bytes": 29036,
+      "sha256": "147babb211efacb0b0b6e3b478da26e57cd2ab1342f5a6005022e94d446a07a8"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_1.obj",
+      "bytes": 29006,
+      "sha256": "b67fdeea1e7af82853e53a3ff6dccdff4e382abbec047b2aac244391b5403e86"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_10.obj",
+      "bytes": 29113,
+      "sha256": "1882831021cb679c6e61f6bc5c05751cf001f9e1b3607bbb14160a8c5c5d4867"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_11.obj",
+      "bytes": 28936,
+      "sha256": "247bcfcb82f1dafb665b38cea4971b048cf27f9af903646f2214c7c86372b42e"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_12.obj",
+      "bytes": 29019,
+      "sha256": "fe59aaedb923c62c74108ed5524d843b4ba77d06af45a0958492b3c5b8061a07"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_13.obj",
+      "bytes": 29038,
+      "sha256": "46b0ba88a19ded28e57022cbb624271d7fe1920e546d6160094a0f88263ac5ac"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_14.obj",
+      "bytes": 28987,
+      "sha256": "955ef13e2ba5b00e90a483768709f371b98eb8fa5994f2ec00c29340fec89896"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_15.obj",
+      "bytes": 29196,
+      "sha256": "569cec9f818990bc1794cd00591bf34c102435e2a876fef1984b0b50a19b6410"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_16.obj",
+      "bytes": 29645,
+      "sha256": "75d45024bbd0f08e84a134e4565dd9bedaca6a2b4e67249c05d7508391304501"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_17.obj",
+      "bytes": 29221,
+      "sha256": "9ca54016ea3156437b809d526a35b1ab631ab335faaf763fcba5a81a96196a12"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_18.obj",
+      "bytes": 29081,
+      "sha256": "72846a99f685171cde869aff7fcf275b93746c77dd34c5a3c1be617dd54ed460"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_19.obj",
+      "bytes": 29112,
+      "sha256": "2d16aa7263e28f38a4a8da656ac593bfa622cac0e2c6e6e9a7beedcb83565eb6"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_2.obj",
+      "bytes": 29023,
+      "sha256": "ca18ce1ff06eb90559d9a895a8c59e5ac608fac4cfe983d8926098630e19b38c"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_20.obj",
+      "bytes": 29168,
+      "sha256": "b321395334095e2e1b95587ec9b048e503fa86069f17929457ace12f422726f8"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_21.obj",
+      "bytes": 29099,
+      "sha256": "86d0408a666f6bfc07f1b0d67363dd078a5a076ce7b875c22c594815f1508dbf"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_22.obj",
+      "bytes": 28998,
+      "sha256": "14f400c08c44ae70dd2bcbdb05eeffdc861904a298831ee84ce05b0541035bf1"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_23.obj",
+      "bytes": 29053,
+      "sha256": "4d15af4baf9d9156eddfc369cee308db37972737e8761cf84e415c9418f67d16"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_24.obj",
+      "bytes": 29545,
+      "sha256": "f484d835d0eef92be3ff95c57f01525ec1f86752e1496782ec25710d9deef16e"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_25.obj",
+      "bytes": 29009,
+      "sha256": "5c6fe8bd66bc07509c32390d36fa2e6b7271fdce2ff2cde0096c45f7c8566a56"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_26.obj",
+      "bytes": 28947,
+      "sha256": "2150f6f7ce2084ee95a7baf0eef838c406b61e11c7b16c4ed09c693d6fa896e2"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_27.obj",
+      "bytes": 28924,
+      "sha256": "c46a60b4a7524a092ecccb8b5dddd5c1129b531583a776ecd0ad86a24714db9f"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_28.obj",
+      "bytes": 29129,
+      "sha256": "ae4d1450c45ac154df6da37bf9143556549854fb0c7e028215170fd391712f14"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_29.obj",
+      "bytes": 28942,
+      "sha256": "ab4627cad145e7c01499b0d03134bd41285add9d0493d0e58c256326aac70980"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_3.obj",
+      "bytes": 28967,
+      "sha256": "7d256601bbbf4af359a57472c5f6330eb270c9d8285e438a4c378c13389060f2"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_30.obj",
+      "bytes": 29007,
+      "sha256": "2e98d54d87bcb53b093ff0993a56b1b2c02fb49f8bd7d5d3aee3e443fdf0da9f"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_31.obj",
+      "bytes": 29184,
+      "sha256": "386fd9a970a38d3fab95f6bf4efdffff7dd5511ea32a4708ea47014f8fa594ef"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_4.obj",
+      "bytes": 28999,
+      "sha256": "45ba38934bca88faf682e513b29057be6f527680df107c595a969ee8442c7293"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_5.obj",
+      "bytes": 28914,
+      "sha256": "d4cf6ae151ec80a233c5a21554be10b847ed880e6fe883b1208c433c4f72114a"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_6.obj",
+      "bytes": 28896,
+      "sha256": "02baac04cc1322ad3289a13e62ea934bc26bce497dbe924d8d570d63adba81e8"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_7.obj",
+      "bytes": 29042,
+      "sha256": "6379b4767c136180aeba52086f851aa7868ba09036d49a10c3ac87b7a91d1f2d"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_8.obj",
+      "bytes": 29393,
+      "sha256": "c1743fc657cda035d82c41caedcd511ebf1482dc8a7bf9c3bf2fda716d53b1b7"
+    },
+    {
+      "path": "round-05/adaptive-check/output/part_meshes/wheel_structure/spoke_front_9.obj",
+      "bytes": 29040,
+      "sha256": "2ccc4d549b039070ff46bbd87961308e981efce7ab710476df7943da84bdc91b"
+    },
+    {
+      "path": "round-05/adaptive-check/request.json",
+      "bytes": 3065,
+      "sha256": "ffdf78174402091a73a677e29e9f129add1499030828cfdebddc66e10a6cbb62"
+    },
+    {
+      "path": "round-05/adaptive-check/result.json",
+      "bytes": 20251,
+      "sha256": "47c5363358fb4e848b5d02ef0ee667515b296cb16b44ebd313ec9a91e1111c15"
+    },
+    {
+      "path": "round-05/adaptive-check/run_summary.json",
+      "bytes": 19998,
+      "sha256": "5b1a574bdbefaa99ffa883c657fd84986ef65de2a6869deb647684b1159715e6"
+    },
+    {
+      "path": "round-05/adaptive-check/scoring_only/__pycache__/test_outputs.cpython-312-pytest-8.4.1.pyc",
+      "bytes": 18630,
+      "sha256": "61097d495c43636be15c98d605761e8b1958b7dd85536bff41083a8a8b439cc0"
+    },
+    {
+      "path": "round-05/adaptive-check/scoring_only/junit.xml",
+      "bytes": 616,
+      "sha256": "85d236d479f4181a2a9936b64eca848a7b858d886aae4334577d95655bba5816"
+    },
+    {
+      "path": "round-05/adaptive-check/scoring_only/pytest.log",
+      "bytes": 278,
+      "sha256": "8fb08751e18353c2caa6a28929a04be6e4da19feafb17192bc473784c2d2b066"
+    },
+    {
+      "path": "round-05/adaptive-check/scoring_only/receipt.json",
+      "bytes": 222,
+      "sha256": "ffae2f35718526c278d3c520e9b6f580b53cf5365bbc9f2cd71a4b115c239ad3"
+    },
+    {
+      "path": "round-05/adaptive-check/scoring_only/test_outputs.py",
+      "bytes": 4692,
+      "sha256": "dc3968db60649994604c14aa67688f9f1e0d5783eef270547b6f086cee169140"
+    },
+    {
+      "path": "round-05/adaptive-check/session.json",
+      "bytes": 50,
+      "sha256": "02d24e30990e69e37d13f28c0bc12b1d7c8b632968d68ed1e6f99b0f19a02164"
+    },
+    {
+      "path": "round-05/adaptive-check/started.json",
+      "bytes": 95,
+      "sha256": "1190c4546d90a0a9c9d126756befdf8fe935cd74c912cd30f416977ba7b78ab9"
+    },
+    {
+      "path": "round-05/adaptive-check/supplied_skill_hashes.json",
+      "bytes": 968,
+      "sha256": "96336ac98500036879039450e4c416fa2903054055c1f4df2d1ad29eb86a1501"
+    },
+    {
+      "path": "round-05/adaptive-check/task_input.zip",
+      "bytes": 2751,
+      "sha256": "4649fd717cf7fa29d28f62075db2a13c159a7b13a30400d66e8eea62090206f5"
+    },
+    {
+      "path": "round-05/adaptive-check/uploads.json",
+      "bytes": 404,
+      "sha256": "791af6c0d0500fceccb6486a9c732219e290b23318ea012f0396279f453e6a4e"
+    },
+    {
+      "path": "round-05/adaptive-check/usage.json",
+      "bytes": 4404,
+      "sha256": "98bd8391564dcd766671f36edd0238b8a02d82e9fb08dcfe56fe3c6ce33b8f58"
+    },
+    {
+      "path": "round-05/development/benchmark_skills.zip",
+      "bytes": 8964,
+      "sha256": "fccf1508c0a7d6fb61f98738ead75c984588abef35da147274bbcdb1daab881b"
+    },
+    {
+      "path": "round-05/development/deliverables.zip",
+      "bytes": 447560,
+      "sha256": "9ba25550027561962ee356259e57e04b168e3b555604ebda77123af4136e7ef4"
+    },
+    {
+      "path": "round-05/development/events.jsonl",
+      "bytes": 161452,
+      "sha256": "7bf43471a634f62385e3a843af89308051efab4b7830ca69681b527eb8adf3c9"
+    },
+    {
+      "path": "round-05/development/manifest.json",
+      "bytes": 299,
+      "sha256": "3c1259d4d4527ae3a38ccba216be73282e0ade529a132e72fd2a0fada141b371"
+    },
+    {
+      "path": "round-05/development/output/export_object.mjs",
+      "bytes": 6436,
+      "sha256": "b5c6de8e6b6d8f647bf4bbbb2cd05b033671f97bd57cb79439c781d41802c71e"
+    },
+    {
+      "path": "round-05/development/output/object.obj",
+      "bytes": 4089750,
+      "sha256": "78e0bcb59934916afde24bb6ddb05b1e68450365460b6f7f559fdca6f711a96f"
+    },
+    {
+      "path": "round-05/development/request.json",
+      "bytes": 2544,
+      "sha256": "ad348a8db2ff1f8c96d50f5fc6c14e2f1602eded70c4a379dbf88eebf9c97121"
+    },
+    {
+      "path": "round-05/development/result.json",
+      "bytes": 1139,
+      "sha256": "62e8356dd744f1c59be6d365083de04aa4e417e966c23cf32f98f3e023500dd9"
+    },
+    {
+      "path": "round-05/development/run_summary.json",
+      "bytes": 887,
+      "sha256": "3ef86cd77a24fd46286a1ba94f0c13a9b6f83755c998f2c1b1ee646b28f8a562"
+    },
+    {
+      "path": "round-05/development/scoring_only/__pycache__/test_outputs.cpython-312-pytest-8.4.1.pyc",
+      "bytes": 12653,
+      "sha256": "b1dafdfd152c98894fd10a5e95d124961dcc4fb7d855a4d5c22701c253651d9a"
+    },
+    {
+      "path": "round-05/development/scoring_only/junit.xml",
+      "bytes": 594,
+      "sha256": "c3d295dcb72cb550999b116db07f970d17bae9ef789cde8439127cdd09e43f8a"
+    },
+    {
+      "path": "round-05/development/scoring_only/pytest.log",
+      "bytes": 276,
+      "sha256": "0a23575830ab9703293f9dce488104a038d21e564817adbbae55bb922a7b6b0c"
+    },
+    {
+      "path": "round-05/development/scoring_only/receipt.json",
+      "bytes": 221,
+      "sha256": "44a62083ef45dcc75c973873db57677e8ce494dc58bad3f7ae77e2e91feccb2c"
+    },
+    {
+      "path": "round-05/development/scoring_only/test_outputs.py",
+      "bytes": 3144,
+      "sha256": "65514816ff686596c1da23faa0509a3b9dea3965b325ad15107d743bbe7caf01"
+    },
+    {
+      "path": "round-05/development/session.json",
+      "bytes": 50,
+      "sha256": "fe075bef3de8c58ce0720f4cc54b446728a39f189740dba8540ce8030290da08"
+    },
+    {
+      "path": "round-05/development/started.json",
+      "bytes": 82,
+      "sha256": "9e450ae6300c8588f6f2b7448f903f077fdb7ab6aa8049162e8813aaec7cf768"
+    },
+    {
+      "path": "round-05/development/supplied_skill_hashes.json",
+      "bytes": 968,
+      "sha256": "ee7e71076cbbd214553ae21ce83abc88a1945a9c1e6e6b92633000e7990d5e71"
+    },
+    {
+      "path": "round-05/development/task_input.zip",
+      "bytes": 1759,
+      "sha256": "ba8a754ac45d48680ce9f5314bdf5cc25fc851487d7fcab90a68e430b9995a50"
+    },
+    {
+      "path": "round-05/development/uploads.json",
+      "bytes": 404,
+      "sha256": "8452e99cd44c5ed2329d9e334d8b474cbfaa27c27b3adf489f65f7a304a079a9"
+    },
+    {
+      "path": "round-05/development/usage.json",
+      "bytes": 5140,
+      "sha256": "e2cd3d30c4e4eca6481d482894a1f85fb65b8b83649adf775fe92d1b8d689197"
+    },
+    {
+      "path": "round-05/evolution/candidate_SKILL.md",
+      "bytes": 4179,
+      "sha256": "b8a1c4e2150c4895f416d45a5e1033d6c36db7a942a75461a9bea9b6dc21e7e8"
+    },
+    {
+      "path": "round-05/evolution/pending.json",
+      "bytes": 6526,
+      "sha256": "f70811c4035011497e26a1fae111f6ffb521219c22504c41b448d4a27cb796c9"
+    },
+    {
+      "path": "round-05/evolution/provenance.json",
+      "bytes": 2455,
+      "sha256": "9912194c0b221ada419c7c2419f0ab505db67894b299698ccfa8a19b7578b5b3"
+    },
+    {
+      "path": "round-05/evolution/request_1.json",
+      "bytes": 253756,
+      "sha256": "c903519c7aac2fc54d0d0fe930e8c0e203182a4f3869eaf5419eae94f731b1a6"
+    },
+    {
+      "path": "round-05/evolution/request_2.json",
+      "bytes": 260039,
+      "sha256": "2b10acc8762784157cadab9183441054cd0a6cbf0f2a7507d2e5594ef36b9493"
+    },
+    {
+      "path": "round-05/evolution/request_3.json",
+      "bytes": 261181,
+      "sha256": "0500262329a1d536a52cda0f79684ce396bf19c1557050db638464badf43f301"
+    },
+    {
+      "path": "round-05/evolution/request_4.json",
+      "bytes": 267025,
+      "sha256": "8dfb41c9b61dfb500d2be1be20a7bda11d54a11d6af128eaca82c43cc2d7c95d"
+    },
+    {
+      "path": "round-05/evolution/response_1.json",
+      "bytes": 1421,
+      "sha256": "328ff7ebcceecfed42ce01432030ccaef17be55fdf5d13a7a9885b01b5076a90"
+    },
+    {
+      "path": "round-05/evolution/response_2.json",
+      "bytes": 1393,
+      "sha256": "5db1c71dc00c29caed0c262c8224b4e4b45e623e486268663c9b60421b84a032"
+    },
+    {
+      "path": "round-05/evolution/response_3.json",
+      "bytes": 1417,
+      "sha256": "195b3287b738009e7fa5570f6b15804315b666f4a2378a3de7565d501b0939de"
+    },
+    {
+      "path": "round-05/evolution/response_4.json",
+      "bytes": 19760,
+      "sha256": "a59fceb0c1da30fe56153f64a73399864688d8d21dceab096ef9cae71358a87b"
+    },
+    {
+      "path": "round-05/evolution/summary.json",
+      "bytes": 3293,
+      "sha256": "24b60822753e7fe4f9c1f922e48e2342e387d5fe218734fea62076500648d950"
+    },
+    {
+      "path": "round-05/evolution/tool_transcript.json",
+      "bytes": 268112,
+      "sha256": "85bbf052a38956de745de41b006785fc346969ecb839f8c58e281e5a91202597"
+    },
+    {
+      "path": "round-05/parent_skills/obj-exporter/SKILL.md",
+      "bytes": 2055,
+      "sha256": "e6681249baeab46443a2ddd1ef7983099dced6851b18dba3572b3967e5548056"
+    },
+    {
+      "path": "round-05/parent_skills/threejs/SKILL.md",
+      "bytes": 3941,
+      "sha256": "56eb6061702a90e6a7cf9d78cd40e8584041bc5ab17de1d85f3c9cd256810026"
+    },
+    {
+      "path": "round-05/parent_skills/threejs/references/joint-type-heuristics.md",
+      "bytes": 1083,
+      "sha256": "459af44b906bb2bf61a940e88b83b1cf7afe3ddb17c17d355577f987c6a6214b"
+    },
+    {
+      "path": "round-05/parent_skills/threejs/references/link-export-rules.md",
+      "bytes": 680,
+      "sha256": "7c664561c879a7be8d799665f781ba8497abcdbf34ec6c369121fd57d699b835"
+    },
+    {
+      "path": "round-05/parent_skills/threejs/references/urdf-minimal.md",
+      "bytes": 677,
+      "sha256": "204b4ae283774fe2a8181a605aa9f0d79355f6c8bf4b060c53891a2136750aee"
+    },
+    {
+      "path": "round-05/parent_skills/threejs/scripts/build_urdf_from_scene.mjs",
+      "bytes": 3915,
+      "sha256": "db916f0930dd39a8e4a17ee2ddb4b166bdc41df57baacc46123fa65a052fe284"
+    },
+    {
+      "path": "round-05/parent_skills/threejs/scripts/export_instanced_obj.mjs",
+      "bytes": 1758,
+      "sha256": "b2d33217a6d67ecfc877bfe2d696d681409723f6ed5b5be1e12b75922a90de82"
+    },
+    {
+      "path": "round-05/parent_skills/threejs/scripts/export_link_objs.mjs",
+      "bytes": 2861,
+      "sha256": "95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494"
+    }
+  ],
+  "raw_artifacts": "Full local round directory; third-party code, skill bodies, inputs, gold and keys excluded from private repo.",
+  "model_outputs_archive": {
+    "file": "round-05-model-outputs.zip",
+    "bytes": 2587718,
+    "sha256": "2b425522074e11b64a764df4283505c2c309d480062e064209141c9edee1af64",
+    "contents": "Exact model-generated OBJ bytes plus assistant metadata; no third-party code, original inputs, gold or keys."
+  }
+}

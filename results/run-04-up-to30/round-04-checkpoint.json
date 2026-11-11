@@ -2413,5 +2413,11 @@
       "sha256": "95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494"
     }
   ],
-  "raw_artifacts": "Full local round directory; third-party code, skill bodies, inputs, gold and keys excluded from private repo."
+  "raw_artifacts": "Full local round directory; third-party code, skill bodies, inputs, gold and keys excluded from private repo.",
+  "model_outputs_archive": {
+    "file": "round-04-model-outputs.zip",
+    "bytes": 1293518,
+    "sha256": "b4cf2065698364fa82e7990f5a420ed43a25dc6cf7f9c780f9d39bf37a7d6419",
+    "contents": "Exact model-generated OBJ bytes plus assistant metadata; no third-party code, original inputs, gold or keys."
+  }
 }
