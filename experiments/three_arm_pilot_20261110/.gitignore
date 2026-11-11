@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.env*
+*keys*
+results/
+external_inputs/
+*.zip
+*.pdf
+*.xlsx
+*.docx
+expert/
+candidate_SKILL.md
+events.jsonl
+writer_request.json
+writer_response.json
+scoring_only/

@@ -1,0 +1,12 @@
+[
+  {
+    "path": "archive/personamem/study.py",
+    "source": "previous assistant-written exploratory code; not paper-method evidence",
+    "sha256": "6f9e44944cabc30e9433e5c5b8c745dcab539c6bd0c36676780ab864d0610540"
+  },
+  {
+    "path": "archive/personamem/analyze.py",
+    "source": "previous assistant-written exploratory code; not paper-method evidence",
+    "sha256": "cbcaaf1ec4ab62b905fc7a257f6c4b405660b97d4a0290b25898263f0fea3436"
+  }
+]
