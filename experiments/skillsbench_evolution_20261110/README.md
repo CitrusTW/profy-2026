@@ -1,42 +1,48 @@
-# SkillsBench原skills的三组小验证
+# SkillsBench skill evolution 小验证
 
-先看[实际数字与结论](RESULTS.md): 小跑已完成, 原版skills通过3/3, 进化版1/3, 当前不扩大. 计划见[PLAN.md](PLAN.md). 这次不使用6个expert包, 只用SkillsBench原题、原附件和配套skills. 三组是no-skills、with-skills、with-CogniLife-skills.
+2026-11-10更新: 适配代码和候选核验已修, 9项离线测试通过. 这轮没有调用模型, 没有生成新的skill. 看[改动和检查结果](OFFLINE_FIX_REPORT.md)和[检查数字](OFFLINE_FIX_FACTS.json).
 
-开发题threejs-to-obj要求导出整个3D物体. 验证题threejs-structure-parser要求把另一份3D物体按部件分别导出. 两题都带同一份threejs/SKILL.md, 可以用开发经历进化它, 再检查新任务. 验证题其他原skills及资源在后两组完全相同.
+旧小跑的数字保留在[RESULTS.md](RESULTS.md): 原版skills通过3/3, 旧进化版1/3. 旧候选由gpt-4.1生成, 不会被改名当成gpt-6.1-sol的结果. 修好代码不等于已经测出新skill有效.
 
-native_evolution.py在仓库外读取收到的Profy原EVOLUTION.md、原workflow、原skill工具函数和原evolution_log.py. 不另写提取prompt, 不改原门控. 新代码只适配技能文件读取、模型工具调用与实验内pending保存. 这是skill-refinement核心的外部适配, 不声称运行了Profy内部服务、完整CogniLife归因/Memory或平台promotion.
+## 这个程序做什么
 
-## 怎么启动
+用开发题threejs-to-obj的一次真实执行记录, 通过收到的Profy Evolution代码提出skill修改. 原任务是把3D物体导出成OBJ文件. 生成候选后, 可以先检查它是否仍能完成开发题. 程序不另写学习prompt, 不从6个expert包提取内容.
 
-需要已有CogniLife工作区中的SkillsBench和收到的Profy-main源码, 私下保存的Profy/OpenRouter keys及Profy identifier, Python 3.12、Node/npm, 以及原pytest/numpy评分依赖. Profy hosted求解, OpenRouter执行Evolution, 本机只调度、下载原生交付文件和程序评分. 不需要本地大模型或GPU.
+原验证题threejs-structure-parser已跑过并分析过失败原因. 它的旧结果只作为历史记录; 以后不能把针对该结果调过的skill在同一题上的成绩当作独立验证. 不改benchmark, 不拿它的答案补规则.
 
-从CogniLife工作区执行, 把绝对路径填到下列参数中. key只填写文件位置, 不把值放进命令. 各phase分别执行; 失败后先看记录, 不自动重发付费attempt.
+## 修到了哪里
 
-```bash
-python /path/to/skillsbench_evolution_20261110/run.py setup --workspace /path/to/CogniLife --out /path/to/new-run --keys-file /path/to/private-keys.md
-python /path/to/skillsbench_evolution_20261110/run.py dev --workspace /path/to/CogniLife --out /path/to/new-run --keys-file /path/to/private-keys.md
-python /path/to/skillsbench_evolution_20261110/run.py evolve --workspace /path/to/CogniLife --out /path/to/new-run --keys-file /path/to/private-keys.md
-python /path/to/skillsbench_evolution_20261110/run.py candidate --workspace /path/to/CogniLife --out /path/to/new-run --keys-file /path/to/private-keys.md
-python /path/to/skillsbench_evolution_20261110/run.py test --workspace /path/to/CogniLife --out /path/to/new-run --keys-file /path/to/private-keys.md
-python /path/to/skillsbench_evolution_20261110/run.py report --workspace /path/to/CogniLife --out /path/to/new-run --keys-file /path/to/private-keys.md
-```
+- Evolution固定走Profy `/v1/chat/completions`, 请求模型为gpt-6.1-sol. 求解也使用gpt-6.1-sol. 不再走OpenRouter, 没有4.1备用路线.
+- 用原ContextManager组装静态context, 用原skill metadata parser和discovery输出. Evolution能发现开发题的threejs和obj-exporter, 但本实验只允许修改预先选好的threejs.
+- 开发历史保留user、assistant、tool角色和完整工具参数/结果. 缺结果、重复调用或对不上的tool ID会停止, 不补造记录.
+- 原EVOLUTION.md、evolution workflow、skill工具和evolution_log门控仍从收到的Profy-main读取. 原权重和接受条件不变.
+- 候选核验检查实际请求模型、请求hash、原skill版本、候选与pending是否一致、开发执行是否完成、实际读取版本和原评分是否完整. 原门控收下建议, 不代表候选语义已经核验通过.
 
-- setup仅准备原评分程序所需的Three.js版本和原reference generator. 不调用模型, 参考生成器从不上传.
-- dev一次开发求解; evolve最多8次模型工具调用, 原门控可拒绝或无建议结束.
-- 有候选才执行candidate. 原门控通过、开发分数不降、实际skill版本读取通过, 才执行test.
-- test在新任务上三组各1次. 最多5次Profy求解, 每次15分钟/48工具/24模型回合. 不自动全量.
-- 每个attempt目录的started.json防止重复付费; events.jsonl、usage.json、原生deliverables.zip、实际输出和原评分receipt留在仓库外的结果目录. 文件下载后核对原生ZIP和逐文件SHA256, 不在本地补写答案.
+收到的代码中还没找到论文所说的capability-gap classifier, 也没找到自动检查经验适用条件的实现. 适配器没有接入native acceptance / promotion. 这三项会出现在检查结果中, 不用新prompt或本地pending冒充. 详见[方法对照审查](METHOD_FIDELITY_AUDIT.md), 其中旧行号和旧适配状态记录的是修复前版本.
 
-原verifier和reference generator只绑定/root路径到隔离目录. 不改评分断言、容差或预期值. 成功需要真实交付文件、原verifier通过且没有skip; 原门控分高不等于任务做对.
+## 环境和离线检查
 
-## 仓库里是什么
-
-这里只保存本助手写的适配代码、计划、测试和数字摘要. 不保存第三方skill/脚本/原verifier、公开原附件、派生skill全文、gold或keys. 这些实验依赖留在工作区和证据目录. Google Drive分享材料不提及或链接这个private repo.
-
-本地适配检查:
+需要CogniLife工作区里的SkillsBench与收到的Profy-main源码, Python 3.12、pydantic 2和PyYAML. 此机器可复用已安装的PyYAML; 换机器需要正常安装该依赖. 本地不运行大模型, 不需要GPU. 只有实际求解和生成候选时才需要Profy key与expert identifier; 不需要OpenRouter key.
 
 ```bash
 python /path/to/skillsbench_evolution_20261110/test_adapter.py
+python /path/to/skillsbench_evolution_20261110/run.py check --workspace /path/to/CogniLife --out /path/to/existing-run
 ```
 
-检查原skill读取、原门控质量回退拒绝、代码footprint、原生文件字节保留和ZIP路径边界. 这不是效果分数, 最终看实际三组原verifier结果.
+check读取dev_original、dev_candidate和evolution的已有记录, 不读取key. 输出写到结果目录的adapter_fix_checks. prepared_request_local_only.json含原context和开发轨迹, 只留本地, 不提交代码仓库.
+
+9项测试覆盖原context、历史配对、付费关闭、旧模型拦截、候选hash篡改、执行失败、原门控重放、输出字节与ZIP路径检查, 以及key脱敏. fixture只测试代码边界, 不算实验成绩.
+
+## 将来实际运行时
+
+当前所有付费phase默认关闭. 只有另行允许后才加 `--allow-paid`, 并用 `--keys-file` 填密钥文件位置. 不把key值写入命令. 每个新候选使用新结果目录; 不覆盖旧evolution或frozen.json.
+
+顺序是setup、dev、evolve、candidate、test、report. setup只准备原评分依赖, 需要Node/npm及原pytest/numpy环境; dev跑开发题; evolve最多8次Profy模型请求; candidate跑候选的开发检查; test在核验通过后才运行三组. 当前这对题的验证结果已被看过, 所以不据此启动新的独立验证或全量批次.
+
+原verifier和reference generator只绑定运行路径, 不改断言或容差, 不上传给模型. 输出通过原生ZIP传回并逐文件核对hash. 默认最多5次求解, 每次15分钟、48次工具调用、24个模型回合, 不自动重发.
+
+Profy plain chat endpoint的gpt-6.1-sol工具调用协议只核对了文档和收到的路由源码, 本轮没有在线试调用. 不能把离线组装成功说成线上已跑通或新候选已变好.
+
+## 保存边界
+
+代码仓库只保存本助手写的适配代码、说明、测试和数字摘要. 不保存第三方source、skills、派生skill全文、原附件、gold、模型原始请求或keys. Google Drive分享材料不提及或链接private repo.

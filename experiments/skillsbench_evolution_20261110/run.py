@@ -1,6 +1,7 @@
 """Small public-task experiment. Only transport/glue; no new learning prompt or grader."""
 import argparse
 import ast
+import asyncio
 import concurrent.futures
 import hashlib
 import importlib.util
@@ -10,6 +11,7 @@ import shutil
 import subprocess
 import sys
 import threading
+import tempfile
 import time
 import urllib.parse
 import urllib.request
@@ -17,7 +19,8 @@ import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
 
-from native_evolution import evolve
+from native_evolution import evolve, prepare_evolution, require_paid, original_components
+from candidate_check import check_candidate
 
 DEV = 'threejs-to-obj'
 TEST = 'threejs-structure-parser'
@@ -40,6 +43,25 @@ def load_own_transport(workspace):
     spec = importlib.util.spec_from_file_location('previous_own_transport', p)
     module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
     return module
+
+
+class ProfyTransport:
+    def __init__(self, previous, keys_file):
+        secret = Path(keys_file).read_text()
+        self.key = next(k for k in re.findall(r'\bsk-[A-Za-z0-9._-]+', secret) if k.startswith('sk-pro-'))
+        self.expert_id = re.search(r'expert identifier\s*:\s*([A-Za-z0-9_-]+)', secret, re.I)[1]
+        self.api = previous.Pilot.api.__get__(self)
+        self.upload = previous.Pilot.upload.__get__(self)
+
+    def scrub(self, value):
+        if isinstance(value, str):
+            value = re.sub(r'\bsk-(?:pro|or)-[A-Za-z0-9._-]+', '[REDACTED]', value)
+            return re.sub(r'https://[^\s<>"\']+\?[^\s<>"\']+', '[SIGNED_URL_REDACTED]', value)
+        if isinstance(value, list):
+            return [self.scrub(v) for v in value]
+        if isinstance(value, dict):
+            return {k: self.scrub(v) for k, v in value.items()}
+        return value
 
 
 def unpack_output(raw, folder):
@@ -66,9 +88,17 @@ class Study:
         self.bench = self.workspace/'04_项目数据与代码/skillsbench/tasks'
         old = load_own_transport(self.workspace)
         self.strings = old.strings
-        self.transport = old.Pilot(argparse.Namespace(workspace=str(self.workspace), out=str(self.out), dev_inputs=str(self.bench/DEV/'environment'), keys_file=args.keys_file))
+        self.args, self.old = args, old
+        self._transport = None
         self.target = self.bench/DEV/'environment/skills/threejs/SKILL.md'
         assert self.target.read_bytes() == (self.bench/TEST/'environment/skills/threejs/SKILL.md').read_bytes()
+
+    @property
+    def transport(self):
+        require_paid(self.args.allow_paid)
+        if self._transport is None:
+            self._transport = ProfyTransport(self.old, self.args.keys_file)
+        return self._transport
 
     def setup_grader(self, task):
         dest = self.out/'grader_environment'/task
@@ -118,6 +148,7 @@ class Study:
         return result
 
     def solve(self, label, task, candidate=None, no_skills=False):
+        require_paid(self.args.allow_paid)
         f = self.out/label; f.mkdir(exist_ok=True)
         assert not (f/'started.json').exists(), 'Do not duplicate a paid attempt'
         assert len(list(self.out.glob('*/started.json'))) < 5, 'Paid solve cap'
@@ -213,30 +244,84 @@ After writing the original requested outputs under output/, package only those a
         print('DONE', label, json.dumps({'score': result['score'], 'elapsed_sec': result['elapsed_sec'], 'skill_read_verified': result['target_skill_read_verified']}), flush=True)
         return result
 
-    def evolve(self):
+    def development_evidence(self):
         f = self.out/'dev_original'; result = json.loads((f/'result.json').read_text())
         assert result['completed'] and result['output_received'] and result['target_skill_read_verified'] and not result['external_skill_tools_observed'], 'Development execution invalid'
         events = [json.loads(line) for line in (f/'events.jsonl').read_text().splitlines()]
-        trajectory = {'task': DEV, 'public_instruction': (self.bench/DEV/'task.md').read_text().split('---', 2)[2].strip(), 'events': [e for e in events if e.get('type') in ['tool_call.in_progress', 'tool_call.result']], 'output_manifest': result['file_hashes']}
+        assert result['task'] == DEV and result['error'] is None
+        trajectory = {'request': json.loads((f/'request.json').read_text()), 'events': events}
         metrics = {**result['tokens'], 'strict': result['score']['strict']}
-        return evolve(self.workspace, self.target, self.out/'evolution', trajectory, metrics, self.transport.router_key, self.transport.scrub)
+        return trajectory, metrics
+
+    def evolve(self):
+        require_paid(self.args.allow_paid)
+        trajectory, metrics = self.development_evidence()
+        return evolve(self.workspace, self.target, self.out/'evolution', trajectory, metrics, self.transport.key, self.transport.scrub, allow_paid=self.args.allow_paid)
+
+    def offline_check(self):
+        trajectory, metrics = self.development_evidence()
+        checks = self.out/'adapter_fix_checks'
+        checks.mkdir(exist_ok=True)
+        request, provenance, _ = prepare_evolution(self.workspace, self.target, checks, trajectory, metrics)
+        save(checks/'prepared_request_local_only.json', request)
+        save(checks/'prepared_provenance.json', provenance)
+        candidate = check_candidate(self.out, self.target)
+        save(checks/'candidate_check.json', candidate)
+        replay = replay_original_gate(self.workspace, self.target, self.out/'evolution/pending.json')
+        receipt = {'model_requests': 0, 'benchmark_runs': 0, 'credentials_read': False,
+                   'evolution_model': request['model'], 'prepared_message_count': len(request['messages']),
+                   'prepared_tool_result_count': sum(m['role'] == 'tool' for m in request['messages']),
+                   'prepared_skill_names': list(original_skills(request)),
+                   'candidate_check': candidate, 'provenance': provenance, 'frozen_payload_gate_replay': replay}
+        save(checks/'offline_summary.json', receipt)
+        print(json.dumps(receipt, ensure_ascii=False, indent=2))
+
+
+def original_skills(request):
+    return re.findall(r'<skill name="([^"]+)"', request['messages'][0]['content'])
+
+
+def replay_original_gate(workspace, target, pending_path):
+    """Recheck old payload with original code, not a new model-generated candidate."""
+    row = json.loads(Path(pending_path).read_text())['suggestion_content']
+    with tempfile.TemporaryDirectory() as tmp:
+        gate, _, config, store, *_ = original_components(workspace, target, tmp)
+        asyncio.run(gate['evolution_log'](
+            action='suggest_skill_improvement', skill_name=row['skill_name'],
+            summary=row['summary'], diff_summary=row['diff_summary'], improved_content=row['improved_content'],
+            before_scores=row['rubric_scores']['before'], after_scores=row['rubric_scores']['after'],
+            improved_dimensions=row['improved_dimensions'], config=config))
+        return {'original_gate_admitted': bool(store.rows),
+                'suggestion_content_unchanged': bool(store.rows) and store.rows[0]['suggestion_content'] == row,
+                'meaning': 'deterministic replay of frozen self-scores; no semantic or performance validation'}
 
 
 def main():
-    p = argparse.ArgumentParser(); p.add_argument('phase', choices=['setup', 'dev', 'evolve', 'candidate', 'test', 'report'])
-    p.add_argument('--workspace', required=True); p.add_argument('--out', required=True); p.add_argument('--keys-file', required=True)
+    p = argparse.ArgumentParser(); p.add_argument('phase', choices=['setup', 'dev', 'evolve', 'candidate', 'test', 'report', 'check'])
+    p.add_argument('--workspace', required=True); p.add_argument('--out', required=True); p.add_argument('--keys-file')
+    p.add_argument('--allow-paid', action='store_true', help='Explicitly enable model calls; leave off for offline work')
     args = p.parse_args(); study = Study(args)
+    if args.phase in ['dev', 'evolve', 'candidate', 'test']:
+        require_paid(args.allow_paid)
+        if not args.keys_file:
+            p.error('Paid phases require --keys-file')
     if args.phase == 'setup':
         for t in [DEV, TEST]: study.setup_grader(t)
         print('SCORING_ENV_READY', flush=True)
+    elif args.phase == 'check': study.offline_check()
     elif args.phase == 'dev': study.solve('dev_original', DEV)
     elif args.phase == 'evolve': study.evolve()
     elif args.phase == 'candidate': study.solve('dev_candidate', DEV, (study.out/'evolution/candidate_SKILL.md').read_text())
     elif args.phase == 'test':
+        if (study.out/'frozen.json').exists():
+            raise RuntimeError('Frozen candidate already exists; preserve the old experiment')
+        eligibility = check_candidate(study.out, study.target)
+        save(study.out/'candidate_check.json', eligibility)
+        if not eligibility['structural_and_dev_pass']:
+            raise RuntimeError('Candidate check failed: '+', '.join(eligibility['failed_checks']))
         original = json.loads((study.out/'dev_original/result.json').read_text()); candidate = json.loads((study.out/'dev_candidate/result.json').read_text())
-        assert candidate['score']['strict'] >= original['score']['strict'] and candidate['target_skill_read_verified'] and candidate['output_received'] and not candidate['external_skill_tools_observed'], 'Candidate comparison not eligible'
         frozen = (study.out/'evolution/candidate_SKILL.md').read_text()
-        save(study.out/'frozen.json', {'before_sha256': sha(study.target.read_bytes()), 'after_sha256': sha(frozen.encode()), 'development_before': original['score'], 'development_after': candidate['score'], 'native_promotion_called': False})
+        save(study.out/'frozen.json', {'before_sha256': sha(study.target.read_bytes()), 'after_sha256': sha(frozen.encode()), 'development_before': original['score'], 'development_after': candidate['score'], 'native_promotion_called': False, 'semantic_applicability_verified': False, 'claim_scope': 'external skill-refinement adapter, not verified full paper method'})
         labels = ['no-skills', 'with-skills', 'with-CogniLife-skills']
         with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
             futures = [pool.submit(study.solve, label, TEST, frozen if label == 'with-CogniLife-skills' else None, label == 'no-skills') for label in labels]

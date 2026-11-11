@@ -1,0 +1,166 @@
+{
+  "model_requests": 0,
+  "benchmark_runs": 0,
+  "credentials_read": false,
+  "evolution_model": "gpt-6.1-sol",
+  "prepared_message_count": 21,
+  "prepared_tool_result_count": 9,
+  "prepared_skill_names": [
+    "builtin/evolution",
+    "expert/obj-exporter",
+    "expert/threejs"
+  ],
+  "candidate_check": {
+    "kind": "offline structural and DEV evidence check, not semantic verification",
+    "checks": {
+      "evolution/provenance.json exists": false,
+      "configured_evolver_model": false,
+      "configured_evolver_endpoint": false,
+      "original_gate_admitted": true,
+      "parent_version_matches": false,
+      "recorded_request_model": false,
+      "first_request_matches_provenance": false,
+      "candidate_matches_pending": true,
+      "preselected_target_only": true,
+      "candidate_body_size": true,
+      "candidate_frontmatter": true,
+      "dev_original execution": true,
+      "dev_original skill read": true,
+      "dev_original scoring complete": true,
+      "dev_original strict consistent": true,
+      "dev_candidate execution": true,
+      "dev_candidate skill read": true,
+      "dev_candidate scoring complete": true,
+      "dev_candidate strict consistent": true,
+      "development_quality_nondegrading": true
+    },
+    "structural_and_dev_pass": false,
+    "failed_checks": [
+      "evolution/provenance.json exists",
+      "configured_evolver_model",
+      "configured_evolver_endpoint",
+      "parent_version_matches",
+      "recorded_request_model",
+      "first_request_matches_provenance"
+    ],
+    "measured_development": {
+      "total_tokens": {
+        "before": 152865,
+        "after": 162213,
+        "delta": 9348
+      },
+      "tool_calls": {
+        "before": 9,
+        "after": 11,
+        "delta": 2
+      },
+      "llm_turns": {
+        "before": 8,
+        "after": 9,
+        "delta": 1
+      }
+    },
+    "measured_efficiency_is_original_gate": false,
+    "semantic_applicability_verified": false,
+    "native_promoted": false,
+    "full_paper_method_verified": false,
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    },
+    "candidate_sha256": "c166463db05619ec61b5d74556fa94d7efdc00ab5094060d51ed33515ca3a946",
+    "parent_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663"
+  },
+  "provenance": {
+    "model": "gpt-6.1-sol",
+    "endpoint": "https://api.profy.cn/v1/chat/completions",
+    "parent_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+    "request_sha256": "412093a7bbb7e7b93fadfe7345544f5b0a9d77ccfdb57a8e4bda3a6fa69c19aa",
+    "context": {
+      "layers": {
+        "security_fence": "b1be525cae8074fd",
+        "expert_guard": null,
+        "identity": "4db4cfd8aa5e0083",
+        "soul": "35832c95333baf33",
+        "tool_calling": "ad5e84e31096b04a",
+        "workflow": "95e3aa1c069c6b4e",
+        "sandbox_environment": null,
+        "desktop_environment": null,
+        "plugin_registry": "ecd88868949390df",
+        "skill_registry": "748678a25907d02f",
+        "subagents_registry": null,
+        "plan_mode": null,
+        "working_directory": null,
+        "workspace_instructions": null,
+        "expert_agent": null
+      },
+      "token_estimates": {
+        "security_fence": 923,
+        "identity": 1163,
+        "soul": 496,
+        "tool_calling": 12147,
+        "workflow": 3644,
+        "plugin_registry": 639,
+        "skill_registry": 182
+      },
+      "token_counting": "original heuristic fallback; not billed tokens"
+    },
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    },
+    "history_adapter": "public DEV SSE roles and complete tool-call/result pairs; not native DB replay"
+  },
+  "frozen_payload_gate_replay": {
+    "original_gate_admitted": true,
+    "suggestion_content_unchanged": true,
+    "meaning": "deterministic replay of frozen self-scores; no semantic or performance validation"
+  },
+  "offline_guard_observations": {
+    "urllib_calls": 0,
+    "socket_calls": 0,
+    "subprocess_calls": 0,
+    "credentials_file_reads": 0
+  },
+  "protected_original_files": {
+    "checked": 787,
+    "changed": []
+  },
+  "previous_audit_original_artifacts": {
+    "checked": 24,
+    "unchanged": true
+  },
+  "unit_tests_passed": 9,
+  "unit_tests_failed": 0,
+  "status": "adapter fixed offline; new candidate not generated or evaluated",
+  "received_original_source_checks": [
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/prompts/EVOLUTION.md",
+      "same_as_executed_source": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/skills/evolution/SKILL.md",
+      "same_as_executed_source": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/tools/evolution_log.py",
+      "same_as_executed_source": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/skill/tools/skill.py",
+      "same_as_executed_source": true
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/api/agent.py",
+      "same_as_executed_source": true
+    }
+  ],
+  "code_sha256": {
+    "native_evolution.py": "2c649bd522addca3dc9b45545afadc09b7dbe21330b44a6bdef45730cbcd2ed6",
+    "candidate_check.py": "72433bc15617a23429a4dcfb634764b712e900813a87fd8e90ff2db2f182e3f9",
+    "run.py": "e53d8e6bf9dad42ee012910865c792e6c781462e5a3b08e165985be1a6881a50",
+    "test_adapter.py": "e814de27e6d09573f10d13e6aee18620f577c633b2e0a66512a63197af592c3b"
+  }
+}
