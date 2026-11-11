@@ -1,0 +1,46 @@
+{
+  "rounds": [],
+  "model": "gpt-6.1-sol",
+  "evolution_provider": "OpenRouter owner key",
+  "solver_provider": "Profy owner key",
+  "paper_changed": false,
+  "baseline": {
+    "label": "dev-original",
+    "task": "grid-dispatch-operator",
+    "completed": true,
+    "error": null,
+    "elapsed_sec": 332.942,
+    "output_received": true,
+    "native_zip_sha256": "0bbf77d6bd415763cbb3872569c86fb2070ed350d1bcd4f7fce78be50e5d9855",
+    "file_hashes": {
+      "output/report.json": "4247d2962bf0a80fb54528f0eae90591c6440bc3978b9782f0f6198025c58dd5"
+    },
+    "skill_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+    "target_skill_read_verified": true,
+    "external_skill_tools_observed": [],
+    "supplied_benchmark_skills": true,
+    "tokens": {
+      "input_tokens": 302330,
+      "output_tokens": 4278,
+      "total_tokens": 306608,
+      "cache_read_tokens": 261765,
+      "cache_write_tokens": 40535,
+      "llm_turns": 10,
+      "tool_calls": 13
+    },
+    "profy_cost_usd": null,
+    "score": {
+      "tests": 6,
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "strict": 1,
+      "original_returncode": 0,
+      "source_sha256": "efe68ec3340394872251179295c9f3e426d3aed26008f0864b0bb381b41942fd",
+      "original_test_script_sha256": "e5e6feff7539e874cd070669556b03bd96d88ff91755973262dfec6cae9c6c05",
+      "verifier_unmodified": true,
+      "grader_image": "cognilife-sb-grid-grader-20261111",
+      "oracle_environment_check": false
+    }
+  }
+}

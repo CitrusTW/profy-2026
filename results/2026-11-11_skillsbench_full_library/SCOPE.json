@@ -50,7 +50,7 @@
     "Per-round checkpoints in private repository, no third-party code or skill full text",
     "No paper/OpenReview changes"
   ],
-  "status": "paid_calls_disabled_by_latest_user_instruction; offline preparation only",
+  "status": "resumed_with_existing_API_keys",
   "next_group": {
     "tasks": [
       "grid-dispatch-operator",
@@ -70,6 +70,6 @@
     "license_basis": "SkillsBench root Apache-2.0; no per-skill license override found in these skill folders",
     "status": "original_oracle_environment_check_passed; all paid solver/evolution calls disabled"
   },
-  "paid_calls_allowed": false,
+  "paid_calls_allowed": true,
   "offline_checks_passed": 27
 }

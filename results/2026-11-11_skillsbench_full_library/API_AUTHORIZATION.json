@@ -1,0 +1,9 @@
+{
+  "existing_keys_authorized": true,
+  "evolution": "OpenRouter openai/gpt-6.1-sol",
+  "solver": "Profy gpt-6.1-sol",
+  "max_round_id": 30,
+  "new_purchases_allowed": false,
+  "paper_edits_allowed": false,
+  "reason": "User clarified existing API spending is authorized; do not stop for confirmation."
+}

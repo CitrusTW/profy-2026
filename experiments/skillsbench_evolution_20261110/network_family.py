@@ -1,5 +1,6 @@
 """Reuse Profy transport and received Evolution; original Docker verifier stays private."""
 import argparse
+import concurrent.futures
 import hashlib
 import json
 import shutil
@@ -77,6 +78,19 @@ def run(args):
     if not (root/'ENVIRONMENT_READY.json').exists():raise ValueError('Original scoring environment must pass first')
     if args.phase=='baseline':
         row=study.solve('dev-original',DEV);save(root/'BASELINE.json',row);return
+    if args.phase=='evaluate':
+        records=[p for p in sorted(root.glob('round-*/ROUND.json')) if json.loads(p.read_text())['status']=='small_scope_success_confirmed']
+        if not records:raise ValueError('Confirmed development success required before evaluation')
+        selected=records[-1];candidate=(selected.parent/'evolution/candidate_SKILL.md').read_text()
+        frozen=root/'frozen-evaluation'
+        if frozen.exists():raise ValueError('Never overwrite evaluation')
+        frozen.mkdir();save(frozen/'FROZEN.json',{'selected_round':json.loads(selected.read_text())['round'],'skill_sha256':sha(candidate.encode()),'development':DEV,'evaluation':TEST})
+        fresh=NetworkStudy(argparse.Namespace(**{**vars(args),'out':str(frozen)}))
+        labels=['no-skills','with-skills','with-CogniLife-skills']
+        with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
+            futures=[pool.submit(fresh.solve,label,TEST,candidate if label==labels[2] else None,label==labels[0]) for label in labels]
+            rows=[f.result() for f in futures]
+        save(frozen/'RESULTS.json',{'rows':rows,'paper_changed':False});return
     if args.phase!='round':raise ValueError('Unsupported phase')
     if not 6<=args.round<=30:raise ValueError('Combined round IDs capped at 30, including the five threejs rounds')
     folder=root/f'round-{args.round:02d}'
@@ -112,7 +126,7 @@ def run(args):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('phase',choices=['preflight','baseline','round'])
+    p=argparse.ArgumentParser();p.add_argument('phase',choices=['preflight','baseline','round','evaluate'])
     p.add_argument('--workspace',required=True);p.add_argument('--out',required=True)
     p.add_argument('--keys-file');p.add_argument('--allow-paid',action='store_true');p.add_argument('--round',type=int)
     run(p.parse_args())
