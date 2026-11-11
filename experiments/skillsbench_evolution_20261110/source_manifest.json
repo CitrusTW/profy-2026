@@ -1,0 +1,198 @@
+{
+  "date": "2026-11-10",
+  "timezone": "America/Los_Angeles",
+  "kind": "external adaptation of received skill-refinement core",
+  "source_url": "https://www.skillsbench.ai/",
+  "benchmark_repository": "benchflow-ai/skillsbench",
+  "benchmark_commit": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "tasks": [
+    {
+      "task_id": "threejs-to-obj",
+      "task": {
+        "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/task.md",
+        "sha256": "7fd36dcddabb1509f4c6ad2d9aa51a5e124c9ad617f06a2ffafc24c7283ae9b7",
+        "bytes": 1306
+      },
+      "input": {
+        "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/data/object.js",
+        "sha256": "ab0685be0319d853d001af87c3f4d7cc9fde7f384bb46d2364582d4fc771c182",
+        "bytes": 5647
+      },
+      "input_allowlist": [
+        "data/object.js"
+      ],
+      "skill_files": [
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/obj-exporter/SKILL.md",
+          "sha256": "e6681249baeab46443a2ddd1ef7983099dced6851b18dba3572b3967e5548056",
+          "bytes": 2055
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/threejs/SKILL.md",
+          "sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+          "bytes": 3268
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/threejs/references/joint-type-heuristics.md",
+          "sha256": "459af44b906bb2bf61a940e88b83b1cf7afe3ddb17c17d355577f987c6a6214b",
+          "bytes": 1083
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/threejs/references/link-export-rules.md",
+          "sha256": "7c664561c879a7be8d799665f781ba8497abcdbf34ec6c369121fd57d699b835",
+          "bytes": 680
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/threejs/references/urdf-minimal.md",
+          "sha256": "204b4ae283774fe2a8181a605aa9f0d79355f6c8bf4b060c53891a2136750aee",
+          "bytes": 677
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/threejs/scripts/build_urdf_from_scene.mjs",
+          "sha256": "db916f0930dd39a8e4a17ee2ddb4b166bdc41df57baacc46123fa65a052fe284",
+          "bytes": 3915
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/threejs/scripts/export_instanced_obj.mjs",
+          "sha256": "b2d33217a6d67ecfc877bfe2d696d681409723f6ed5b5be1e12b75922a90de82",
+          "bytes": 1758
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/environment/skills/threejs/scripts/export_link_objs.mjs",
+          "sha256": "95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494",
+          "bytes": 2861
+        }
+      ],
+      "verifier": {
+        "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/verifier/test_outputs.py",
+        "sha256": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+        "bytes": 3235
+      },
+      "reference_generator": {
+        "path": "04_项目数据与代码/skillsbench/tasks/threejs-to-obj/verifier/gen_ground_truth.mjs",
+        "sha256": "210b32a6b77aa02b5bba4ec008be836f5c96bf3daa2511e9a42a1f069d2efecd",
+        "bytes": 2053
+      },
+      "gold_sent_to_models": false
+    },
+    {
+      "task_id": "threejs-structure-parser",
+      "task": {
+        "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/task.md",
+        "sha256": "ecd5bb26740662db050464fd6b4553d65e8d5c6c3d0b048215bbe6d042680145",
+        "bytes": 1848
+      },
+      "input": {
+        "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/data/object.js",
+        "sha256": "2de9dacd93a02e43c0699a03a1ee2b75ce0366d418c095e9be49b964ead7c3f4",
+        "bytes": 10439
+      },
+      "input_allowlist": [
+        "data/object.js"
+      ],
+      "skill_files": [
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/obj-exporter/SKILL.md",
+          "sha256": "92f851fcd69db38dc72e85f789f06557fc3e82c59d33d580fb977a72f8e587aa",
+          "bytes": 4576
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/threejs/SKILL.md",
+          "sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+          "bytes": 3268
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/threejs/references/joint-type-heuristics.md",
+          "sha256": "459af44b906bb2bf61a940e88b83b1cf7afe3ddb17c17d355577f987c6a6214b",
+          "bytes": 1083
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/threejs/references/link-export-rules.md",
+          "sha256": "7c664561c879a7be8d799665f781ba8497abcdbf34ec6c369121fd57d699b835",
+          "bytes": 680
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/threejs/references/urdf-minimal.md",
+          "sha256": "204b4ae283774fe2a8181a605aa9f0d79355f6c8bf4b060c53891a2136750aee",
+          "bytes": 677
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/threejs/scripts/build_urdf_from_scene.mjs",
+          "sha256": "db916f0930dd39a8e4a17ee2ddb4b166bdc41df57baacc46123fa65a052fe284",
+          "bytes": 3915
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/threejs/scripts/export_instanced_obj.mjs",
+          "sha256": "b2d33217a6d67ecfc877bfe2d696d681409723f6ed5b5be1e12b75922a90de82",
+          "bytes": 1758
+        },
+        {
+          "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/environment/skills/threejs/scripts/export_link_objs.mjs",
+          "sha256": "95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494",
+          "bytes": 2861
+        }
+      ],
+      "verifier": {
+        "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/verifier/test_outputs.py",
+        "sha256": "9fcbb9bd95cb3e9d65569874f795270bdd243421e333507c6a2be8e0f776d194",
+        "bytes": 4606
+      },
+      "reference_generator": {
+        "path": "04_项目数据与代码/skillsbench/tasks/threejs-structure-parser/verifier/gen_ground_truth.mjs",
+        "sha256": "d467bee99a9ce693665c8490df78753e7b05840c0437402769943b4c7e16307c",
+        "bytes": 4175
+      },
+      "gold_sent_to_models": false
+    }
+  ],
+  "received_evolution_source": [
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/prompts/EVOLUTION.md",
+      "sha256": "44a34f22f816eba1a3367287d5f9093309ccd2ca49c35e188584909282fb3b97",
+      "bytes": 2525
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/skills/evolution/SKILL.md",
+      "sha256": "cf97259519637de06506baa87a070245f1fce03dddf3d7afdb70ec1aef9f682c",
+      "bytes": 5426
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/evolution/tools/evolution_log.py",
+      "sha256": "45271cadd44dc83f08e0ab76e0f055e4dab8713eed9e21de1149943a52bb075f",
+      "bytes": 14642
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/plugins/builtin/skill/tools/skill.py",
+      "sha256": "bfde4dc3b87f751c922fbf75a97ee699c6cb7b0527c3e440cc13967de4db8263",
+      "bytes": 53913
+    },
+    {
+      "path": "04_项目数据与代码/Profy-main/services/agent-runtime/src/api/agent.py",
+      "sha256": "840613051a2e684e2399fcd2701da272d7e670963759c20fe0b35d7ea25aaf38",
+      "bytes": 20660
+    }
+  ],
+  "new_own_code": [
+    {
+      "path": "04_项目数据与代码/辅助代码/skillsbench_evolution_20261110/run.py",
+      "sha256": "72106052ad64f3f8843005e666b7b4a369df1b02c021fb39e6a888fc47bee035",
+      "bytes": 18525
+    },
+    {
+      "path": "04_项目数据与代码/辅助代码/skillsbench_evolution_20261110/native_evolution.py",
+      "sha256": "9d2a0373e73b5de5c58e06c9804a2acbf87b7c443561aa49cedfd6a2bb52bef3",
+      "bytes": 9636
+    },
+    {
+      "path": "04_项目数据与代码/辅助代码/skillsbench_evolution_20261110/test_adapter.py",
+      "sha256": "e82637ac4ad9502151b14e1d6739b7ec281cd19dabe45a2cf13375e021e6984e",
+      "bytes": 2990
+    }
+  ],
+  "scope_limits": [
+    "No native Profy evolution/promotion API invoked.",
+    "No new capability-gap classifier substituted for missing source.",
+    "No cross-expert attribution or product Memory tested.",
+    "No benchmark or expert source files committed to own repository."
+  ]
+}
