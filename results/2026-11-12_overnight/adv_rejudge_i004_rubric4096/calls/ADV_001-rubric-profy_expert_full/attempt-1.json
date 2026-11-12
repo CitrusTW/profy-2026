@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_001",
+  "condition": "profy_expert_full",
+  "output_sha256": {
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9"
+  },
+  "calculated_cost_ceiling_usd": "0.145000",
+  "job_id": "ADV_001-rubric-profy_expert_full",
+  "prompt_sha256": "8d1d053fd42d4773237fc34b126dc767fc31243c498aeeb8b7d98fe23378c1f1",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484681-CdLAxubvszrX30P8xi7c",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:58:01.241894+00:00",
+  "completed_utc": "2026-11-12T11:58:12.664394+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_001\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 陕西理科，509分，位次4万，想考公，希望留在西安，家庭条件一般，帮妹妹选学校和专业\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 正确提取省份、科类、分数、位次、目标偏好\n  - [must_have] 给出冲/稳/保分层院校建议\n  - [should_have] 结合考公目标推荐适合的专业方向\n  - [must_have] 声明数据不确定性或建议核验官方数据\n  - [should_have] 引用或使用可核验的历年录取数据\n\n## System Output:\n好的，我来帮你妹妹分析一下。关于陕西2024年高考情况和考公专业选择，我整理了以下建议。\n\n---\n\n## 2024年陕西高考参考数据\n\n- 理科一本线：475分\n- 妹妹分数：509分（超一本线34分）\n- 位次：约4万名\n\n---\n\n## 推荐策略：稳体制 × 保就业 × 低学费\n\n考虑到家庭条件一般 + 想考公 + 想留西安，核心原则是：**选个好考公的专业，进可考编上岸，退可去企业就业，学费还不贵。**\n\n### 一、专业推荐（按推荐度排序）\n\n| 推荐 | 专业 | 考公优势 | 企业就业 | 学习难度 |\n|:---:|:---|:---|:---|:---:|\n| ★★★★★ | **会计学/财务管理** | 财政局、税务局、审计局、各单位财务，岗位超多 | 企业刚需，就业面极广 | 中等 |\n| ★★★★☆ | **计算机科学与技术** | 政务数字化、大数据局、网信办 | 工资最高，就业火 | 偏难 |\n| ★★★★☆ | **经济学/经济统计学** | 发改委、统计局、税务、人行 | 银行、企业都可去 | 中等 |\n| ★★★☆☆ | **法学** | 法院、检察院、司法局、公安，是考公大户 | 考不上公则就业面窄（需过法考） | 偏难 |\n| ★★★☆☆ | **汉语言文学** | 综合岗、文秘、宣传、党建 | 就业一般 | 较易 |\n\n> **特别推荐会计学**——这是最契合家庭条件一般+考公需求的选择：公办一科学费才5000-6000元/年；考公招录人数排前三，岗位分布在财政、税务、审计、甚至公检法的财务岗；万一考不上公务员，企业对小会计的需求永远不会少，就业双保险。\n\n### 二、西安可选学校（按把握度排列）\n\n位次4万在西安能上的公办一本主要有这些：\n\n| 学校 | 预估位次区间 | 把握度 | 推荐报考专业 |\n|:---|:---:|:---:|:---|\n| **西安工程大学** | 4万-4.8万 | ★★★★★ **稳妥** | 会计学、财务管理、经济学、法学 |\n| **西安工业大学** | 3.7万-4.4万 | ★★★★☆ **可报** | 会计学、经济学、计算机 |\n| **西安财经大学** | 3.8万-4.6万 | ★★★★☆ **可报** | **会计学（这个学校财经类专业最有特色）** |\n| **西安石油大学** | 3.6万-4.3万 | ★★★☆☆ **可冲** | 会计学、计算机、经济类 |\n| **西安科技大学** | 3.5万-4万 | ★★★☆☆ **可冲** | 计算机、会计学 |\n| **陕西科技大学** | 3.4万-4万 | ★★☆☆☆ **冲一冲** | 会计学 |\n| **西安文理学院** | 4.2万-5万 | ★★★★☆ **保底** | 汉语言文学、会计学 |\n\n### 三、我的方案建议\n\n**最佳方案：西安财经大学的会计学**\n\n理由：西安财经大学的会计学是它的王牌专业，在陕西体制内认可度很高。位次4万左右刚好在录取范围内。会计学考公岗位多、企业就业也好，是最稳妥的选择。\n\n**冲刺方案：西安工业大学的计算机/会计学**\n\n如果对计算机有兴趣，西安工业大学的计算机性价比很高，以后考公（政务数字化岗）和去企业都能走。\n\n**稳妥方案：西安工程大学的会计学**\n\n工程大学录取位次更宽裕，会计学专业同样好考公，4万名进去比较稳。\n\n### 四、家庭条件相关提醒\n\n- 这些学校都是**公办一本**，学费5000-6000元/年，住宿费800-1200元/年\n- 录取时**避开中外合作办学专业**（学费2-6万/年）\n- 可以查看学校是否有**贫困生助学金**和**勤工助学**机会\n\n---\n\n**总结：** 如果是我妹妹，我会优先推荐 **西安财经大学的会计学或财务管理**，进可考公进体制（财政/税务/审计），退可去企业做财务，毕业找工作不愁。如果分数不够财大，**西安工程大学的会计学**做稳妥保底。\n\n需要我再详细说说某个学校或专业的报考细节吗？\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "b041d0ab2baec6334ebf83cf051a625ea6be83037ada8c94cf9faa4a5df9f3d1",
+  "raw_response_text": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1794484681-CdLAxubvszrX30P8xi7c\",\"object\":\"chat.completion\",\"created\":1794484681,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 3,\\n    \\\"specificity\\\": 4,\\n    \\\"actionability\\\": 3,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 1\\n  },\\n  \\\"error_tags\\\": [\\\"hallucinated_evidence\\\", \\\"overclaiming\\\"],\\n  \\\"rationale\\\": \\\"The output correctly extracts the key inputs (Shaanxi, 理科, 509分, 4万位次, 考公, 留西安, modest family budget). It gives a reach/match/safety school list and well-tailored major advice for civil-service goals, but it omits the must-have checkpoint of stating data uncertainty or advising verification against official 招生考试院 data. The school rank ranges (预估位次区间) are presented without any source and appear fabricated, and some claims overreach: it says 西安文理学院 is a public 一本 (it is mainly 二本), and it asserts that a 4万 rank is 'just within range' for 西安财经大学's flagship 会计学, which is likely too optimistic. There are also internal inconsistencies: 西安工业大学 is labeled 可报 in the table but 冲刺 in the plan, and the 'best' plan rests on an optimistic match without any caveats about 专业级差 or 服从调剂 risk.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the facts here: the 2024 Shaanxi science first-tier cutoff of 475 and the arts cutoff of 488, and that the province still uses the traditional arts-science split. I'm also testing whether a rank near 40,000 with a score of 509 is plausible.\\n\\nI'm flagging a few factual problems: 西安文理学院 is a second-tier school in Shaanxi, not a first-tier one, and the position ranges given have no source or uncertainty caveat. I'm also noticing contradictions in how the schools are labeled between the rush and safe lists, and that 会计学 at 西安财经 probably sits above a rank of 40,000.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the facts here: the 2024 Shaanxi science first-tier cutoff of 475 and the arts cutoff of 488, and that the province still uses the traditional arts-science split. I'm also testing whether a rank near 40,000 with a score of 509 is plausible.\\n\\nI'm flagging a few factual problems: 西安文理学院 is a second-tier school in Shaanxi, not a first-tier one, and the position ranges given have no source or uncertainty caveat. I'm also noticing contradictions in how the schools are labeled between the rush and safe lists, and that 会计学 at 西安财经 probably sits above a rank of 40,000.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2397,\"completion_tokens\":1012,\"total_tokens\":3409,\"cost\":0.029828,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.029828,\"upstream_inference_prompt_cost\":0.009588,\"upstream_inference_completions_cost\":0.02024},\"completion_tokens_details\":{\"reasoning_tokens\":562,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 3,
+      "specificity": 4,
+      "actionability": 3,
+      "coherence": 3,
+      "safety_boundary": 2,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 1
+    },
+    "error_tags": [
+      "hallucinated_evidence",
+      "overclaiming"
+    ],
+    "rationale": "The output correctly extracts the key inputs (Shaanxi, 理科, 509分, 4万位次, 考公, 留西安, modest family budget). It gives a reach/match/safety school list and well-tailored major advice for civil-service goals, but it omits the must-have checkpoint of stating data uncertainty or advising verification against official 招生考试院 data. The school rank ranges (预估位次区间) are presented without any source and appear fabricated, and some claims overreach: it says 西安文理学院 is a public 一本 (it is mainly 二本), and it asserts that a 4万 rank is 'just within range' for 西安财经大学's flagship 会计学, which is likely too optimistic. There are also internal inconsistencies: 西安工业大学 is labeled 可报 in the table but 冲刺 in the plan, and the 'best' plan rests on an optimistic match without any caveats about 专业级差 or 服从调剂 risk."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 2397,
+    "completion_tokens": 1012,
+    "total_tokens": 3409,
+    "cost": 0.029828,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.029828,
+      "upstream_inference_prompt_cost": 0.009588,
+      "upstream_inference_completions_cost": 0.02024
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 562,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.029828,
+  "elapsed_sec": 11.422546148300171,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

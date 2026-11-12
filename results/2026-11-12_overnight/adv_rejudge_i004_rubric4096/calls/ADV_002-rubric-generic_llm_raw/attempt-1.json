@@ -1,0 +1,79 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_002",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "1b3beab78cef1f15fab83da41b69a3803389dfe0fc2c485d959b610b30c41c96"
+  },
+  "calculated_cost_ceiling_usd": "0.121648",
+  "job_id": "ADV_002-rubric-generic_llm_raw",
+  "prompt_sha256": "a2d50125b2268ce23a442317251495691bb246bcb994ffc3065e4dc8cafc3ba1",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484692-zCVG5X9Bifrv7FZY9NdT",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:58:12.667014+00:00",
+  "completed_utc": "2026-11-12T11:58:20.179810+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_002\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 河北物理类，568分，位次32000，想学计算机相关专业，不想去偏远地区，可以接受民办但优先公办\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 正确识别新高考物理类选科\n  - [must_have] 推荐院校包含冲稳保层次\n  - [should_have] 计算机相关专业方向分析\n  - [should_have] 区分公办与民办并标注\n  - [must_have] 提示风险和不确定性\n\n## System Output:\n根据您的分数和位次，以及对学校性质和地域的要求，以下是一些建议供您参考：\n\n1. 河北工业大学：作为河北省内的重点工科院校，计算机专业实力较强。学校位于天津，地理位置较好。\n\n2. 河北师范大学：计算机专业水平尚可。学校位于石家庄，是河北省会，地理位置比较便利。\n\n3. 河北科技大学：计算机专业还可以。学校位于石家庄，地理位置比较便利。\n\n4. 北华航天工业学院：计算机专业实力较强。学校位于廊坊，地理位置较好。\n\n5. 河北工程大学：计算机专业还可以。学校位于邯郸，地理位置一般。\n\n以上学校均为公办院校。您还可以考虑一些民办院校，如河北科技学院等。\n\n建议您在填报志愿时，综合考虑学校的地理位置，专业实力，以及您的个人兴趣等因素。同时，也可以咨询一下学校和专业的老师，了解更多信息，以便做出最适合自己的选择。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "106f6ebe2f36ef4de8dd9bca27ee26f2a89fa83035790d698bfe02aeea562cdd",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794484692-zCVG5X9Bifrv7FZY9NdT\",\"object\":\"chat.completion\",\"created\":1794484692,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 1\\n  },\\n  \\\"error_tags\\\": [\\\"overclaiming\\\", \\\"weak_personalization\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output lists five schools with no reach/match/safety (冲稳保) tiers and never uses the 32000 rank or the physics-track context. It also presents 河北工业大学 (a 211 university whose computer programs typically need a much higher Hebei rank) as an ordinary recommendation with no 'reach' warning. Program-strength claims are vague and unsupported by admission scores or rank data, and there is no risk or uncertainty disclosure. The public/private distinction is only briefly mentioned, and the analysis of computer-related majors is superficial.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm weighing the Hebei physics score of 568 against a rank of 32000. 河北工业大学 is a 211 school in Tianjin that would likely need a rank around 10,000 to 15,000 in Hebei for computer science, so it's probably out of reach and shouldn't be listed without a 冲 label. The other schools I have in mind, like 河北师范大学, 河北科技大学, 北华航天, 河北工程, and 河北科技学院 in Baoding, look more plausible.\\n\\nI'm going through the rest of my assessment now: the scores come out low on completeness, specificity, and actionability, and the plan isn't reflected in the analysis. I'm flagging overclaiming on the 河北工业大学 realism, weak personalization since the rank isn't used, and an incomplete artifact missing the tiers.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm weighing the Hebei physics score of 568 against a rank of 32000. 河北工业大学 is a 211 school in Tianjin that would likely need a rank around 10,000 to 15,000 in Hebei for computer science, so it's probably out of reach and shouldn't be listed without a 冲 label. The other schools I have in mind, like 河北师范大学, 河北科技大学, 北华航天, 河北工程, and 河北科技学院 in Baoding, look more plausible.\\n\\nI'm going through the rest of my assessment now: the scores come out low on completeness, specificity, and actionability, and the plan isn't reflected in the analysis. I'm flagging overclaiming on the 河北工业大学 realism, weak personalization since the rank isn't used, and an incomplete artifact missing the tiers.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1131,\"completion_tokens\":703,\"total_tokens\":1834,\"cost\":0.018584,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.018584,\"upstream_inference_prompt_cost\":0.004524,\"upstream_inference_completions_cost\":0.01406},\"completion_tokens_details\":{\"reasoning_tokens\":379,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 3,
+      "safety_boundary": 2,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 1
+    },
+    "error_tags": [
+      "overclaiming",
+      "weak_personalization",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output lists five schools with no reach/match/safety (冲稳保) tiers and never uses the 32000 rank or the physics-track context. It also presents 河北工业大学 (a 211 university whose computer programs typically need a much higher Hebei rank) as an ordinary recommendation with no 'reach' warning. Program-strength claims are vague and unsupported by admission scores or rank data, and there is no risk or uncertainty disclosure. The public/private distinction is only briefly mentioned, and the analysis of computer-related majors is superficial."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1131,
+    "completion_tokens": 703,
+    "total_tokens": 1834,
+    "cost": 0.018584,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018584,
+      "upstream_inference_prompt_cost": 0.004524,
+      "upstream_inference_completions_cost": 0.01406
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 379,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.018584,
+  "elapsed_sec": 7.512831211090088,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

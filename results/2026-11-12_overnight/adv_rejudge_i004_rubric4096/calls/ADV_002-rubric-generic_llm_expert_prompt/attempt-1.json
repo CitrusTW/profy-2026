@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_002",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "4c1da2cdf7ece5fd5bbab0c674efa3ed79a301ccc2f412f7ec9ac10cf8eb5e01"
+  },
+  "calculated_cost_ceiling_usd": "0.134976",
+  "job_id": "ADV_002-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "90efa88f1c334cec90cd4c196bac61a490efa6970fffb401da0e2b930d5cdc40",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484700-r2AjkKlNS2TB6O5yQwNN",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:58:20.181928+00:00",
+  "completed_utc": "2026-11-12T11:58:27.694699+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_002\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 河北物理类，568分，位次32000，想学计算机相关专业，不想去偏远地区，可以接受民办但优先公办\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 正确识别新高考物理类选科\n  - [must_have] 推荐院校包含冲稳保层次\n  - [should_have] 计算机相关专业方向分析\n  - [should_have] 区分公办与民办并标注\n  - [must_have] 提示风险和不确定性\n\n## System Output:\n您好，根据您提供的信息和要求，您在河北省物理类的高考分数是568分，位次为32000，希望学习计算机相关专业，且倾向于公办院校。以下是一些建议：\n\n### 1. 了解高校及专业信息\n- **查询历年数据**：您可以通过河北省教育考试院官网或相关高考志愿填报工具，查询历年各高校在河北省的录取分数线和位次，尤其是计算机相关专业的数据。\n- **专业选择**：计算机相关专业包括计算机科学与技术、软件工程、信息安全等，了解这些专业的具体课程设置和就业方向，选择最适合自己的专业。\n\n### 2. 公办院校优先考虑\n- **本省院校**：河北省内的重点本科院校，如河北工业大学、河北大学等，可能有计算机相关专业的招生名额，您可以关注这些学校的招生信息。\n- **外省院校**：如果本省院校录取可能性不大，可以考虑外省一些相对靠近的公办院校，如北京、天津、山东、山西等附近的省份，这些地区离河北省较近，且教育资源较为丰富。\n\n### 3. 民办院校作为备选\n- **民办院校选择**：如果公办院校的录取可能性不大，可以考虑一些民办院校，如河北科技学院、河北传媒学院等，这些院校可能对分数和位次的要求相对较低。\n\n### 4. 填报志愿策略\n- **平行志愿填报**：根据河北省的志愿填报规则，合理设置平行志愿，将您心仪的公办院校放在前面，民办院校作为备选。\n- **保底院校**：选择一些录取分数线较低的院校作为保底，以确保有学可上。\n\n### 5. 考虑未来规划\n- **就业前景**：计算机相关专业的就业前景广泛，但不同院校的教学质量和就业率可能有所不同，选择时可以关注这些因素。\n- **考研或出国**：如果您有考研或出国的打算，选择一些有合作项目或者教学质量较高的院校可能会更有利于您的未来发展。\n\n### 6. 咨询和信息获取\n- **咨询老师和学长学姐**：可以咨询您的老师或者已经上大学的学长学姐，他们可能会提供一些有价值的建议和信息。\n- **参加高校咨询会**：如果可能，参加一些高校的咨询会，直接向招生老师了解学校的招生情况和专业设置。\n\n请记住，以上建议仅供参考，实际录取结果还会受到当年高考难度、考生人数、招生政策等多种因素的影响。您需要根据最新的招生政策和高校信息，结合自己的兴趣和实际情况，做出最适合自己的选择。祝您志愿填报顺利，能够进入理想的大学学习！\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "1db6edd6104502216ead8baf32899d0fcbff46a56cbc9bff95127fd49b475c61",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794484700-r2AjkKlNS2TB6O5yQwNN\",\"object\":\"chat.completion\",\"created\":1794484700,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output restates the user's inputs and gives generic advice. It has no 冲/稳/保 tiering matched to rank 32000, only shallow CS major analysis, and an incomplete public/private comparison. Its few school suggestions are poorly grounded: 河北工业大学 likely needs a much higher rank, and 河北传媒学院 is not a strong CS choice. The closing risk disclaimer is generic boilerplate, so the user would still need to do nearly all the real analysis themselves.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the answer against the criteria: it reads as generic, the physics track is named without any real look at the new 3+1+2 gaokao, and there are no reach/match/safe tiers tied to specific schools. Public versus private gets only a passing mention, and the risk discussion is boilerplate. I also want to test the claim about 河北工业大学 at rank 32000, since it looks too low for that school's usual Hebei cutoff.\\n\\nI'm noting that naming the school without tiering it is misleading, and that 河北传媒学院 is media-focused rather than a strong pick for CS. 河北科技学院 is a private school, which is accurate. I'm also weighing whether this counts as hallucination or just an ungrounded recommendation, and I'm leaning toward the latter. The user's point about avoiding remote areas is only partly addressed by the nearby-province suggestions.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the answer against the criteria: it reads as generic, the physics track is named without any real look at the new 3+1+2 gaokao, and there are no reach/match/safe tiers tied to specific schools. Public versus private gets only a passing mention, and the risk discussion is boilerplate. I also want to test the claim about 河北工业大学 at rank 32000, since it looks too low for that school's usual Hebei cutoff.\\n\\nI'm noting that naming the school without tiering it is misleading, and that 河北传媒学院 is media-focused rather than a strong pick for CS. 河北科技学院 is a private school, which is accurate. I'm also weighing whether this counts as hallucination or just an ungrounded recommendation, and I'm leaning toward the latter. The user's point about avoiding remote areas is only partly addressed by the nearby-province suggestions.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQShw0KEAgTGAI4AUIIdGhpbmtpbmcSDHz3+yPGy4G6VxXAWxoMmvW8wjzga7h5OMi+IjAMoAAIKMWzjIgJclq6RVHzTptzpipCp64Q9ezRXO9NtfTQxshZQeiv9VnMLiGW1IQqpAxVminryq5kSvZBTNEgXV8bvMrgMRXfZSojdA3mzGP7jGFFKQ+42EYVsyBeGHXSbHaLSnM/dAp5Ah04g11WfEWgSJUz93UsuFoMoUf8Okp4LrDFBPB6sNuTsc+R36O6k5DxIZH5CafodMIdjRt83mg0lnpV92dlhM7264PsoZOWPKSvvQICZs7hhPr54VxnBJcop++3nb8baa1rutlc8eafSIkhYvzV5NNg34Dj7boCF00AhpbB6p4lyPepOfT2Ja2BhWEpGd6Stp0Xod0m8T+bGKXgmrUN6YabVKyAMPi28puRAyzA4nhirnu46n53m+nbteJM8nWHiOHYYkF1NQFMPJjjbIn9w9DpVfjBLNC3U61wL+v2bf+VxFbAHCxCf+Eo93spPt0sa9GEIsZsgM29iME6q9KObytzcHIOVZVtoGrtYezUau0KRnTWqlXIb6oMlEeOy93pm/CHjrnhje9biPDMAtScf31yBrrWQxzZUz+FRObjjWZX5RgcuMMBPESqfk4TEReCuh42KHklHlPvCwcUle6bT85jekXr8uXtB6aokrZUXWFl/485tqkQDfDASSWKhcyF7MUMt0e8UDqRNdWp+0gB6pfepAgcCRtEeesoXuFbYlS0yQ9O3aK7qDLlSKC8dp//wcBsLV+9YhzAHOTfEr3R4Inok5fTOSGg9/x0Fs6r7VmeGFxk0B3mDNWDyPqzKiYM7MxCktYA39ujokJjLxikb2v6VPZE2o3sJn7xRMlTkJGIW97nhM0xc2vl/Ushv0EDnrU5PnZ1WPJ40YDdo5PkrbFfC3Hst/Vg3tSy+QgBiEz97xv2C0/ZQGts6UKsN6tfIRsYuDdaTaPyrcXCJ9O4T8zftRY4lp/9RaPOtPMT9NEcuvd83Lmba6zE1yumnukPo2eWVczuoWzGFzRrP4FO9OVBqy9M7u7zC/oJQ7PTPT/EBS5dpMx4RLjAhoR7gVeFF2MsSNYAnf5t9fwdrrAlkKfloYDAs4iIcFVfzg0JBM8mIbEEIRDpae8xs6DYks4u/pQn+USQ9JUOZFUIXPZgEYzaU8GdRLdXALmPbfF/NQEoiDwLnjf6SgrKZTS69iApQdvH/EIxVCRnnCYXAzHUPJPrhqJwG0PdxWt3Cd2bbvZ2TDiSO6ldDNb+2kydoxQqhSMaGVlUmEA1ZSyvl99FgT8V4f1ByETwsISwrW0G3wVekVwXHdXUHwICGExDWKsjwwziicbe+OHgSkBCmzeBW+Dkf9JNN6GZplhguapmiqn/GSHgHIW7roFZGXhn29nBun4ZexwxO4omAa+AmnLFW9R95Nc2GPVsTi+nikeHNvEEK6uiKw8XCOAbRT+1kR2lpGoPp/AvHfhbCKQxe3eJx9HmzdHhoETTMJhIziS4xe0xl1pcxXzaRFshAOu+lxKU8WJRjUo0hOrFam3465uBN9s34s8ZJreAhRsIKiBOehdyJAXFrdO0ITFiDGBxdoJ5qH6Vq4Kp2KXWOXqmsoPJEMOTcKjY3H4otwJ41jLyK/QZ6QMDpF8Ler+MVEe3m1yFVzi+7Qm4+0oYxxUrJoP68fdReL2wIpUTK5HBbqu3fUvd5Y0Jd7KLE+ixkwzdXTSHKf9dR9D6d+PEhktvDQCvf7wrhZd7LLV0Sw+jDamnTAYMJ5YH+Kfx6HFc5cGTObvhMtYoHVMB0KYEob9N0i0cm4NCqBKckK+HxHPUwoPJ3HeOaeV+ynYr2RKwSd0iIVl1FcL7LCEWiBCErpVBGeRRoP4egP5TYllF+nwlRb6RzlzgBNDq+wkuSTMLY7AM2uI3CYlbtLPYBQt064XCAQrIxfM9hX/USMGCydLqiaftOohoWefKOgd1UghcVm1vMm67ZKeP15qOyNDyE8OQYddtArQmtiP9MN/0m3Y0gmySgE+57+a77Hg+E4FC4EMwWlvTQ7P1TsEezEm3j7J6iFCaRR0l6AcH1bdEAZL3jBaxAnp4GfpU/XHBwt2k7R6l+PAJleFVHjfyM9rvmqPSvnna+x0JAv+z3Xt7lATxmC7G+03npjFBlvxYtx3VbH+tmli9YZuo5gdxm5v56FLNRXUiz7vLZ/7zHuoDtRUP25YYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1727,\"completion_tokens\":707,\"total_tokens\":2434,\"cost\":0.021048,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.021048,\"upstream_inference_prompt_cost\":0.006908,\"upstream_inference_completions_cost\":0.01414},\"completion_tokens_details\":{\"reasoning_tokens\":408,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 4,
+      "safety_boundary": 3,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "weak_personalization",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output restates the user's inputs and gives generic advice. It has no 冲/稳/保 tiering matched to rank 32000, only shallow CS major analysis, and an incomplete public/private comparison. Its few school suggestions are poorly grounded: 河北工业大学 likely needs a much higher rank, and 河北传媒学院 is not a strong CS choice. The closing risk disclaimer is generic boilerplate, so the user would still need to do nearly all the real analysis themselves."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1727,
+    "completion_tokens": 707,
+    "total_tokens": 2434,
+    "cost": 0.021048,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021048,
+      "upstream_inference_prompt_cost": 0.006908,
+      "upstream_inference_completions_cost": 0.01414
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 408,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.021048,
+  "elapsed_sec": 7.512814044952393,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

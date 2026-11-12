@@ -1,0 +1,63 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_003",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "f00e770c1e3a29fcf0e98530f38ad150db45c415d0fdaf9e62c819066d2094e7"
+  },
+  "calculated_cost_ceiling_usd": "0.124480",
+  "job_id": "ADV_003-rubric-generic_llm_raw",
+  "prompt_sha256": "20159d88f6f2386513c0c26e6aea3be0a8e70d674c5bfdacb6bbd5249db5496c",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484721-ucHQEIxv0CWU9Wfd8wQB",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:58:41.491846+00:00",
+  "completed_utc": "2026-11-12T11:58:50.741434+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_003\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 广东历史类，502分，位次58000，家里希望学医或者师范，将来回老家县城工作，预算有限不考虑中外合办\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 识别历史类学医的限制并说明\n  - [must_have] 分层推荐师范类院校\n  - [should_have] 分析县城就业导向下的专业选择\n  - [should_have] 标注中外合办项目并排除\n  - [must_have] 声明录取数据时效性\n\n## System Output:\n根据您的情况，我为您分析如下：\n\n1. 分数和位次：您的成绩为502分，位次58000。这个成绩在广东省属于中等偏上水平，有一定的竞争力。\n\n2. 专业选择：您家里希望您学医或者师范专业。医学专业就业前景较好，但学习难度较大，需要长时间的学习和实践。师范专业相对容易就业，且适合回老家县城工作。\n\n3. 学校选择：根据您的分数和位次，可以考虑广东省内的一本和二本院校。例如：广东医科大学、广州中医药大学、华南师范大学等。这些学校在医学和师范专业方面都有较好的实力。\n\n4. 预算考虑：您提到预算有限，不考虑中外合办项目。那么，可以重点考虑省内的公立院校，这些学校学费相对较低，且有更多的奖学金和助学金机会。\n\n5. 就业前景：学医或者师范专业，回到县城工作，就业前景较好。医学专业可以从事医疗、卫生、防疫等工作；师范专业可以从事教育、培训等工作。\n\n综上所述，建议您可以重点考虑广东省内的医学和师范专业，选择公立院校，以满足您的分数、位次、专业和预算要求。同时，也可以根据自己的兴趣和职业规划，进一步了解相关院校和专业情况，做出更适合自己的选择。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "6ee799d6efbed061c582b318ae2684fc5c33007f0a32bc689459a0dbe10166a8",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794484721-ucHQEIxv0CWU9Wfd8wQB\",\"object\":\"chat.completion\",\"created\":1794484721,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 1,\\n    \\\"specificity\\\": 1,\\n    \\\"actionability\\\": 1,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 1,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 1\\n  },\\n  \\\"error_tags\\\": [\\\"overclaiming\\\", \\\"hallucinated_evidence\\\", \\\"weak_personalization\\\", \\\"unsafe_boundary\\\", \\\"artifact_incomplete\\\", \\\"missing_input_not_handled\\\"]\\n}\\n```\\n\\n**Rationale**\\n\\n- **Critical omission on medicine:** The output never says that most clinical medicine programs in Guangdong require physics and chemistry. That makes 历史类 candidates largely ineligible. It still recommends medicine and medical universities, which is a high-risk mistake for a family planning around 学医.\\n- **Unrealistic school list:** 华南师范大学 is typically far beyond a history-track rank of about 58,000. The recommendations are not tiered (冲/稳/保) and are not tied to any real cutoff data.\\n- **Outdated and overstated framing:** It refers to \\\"一本二本,\\\" but Guangdong has merged these batches. It also calls the score \\\"中等偏上\\\" without evidence.\\n- **Missing county-employment options:** It omits the most relevant paths for working in a home county, such as 公费师范生, 定向培养 programs, and county-oriented 专科 routes.\\n- **No data-timeliness disclaimer:** It never warns that admission cutoffs change year to year.\\n- **Weak budget handling:** It notes the user wants to avoid 中外合办 programs, but never identifies or flags any.\",\"refusal\":null,\"reasoning\":\"I'm checking whether the Guangdong history track even qualifies for most clinical medicine programs, since they usually require physics and chemistry, and the draft doesn't address that. I'm also noting that a 502 score at rank 58,000 is decent for the history track, but 华南师范大学 would likely need a higher score and better rank, so recommending it looks like a stretch.\\n\\nI'm noting that recommending 华南师范大学 is unrealistic for a history-track student at this score and rank. I'm also weighing whether 广州中医药大学 could work, since some 中医 programs take history, but Guangdong's versions mostly require chemistry. The draft also overstates the result as \\\"中等偏上,\\\" lacks a data-timeliness caveat and any tiering, and leaves out 公费师范生 and 定向医学生 options, which matter for county-level work. Its mention of \\\"一本二本\\\" is outdated in Guangdong, and the scores look low.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking whether the Guangdong history track even qualifies for most clinical medicine programs, since they usually require physics and chemistry, and the draft doesn't address that. I'm also noting that a 502 score at rank 58,000 is decent for the history track, but 华南师范大学 would likely need a higher score and better rank, so recommending it looks like a stretch.\\n\\nI'm noting that recommending 华南师范大学 is unrealistic for a history-track student at this score and rank. I'm also weighing whether 广州中医药大学 could work, since some 中医 programs take history, but Guangdong's versions mostly require chemistry. The draft also overstates the result as \\\"中等偏上,\\\" lacks a data-timeliness caveat and any tiering, and leaves out 公费师范生 and 定向医学生 options, which matter for county-level work. Its mention of \\\"一本二本\\\" is outdated in Guangdong, and the scores look low.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQStAsKEAgTGAI4AUIIdGhpbmtpbmcSDJo1BAppUkCNDYIZAxoMP0D+7LszA5zEGOcbIjCMj2y2/jL3V0m4xr2x06KT0RZMNmcxM0al9pF145QRlPJHDHM7vXG6DWQpceCmL2Iq0QodSnjEAFNOBmsNGKmb7V2dAk7jEHk8W5a6rhduOu1k+CV3VyIBHC/oyCG9fRPu+mPtrRBppwGJ15Dlye1y6SZOwJt0YzENV9IKz/ZkpI6PjjdTLJQpy3bpEg+jG4gbcAlG1JaH8sPU+JKdSVvQzIf4ClzYXJAY3oaQMF8Gngo35cBI3w5xApL/VyG9dskwezx/k+NA7UBYNO8dEi40erT7qhayvgK2gAc166RoCDst2L6y8FYPM0augF6OJscufoshrPt3nvq0fUUINxxtYK5b3k7qYF4Vfg7mIBzM8A66jd99A/ZB2TWgurRd7vRt0SxQHOAr12SCPPjWHt6n6QgaV7XLwVu5aLFA83MyyxvZ6jR3j4zqcssy99mzl6Qj1QYMJp7XQC6DgWGhf209UpkKxRf0+KU+HnDiH2it5IMvQTNVtHAZTs9nO7bXBkzQff1/KiiX54NXk46CPaGigNiQkwaP8qhq0EJygJAmbY913AkJs+SonCfX1Y7almC4g8yJk06heMMDunOhH9MQIOpC7M1r56qAmoNVPoZliTdpO92gjfT6Id6nkbr/xDN28gYun/y3PFf58S9008OeEqSuaio9hoYBazQ/fuk0qAz3gpgypmhz/86HC4ff5Hbwbl5BwKFixCLdYaePZJvCKJjKj36xGJHI5qmyFqI0UNOW3l/PZ9+/4ppDNzx+DuciYBXhGk7tg9Xi/UXtYufTBhqISqr+dn4AfHqU6xdME7CX54IPS7ktbLQeZSY/IdIPLKelIa8mT16t5xZOzoi/mVPErKT0cCqAOYEt8+cuk4u3CBix6uJ5CvCaTgKAChXZyyw9NeHdLWp7wwf0CbAxrOMBS6GO9SA46eU2/8r1QgLsL26MGRRGqvV0fWER4vzJbgzHDCccNwQKjSKDk3huYnkMu5/lz1UQWcAMU9ID3NDhQGZ7i2OBOD3l2aY4Bm3Un4WAzqV53LNCUja7KRa/9GGaM26DUd8MKCIcMBQIQ/m+qfYPof33lAQkJdJJjRxt8LSbjtCkCpeOCmQsqZagtLZbQxnXdeYUnFT9OvjZdN2a20UQaZQa1UGNkKelf2kvrgWoAfackC+wIgi34tGSz3EBr/UDmV5zvifXRcntkpZQ3n+4slgiDUSKhvejq5csAiWwqAQCZVmUJMAXnfyYN3UyRPcijK0zRd0WkrsoBBAeLx8DdVdFqlnE/FcA+VGIiIdQp+UIRiWdupI8VfYPHtPs0nzDQZww8TFNwjER57IwKoGurvIi/00Ftnb8Q4cLGlY16ibcslWhJBM084fIC3eVmVyYT/TlGhwWrHFKClSfmvIE41QV2D/rKTST2hfNTzfftxhvmsLj4YMWHwFOxvQINkdYARnogBzxnUaPI7WjVa65FTJFeNpCFtm3imfUMySRg2j1/LnqCmI3NR6Aq1k9iATHZGlD0hW0M8Bq6bhSAF5CqCwRTDEGdEUfIxlHXrTyGYMCVdw3Dk4/UNM80nphFGDH3M+kovQbu3Drt1jGJg7DmrMuuUgZ981h5z6e8bMuOYR7+xyUuaZyNt8SvBbyDg0WsKyaJy7U7fhKV5DuwinNVJ6m9GRorPeE2tTPNsxLioSoQYYEr+xsdRHEKPJHhKZPRWYG7M5nNz1yJ/hvetDkm8+QdnNwGqpxCmyhzMdNEpFHRII1b2U6JYaEoPfxru2Dw0ZrHTpvipc7x7Ov0A2Ioi2MgPR0owmEhx3GXeDqrQ70jKGVu+YFDIt1ce+zowIPslxcciW/bINzeLsvaWK51EIqR9YnJKVw1NktZyzTQeMNP/l9w1Xbt6CXcOsYEhgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1249,\"completion_tokens\":849,\"total_tokens\":2098,\"cost\":0.021976,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.021976,\"upstream_inference_prompt_cost\":0.004996,\"upstream_inference_completions_cost\":0.01698},\"completion_tokens_details\":{\"reasoning_tokens\":311,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": null,
+  "parse_failed": true,
+  "error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "usage": {
+    "prompt_tokens": 1249,
+    "completion_tokens": 849,
+    "total_tokens": 2098,
+    "cost": 0.021976,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021976,
+      "upstream_inference_prompt_cost": 0.004996,
+      "upstream_inference_completions_cost": 0.01698
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 311,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.021976,
+  "elapsed_sec": 9.24961519241333,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

@@ -1,0 +1,79 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_001",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "ea2a3da7124f4eea93b2b5d053a06d03d1d336bc03559298ea79bf586eeb5ba2"
+  },
+  "calculated_cost_ceiling_usd": "0.129960",
+  "job_id": "ADV_001-rubric-generic_llm_raw",
+  "prompt_sha256": "ce3135d3a49b8e3a65fa856278cf9434a8db659d4351d8abed486e4817eb2609",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484660-4Q7sBMDSxm9NLjFT4fd7",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:57:40.747667+00:00",
+  "completed_utc": "2026-11-12T11:57:51.819150+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_001\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 陕西理科，509分，位次4万，想考公，希望留在西安，家庭条件一般，帮妹妹选学校和专业\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 正确提取省份、科类、分数、位次、目标偏好\n  - [must_have] 给出冲/稳/保分层院校建议\n  - [should_have] 结合考公目标推荐适合的专业方向\n  - [must_have] 声明数据不确定性或建议核验官方数据\n  - [should_have] 引用或使用可核验的历年录取数据\n\n## System Output:\n根据你妹妹的情况，她的成绩、位次和家庭条件，以下是一些建议：\n\n1. **学校选择**：\n   - **西安理工大学**：该校以理工科为主，有不错的专业，录取分数线相对较低，适合你妹妹的分数。\n   - **西安建筑科技大学**：该校以建筑、土木等专业闻名，也适合理科生报考，分数线也相对适中。\n   - **西安科技大学**：该校以地质、矿业等专业为主，分数线适中，可以考虑。\n   - **西安石油大学**：该校以石油相关专业为主，分数线相对较低，可以考虑。\n\n2. **专业选择**：\n   - **计算机科学与技术**：这个专业就业前景好，薪资水平高，适合理科生报考。\n   - **电子信息工程**：这个专业也是理工科的热门专业，就业前景好。\n   - **机械工程**：这个专业也是理工科的传统专业，就业前景稳定。\n   - **建筑学**：这个专业需要一定的艺术天赋，但就业前景也很好。\n   - **土木工程**：这个专业就业前景稳定，薪资水平也不错。\n\n3. **考虑家庭条件**：\n   - 考虑到家庭条件一般，可以选择一些学费相对较低的学校和专业，减轻家庭负担。\n\n4. **考虑就业前景和个人兴趣**：\n   - 选择专业时，除了考虑就业前景，也要充分考虑个人兴趣和特长，这样才能在未来的学习和工作中发挥出最大的潜力。\n\n5. **考虑地理位置**：\n   - 你提到希望留在西安，因此选择学校时可以优先考虑西安本地的高校。\n\n6. **考虑公务员考试**：\n   - 如果你妹妹有意向考公务员，那么选择一些和公务员工作相关的专业，如行政管理、法学等，可能会有所帮助。\n\n最后，建议多咨询一些学校的招生办公室，了解具体的录取分数线和专业情况，同时也可以考虑参加一些教育展或者咨询会，了解更多信息。希望这些建议对你妹妹有所帮助。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "cbb816c720dc1e7d18ef9b2c2bb7b96c86ab2e329282a53771fa83666ed0720a",
+  "raw_response_text": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1794484660-4Q7sBMDSxm9NLjFT4fd7\",\"object\":\"chat.completion\",\"created\":1794484660,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"overclaiming\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output lists four Xi'an universities but gives no 冲/稳/保 tiering and never uses the 40,000 rank or any historical admission data. It asserts that the cutoffs 'suit' the score without evidence, and its only caveat is a generic suggestion to contact admissions offices rather than to check official rank-based data. The civil-service goal is addressed only in a late afterthought (行政管理、法学) that contradicts the earlier engineering-heavy major list, and the family-finance and Xi'an preferences get only boilerplate treatment.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the Shaanxi cutoffs: a science score of 509 with a rank around 40,000. I'm not sure whether Shaanxi was still on the old 文理 system in 2024 or switched to the new gaokao in 2025, and I'm trying to recall the 2023 science first-tier cutoff, which might be around 443.\\n\\nI'm weighing the Shaanxi 2023 science cutoffs against a 509 score and a rank near 40,000. The universities I'm considering usually want about 520 to 540 there, which the schools with cutoffs around 480 to 510 are not. The rest of my assessment needs more care: I'm noticing the majors I recommended don't line up with the civil service suggestion, and I'm calling the lower cutoffs a good fit for her score without any actual evidence behind it.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the Shaanxi cutoffs: a science score of 509 with a rank around 40,000. I'm not sure whether Shaanxi was still on the old 文理 system in 2024 or switched to the new gaokao in 2025, and I'm trying to recall the 2023 science first-tier cutoff, which might be around 443.\\n\\nI'm weighing the Shaanxi 2023 science cutoffs against a 509 score and a rank near 40,000. The universities I'm considering usually want about 520 to 540 there, which the schools with cutoffs around 480 to 510 are not. The rest of my assessment needs more care: I'm noticing the majors I recommended don't line up with the civil service suggestion, and I'm calling the lower cutoffs a good fit for her score without any actual evidence behind it.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1540,\"completion_tokens\":949,\"total_tokens\":2489,\"cost\":0.02514,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.02514,\"upstream_inference_prompt_cost\":0.00616,\"upstream_inference_completions_cost\":0.01898},\"completion_tokens_details\":{\"reasoning_tokens\":626,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 3,
+      "safety_boundary": 2,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "weak_personalization",
+      "overclaiming",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output lists four Xi'an universities but gives no 冲/稳/保 tiering and never uses the 40,000 rank or any historical admission data. It asserts that the cutoffs 'suit' the score without evidence, and its only caveat is a generic suggestion to contact admissions offices rather than to check official rank-based data. The civil-service goal is addressed only in a late afterthought (行政管理、法学) that contradicts the earlier engineering-heavy major list, and the family-finance and Xi'an preferences get only boilerplate treatment."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1540,
+    "completion_tokens": 949,
+    "total_tokens": 2489,
+    "cost": 0.02514,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02514,
+      "upstream_inference_prompt_cost": 0.00616,
+      "upstream_inference_completions_cost": 0.01898
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 626,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.02514,
+  "elapsed_sec": 11.071531057357788,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

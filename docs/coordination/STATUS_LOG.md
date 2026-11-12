@@ -35,3 +35,4 @@
 - 2026-11-12T03:53:10.688830-08:00 30min-checkpoint; last_applied=I-003 (in progress); latest_seen=I-004; new_completed_runs=18; USD=unknown.
 - 2026-11-12T03:57:23.474476-08:00 I004-preregister-uniform60-rubrics4096-before-any-new-call; last_applied=I-004 (in progress); latest_seen=I-004; new_completed_runs=18; USD=unknown.
 - 2026-11-12T03:57:27.558183-08:00 I004-watcher-v8-startup; last_applied=I-004 (in progress); latest_seen=I-004; new_completed_runs=18; USD=unknown.
+- 2026-11-12T03:58:50.896621-08:00 I004-probe403-not-a-run-no-change-to-model-or-key; last_applied=I-004 (in progress); latest_seen=I-004; new_completed_runs=18; USD=unknown.

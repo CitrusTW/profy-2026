@@ -1,0 +1,7 @@
+{
+  "parent_batch_input_provenance_sha256": "fbe5e37e636b0056aaf8c4f05786b04d8f2a5c342aba51fc6b9cc4ad1bf48a91",
+  "all60_prompt_and_output_hashes_equal_parent_batch": true,
+  "model": "anthropic/claude-opus-5.5",
+  "max_tokens": 4096,
+  "new_answers_generated": false
+}

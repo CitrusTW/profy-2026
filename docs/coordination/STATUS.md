@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T03:57:27.558183-08:00
+- Updated (America/Los_Angeles): 2026-11-12T03:58:50.896621-08:00
 - Last applied instruction: I-004 (in progress)
-- Latest read: I-004; checkpoint: I004-watcher-v8-startup
+- Latest read: I-004; checkpoint: I004-probe403-not-a-run-no-change-to-model-or-key
 - Current work: Profy STOPPED (Expert is not published); Claude batch1 finished with incomplete rubrics. Reporting and instruction checks continue.
 - Next: await owner restoration of supplied expert and numbered review of uniform rubric repair. No new Profy submissions, key/model bypass, publication or evolution.
 - Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
@@ -60,7 +60,7 @@
 
 ## I-004 update (supersedes previous waiting notes)
 - Uniform4096 rubric rerun authorized: all60, same model/prompt/parser; this is the only rubric batch usable in the paper. Prior52 valid rubrics remain audit-only; prior80 complete pairwise retained,3000-character prefix each output.
-- New batch calls0, valid0, receipt USD0; combined received USD3.529044. Combined actual budget<=15USD; quota exhausted stops, no recharge.
+- New batch calls7, valid6, receipt USD0.179068; combined received USD3.708112. Combined actual budget<=15USD; quota exhausted stops, no recharge.
 - Profy: one original-plan next-run probe every30min;403 is not a scientific run. No publishing/key/model/identity change. Resume full serial schedule only if accepted.
 - If still403 at12:00PST, start revision copy then; otherwise13:30. Final by15:30.
 - Supply B/C skill-read-before-search scope remains unresolved; no answers rewritten and no reruns selected by outcome.
