@@ -1,3 +1,11 @@
+# CURRENT: User I011-addendum and Overleaf authorization
+
+- 2026-11-12T18:44:47.219925+00:00 User now explicitly authorizes same-model manuscript integration, superseding earlier hold. Building NEW I011 final: design+implemented-controls+deployment lessons; main text model-matched results, all dimensions/tags in appendix, tool-failure lesson.
+- User explicitly permits writing Overleaf; upload NEW project copy after validation, do not touch original, do not upload OpenReview. Earlier automatic no-write rejection is resolved by this new direct authorization.
+- No paid runs; only existing evidence. Earlier final PDF below is superseded, not overwritten.
+
+## Prior checkpoint (historical)
+
 # STATUS
 
 - 更新时间: 2026-11-12T10:42:59.967360-08:00
