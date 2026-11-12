@@ -1,9 +1,9 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T09:28:47.245638-08:00
-- Last applied instruction: I-006 (in progress)
-- Latest read: I-009; checkpoint: I004-probe403-not-a-run-no-change-to-model-or-key
-- Current work: I006 manuscript revision copy and original-order Profy recovery probes; frozen skills, no new evolution.
-- Next: continue one next-planned-run probe every30min; if accepted, resume serial schedule and supplement supply B/C original-verifier grading. Draft1 due11:00PST, reviewer11:15; final15:30; no new run after13:30.
+- Updated (America/Los_Angeles): 2026-11-12T09:36:21.278454-08:00
+- Last applied instruction: I-009 (in progress)
+- Latest read: I-009; checkpoint: I009-watcher-v12-profy-stopped-draft2
+- Current work: manuscript draft2 per I008/I009, existing evidence only; no more Profy requests.
+- Next: restore valid original structure and archive proxy85 numbers unchanged; add clean ADV figure and deployment lessons. Draft2 by12:30PST, final by15:30; no waiting for resubmission.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
 - OpenRouter judge received expense USD4.941796; unknown-cost calls0. Profy USDunknown. No purchase/recharge.
 
@@ -35,7 +35,6 @@
 
 ## Profy state
 - Latest next-run probe: 403_rejected_not_a_run; 1794504525.2915342 Unix epoch; scientific_run=False.
-- Still blocked:403 Expert is not published. Next same planned run only at registered30min interval; no publication, key/model/identity change. Quota exhaustion is not established.
 
 ## ADV20: current usable evidence
 - I004 uniform4096 batch:60 valid rubric judgments; old incomplete52 rubrics are audit-only. I00380 valid counterbalanced pairwise judgments retained,3000-character output prefix. No answers regenerated.
@@ -51,9 +50,13 @@
 
 ## Exceptions / decisions
 - I003 pin check repaired for actual active interpreter version/location; dependency pins, questions, skills and verifier unchanged. Old setup failures preserved.
-- I005: reads of the assigned skill before/after tool_search are permitted. Supply A/B/C offline scope checks pass; B/C original grading pending API recovery. Environment-limited include/exclude sensitivity retained.
 - shock-demand receipt/pytest count disagreement retained, strict reward not changed. Runner-limit raw scores stay missing; both requested analysis policies retained.
 - Current frozen workflow is an external native-Linux adaptation, not official Docker; classifier, general applicability and native promotion not connected. First historical threejs evolution usedgpt-4.1, current xlsx/solving usegpt-6.1-sol.
 - DNS-only and cancelled superseded client launches retained outside protocol comparisons. No hidden-answer skill edits; no selective deletion.
 - Interim report delivered08:00. Draft and final are separate immutable deliveries under paper_rev/draft1 and paper_rev/final.
-- 待审核者指令: [REVIEW_QUESTION_CUTOFF_GUARD.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_CUTOFF_GUARD.md)；现有记录保留, 该项等待编号指令。
+
+## I007/I008/I009 current decision
+- ALL Profy probes stopped by USER DECISION, not by observed performance. Last probe completedUTC 2026-11-12T17:28:45.291534+00:00. No further Profy request will be submitted.
+- Three matched held-out tasks only: energy round6, pre-round12 protein/xlsx11, powerlifting/xlsx11; one run/group/task. Shock-demand has both limit policies. Supply B/C unscored/platform unavailable; other incomplete tasks excluded and listed.
+- I008: preserve usable original content. Old85 numeric records are archived with checkpoint-prompt-proxy labels only, never as Full/deployment results. Main result is newADV20 with generation-model difference noted next to16/20 in abstract/contributions.
+- I009: new single-column stacked pairwise plot includes all three categories; all5 dimension differences/CI retained. Lessons avoid unproven causal claims.

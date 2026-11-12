@@ -65,3 +65,4 @@
 - 2026-11-12T09:09:11.949604-08:00 I006-draft-delivered-cutoff-boundary-question-for-review-no-budget-change; last_applied=I-006 (in progress); latest_seen=I-006; new_completed_runs=18; USD=unknown.
 - 2026-11-12T09:12:46.625747-08:00 30min-checkpoint; last_applied=I-006 (in progress); latest_seen=I-006; new_completed_runs=18; USD=unknown.
 - 2026-11-12T09:28:47.245638-08:00 I004-probe403-not-a-run-no-change-to-model-or-key; last_applied=I-006 (in progress); latest_seen=I-009; new_completed_runs=18; USD=unknown.
+- 2026-11-12T09:36:21.278454-08:00 I009-watcher-v12-profy-stopped-draft2; last_applied=I-009 (in progress); latest_seen=I-009; new_completed_runs=18; USD=unknown.

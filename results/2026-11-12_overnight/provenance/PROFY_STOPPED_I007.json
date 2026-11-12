@@ -1,0 +1,12 @@
+{
+  "stopped_utc": "2026-11-12T17:31:10.401728+00:00",
+  "reason": "User decision via I007: expert unavailable, no further waiting",
+  "not_result_based_selection": true,
+  "stopped_pid": 71881,
+  "no_active_model_or_grader": true,
+  "last_probe": "01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/profy_i004_probes/1794504499/PROBE_STATUS.json",
+  "last_probe_completed_epoch": 1794504525.2915342,
+  "last_probe_completed_utc": "2026-11-12T17:28:45.291534+00:00",
+  "last_status": "403_rejected_not_a_run",
+  "all_further_Profy_requests_forbidden": true
+}
