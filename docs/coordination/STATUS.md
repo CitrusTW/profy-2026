@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T09:09:11.949604-08:00
+- Updated (America/Los_Angeles): 2026-11-12T09:12:46.625747-08:00
 - Last applied instruction: I-006 (in progress)
-- Latest read: I-006; checkpoint: I006-draft-delivered-cutoff-boundary-question-for-review-no-budget-change
+- Latest read: I-006; checkpoint: 30min-checkpoint
 - Current work: I006 manuscript revision copy and original-order Profy recovery probes; frozen skills, no new evolution.
 - Next: continue one next-planned-run probe every30min; if accepted, resume serial schedule and supplement supply B/C original-verifier grading. Draft1 due11:00PST, reviewer11:15; final15:30; no new run after13:30.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.

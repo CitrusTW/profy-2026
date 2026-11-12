@@ -1,0 +1,23 @@
+task,skill,version,condition,repeat,historical_reused,strict_reward,policy_a_reward,policy_b_include,status,pytest_counts,counts_disagree,passed,failed,skipped,tokens,tokens_comparable,tool_calls,solver_seconds,cost_usd
+powerlifting-coef-calc,xlsx,11,no-skills,1,False,1,1,True,scored,"{""passed"": 11, ""failed"": 0, ""skipped"": 0, ""error"": 0}",False,11,0,0,180811,True,8,267.007,unknown
+powerlifting-coef-calc,xlsx,11,with-CogniLife-skills,1,False,1,1,True,scored,"{""passed"": 11, ""failed"": 0, ""skipped"": 0, ""error"": 0}",False,11,0,0,230840,True,9,297.361,unknown
+powerlifting-coef-calc,xlsx,11,with-skills,1,False,1,1,True,scored,"{""passed"": 11, ""failed"": 0, ""skipped"": 0, ""error"": 0}",False,11,0,0,235561,True,9,275.167,unknown
+reserves-at-risk-calc,xlsx,11,no-skills,1,False,,,False,infrastructure_failure,null,,,,,27292,False,2,186.075,unknown
+reserves-at-risk-calc,xlsx,11,with-CogniLife-skills,1,False,,,False,infrastructure_failure,null,,,,,0,False,0,1.835,unknown
+reserves-at-risk-calc,xlsx,11,with-skills,1,False,,,False,infrastructure_failure,null,,,,,0,False,0,1.99,unknown
+shock-analysis-demand,xlsx,11,with-CogniLife-skills,1,False,0,0,False,scored,"{""passed"": 0, ""failed"": 7, ""skipped"": 0, ""error"": 0}",True,0,5,0,885699,True,21,731.195,unknown
+shock-analysis-supply,xlsx,11,no-skills,1,False,0,0,False,scored,"{""passed"": 1, ""failed"": 8, ""skipped"": 0, ""error"": 0}",False,1,8,0,73630,True,4,182.307,unknown
+shock-analysis-supply,xlsx,11,with-CogniLife-skills,1,False,,,False,infrastructure_failure,null,,,,,100269,False,5,202.705,unknown
+shock-analysis-supply,xlsx,11,with-skills,1,False,,,False,infrastructure_failure,null,,,,,104019,False,5,181.555,unknown
+invoice-fraud-detection,xlsx,11,no-skills,1,False,,,False,infrastructure_failure,null,,,,,0,False,0,2.359,unknown
+xlsx-recover-data,xlsx,11,no-skills,1,False,,,False,infrastructure_failure,null,,,,,0,False,0,1.96,unknown
+xlsx-recover-data,xlsx,11,with-CogniLife-skills,1,False,,,False,infrastructure_failure,null,,,,,0,False,0,3.65,unknown
+xlsx-recover-data,xlsx,11,with-skills,1,False,,,False,infrastructure_failure,null,,,,,0,False,0,2.455,unknown
+shock-analysis-demand,xlsx,11,no-skills,1,True,0,0,False,scored,"{""passed"": 5, ""failed"": 2, ""skipped"": 0, ""error"": 0}",True,3,2,0,839001,True,21,760.071,unknown
+shock-analysis-demand,xlsx,11,with-skills,1,True,,0,False,runner_limit,null,,,,,1168850,False,25,836.448,unknown
+energy-market-pricing,economic-dispatch,6,no-skills,1,True,1,1,True,scored,null,,4,0,0,204038,True,8,110.467,unknown
+energy-market-pricing,economic-dispatch,6,with-skills,1,True,1,1,True,scored,null,,4,0,0,181580,True,12,321.026,unknown
+energy-market-pricing,economic-dispatch,6,with-CogniLife-skills,1,True,1,1,True,scored,null,,4,0,0,98354,True,7,99.105,unknown
+protein-expression-analysis,xlsx,11,no-skills,1,True,1,1,True,scored,"{""passed"": 6, ""failed"": 0, ""skipped"": 0, ""error"": 0}",False,6,0,0,183191,True,7,282.754,unknown
+protein-expression-analysis,xlsx,11,with-skills,1,True,1,1,True,scored,"{""passed"": 6, ""failed"": 0, ""skipped"": 0, ""error"": 0}",False,6,0,0,187869,True,8,309.261,unknown
+protein-expression-analysis,xlsx,11,with-CogniLife-skills,1,True,1,1,True,scored,"{""passed"": 6, ""failed"": 0, ""skipped"": 0, ""error"": 0}",False,6,0,0,264808,True,10,336.866,unknown
