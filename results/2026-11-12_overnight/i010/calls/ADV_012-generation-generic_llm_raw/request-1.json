@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "帮我分析下印度市场怎么做，我预算不多"}], "temperature": 0.7, "max_tokens": 4096}
