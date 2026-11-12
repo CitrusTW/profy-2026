@@ -1,0 +1,278 @@
+{
+  "round": 13,
+  "status": "development_not_improved",
+  "stop_optimization": false,
+  "evolution_inputs_development_only": true,
+  "validation_used_for_selection": true,
+  "parent_sha256": "4e61c6858d53612d20c8811ad15ce52c17246d6119c03252043b7e435e047db4",
+  "evolution_model": "openai/gpt-6.1-sol",
+  "missing_implementations": {
+    "capability_gap_classifier": "No callable implementation identified in the received source.",
+    "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+    "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+  },
+  "results": {
+    "development": {
+      "task": "weighted-gdp-calc",
+      "reward": 1.0,
+      "passed": 27,
+      "tests": 27,
+      "tokens": 224533,
+      "elapsed_sec": 287.317,
+      "condition_valid": true
+    }
+  },
+  "artifact_hashes": [
+    {
+      "path": "CANDIDATE_CHECK.json",
+      "bytes": 2347,
+      "sha256": "782d4f977b0abed38f20af234ded0894a68f0fb8d7ed319b2635b991bdd644d1"
+    },
+    {
+      "path": "DEV_RESULT_SOURCES.json",
+      "bytes": 482,
+      "sha256": "dc3c27523c7fd173f44b7a6878a7ce8ad8fd7e415e3032efdb3838010f0f30b8"
+    },
+    {
+      "path": "ROUND.json",
+      "bytes": 55901,
+      "sha256": "43ad3f024489d68bcd343def456c4926f06f664ccf559e7d108fe7724617fab6"
+    },
+    {
+      "path": "STARTED.json",
+      "bytes": 1126,
+      "sha256": "db2e6093650367d0e7edf5efdab4e498f96fcb67e7122a1fd899989b5b5def49"
+    },
+    {
+      "path": "dev_candidate/result.json",
+      "bytes": 49062,
+      "sha256": "bfc49a337532c640c229fe4ab80e0b29849b63058ce56cb17980d41887ae9d01"
+    },
+    {
+      "path": "dev_original/result.json",
+      "bytes": 49056,
+      "sha256": "ab1d602fff963fd738bb40873028e0b2c426ff2b4f3e7b66a1eb1f8f6da444b4"
+    },
+    {
+      "path": "development/with-CogniLife-skills/ORIGINAL_SCORE.json",
+      "bytes": 45128,
+      "sha256": "8f4be2ffdc05072d1ccab14272af9ad411a148d5fed8897586f8f5c14852b091"
+    },
+    {
+      "path": "development/with-CogniLife-skills/SOLVER_RESULT_BEFORE_GRADING.json",
+      "bytes": 844,
+      "sha256": "1e9035ac51261224951176d5d47f6c9df54eff85ec24d5309ae391bb743e8a72"
+    },
+    {
+      "path": "development/with-CogniLife-skills/case_config.json",
+      "bytes": 1343,
+      "sha256": "7dc4e8348fc4f009c587d8d6ff747d9be2a6e83b763d3d9ebc2a9463e334b70b"
+    },
+    {
+      "path": "development/with-CogniLife-skills/events.jsonl",
+      "bytes": 370422,
+      "sha256": "b697569f0fec23b239aaa479cc75e66924609f6129aaefe6711c3663a2c9beb9"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/SOLVER_RESULT_BEFORE_GRADING.json",
+      "bytes": 1690,
+      "sha256": "a153c5a626ab1a4749251f1a3b81752a61b18a2797b72f80bcb8e35183e1f75c"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/deliverables.zip",
+      "bytes": 148785,
+      "sha256": "ef29876d5339a6838e4e22891457737dd0e1f8593a680b0b5904692d5ecf941f"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/events.jsonl",
+      "bytes": 48513,
+      "sha256": "0e51dc3477f5b8995834424455dbbe71f52d044ad6e379ee708be86abd03782e"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/manifest.json",
+      "bytes": 923,
+      "sha256": "bc253571f35b504d4ac3db98b9f792493e8e56e937b3cc523cd909a6bde1b397"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/output/dependency_receipt.json",
+      "bytes": 41078,
+      "sha256": "269aac03036b5a11274bc936851e938da86a8e7e5aec28c17adf02f075c9cd51"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/output/fs/root/gdp.xlsx",
+      "bytes": 147267,
+      "sha256": "9c2b8e69cd4fe20f8af2c42f0a760479e73d3e049fda26ebdb308aee97ca0cf8"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/output/fs/root/work/calculated/recalc.xlsx",
+      "bytes": 85177,
+      "sha256": "434c75b87033f0309b3eb8ad1525472a12f32ea80debc360e2016d0054fce862"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/output/fs/root/work/formulas.json",
+      "bytes": 10360,
+      "sha256": "3588e1845707474c0f29687a8f3841ff3075c23c2acda311d5557242144ae0da"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/output/fs/root/work/original.xlsx",
+      "bytes": 143146,
+      "sha256": "fb8873433c7206cf431a01d2dec7e943b91d3faacfe2ce4c30b9de65c8842caa"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/output/fs/root/work/recalc.xlsx",
+      "bytes": 145390,
+      "sha256": "484d53e8836d775f5e319fd401da6cbf458adbf787ce54e8d70944fde0b71b6c"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/output/original_verifier_stdout.log",
+      "bytes": 7396,
+      "sha256": "3df6bd7bd8008adc4e7226dc3d905c15b2e118c4f15ac259f4388a98d7afc5e0"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/output/score_receipt.json",
+      "bytes": 45128,
+      "sha256": "8f4be2ffdc05072d1ccab14272af9ad411a148d5fed8897586f8f5c14852b091"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/request.json",
+      "bytes": 1438,
+      "sha256": "55f3d25dcc5348a91a5f89e6d79edfc5c6867ec8eb937c10a8f573a0cb9a5936"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/result.json",
+      "bytes": 1864,
+      "sha256": "59d6f13df44eec8ced645067368824102a9ef4cf5044a6a9f477182c8262f1f6"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/run_summary.json",
+      "bytes": 1690,
+      "sha256": "a153c5a626ab1a4749251f1a3b81752a61b18a2797b72f80bcb8e35183e1f75c"
+    },
+    {
+      "path": "development/with-CogniLife-skills/grading-only/usage.json",
+      "bytes": 2936,
+      "sha256": "abea9fd48bccd82ac619766b775066a6790179f4b5ec046509b23b9e3f3cae2f"
+    },
+    {
+      "path": "development/with-CogniLife-skills/native_input_hashes.json",
+      "bytes": 90,
+      "sha256": "ff37ad50befa0722243fca0d372769e094067ccf3b408a140ed4c91d55713c79"
+    },
+    {
+      "path": "development/with-CogniLife-skills/request.json",
+      "bytes": 4240,
+      "sha256": "ce574ffc8ae2b84f916484af31fa4e2562ccbc9eadb9578146710a53bf389a13"
+    },
+    {
+      "path": "development/with-CogniLife-skills/result.json",
+      "bytes": 49062,
+      "sha256": "bfc49a337532c640c229fe4ab80e0b29849b63058ce56cb17980d41887ae9d01"
+    },
+    {
+      "path": "development/with-CogniLife-skills/run_summary.json",
+      "bytes": 844,
+      "sha256": "1e9035ac51261224951176d5d47f6c9df54eff85ec24d5309ae391bb743e8a72"
+    },
+    {
+      "path": "development/with-CogniLife-skills/session.json",
+      "bytes": 99,
+      "sha256": "a42d1b9f41562ffc628ef24bda3e5d800c47fd1de6e5b0a4eea5c8f1692aec63"
+    },
+    {
+      "path": "development/with-CogniLife-skills/started.json",
+      "bytes": 906,
+      "sha256": "3e21d2816bf111e27205ee4f0d2924f020f6978f5bc1c39cb6ee70e27adfe032"
+    },
+    {
+      "path": "development/with-CogniLife-skills/uploads.json",
+      "bytes": 1613,
+      "sha256": "4a74b2927ce3a7b046d968233b926e4dca9ed560f7f6ee8083abac285e1ad97f"
+    },
+    {
+      "path": "development/with-CogniLife-skills/usage.json",
+      "bytes": 7356,
+      "sha256": "2e69d40e90a68c68c241de4e40847ef37647a488fd6a44306ebcb2f5065c7ced"
+    },
+    {
+      "path": "evolution/candidate_SKILL.md",
+      "bytes": 6646,
+      "sha256": "ef413a89f828ee8a6aaac61f19fbaeb1698e0082bc9842df405f6c15bf2c0faa"
+    },
+    {
+      "path": "evolution/pending.json",
+      "bytes": 8967,
+      "sha256": "082bc52631ead17404a38d1d96696d283e365a90d4516b68781d1138a2eddf8f"
+    },
+    {
+      "path": "evolution/provenance.json",
+      "bytes": 2337,
+      "sha256": "9126683186be0d32d488dc08bb1da38bae64e074e004099921f3d1d754f04689"
+    },
+    {
+      "path": "evolution/request_1.json",
+      "bytes": 245647,
+      "sha256": "2d69d337f784f641f80a5f208ee513c71267c602f8c31313a5b4590471db9bcc"
+    },
+    {
+      "path": "evolution/request_2.json",
+      "bytes": 251930,
+      "sha256": "8688466c3bb3230f6c13e3aa6ed5005d01ef44e9093c9741130f4ea65d15055f"
+    },
+    {
+      "path": "evolution/request_3.json",
+      "bytes": 252874,
+      "sha256": "04d76c522ed7ab040a01cb412b3db3923b8003f6447531b6f3a189ad58c5ffb7"
+    },
+    {
+      "path": "evolution/request_4.json",
+      "bytes": 261092,
+      "sha256": "03f3ffa791e2f4cfaf72600602deffc8771e94a68b98d881cf592abdb613668c"
+    },
+    {
+      "path": "evolution/response_1.json",
+      "bytes": 1425,
+      "sha256": "3002ecfe0c0e306a0dc58aeab39bbabf82ace7eb4b052a0774b919e28d52ae86"
+    },
+    {
+      "path": "evolution/response_2.json",
+      "bytes": 1390,
+      "sha256": "5c3dbf2e947678babe8652357901ad8c0b1688e23f8cae1713ae175b1cadd9ba"
+    },
+    {
+      "path": "evolution/response_3.json",
+      "bytes": 1417,
+      "sha256": "c446784e2833f6ba8b25bf088f00419de96e6b9f6625a602efec4ac0169b0a1d"
+    },
+    {
+      "path": "evolution/response_4.json",
+      "bytes": 18733,
+      "sha256": "371f24b11a046553047ee2c7524afcc8135de9690e1261fdc2557c737f674ba9"
+    },
+    {
+      "path": "evolution/summary.json",
+      "bytes": 3295,
+      "sha256": "83824001f7079caecf80197cd8f3fd2c6d48cbbb51f0fdabba828f7f7079af0c"
+    },
+    {
+      "path": "evolution/tool_transcript.json",
+      "bytes": 264794,
+      "sha256": "a52f6a6e4b531d292ff2d6fa9c21d94e2b6d976be9a282d0d7f8ae60fad8432c"
+    },
+    {
+      "path": "parent_skills/xlsx/LICENSE.txt",
+      "bytes": 1467,
+      "sha256": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa"
+    },
+    {
+      "path": "parent_skills/xlsx/SKILL.md",
+      "bytes": 6889,
+      "sha256": "4e61c6858d53612d20c8811ad15ce52c17246d6119c03252043b7e435e047db4"
+    },
+    {
+      "path": "parent_skills/xlsx/recalc.py",
+      "bytes": 6210,
+      "sha256": "f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409"
+    }
+  ],
+  "bundle_sha256": "5057127993a07030238164aa94f2e3df7ec37ca7b1af5b1d77fa7ec71cb8a9b7"
+}

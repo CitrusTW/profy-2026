@@ -51,7 +51,7 @@ def checkpoint(folder,out):
             if p.parent.name=='grading-only':continue
             r=json.loads(p.read_text())
             if 'score' in r:rows[p.parent.relative_to(folder).as_posix()]={'task':r['task'],'reward':r['score'].get('original_reward'),'passed':r['score'].get('passed'),'tests':r['score'].get('tests'),'tokens':r['tokens']['total_tokens'],'elapsed_sec':r['elapsed_sec'],'condition_valid':r.get('condition_valid')}
-    summary={'round':state.get('round'),'status':state.get('status'),'stop_optimization':state.get('stop_optimization'),'evolution_inputs_development_only':state.get('evolution_inputs_development_only'),'validation_used_for_selection':state.get('validation_used_for_selection'),'results':rows,'artifact_hashes':inventory,'bundle_sha256':hashlib.sha256(bundle.read_bytes()).hexdigest()}
+    summary={'round':state.get('round'),'status':state.get('status'),'stop_optimization':state.get('stop_optimization'),'evolution_inputs_development_only':state.get('evolution_inputs_development_only'),'validation_used_for_selection':state.get('validation_used_for_selection'),'parent_sha256':state.get('parent_sha256'),'evolution_model':state.get('evolution',{}).get('wire_model'),'missing_implementations':state.get('evolution',{}).get('missing_implementations'),'results':rows,'artifact_hashes':inventory,'bundle_sha256':hashlib.sha256(bundle.read_bytes()).hexdigest()}
     add(prefix+'/CHECKPOINT.json',json.dumps(summary,ensure_ascii=False,indent=2).encode())
     candidate=folder/'evolution/candidate_SKILL.md';parent=folder/'parent_skills/xlsx/SKILL.md'
     if candidate.exists():
@@ -65,6 +65,19 @@ def checkpoint(folder,out):
             add('skills/with-CogniLife-skills/xlsx/FROZEN.json',frozen.read_bytes())
             description=f"# xlsx skill 怎么进化的\n\n当前采用第{state['round']}轮. Evolution 使用原始组件和 OpenRouter openai/gpt-6.1-sol, 输入仅含 weighted-gdp-calc 开发轨迹. Profy gpt-6.1-sol 解题.\n\n开发题和 protein-expression-analysis 选版验证题都通过原评分, 两次运行均比各自原版至少少5% solver tokens. 验证题答案、轨迹、评分源码及分数未交给 Evolution; 验证题不再算独立新题证据.\n\n每步实际数字与历史候选见 ../../evolution-history/xlsx/{label}/EVOLUTION_RECORD.json. 这仍是已披露缺失原组件的外部适配, 不冒充完整平台复现.\n"
             add('skills/with-CogniLife-skills/xlsx/HOW_EVOLVED.md',description.encode())
+    if state.get('round'):
+        lines=['# xlsx 第12到30轮的实际进度','','只把开发题记录交给 Evolution. 蛋白题用于选版, 不再算独立新题证据. 两题均须原评分全过, 且两次都比原版至少少5% tokens, 才采用. 未运行的格子写 -, 不记作0分.','','每格依次写通过的检查数 / 总检查数, solver tokens. 开发题是 weighted-gdp-calc, 蛋白题是 protein-expression-analysis.','','| 轮次 | 开发第1次 | 开发第2次 | 蛋白第1次 | 蛋白第2次 | 状态 |','| --- | --- | --- | --- | --- | --- |']
+        for p in sorted(folder.parent.glob('round-*/ROUND.json')):
+            r=json.loads(p.read_text());cells=[]
+            for phase in ['development','confirmation','validation','validation_confirmation']:
+                row=r.get(phase)
+                cells.append(str(row['score']['passed'])+'/'+str(row['score']['tests'])+', '+str(row['tokens']['total_tokens']) if row else '-')
+            human={'small_scope_success_confirmed':'通过, 已采用','validation_not_improved':'验证未达门槛, 未采用','development_not_improved':'开发检查未达门槛, 未采用','no_proposal':'没有候选','exception':'运行错误, 待查'}.get(r.get('status'),r.get('status','未完成'))
+            version='round-'+str(r['round']).zfill(2)
+            lines.append('| '+str(r['round'])+' | '+' | '.join(cells)+' | '+human+' [证据]('+version+'/evidence.zip) |')
+        lines+=['','每轮完整候选和 parent diff 在 skills/evolution-history/xlsx/ 对应轮次. 实际 Excel、逐步求解记录、模型回复和原评分在对应 round-XX/evidence.zip. 原始请求及收到的公司程序不复制进 Git, 只记录指纹. 论文未改.']
+        add('results/xlsx-family/native-owned-evolution-v2/PROGRESS.md','\n'.join(lines).encode())
+    add('experiments/skillsbench_cloud_runner_20261111/checkpoint_xlsx.py',Path(__file__).read_bytes())
     payload={'text_entries':entries,'binary_entries':[{'local_path':str(bundle),'repo_path':prefix+'/evidence.zip'}],'summary':{k:v for k,v in summary.items() if k!='artifact_hashes'}}
     output=out/(label+'-git.json');output.write_text(json.dumps(payload,ensure_ascii=False));return output
 
