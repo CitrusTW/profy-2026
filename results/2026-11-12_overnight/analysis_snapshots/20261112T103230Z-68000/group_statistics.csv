@@ -1,0 +1,17 @@
+task,skill_family,version,condition,n_attempts,n_scored,runner_limit_count,infrastructure_failure_count,strict_reward_values,strict_reward_mean,policy_a_failure_reward_mean,policy_a_reward_values,tokens_completed_values,tokens_mean,tokens_sd_sample,tokens_min,tokens_max,tokens_all_attempts_values,solver_completed_seconds_values,solver_seconds_mean,tool_calls_all_values,cost_usd,task_invalid
+shock-analysis-demand,xlsx,11,no-skills,1,1,0,0,[0],0,0,[0],[839001],839001,,839001,839001,[839001],[760.071],760.071,[21],unknown,False
+shock-analysis-demand,xlsx,11,with-skills,1,0,1,0,[],,0,[0],[],,,,,[1168850],[],,[25],unknown,False
+shock-analysis-demand,xlsx,11,with-CogniLife-skills,1,1,0,0,[0],0,0,[0],[885699],885699,,885699,885699,[885699],[731.195],731.195,[21],unknown,False
+shock-analysis-supply,xlsx,11,no-skills,1,0,0,1,[],,,[],[],,,,,[73630],[],,[4],unknown,False
+shock-analysis-supply,xlsx,11,with-skills,1,0,0,1,[],,,[],[],,,,,[104019],[],,[5],unknown,False
+shock-analysis-supply,xlsx,11,with-CogniLife-skills,1,0,0,1,[],,,[],[],,,,,[100269],[],,[5],unknown,False
+reserves-at-risk-calc,xlsx,11,no-skills,1,0,0,1,[],,,[],[],,,,,[44468],[],,[2],unknown,False
+reserves-at-risk-calc,xlsx,11,with-skills,1,0,0,1,[],,,[],[],,,,,[44956],[],,[2],unknown,False
+reserves-at-risk-calc,xlsx,11,with-CogniLife-skills,1,0,0,1,[],,,[],[],,,,,[44912],[],,[2],unknown,False
+powerlifting-coef-calc,xlsx,11,no-skills,1,1,0,0,[1],1,1,[1],[180811],180811,,180811,180811,[180811],[267.007],267.007,[8],unknown,False
+energy-market-pricing,economic-dispatch,6,no-skills,1,1,0,0,[1],1,1,[1],[204038],204038,,204038,204038,[204038],[110.467],110.467,[8],unknown,False
+energy-market-pricing,economic-dispatch,6,with-skills,1,1,0,0,[1],1,1,[1],[181580],181580,,181580,181580,[181580],[321.026],321.026,[12],unknown,False
+energy-market-pricing,economic-dispatch,6,with-CogniLife-skills,1,1,0,0,[1],1,1,[1],[98354],98354,,98354,98354,[98354],[99.105],99.105,[7],unknown,False
+protein-expression-analysis,xlsx,11,no-skills,1,1,0,0,[1],1,1,[1],[183191],183191,,183191,183191,[183191],[282.754],282.754,[7],unknown,False
+protein-expression-analysis,xlsx,11,with-skills,1,1,0,0,[1],1,1,[1],[187869],187869,,187869,187869,[187869],[309.261],309.261,[8],unknown,False
+protein-expression-analysis,xlsx,11,with-CogniLife-skills,1,1,0,0,[1],1,1,[1],[264808],264808,,264808,264808,[264808],[336.866],336.866,[10],unknown,False
