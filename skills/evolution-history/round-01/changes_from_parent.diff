@@ -1,0 +1,127 @@
+--- parent/SKILL.md
++++ round-01/SKILL.md
+@@ -1,108 +1,27 @@
+ ---
+ name: threejs
+-description: "Three.js scene-graph parsing and export workflows: mesh baking, InstancedMesh expansion, part partitioning, per-link OBJ export, and URDF articulation."
++description: "Export Three.js scenes to OBJ with world transforms and instances preserved; optionally partition named groups into OBJ parts or URDF links."
+ ---
+ 
+-# Three.js Scene Graph + Export
++# Three.js export
+ 
+-## Quick start
++## Select the route before running anything
+ 
+-1) Load the module, call `createScene()`, then `updateMatrixWorld(true)`.
+-2) Treat **named `THREE.Group` nodes as parts/links**.
+-3) Assign each mesh to its **nearest named ancestor**.
+-4) Bake world transforms into geometry before export.
+-5) Export per-part OBJ (and optionally URDF) using deterministic ordering.
++- Single OBJ: one traversal into an export container; no part map, merging, or articulation references.
++- Per-part OBJ: each mesh belongs to its nearest named Group. Key by Group identity, not name; nested named groups own separate meshes. Skip empty parts and use deterministic unique filenames. Read `link-export-rules.md` only here.
++- URDF: named groups are links; nearest named ancestor is parent. Default joints to fixed unless motion is evidenced. Read `joint-type-heuristics.md` and `urdf-minimal.md` only here.
+ 
+-## Scene graph essentials
++## Known runtime facts: skip rediscovery
+ 
+-```
+-Object3D (root)
+-├── Group (part)
+-│   ├── Mesh
+-│   └── Group (child part)
+-│       └── Mesh
+-└── Group (another part)
+-    └── Mesh
+-```
++Use the task-pinned dependency; observed working version: `three@0.175.0`. Install once if needed, not after a failed exporter probe. Preserve the input bytes. For its bare imports, substitute resolved module URLs in an in-memory source copy and import that copy; do not rewrite the input.
+ 
+-- `THREE.Scene` / `THREE.Object3D`: containers
+-- `THREE.Group`: logical part (no geometry)
+-- `THREE.Mesh`: geometry + material
++The supplied `export_instanced_obj.mjs` has fixed paths and does not handle `--help` as a CLI option. Its observed output is merged, nonindexed, and unnamed. Do not probe it with flags or run it to discover these facts. Use it through `skill.execute` only when its fixed-path/merged output fits the task. For retained mesh names or reflected geometry, use the OBJExporter baking route below directly instead of running an incompatible resource first. Use `export_link_objs.mjs --input <scene_js> --out-dir <dir>` or `build_urdf_from_scene.mjs --input <scene_js> --output <file.urdf> --mesh-dir <dir>` through `skill.execute` for their respective routes.
+ 
+-## Part partitioning rules
++## OBJExporter baking route
+ 
+-- Parts are **named groups** at any depth.
+-- Each mesh belongs to the **nearest named ancestor**.
+-- Nested named groups are separate parts; **do not merge** their meshes into parents.
+-- Skip empty parts; sort part names for determinism.
+-
+-```javascript
+-function buildPartMap(root) {
+-  const parts = new Map();
+-  root.traverse((obj) => {
+-    if (obj.isGroup && obj.name) parts.set(obj.name, { group: obj, meshes: [] });
+-  });
+-  root.traverse((obj) => {
+-    if (!obj.isMesh) return;
+-    let parent = obj.parent;
+-    while (parent && !(parent.isGroup && parent.name)) parent = parent.parent;
+-    if (parent && parts.has(parent.name)) parts.get(parent.name).meshes.push(obj);
+-  });
+-  return Array.from(parts.values()).filter((p) => p.meshes.length > 0);
+-}
+-```
+-
+-## Mesh baking (world transforms)
+-
+-Always bake transforms before export:
+-
+-```javascript
+-root.updateMatrixWorld(true);
+-let geom = mesh.geometry.clone();
+-geom.applyMatrix4(mesh.matrixWorld);
+-if (geom.index) geom = geom.toNonIndexed();
+-if (!geom.attributes.normal) geom.computeVertexNormals();
+-```
+-
+-### InstancedMesh expansion
+-
+-```javascript
+-const tempMatrix = new THREE.Matrix4();
+-const instanceMatrix = new THREE.Matrix4();
+-obj.getMatrixAt(i, instanceMatrix);
+-tempMatrix.copy(obj.matrixWorld).multiply(instanceMatrix);
+-```
+-
+-### Axis conversion (Y-up to Z-up)
+-
+-```javascript
+-const axisMatrix = new THREE.Matrix4().makeRotationX(-Math.PI / 2);
+-geom.applyMatrix4(axisMatrix);
+-```
+-
+-## Per-part OBJ export
+-
+-- Collect meshes owned by each part.
+-- **Do not traverse into child named groups** when exporting a part.
+-- Merge baked geometries per part and write `<part>.obj`.
+-
+-Reference: `references/link-export-rules.md`.
+-
+-## Relation between Three.js and URDF articulation
+-
+-- Use named groups as links.
+-- Parent is the nearest named ancestor link.
+-- Joint type defaults to `fixed` unless evidence suggests `revolute`/`prismatic`.
+-- Sort link and joint names for determinism.
+-
+-References:
+-- `references/joint-type-heuristics.md`
+-- `references/urdf-minimal.md`
+-
+-## Scripts
+-
+-- InstancedMesh OBJ exporter: `node scripts/export_instanced_obj.mjs`
+-- Per-link OBJ exporter: `node scripts/export_link_objs.mjs --input <scene_js> --out-dir <dir>`
+-- URDF builder: `node scripts/build_urdf_from_scene.mjs --input <scene_js> --output <file.urdf> --mesh-dir <mesh_dir>`
+-
+-Adjust inputs/outputs inside scripts as needed.
++1. Call `createScene()`, then `root.updateMatrixWorld(true)`; never recenter or rescale.
++2. Ordinary mesh: `world = mesh.matrixWorld`. For every instance, `getMatrixAt(i, instance)` then `world = mesh.matrixWorld.clone().multiply(instance)`.
++3. Clone geometry, ensure normals exist, and bake `axis.clone().multiply(world)`. Axis is identity unless requested; for the specified -90° X conversion use `new THREE.Matrix4().makeRotationX(-Math.PI / 2)`. For precision-sensitive baking promote cloned position/normal attributes to Float64 first.
++4. `geometry.applyMatrix4(transform)` handles inverse-transpose normals. If `transform.determinant() < 0`, ensure an index exists and swap each triangle's second and third indices; do not negate normals. Preserve UVs and indices; no unconditional `toNonIndexed()`.
++5. Add each baked geometry to an identity-transform Mesh, retain names (suffix instances), update container world matrices, then serialize with Three.js `OBJExporter`.
++6. Validate once: derive expected counts from the scene including all instances; check finite coordinates, face-index ranges, transformed positions, and nondegenerate face/normal orientation. Do not hardcode observed counts or add repeated export/check passes.

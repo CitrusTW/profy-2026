@@ -1,0 +1,66 @@
+[
+  {
+    "version": "historical-run-01",
+    "skill": "threejs",
+    "model": "openai/gpt-4.1",
+    "selected": false,
+    "sha256": "c166463db05619ec61b5d74556fa94d7efdc00ab5094060d51ed33515ca3a946",
+    "path": "skills/evolution-history/historical-run-01"
+  },
+  {
+    "version": "historical-run-02-gpt61",
+    "skill": "threejs",
+    "model": "gpt-6.1-sol",
+    "selected": false,
+    "sha256": "d94e59830e1c21c4d7b4ad379b134794d91e2dba7eb14a254b1afeea7c5c291b",
+    "path": "skills/evolution-history/historical-run-02-gpt61"
+  },
+  {
+    "version": "round-01",
+    "skill": "threejs",
+    "model": "gpt-6.1-sol",
+    "selected": false,
+    "sha256": "724862ac7dccf33d85120ffb641b16b99faf819bea25171ca78d43de1c7ab6c8",
+    "path": "skills/evolution-history/round-01"
+  },
+  {
+    "version": "round-02",
+    "skill": "threejs",
+    "model": "gpt-6.1-sol",
+    "selected": false,
+    "sha256": "70046fff3a3a4362b9663fe5be4231de859aa0c372fa08af981f11193df484da",
+    "path": "skills/evolution-history/round-02"
+  },
+  {
+    "version": "round-03",
+    "skill": "threejs",
+    "model": "gpt-6.1-sol",
+    "selected": false,
+    "sha256": "2cb92ddd0d5a413b0297e928fc9d887942dfac440d73d18205be41f17535be35",
+    "path": "skills/evolution-history/round-03"
+  },
+  {
+    "version": "round-04",
+    "skill": "threejs",
+    "model": "gpt-6.1-sol",
+    "selected": false,
+    "sha256": "56eb6061702a90e6a7cf9d78cd40e8584041bc5ab17de1d85f3c9cd256810026",
+    "path": "skills/evolution-history/round-04"
+  },
+  {
+    "version": "round-05",
+    "skill": "threejs",
+    "model": "gpt-6.1-sol",
+    "selected": true,
+    "sha256": "b8a1c4e2150c4895f416d45a5e1033d6c36db7a942a75461a9bea9b6dc21e7e8",
+    "path": "skills/evolution-history/round-05"
+  },
+  {
+    "version": "round-06",
+    "skill": "economic-dispatch",
+    "model": "gpt-6.1-sol",
+    "selected": true,
+    "sha256": "c68d696585d27124e5f04d0c300e8dff77ff23560c3a0e79dfc227022f53b075",
+    "path": "skills/evolution-history/round-06"
+  }
+]

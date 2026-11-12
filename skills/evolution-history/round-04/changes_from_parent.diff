@@ -1,0 +1,178 @@
+--- parent/SKILL.md
++++ round-04/SKILL.md
+@@ -1,108 +1,79 @@
+ ---
+ name: threejs
+-description: "Three.js scene-graph parsing and export workflows: mesh baking, InstancedMesh expansion, part partitioning, per-link OBJ export, and URDF articulation."
++description: "Export Three.js scenes to OBJ preserving world transforms and instances; optionally partition named groups into OBJ parts or URDF links."
+ ---
+ 
+-# Three.js Scene Graph + Export
++# Three.js export
+ 
+-## Quick start
++## Choose the output
+ 
+-1) Load the module, call `createScene()`, then `updateMatrixWorld(true)`.
+-2) Treat **named `THREE.Group` nodes as parts/links**.
+-3) Assign each mesh to its **nearest named ancestor**.
+-4) Bake world transforms into geometry before export.
+-5) Export per-part OBJ (and optionally URDF) using deterministic ordering.
++- Single OBJ: use the example below; no part map, merging, or articulation references.
++- Per-part OBJ: assign each mesh to its nearest named Group, keyed by Group identity rather than name. Nested named groups own separate meshes. Skip empty parts; choose deterministic unique filenames. Read `references/link-export-rules.md`.
++- URDF: named groups are links; nearest named ancestor is parent. Default joints to fixed absent motion evidence. Read `references/joint-type-heuristics.md` and `references/urdf-minimal.md`.
+ 
+-## Scene graph essentials
++## Single OBJ: complete example
+ 
+-```
+-Object3D (root)
+-├── Group (part)
+-│   ├── Mesh
+-│   └── Group (child part)
+-│       └── Mesh
+-└── Group (another part)
+-    └── Mesh
++Install the task-pinned dependency once when needed: `npm install --no-audit --no-fund three@0.175.0`. Save as `output/export_object.mjs`; run `node output/export_object.mjs` from the project root. Preserve input bytes; resolve the bare import in memory.
++
++```javascript
++import fs from 'node:fs/promises';
++import * as THREE from 'three';
++import { OBJExporter } from 'three/examples/jsm/exporters/OBJExporter.js';
++
++const source = (await fs.readFile('data/object.js', 'utf8')).replace(
++  /(from\s*)(['"])three\2/g,
++  (_, prefix) => prefix + JSON.stringify(import.meta.resolve('three')));
++const { createScene } = await import(
++  'data:text/javascript;base64,' + Buffer.from(source).toString('base64'));
++const root = createScene();
++root.updateMatrixWorld(true);
++// Use identity unless conversion is requested. Here: requested -90 degree X.
++const axis = new THREE.Matrix4().makeRotationX(-Math.PI / 2);
++const out = new THREE.Group();
++function bake(mesh, world, name) {
++  let geom = mesh.geometry.clone();
++  if (!geom.attributes.normal) geom.computeVertexNormals();
++  // Standard BufferAttributes: avoid Float32 rounding during world baking.
++  for (const key of ['position', 'normal']) {
++    const a = geom.getAttribute(key);
++    geom.setAttribute(key, new THREE.BufferAttribute(
++      new Float64Array(a.array), a.itemSize));
++  }
++  const transform = axis.clone().multiply(world);
++  geom.applyMatrix4(transform); // includes inverse-transpose normals
++  if (transform.determinant() < 0) {
++    if (!geom.index) geom.setIndex(Array.from(
++      { length: geom.attributes.position.count }, (_, i) => i));
++    const ix = geom.index;
++    for (let i = 0; i < ix.count; i += 3) {
++      const b = ix.getX(i + 1);
++      ix.setX(i + 1, ix.getX(i + 2));
++      ix.setX(i + 2, b);
++    }
++  }
++  if (geom.index) geom = geom.toNonIndexed();
++  const baked = new THREE.Mesh(geom, mesh.material);
++  baked.name = name;
++  out.add(baked);
++}
++root.traverse(mesh => {
++  if (!mesh.isMesh) return;
++  if (mesh.isInstancedMesh) {
++    for (let i = 0; i < mesh.count; i++) {
++      const instance = new THREE.Matrix4();
++      mesh.getMatrixAt(i, instance);
++      bake(mesh, mesh.matrixWorld.clone().multiply(instance),
++        `${mesh.name}_instance_${i}`);
++    }
++  } else bake(mesh, mesh.matrixWorld, mesh.name);
++});
++out.updateMatrixWorld(true);
++await fs.mkdir('output', { recursive: true });
++await fs.writeFile('output/object.obj', new OBJExporter().parse(out));
+ ```
+ 
+-- `THREE.Scene` / `THREE.Object3D`: containers
+-- `THREE.Group`: logical part (no geometry)
+-- `THREE.Mesh`: geometry + material
++Never recenter/rescale, double-apply transforms, or negate reflection normals. The original nonindexed serialization is intentional: preserve it. Validate once using scene-derived counts after expansion, finite attributes, face-index ranges, transformed positions, and nondegenerate face/normal orientation. Do not hardcode counts or build an expanded audit framework.
+ 
+-## Part partitioning rules
++## Other resources
+ 
+-- Parts are **named groups** at any depth.
+-- Each mesh belongs to the **nearest named ancestor**.
+-- Nested named groups are separate parts; **do not merge** their meshes into parents.
+-- Skip empty parts; sort part names for determinism.
+-
+-```javascript
+-function buildPartMap(root) {
+-  const parts = new Map();
+-  root.traverse((obj) => {
+-    if (obj.isGroup && obj.name) parts.set(obj.name, { group: obj, meshes: [] });
+-  });
+-  root.traverse((obj) => {
+-    if (!obj.isMesh) return;
+-    let parent = obj.parent;
+-    while (parent && !(parent.isGroup && parent.name)) parent = parent.parent;
+-    if (parent && parts.has(parent.name)) parts.get(parent.name).meshes.push(obj);
+-  });
+-  return Array.from(parts.values()).filter((p) => p.meshes.length > 0);
+-}
+-```
+-
+-## Mesh baking (world transforms)
+-
+-Always bake transforms before export:
+-
+-```javascript
+-root.updateMatrixWorld(true);
+-let geom = mesh.geometry.clone();
+-geom.applyMatrix4(mesh.matrixWorld);
+-if (geom.index) geom = geom.toNonIndexed();
+-if (!geom.attributes.normal) geom.computeVertexNormals();
+-```
+-
+-### InstancedMesh expansion
+-
+-```javascript
+-const tempMatrix = new THREE.Matrix4();
+-const instanceMatrix = new THREE.Matrix4();
+-obj.getMatrixAt(i, instanceMatrix);
+-tempMatrix.copy(obj.matrixWorld).multiply(instanceMatrix);
+-```
+-
+-### Axis conversion (Y-up to Z-up)
+-
+-```javascript
+-const axisMatrix = new THREE.Matrix4().makeRotationX(-Math.PI / 2);
+-geom.applyMatrix4(axisMatrix);
+-```
+-
+-## Per-part OBJ export
+-
+-- Collect meshes owned by each part.
+-- **Do not traverse into child named groups** when exporting a part.
+-- Merge baked geometries per part and write `<part>.obj`.
+-
+-Reference: `references/link-export-rules.md`.
+-
+-## Relation between Three.js and URDF articulation
+-
+-- Use named groups as links.
+-- Parent is the nearest named ancestor link.
+-- Joint type defaults to `fixed` unless evidence suggests `revolute`/`prismatic`.
+-- Sort link and joint names for determinism.
+-
+-References:
+-- `references/joint-type-heuristics.md`
+-- `references/urdf-minimal.md`
+-
+-## Scripts
+-
+-- InstancedMesh OBJ exporter: `node scripts/export_instanced_obj.mjs`
+-- Per-link OBJ exporter: `node scripts/export_link_objs.mjs --input <scene_js> --out-dir <dir>`
+-- URDF builder: `node scripts/build_urdf_from_scene.mjs --input <scene_js> --output <file.urdf> --mesh-dir <mesh_dir>`
+-
+-Adjust inputs/outputs inside scripts as needed.
++Attached `bench_skills/` files use ordinary read/shell tools, not registered skill IDs. Native registered resources use `skill.execute`. Per-part script: `export_link_objs.mjs --input <scene_js> --out-dir <dir>`; URDF: `build_urdf_from_scene.mjs --input <scene_js> --output <file.urdf> --mesh-dir <dir>`. Do not probe unrelated scripts for a single OBJ.

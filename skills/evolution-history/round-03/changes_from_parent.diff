@@ -1,0 +1,54 @@
+--- parent/SKILL.md
++++ round-03/SKILL.md
+@@ -5,19 +5,20 @@
+ 
+ # Three.js export
+ 
+-## Route first
++## Route
+ 
+-- Single OBJ: traverse once into one container; retain mesh names. No part map, merging, or articulation references.
+-- Per-part OBJ: assign meshes to their nearest named Group; key by Group identity, not name. Nested groups own separate meshes. Skip empty parts; use deterministic unique filenames. Read `link-export-rules.md`.
++- Single OBJ: one traversal into one container; retain mesh names. No part map, merging, or articulation references.
++- Per-part OBJ: meshes belong to their nearest named Group; key by Group identity, not name. Nested groups own separate meshes. Skip empty parts; use deterministic unique filenames. Read `link-export-rules.md`.
+ - URDF: named groups are links; nearest named ancestor is parent. Default joints to fixed absent motion evidence. Read `joint-type-heuristics.md` and `urdf-minimal.md`.
+ 
+-## Runtime: use known answers
++## Runtime
+ 
+-Use the task-pinned version (observed working: `three@0.175.0`). When installation is needed, install once: `npm install --no-audit --no-fund three@0.175.0`; do not first run an exporter to discover missing dependencies.
++Stay in the current project; do not probe other sessions or system dependency paths. If installation is needed, run once: `npm install --no-audit --no-fund three@0.175.0` (use the task-pinned version). Do not run exporters to discover missing dependencies.
+ 
+-Preserve input bytes. In a loader located under the project, resolve its bare import in memory, not by rewriting input or constructing a hardcoded node_modules path:
++Preserve input bytes. Load its bare import using an in-memory copy; no hardcoded node_modules path:
+ 
+ ```javascript
++// fs = node:fs/promises; loader resides under the project.
+ const source = (await fs.readFile(input, 'utf8')).replace(
+   /(from\s*)(['"])three\2/g,
+   (_, prefix) => prefix + JSON.stringify(import.meta.resolve('three')));
+@@ -25,16 +26,16 @@
+   'data:text/javascript;base64,' + Buffer.from(source).toString('base64'));
+ ```
+ 
+-`fs` above is `node:fs/promises`. Resolve other imports only if present.
++Resolve other imports only if present. Use read/write/edit for file operations; batch independent reads.
+ 
+-## Single-OBJ baking
++## Single OBJ
+ 
+-1. Call `createScene()`, then `root.updateMatrixWorld(true)`; never recenter or rescale.
+-2. Ordinary mesh: `world = mesh.matrixWorld`. For each instance: `getMatrixAt(i, instance)` then `world = mesh.matrixWorld.clone().multiply(instance)`.
+-3. Clone geometry; ensure normals exist. For precision-sensitive baking promote cloned position/normal attributes to Float64. Apply `axis.clone().multiply(world)` once. Axis is identity unless requested; -90° X is `new THREE.Matrix4().makeRotationX(-Math.PI / 2)`.
+-4. `geometry.applyMatrix4(transform)` handles inverse-transpose normals. When `transform.determinant() < 0`, create sequential indices if absent, then swap each triangle's second/third indices. Do not negate normals, discard UVs, or unconditionally call `toNonIndexed()`.
+-5. Put baked geometry on identity-transform Mesh objects; retain names and suffix instances. Update container world matrices; serialize with Three.js `OBJExporter`.
+-6. Validate once with concise checks: scene-derived counts including instances, finite attributes, face-index ranges, transformed positions, and nondegenerate face/normal orientation. No hardcoded counts, repeated exports, or expanded reusable audit framework.
++1. Call `createScene()` and `root.updateMatrixWorld(true)`; never recenter or rescale.
++2. Ordinary mesh: `world = mesh.matrixWorld`. Every instance: `getMatrixAt(i, instance)` then `world = mesh.matrixWorld.clone().multiply(instance)`.
++3. Clone geometry; ensure normals exist. Promote cloned position/normal attributes to Float64 for precision-sensitive baking. Apply `axis.clone().multiply(world)` once. Axis defaults to identity; requested -90° X uses `new THREE.Matrix4().makeRotationX(-Math.PI / 2)`.
++4. `applyMatrix4` handles inverse-transpose normals. If the combined determinant is negative, create sequential indices if absent and swap each triangle's second/third indices. Do not negate normals, discard UVs, or unconditionally call `toNonIndexed()`.
++5. Add baked geometry on identity-transform Mesh objects; retain names, suffix instances. Update container world matrices; serialize with Three.js `OBJExporter`.
++6. Validate once: derive expected counts/positions while traversing the source, including instances; check serialized OBJ counts, finite attributes, index ranges, transformed positions, and nondegenerate face/normal orientation. Do not duplicate these checks on baked geometry, hardcode counts, rerun exports, or build a reusable audit framework.
+ 
+ ## Resources
+ 

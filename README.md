@@ -1,26 +1,32 @@
 # profy-2026
 
-## 最新: SkillsBench自带skills的三组小跑
+先看最新结果, 再看三组skills和进化过程. 这里保存实验代码与证据, 不代表论文已经采用这些结果.
 
-[实际数字与结论](experiments/skillsbench_evolution_20261110/RESULTS.md) · [计划](experiments/skillsbench_evolution_20261110/PLAN.md) · [运行说明](experiments/skillsbench_evolution_20261110/README.md)
+| 想看什么 | 从哪里开始 |
+| --- | --- |
+| 最新结果, 做完了多少 | [当前状态](docs/STATUS.md) |
+| no-skills / with-skills / with-CogniLife-skills | [三组skills](skills/README.md) |
+| 每版怎么进化, 改了什么 | [全部版本目录](skills/evolution-history/)和[版本索引](skills/VERSION_INDEX.json) |
+| 实际输出、得分和tokens | [结果入口](results/README.md) |
+| 找运行代码 | [代码入口](experiments/README.md) |
+| 查旧原型和失败记录 | [历史入口](archive/README.md) |
 
-2026-11-10: 已完成5次Profy求解和4次OpenRouter进化请求. 开发原题原版/候选均3/3; 新原题no-skills 1/3、原版skills 3/3、进化版1/3. 进化把开发题专用坐标旋转泛化到了新题, 原生输出和只读坐标诊断支持该解释. 当前版本不扩大, 不改论文或提交OpenReview.
+## 目前的实际结果
 
-本轮使用收到的原Evolution prompt、workflow、skill工具函数和ratchet的外部适配, 没用自写提取prompt. 不声称调用了Profy内部Evolution/promotion服务或完成完整CogniLife复现. 原skills、派生skill正文和第三方代码均未提交.
+| 实验 | 原版skills | 进化版skills | 本次观察 |
+| --- | --- | --- | --- |
+| threejs两题 | 两题全通过, 237638 tokens | 两题全通过, 217326 tokens | 合计少8.55%; 分部件题反而多18.2% |
+| 电价分析一题 | 4/4, 181580 tokens | 4/4, 98354 tokens | 少45.83% tokens, 正确性相同 |
 
+threejs两题参与过调试. 电价分析题没有用于生成skill, 但与开发题使用同一公开电网文件、目标不同. 都不能据此宣称全库提升. 原方法仍有缺失实现, 详见各版记录. 论文和OpenReview未改.
 
-这里保存本助手写的实验代码、说明和数字摘要. 不放收到的Profy源码、expert包、benchmark源码、原附件、gold或密钥.
+## 当前执行约定
 
-## 此前的原生链路核对
+- 只使用已授权的OpenRouter和Profy keys, 不额外购买服务.
+- 全部串行, 不并行调用模型、agent或构建环境.
+- 500GB家用电脑只留轻量代码、必要记录和常用小依赖. 不在本机堆Docker镜像、全库环境或大缓存.
+- 正在迁移到Profy云端评分. 已完成云端工具检查, 尚未验证整个云端评分链路; SkillsBench全库87题尚未完成.
+- 每轮保存真实候选、原版出处、parent/request/candidate hash和实际结果. 不把自评分当实测分数, 不把评测答案送进进化.
+- 不提交keys、收到的Profy公司源码、隐藏评分材料或无关第三方代码. 原版与派生SKILL.md按用户本次要求归档; 其他公开资源仅记录来源和hash.
 
-[原方法、已有代码和API核对](experiments/native_method_feasibility_20261110/METHOD_CODE_API_MAP.md)和[接通原方法后的小跑计划](experiments/native_method_feasibility_20261110/PILOT_PLAN.md).
-
-2026-11-10状态: 原Evolution prompt、10维rubric和ratchet已收到, 原函数10项离线检查通过. 但当前原生运行入口、expert技能注册/隔离及提交稿对应的分类与promotion代码版本没有对齐. 本轮新增模型调用0次, 付费小跑尚未启动. 离线检查不是效果实验, 不标记为方法验证完成.
-
-## 以前跑过什么
-
-[修正版实际结果](experiments/three_arm_pilot_20261110/RESULTS_V2.md): 三组交付JSON完全相同, 原整题strict都是0, 没有观察到本题得分提升. 项目skill的传入与读取已检查, 但它不构成对全部平台默认能力的排除.
-
-[只读诊断](experiments/three_arm_pilot_20261110/DIAGNOSIS_V2.md): 第三组是自写prompt生成候选、开发检查后替换skill的原型, 不是原论文的skill evolution实现. 诊断解释了相同输出、缺失的原方法步骤, 以及字节长度门槛与原context_footprint指标的差别. 没有修改原分数.
-
-[原型运行说明](experiments/three_arm_pilot_20261110/README.md)和[首版无效对照](experiments/three_arm_pilot_20261110/RESULTS.md)保留归档. PersonaMem探索脚本在同目录archive/personamem, 不作为论文方法效果证据. 完整原文件、输出和日志留在仓库外.
+旧路径保留, 以前的链接仍可用. 旧版本从历史入口查, 不再占据首页最新结果的位置.

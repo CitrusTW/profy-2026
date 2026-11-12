@@ -1,0 +1,43 @@
+{
+  "obj-exporter": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/threejs-to-obj/environment/skills/obj-exporter",
+    "skill_sha256": "e6681249baeab46443a2ddd1ef7983099dced6851b18dba3572b3967e5548056",
+    "resources": {}
+  },
+  "threejs": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/threejs-to-obj/environment/skills/threejs",
+    "skill_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+    "resources": {
+      "references/urdf-minimal.md": "204b4ae283774fe2a8181a605aa9f0d79355f6c8bf4b060c53891a2136750aee",
+      "references/joint-type-heuristics.md": "459af44b906bb2bf61a940e88b83b1cf7afe3ddb17c17d355577f987c6a6214b",
+      "references/link-export-rules.md": "7c664561c879a7be8d799665f781ba8497abcdbf34ec6c369121fd57d699b835",
+      "scripts/build_urdf_from_scene.mjs": "db916f0930dd39a8e4a17ee2ddb4b166bdc41df57baacc46123fa65a052fe284",
+      "scripts/export_link_objs.mjs": "95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494",
+      "scripts/export_instanced_obj.mjs": "b2d33217a6d67ecfc877bfe2d696d681409723f6ed5b5be1e12b75922a90de82"
+    }
+  },
+  "dc-power-flow": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/energy-market-pricing/environment/skills/dc-power-flow",
+    "skill_sha256": "461a4a93c6baf5f84eaa16881b11d76d0542907c8bb50745eceeb21d217e480e",
+    "resources": {
+      "scripts/build_b_matrix.py": "8ed65d06fe16b87b13eadf33397b3986de95afa515ec5dcb6f22df8201a44095"
+    }
+  },
+  "economic-dispatch": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/energy-market-pricing/environment/skills/economic-dispatch",
+    "skill_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+    "resources": {
+      "references/cost-functions.md": "a9bf78f5dd90f559d50872d526c1c7bf6685f6c8147c95ec701d1628d318d0ee"
+    }
+  },
+  "power-flow-data": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/energy-market-pricing/environment/skills/power-flow-data",
+    "skill_sha256": "7c6544423d4106746ca831e431e6725292015c768e7958a168c57db140051846",
+    "resources": {}
+  },
+  "locational-marginal-prices": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/energy-market-pricing/environment/skills/locational-marginal-prices",
+    "skill_sha256": "c48851e863afad9f416e52d57f5b065cc9a7a1ab2146b829abae4ac85412f2ac",
+    "resources": {}
+  }
+}

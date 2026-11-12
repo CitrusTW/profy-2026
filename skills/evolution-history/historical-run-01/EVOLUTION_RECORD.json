@@ -1,0 +1,185 @@
+{
+  "version": "historical-run-01",
+  "skill": "threejs",
+  "model": "openai/gpt-4.1",
+  "selected_current": false,
+  "candidate_sha256": "c166463db05619ec61b5d74556fa94d7efdc00ab5094060d51ed33515ca3a946",
+  "source_artifact": "01_任务结果/2026-11-10_skillsbench_evolution/run-01/evolution/candidate_SKILL.md",
+  "original_public_source": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/threejs-to-obj/environment/skills/threejs",
+    "skill_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+    "resources": {
+      "references/urdf-minimal.md": "204b4ae283774fe2a8181a605aa9f0d79355f6c8bf4b060c53891a2136750aee",
+      "references/joint-type-heuristics.md": "459af44b906bb2bf61a940e88b83b1cf7afe3ddb17c17d355577f987c6a6214b",
+      "references/link-export-rules.md": "7c664561c879a7be8d799665f781ba8497abcdbf34ec6c369121fd57d699b835",
+      "scripts/build_urdf_from_scene.mjs": "db916f0930dd39a8e4a17ee2ddb4b166bdc41df57baacc46123fa65a052fe284",
+      "scripts/export_link_objs.mjs": "95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494",
+      "scripts/export_instanced_obj.mjs": "b2d33217a6d67ecfc877bfe2d696d681409723f6ed5b5be1e12b75922a90de82"
+    }
+  },
+  "provenance": {},
+  "evolution_summary": {
+    "accepted_by_original_gate": true,
+    "model": "openai/gpt-4.1",
+    "requests": 4,
+    "usage": [
+      {
+        "prompt_tokens": 21349,
+        "completion_tokens": 20,
+        "total_tokens": 21369,
+        "cost": 0.042858,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.042858,
+          "upstream_inference_prompt_cost": 0.042698,
+          "upstream_inference_completions_cost": 0.00016
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 22694,
+        "completion_tokens": 14,
+        "total_tokens": 22708,
+        "cost": 0.013628,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 21248,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.013628,
+          "upstream_inference_prompt_cost": 0.013516,
+          "upstream_inference_completions_cost": 0.000112
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 22814,
+        "completion_tokens": 21,
+        "total_tokens": 22835,
+        "cost": 0.011812,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 22656,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.011812,
+          "upstream_inference_prompt_cost": 0.011644,
+          "upstream_inference_completions_cost": 0.000168
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 23999,
+        "completion_tokens": 882,
+        "total_tokens": 24881,
+        "cost": 0.02107,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 22656,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.02107,
+          "upstream_inference_prompt_cost": 0.014014,
+          "upstream_inference_completions_cost": 0.007056
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "elapsed_sec": 8.769,
+    "storage": "external adapter local pending, not Profy database",
+    "source_functions_modified": false
+  },
+  "actual_model_tool_calls": [
+    {
+      "response_file": "response_1.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "activate",
+        "name": "builtin/evolution"
+      }
+    },
+    {
+      "response_file": "response_2.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "discover"
+      }
+    },
+    {
+      "response_file": "response_3.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "activate",
+        "name": "expert/threejs"
+      }
+    },
+    {
+      "response_file": "response_4.json",
+      "tool": "evolution_log",
+      "arguments": {
+        "action": "suggest_skill_improvement",
+        "skill_name": "threejs",
+        "summary": "Compress and clarify export workflow, encode axis conversion and mesh baking as explicit steps, and remove redundant prose.",
+        "diff_summary": "- Collapsed introductory prose and scene graph explanation into concise bullet points.\n- Moved all concrete export steps into a single, numbered workflow with explicit axis conversion and mesh baking.\n- Removed repeated or verbose explanations, focusing on actionable steps and known-good commands.\n- Added explicit 'do NOT' guidance for common antipatterns (e.g., traversing into child named groups during per-part export).\n- Reduced document size to improve context footprint and efficiency, while preserving all empirically grounded steps from the trajectory and run_stats.",
+        "before_scores": {
+          "frontmatter_quality": 100,
+          "workflow_clarity": 70,
+          "failure_encoding": 50,
+          "executable_specificity": 80,
+          "architecture_fit": 100,
+          "antipattern_coverage": 50,
+          "empirical_grounding": 100,
+          "step_economy": 50,
+          "exploration_replacement": 50
+        },
+        "after_scores": {
+          "frontmatter_quality": 100,
+          "workflow_clarity": 100,
+          "failure_encoding": 70,
+          "executable_specificity": 100,
+          "architecture_fit": 100,
+          "antipattern_coverage": 100,
+          "empirical_grounding": 100,
+          "step_economy": 100,
+          "exploration_replacement": 100
+        },
+        "improved_dimensions": "workflow_clarity,failure_encoding,executable_specificity,antipattern_coverage,step_economy,exploration_replacement"
+      }
+    }
+  ],
+  "actual_development_results": {},
+  "data_boundary": "Original Profy context and DEV histories stay in the workspace. Their request hashes and history counts are in provenance. No keys, company source, evaluation answers or verifier are included.",
+  "missing_original_implementations": null,
+  "repository_validation_record": null
+}

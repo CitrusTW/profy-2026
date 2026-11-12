@@ -1,0 +1,8 @@
+{
+  "base": "../with-skills",
+  "overrides": {
+    "threejs": "round-05",
+    "economic-dispatch": "round-06"
+  },
+  "other_supplied_skills": "Same original files as with-skills; no unrelated threejs skill is added to other tasks."
+}

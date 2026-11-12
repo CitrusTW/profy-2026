@@ -1,0 +1,239 @@
+{
+  "version": "historical-run-02-gpt61",
+  "skill": "threejs",
+  "model": "gpt-6.1-sol",
+  "selected_current": false,
+  "candidate_sha256": "d94e59830e1c21c4d7b4ad379b134794d91e2dba7eb14a254b1afeea7c5c291b",
+  "source_artifact": "01_任务结果/2026-11-10_skillsbench_evolution/run-02-gpt61/evolution/candidate_SKILL.md",
+  "original_public_source": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/threejs-to-obj/environment/skills/threejs",
+    "skill_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+    "resources": {
+      "references/urdf-minimal.md": "204b4ae283774fe2a8181a605aa9f0d79355f6c8bf4b060c53891a2136750aee",
+      "references/joint-type-heuristics.md": "459af44b906bb2bf61a940e88b83b1cf7afe3ddb17c17d355577f987c6a6214b",
+      "references/link-export-rules.md": "7c664561c879a7be8d799665f781ba8497abcdbf34ec6c369121fd57d699b835",
+      "scripts/build_urdf_from_scene.mjs": "db916f0930dd39a8e4a17ee2ddb4b166bdc41df57baacc46123fa65a052fe284",
+      "scripts/export_link_objs.mjs": "95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494",
+      "scripts/export_instanced_obj.mjs": "b2d33217a6d67ecfc877bfe2d696d681409723f6ed5b5be1e12b75922a90de82"
+    }
+  },
+  "provenance": {
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "parent_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+    "request_sha256": "3f1079ec476c7aa516242866d85f15747e0f39a741645ae8cc6db20c4a3bb0aa",
+    "context": {
+      "layers": {
+        "security_fence": "b1be525cae8074fd",
+        "expert_guard": null,
+        "identity": "4db4cfd8aa5e0083",
+        "soul": "35832c95333baf33",
+        "tool_calling": "ad5e84e31096b04a",
+        "workflow": "95e3aa1c069c6b4e",
+        "sandbox_environment": null,
+        "desktop_environment": null,
+        "plugin_registry": "ecd88868949390df",
+        "skill_registry": "748678a25907d02f",
+        "subagents_registry": null,
+        "plan_mode": null,
+        "working_directory": null,
+        "workspace_instructions": null,
+        "expert_agent": null
+      },
+      "token_estimates": {
+        "security_fence": 923,
+        "identity": 1163,
+        "soul": 496,
+        "tool_calling": 12147,
+        "workflow": 3644,
+        "plugin_registry": 639,
+        "skill_registry": 182
+      },
+      "token_counting": "original heuristic fallback; not billed tokens"
+    },
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    },
+    "history_adapter": "public DEV SSE roles and complete tool-call/result pairs; not native DB replay"
+  },
+  "evolution_summary": {
+    "accepted_by_original_gate": true,
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "requests": 4,
+    "usage": [
+      {
+        "prompt_tokens": 37656,
+        "completion_tokens": 23,
+        "total_tokens": 37679,
+        "cost": 0.0943685,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 37653,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0943685,
+          "upstream_inference_prompt_cost": 0.0941385,
+          "upstream_inference_completions_cost": 0.00023
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 39009,
+        "completion_tokens": 17,
+        "total_tokens": 39026,
+        "cost": 0.0073238,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 37653,
+          "cache_write_tokens": 1353,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0073238,
+          "upstream_inference_prompt_cost": 0.0071538,
+          "upstream_inference_completions_cost": 0.00017
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 39197,
+        "completion_tokens": 24,
+        "total_tokens": 39221,
+        "cost": 0.0046166,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 39006,
+          "cache_write_tokens": 188,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0046166,
+          "upstream_inference_prompt_cost": 0.0043766,
+          "upstream_inference_completions_cost": 0.00024
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 40390,
+        "completion_tokens": 1300,
+        "total_tokens": 41690,
+        "cost": 0.0199079,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 39194,
+          "cache_write_tokens": 1193,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0199079,
+          "upstream_inference_prompt_cost": 0.0069079,
+          "upstream_inference_completions_cost": 0.013
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 98,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "elapsed_sec": 32.386,
+    "storage": "external adapter local pending, not Profy database",
+    "source_functions_modified": false,
+    "native_promoted": false,
+    "semantic_applicability_verified": false,
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    }
+  },
+  "actual_model_tool_calls": [
+    {
+      "response_file": "response_1.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "activate",
+        "name": "builtin/evolution"
+      }
+    },
+    {
+      "response_file": "response_2.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "discover"
+      }
+    },
+    {
+      "response_file": "response_3.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "activate",
+        "name": "expert/threejs"
+      }
+    },
+    {
+      "response_file": "response_4.json",
+      "tool": "evolution_log",
+      "arguments": {
+        "action": "suggest_skill_improvement",
+        "skill_name": "threejs",
+        "summary": "Route single-OBJ requests directly to transform-safe instance baking; remove unnecessary partitioning and geometry expansion.",
+        "diff_summary": "Replaces the default per-link workflow and redundant scene-graph exposition with an output-specific route. Encodes the successful run's matrix order, explicit instance expansion, reflection winding correction, and unchanged-input handling. Keeps per-part/URDF references and resource entry points, but loads them only for requested outputs. Removes unconditional toNonIndexed and merge requirements, avoiding extra vertices and attribute-compatibility work. Run 0 succeeded in 9 tool calls but consumed 152865 tokens; this is a compact replacement, not evidence of measured subsequent savings.",
+        "before_scores": {
+          "frontmatter_quality": 85,
+          "workflow_clarity": 69,
+          "failure_encoding": 32,
+          "executable_specificity": 75,
+          "architecture_fit": 75,
+          "antipattern_coverage": 42,
+          "empirical_grounding": 65,
+          "step_economy": 48,
+          "exploration_replacement": 48
+        },
+        "after_scores": {
+          "frontmatter_quality": 90,
+          "workflow_clarity": 89,
+          "failure_encoding": 75,
+          "executable_specificity": 83,
+          "architecture_fit": 85,
+          "antipattern_coverage": 86,
+          "empirical_grounding": 83,
+          "step_economy": 84,
+          "exploration_replacement": 82
+        },
+        "improved_dimensions": "frontmatter_quality,workflow_clarity,failure_encoding,executable_specificity,architecture_fit,antipattern_coverage,empirical_grounding,step_economy,exploration_replacement"
+      }
+    }
+  ],
+  "actual_development_results": {},
+  "data_boundary": "Original Profy context and DEV histories stay in the workspace. Their request hashes and history counts are in provenance. No keys, company source, evaluation answers or verifier are included.",
+  "missing_original_implementations": {
+    "capability_gap_classifier": "No callable implementation identified in the received source.",
+    "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+    "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+  },
+  "repository_validation_record": null
+}

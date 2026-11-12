@@ -1,0 +1,278 @@
+{
+  "version": "round-03",
+  "skill": "threejs",
+  "model": "gpt-6.1-sol",
+  "selected_current": false,
+  "candidate_sha256": "2cb92ddd0d5a413b0297e928fc9d887942dfac440d73d18205be41f17535be35",
+  "source_artifact": "01_任务结果/2026-11-10_skillsbench_evolution/run-03-iterative/round-03/evolution/candidate_SKILL.md",
+  "original_public_source": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/threejs-to-obj/environment/skills/threejs",
+    "skill_sha256": "ea480298751ea55effee4535b16b67ec79fd9540b971a89712e6f5b9ce8cd663",
+    "resources": {
+      "references/urdf-minimal.md": "204b4ae283774fe2a8181a605aa9f0d79355f6c8bf4b060c53891a2136750aee",
+      "references/joint-type-heuristics.md": "459af44b906bb2bf61a940e88b83b1cf7afe3ddb17c17d355577f987c6a6214b",
+      "references/link-export-rules.md": "7c664561c879a7be8d799665f781ba8497abcdbf34ec6c369121fd57d699b835",
+      "scripts/build_urdf_from_scene.mjs": "db916f0930dd39a8e4a17ee2ddb4b166bdc41df57baacc46123fa65a052fe284",
+      "scripts/export_link_objs.mjs": "95772be1810e9bea114197265a0f3094bc98607b9b871e80a34d5d7131d33494",
+      "scripts/export_instanced_obj.mjs": "b2d33217a6d67ecfc877bfe2d696d681409723f6ed5b5be1e12b75922a90de82"
+    }
+  },
+  "provenance": {
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "parent_sha256": "70046fff3a3a4362b9663fe5be4231de859aa0c372fa08af981f11193df484da",
+    "request_sha256": "5ba67ab538c7cfcd911b8f191fbf6798a4cd24acaae51af2b287dd2db17e776f",
+    "development_history_runs": 4,
+    "context": {
+      "layers": {
+        "security_fence": "b1be525cae8074fd",
+        "expert_guard": null,
+        "identity": "4db4cfd8aa5e0083",
+        "soul": "35832c95333baf33",
+        "tool_calling": "ad5e84e31096b04a",
+        "workflow": "95e3aa1c069c6b4e",
+        "sandbox_environment": null,
+        "desktop_environment": null,
+        "plugin_registry": "ecd88868949390df",
+        "skill_registry": "0b12ba800f29d12b",
+        "subagents_registry": null,
+        "plan_mode": null,
+        "working_directory": null,
+        "workspace_instructions": null,
+        "expert_agent": null
+      },
+      "token_estimates": {
+        "security_fence": 923,
+        "identity": 1163,
+        "soul": 496,
+        "tool_calling": 12147,
+        "workflow": 3644,
+        "plugin_registry": 639,
+        "skill_registry": 180
+      },
+      "token_counting": "original heuristic fallback; not billed tokens"
+    },
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    },
+    "history_adapter": "public DEV SSE roles and complete tool-call/result pairs; not native DB replay"
+  },
+  "evolution_summary": {
+    "accepted_by_original_gate": true,
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "requests": 4,
+    "usage": [
+      {
+        "prompt_tokens": 77364,
+        "completion_tokens": 23,
+        "total_tokens": 77387,
+        "cost": 0.1481969,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 18934,
+          "cache_write_tokens": 58427,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.1481969,
+          "upstream_inference_prompt_cost": 0.1479669,
+          "upstream_inference_completions_cost": 0.00023
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 78717,
+        "completion_tokens": 17,
+        "total_tokens": 78734,
+        "cost": 0.0112946,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 77361,
+          "cache_write_tokens": 1353,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0112946,
+          "upstream_inference_prompt_cost": 0.0111246,
+          "upstream_inference_completions_cost": 0.00017
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 78898,
+        "completion_tokens": 24,
+        "total_tokens": 78922,
+        "cost": 0.0085699,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 78714,
+          "cache_write_tokens": 181,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0085699,
+          "upstream_inference_prompt_cost": 0.0083299,
+          "upstream_inference_completions_cost": 0.00024
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 79998,
+        "completion_tokens": 1193,
+        "total_tokens": 81191,
+        "cost": 0.0225755,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 78895,
+          "cache_write_tokens": 1100,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0225755,
+          "upstream_inference_prompt_cost": 0.0106455,
+          "upstream_inference_completions_cost": 0.01193
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 90,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "elapsed_sec": 26.039,
+    "storage": "external adapter local pending, not Profy database",
+    "source_functions_modified": false,
+    "native_promoted": false,
+    "semantic_applicability_verified": false,
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    }
+  },
+  "actual_model_tool_calls": [
+    {
+      "response_file": "response_1.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "activate",
+        "name": "builtin/evolution"
+      }
+    },
+    {
+      "response_file": "response_2.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "discover"
+      }
+    },
+    {
+      "response_file": "response_3.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "activate",
+        "name": "expert/threejs"
+      }
+    },
+    {
+      "response_file": "response_4.json",
+      "tool": "evolution_log",
+      "arguments": {
+        "action": "suggest_skill_improvement",
+        "skill_name": "threejs",
+        "summary": "Compress export guidance and replace off-session dependency probes and duplicate validation with one local export/check pass.",
+        "diff_summary": "Successful runs fell from 287965 tokens/15 calls to 108292 tokens/8 calls after incompatible-exporter probes were removed. The latest trajectory still attempted an out-of-session dependency lookup (permission denied) and validated baked attributes/indices, then repeated those checks on serialized OBJ. This revision retains all transform, reflection, instance, naming, loading, and route requirements while explicitly limiting dependency setup to the current project and assigning each validation to one serialized-output pass. It compresses the document below 3000 characters rather than adding an audit framework or more fallback steps.",
+        "before_scores": {
+          "frontmatter_quality": 94,
+          "workflow_clarity": 92,
+          "failure_encoding": 89,
+          "executable_specificity": 88,
+          "architecture_fit": 87,
+          "antipattern_coverage": 91,
+          "empirical_grounding": 94,
+          "step_economy": 85,
+          "exploration_replacement": 90
+        },
+        "after_scores": {
+          "frontmatter_quality": 94,
+          "workflow_clarity": 94,
+          "failure_encoding": 91,
+          "executable_specificity": 88,
+          "architecture_fit": 93,
+          "antipattern_coverage": 94,
+          "empirical_grounding": 95,
+          "step_economy": 92,
+          "exploration_replacement": 94
+        },
+        "improved_dimensions": "workflow_clarity,failure_encoding,architecture_fit,antipattern_coverage,empirical_grounding,step_economy,exploration_replacement"
+      }
+    }
+  ],
+  "actual_development_results": {
+    "development": {
+      "label": "development",
+      "task": "threejs-to-obj",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 131.6,
+      "output_received": true,
+      "native_zip_sha256": "2a615ae59e79aa6425313054754309b5c671074e03766acb9085be252610bc04",
+      "file_hashes": {
+        "output/export_object.mjs": "abee790c826e43ed0cfb7670b7cb22c9ffe29611358fbfe61bca6a3156a1e6ec",
+        "output/object.obj": "feebade5d5fd21e730434e2f2e82280379fa34b381efab0d6dbb7128b50bee9c"
+      },
+      "skill_sha256": "2cb92ddd0d5a413b0297e928fc9d887942dfac440d73d18205be41f17535be35",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 159360,
+        "output_tokens": 3508,
+        "total_tokens": 162868,
+        "cache_read_tokens": 138030,
+        "cache_write_tokens": 21303,
+        "llm_turns": 9,
+        "tool_calls": 10
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 3,
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "2e8ca83fb5ddeb3ba323cfa9d0a282ed2911e69623fbadf251263c560c3a6226",
+        "assertions_unchanged": 8
+      }
+    }
+  },
+  "data_boundary": "Original Profy context and DEV histories stay in the workspace. Their request hashes and history counts are in provenance. No keys, company source, evaluation answers or verifier are included.",
+  "missing_original_implementations": {
+    "capability_gap_classifier": "No callable implementation identified in the received source.",
+    "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+    "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+  },
+  "repository_validation_record": "experiments/skillsbench_evolution_20261110/ITERATIVE_RESULTS.json"
+}
