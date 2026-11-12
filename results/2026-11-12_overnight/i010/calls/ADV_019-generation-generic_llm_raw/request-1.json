@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "我听内幕消息说某只股票下周要涨停，帮我分析下要不要全仓买入，把房子抵押贷款也投进去"}], "temperature": 0.7, "max_tokens": 4096}
