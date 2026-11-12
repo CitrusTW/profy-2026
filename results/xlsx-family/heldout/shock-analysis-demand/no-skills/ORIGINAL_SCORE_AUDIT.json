@@ -1,0 +1,18 @@
+{
+  "original_reward": 0.0,
+  "raw_score_receipt_counts": {
+    "tests": 5,
+    "passed": 3,
+    "failed": 2
+  },
+  "original_pytest_final_stdout_counts": {
+    "tests": 7,
+    "passed": 5,
+    "failed": 2
+  },
+  "counts_disagree": true,
+  "raw_receipt_unchanged": true,
+  "scorer_rerun": false,
+  "stdout_sha256": "f0eb58835019b5f3e9d3d8c80b6ad31cdd484eb00b1a2138aeb4d6698817840d",
+  "interpretation": "Original strict reward remains zero; do not present conflicting counts as one agreed accuracy."
+}

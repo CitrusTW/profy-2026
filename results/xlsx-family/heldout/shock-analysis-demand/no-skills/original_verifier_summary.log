@@ -1,0 +1,9 @@
+=========================== short test summary info ============================
+PASSED ../verifier/test_outputs.py::test_required_sheets_exist
+PASSED ../verifier/test_outputs.py::test_sut_calc_formulas_and_import_share
+PASSED ../verifier/test_outputs.py::test_na_scenarios_assumptions[2-None-1.0-None]
+PASSED ../verifier/test_outputs.py::test_na_scenarios_assumptions[3-None-0.8-0.5]
+PASSED ../verifier/test_outputs.py::test_na_project_allocation_bell_shape
+FAILED ../verifier/test_outputs.py::test_weo_data_has_formulas - AssertionErr...
+FAILED ../verifier/test_outputs.py::test_na_scenarios_assumptions[1-30-0.8-None]
+=================== 2 failed, 5 passed, 2 warnings in 1.32s ====================

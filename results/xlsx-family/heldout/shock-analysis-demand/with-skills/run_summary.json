@@ -1,0 +1,26 @@
+{
+  "label": "with-skills",
+  "task": "shock-analysis-demand",
+  "completed": false,
+  "error": "hard_budget_stop",
+  "elapsed_sec": 836.448,
+  "output_received": false,
+  "native_zip_sha256": null,
+  "file_hashes": {},
+  "skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "target_skill_read_verified": true,
+  "skill_hash_marker_verified": true,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": true,
+  "tokens": {
+    "input_tokens": 1154782,
+    "output_tokens": 14068,
+    "total_tokens": 1168850,
+    "cache_read_tokens": 1076480,
+    "cache_write_tokens": 78227,
+    "llm_turns": 25,
+    "tool_calls": 25
+  },
+  "profy_cost_usd": null
+}

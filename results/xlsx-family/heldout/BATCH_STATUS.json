@@ -1,0 +1,20 @@
+{
+  "batch_state": "stopped",
+  "complete_three_arm_tasks_in_this_batch": 0,
+  "partial_tasks": 1,
+  "unstarted_tasks": 7,
+  "task_states": {
+    "shock-analysis-demand": "no-skills scored; with-skills interrupted; evolved not started",
+    "shock-analysis-supply": "not started",
+    "reserves-at-risk-calc": "not started",
+    "powerlifting-coef-calc": "not started",
+    "xlsx-recover-data": "not started",
+    "invoice-fraud-detection": "not started",
+    "pdf-excel-diff": "not started",
+    "jpg-ocr-stat": "not started"
+  },
+  "reason": "Runner interrupted original-skill arm after 25 usage events exceeded the configured 24-turn cap. Subsequent grading rejected incomplete stream; serial loop raised and did not reach remaining tasks.",
+  "api_service_time_limit_claim": false,
+  "paid_rerun_in_this_status_review": false,
+  "paper_edits": false
+}

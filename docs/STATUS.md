@@ -16,9 +16,13 @@ weighted-gdp-calc 三组都27/27. no-skills 用155489 solver tokens, 原版24881
 
 但第一道未参与进化的 protein-expression-analysis, 三组虽都6/6, 第11轮却用264808 tokens, 原版187869, no-skills183191. 进化版比原版多40.95%, 这道题没有显示质量或效率提升. 不把开发题的收益写成普遍收益, 不用这道题答案回改 skill.
 
-## 正在做什么
+## 8题批次已停止
 
-冻结第11轮, 串行测试其余8道父版 xlsx SKILL.md 和资源匹配的原题. 使用原题、原附件和原评分, 全程不重新出题或改验收. [自动串行入口](../experiments/skillsbench_cloud_runner_20261111/run_frozen_xlsx.py).
+这8题中0题完成三组, 1题部分完成, 7题未开始. shock-analysis-demand 的 no-skills 原 reward0, 使用839001 solver tokens. 原版 skill 组在25次 usage记录超过runner的24轮限制后中止, 已使用1168850 tokens, 没有有效评分. 进化版尚未运行. 不是仍在后台运行, 不把未完成的组算为0分.
+
+原 no-skills 评分回执的计数与 pytest stdout 不一致, 两种计数和原始 reward均保留并标注. [本批完整进度、实际数字与停止证据](../results/xlsx-family/heldout/BATCH_REPORT.md).
+
+本次只复查已有记录并上传证据, 没有付费重跑、修改 skill 或修改论文. 原串行入口仍保留, 未改为自动跳过中止记录.
 
 ## 还没完成什么
 
