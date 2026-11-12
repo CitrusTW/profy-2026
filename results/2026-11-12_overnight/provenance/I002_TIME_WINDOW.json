@@ -1,0 +1,8 @@
+{
+  "stop_new_epoch": 1794519000.0,
+  "paper_start_epoch": 1794519000.0,
+  "interim_report_epoch": 1794499200.0,
+  "finish_epoch": 1794526200.0,
+  "timezone": "America/Los_Angeles",
+  "authority": "coordination INSTRUCTIONS I-002"
+}

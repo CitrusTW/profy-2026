@@ -23,3 +23,7 @@
 
 - User amendment supersedes three-repeat depth-first plan. launch-03 is eight-task breadth-first, maximum two passes; shock-demand reuses old A/B and only adds frozen once. No additional tasks selected. One-run SD is unknown, not zero. Original 24-turn cap unchanged.
 - Historical held-out summary now includes energy round6 and protein pre-round12 test, as explicitly requested. Protein later selection use is separately labelled.
+
+- Read PROTOCOL, INSTRUCTIONS, STATUS_TEMPLATE completely via literal git fetch/show. I-001 supersedes prior night plan; I-002 extends no-new-runs to13:30 PST, final15:30 PST and allows third breadth-first pass. Current active run is not killed. A continuation controller will skip completed attempts and retain the24-turn cap.
+- Operationalize I-002 majority as >half of the fixed10 held-out task slots. Report SD and min/max; token-benefit wording requires observed drop beyond both original sampleSD and original observed minimum, with repetitions. Conservative definition registered before current frozen run finishes, not chosen after seeing results.
+- PROTOCOL explicitly designates STATUS/STATUS_LOG/PROGRESS as updateable management files. Preserve experiment/paper originals and immutable published results; snapshots under new names for recalculations. No force-push and no writes tocoordination.
