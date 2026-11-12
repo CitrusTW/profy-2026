@@ -8,3 +8,7 @@
 ROUND.json中的development.score与confirmation.score才是原评分程序的实际结果. cloud-grade/ACCEPTED_CLOUD_GRADING.json是对应的独立云端评分回执. cloud-grade/result.json记录的是API文件传输流程, 其中的transport-only标记或旧strict=0不表示任务得分为0.
 
 开发题用来生成/选择版本, 评测题在生成版本时没有使用. 3D例子目前仍是开发题结果. 不把云端工具检查、环境准备或接口故障混算成已完成benchmark题数. 论文未改.
+
+## 三组已经补齐
+
+3d-scan-calc 的 no-skills 对照已完成, [完整三组报告](mesh-evolution/frozen-three-arm/REPORT.md)列出实际数字. 三组都2/2, 进化版比原版少约20%-22% tokens, 与 no-skills 基本持平. 这是开发题结果, 不是全库或独立泛化成绩.

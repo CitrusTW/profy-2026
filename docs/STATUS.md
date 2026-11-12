@@ -2,29 +2,30 @@
 
 ## 已完成
 
-1. threejs第5轮达到小范围标准并确认. 随后冻结, 完成two-task三组对照: no-skills通过1/2题, with-skills和with-CogniLife-skills均2/2.
-2. economic-dispatch第6轮在开发题grid-dispatch-operator上两次6/6. 原版306608 tokens, 候选114602, 确认86932.
-3. 冻结第6轮skill后评测energy-market-pricing: no-skills / with-skills / with-CogniLife-skills均4/4, tokens分别204038 / 181580 / 98354.
-4. 通用文件传输适配器在3d-scan-calc上完成原版skills单组验证2/2. 这还不是完整三组实验.
-5. 已定位并保存10份历史候选, 当前采用threejs第5轮、economic-dispatch第6轮和mesh-analysis第9轮. 原版skills、无skills配置也有独立目录.
+| 实验 | 采用版本 | 结果入口 |
+| --- | --- | --- |
+| threejs 两题三组 | 第5轮 | [报告](../results/run-04-up-to30/full-compatible-two/REPORT.md) |
+| energy-market-pricing 三组 | 第6轮 economic-dispatch | [报告](../results/2026-11-11_skillsbench_full_library/network-family/REPORT.md) |
+| 3d-scan-calc 三组 | 第9轮 mesh-analysis | [报告](../results/2026-11-11_skillsbench_cloud_serial/mesh-evolution/frozen-three-arm/REPORT.md) |
 
-## 第8轮接口故障
+共4道题完成三组对照. 另外有 grid-dispatch-operator 开发题记录, 不混算为新的独立评测结果.
 
-OpenRouter收到第一份响应后, 后续请求出现SSL传输错误, 未收到候选skill. 已保留请求hash和已收到的usage, 未收到响应的费用未知. 不记为方法效果失败, 但计入30轮上限. 第9轮随后已完成并确认, 全部串行.
+三组配置、原版 SKILL.md、采用的进化版和10份实际历史候选已归档. 第8轮发生 OpenRouter SSL 传输错误, 未收到候选, 单独保留故障记录并计入30轮上限.
 
-## 正在做
+## 第9轮实际结果
 
-已在独立Profy会话用原评分验证固定3D答案2/2, 核对原测试路径绑定、答案和数据的前后hash. 第7轮候选在云端评分2/2, 但tokens仅少约0.18%, 未采用. 第8轮接口故障后, 第9轮在同一开发题两次2/2, tokens分别125369和127654, 相比原版161063少约22.16%和20.74%. 第9轮已冻结, 下一步补no-skills对照. 这是开发题效果, 不算独立泛化证据. 后续本例要求至少5%降幅并再次确认, 这是开发阶段门槛, 不修改原评分. 云端完整系统环境仍未验证, 不能据此标记全库可跑. 全部串行, 不再构建本机环境.
+3d-scan-calc 三组都通过原评分的2项检查. no-skills 用127350 tokens, 原版161063, 第9轮开发和确认分别125369 / 127654. 进化版比原版少约22.16% / 20.74%, 与 no-skills 基本持平. 这道题用于开发和选择候选, 不能拿它证明独立泛化.
 
-## 没有完成
+第7轮仅少约0.18%, 没采用. 第9轮两次达到预先记录的至少5%降幅门槛后已冻结. 这个门槛是外部实验的选版规则, 不是原论文方法的一部分, 不修改原评分.
 
-SkillsBench全库87题尚未完成. 当前有3道题完成完整三组对照; 另有开发题和适配器检查, 不能混算成全库成绩. 还没有完整CogniLife平台复现, 原代码缺少或未接通capability-gap classifier、通用语义适用性检查和native promotion.
+## 还没完成
 
-## 去哪里看证据
+- SkillsBench 默认全库87题尚未完成.
+- 已跑通3D题的独立云端原评分; 全库各题的云端环境和评分链路还未全部验证.
+- 尚未完整复现 CogniLife 平台. 收到的代码仍缺少或未接通 capability-gap classifier、通用语义适用性检查和 native promotion. 对照实验测的是已明确记录边界的外部适配.
 
-- [电价分析报告](../results/2026-11-11_skillsbench_full_library/network-family/REPORT.md)
-- [电价分析原始数字](../results/2026-11-11_skillsbench_full_library/network-family/frozen-evaluation/RESULTS.json)
-- [threejs两题报告](../results/run-04-up-to30/full-compatible-two/REPORT.md)
-- [完整skill版本索引](../skills/VERSION_INDEX.json)
+## 接下来遵守什么
 
-论文与OpenReview未改. 早期失败成绩不覆盖, 旧解释有修正时另写说明.
+继续使用已有 API, 全部串行, 不在本机搭全库环境或堆缓存. 每轮记录与实际候选上传, 最多30轮. 论文和 OpenReview 未改.
+
+[全部结果](../results/README.md) | [三组 skills](../skills/README.md) | [每轮进化](../skills/evolution-history/README.md)

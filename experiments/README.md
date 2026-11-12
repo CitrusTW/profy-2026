@@ -1,13 +1,26 @@
-# 找代码
+# 找运行代码
 
-| 目录 | 用途 | 当前怎么用 |
+当前代码都在 [skillsbench_evolution_20261110](skillsbench_evolution_20261110/). 先按用途找文件, 不需要把每个脚本读一遍.
+
+## 当前流程
+
+| 步骤 | 代码 | 做什么 |
 | --- | --- | --- |
-| skillsbench_evolution_20261110/ | 收到的Evolution代码的外部适配、候选检查、记录和评分工具 | 当前开发位置; 按云端、串行要求继续修整 |
-| native_method_feasibility_20261110/ | 原方法、收到的代码和API对照 | 查方法边界, 不当执行结果 |
-| three_arm_pilot_20261110/ | 更早的三组原型和PersonaMem探索 | 历史代码, 不是当前CogniLife方法效果证据 |
+| 生成候选 | [native_evolution.py](skillsbench_evolution_20261110/native_evolution.py) | 通过 OpenRouter 调用收到的 Evolution 组件, 用开发轨迹生成候选 |
+| 运行求解 | [run.py](skillsbench_evolution_20261110/run.py) | Profy 调用、传输入、接输出、检查实际读了哪个 skill |
+| 3D 小范围进化与确认 | [cloud_serial_3d.py](skillsbench_evolution_20261110/cloud_serial_3d.py) | 串行进化、求解、原评分和确认 |
+| 3D 独立云端原评分 | [cloud_grade_3d.py](skillsbench_evolution_20261110/cloud_grade_3d.py) | 在独立会话对实际输出跑原测试; 测试不提供给求解或进化 |
+| 归档三组和历史版本 | [export_skill_archive.py](skillsbench_evolution_20261110/export_skill_archive.py) | 导出 SKILL.md、来源、修改过程和实际指标 |
 
-skillsbench_evolution_20261110里的profy_cloud_probe.py已实际检查云端工具; native_evolution.py调用收到的原Evolution组件. export_skill_archive.py归档各版skills与来源.
+这些入口仍依赖本地收到的原方法组件和固定版本的公开 SkillsBench 资源. 本 repo 没有复制收到的 Profy 公司源码, 不是下载后就能独立跑全库的完整包.
 
-旧脚本中的本地Docker构建和ThreadPool入口不再是当前运行入口. 当前要求全部串行、只使用已有云端API、不在本机搭全库环境. 云端完整评分入口尚在验证, 不提供一个未经验证的“一键跑全库”承诺.
+## 旧原型与方法核对
 
-运行需要已有Profy key、expert identifier和OpenRouter key. 只通过工作区外的密钥文件读取, 不把key值放进repo、命令参数、报告或聊天.
+| 目录 | 用途 |
+| --- | --- |
+| [native_method_feasibility_20261110](native_method_feasibility_20261110/) | 对照论文方法、收到的代码和 API, 查缺口 |
+| [three_arm_pilot_20261110](three_arm_pilot_20261110/) | 早期三组原型与 PersonaMem 尝试, 不作为当前方法效果证据 |
+
+旧的本地 Docker 构建入口不再使用. 全部串行, 不在本机搭全库环境或堆缓存. 目前只验证了部分题目的云端流程, 没有一个已验证的87题一键入口.
+
+keys 只从 repo 外的文件读取; 不把值写进代码、命令参数、报告或聊天.

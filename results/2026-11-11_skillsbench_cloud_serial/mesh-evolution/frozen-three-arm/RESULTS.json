@@ -1,0 +1,179 @@
+{
+  "scope": "one development task, not independent generalization",
+  "no_skills": {
+    "label": "no-skills",
+    "task": "3d-scan-calc",
+    "completed": true,
+    "error": null,
+    "elapsed_sec": 91.827,
+    "output_received": true,
+    "native_zip_sha256": "e495c0170eeb26728cbeb5bac952ad5c42f514bb481b946051379ddbc29b773e",
+    "file_hashes": {
+      "output/fs/root/mass_report.json": "a345eb89051b33cdd163f82a35f128447e7ac5c70c84b51375fcfb2795859623"
+    },
+    "skill_sha256": null,
+    "target_skill_read_verified": null,
+    "skill_hash_marker_verified": null,
+    "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+    "external_skill_tools_observed": [],
+    "supplied_benchmark_skills": false,
+    "tokens": {
+      "input_tokens": 124021,
+      "output_tokens": 3329,
+      "total_tokens": 127350,
+      "cache_read_tokens": 104137,
+      "cache_write_tokens": 19860,
+      "llm_turns": 8,
+      "tool_calls": 8
+    },
+    "profy_cost_usd": null,
+    "score": {
+      "original_returncode": 0,
+      "strict": 1,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "all_static_hashes_before_after_verified": true,
+      "solver_output_unchanged": true,
+      "grading_context_only": true,
+      "original_source_sha256": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+      "fixed_grader_command_verified": true,
+      "cloud_only": true,
+      "native_artifact_received": true
+    }
+  },
+  "with_skills": {
+    "label": "with-skills",
+    "task": "3d-scan-calc",
+    "completed": true,
+    "error": null,
+    "elapsed_sec": 91.882,
+    "output_received": true,
+    "native_zip_sha256": "9b6cec4de05059758cd88358bcfbb3f2d9f4bce86dd3344fa8a139a476b1c50a",
+    "file_hashes": {
+      "output/fs/root/mass_report.json": "f9ff22bf9b74ce455cedb6adb5e5640e3ea014bf35c681dedced36bdcb8dcb31"
+    },
+    "skill_sha256": "b0c908a5e74b53e73d53105526a57949b90a3e733ea35c14fe8406342b84f7fe",
+    "target_skill_read_verified": true,
+    "external_skill_tools_observed": [],
+    "supplied_benchmark_skills": true,
+    "tokens": {
+      "input_tokens": 157924,
+      "output_tokens": 3139,
+      "total_tokens": 161063,
+      "cache_read_tokens": 137373,
+      "cache_write_tokens": 20521,
+      "llm_turns": 10,
+      "tool_calls": 10
+    },
+    "profy_cost_usd": null,
+    "score": {
+      "strict": 1,
+      "original_reward": 1,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "original_returncode": 0,
+      "test_counts_available": true,
+      "verifier_unmodified": true,
+      "source_hashes": {
+        "test_outputs.py": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+        "test.sh": "dfb59780bbce55de353a8c7f25ad136e7c0fc75da3744bd54b273aed42a8bb16"
+      }
+    },
+    "reader_classification_correction": "Only the attached benchmark mesh-analysis package was read; original score and bytes unchanged"
+  },
+  "evolved_development": {
+    "label": "development",
+    "task": "3d-scan-calc",
+    "completed": true,
+    "error": null,
+    "elapsed_sec": 71.56,
+    "output_received": true,
+    "native_zip_sha256": "bd207379f138f49784915e1d36bc2212aa6f0fda1e186673bec6cf8e03992556",
+    "file_hashes": {
+      "output/fs/root/mass_report.json": "f9ff22bf9b74ce455cedb6adb5e5640e3ea014bf35c681dedced36bdcb8dcb31"
+    },
+    "skill_sha256": "1c98df5bef5f8086801874c3b360a57c8f53783acaa67e83ed58e1e24d057441",
+    "target_skill_read_verified": true,
+    "skill_hash_marker_verified": true,
+    "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+    "external_skill_tools_observed": [],
+    "supplied_benchmark_skills": true,
+    "tokens": {
+      "input_tokens": 123112,
+      "output_tokens": 2257,
+      "total_tokens": 125369,
+      "cache_read_tokens": 103818,
+      "cache_write_tokens": 19270,
+      "llm_turns": 8,
+      "tool_calls": 8
+    },
+    "profy_cost_usd": null,
+    "score": {
+      "original_returncode": 0,
+      "strict": 1,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "all_static_hashes_before_after_verified": true,
+      "solver_output_unchanged": true,
+      "grading_context_only": true,
+      "original_source_sha256": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+      "fixed_grader_command_verified": true,
+      "cloud_only": true,
+      "native_artifact_received": true
+    },
+    "attached_reader_audit": "Native skills_read used the supplied benchmark SKILL.md file path; no external package"
+  },
+  "evolved_confirmation": {
+    "label": "confirmation",
+    "task": "3d-scan-calc",
+    "completed": true,
+    "error": null,
+    "elapsed_sec": 82.077,
+    "output_received": true,
+    "native_zip_sha256": "54aff97a3e169dd5f280def40bbe3d88b33bbd69e1f14a63271c322a2668d24f",
+    "file_hashes": {
+      "output/fs/root/mass_report.json": "f9ff22bf9b74ce455cedb6adb5e5640e3ea014bf35c681dedced36bdcb8dcb31"
+    },
+    "skill_sha256": "1c98df5bef5f8086801874c3b360a57c8f53783acaa67e83ed58e1e24d057441",
+    "target_skill_read_verified": true,
+    "skill_hash_marker_verified": true,
+    "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+    "external_skill_tools_observed": [],
+    "supplied_benchmark_skills": true,
+    "tokens": {
+      "input_tokens": 125251,
+      "output_tokens": 2403,
+      "total_tokens": 127654,
+      "cache_read_tokens": 105342,
+      "cache_write_tokens": 19885,
+      "llm_turns": 8,
+      "tool_calls": 8
+    },
+    "profy_cost_usd": null,
+    "score": {
+      "original_returncode": 0,
+      "strict": 1,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "all_static_hashes_before_after_verified": true,
+      "solver_output_unchanged": true,
+      "grading_context_only": true,
+      "original_source_sha256": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+      "fixed_grader_command_verified": true,
+      "cloud_only": true,
+      "native_artifact_received": true
+    }
+  },
+  "all_original_checks_passed": true,
+  "paper_changed": false,
+  "external_skill_contamination_detected": false,
+  "no_skills_has_no_supplied_benchmark_skills": true
+}

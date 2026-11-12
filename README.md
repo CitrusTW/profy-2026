@@ -1,34 +1,47 @@
 # profy-2026
 
-先看最新结果, 再看三组skills和进化过程. 这里保存实验代码与证据, 不代表论文已经采用这些结果.
+这里保存三组 SkillsBench 实验的代码、skills 和实际结果. 先看结果, 想了解怎么做的再往下找.
 
-| 想看什么 | 从哪里开始 |
+## 从哪里开始
+
+| 想知道什么 | 点这里 |
 | --- | --- |
-| 最新结果, 做完了多少 | [当前状态](docs/STATUS.md) |
-| no-skills / with-skills / with-CogniLife-skills | [三组skills](skills/README.md) |
-| 每版怎么进化, 改了什么 | [全部版本目录](skills/evolution-history/)和[版本索引](skills/VERSION_INDEX.json) |
-| 实际输出、得分和tokens | [结果入口](results/README.md) |
-| 找运行代码 | [代码入口](experiments/README.md) |
-| 查旧原型和失败记录 | [历史入口](archive/README.md) |
+| 现在做完了什么, 还缺什么 | [当前状态](docs/STATUS.md) |
+| 三组分别用了哪些 skills | [skills 目录说明](skills/README.md) |
+| 每一轮改了什么, 为什么采用或没采用 | [进化记录](skills/evolution-history/README.md) |
+| 实际回答、得分、tokens 和耗时 | [实验结果](results/README.md) |
+| 运行代码在哪里 | [代码目录说明](experiments/README.md) |
+| 以前试过什么 | [历史入口](archive/README.md) |
 
-## 目前的实际结果
+## 文件夹怎么分
 
-| 实验 | 原版skills | 进化版skills | 本次观察 |
-| --- | --- | --- | --- |
-| threejs两题 | 两题全通过, 237638 tokens | 两题全通过, 217326 tokens | 合计少8.55%; 分部件题反而多18.2% |
-| 电价分析一题 | 4/4, 181580 tokens | 4/4, 98354 tokens | 少45.83% tokens, 正确性相同 |
+```text
+docs/         当前进度和说明
+skills/       三组配置、原版 skills、采用的进化版和每轮记录
+results/      实际结果; 每个实验从 REPORT.md 开始看
+experiments/  运行与分析代码
+archive/      旧尝试的入口和整理前的状态快照
+```
 
-threejs两题参与过调试. 电价分析题没有用于生成skill, 但与开发题使用同一公开电网文件、目标不同. 都不能据此宣称全库提升. 原方法仍有缺失实现, 详见各版记录. 论文和OpenReview未改.
+每个实验通常先看 REPORT.md, 再查 RESULTS.json 的数字. SKILL.md 是实际给模型读的操作说明; EVOLUTION_RECORD.json 记录它怎么生成; changes_from_parent.diff 显示相对上一版改了哪些文字. 没收到候选的轮次不会伪造 SKILL.md.
 
-新增: mesh-analysis第9轮在3D开发题两次2/2, tokens分别125369 / 127654, 相比原版161063少约22.16% / 20.74%. 已冻结, no-skills对照尚待补齐. 这里的2/2、4/4是单题原检查通过数, 不是题目数.
+## 已完成的三组对照
 
-## 当前执行约定
+| SkillsBench 题目范围 | no-skills | 原版 skills | 进化版 skills | 能说明什么 |
+| --- | --- | --- | --- | --- |
+| threejs 两题 | 1/2题通过 | 2/2题通过, 237638 tokens | 2/2题通过, 217326 tokens | 相比原版合计少8.55%; 两题参与过调试 |
+| energy-market-pricing | 4/4检查, 204038 tokens | 4/4检查, 181580 tokens | 4/4检查, 98354 tokens | 相比原版少45.83%; 未用于生成 skill, 与开发题共享公开电网数据 |
+| 3d-scan-calc | 2/2检查, 127350 tokens | 2/2检查, 161063 tokens | 两次2/2检查, 125369 / 127654 tokens | 相比原版少22.16% / 20.74%, 与 no-skills 基本持平; 这是开发题 |
 
-- 只使用已授权的OpenRouter和Profy keys, 不额外购买服务.
-- 全部串行, 不并行调用模型、agent或构建环境.
-- 500GB家用电脑只留轻量代码、必要记录和常用小依赖. 不在本机堆Docker镜像、全库环境或大缓存.
-- 正在迁移到Profy云端评分. 已接通3D题的独立云端评分, 全库环境和评分链路仍未全部验证; SkillsBench全库87题尚未完成.
-- 每轮保存真实候选、原版出处、parent/request/candidate hash和实际结果. 不把自评分当实测分数, 不把评测答案送进进化.
-- 不提交keys、收到的Profy公司源码、隐藏评分材料或无关第三方代码. 原版与派生SKILL.md按用户本次要求归档; 其他公开资源仅记录来源和hash.
+这里共4道题完成三组对照. 2/2、4/4检查是单题内部测试数, 不是题目数. 这些结果不能当成87题全库成绩, tokens 也不等于实际费用.
 
-旧路径保留, 以前的链接仍可用. 旧版本从历史入口查, 不再占据首页最新结果的位置.
+## 执行约定
+
+- 进化走已有 OpenRouter key, 求解走已有 Profy key, 使用 gpt-6.1-sol.
+- 全部串行. 本机不搭全库环境, 不堆 Docker 镜像或大缓存, 不额外购买服务.
+- 每轮保留候选、来源、修改过程和实际结果. 开发题可用于调整, 评测题答案不送进进化.
+- 收到的原方法代码仍有缺失或未接通部分, [当前状态](docs/STATUS.md)明确说明. 不把外部适配说成完整平台复现.
+- 不上传 keys、收到的 Profy 公司源码、隐藏评分材料或无关第三方代码. 原版和进化版 SKILL.md 按要求归档; 其他公开资源只记录固定来源和 hash.
+- 论文与 OpenReview 未改.
+
+旧路径保留, 以前的链接仍可用. archive 是查旧记录的入口, 不是把重复文件再存一份.
