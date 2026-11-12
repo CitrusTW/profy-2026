@@ -1,6 +1,5 @@
 """Frozen comparison on all two tasks compatible with this particular skill."""
 import argparse
-import concurrent.futures
 import hashlib
 import json
 from pathlib import Path
@@ -28,9 +27,8 @@ def run(args):
         (folder/'grader_environment').symlink_to(workspace/'01_任务结果/2026-11-10_skillsbench_evolution/run-01/grader_environment',target_is_directory=True)
         study=Study(argparse.Namespace(workspace=str(workspace),out=str(folder),keys_file=args.keys_file,allow_paid=True))
         labels=['no-skills','with-skills','with-CogniLife-skills']
-        with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
-            futures=[pool.submit(study.solve,label,task,text if label==labels[2] else None,label==labels[0]) for label in labels]
-            rows.extend(f.result() for f in futures)
+        for label in labels:
+            rows.append(study.solve(label,task,text if label==labels[2] else None,label==labels[0]))
         save(root/'FULL_TWO_RESULTS.json',{'scope':'two compatible tasks x three groups','skill_sha256':expected,'rows':rows})
     print(json.dumps([{'task':r['task'],'group':r['label'],'tests':r['score']['passed'],'tokens':r['tokens']['total_tokens']} for r in rows],ensure_ascii=False))
 

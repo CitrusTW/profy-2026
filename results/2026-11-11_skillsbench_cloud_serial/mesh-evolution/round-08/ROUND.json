@@ -1,0 +1,22 @@
+{
+  "round": 8,
+  "development_task": "3d-scan-calc",
+  "evaluation_role": "Development on this singleton skill task; not unseen generalization",
+  "baseline_tokens": 161063,
+  "evolution_provider": "OpenRouter owner key",
+  "solver_provider": "Profy owner key",
+  "serial": true,
+  "local_environment_installed": false,
+  "status": "evolution_transport_failed",
+  "error_type": "SSLError",
+  "error": "SSLV3_ALERT_BAD_RECORD_MAC",
+  "requests_started": 2,
+  "responses_received": 1,
+  "candidate_available": false,
+  "missing_response_usage_unknown": true,
+  "method_effect_not_evaluated": true,
+  "request_hashes": {
+    "request_2.json": "2ecff2d250df9b00ebcddaf62a9b238a224c7bdd13360ad20f6839a33cc82ca0",
+    "request_1.json": "075edf3075bd196f3cb7ba5b1eb9409e811a9668ac9582a2e7030e3144f3f76c"
+  }
+}

@@ -78,16 +78,19 @@ def run(args):
         if valid(e[2]) and e[2]['tokens']['total_tokens']<best:parent=skill.read_text();best=e[2]['tokens']['total_tokens']
     shutil.copytree(study.target.parent.parent,folder/'parent_skills')
     target=folder/'parent_skills'/SKILL/'SKILL.md';target.write_text(parent)
-    state={'round':args.round,'development_task':TASK,'evaluation_role':'Development on this singleton skill task; not unseen generalization','baseline_tokens':history[0][2]['tokens']['total_tokens'],'evolution_provider':'OpenRouter owner key','solver_provider':'Profy owner key','serial':True,'local_environment_installed':False}
+    state={'round':args.round,'development_task':TASK,'evaluation_role':'Development on this singleton skill task; not unseen generalization','baseline_tokens':history[0][2]['tokens']['total_tokens'],'minimum_token_reduction_fraction':0.05,'evolution_provider':'OpenRouter owner key','solver_provider':'Profy owner key','serial':True,'local_environment_installed':False}
     save(folder/'STARTED.json',state)
-    candidate,summary=evolve(study.workspace,target,folder/'evolution',[h[0] for h in history][-20:],[h[1] for h in history][-20:],study.transport.evolution_key(),study.transport.scrub,allow_paid=True,
-        adapter_contract={'origin':'Execution adapter metadata, not a replacement learning prompt','environment':'Attached public skills are files, not native registered skill IDs. Use only the supplied packages and ordinary file tools.','data_boundary':'Only DEV trajectories and measured run_stats. No verifier, gold, scoring-context history or unseen evaluation answers.'})
+    try:
+        candidate,summary=evolve(study.workspace,target,folder/'evolution',[h[0] for h in history][-20:],[h[1] for h in history][-20:],study.transport.evolution_key(),study.transport.scrub,allow_paid=True,
+            adapter_contract={'origin':'Execution adapter metadata, not a replacement learning prompt','environment':'Attached public skills are files, not native registered skill IDs. Use only the supplied packages and ordinary file tools.','data_boundary':'Only DEV trajectories and measured run_stats. No verifier, gold, scoring-context history or unseen evaluation answers.'})
+    except Exception as exc:
+        state.update(status='evolution_exception',error_type=type(exc).__name__,error=study.transport.scrub(str(exc)),requests_started=len(list((folder/'evolution').glob('request_*.json'))),responses_received=len(list((folder/'evolution').glob('response_*.json'))),candidate_available=False,missing_response_usage_unknown=True)
+        save(folder/'ROUND.json',state);return
     state['evolution']=summary
     if candidate is None:state['status']='no_proposal';save(folder/'ROUND.json',state);return
     fresh=CloudStudy(argparse.Namespace(**{**vars(args),'out':str(folder)}))
     dev=fresh.solve('development',TASK,candidate);state['development']=dev
     success=False
-    state['minimum_token_reduction_fraction']=0.05
     if valid(dev) and dev['tokens']['total_tokens']<=0.95*state['baseline_tokens']:
         confirm=fresh.solve('confirmation',TASK,candidate);state['confirmation']=confirm
         success=valid(confirm) and confirm['tokens']['total_tokens']<=0.95*state['baseline_tokens']

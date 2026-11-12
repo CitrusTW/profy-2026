@@ -1,6 +1,5 @@
 """Bounded DEV-only iterations around received original Evolution functions."""
 import argparse
-import concurrent.futures
 import hashlib
 import json
 import shutil
@@ -100,9 +99,9 @@ def run(args):
          'selection_used':'DEV records only','validation_feedback_used':False,'claim_scope':'diagnostic repeat, not full native method'})
     study = Study(argparse.Namespace(workspace=str(workspace),out=str(benchmark),keys_file=args.keys_file,allow_paid=True))
     labels=['no-skills','with-skills','with-CogniLife-skills']
-    with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
-        futures=[pool.submit(study.solve,label,TEST,best_text if label==labels[2] else None,label==labels[0]) for label in labels]
-        state['benchmark']=[f.result() for f in futures]
+    state['benchmark']=[]
+    for label in labels:
+        state['benchmark'].append(study.solve(label,TEST,best_text if label==labels[2] else None,label==labels[0]))
     state['status']='completed'; save(root/'FINAL.json',state)
 
 

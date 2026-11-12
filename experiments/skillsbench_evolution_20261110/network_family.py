@@ -1,6 +1,5 @@
 """Reuse Profy transport and received Evolution; original Docker verifier stays private."""
 import argparse
-import concurrent.futures
 import hashlib
 import json
 import shutil
@@ -87,9 +86,9 @@ def run(args):
         frozen.mkdir();save(frozen/'FROZEN.json',{'selected_round':json.loads(selected.read_text())['round'],'skill_sha256':sha(candidate.encode()),'development':DEV,'evaluation':TEST})
         fresh=NetworkStudy(argparse.Namespace(**{**vars(args),'out':str(frozen)}))
         labels=['no-skills','with-skills','with-CogniLife-skills']
-        with concurrent.futures.ThreadPoolExecutor(max_workers=3) as pool:
-            futures=[pool.submit(fresh.solve,label,TEST,candidate if label==labels[2] else None,label==labels[0]) for label in labels]
-            rows=[f.result() for f in futures]
+        rows=[]
+        for label in labels:
+            rows.append(fresh.solve(label,TEST,candidate if label==labels[2] else None,label==labels[0]))
         save(frozen/'RESULTS.json',{'rows':rows,'paper_changed':False});return
     if args.phase!='round':raise ValueError('Unsupported phase')
     if not 6<=args.round<=30:raise ValueError('Combined round IDs capped at 30, including the five threejs rounds')

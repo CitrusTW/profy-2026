@@ -1,0 +1,96 @@
+{
+  "round": 8,
+  "development_task": "3d-scan-calc",
+  "evaluation_role": "Development on this singleton skill task; not unseen generalization",
+  "baseline_tokens": 161063,
+  "evolution_provider": "OpenRouter owner key",
+  "solver_provider": "Profy owner key",
+  "serial": true,
+  "local_environment_installed": false,
+  "status": "evolution_transport_failed",
+  "error_type": "SSLError",
+  "error": "SSLV3_ALERT_BAD_RECORD_MAC",
+  "requests_started": 2,
+  "responses_received": 1,
+  "candidate_available": false,
+  "missing_response_usage_unknown": true,
+  "method_effect_not_evaluated": true,
+  "request_hashes": {
+    "request_2.json": "2ecff2d250df9b00ebcddaf62a9b238a224c7bdd13360ad20f6839a33cc82ca0",
+    "request_1.json": "075edf3075bd196f3cb7ba5b1eb9409e811a9668ac9582a2e7030e3144f3f76c"
+  },
+  "provenance": {
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "parent_sha256": "8b618f30fc1a1e604a0c63c46de6b944e36a67ebc891b1bf107d276b31e9680c",
+    "request_sha256": "8878a7172ea01a9b357bbb5ea350c363b235644263931788e92749eca483d52c",
+    "development_history_runs": 2,
+    "adapter_contract": {
+      "origin": "Execution adapter metadata, not a replacement learning prompt",
+      "environment": "Attached public skills are files, not native registered skill IDs. Use only the supplied packages and ordinary file tools.",
+      "data_boundary": "Only DEV trajectories and measured run_stats. No verifier, gold, scoring-context history or unseen evaluation answers."
+    },
+    "context": {
+      "layers": {
+        "security_fence": "b1be525cae8074fd",
+        "expert_guard": null,
+        "identity": "4db4cfd8aa5e0083",
+        "soul": "35832c95333baf33",
+        "tool_calling": "ad5e84e31096b04a",
+        "workflow": "95e3aa1c069c6b4e",
+        "sandbox_environment": null,
+        "desktop_environment": null,
+        "plugin_registry": "ecd88868949390df",
+        "skill_registry": "2f915189c3ac638b",
+        "subagents_registry": null,
+        "plan_mode": null,
+        "working_directory": null,
+        "workspace_instructions": null,
+        "expert_agent": null
+      },
+      "token_estimates": {
+        "security_fence": 923,
+        "identity": 1163,
+        "soul": 496,
+        "tool_calling": 12147,
+        "workflow": 3644,
+        "plugin_registry": 639,
+        "skill_registry": 128
+      },
+      "token_counting": "original heuristic fallback; not billed tokens"
+    },
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    },
+    "history_adapter": "public DEV SSE roles and complete tool-call/result pairs; not native DB replay"
+  },
+  "completed_response_usage": {
+    "prompt_tokens": 35105,
+    "completion_tokens": 23,
+    "total_tokens": 35128,
+    "cost": 0.087991,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 35102,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.087991,
+      "upstream_inference_prompt_cost": 0.087761,
+      "upstream_inference_completions_cost": 0.00023
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "received_tool_names": [
+    "skill"
+  ]
+}
