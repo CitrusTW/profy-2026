@@ -1,0 +1,15 @@
+{
+  "original_returncode": 0,
+  "strict": 1,
+  "tests": 2,
+  "passed": 2,
+  "failed": 0,
+  "skipped": 0,
+  "all_static_hashes_before_after_verified": true,
+  "solver_output_unchanged": true,
+  "grading_context_only": true,
+  "original_source_sha256": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+  "fixed_grader_command_verified": true,
+  "cloud_only": true,
+  "native_artifact_received": true
+}

@@ -7,6 +7,6 @@
 - [原方法核对](../experiments/native_method_feasibility_20261110/METHOD_CODE_API_MAP.md): 收到的实现与缺口.
 - [旧gpt-4.1候选](../skills/evolution-history/historical-run-01/): 与后来gpt-6.1-sol明确区分.
 - [旧gpt-6.1-sol候选](../skills/evolution-history/historical-run-02-gpt61/).
-- [第1至7轮全部候选](../skills/evolution-history/): 每轮独立目录, 旧版不覆盖最新版.
+- [全部轮次全部候选](../skills/evolution-history/): 每轮独立目录, 旧版不覆盖最新版.
 
 原始成绩不改. 当前结果以[状态页](../docs/STATUS.md)列出的冻结运行和证据为准.

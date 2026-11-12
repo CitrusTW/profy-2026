@@ -70,5 +70,13 @@
     "selected": false,
     "sha256": "8b618f30fc1a1e604a0c63c46de6b944e36a67ebc891b1bf107d276b31e9680c",
     "path": "skills/evolution-history/round-07"
+  },
+  {
+    "version": "round-09",
+    "skill": "mesh-analysis",
+    "model": "gpt-6.1-sol",
+    "selected": true,
+    "sha256": "1c98df5bef5f8086801874c3b360a57c8f53783acaa67e83ed58e1e24d057441",
+    "path": "skills/evolution-history/round-09"
   }
 ]

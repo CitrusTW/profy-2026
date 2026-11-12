@@ -1,0 +1,328 @@
+{
+  "version": "round-09",
+  "skill": "mesh-analysis",
+  "model": "gpt-6.1-sol",
+  "selected_current": true,
+  "candidate_sha256": "1c98df5bef5f8086801874c3b360a57c8f53783acaa67e83ed58e1e24d057441",
+  "source_artifact": "01_任务结果/2026-11-11_skillsbench_cloud_serial/mesh-evolution/round-09/evolution/candidate_SKILL.md",
+  "original_public_source": {
+    "public_source": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/3d-scan-calc/environment/skills/mesh-analysis",
+    "skill_sha256": "b0c908a5e74b53e73d53105526a57949b90a3e733ea35c14fe8406342b84f7fe",
+    "resources": {
+      "scripts/mesh_tool.py": "f8b9265f8355b89732219f455678b7474eb7c2f6cb53daed067f6d4d700a6837"
+    }
+  },
+  "provenance": {
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "parent_sha256": "8b618f30fc1a1e604a0c63c46de6b944e36a67ebc891b1bf107d276b31e9680c",
+    "request_sha256": "8878a7172ea01a9b357bbb5ea350c363b235644263931788e92749eca483d52c",
+    "development_history_runs": 2,
+    "adapter_contract": {
+      "origin": "Execution adapter metadata, not a replacement learning prompt",
+      "environment": "Attached public skills are files, not native registered skill IDs. Use only the supplied packages and ordinary file tools.",
+      "data_boundary": "Only DEV trajectories and measured run_stats. No verifier, gold, scoring-context history or unseen evaluation answers."
+    },
+    "context": {
+      "layers": {
+        "security_fence": "b1be525cae8074fd",
+        "expert_guard": null,
+        "identity": "4db4cfd8aa5e0083",
+        "soul": "35832c95333baf33",
+        "tool_calling": "ad5e84e31096b04a",
+        "workflow": "95e3aa1c069c6b4e",
+        "sandbox_environment": null,
+        "desktop_environment": null,
+        "plugin_registry": "ecd88868949390df",
+        "skill_registry": "2f915189c3ac638b",
+        "subagents_registry": null,
+        "plan_mode": null,
+        "working_directory": null,
+        "workspace_instructions": null,
+        "expert_agent": null
+      },
+      "token_estimates": {
+        "security_fence": 923,
+        "identity": 1163,
+        "soul": 496,
+        "tool_calling": 12147,
+        "workflow": 3644,
+        "plugin_registry": 639,
+        "skill_registry": 128
+      },
+      "token_counting": "original heuristic fallback; not billed tokens"
+    },
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    },
+    "history_adapter": "public DEV SSE roles and complete tool-call/result pairs; not native DB replay"
+  },
+  "evolution_summary": {
+    "accepted_by_original_gate": true,
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "requests": 4,
+    "usage": [
+      {
+        "prompt_tokens": 35105,
+        "completion_tokens": 23,
+        "total_tokens": 35128,
+        "cost": 0.0037462,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 35102,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0037462,
+          "upstream_inference_prompt_cost": 0.0035162,
+          "upstream_inference_completions_cost": 0.00023
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 36458,
+        "completion_tokens": 17,
+        "total_tokens": 36475,
+        "cost": 0.0070687,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 35102,
+          "cache_write_tokens": 1353,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0070687,
+          "upstream_inference_prompt_cost": 0.0068987,
+          "upstream_inference_completions_cost": 0.00017
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 36586,
+        "completion_tokens": 24,
+        "total_tokens": 36610,
+        "cost": 0.0042115,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 36455,
+          "cache_write_tokens": 128,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0042115,
+          "upstream_inference_prompt_cost": 0.0039715,
+          "upstream_inference_completions_cost": 0.00024
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 37541,
+        "completion_tokens": 1302,
+        "total_tokens": 38843,
+        "cost": 0.0190718,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 36583,
+          "cache_write_tokens": 955,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0190718,
+          "upstream_inference_prompt_cost": 0.0060518,
+          "upstream_inference_completions_cost": 0.01302
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 180,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "elapsed_sec": 32.438,
+    "storage": "external adapter local pending, not Profy database",
+    "source_functions_modified": false,
+    "native_promoted": false,
+    "semantic_applicability_verified": false,
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    }
+  },
+  "actual_model_tool_calls": [
+    {
+      "response_file": "response_1.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "activate",
+        "name": "builtin/evolution"
+      }
+    },
+    {
+      "response_file": "response_2.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "discover"
+      }
+    },
+    {
+      "response_file": "response_3.json",
+      "tool": "skill",
+      "arguments": {
+        "action": "activate",
+        "name": "expert/mesh-analysis"
+      }
+    },
+    {
+      "response_file": "response_4.json",
+      "tool": "evolution_log",
+      "arguments": {
+        "action": "suggest_skill_improvement",
+        "skill_name": "mesh-analysis",
+        "summary": "Compress the workflow and prevent the two observed mapped-path permission retries; batch analysis and required packaging.",
+        "diff_summary": "Both DEV runs succeeded; Run 1 reduced total tokens from 161063 to 160781 but retained 10 turns/tool calls. Its two denied commands came from relative mapped paths and literal archive-path strings containing /root, even though workspace mapping was intended. Replace broad path advice with the observed successful forms: fully qualified workspace paths for shell arguments, component-wise construction of logical archive names, and no original host paths. Keep the supplied module, density parsing, unit handling and precision requirements; consolidate optional adapter packaging into the analysis invocation instead of a separate packaging pass. Shorten the skill below 3000 characters and avoid native registration attempts for attached packages.",
+        "before_scores": {
+          "frontmatter_quality": 96,
+          "workflow_clarity": 87,
+          "failure_encoding": 72,
+          "executable_specificity": 87,
+          "architecture_fit": 82,
+          "antipattern_coverage": 87,
+          "empirical_grounding": 88,
+          "step_economy": 76,
+          "exploration_replacement": 77
+        },
+        "after_scores": {
+          "frontmatter_quality": 96,
+          "workflow_clarity": 90,
+          "failure_encoding": 89,
+          "executable_specificity": 89,
+          "architecture_fit": 90,
+          "antipattern_coverage": 92,
+          "empirical_grounding": 93,
+          "step_economy": 87,
+          "exploration_replacement": 90
+        },
+        "improved_dimensions": "workflow_clarity,failure_encoding,executable_specificity,architecture_fit,antipattern_coverage,empirical_grounding,step_economy,exploration_replacement"
+      }
+    }
+  ],
+  "actual_development_results": {
+    "development": {
+      "label": "development",
+      "task": "3d-scan-calc",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 71.56,
+      "output_received": true,
+      "native_zip_sha256": "bd207379f138f49784915e1d36bc2212aa6f0fda1e186673bec6cf8e03992556",
+      "file_hashes": {
+        "output/fs/root/mass_report.json": "f9ff22bf9b74ce455cedb6adb5e5640e3ea014bf35c681dedced36bdcb8dcb31"
+      },
+      "skill_sha256": "1c98df5bef5f8086801874c3b360a57c8f53783acaa67e83ed58e1e24d057441",
+      "target_skill_read_verified": true,
+      "skill_hash_marker_verified": true,
+      "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 123112,
+        "output_tokens": 2257,
+        "total_tokens": 125369,
+        "cache_read_tokens": 103818,
+        "cache_write_tokens": 19270,
+        "llm_turns": 8,
+        "tool_calls": 8
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "original_returncode": 0,
+        "strict": 1,
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "all_static_hashes_before_after_verified": true,
+        "solver_output_unchanged": true,
+        "grading_context_only": true,
+        "original_source_sha256": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+        "fixed_grader_command_verified": true,
+        "cloud_only": true,
+        "native_artifact_received": true
+      },
+      "attached_reader_audit": "Native skills_read used the supplied benchmark SKILL.md file path; no external package"
+    },
+    "confirmation": {
+      "label": "confirmation",
+      "task": "3d-scan-calc",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 82.077,
+      "output_received": true,
+      "native_zip_sha256": "54aff97a3e169dd5f280def40bbe3d88b33bbd69e1f14a63271c322a2668d24f",
+      "file_hashes": {
+        "output/fs/root/mass_report.json": "f9ff22bf9b74ce455cedb6adb5e5640e3ea014bf35c681dedced36bdcb8dcb31"
+      },
+      "skill_sha256": "1c98df5bef5f8086801874c3b360a57c8f53783acaa67e83ed58e1e24d057441",
+      "target_skill_read_verified": true,
+      "skill_hash_marker_verified": true,
+      "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 125251,
+        "output_tokens": 2403,
+        "total_tokens": 127654,
+        "cache_read_tokens": 105342,
+        "cache_write_tokens": 19885,
+        "llm_turns": 8,
+        "tool_calls": 8
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "original_returncode": 0,
+        "strict": 1,
+        "tests": 2,
+        "passed": 2,
+        "failed": 0,
+        "skipped": 0,
+        "all_static_hashes_before_after_verified": true,
+        "solver_output_unchanged": true,
+        "grading_context_only": true,
+        "original_source_sha256": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+        "fixed_grader_command_verified": true,
+        "cloud_only": true,
+        "native_artifact_received": true
+      }
+    }
+  },
+  "data_boundary": "Original Profy context and DEV histories stay in the workspace. Their request hashes and history counts are in provenance. No keys, company source, evaluation answers or verifier are included.",
+  "missing_original_implementations": {
+    "capability_gap_classifier": "No callable implementation identified in the received source.",
+    "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+    "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+  },
+  "repository_validation_record": "results/2026-11-11_skillsbench_cloud_serial/mesh-evolution/round-09/ROUND.json"
+}

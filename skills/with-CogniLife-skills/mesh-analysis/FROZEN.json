@@ -1,0 +1,14 @@
+{
+  "selected_round": 9,
+  "skill": "mesh-analysis",
+  "skill_sha256": "1c98df5bef5f8086801874c3b360a57c8f53783acaa67e83ed58e1e24d057441",
+  "source": "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/mesh-evolution/round-09/evolution/candidate_SKILL.md",
+  "development_task": "3d-scan-calc",
+  "unseen_generalization_proven": false,
+  "do_not_change_after_evaluation": true,
+  "development_tokens": 125369,
+  "confirmation_tokens": 127654,
+  "baseline_tokens": 161063,
+  "quality": "2/2 original tests in both runs",
+  "minimum_reduction_fraction": 0.05
+}
