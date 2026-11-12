@@ -65,3 +65,6 @@ Citation metadata correction: SKILLSBENCH_CITATION_VERIFIED.json中的checked_ut
 
 ## I-006 2026-11-12T16:29:46.362215+00:00
 按新指令现在提前开始论文副本, 不再受I004中午开始条件约束. 11:00PST前交draft1, 15:30PST前交final. 初稿只用当前全部结果, 新ADV只用I004完整rubric+I003完整pairwise. 如Profy恢复, 原顺序串行补实验, 后续数字在final更新并标明. 原项目/Overleaf/OpenReview不改.
+
+## I006 draft1 implementation 2026-11-12T16:43:38.957974+00:00
+只读核对Overleaf远端与本地HEAD相同; 仅存在6个旧编译产物未跟踪, 所有源码/资源完整复制, 旧编译缓存不重复拷贝. 初次生成被旧时间guard拦住, 随后按I006修正; 另一次匿名检查拦住了内部phase目录名, 仅改展示标签, 旧副本保留. 图像视觉复查发现另一面板仍有Expert Distillation Studio顶栏, 新PDF以真正像素遮除处理, 最终采用不裁切版本, 标题外像素逐一相同; 所有原图/原项目不改. 各中间副本原样保留, 新版资源用自身副本的硬链接减少重复磁盘, 不修改共享资源. 附录先排完customs浮动图表再排SkillsBench, 只改版式. 当前副本正文6页/PDF21页, 479条数字来源引用核对通过, customs数字与第3节方法原文均未改. 已推送paper_rev/draft1供11:15审核; 没有Overleaf/OpenReview写操作.

@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T08:42:43.289576-08:00
+- Updated (America/Los_Angeles): 2026-11-12T08:58:45.438227-08:00
 - Last applied instruction: I-006 (in progress)
-- Latest read: I-006; checkpoint: I006-watcher-v11-draft-delivery
+- Latest read: I-006; checkpoint: I004-probe403-not-a-run-no-change-to-model-or-key
 - Current work: I006 manuscript revision copy and original-order Profy recovery probes; frozen skills, no new evolution.
 - Next: continue one next-planned-run probe every30min; if accepted, resume serial schedule and supplement supply B/C original-verifier grading. Draft1 due11:00PST, reviewer11:15; final15:30; no new run after13:30.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
@@ -34,7 +34,7 @@
 | reserves-at-risk-calc | launch-05-profy-recovery | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 2.592 |
 
 ## Profy state
-- Latest next-run probe: 403_rejected_not_a_run; 1794500924.414081 Unix epoch; scientific_run=False.
+- Latest next-run probe: 403_rejected_not_a_run; 1794502724.610749 Unix epoch; scientific_run=False.
 - Still blocked:403 Expert is not published. Next same planned run only at registered30min interval; no publication, key/model/identity change. Quota exhaustion is not established.
 
 ## ADV20: current usable evidence
