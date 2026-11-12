@@ -1,0 +1,48 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3
+Resolved 1 package in 1.28s
+Downloading uv (20.4MiB)
+ Downloaded uv
+Prepared 1 package in 185ms
+Installed 1 package in 1ms
+ + uv==0.9.7
+CGL_GRADER_UV_VERSION:uv 0.9.7
+WARNING: The directory '/root/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Looking in indexes: https://mirrors.cloud.tencent.com/pypi/simple
+Requirement already satisfied: pytest in /usr/local/lib/python3.12/site-packages (8.3.5)
+Collecting pytest-json-ctrf
+  Downloading https://mirrors.cloud.tencent.com/pypi/packages/1a/d1/36f49df31032341734a6a2e76fec1a4b5b64ed6eaff764a8e16c0c634085/pytest_json_ctrf-0.6.5-py3-none-any.whl (11 kB)
+Requirement already satisfied: iniconfig in /usr/local/lib/python3.12/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging in /usr/local/lib/python3.12/site-packages (from pytest) (26.0)
+Requirement already satisfied: pluggy<2,>=1.5 in /usr/local/lib/python3.12/site-packages (from pytest) (1.6.0)
+Installing collected packages: pytest-json-ctrf
+Successfully installed pytest-json-ctrf-0.6.5
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+
+[notice] A new release of pip is available: 25.0.1 -> 26.3
+[notice] To update, run: pip install --upgrade pip
+All tests passed!
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.3.5, pluggy-1.6.0 -- /home/user/workspace/distilled-99707679/eade81bd-bdf1-4494-854b-0aa5f4751c99/cgl-task-42rrsdls/venv/bin/python3
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.6.5, anyio-4.13.0
+collecting ... collected 6 items
+
+../verifier/test_outputs.py::test_file_exists PASSED                     [ 16%]
+../verifier/test_outputs.py::test_sheets_exist PASSED                    [ 33%]
+../verifier/test_outputs.py::test_step1_expression_values_filled PASSED  [ 50%]
+../verifier/test_outputs.py::test_step2_statistics_calculated PASSED     [ 66%]
+../verifier/test_outputs.py::test_step3_fold_changes_calculated PASSED   [ 83%]
+../verifier/test_outputs.py::test_values_are_numeric PASSED              [100%]
+
+=============================== warnings summary ===============================
+../usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /usr/local/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: could not create cache path /verifier/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/verifier/pytest-cache-files-u40pw_1m'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+../usr/local/lib/python3.12/site-packages/_pytest/stepwise.py:51
+  /usr/local/lib/python3.12/site-packages/_pytest/stepwise.py:51: PytestCacheWarning: could not create cache path /verifier/.pytest_cache/v/cache/stepwise: [Errno 30] Read-only file system: '/verifier/pytest-cache-files-qy4yo9kq'
+    session.config.cache.set(STEPWISE_CACHE_DIR, [])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 6 passed, 2 warnings in 2.49s =========================

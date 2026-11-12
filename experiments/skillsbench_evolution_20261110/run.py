@@ -281,7 +281,7 @@ After writing the original requested outputs under output/, package only those a
         save(f/'SOLVER_RESULT_BEFORE_GRADING.json',result)
         result['score'] = self.grade(task, f)
         save(f/'result.json', result)
-        print('DONE', label, json.dumps({'score': result['score'], 'elapsed_sec': result['elapsed_sec'], 'skill_read_verified': result['target_skill_read_verified']}), flush=True)
+        print('DONE', label, json.dumps({'score': {k:result['score'].get(k) for k in ['strict','original_reward','tests','passed','failed','infrastructure_error']}, 'elapsed_sec': result['elapsed_sec'], 'skill_read_verified': result['target_skill_read_verified']}), flush=True)
         return result
 
     def development_evidence(self):

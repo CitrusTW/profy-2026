@@ -1,0 +1,84 @@
+{
+  "label": "with-CogniLife-skills",
+  "task": "protein-expression-analysis",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 336.866,
+  "output_received": true,
+  "native_zip_sha256": "5fd83b6cb60505898e7ae09cfbcb3dfc2f504cd8774a33b32c36b995a96f62f2",
+  "file_hashes": {
+    "output/dependency_receipt.json": "1ffc5acb1f5b56a513452c60d1d0efa7c0ee78954865436e71e34c7963f9ba0e",
+    "output/original_verifier_stdout.log": "cf9ea579477fbb68fd04733abdabfeba6662d533fbe952a85aa31c43ca4ceb87",
+    "output/score_receipt.json": "a5d0d58ac6f63e1e6b7fa5b12e6f7392f163c3f5c1a3637d07bd16184717e907",
+    "output/fs/root/protein_expression.xlsx": "98a3c686cbd7ba71d0bdfe2b08ee520d038206b53c4950fcb44a8a0215eb3b24",
+    "output/fs/root/work/checks.json": "1f59915fcbcddadf9c6baba88f1bdb02272027d4de262897a2bd2171efc5be7c",
+    "output/fs/root/work/complete_workbook.py": "4d69e46d68192eb5aacbb575059626c83c1518c88cbbdafb3190b292fba7c968",
+    "output/fs/root/work/fill_workbook.py": "62aa0948c64e2e1890098cad4be3f85fe4c3e456058a7f584fca4306bbcafac4",
+    "output/fs/root/work/original.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+    "output/fs/root/work/recalc.xlsx": "8c078dffe367babd08e60d782ea191cc0a8f6c3a8da0ca99550a87974347c952",
+    "output/fs/root/work/validate_workbook.py": "8d78d960dd6fe01f218878b603dcc5650fd750632567039df24912ee38aff0a3",
+    "output/fs/root/work/calculated/recalc.xlsx": "c9f9534497200021c45ae0c99cc731c66ccae8e4489c90cc2dc4cbc58f947cea"
+  },
+  "skill_sha256": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+  "target_skill_read_verified": true,
+  "skill_hash_marker_verified": true,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": true,
+  "tokens": {
+    "input_tokens": 259985,
+    "output_tokens": 4823,
+    "total_tokens": 264808,
+    "cache_read_tokens": 226856,
+    "cache_write_tokens": 32173,
+    "llm_turns": 11,
+    "tool_calls": 10
+  },
+  "profy_cost_usd": null,
+  "score": {
+    "original_verifier": true,
+    "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+    "task": "protein-expression-analysis",
+    "pre_grade_file_hashes": {
+      "/root/protein_expression.xlsx": "98a3c686cbd7ba71d0bdfe2b08ee520d038206b53c4950fcb44a8a0215eb3b24",
+      "/root/work/calculated/recalc.xlsx": "c9f9534497200021c45ae0c99cc731c66ccae8e4489c90cc2dc4cbc58f947cea",
+      "/root/work/checks.json": "1f59915fcbcddadf9c6baba88f1bdb02272027d4de262897a2bd2171efc5be7c",
+      "/root/work/complete_workbook.py": "4d69e46d68192eb5aacbb575059626c83c1518c88cbbdafb3190b292fba7c968",
+      "/root/work/fill_workbook.py": "62aa0948c64e2e1890098cad4be3f85fe4c3e456058a7f584fca4306bbcafac4",
+      "/root/work/original.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21",
+      "/root/work/recalc.xlsx": "8c078dffe367babd08e60d782ea191cc0a8f6c3a8da0ca99550a87974347c952",
+      "/root/work/validate_workbook.py": "8d78d960dd6fe01f218878b603dcc5650fd750632567039df24912ee38aff0a3"
+    },
+    "original_source_hashes": {
+      "test.sh": "60f676cbdbb817230e5f47be4c756d2089d88b77904d19385bb674a8ff37912a",
+      "test_outputs.py": "810fec4eec42c34e9b8faaa14786182a63c32dd753fe11e6af0d1db8c2e23712"
+    },
+    "cleanup_errors": [],
+    "runtime_backend": "native-owned",
+    "runtime_difference": "Native Profy host, not the official Ubuntu image. Solver uses uid1000 without path interception or mount namespaces. All apt installs use --no-install-recommends as a disclosed native adaptation. Host system-site-packages and pre-existing apt packages remain visible. Blocked declared packages are omitted and may not be used. Existing platform uv replaces Dockerfile uv installers. This runner is not a security sandbox.",
+    "dependency_receipt": {
+      "see": "original-grader/score_receipt.json"
+    },
+    "original_input_hashes": {
+      "/root/protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21"
+    },
+    "original_returncode": 0,
+    "grading_backend": "private kernel mount namespace; original test.sh unchanged",
+    "uv_dependency_provisioning": "Existing fixed grader provisions official uv==0.9.7 in its private runtime; original installer still runs",
+    "grader_uv_version": "uv 0.9.7",
+    "original_reward": 1.0,
+    "strict": 1,
+    "tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "test_count_source": "original pytest final stdout summary",
+    "original_source_before_after_verified": true,
+    "answer_files_unchanged_by_grader": true,
+    "temporary_paths_removed": true,
+    "packages_remain_only_in_temporary_provider_environment": true
+  },
+  "artifact_collection_phase": "fixed original grading after solving",
+  "grader_same_platform_session": true,
+  "condition_valid": true
+}

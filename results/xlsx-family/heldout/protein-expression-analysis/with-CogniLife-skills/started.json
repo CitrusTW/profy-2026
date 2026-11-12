@@ -1,0 +1,16 @@
+{
+  "task": "protein-expression-analysis",
+  "label": "with-CogniLife-skills",
+  "model": "gpt-6.1-sol",
+  "adapter": "cloud-native-owned-files-v2",
+  "adapter_source_sha256": {
+    "native_support.py": "4ef285130fa2e84f79a08c1e072f45d414bc6076e96277cb05c32d915cafdfa3",
+    "remote_grade.py": "dcad4760b6db6731437dfed267a3d125b7489c87e0b73011b41ae1d420d47c71",
+    "remote_namespace_grade.py": "d760a66888977c1e52bec1cd84008afb0b1a6409b2d3a828140f63fa87666f5e",
+    "remote_native.py": "3c4e23ba27ebbe73f63e0c423496e52398531adbca2b665f0ddf10c0e6ea202a",
+    "remote_setup.py": "2048f4fb10f692de86fcd82835112d3f01842c255a9800907395be1b9212cc99",
+    "remote_tools.py": "d0211c1907c65f03d80ae000985fc7a5b1c44ca317db7d8ac47186df451ec58a",
+    "study.py": "0bf0a7903d19cc12a5761f4bb9e5a7d82ef9e32b33c659dc422b39a540e82fc1",
+    "task_specs.json": "c7bc5540a65dd54aab0c67008ef54435adb45ff3c3dde1e53202e1cae3b113e0"
+  }
+}

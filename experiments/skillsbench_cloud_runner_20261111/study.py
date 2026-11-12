@@ -37,7 +37,8 @@ def tracked_files(bench,task,part):
         if not raw:continue
         header,name=raw.decode().split('\t',1);mode,kind,oid=header.split()
         assert kind=='blob' and mode in ['100644','100755'],'Symlink/submodule input needs explicit review'
-        data=(bench/name).read_bytes()
+        # Read pinned Git objects in RAM; iCloud placeholders can block ordinary file reads.
+        data=subprocess.check_output(['git','-C',str(bench),'cat-file','blob',oid],timeout=60)
         assert hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()==oid,'Local source differs from pinned public blob: '+name
         rows.append((name[len(prefix):],data,0o755 if mode=='100755' else 0o644))
     if not rows:raise ValueError('Pinned task source unavailable')
@@ -94,7 +95,7 @@ class DockerStudy(LibraryStudy):
         expected=json.loads(Path(expected_path).read_text()) if expected_path else None
         if expected is not None and (not isinstance(expected,dict) or not all(isinstance(k,str) and re.fullmatch('[0-9a-f]{64}',v or '') for k,v in expected.items())):
             raise ValueError('--expected-input-hashes must contain the complete logical-path to SHA256 map from A')
-        if task=='pdf-excel-diff' and label in ['no-skills','with-CogniLife-skills'] and expected is None:
+        if task=='pdf-excel-diff' and not no_skills and expected is None:
             raise ValueError('Comparison groups require --expected-input-hashes from A')
         versions=json.loads(Path(self.args.native_package_versions).read_text()) if getattr(self.args,'native_package_versions',None) else {}
         skill_hashes={};skills=[]
@@ -191,4 +192,4 @@ if __name__=='__main__':
     candidate=Path(args.candidate).read_text() if args.candidate else None
     if args.label=='with-CogniLife-skills' and candidate is None:raise ValueError('No evolved candidate supplied')
     row=study.solve(args.label,args.task,candidate,args.label=='no-skills')
-    print(json.dumps({'task':args.task,'label':args.label,'score':row['score'],'tokens':row['tokens']},ensure_ascii=False))
+    print(json.dumps({'task':args.task,'label':args.label,'score':{k:row['score'].get(k) for k in ['original_reward','tests','passed','failed']},'tokens':row['tokens']},ensure_ascii=False))
