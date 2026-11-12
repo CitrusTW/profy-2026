@@ -1,0 +1,10 @@
+{
+  "instruction": "I-006",
+  "accepted_utc": "2026-11-12T16:29:46.362215+00:00",
+  "paper_start_now": true,
+  "draft_deadline_timezone": "America/Los_Angeles",
+  "draft_deadline": "2026-11-12T11:00:00-08:00",
+  "draft_delivery": "paper_rev/draft1/",
+  "final_delivery": "paper_rev/final/",
+  "profy_probe_and_run_cutoff_unchanged": true
+}

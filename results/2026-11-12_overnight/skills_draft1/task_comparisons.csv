@@ -1,0 +1,5 @@
+task,skill_family,version,policy_a_strict_reward_delta,policy_b_included,policy_b_strict_reward_delta,quality_direction,token_comparable,token_delta,token_delta_percent,original_tokens_sample_sd,exceeds_original_sd,token_direction,observed_token_direction,candidate_mean_outside_original_range,candidate_mean_below_original_min,baseline_tokens_mean,candidate_tokens_mean,n_original,n_frozen
+shock-analysis-demand,xlsx,11,0,False,unknown,tie,False,unknown,unknown,unknown,unknown,unavailable,unknown,unknown,unknown,unknown,unknown,1,1
+powerlifting-coef-calc,xlsx,11,0,True,0,tie,True,-4721,-2.0041517908312496,unknown,unknown,unknown_variation,decrease,unknown,unknown,235561,230840,1,1
+energy-market-pricing,economic-dispatch,6,0,True,0,tie,True,-83226,-45.834342989316006,unknown,unknown,unknown_variation,decrease,unknown,unknown,181580,98354,1,1
+protein-expression-analysis,xlsx,11,0,True,0,tie,True,76939,40.95353677296414,unknown,unknown,unknown_variation,increase,unknown,unknown,187869,264808,1,1

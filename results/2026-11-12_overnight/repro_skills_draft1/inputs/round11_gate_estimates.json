@@ -1,0 +1,16 @@
+{
+  "rubric_totals": {
+    "before": {
+      "quality": 46.43,
+      "efficiency": 13.85,
+      "total": 60.28
+    },
+    "after": {
+      "quality": 64.76,
+      "efficiency": 26.12,
+      "total": 90.88
+    }
+  },
+  "source_sha256": "ffc5ac9f459f673b7ef38b1e40088d7a13e9c19842936c2830ed84b0e508500d",
+  "source": "xlsx round11 evolution/pending.json"
+}

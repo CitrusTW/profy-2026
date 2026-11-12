@@ -1,0 +1,5461 @@
+{
+  "draft": "draft1",
+  "created_utc": "2026-11-12T16:38:49.062088+00:00",
+  "pdf_sha256": "1a88ba509f0cdcb35819acea47d15e75978e5cde4366c64ed69b03ad93210ac8",
+  "body_pages": 6,
+  "total_pdf_pages": 21,
+  "changes": [
+    "Abstract: ADV20 current-output scores; separate frozen-skill execution evidence",
+    "Introduction contribution scope",
+    "Section4 opening and4.1--4.4: replace all85-task scores/figures/error/preference claims with I004 ADV20, all boundaries retained",
+    "Recompute unchanged Full timing from saved platform metadata",
+    "Customs transition scope; all customs numerical results unchanged",
+    "Add six-sentence SkillsBench subsection with measured scope and gate counterexample",
+    "Conclusion: replace85-task claims, retain evidence boundaries",
+    "Limitations: new20-task/model/judge scope, SkillsBench sample/environment/ceiling; customs limits retained",
+    "AppendixA: remove old85-task Figure2/paired table; insert complete currentADV diagnostics and counterbalanced counts",
+    "AppendixB: actual two-order/prefix protocol; Listing prompt texts unchanged",
+    "New SkillsBench appendix: effective attempts, all task states, resource variation, gate comparison, development/held-out separation, failed/admitted first candidate",
+    "Appendix layout: flush customs floats before SkillsBench; avoid isolated small float pages; no numerical changes",
+    "Pixel-redact remaining screenshot toolbar title only; same asset dimensions and identical non-header pixels, original unchanged"
+  ],
+  "numeric_sources": [
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "overall"
+      ],
+      "raw": 2.43,
+      "displayed": "2.43"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "overall"
+      ],
+      "raw": 2.63,
+      "displayed": "2.63"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "overall"
+      ],
+      "raw": 3.2199999999999998,
+      "displayed": "3.22"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "planned_tasks"
+      ],
+      "raw": 20,
+      "displayed": "20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "planned_tasks"
+      ],
+      "raw": 20,
+      "displayed": "20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "complete",
+        "n_tasks"
+      ],
+      "raw": 10,
+      "displayed": "10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "missing_info",
+        "n_tasks"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "adversarial",
+        "n_tasks"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "mean"
+      ],
+      "raw": 0.7899999999999998,
+      "displayed": "0.79"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": 0.45999999999999996,
+      "displayed": "0.46"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 1.1099999999999999,
+      "displayed": "1.11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "higher"
+      ],
+      "raw": 18,
+      "displayed": "18"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "lower"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "tie"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "mean"
+      ],
+      "raw": 0.5900000000000001,
+      "displayed": "0.59"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": 0.3,
+      "displayed": "0.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.8699999999999999,
+      "displayed": "0.87"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "higher"
+      ],
+      "raw": 15,
+      "displayed": "15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "lower"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "tie"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "bootstrap",
+        "n"
+      ],
+      "raw": 10000,
+      "displayed": "10000"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "bootstrap",
+        "seed"
+      ],
+      "raw": 20261112,
+      "displayed": "20261112"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "overall"
+      ],
+      "raw": 2.43,
+      "displayed": "2.43"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "completeness"
+      ],
+      "raw": 2.2,
+      "displayed": "2.20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "specificity"
+      ],
+      "raw": 1.7,
+      "displayed": "1.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "actionability"
+      ],
+      "raw": 2.05,
+      "displayed": "2.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "coherence"
+      ],
+      "raw": 3.45,
+      "displayed": "3.45"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "safety_boundary"
+      ],
+      "raw": 2.75,
+      "displayed": "2.75"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "overall"
+      ],
+      "raw": 2.63,
+      "displayed": "2.63"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "completeness"
+      ],
+      "raw": 2.3,
+      "displayed": "2.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "specificity"
+      ],
+      "raw": 1.7,
+      "displayed": "1.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "actionability"
+      ],
+      "raw": 2.05,
+      "displayed": "2.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "coherence"
+      ],
+      "raw": 3.85,
+      "displayed": "3.85"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "safety_boundary"
+      ],
+      "raw": 3.25,
+      "displayed": "3.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "overall"
+      ],
+      "raw": 3.2199999999999998,
+      "displayed": "3.22"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "completeness"
+      ],
+      "raw": 3.2,
+      "displayed": "3.20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "specificity"
+      ],
+      "raw": 3.25,
+      "displayed": "3.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "actionability"
+      ],
+      "raw": 3.1,
+      "displayed": "3.10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "coherence"
+      ],
+      "raw": 3.4,
+      "displayed": "3.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "safety_boundary"
+      ],
+      "raw": 3.15,
+      "displayed": "3.15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "missing_info",
+        "conditions",
+        "profy_expert_full",
+        "overall_mean"
+      ],
+      "raw": 2.7,
+      "displayed": "2.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "coherence"
+      ],
+      "raw": 3.4,
+      "displayed": "3.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "coherence"
+      ],
+      "raw": 3.85,
+      "displayed": "3.85"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "safety_boundary"
+      ],
+      "raw": 3.15,
+      "displayed": "3.15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "safety_boundary"
+      ],
+      "raw": 3.25,
+      "displayed": "3.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "both_full_wins"
+      ],
+      "raw": 16,
+      "displayed": "16"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_raw",
+        "counts",
+        "both_full_wins"
+      ],
+      "raw": 17,
+      "displayed": "17"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "position_consistent_count"
+      ],
+      "raw": 19,
+      "displayed": "19"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "platform_full_timing",
+        "n"
+      ],
+      "raw": 20,
+      "displayed": "20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "platform_full_timing",
+        "median_seconds"
+      ],
+      "raw": 52.05,
+      "displayed": "52.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "platform_full_timing",
+        "mean_seconds"
+      ],
+      "raw": 54.41,
+      "displayed": "54.41"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "fresh_summary",
+        "policies",
+        "b_exclude_tasks_with_any_limit",
+        "n_compared_tasks"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "first_pilot",
+        "validation",
+        "with-skills",
+        "score",
+        "passed"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "first_pilot",
+        "validation",
+        "with-skills",
+        "score",
+        "tests"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "first_pilot",
+        "validation",
+        "with-CogniLife-skills",
+        "score",
+        "passed"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "first_pilot",
+        "validation",
+        "with-CogniLife-skills",
+        "score",
+        "tests"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        16,
+        "version"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        17,
+        "version"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        18,
+        "version"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        19,
+        "version"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        20,
+        "version"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        21,
+        "version"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "evidence_grounding"
+      ],
+      "raw": 1.8,
+      "displayed": "1.80"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "evidence_grounding"
+      ],
+      "raw": 1.95,
+      "displayed": "1.95"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "evidence_grounding"
+      ],
+      "raw": 2.4,
+      "displayed": "2.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "uncertainty_calibration"
+      ],
+      "raw": 2.5,
+      "displayed": "2.50"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "uncertainty_calibration"
+      ],
+      "raw": 2.85,
+      "displayed": "2.85"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "uncertainty_calibration"
+      ],
+      "raw": 2.7,
+      "displayed": "2.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_raw",
+        "artifact_incomplete"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "artifact_incomplete"
+      ],
+      "raw": 10,
+      "displayed": "10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "profy_expert_full",
+        "artifact_incomplete"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_raw",
+        "hallucinated_evidence"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "profy_expert_full",
+        "hallucinated_evidence"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_raw",
+        "missing_input_not_handled"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "missing_input_not_handled"
+      ],
+      "raw": 9,
+      "displayed": "9"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "profy_expert_full",
+        "missing_input_not_handled"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_raw",
+        "overclaiming"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "overclaiming"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "profy_expert_full",
+        "overclaiming"
+      ],
+      "raw": 15,
+      "displayed": "15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "profy_expert_full",
+        "poor_structure"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "profy_expert_full",
+        "tool_failure"
+      ],
+      "raw": 8,
+      "displayed": "8"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_raw",
+        "unsafe_boundary"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "unsafe_boundary"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "profy_expert_full",
+        "unsafe_boundary"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_raw",
+        "weak_personalization"
+      ],
+      "raw": 20,
+      "displayed": "20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "weak_personalization"
+      ],
+      "raw": 19,
+      "displayed": "19"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "error_tags",
+        "profy_expert_full",
+        "weak_personalization"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "adversarial",
+        "n_tasks"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "adversarial",
+        "conditions",
+        "generic_llm_raw",
+        "overall_mean"
+      ],
+      "raw": 2.75,
+      "displayed": "2.75"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "adversarial",
+        "conditions",
+        "generic_llm_expert_prompt",
+        "overall_mean"
+      ],
+      "raw": 3.0,
+      "displayed": "3.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "adversarial",
+        "conditions",
+        "profy_expert_full",
+        "overall_mean"
+      ],
+      "raw": 3.55,
+      "displayed": "3.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "complete",
+        "n_tasks"
+      ],
+      "raw": 10,
+      "displayed": "10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "complete",
+        "conditions",
+        "generic_llm_raw",
+        "overall_mean"
+      ],
+      "raw": 2.22,
+      "displayed": "2.22"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "complete",
+        "conditions",
+        "generic_llm_expert_prompt",
+        "overall_mean"
+      ],
+      "raw": 2.44,
+      "displayed": "2.44"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "complete",
+        "conditions",
+        "profy_expert_full",
+        "overall_mean"
+      ],
+      "raw": 3.4,
+      "displayed": "3.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "missing_info",
+        "n_tasks"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "missing_info",
+        "conditions",
+        "generic_llm_raw",
+        "overall_mean"
+      ],
+      "raw": 2.5666666666666664,
+      "displayed": "2.57"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "missing_info",
+        "conditions",
+        "generic_llm_expert_prompt",
+        "overall_mean"
+      ],
+      "raw": 2.7,
+      "displayed": "2.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "variant_results",
+        "missing_info",
+        "conditions",
+        "profy_expert_full",
+        "overall_mean"
+      ],
+      "raw": 2.7,
+      "displayed": "2.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "mean"
+      ],
+      "raw": 0.7899999999999998,
+      "displayed": "0.79"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": 0.45999999999999996,
+      "displayed": "0.46"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 1.1099999999999999,
+      "displayed": "1.11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "higher"
+      ],
+      "raw": 18,
+      "displayed": "18"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "lower"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "tie"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "mean"
+      ],
+      "raw": 0.5900000000000001,
+      "displayed": "0.59"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": 0.3,
+      "displayed": "0.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.8699999999999999,
+      "displayed": "0.87"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "higher"
+      ],
+      "raw": 15,
+      "displayed": "15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "lower"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "tie"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_raw",
+        "counts",
+        "both_full_wins"
+      ],
+      "raw": 17,
+      "displayed": "17"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_raw",
+        "counts",
+        "both_baseline_wins"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_raw",
+        "counts",
+        "opposite_winners"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_raw",
+        "counts",
+        "both_ties"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_raw",
+        "position_consistent_count"
+      ],
+      "raw": 19,
+      "displayed": "19"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "both_full_wins"
+      ],
+      "raw": 16,
+      "displayed": "16"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "both_baseline_wins"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "opposite_winners"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "both_ties"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "position_consistent_count"
+      ],
+      "raw": 19,
+      "displayed": "19"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "judge_batches",
+        "adv_rejudge_i004_rubric4096",
+        "all_calls"
+      ],
+      "raw": 61,
+      "displayed": "61"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "judge_batches",
+        "adv_rejudge_i004_rubric4096",
+        "failed_calls"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "valid_rubric_records"
+      ],
+      "raw": 60,
+      "displayed": "60"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "judge_batches",
+        "adv_rejudge_i003",
+        "failed_calls"
+      ],
+      "raw": 27,
+      "displayed": "27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json",
+      "source_sha256": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+      "item": [
+        "judge_batches",
+        "adv_rejudge_i003",
+        "all_calls"
+      ],
+      "raw": 159,
+      "displayed": "159"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "valid_pairwise_records"
+      ],
+      "raw": 80,
+      "displayed": "80"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_raw",
+        "A_choice_fraction_all"
+      ],
+      "raw": 0.525,
+      "displayed": "0.525"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_raw",
+        "position_consistency_fraction"
+      ],
+      "raw": 0.95,
+      "displayed": "0.950"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "A_choice_fraction_all"
+      ],
+      "raw": 0.525,
+      "displayed": "0.525"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "position_consistency_fraction"
+      ],
+      "raw": 0.95,
+      "displayed": "0.950"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "gate_vs_execution",
+        "before"
+      ],
+      "raw": 13.85,
+      "displayed": "13.85"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "gate_vs_execution",
+        "after"
+      ],
+      "raw": 26.12,
+      "displayed": "26.12"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        0,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        0,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        0,
+        "strict_reward_mean"
+      ],
+      "raw": 0,
+      "displayed": "0.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        0,
+        "tokens_mean"
+      ],
+      "raw": 839001,
+      "displayed": "839001.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        0,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        0,
+        "tokens_min"
+      ],
+      "raw": 839001,
+      "displayed": "839001"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        0,
+        "tokens_max"
+      ],
+      "raw": 839001,
+      "displayed": "839001"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        1,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        1,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        1,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        1,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        1,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        1,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        1,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        2,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        2,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        2,
+        "strict_reward_mean"
+      ],
+      "raw": 0,
+      "displayed": "0.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        2,
+        "tokens_mean"
+      ],
+      "raw": 885699,
+      "displayed": "885699.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        2,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        2,
+        "tokens_min"
+      ],
+      "raw": 885699,
+      "displayed": "885699"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        2,
+        "tokens_max"
+      ],
+      "raw": 885699,
+      "displayed": "885699"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        3,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        3,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        3,
+        "strict_reward_mean"
+      ],
+      "raw": 0,
+      "displayed": "0.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        3,
+        "tokens_mean"
+      ],
+      "raw": 73630,
+      "displayed": "73630.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        3,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        3,
+        "tokens_min"
+      ],
+      "raw": 73630,
+      "displayed": "73630"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        3,
+        "tokens_max"
+      ],
+      "raw": 73630,
+      "displayed": "73630"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        4,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        4,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        4,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        4,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        4,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        4,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        4,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        5,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        5,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        5,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        5,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        5,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        5,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        5,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        6,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        6,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        6,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        6,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        6,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        6,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        6,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        7,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        7,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        7,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        7,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        7,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        7,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        7,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        8,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        8,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        8,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        8,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        8,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        8,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        8,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        9,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        9,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        9,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        9,
+        "tokens_mean"
+      ],
+      "raw": 180811,
+      "displayed": "180811.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        9,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        9,
+        "tokens_min"
+      ],
+      "raw": 180811,
+      "displayed": "180811"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        9,
+        "tokens_max"
+      ],
+      "raw": 180811,
+      "displayed": "180811"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        10,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        10,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        10,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        10,
+        "tokens_mean"
+      ],
+      "raw": 235561,
+      "displayed": "235561.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        10,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        10,
+        "tokens_min"
+      ],
+      "raw": 235561,
+      "displayed": "235561"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        10,
+        "tokens_max"
+      ],
+      "raw": 235561,
+      "displayed": "235561"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        11,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        11,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        11,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        11,
+        "tokens_mean"
+      ],
+      "raw": 230840,
+      "displayed": "230840.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        11,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        11,
+        "tokens_min"
+      ],
+      "raw": 230840,
+      "displayed": "230840"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        11,
+        "tokens_max"
+      ],
+      "raw": 230840,
+      "displayed": "230840"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        12,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        12,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        12,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        12,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        12,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        12,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        12,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        13,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        13,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        13,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        13,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        13,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        13,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        13,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        14,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        14,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        14,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        14,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        14,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        14,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        14,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        15,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        15,
+        "n_scored"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        15,
+        "strict_reward_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        15,
+        "tokens_mean"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        15,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        15,
+        "tokens_min"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        15,
+        "tokens_max"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        16,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        16,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        16,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        16,
+        "tokens_mean"
+      ],
+      "raw": 204038,
+      "displayed": "204038.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        16,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        16,
+        "tokens_min"
+      ],
+      "raw": 204038,
+      "displayed": "204038"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        16,
+        "tokens_max"
+      ],
+      "raw": 204038,
+      "displayed": "204038"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        17,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        17,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        17,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        17,
+        "tokens_mean"
+      ],
+      "raw": 181580,
+      "displayed": "181580.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        17,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        17,
+        "tokens_min"
+      ],
+      "raw": 181580,
+      "displayed": "181580"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        17,
+        "tokens_max"
+      ],
+      "raw": 181580,
+      "displayed": "181580"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        18,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        18,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        18,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        18,
+        "tokens_mean"
+      ],
+      "raw": 98354,
+      "displayed": "98354.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        18,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        18,
+        "tokens_min"
+      ],
+      "raw": 98354,
+      "displayed": "98354"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        18,
+        "tokens_max"
+      ],
+      "raw": 98354,
+      "displayed": "98354"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        19,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        19,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        19,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        19,
+        "tokens_mean"
+      ],
+      "raw": 183191,
+      "displayed": "183191.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        19,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        19,
+        "tokens_min"
+      ],
+      "raw": 183191,
+      "displayed": "183191"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        19,
+        "tokens_max"
+      ],
+      "raw": 183191,
+      "displayed": "183191"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        20,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        20,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        20,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        20,
+        "tokens_mean"
+      ],
+      "raw": 187869,
+      "displayed": "187869.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        20,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        20,
+        "tokens_min"
+      ],
+      "raw": 187869,
+      "displayed": "187869"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        20,
+        "tokens_max"
+      ],
+      "raw": 187869,
+      "displayed": "187869"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        21,
+        "n_attempts"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        21,
+        "n_scored"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        21,
+        "strict_reward_mean"
+      ],
+      "raw": 1,
+      "displayed": "1.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        21,
+        "tokens_mean"
+      ],
+      "raw": 264808,
+      "displayed": "264808.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        21,
+        "tokens_sd_sample"
+      ],
+      "raw": null,
+      "displayed": "unknown"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        21,
+        "tokens_min"
+      ],
+      "raw": 264808,
+      "displayed": "264808"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "group_statistics",
+        21,
+        "tokens_max"
+      ],
+      "raw": 264808,
+      "displayed": "264808"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        0,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 180811,
+      "displayed": "180811"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        0,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        0,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        0,
+        "score",
+        "passed"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        0,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        0,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        0,
+        "solver_elapsed_sec"
+      ],
+      "raw": 267.007,
+      "displayed": "267.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        1,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 230840,
+      "displayed": "230840"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        1,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        1,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        1,
+        "score",
+        "passed"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        1,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        1,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        1,
+        "solver_elapsed_sec"
+      ],
+      "raw": 297.361,
+      "displayed": "297.4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        2,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 235561,
+      "displayed": "235561"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        2,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        2,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        2,
+        "score",
+        "passed"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        2,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        2,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        2,
+        "solver_elapsed_sec"
+      ],
+      "raw": 275.167,
+      "displayed": "275.2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        3,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 27292,
+      "displayed": "27292"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        3,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        3,
+        "solver_elapsed_sec"
+      ],
+      "raw": 186.075,
+      "displayed": "186.1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        4,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        4,
+        "solver_elapsed_sec"
+      ],
+      "raw": 1.835,
+      "displayed": "1.8"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        5,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        5,
+        "solver_elapsed_sec"
+      ],
+      "raw": 1.99,
+      "displayed": "2.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        6,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 885699,
+      "displayed": "885699"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        6,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        6,
+        "score",
+        "strict"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        6,
+        "score",
+        "passed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        6,
+        "score",
+        "failed"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        6,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        6,
+        "solver_elapsed_sec"
+      ],
+      "raw": 731.195,
+      "displayed": "731.2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        7,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 73630,
+      "displayed": "73630"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        7,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        7,
+        "score",
+        "strict"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        7,
+        "score",
+        "passed"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        7,
+        "score",
+        "failed"
+      ],
+      "raw": 8,
+      "displayed": "8"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        7,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        7,
+        "solver_elapsed_sec"
+      ],
+      "raw": 182.307,
+      "displayed": "182.3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        8,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 100269,
+      "displayed": "100269"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        8,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        8,
+        "solver_elapsed_sec"
+      ],
+      "raw": 202.705,
+      "displayed": "202.7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        9,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 104019,
+      "displayed": "104019"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        9,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        9,
+        "solver_elapsed_sec"
+      ],
+      "raw": 181.555,
+      "displayed": "181.6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        10,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        10,
+        "solver_elapsed_sec"
+      ],
+      "raw": 2.359,
+      "displayed": "2.4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        11,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        11,
+        "solver_elapsed_sec"
+      ],
+      "raw": 1.96,
+      "displayed": "2.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        12,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        12,
+        "solver_elapsed_sec"
+      ],
+      "raw": 3.65,
+      "displayed": "3.6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        13,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        13,
+        "solver_elapsed_sec"
+      ],
+      "raw": 2.455,
+      "displayed": "2.5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        14,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 839001,
+      "displayed": "839001"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        14,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        14,
+        "score",
+        "strict"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        14,
+        "score",
+        "passed"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        14,
+        "score",
+        "failed"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        14,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        14,
+        "solver_elapsed_sec"
+      ],
+      "raw": 760.071,
+      "displayed": "760.1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        15,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 1168850,
+      "displayed": "1168850"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        15,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        15,
+        "solver_elapsed_sec"
+      ],
+      "raw": 836.448,
+      "displayed": "836.4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        16,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 204038,
+      "displayed": "204038"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        16,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        16,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        16,
+        "score",
+        "passed"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        16,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        16,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        16,
+        "solver_elapsed_sec"
+      ],
+      "raw": 110.467,
+      "displayed": "110.5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        17,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 181580,
+      "displayed": "181580"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        17,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        17,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        17,
+        "score",
+        "passed"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        17,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        17,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        17,
+        "solver_elapsed_sec"
+      ],
+      "raw": 321.026,
+      "displayed": "321.0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        18,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 98354,
+      "displayed": "98354"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        18,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        18,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        18,
+        "score",
+        "passed"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        18,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        18,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        18,
+        "solver_elapsed_sec"
+      ],
+      "raw": 99.105,
+      "displayed": "99.1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        19,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 183191,
+      "displayed": "183191"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        19,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        19,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        19,
+        "score",
+        "passed"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        19,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        19,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        19,
+        "solver_elapsed_sec"
+      ],
+      "raw": 282.754,
+      "displayed": "282.8"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        20,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 187869,
+      "displayed": "187869"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        20,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        20,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        20,
+        "score",
+        "passed"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        20,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        20,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        20,
+        "solver_elapsed_sec"
+      ],
+      "raw": 309.261,
+      "displayed": "309.3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        21,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 264808,
+      "displayed": "264808"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        21,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        21,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        21,
+        "score",
+        "passed"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        21,
+        "score",
+        "failed"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        21,
+        "score",
+        "skipped"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "attempts",
+        21,
+        "solver_elapsed_sec"
+      ],
+      "raw": 336.866,
+      "displayed": "336.9"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        0,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        0,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 180811,
+      "displayed": "180811"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        0,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        1,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        1,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 230840,
+      "displayed": "230840"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        1,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        2,
+        "score",
+        "strict"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        2,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 235561,
+      "displayed": "235561"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        2,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        3,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 44468,
+      "displayed": "44468"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        3,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        4,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 44912,
+      "displayed": "44912"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        4,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        5,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 44956,
+      "displayed": "44956"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        5,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        6,
+        "score",
+        "strict"
+      ],
+      "raw": 0,
+      "displayed": "0"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        6,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 885699,
+      "displayed": "885699"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        6,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        7,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 73630,
+      "displayed": "73630"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        7,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        8,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 100269,
+      "displayed": "100269"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        8,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        9,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 104019,
+      "displayed": "104019"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        9,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        10,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        11,
+        "tokens",
+        "total_tokens"
+      ],
+      "raw": 27292,
+      "displayed": "27292"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        11,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        12,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        13,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        14,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        15,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        16,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "all_original_attempt_records",
+        17,
+        "repeat"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "fresh_summary",
+        "policies",
+        "a_count_limits_as_failure",
+        "n_compared_tasks"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "fresh_summary",
+        "policies",
+        "b_exclude_tasks_with_any_limit",
+        "n_compared_tasks"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "fresh_summary",
+        "policies",
+        "a_exclude_environment_limited",
+        "n_compared_tasks"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json",
+      "source_sha256": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+      "item": [
+        "fresh_summary",
+        "policies",
+        "b_exclude_limits_and_environment_limited",
+        "n_compared_tasks"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        0,
+        "checks",
+        0
+      ],
+      "raw": "3/3",
+      "displayed": "3/3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        0,
+        "checks",
+        1
+      ],
+      "raw": "3/3",
+      "displayed": "3/3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        0,
+        "checks",
+        2
+      ],
+      "raw": "3/3",
+      "displayed": "3/3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        1,
+        "checks",
+        0
+      ],
+      "raw": "1/3",
+      "displayed": "1/3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        1,
+        "checks",
+        1
+      ],
+      "raw": "3/3",
+      "displayed": "3/3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        1,
+        "checks",
+        2
+      ],
+      "raw": "3/3",
+      "displayed": "3/3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        2,
+        "checks",
+        0
+      ],
+      "raw": "4/4",
+      "displayed": "4/4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        2,
+        "checks",
+        1
+      ],
+      "raw": "4/4",
+      "displayed": "4/4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        2,
+        "checks",
+        2
+      ],
+      "raw": "4/4",
+      "displayed": "4/4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        3,
+        "checks",
+        0
+      ],
+      "raw": "2/2",
+      "displayed": "2/2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        3,
+        "checks",
+        1
+      ],
+      "raw": "2/2",
+      "displayed": "2/2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        3,
+        "checks",
+        2
+      ],
+      "raw": "2/2",
+      "displayed": "2/2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        4,
+        "checks",
+        0
+      ],
+      "raw": "27/27",
+      "displayed": "27/27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        4,
+        "checks",
+        1
+      ],
+      "raw": "27/27",
+      "displayed": "27/27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        4,
+        "checks",
+        2
+      ],
+      "raw": "27/27",
+      "displayed": "27/27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        5,
+        "checks",
+        0
+      ],
+      "raw": "6/6",
+      "displayed": "6/6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        5,
+        "checks",
+        1
+      ],
+      "raw": "6/6",
+      "displayed": "6/6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "six_tasks",
+        5,
+        "checks",
+        2
+      ],
+      "raw": "6/6",
+      "displayed": "6/6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "first_pilot",
+        "validation",
+        "with-skills",
+        "score",
+        "passed"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "first_pilot",
+        "validation",
+        "with-skills",
+        "score",
+        "tests"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "first_pilot",
+        "validation",
+        "with-CogniLife-skills",
+        "score",
+        "passed"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json",
+      "source_sha256": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+      "item": [
+        "first_pilot",
+        "validation",
+        "with-CogniLife-skills",
+        "score",
+        "tests"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        0,
+        "round"
+      ],
+      "raw": 12,
+      "displayed": "12"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        0,
+        "passed"
+      ],
+      "raw": 27,
+      "displayed": "27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        0,
+        "tests"
+      ],
+      "raw": 27,
+      "displayed": "27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        0,
+        "tokens"
+      ],
+      "raw": 138896,
+      "displayed": "138896"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        1,
+        "round"
+      ],
+      "raw": 12,
+      "displayed": "12"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        1,
+        "passed"
+      ],
+      "raw": 27,
+      "displayed": "27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        1,
+        "tests"
+      ],
+      "raw": 27,
+      "displayed": "27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        1,
+        "tokens"
+      ],
+      "raw": 135746,
+      "displayed": "135746"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        2,
+        "round"
+      ],
+      "raw": 12,
+      "displayed": "12"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        2,
+        "passed"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        2,
+        "tests"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        2,
+        "tokens"
+      ],
+      "raw": 180448,
+      "displayed": "180448"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        3,
+        "round"
+      ],
+      "raw": 13,
+      "displayed": "13"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        3,
+        "passed"
+      ],
+      "raw": 27,
+      "displayed": "27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        3,
+        "tests"
+      ],
+      "raw": 27,
+      "displayed": "27"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json",
+      "source_sha256": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd",
+      "item": [
+        3,
+        "tokens"
+      ],
+      "raw": 224533,
+      "displayed": "224533"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "excluded_nonADV_full_count"
+      ],
+      "raw": 65,
+      "displayed": "65"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "pairwise_output_character_limit"
+      ],
+      "raw": 3000,
+      "displayed": "3000"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "pairwise_output_character_limit"
+      ],
+      "raw": 3000,
+      "displayed": "3000"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "final_rubric_max_tokens"
+      ],
+      "raw": 4096,
+      "displayed": "4096"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "initial_judge_max_tokens"
+      ],
+      "raw": 1024,
+      "displayed": "1024"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "frozen_xlsx_round"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "runner_model_turn_cap"
+      ],
+      "raw": 24,
+      "displayed": "24"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "runner_tool_call_cap"
+      ],
+      "raw": 48,
+      "displayed": "48"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json",
+      "source_sha256": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+      "item": [
+        "values",
+        "runner_solver_seconds_cap"
+      ],
+      "raw": 1600,
+      "displayed": "1600"
+    }
+  ],
+  "input_hashes": {
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/skills_draft1/results.json": "cea14ba271b24a6117a4244ad60950b8fec167bbc34323090f7dbaef49078bd1",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/history_results.json": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/selection_records.json": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd"
+  },
+  "screenshot_redaction": {
+    "original_asset_sha256": "d850b2b6479c540ace4c33ce09cc02812277ec6115ca5af418db8508705f2e61",
+    "new_asset_sha256": "b7e101a13d47ac70d70f26b305a8819d07257469ea5284f4bc087b8876dc37b7",
+    "rectangle_pdf_units": [
+      0,
+      0,
+      1952.0,
+      65
+    ],
+    "non_header_pixels_identical_verified": true,
+    "original_and_new_size": [
+      1952,
+      1378
+    ],
+    "crop_applied": false,
+    "method": "True image-pixel redaction to white in new PDF; no change to content below header"
+  },
+  "deployment_context_verbatim": "The controls in Section 3.4 run in a commercial, paid expert marketplace: creators publish experts, and callers use the web, API/SDK, or enterprise instant messaging, with payment tied to delivered results. At the time of writing, the marketplace hosts several hundred experts. Temporal memory consolidation has been in production since mid-2026. Within the expert-service comparison, only the ADV 20 Full outputs were generated through the deployed platform; the screenshots in Appendix C come from that deployment.",
+  "no_overleaf_or_openreview_upload": true,
+  "original_paper_unchanged": true
+}

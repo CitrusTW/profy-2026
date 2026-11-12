@@ -1,14 +1,16 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T08:30:05.432280-08:00
+- Updated (America/Los_Angeles): 2026-11-12T08:42:16.088212-08:00
 - Last applied instruction: I-006 (in progress)
-- Latest read: I-006; checkpoint: 30min-checkpoint
-- Current work: Profy STOPPED (Expert is not published); Claude batch1 finished with incomplete rubrics. Reporting and instruction checks continue.
-- Next: await owner restoration of supplied expert and numbered review of uniform rubric repair. No new Profy submissions, key/model bypass, publication or evolution.
-- Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
-- ETA: unknown. ADV archive audit complete; fresh judge progress below. Profy USD unknown; no recharge.
+- Latest read: I-006; checkpoint: I006-draft1-ready-body6pages-total21-numeric479checks-anonymous
+- Current work: I006 manuscript revision copy and original-order Profy recovery probes; frozen skills, no new evolution.
+- Next: continue one next-planned-run probe every30min; if accepted, resume serial schedule and supplement supply B/C original-verifier grading. Draft1 due11:00PST, reviewer11:15; final15:30; no new run after13:30.
+- ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
+- OpenRouter judge received expense USD4.941796; unknown-cost calls0. Profy USDunknown. No purchase/recharge.
 
-## Completed attempts (old setup failures retained)
-| Task | Phase | Condition | Rep | Status | Strict | Pass/fail/skip (receipt) | Tokens | Solver seconds |
+## SkillsBench: all original bookkeeping attempts
+- Rows include setup failures/API rejections, not only scientific runs. API403 before model usage is NOT a scored trial. Earlier raw records and superseded failures are preserved.
+- Fixed eight tasks, xlsx adopted round11, serial no-skills -> original -> frozen;24-turn cap unchanged. No new evolution.
+| Task | Phase | Condition | Rep | Status | Strict | Receipt pass/fail/skip | Observed tokens | Solver sec |
 |---|---|---|---:|---|---|---|---:|---:|
 | shock-analysis-demand | 01_任务结果 | with-skills | 1 | runner_limit | unknown | unknown/unknown/unknown | 1168850 | 836.448 |
 | shock-analysis-demand | 01_任务结果 | no-skills | 1 | scored | 0 | 3/2/0 | 839001 | 760.071 |
@@ -22,51 +24,35 @@
 | shock-analysis-supply | launch-03 | no-skills | 1 | scored(supplement) | 0 | 1/8/0 | 73630 | 182.307 |
 | shock-analysis-supply | launch-03 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 100269 | 202.705 |
 | shock-analysis-supply | launch-03 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 104019 | 181.555 |
-| invoice-fraud-detection | launch-04-i003 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 2.359 |
+| invoice-fraud-detection | launch-04-i003 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 2.359 |
 | reserves-at-risk-calc | launch-04-i003 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 27292 | 186.075 |
-| reserves-at-risk-calc | launch-04-i003 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 1.835 |
-| reserves-at-risk-calc | launch-04-i003 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 1.99 |
-| xlsx-recover-data | launch-04-i003 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 1.96 |
-| xlsx-recover-data | launch-04-i003 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 3.65 |
-| xlsx-recover-data | launch-04-i003 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 2.455 |
-| reserves-at-risk-calc | launch-05-profy-recovery | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 2.592 |
+| reserves-at-risk-calc | launch-04-i003 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 1.835 |
+| reserves-at-risk-calc | launch-04-i003 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 1.99 |
+| xlsx-recover-data | launch-04-i003 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 1.96 |
+| xlsx-recover-data | launch-04-i003 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 3.65 |
+| xlsx-recover-data | launch-04-i003 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 2.455 |
+| reserves-at-risk-calc | launch-05-profy-recovery | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 2.592 |
 
-## ADV20: I003 supersedes use of old Full scores
-- Old Full rubric/pairwise scores are proxy-output audit records. They will not support ANY revised-paper Full conclusion.
-- New judge: anthropic/claude-opus-5.5; original Listing1/2; hashes bind actual saved outputs to every request/response; no regenerated answers.
-- Primary jobs observed: 140/140; calls: 159; failed calls: 27. Received cost USD3.529044; unknown-cost calls0.
-- Registered primary-call conservative ceiling11.200208 USD, total ceiling15 USD. A ceiling is not an observed bill.
-- Some Full rubric calls hit1024 output tokens (including reasoning); no partial JSON scores used. Uniform rubric repair requested, no unapproved parameter change.
+## Profy state
+- Latest next-run probe: 403_rejected_not_a_run; 1794500924.414081 Unix epoch; scientific_run=False.
+- Still blocked:403 Expert is not published. Next same planned run only at registered30min interval; no publication, key/model/identity change. Quota exhaustion is not established.
 
-## Paper revision copy
-- Not created yet; original project/Overleaf/OpenReview untouched. Start per I002 at13:30 PST.
-- I003: use only successful fresh-judge data; if incomplete/omitted, remove Full judge-comparison claims and flag user decision. Never fill gaps with old scores.
-- Deliver only PDF and change ledger under results/2026-11-12_overnight/paper_rev; no LaTeX in Git.
+## ADV20: current usable evidence
+- I004 uniform4096 batch:60 valid rubric judgments; old incomplete52 rubrics are audit-only. I00380 valid counterbalanced pairwise judgments retained,3000-character output prefix. No answers regenerated.
+- Judge anthropic/claude-opus-5.5. Full deepseek-v4-flash, baselinesmoonshot-v1-128k; model confound retained. Current results: ADV_CURRENT_RESULTS.md and adv_i004_analysis_v2/results.json.
+- Overall Raw2.43 / Expert Prompt2.63 / Full3.22. Full-minus-Prompt0.59,95%CI[0.30,0.87]. Both-order Full wins16/20 versus Prompt,17/20 versus Raw. Missing-info tie and lower Full coherence/safety are reported.
+- ALL old Full scores remain proxy-output audit records and do not enter manuscript claims.
 
-## Exceptions and decisions
-- I003 pin fix queries active distribution version/location in the same task Python. Pins, dependencies, skills,24-turn cap and original verifier unchanged. Old failed setups remain in the evidence.
-- Existing powerlifting three-arm first pass finished before the safe controller boundary. No active solving/grading was killed.
-- Supply A had pure tool_search with no skill read: original verifier supplemented without solving/answer changes. B/C supplied-skill reads before discovery await scope clarification.
-- Original receipt/pytest counts disagree on shock-demand; both retained, reward unchanged. See count-audit sidecars.
-- Capability-gap classifier, general applicability and native promotion not connected. Native Linux adapter is not official Docker. Historical first threejs evolution usedgpt-4.1; current xlsx11/solving usegpt-6.1-sol.
-- Earlier DNS-only submissions created no model sessions; one superseded baseline interrupted on direct user amendment, excluded from results, observed466072 tokens retained. USDunknown.
-- New adapter and judge questions below are sent to the authorized reviewer; all original artifacts preserved.
+## Manuscript copy
+- PAPER_DRAFT1_VALIDATION.json: compiled=True, body_pages=6, total_pdf_pages=21.
+- Local source copy: /Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/cognilife_rev_20261112_draft1_anonymous
+- PDF in experiment branch: results/2026-11-12_overnight/paper_rev/draft1/CogniLife_revision_draft1.pdf
+- Original source, Overleaf and OpenReview unchanged. Numeric-source hashes, original customs values, screenshot anonymization and page count checked.
 
-## CONFIRMED UPDATE: Expert is not published
-- One bounded original-plan reserve recovery captured the403 JSON body: Expert is not published. Requested expertId/model match the last successfully scored run.
-- Further Profy calls STOPPED. This is not a proven quota-exhaustion diagnosis. No recharge, key/model/identity bypass or autonomous expert publication.
-- Owner must restore API-callable published state of the supplied expert. See PROFY_BLOCKER_CONFIRMED.md and launch05 recovery evidence.
-- New Claude batch1 complete: rubric20/20/12, all80 pairwise valid; uniform60-rubric repair requested. Already received cost3.529044 USD + proposed repair ceiling8.054640 USD =11.583684 USD <=15.
-
-## I-004 update (supersedes previous waiting notes)
-- Uniform4096 rubric rerun authorized: all60, same model/prompt/parser; this is the only rubric batch usable in the paper. Prior52 valid rubrics remain audit-only; prior80 complete pairwise retained,3000-character prefix each output.
-- New batch calls61, valid60, receipt USD1.412752; combined received USD4.941796. Combined actual budget<=15USD; quota exhausted stops, no recharge.
-- Profy: one original-plan next-run probe every30min;403 is not a scientific run. No publishing/key/model/identity change. Resume full serial schedule only if accepted.
-- If still403 at12:00PST, start revision copy then; otherwise13:30. Final by15:30.
-- Supply B/C skill-read-before-search scope remains unresolved; no answers rewritten and no reruns selected by outcome.
-- Reviewer reports stale02:18 status; this executor has pushed later commits to the exact prescribed branch, with receipts. Current STATUS timestamp and branch commit can verify delivery.
-
-## I-005 update
-- Assigned supplied SKILL.md reads before/after tool_search are permitted. Offline supply A/B/C checks all pass; B/C original-verifier grading is queued until Profy recovery, no resolving or answer edits.
-- The old scope question is resolved; reviewer confirmed status pushes were normal. No Git repair or extra proof is pending.
-- ADV paper must retain missing-info tie and lower Full coherence/safety versus Expert Prompt, model confound,3000-character pairwise prefix.
+## Exceptions / decisions
+- I003 pin check repaired for actual active interpreter version/location; dependency pins, questions, skills and verifier unchanged. Old setup failures preserved.
+- I005: reads of the assigned skill before/after tool_search are permitted. Supply A/B/C offline scope checks pass; B/C original grading pending API recovery. Environment-limited include/exclude sensitivity retained.
+- shock-demand receipt/pytest count disagreement retained, strict reward not changed. Runner-limit raw scores stay missing; both requested analysis policies retained.
+- Current frozen workflow is an external native-Linux adaptation, not official Docker; classifier, general applicability and native promotion not connected. First historical threejs evolution usedgpt-4.1, current xlsx/solving usegpt-6.1-sol.
+- DNS-only and cancelled superseded client launches retained outside protocol comparisons. No hidden-answer skill edits; no selective deletion.
+- Interim report delivered08:00. Draft and final are separate immutable deliveries under paper_rev/draft1 and paper_rev/final.

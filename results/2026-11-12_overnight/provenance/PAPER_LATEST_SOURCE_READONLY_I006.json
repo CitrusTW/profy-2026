@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-11-12T16:29:51.936523+00:00",
+  "local_head": "7ab7400ef2e28b16357851e2cc0cdf3a5d0cbe51",
+  "remote_head": "7ab7400ef2e28b16357851e2cc0cdf3a5d0cbe51",
+  "remote_read_succeeded": true,
+  "matches": true,
+  "working_tree_clean": false,
+  "working_tree_status": [
+    "?? cognilife_profy_emnlp2026_v1_emnlp_industry_compilable/main.aux",
+    "?? cognilife_profy_emnlp2026_v1_emnlp_industry_compilable/main.bbl",
+    "?? cognilife_profy_emnlp2026_v1_emnlp_industry_compilable/main.blg",
+    "?? cognilife_profy_emnlp2026_v1_emnlp_industry_compilable/main.log",
+    "?? cognilife_profy_emnlp2026_v1_emnlp_industry_compilable/main.out",
+    "?? cognilife_profy_emnlp2026_v1_emnlp_industry_compilable/main.pdf"
+  ],
+  "original_project_read_only": true,
+  "credential_output_suppressed": true
+}
