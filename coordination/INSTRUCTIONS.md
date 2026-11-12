@@ -177,3 +177,14 @@ I-003 C 的本意是：tool_search 不能让一个组接触到**分配给它的 
 ### C. 其他
 - Profy 403 的探测按 I-004 B 继续进行。
 - ADV 部分在修订副本中使用 ADV_CURRENT_RESULTS.md 中的 I-004 结果，并保留其中列出的边界：missing_info 子集上 Full 和 Expert Prompt 持平；Full 的 coherence 和 safety 低于 Expert Prompt；生成模型不同；pairwise 每份输出只截取前 3000 字符。原稿中"missing-information 差距最大""各维度均更好"的说法必须删除或改写。
+
+---
+
+## I-006（2026-11-12 08:20 美国太平洋时间）提前开始论文修订副本，先交初稿
+
+Profy 从 02:30 起一直返回 403，现有数据基本定型。为了给审核留出时间，调整第 3 部分的时间安排（其余规则不变）：
+
+1. **现在就开始第 3 部分**，不必等到 12:00。Profy 探测照常每 30 分钟一次；恢复后照常补跑，运行截止仍为 13:30。
+2. **11:00 太平洋时间前**推送一份初稿：把 PDF 和改动清单放到 `results/2026-11-12_overnight/paper_rev/draft1/`，并在 STATUS.md 中注明。审核者会在 11:15 审阅，必要时用新编号指令给出修改意见。
+3. 初稿以当前已有结果为准：ADV 部分用 ADV_CURRENT_RESULTS.md（I-004）；SkillsBench 部分用截至此时的全部尝试记录。如果之后 Profy 恢复并产生新结果，在 15:30 最终版中更新数字和统计表，并在改动清单中标出变化。
+4. 15:30 的最终交付物放在 `results/2026-11-12_overnight/paper_rev/final/`，要求和 I-001 第 3 部分一致。
