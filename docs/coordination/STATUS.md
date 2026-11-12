@@ -1,74 +1,32 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T10:42:56.042255-08:00
-- Last applied instruction: I-010 (direct user message; newer than coordination I009).
-- Current work: I010 OpenRouter-only generation/judging/statistics. Manuscript integration ON HOLD by direct user instruction; existing draft2 unchanged.
-- Next: report actual I010 results and anomalies first; DO NOT write them into paper until user authorizes.
-- Latest read: I-010; checkpoint: FINAL text-only manuscript ready: body6/total25; original untouched; same-model experiment NOT integrated. Overleaf upload rejected by automatic approval review under PROTOCOL hard prohibition; no Overleaf/OpenReview writes.
-- ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
-- OpenRouter judge received expense USD4.941796; unknown-cost calls0. Profy USDunknown. No purchase/recharge.
 
-## SkillsBench: all original bookkeeping attempts
-- Rows include setup failures/API rejections, not only scientific runs. API403 before model usage is NOT a scored trial. Earlier raw records and superseded failures are preserved.
-- Fixed eight tasks, xlsx adopted round11, serial no-skills -> original -> frozen;24-turn cap unchanged. No new evolution.
-| Task | Phase | Condition | Rep | Status | Strict | Receipt pass/fail/skip | Observed tokens | Solver sec |
-|---|---|---|---:|---|---|---|---:|---:|
-| shock-analysis-demand | 01_任务结果 | with-skills | 1 | runner_limit | unknown | unknown/unknown/unknown | 1168850 | 836.448 |
-| shock-analysis-demand | 01_任务结果 | no-skills | 1 | scored | 0 | 3/2/0 | 839001 | 760.071 |
-| powerlifting-coef-calc | launch-03 | no-skills | 1 | scored | 1 | 11/0/0 | 180811 | 267.007 |
-| powerlifting-coef-calc | launch-03 | with-CogniLife-skills | 1 | scored | 1 | 11/0/0 | 230840 | 297.361 |
-| powerlifting-coef-calc | launch-03 | with-skills | 1 | scored | 1 | 11/0/0 | 235561 | 275.167 |
-| reserves-at-risk-calc | launch-03 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 44468 | 265.677 |
-| reserves-at-risk-calc | launch-03 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 44912 | 278.424 |
-| reserves-at-risk-calc | launch-03 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 44956 | 276.649 |
-| shock-analysis-demand | launch-03 | with-CogniLife-skills | 1 | scored | 0 | 0/5/0 | 885699 | 731.195 |
-| shock-analysis-supply | launch-03 | no-skills | 1 | scored(supplement) | 0 | 1/8/0 | 73630 | 182.307 |
-| shock-analysis-supply | launch-03 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 100269 | 202.705 |
-| shock-analysis-supply | launch-03 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 104019 | 181.555 |
-| invoice-fraud-detection | launch-04-i003 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 2.359 |
-| reserves-at-risk-calc | launch-04-i003 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 27292 | 186.075 |
-| reserves-at-risk-calc | launch-04-i003 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 1.835 |
-| reserves-at-risk-calc | launch-04-i003 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 1.99 |
-| xlsx-recover-data | launch-04-i003 | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 1.96 |
-| xlsx-recover-data | launch-04-i003 | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 3.65 |
-| xlsx-recover-data | launch-04-i003 | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 2.455 |
-| reserves-at-risk-calc | launch-05-profy-recovery | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | unknown | 2.592 |
+- 更新时间: 2026-11-12T10:42:59.967360-08:00
+- 已执行到: coordination/I-010 (draft2审核意见); 与用户聊天中的I010同模型实验是两条不同指令。
+- 当前: 最终文字修订副本完成并编译, 正文6页, 全文25页。
+- 下一步: Overleaf上传被自动审批拒绝, 理由是PROTOCOL仍禁止写入Overleaf; 等待用户明确解除该限制后仅上传新项目副本。不得覆盖原项目, 不上传OpenReview。
+- 同模型对照实验: 仅独立报告, 没有写进论文。此前用户暂停论文整合的要求继续生效。
+- 新的付费运行: 无。所有Profy请求已停止。
 
-## Profy state
-- Latest next-run probe: 403_rejected_not_a_run; 1794504525.2915342 Unix epoch; scientific_run=False.
+## 最终论文交付
 
-## ADV20: current usable evidence
-- I004 uniform4096 batch:60 valid rubric judgments; old incomplete52 rubrics are audit-only. I00380 valid counterbalanced pairwise judgments retained,3000-character output prefix. No answers regenerated.
-- Judge anthropic/claude-opus-5.5. Full deepseek-v4-flash, baselinesmoonshot-v1-128k; model confound retained. Current results: ADV_CURRENT_RESULTS.md and adv_i004_analysis_v2/results.json.
-- Overall Raw2.43 / Expert Prompt2.63 / Full3.22. Full-minus-Prompt0.59,95%CI[0.30,0.87]. Both-order Full wins16/20 versus Prompt,17/20 versus Raw. Missing-info tie and lower Full coherence/safety are reported.
-- ALL old Full scores remain proxy-output audit records and do not enter manuscript claims.
+- PDF: results/2026-11-12_overnight/paper_rev/final/CogniLife_final.pdf
+- 改动清单: results/2026-11-12_overnight/paper_rev/final/CHANGELOG.md
+- 逐项修改前后和数字检查: results/2026-11-12_overnight/paper_rev/final/CHANGELOG_NUMERIC_SOURCES.json
+- 本地LaTeX副本: /Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/cognilife_rev_20261112_final_verified
+- 编译: 通过, 正文6页, 总25页。所有表格数字、图及其他输入不变, 只执行清单内的文字替换。
+-4.1已明确平台API专家调用和未记录的注入内容; Table1检查后保留原文; 4.3补错误标签; H.2补Proxy追问提示的解释并撤销能力推断; G改成普通英文句子。
 
-## Manuscript copy
-- PAPER_DRAFT1_VALIDATION.json: compiled=True, body_pages=6, total_pdf_pages=21.
-- Local source copy: /Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/cognilife_rev_20261112_draft1_anonymous
-- PDF in experiment branch: results/2026-11-12_overnight/paper_rev/draft1/CogniLife_revision_draft1.pdf
-- Original source, Overleaf and OpenReview unchanged. Numeric-source hashes, original customs values, screenshot anonymization and page count checked.
-- PAPER_FINAL_VALIDATION.json: compiled=True, body_pages=6, total_pdf_pages=25.
-- Local source copy: /Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/cognilife_rev_20261112_final_verified
-- PDF in experiment branch: results/2026-11-12_overnight/paper_rev/final/CogniLife_final.pdf
-- Original source, Overleaf and OpenReview unchanged. Numeric-source hashes, original customs values, screenshot anonymization and page count checked.
+## 实验数据边界
 
-## Exceptions / decisions
-- I003 pin check repaired for actual active interpreter version/location; dependency pins, questions, skills and verifier unchanged. Old setup failures preserved.
-- shock-demand receipt/pytest count disagreement retained, strict reward not changed. Runner-limit raw scores stay missing; both requested analysis policies retained.
-- Current frozen workflow is an external native-Linux adaptation, not official Docker; classifier, general applicability and native promotion not connected. First historical threejs evolution usedgpt-4.1, current xlsx/solving usegpt-6.1-sol.
-- DNS-only and cancelled superseded client launches retained outside protocol comparisons. No hidden-answer skill edits; no selective deletion.
-- Interim report delivered08:00. Draft and final are separate immutable deliveries under paper_rev/draft1 and paper_rev/final.
+- I004 ADV20跨模型评分仍是本次draft2文字修订采用的数据, 数字未变。
+- 用户I010同模型实验: Full3.23 / ExpertPrompt3.42 / Raw3.31; Full−EP=-0.19,95%CI[-0.55,0.16]。60rubrics有效,79pairs有效,一处缺失。仅保存在i010目录和报告, 未纳入论文。
+- I010实际OpenRouter费用USD4.0799450879; 先前I003/I004合计USD4.941796。Profy费用unknown。没有新收费调用。
 
-## I007/I008/I009 current decision
-- ALL Profy probes stopped by USER DECISION, not by observed performance. Last probe completedUTC 2026-11-12T17:28:45.291534+00:00. No further Profy request will be submitted.
-- Three matched held-out tasks only: energy round6, pre-round12 protein/xlsx11, powerlifting/xlsx11; one run/group/task. Shock-demand has both limit policies. Supply B/C unscored/platform unavailable; other incomplete tasks excluded and listed.
-- I008: preserve usable original content. Old85 numeric records are archived with checkpoint-prompt-proxy labels only, never as Full/deployment results. Main result is newADV20 with generation-model difference noted next to16/20 in abstract/contributions.
-- I009: new single-column stacked pairwise plot includes all three categories; all5 dimension differences/CI retained. Lessons avoid unproven causal claims.
-- Latest paper PAPER_DRAFT2_VALIDATION.json: results/2026-11-12_overnight/paper_rev/draft2/CogniLife_revision_draft2.pdf, body_pages=6, total_pdf_pages=25.
-- Latest paper PAPER_FINAL_VALIDATION.json: results/2026-11-12_overnight/paper_rev/final/CogniLife_final.pdf, body_pages=6, total_pdf_pages=25.
+## 上传状态
 
-## I010 same-declared-model ADV control
-- Direct user I010 accepted; PREREG_I010 frozen before paid calls. Exact OpenRouter ID deepseek/deepseek-v4-flash; no substitution. Provider/revision match to historical Full unknown.
-- USD10 hard actual-receipt ceiling; initial estimate4.418166196721311USD, not observed expense. All Profy requests remain stopped.
-- Latest phase/state: {"updated_utc": "2026-11-12T18:34:58.935857+00:00", "phase": "finished_all_jobs_processed", "last_job": null, "calls": 182, "known_actual_usd": "4.0799450879", "unknown_cost_calls": 0, "reserved_unknown_cost_ceiling_usd": "0", "terminal": "all_jobs_processed", "elapsed_seconds": 2313.8803589344025, "full_regenerated": false}
-- Use complete-pipeline ADV template including its uncertainty warning; standalone template differs and historical requests unavailable.40 new baselines,60 fresh rubrics,80counterbalanced pairs. Full unchanged.
+- Overleaf: 未上传。自动审批明确拒绝新建项目点击, 因旧PROTOCOL硬性禁止。没有绕过, 没有改原项目。
+- OpenReview: 未上传。
+
+## 历史状态存档
+
+完整运行表、故障记录、费用与历次检查见STATUS_LOG.md和results/2026-11-12_overnight/内的原始记录。此前模型匹配实验结果报告已在d28dba6提交, 本稿仅做用户最新指定的文字修改。
