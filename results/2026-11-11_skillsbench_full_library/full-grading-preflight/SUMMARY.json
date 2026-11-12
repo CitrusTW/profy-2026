@@ -1,0 +1,41 @@
+{
+  "model_calls": 0,
+  "rows": [
+    {
+      "task": "3d-scan-calc",
+      "model_calls": 0,
+      "reference_material_sent_to_models": false,
+      "status": "ready",
+      "original_reward": "1",
+      "exit_code": 0,
+      "seconds": 29.639
+    },
+    {
+      "task": "ada-bathroom-plan-repair",
+      "model_calls": 0,
+      "reference_material_sent_to_models": false,
+      "status": "ready",
+      "original_reward": "1",
+      "exit_code": 0,
+      "seconds": 19.365
+    },
+    {
+      "task": "adaptive-cruise-control",
+      "model_calls": 0,
+      "reference_material_sent_to_models": false,
+      "status": "ready",
+      "original_reward": "1",
+      "exit_code": 0,
+      "seconds": 18.382
+    },
+    {
+      "task": "azure-bgp-oscillation-route-leak",
+      "model_calls": 0,
+      "reference_material_sent_to_models": false,
+      "status": "ready",
+      "original_reward": "1",
+      "exit_code": 0,
+      "seconds": 41.741
+    }
+  ]
+}

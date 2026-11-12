@@ -1,0 +1,122 @@
+{
+  "rows": [
+    {
+      "label": "no-skills",
+      "task": "energy-market-pricing",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 110.467,
+      "output_received": true,
+      "native_zip_sha256": "57828e145ea58a173a7d9e7113150778422c035c068f2eee7b75081f9ddc6b02",
+      "file_hashes": {
+        "output/report.json": "1b5fe02a25176c8ab1c8bb50bb28580716026c8b195ba4b9e40fc13f186d906f"
+      },
+      "skill_sha256": null,
+      "target_skill_read_verified": null,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": false,
+      "tokens": {
+        "input_tokens": 200286,
+        "output_tokens": 3752,
+        "total_tokens": 204038,
+        "cache_read_tokens": 170970,
+        "cache_write_tokens": 29289,
+        "llm_turns": 9,
+        "tool_calls": 8
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "72049be44ff8228ce8380efe5ffcb89adef8629845b762b929570d122b428066",
+        "original_test_script_sha256": "55a257735b8acd4fb23fdd06ebff92593842bb6dc8ee6ec67d60c06eb5382b1a",
+        "verifier_unmodified": true,
+        "grader_image": "cognilife-sb-grid-grader-20261111",
+        "oracle_environment_check": false
+      }
+    },
+    {
+      "label": "with-skills",
+      "task": "energy-market-pricing",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 321.026,
+      "output_received": true,
+      "native_zip_sha256": "31341368ea5d5daafd8f2067a0fc39fab8523b8680269932dccdf272f3d3e848",
+      "file_hashes": {
+        "output/report.json": "b105a0c6c648048893f1e1f2ad407d3db791fefe26af0c07e5f85254fda9ccf7"
+      },
+      "skill_sha256": "907586a8ab5d697d20efaafb190809fbe737bcbac4082c0f94458c1e6489b82f",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 177061,
+        "output_tokens": 4519,
+        "total_tokens": 181580,
+        "cache_read_tokens": 145100,
+        "cache_write_tokens": 31937,
+        "llm_turns": 8,
+        "tool_calls": 12
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "72049be44ff8228ce8380efe5ffcb89adef8629845b762b929570d122b428066",
+        "original_test_script_sha256": "55a257735b8acd4fb23fdd06ebff92593842bb6dc8ee6ec67d60c06eb5382b1a",
+        "verifier_unmodified": true,
+        "grader_image": "cognilife-sb-grid-grader-20261111",
+        "oracle_environment_check": false
+      }
+    },
+    {
+      "label": "with-CogniLife-skills",
+      "task": "energy-market-pricing",
+      "completed": true,
+      "error": null,
+      "elapsed_sec": 99.105,
+      "output_received": true,
+      "native_zip_sha256": "54198bae8927038b89fedc3485425a96b00aa345e1c39be35d8e34b559e8b2ad",
+      "file_hashes": {
+        "output/report.json": "f7e0a93b7f075eac7d31b17cb973eff118a31fef245bb257462133dc319b07d3"
+      },
+      "skill_sha256": "c68d696585d27124e5f04d0c300e8dff77ff23560c3a0e79dfc227022f53b075",
+      "target_skill_read_verified": true,
+      "external_skill_tools_observed": [],
+      "supplied_benchmark_skills": true,
+      "tokens": {
+        "input_tokens": 94346,
+        "output_tokens": 4008,
+        "total_tokens": 98354,
+        "cache_read_tokens": 66959,
+        "cache_write_tokens": 27372,
+        "llm_turns": 5,
+        "tool_calls": 7
+      },
+      "profy_cost_usd": null,
+      "score": {
+        "tests": 4,
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "strict": 1,
+        "original_returncode": 0,
+        "source_sha256": "72049be44ff8228ce8380efe5ffcb89adef8629845b762b929570d122b428066",
+        "original_test_script_sha256": "55a257735b8acd4fb23fdd06ebff92593842bb6dc8ee6ec67d60c06eb5382b1a",
+        "verifier_unmodified": true,
+        "grader_image": "cognilife-sb-grid-grader-20261111",
+        "oracle_environment_check": false
+      }
+    }
+  ],
+  "paper_changed": false
+}
