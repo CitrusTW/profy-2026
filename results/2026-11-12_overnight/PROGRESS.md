@@ -195,3 +195,5 @@ I004 original-order next-run probe: {"instruction": "I-004", "started_epoch": 17
 2026-11-12T18:26:23.016899+00:00 I010 judging task ADV_012 processed; calls=126, receipt USD=2.6440690879, unknown-cost calls=0.
 
 2026-11-12T18:27:21.116359+00:00 I010 judging task ADV_013 processed; calls=133, receipt USD=2.8077890879, unknown-cost calls=0.
+
+2026-11-12T18:28:37.369240+00:00 I010 judging task ADV_014 processed; calls=140, receipt USD=3.0609130879, unknown-cost calls=0.
