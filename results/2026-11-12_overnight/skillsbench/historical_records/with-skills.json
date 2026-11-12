@@ -1,0 +1,28 @@
+{
+  "task": "shock-analysis-demand",
+  "repeat": 1,
+  "condition": "with-skills",
+  "historical_reused": true,
+  "score": {},
+  "runner_limit": true,
+  "infrastructure_failure": false,
+  "condition_valid": true,
+  "tokens": {
+    "input_tokens": 1154782,
+    "output_tokens": 14068,
+    "total_tokens": 1168850,
+    "cache_read_tokens": 1076480,
+    "cache_write_tokens": 78227,
+    "llm_turns": 25,
+    "tool_calls": 25
+  },
+  "solver_elapsed_sec": 836.448,
+  "end_to_end_elapsed_sec": null,
+  "cost_usd": "unknown",
+  "skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "exception": "hard_budget_stop",
+  "folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/historical_inputs/shock-analysis-demand/with-skills",
+  "tokens_comparable": false,
+  "status": "runner_limit",
+  "historical_note": "Saved summary says hard_budget_stop; original usage has25 events, exceeding24-turn runner threshold."
+}

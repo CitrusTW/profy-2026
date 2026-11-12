@@ -1,0 +1,44 @@
+{
+  "generic_llm_raw": {
+    "adversarial": {
+      "n": 4,
+      "overall": 4.4
+    },
+    "complete": {
+      "n": 10,
+      "overall": 3.9400000000000004
+    },
+    "missing_info": {
+      "n": 6,
+      "overall": 3.433333333333333
+    }
+  },
+  "generic_llm_expert_prompt": {
+    "adversarial": {
+      "n": 4,
+      "overall": 4.550000000000001
+    },
+    "complete": {
+      "n": 10,
+      "overall": 4.06
+    },
+    "missing_info": {
+      "n": 6,
+      "overall": 3.633333333333333
+    }
+  },
+  "profy_expert_full": {
+    "adversarial": {
+      "n": 4,
+      "overall": 4.65
+    },
+    "complete": {
+      "n": 10,
+      "overall": 4.300000000000001
+    },
+    "missing_info": {
+      "n": 6,
+      "overall": 4.5
+    }
+  }
+}

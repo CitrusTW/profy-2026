@@ -1,0 +1,8 @@
+{
+  "status": "interrupted_on_user_amendment",
+  "count_in_experiment": false,
+  "solver_total_tokens_observed": 466072,
+  "usage_events_observed": 14,
+  "cost_usd": "unknown",
+  "events_sha256": "bc534208ce413c2e14451a0cdaa65db61dbe2c71c073401106b8a749fdee21c1"
+}

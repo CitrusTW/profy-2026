@@ -1,0 +1,7 @@
+task,status_en,checks,tokens,strict
+threejs-to-obj,Development/selection,"[""3/3"", ""3/3"", ""3/3""]","[119535, 141761, 103971]","[1, 1, 1]"
+threejs-structure-parser,Development/selection,"[""1/3"", ""3/3"", ""3/3""]","[83735, 95877, 113355]","[0, 1, 1]"
+energy-market-pricing,Prior new-task test,"[""4/4"", ""4/4"", ""4/4""]","[204038, 181580, 98354]","[1, 1, 1]"
+3d-scan-calc,Development/selection,"[""2/2"", ""2/2"", ""2/2""]","[127350, 161063, 125369]","[1, 1, 1]"
+weighted-gdp-calc,Development/selection,"[""27/27"", ""27/27"", ""27/27""]","[155489, 248816, 109337]","[1, 1, 1]"
+protein-expression-analysis,Prior test; later selection,"[""6/6"", ""6/6"", ""6/6""]","[183191, 187869, 264808]","[1, 1, 1]"

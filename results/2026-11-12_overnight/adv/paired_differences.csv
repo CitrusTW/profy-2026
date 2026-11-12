@@ -1,0 +1,17 @@
+baseline,dimension,mean,higher,lower,tie,ci_low,ci_high
+generic_llm_raw,overall,0.5499999999999998,16,0,4,0.32,0.8099999999999999
+generic_llm_raw,actionability,0.25,5,0,15,0.05,0.45
+generic_llm_raw,coherence,0.45,8,0,12,0.2,0.7
+generic_llm_raw,completeness,0.75,10,0,10,0.35,1.2
+generic_llm_raw,evidence_grounding,0.9,13,0,7,0.5,1.35
+generic_llm_raw,safety_boundary,0.65,11,0,9,0.35,1.0
+generic_llm_raw,specificity,0.65,10,1,9,0.3,1.0
+generic_llm_raw,uncertainty_calibration,0.7,10,0,10,0.3,1.15
+generic_llm_expert_prompt,overall,0.39999999999999997,16,1,3,0.22999999999999993,0.5999999999999999
+generic_llm_expert_prompt,actionability,0.2,4,0,16,0.05,0.4
+generic_llm_expert_prompt,coherence,0.25,5,0,15,0.1,0.45
+generic_llm_expert_prompt,completeness,0.55,8,0,12,0.25,0.95
+generic_llm_expert_prompt,evidence_grounding,0.6,9,0,11,0.25,1.0
+generic_llm_expert_prompt,safety_boundary,0.35,7,0,13,0.15,0.55
+generic_llm_expert_prompt,specificity,0.65,10,1,9,0.3,1.05
+generic_llm_expert_prompt,uncertainty_calibration,0.4,7,1,12,0.1,0.75

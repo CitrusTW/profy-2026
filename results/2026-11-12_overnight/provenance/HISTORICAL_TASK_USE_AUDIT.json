@@ -1,0 +1,20 @@
+{
+  "protein-expression-analysis": [
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-owned-evolution-v2/evolution/round-12/ROUND.json",
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-owned-evolution-v2/evolution/round-13/ROUND.json"
+  ],
+  "weighted-gdp-calc": [
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-owned-evolution-v2/evolution/round-12/ROUND.json",
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-owned-evolution-v2/evolution/round-13/ROUND.json",
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-proot-v2/evolution/round-11/ROUND.json",
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-proot-v2/evolution/round-10/ROUND.json"
+  ],
+  "3d-scan-calc": [
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/mesh-evolution/round-07/ROUND.json",
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/mesh-evolution/round-09/ROUND.json",
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/mesh-evolution/round-08/ROUND.json"
+  ],
+  "grid-dispatch-operator": [
+    "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_full_library/network-family/round-06/ROUND.json"
+  ]
+}

@@ -1,0 +1,643 @@
+{
+  "n_tasks": 20,
+  "overall_definition": "Arithmetic mean of five GENERAL_DIMS, matching received generate_tables.py; family-specific dimensions reported separately",
+  "general_dimensions": [
+    "completeness",
+    "specificity",
+    "actionability",
+    "coherence",
+    "safety_boundary"
+  ],
+  "means": {
+    "generic_llm_raw": {
+      "actionability": 3.75,
+      "coherence": 4.5,
+      "completeness": 3.7,
+      "evidence_grounding": 3.35,
+      "safety_boundary": 4.15,
+      "specificity": 3.3,
+      "uncertainty_calibration": 3.7,
+      "overall": 3.8800000000000003
+    },
+    "generic_llm_expert_prompt": {
+      "actionability": 3.8,
+      "coherence": 4.7,
+      "completeness": 3.9,
+      "evidence_grounding": 3.65,
+      "safety_boundary": 4.45,
+      "specificity": 3.3,
+      "uncertainty_calibration": 4.0,
+      "overall": 4.029999999999999
+    },
+    "profy_expert_full": {
+      "actionability": 4.0,
+      "coherence": 4.95,
+      "completeness": 4.45,
+      "evidence_grounding": 4.25,
+      "safety_boundary": 4.8,
+      "specificity": 3.95,
+      "uncertainty_calibration": 4.4,
+      "overall": 4.43
+    }
+  },
+  "full_minus_baseline": {
+    "generic_llm_raw": {
+      "overall": {
+        "mean": 0.5499999999999998,
+        "bootstrap95": [
+          0.32,
+          0.8099999999999999
+        ],
+        "higher": 16,
+        "lower": 0,
+        "tie": 4,
+        "per_task": {
+          "ADV_001": 0.20000000000000018,
+          "ADV_002": 0.6000000000000001,
+          "ADV_003": 0.20000000000000018,
+          "ADV_004": 0.5999999999999996,
+          "ADV_005": 2.3999999999999995,
+          "ADV_006": 0.1999999999999993,
+          "ADV_007": 0.39999999999999947,
+          "ADV_008": 0.7999999999999998,
+          "ADV_009": 0.0,
+          "ADV_010": 0.0,
+          "ADV_011": 1.3999999999999995,
+          "ADV_012": 0.8000000000000003,
+          "ADV_013": 0.0,
+          "ADV_014": 0.6000000000000001,
+          "ADV_015": 0.0,
+          "ADV_016": 0.6000000000000001,
+          "ADV_017": 0.40000000000000036,
+          "ADV_018": 1.1999999999999997,
+          "ADV_019": 0.39999999999999947,
+          "ADV_020": 0.20000000000000018
+        }
+      },
+      "actionability": {
+        "mean": 0.25,
+        "bootstrap95": [
+          0.05,
+          0.45
+        ],
+        "higher": 5,
+        "lower": 0,
+        "tie": 15,
+        "per_task": {
+          "ADV_001": 0,
+          "ADV_002": 0,
+          "ADV_003": 0,
+          "ADV_004": 0,
+          "ADV_005": 1,
+          "ADV_006": 0,
+          "ADV_007": 0,
+          "ADV_008": 1,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 1,
+          "ADV_012": 0,
+          "ADV_013": 0,
+          "ADV_014": 0,
+          "ADV_015": 0,
+          "ADV_016": 0,
+          "ADV_017": 1,
+          "ADV_018": 0,
+          "ADV_019": 1,
+          "ADV_020": 0
+        }
+      },
+      "coherence": {
+        "mean": 0.45,
+        "bootstrap95": [
+          0.2,
+          0.7
+        ],
+        "higher": 8,
+        "lower": 0,
+        "tie": 12,
+        "per_task": {
+          "ADV_001": 0,
+          "ADV_002": 1,
+          "ADV_003": 1,
+          "ADV_004": 1,
+          "ADV_005": 2,
+          "ADV_006": 0,
+          "ADV_007": 0,
+          "ADV_008": 0,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 1,
+          "ADV_012": 0,
+          "ADV_013": 0,
+          "ADV_014": 1,
+          "ADV_015": 0,
+          "ADV_016": 1,
+          "ADV_017": 0,
+          "ADV_018": 1,
+          "ADV_019": 0,
+          "ADV_020": 0
+        }
+      },
+      "completeness": {
+        "mean": 0.75,
+        "bootstrap95": [
+          0.35,
+          1.2
+        ],
+        "higher": 10,
+        "lower": 0,
+        "tie": 10,
+        "per_task": {
+          "ADV_001": 0,
+          "ADV_002": 1,
+          "ADV_003": 0,
+          "ADV_004": 1,
+          "ADV_005": 4,
+          "ADV_006": 1,
+          "ADV_007": 1,
+          "ADV_008": 1,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 2,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 0,
+          "ADV_015": 0,
+          "ADV_016": 0,
+          "ADV_017": 0,
+          "ADV_018": 2,
+          "ADV_019": 1,
+          "ADV_020": 0
+        }
+      },
+      "evidence_grounding": {
+        "mean": 0.9,
+        "bootstrap95": [
+          0.5,
+          1.35
+        ],
+        "higher": 13,
+        "lower": 0,
+        "tie": 7,
+        "per_task": {
+          "ADV_001": 1,
+          "ADV_002": 1,
+          "ADV_003": 1,
+          "ADV_004": 1,
+          "ADV_005": 4,
+          "ADV_006": 1,
+          "ADV_007": 0,
+          "ADV_008": 1,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 2,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 1,
+          "ADV_015": 0,
+          "ADV_016": 1,
+          "ADV_017": 0,
+          "ADV_018": 2,
+          "ADV_019": 1,
+          "ADV_020": 0
+        }
+      },
+      "safety_boundary": {
+        "mean": 0.65,
+        "bootstrap95": [
+          0.35,
+          1.0
+        ],
+        "higher": 11,
+        "lower": 0,
+        "tie": 9,
+        "per_task": {
+          "ADV_001": 1,
+          "ADV_002": 1,
+          "ADV_003": 0,
+          "ADV_004": 1,
+          "ADV_005": 3,
+          "ADV_006": 0,
+          "ADV_007": 0,
+          "ADV_008": 1,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 1,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 1,
+          "ADV_015": 1,
+          "ADV_016": 1,
+          "ADV_017": 0,
+          "ADV_018": 1,
+          "ADV_019": 0,
+          "ADV_020": 0
+        }
+      },
+      "specificity": {
+        "mean": 0.65,
+        "bootstrap95": [
+          0.3,
+          1.0
+        ],
+        "higher": 10,
+        "lower": 1,
+        "tie": 9,
+        "per_task": {
+          "ADV_001": 0,
+          "ADV_002": 0,
+          "ADV_003": 0,
+          "ADV_004": 0,
+          "ADV_005": 2,
+          "ADV_006": 0,
+          "ADV_007": 1,
+          "ADV_008": 1,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 2,
+          "ADV_012": 2,
+          "ADV_013": 0,
+          "ADV_014": 1,
+          "ADV_015": -1,
+          "ADV_016": 1,
+          "ADV_017": 1,
+          "ADV_018": 2,
+          "ADV_019": 0,
+          "ADV_020": 1
+        }
+      },
+      "uncertainty_calibration": {
+        "mean": 0.7,
+        "bootstrap95": [
+          0.3,
+          1.15
+        ],
+        "higher": 10,
+        "lower": 0,
+        "tie": 10,
+        "per_task": {
+          "ADV_001": 1,
+          "ADV_002": 1,
+          "ADV_003": 1,
+          "ADV_004": 1,
+          "ADV_005": 4,
+          "ADV_006": 1,
+          "ADV_007": 0,
+          "ADV_008": 0,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 2,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 0,
+          "ADV_015": 0,
+          "ADV_016": 0,
+          "ADV_017": 0,
+          "ADV_018": 1,
+          "ADV_019": 1,
+          "ADV_020": 0
+        }
+      }
+    },
+    "generic_llm_expert_prompt": {
+      "overall": {
+        "mean": 0.39999999999999997,
+        "bootstrap95": [
+          0.22999999999999993,
+          0.5999999999999999
+        ],
+        "higher": 16,
+        "lower": 1,
+        "tie": 3,
+        "per_task": {
+          "ADV_001": 0.20000000000000018,
+          "ADV_002": 0.20000000000000018,
+          "ADV_003": 0.20000000000000018,
+          "ADV_004": 0.5999999999999996,
+          "ADV_005": 1.5999999999999996,
+          "ADV_006": 0.9999999999999996,
+          "ADV_007": 0.1999999999999993,
+          "ADV_008": 0.5999999999999996,
+          "ADV_009": 0.0,
+          "ADV_010": 0.20000000000000018,
+          "ADV_011": 0.7999999999999998,
+          "ADV_012": 1.0000000000000004,
+          "ADV_013": 0.0,
+          "ADV_014": 0.40000000000000036,
+          "ADV_015": -0.20000000000000018,
+          "ADV_016": 0.20000000000000018,
+          "ADV_017": 0.40000000000000036,
+          "ADV_018": 0.39999999999999947,
+          "ADV_019": 0.0,
+          "ADV_020": 0.20000000000000018
+        }
+      },
+      "actionability": {
+        "mean": 0.2,
+        "bootstrap95": [
+          0.05,
+          0.4
+        ],
+        "higher": 4,
+        "lower": 0,
+        "tie": 16,
+        "per_task": {
+          "ADV_001": 0,
+          "ADV_002": 0,
+          "ADV_003": 0,
+          "ADV_004": 0,
+          "ADV_005": 1,
+          "ADV_006": 0,
+          "ADV_007": 0,
+          "ADV_008": 1,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 1,
+          "ADV_012": 0,
+          "ADV_013": 0,
+          "ADV_014": 0,
+          "ADV_015": 0,
+          "ADV_016": 0,
+          "ADV_017": 1,
+          "ADV_018": 0,
+          "ADV_019": 0,
+          "ADV_020": 0
+        }
+      },
+      "coherence": {
+        "mean": 0.25,
+        "bootstrap95": [
+          0.1,
+          0.45
+        ],
+        "higher": 5,
+        "lower": 0,
+        "tie": 15,
+        "per_task": {
+          "ADV_001": 0,
+          "ADV_002": 1,
+          "ADV_003": 1,
+          "ADV_004": 0,
+          "ADV_005": 1,
+          "ADV_006": 0,
+          "ADV_007": 0,
+          "ADV_008": 0,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 0,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 1,
+          "ADV_015": 0,
+          "ADV_016": 0,
+          "ADV_017": 0,
+          "ADV_018": 0,
+          "ADV_019": 0,
+          "ADV_020": 0
+        }
+      },
+      "completeness": {
+        "mean": 0.55,
+        "bootstrap95": [
+          0.25,
+          0.95
+        ],
+        "higher": 8,
+        "lower": 0,
+        "tie": 12,
+        "per_task": {
+          "ADV_001": 0,
+          "ADV_002": 0,
+          "ADV_003": 0,
+          "ADV_004": 1,
+          "ADV_005": 3,
+          "ADV_006": 2,
+          "ADV_007": 1,
+          "ADV_008": 1,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 1,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 0,
+          "ADV_015": 0,
+          "ADV_016": 0,
+          "ADV_017": 0,
+          "ADV_018": 1,
+          "ADV_019": 0,
+          "ADV_020": 0
+        }
+      },
+      "evidence_grounding": {
+        "mean": 0.6,
+        "bootstrap95": [
+          0.25,
+          1.0
+        ],
+        "higher": 9,
+        "lower": 0,
+        "tie": 11,
+        "per_task": {
+          "ADV_001": 1,
+          "ADV_002": 1,
+          "ADV_003": 1,
+          "ADV_004": 1,
+          "ADV_005": 3,
+          "ADV_006": 2,
+          "ADV_007": 0,
+          "ADV_008": 0,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 1,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 0,
+          "ADV_015": 0,
+          "ADV_016": 0,
+          "ADV_017": 0,
+          "ADV_018": 1,
+          "ADV_019": 0,
+          "ADV_020": 0
+        }
+      },
+      "safety_boundary": {
+        "mean": 0.35,
+        "bootstrap95": [
+          0.15,
+          0.55
+        ],
+        "higher": 7,
+        "lower": 0,
+        "tie": 13,
+        "per_task": {
+          "ADV_001": 1,
+          "ADV_002": 0,
+          "ADV_003": 0,
+          "ADV_004": 1,
+          "ADV_005": 1,
+          "ADV_006": 1,
+          "ADV_007": 0,
+          "ADV_008": 1,
+          "ADV_009": 0,
+          "ADV_010": 1,
+          "ADV_011": 0,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 0,
+          "ADV_015": 0,
+          "ADV_016": 0,
+          "ADV_017": 0,
+          "ADV_018": 0,
+          "ADV_019": 0,
+          "ADV_020": 0
+        }
+      },
+      "specificity": {
+        "mean": 0.65,
+        "bootstrap95": [
+          0.3,
+          1.05
+        ],
+        "higher": 10,
+        "lower": 1,
+        "tie": 9,
+        "per_task": {
+          "ADV_001": 0,
+          "ADV_002": 0,
+          "ADV_003": 0,
+          "ADV_004": 1,
+          "ADV_005": 2,
+          "ADV_006": 2,
+          "ADV_007": 0,
+          "ADV_008": 0,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 2,
+          "ADV_012": 2,
+          "ADV_013": 0,
+          "ADV_014": 1,
+          "ADV_015": -1,
+          "ADV_016": 1,
+          "ADV_017": 1,
+          "ADV_018": 1,
+          "ADV_019": 0,
+          "ADV_020": 1
+        }
+      },
+      "uncertainty_calibration": {
+        "mean": 0.4,
+        "bootstrap95": [
+          0.1,
+          0.75
+        ],
+        "higher": 7,
+        "lower": 1,
+        "tie": 12,
+        "per_task": {
+          "ADV_001": 1,
+          "ADV_002": 0,
+          "ADV_003": 0,
+          "ADV_004": 1,
+          "ADV_005": 2,
+          "ADV_006": 2,
+          "ADV_007": 0,
+          "ADV_008": 0,
+          "ADV_009": 0,
+          "ADV_010": 0,
+          "ADV_011": 1,
+          "ADV_012": 1,
+          "ADV_013": 0,
+          "ADV_014": 0,
+          "ADV_015": 0,
+          "ADV_016": -1,
+          "ADV_017": 0,
+          "ADV_018": 1,
+          "ADV_019": 0,
+          "ADV_020": 0
+        }
+      }
+    }
+  },
+  "error_tags": {
+    "generic_llm_raw": {
+      "weak_personalization": 4,
+      "evidence_grounding": 1,
+      "missing_input_not_handled": 4,
+      "overclaiming": 1,
+      "unsafe_boundary": 1
+    },
+    "generic_llm_expert_prompt": {
+      "evidence_grounding": 1,
+      "missing_input_not_handled": 4,
+      "weak_personalization": 3
+    },
+    "profy_expert_full": {}
+  },
+  "pairwise": {
+    "n": 20,
+    "raw_preference_counts": {
+      "A": 16,
+      "B": 4
+    },
+    "winner_counts": {
+      "profy_expert_full": 13,
+      "generic_llm_raw": 7
+    },
+    "A_selection_fraction_all": 0.8,
+    "A_selection_fraction_decisive": 0.8,
+    "system_a_counts": {
+      "profy_expert_full": 9,
+      "generic_llm_raw": 11
+    },
+    "system_b_counts": {
+      "generic_llm_raw": 9,
+      "profy_expert_full": 11
+    },
+    "both_orders_available": false
+  },
+  "models_from_saved_output_labels": {
+    "generic_llm_raw": {
+      "moonshot-v1-128k": 20
+    },
+    "generic_llm_expert_prompt": {
+      "moonshot-v1-128k": 20
+    },
+    "profy_expert_full": {
+      "deepseek-v4-flash": 20
+    }
+  },
+  "judge_models": {
+    "moonshot-v1-128k": 60
+  },
+  "linkage": {
+    "by_condition_judge_predates_saved_output": {
+      "generic_llm_raw": 0,
+      "generic_llm_expert_prompt": 0,
+      "profy_expert_full": 20
+    },
+    "by_condition_pairwise_predates_saved_output": {
+      "generic_llm_raw": 0,
+      "generic_llm_expert_prompt": 0,
+      "profy_expert_full": 20
+    },
+    "verified_score_output_hash_links": 0,
+    "interpretation": "Saved score summaries only. Current Full platform-labelled outputs cannot be linked to these earlier scores; no causal platform or model comparison is established."
+  },
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20261112,
+    "unit": "task",
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "implementation": "numpy.default_rng percentile"
+  },
+  "source_sha256": {
+    "judge_scores.jsonl": "7c84cc2279c65e1a3b4e668c0827f686d81a3847ec87af932a105f9cf0e31302",
+    "pairwise_preferences.jsonl": "40744cd349d8ebecbf22931dac63b3579dc90ecc8a219c548cb47143aae39dcd",
+    "outputs_generic_llm_raw.jsonl": "77664fc6a08506c976798f32992028a21dd6836667f08d7bbb3ec67c2a046532",
+    "outputs_generic_llm_expert_prompt.jsonl": "9641a88c15e86442acec2b82562f123266c0b6426b5f279dc8edd552d5a32275",
+    "outputs_profy_expert_full.jsonl": "a53a0d434a4755ca15b2b016f52d5183d0a532c323be849fb496d1017aab45b1"
+  }
+}

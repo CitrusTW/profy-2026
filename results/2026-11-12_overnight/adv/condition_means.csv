@@ -1,0 +1,4 @@
+condition,actionability,coherence,completeness,evidence_grounding,safety_boundary,specificity,uncertainty_calibration,overall
+generic_llm_raw,3.75,4.5,3.7,3.35,4.15,3.3,3.7,3.8800000000000003
+generic_llm_expert_prompt,3.8,4.7,3.9,3.65,4.45,3.3,4.0,4.029999999999999
+profy_expert_full,4.0,4.95,4.45,4.25,4.8,3.95,4.4,4.43

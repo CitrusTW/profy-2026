@@ -1,0 +1,241 @@
+{
+  "T01": {
+    "tasks": 85,
+    "outputs": 255,
+    "score_rows": 255,
+    "all_255_keys_join": true,
+    "content_binding_verified": false,
+    "score_rows_with_output_hash": 0,
+    "scores_judge_models": {
+      "moonshot-v1-128k": 255
+    },
+    "paper_primary_judge": "o3-mini",
+    "full_proxy_marked": 65,
+    "full_nonproxy_marked": 20,
+    "full_nonproxy_is_execution_proof": false,
+    "full_scores_timestamp_before_output": 85,
+    "full_text_different_from_backup": 85,
+    "full_normalized_text_different_from_backup": 85,
+    "full_scores_recorded_after_backup": 85,
+    "full_pairwise_timestamp_before_output": 21,
+    "timestamp_limit": "时间字段无时区, 只作记录顺序诊断; 不据此推断时钟同步、作者行为或评分实际来源.",
+    "full_timing_records": 20,
+    "full_timing_mean_sec": "54.41",
+    "full_timing_median_sec": "52.05",
+    "paper_claims_full_timing_N": 85,
+    "group_scores": [
+      {
+        "condition": "generic_llm_raw",
+        "N": 85,
+        "judge_models": "{\"moonshot-v1-128k\":85}",
+        "core_mean": "4.01411764705882352941176470588235294",
+        "completeness": "3.61176470588235294117647058823529412",
+        "specificity": "3.37647058823529411764705882352941176",
+        "actionability": "3.95294117647058823529411764705882353",
+        "coherence": "4.64705882352941176470588235294117647",
+        "safety_boundary": "4.48235294117647058823529411764705882"
+      },
+      {
+        "condition": "generic_llm_expert_prompt",
+        "N": 85,
+        "judge_models": "{\"moonshot-v1-128k\":85}",
+        "core_mean": "4.28",
+        "completeness": "4.01176470588235294117647058823529412",
+        "specificity": "3.62352941176470588235294117647058824",
+        "actionability": "4.15294117647058823529411764705882353",
+        "coherence": "4.83529411764705882352941176470588235",
+        "safety_boundary": "4.77647058823529411764705882352941176"
+      },
+      {
+        "condition": "profy_expert_full",
+        "N": 85,
+        "judge_models": "{\"moonshot-v1-128k\":85}",
+        "core_mean": "4.65176470588235294117647058823529412",
+        "completeness": "4.62352941176470588235294117647058824",
+        "specificity": "4.25882352941176470588235294117647059",
+        "actionability": "4.47058823529411764705882352941176471",
+        "coherence": "4.98823529411764705882352941176470588",
+        "safety_boundary": "4.91764705882352941176470588235294118"
+      }
+    ],
+    "pairwise_winner_counts": {
+      "profy_expert_full": 53,
+      "generic_llm_raw": 31,
+      "tie": 1
+    },
+    "annotations_rows": 60,
+    "annotator_ids": {
+      "ai_annotator_1": 60
+    },
+    "output_models": {
+      "generic_llm_raw": {
+        "moonshot-v1-128k": 85
+      },
+      "generic_llm_expert_prompt": {
+        "moonshot-v1-128k": 85
+      },
+      "profy_expert_full": {
+        "deepseek-v4-flash": 20,
+        "moonshot-v1-128k_enhanced_proxy": 65
+      }
+    },
+    "source_family_counts": {
+      "ADV": 20,
+      "EDU": 20,
+      "MKT": 20,
+      "MMW": 15,
+      "PER": 10
+    },
+    "missing_task_ids_by_condition": {
+      "generic_llm_raw": [],
+      "generic_llm_expert_prompt": [],
+      "profy_expert_full": []
+    },
+    "all_structural_issues": 0
+  },
+  "T02": {
+    "tasks": 52,
+    "unique_task_ids": 52,
+    "recorded_valid_runs": 156,
+    "csv_identical_to_zip_member": true,
+    "arithmetic_engine": "Python decimal, precision 36; cross-checked with statistics.fmean",
+    "score_macro_mean": "0.957620512820512820512820512820512821",
+    "score_macro_mean_from_stored_avg_column": "0.957620519230769230769230769230769231",
+    "task_score_median": "0.965783333333333333333333333333333335",
+    "task_means_ge_095": 35,
+    "task_means_ge_090": 48,
+    "range_strictly_gt_005_decimal": 12,
+    "range_strictly_gt_005_float": 13,
+    "mean_agent_minutes": "9.70610897435897435897435897435897433",
+    "mean_estimated_cost_usd": "1.01518298717948717948717948717948718",
+    "total_recorded_agent_minutes": "1514.1530",
+    "total_recorded_estimated_cost_usd": "158.368546",
+    "average_field_check_counts": {
+      "avg_score": {
+        "平均列显示精度内一致": 52
+      },
+      "avg_agent_minutes": {
+        "平均列显示精度内一致": 46,
+        "仅结合逐次值显示精度可兼容": 6
+      },
+      "avg_cost_usd": {
+        "平均列显示精度内一致": 36,
+        "仅结合逐次值显示精度可兼容": 16
+      }
+    },
+    "threshold_cases": [
+      {
+        "task_id": "customs-af25070092001",
+        "source_csv_line": 41,
+        "r1_score": "0.9",
+        "r2_score": "0.95",
+        "r3_score": "0.9",
+        "range_decimal": "0.05",
+        "range_strictly_gt_005_decimal": false,
+        "range_float_repr": "0.04999999999999993",
+        "range_strictly_gt_005_float": false
+      },
+      {
+        "task_id": "customs-af25070099001",
+        "source_csv_line": 44,
+        "r1_score": "0.9",
+        "r2_score": "0.95",
+        "r3_score": "0.9167",
+        "range_decimal": "0.05",
+        "range_strictly_gt_005_decimal": false,
+        "range_float_repr": "0.04999999999999993",
+        "range_strictly_gt_005_float": false
+      },
+      {
+        "task_id": "customs-af25070108001",
+        "source_csv_line": 45,
+        "r1_score": "0.975",
+        "r2_score": "0.9375",
+        "r3_score": "0.9875",
+        "range_decimal": "0.0500",
+        "range_strictly_gt_005_decimal": false,
+        "range_float_repr": "0.050000000000000044",
+        "range_strictly_gt_005_float": true
+      }
+    ],
+    "run_config_values": {
+      "profy/gpt-6.1-sol/medium": 52
+    },
+    "scope": "只核对记录的有效运行及其汇总; 未重新评分、运行模型、核验原任务输出/gold/scorer或全部尝试. cost_usd是记录的估算费用, 不是账单."
+  },
+  "self_checks_passed": true,
+  "findings": [
+    {
+      "id": "T01-F01",
+      "level": "需修正来源说明",
+      "finding": "judge元数据与论文不一致",
+      "count": 255,
+      "evidence": "F05全部255行judge_model=moonshot-v1-128k; 提交稿§4.1/4.2, p.5写primary o3-mini.",
+      "implication": "不能仅因均分匹配就认定该文件是o3-mini原评分. 不直接替换judge名称来消除矛盾."
+    },
+    {
+      "id": "T01-F02",
+      "level": "输出版本未核实",
+      "finding": "ID对得上, 但没有输出内容hash绑定",
+      "count": 255,
+      "evidence": "255个(task_id,condition)都唯一匹配. F05没有输出hash或回答正文. 逐项见T01_output_score_lineage.csv.",
+      "implication": "结构连接通过, 被评分的具体输出版本仍未验证."
+    },
+    {
+      "id": "T01-F03",
+      "level": "需修正执行范围",
+      "finding": "Full为65条proxy标记与20条非proxy标记的混合副本",
+      "count": 85,
+      "evidence": "F04: 65条is_proxy=true; ADV_001-020共20条is_proxy=false, model=deepseek-v4-flash, invoke_api=true. 这些只是记录字段, 包内没有API服务端日志.",
+      "implication": "不能把85条都称为真实Profy执行, 也不能据字段单独认证20条真实执行."
+    },
+    {
+      "id": "T01-F04",
+      "level": "时间与版本告警",
+      "finding": "Full全部评分时间字段早于当前输出时间, 且与backup内容不同",
+      "count": 85,
+      "evidence": "F05 Full评分timestamp早于F04全部85条. F04与F08全部85条正文不同, 去空白后仍不同. F05 Full评分时间均晚于F08 backup时间.",
+      "implication": "顺序与“F05评当前F04”不相容, 更接近旧backup的时间顺序, 但不能据此证明实际评了backup. 时间字段无时区且可能是记录元数据."
+    },
+    {
+      "id": "T01-F05",
+      "level": "需修正样本量",
+      "finding": "Full耗时在当前副本只覆盖20条, 不是85条",
+      "count": 20,
+      "evidence": "F04仅20条有elapsed_sec. 这20条均值54.41秒、中位数52.05秒, 恰与提交稿§4.5, p.6数值一致, 但稿中称all85.",
+      "implication": "当前材料只能支持n=20条记录的描述; 若无另外65条耗时记录, 应将计时样本量改为20."
+    },
+    {
+      "id": "T01-F06",
+      "level": "比较版本未核实",
+      "finding": "pairwise票数能复算, 当前输出版本仍不绑定",
+      "count": 85,
+      "evidence": "F06 winner计数={\"generic_llm_raw\":31,\"profy_expert_full\":53,\"tie\":1}. 其中21条pairwise记录时间早于当前Full输出. F06没有输出hash.",
+      "implication": "53/31/1的计数可复算, 不能据此证明是在比较当前三组输出."
+    },
+    {
+      "id": "T01-F07",
+      "level": "不作人工评价",
+      "finding": "human_annotations.csv不构成人类评分证据",
+      "count": 60,
+      "evidence": "F07共60行, annotator_id均为ai_annotator_1.",
+      "implication": "不称human evaluation. 稿件本已声明未有人类验证, 本轮不新增human evaluation."
+    },
+    {
+      "id": "T02-F01",
+      "level": "建议更正计数",
+      "finding": "严格大于0.05的三次分数差为12/52",
+      "count": 12,
+      "evidence": "提交稿Table8, p.21写13/52. 记录值用Decimal计算为12; 常规binary float比较会得到13. customs-af25070108001的0.9875-0.9375恰为0.0500, float表示为0.050000000000000044.",
+      "implication": "基于已存CSV应将严格>0.05计数改为12/52; 如原分析用未舍入分数, 必须另核验后再解释."
+    },
+    {
+      "id": "T02-F02",
+      "level": "显示精度兼容",
+      "finding": "6个时间均值和16个费用均值不能由已存run值直接舍入复现, 但均在输入/输出小数精度范围内",
+      "count": 22,
+      "evidence": "T02_average_checks.csv有156条检查. 52个avg_score都在最终均值列舍入范围内一致; 时间46+6, 费用36+16. 超出组合显示精度范围的检查为0.",
+      "implication": "不把22处叫实质错误, 也不说156处完全逐字相等. 报告当前精度下可兼容, 保留原列及delta."
+    }
+  ]
+}

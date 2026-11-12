@@ -1,0 +1,61 @@
+task_id,condition,completeness,specificity,actionability,coherence,safety_boundary,evidence_grounding,uncertainty_calibration,overall,error_tags
+ADV_001,generic_llm_raw,4,4,4,4,3,2,3,3.8,"[""weak_personalization"", ""evidence_grounding""]"
+ADV_001,generic_llm_expert_prompt,4,4,4,4,3,2,3,3.8,"[""evidence_grounding""]"
+ADV_001,profy_expert_full,4,4,4,4,4,3,4,4.0,[]
+ADV_002,generic_llm_raw,3,4,4,4,3,3,3,3.6,"[""weak_personalization""]"
+ADV_002,generic_llm_expert_prompt,4,4,4,4,4,3,4,4.0,[]
+ADV_002,profy_expert_full,4,4,4,5,4,4,4,4.2,[]
+ADV_003,generic_llm_raw,4,4,4,4,4,3,3,4.0,[]
+ADV_003,generic_llm_expert_prompt,4,4,4,4,4,3,4,4.0,[]
+ADV_003,profy_expert_full,4,4,4,5,4,4,4,4.2,[]
+ADV_004,generic_llm_raw,4,4,4,4,4,3,4,4.0,[]
+ADV_004,generic_llm_expert_prompt,4,3,4,5,4,3,4,4.0,[]
+ADV_004,profy_expert_full,5,4,4,5,5,4,5,4.6,[]
+ADV_005,generic_llm_raw,1,2,3,3,2,1,1,2.2,"[""missing_input_not_handled"", ""overclaiming"", ""unsafe_boundary""]"
+ADV_005,generic_llm_expert_prompt,2,2,3,4,4,2,3,3.0,"[""missing_input_not_handled"", ""weak_personalization""]"
+ADV_005,profy_expert_full,5,4,4,5,5,5,5,4.6,[]
+ADV_006,generic_llm_raw,4,4,4,5,5,4,4,4.4,[]
+ADV_006,generic_llm_expert_prompt,3,2,4,5,4,3,3,3.6,"[""missing_input_not_handled""]"
+ADV_006,profy_expert_full,5,4,4,5,5,5,5,4.6,[]
+ADV_007,generic_llm_raw,4,3,4,5,5,4,5,4.2,[]
+ADV_007,generic_llm_expert_prompt,4,4,4,5,5,4,5,4.4,[]
+ADV_007,profy_expert_full,5,4,4,5,5,4,5,4.6,[]
+ADV_008,generic_llm_raw,4,3,4,5,4,3,4,4.0,[]
+ADV_008,generic_llm_expert_prompt,4,4,4,5,4,4,4,4.2,[]
+ADV_008,profy_expert_full,5,4,5,5,5,4,4,4.8,[]
+ADV_009,generic_llm_raw,4,4,4,5,4,4,4,4.2,[]
+ADV_009,generic_llm_expert_prompt,4,4,4,5,4,4,4,4.2,[]
+ADV_009,profy_expert_full,4,4,4,5,4,4,4,4.2,[]
+ADV_010,generic_llm_raw,4,4,4,5,5,4,4,4.4,[]
+ADV_010,generic_llm_expert_prompt,4,4,4,5,4,4,4,4.2,[]
+ADV_010,profy_expert_full,4,4,4,5,5,4,4,4.4,[]
+ADV_011,generic_llm_raw,3,2,3,4,4,3,3,3.2,"[""missing_input_not_handled""]"
+ADV_011,generic_llm_expert_prompt,4,2,3,5,5,4,4,3.8,"[""weak_personalization""]"
+ADV_011,profy_expert_full,5,4,4,5,5,5,5,4.6,[]
+ADV_012,generic_llm_raw,3,2,4,5,4,3,3,3.6,"[""missing_input_not_handled"", ""weak_personalization""]"
+ADV_012,generic_llm_expert_prompt,3,2,4,4,4,3,3,3.4,"[""missing_input_not_handled"", ""weak_personalization""]"
+ADV_012,profy_expert_full,4,4,4,5,5,4,4,4.4,[]
+ADV_013,generic_llm_raw,4,4,4,5,5,4,4,4.4,[]
+ADV_013,generic_llm_expert_prompt,4,4,4,5,5,4,4,4.4,[]
+ADV_013,profy_expert_full,4,4,4,5,5,4,4,4.4,[]
+ADV_014,generic_llm_raw,4,3,3,4,4,3,4,3.6,[]
+ADV_014,generic_llm_expert_prompt,4,3,3,4,5,4,4,3.8,[]
+ADV_014,profy_expert_full,4,4,3,5,5,4,4,4.2,[]
+ADV_015,generic_llm_raw,4,4,4,5,4,4,4,4.2,[]
+ADV_015,generic_llm_expert_prompt,4,4,4,5,5,4,4,4.4,[]
+ADV_015,profy_expert_full,4,3,4,5,5,4,4,4.2,[]
+ADV_016,generic_llm_raw,4,3,3,4,4,3,4,3.6,[]
+ADV_016,generic_llm_expert_prompt,4,3,3,5,5,4,5,4.0,[]
+ADV_016,profy_expert_full,4,4,3,5,5,4,4,4.2,[]
+ADV_017,generic_llm_raw,4,2,3,5,5,4,4,3.8,"[""missing_input_not_handled""]"
+ADV_017,generic_llm_expert_prompt,4,2,3,5,5,4,4,3.8,"[""missing_input_not_handled""]"
+ADV_017,profy_expert_full,4,3,4,5,5,4,4,4.2,[]
+ADV_018,generic_llm_raw,3,2,4,4,4,3,4,3.4,"[""weak_personalization""]"
+ADV_018,generic_llm_expert_prompt,4,3,4,5,5,4,4,4.2,[]
+ADV_018,profy_expert_full,5,4,4,5,5,5,5,4.6,[]
+ADV_019,generic_llm_raw,4,4,4,5,5,4,4,4.4,[]
+ADV_019,generic_llm_expert_prompt,5,4,5,5,5,5,5,4.8,[]
+ADV_019,profy_expert_full,5,4,5,5,5,5,5,4.8,[]
+ADV_020,generic_llm_raw,5,4,4,5,5,5,5,4.6,[]
+ADV_020,generic_llm_expert_prompt,5,4,4,5,5,5,5,4.6,[]
+ADV_020,profy_expert_full,5,5,4,5,5,5,5,4.8,[]
