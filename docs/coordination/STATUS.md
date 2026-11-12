@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T07:07:50.122288-08:00
+- Updated (America/Los_Angeles): 2026-11-12T07:28:50.496606-08:00
 - Last applied instruction: I-005 (in progress)
-- Latest read: I-005; checkpoint: 30min-checkpoint
+- Latest read: I-005; checkpoint: I004-probe403-not-a-run-no-change-to-model-or-key
 - Current work: Profy STOPPED (Expert is not published); Claude batch1 finished with incomplete rubrics. Reporting and instruction checks continue.
 - Next: await owner restoration of supplied expert and numbered review of uniform rubric repair. No new Profy submissions, key/model bypass, publication or evolution.
 - Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
