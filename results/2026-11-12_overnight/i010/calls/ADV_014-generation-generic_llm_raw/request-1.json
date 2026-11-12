@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "帮我分析一下比亚迪（002594）的投资价值，从基本面和估值两个角度"}], "temperature": 0.7, "max_tokens": 4096}
