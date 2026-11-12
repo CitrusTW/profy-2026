@@ -70,3 +70,4 @@
 - 2026-11-12T09:56:14.072954-08:00 I010-preflight-frozen-openrouter-only; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-009; new_completed_runs=18; USD=unknown.
 - 2026-11-12T09:56:25.888878-08:00 I010 starting40baseline_generations; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-009; new_completed_runs=18; USD=unknown.
 - 2026-11-12T09:56:48.620398-08:00 I010 completed_generation_ADV_001-generation-generic_llm_raw; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-009; new_completed_runs=18; USD=unknown.
+- 2026-11-12T09:57:31.081020-08:00 I010 completed_generation_ADV_001-generation-generic_llm_expert_prompt; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-009; new_completed_runs=18; USD=unknown.
