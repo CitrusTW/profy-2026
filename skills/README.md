@@ -21,3 +21,7 @@
 第4至5轮新增了公开原skill的输出表示兼容保护, 已在provenance.adapter_contract中标明, 不冒充原方法. 原代码中仍缺少或未接通capability-gap classifier、通用语义适用性检查和native promotion, 不能称完整CogniLife平台复现.
 
 每版EVOLUTION_RECORD.json保存实际模型、调用步骤、parent/candidate/request hash、开发记录数量、模型修改说明和实际得分. 只在能核对parent文件时提供diff, 不补造缺失历史.
+
+## xlsx 原版
+
+[SkillsBench 原版 xlsx/SKILL.md](with-skills/xlsx/SKILL.md)和[来源与资源指纹](with-skills/xlsx/SOURCE.json)已归档. 新的 xlsx 进化版尚未生成, 不用原版冒充第三组.

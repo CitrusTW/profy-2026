@@ -1,0 +1,12 @@
+{
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "task": "weighted-gdp-calc",
+  "source_url": "https://github.com/benchflow-ai/skillsbench/tree/f860ecf02ef53412a030f8661c83d644b739ff01/tasks/weighted-gdp-calc/environment/skills/xlsx",
+  "original_resource_sha256": {
+    "skills/xlsx/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+    "skills/xlsx/SKILL.md": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+    "skills/xlsx/recalc.py": "f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409"
+  },
+  "only_SKILL_md_body_copied_to_repo": true,
+  "third_party_resource_code_copied": false
+}

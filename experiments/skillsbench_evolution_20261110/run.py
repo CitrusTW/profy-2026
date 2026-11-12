@@ -265,7 +265,9 @@ After writing the original requested outputs under output/, package only those a
             (f/'deliverables.zip').write_bytes(archive)
             if not hashes or sha(archive) != hashes[-1]: raise ValueError('Native ZIP hash does not match download')
             manifest = unpack_output(archive, f)
-            assert manifest['input_sha256'] == sha(input_path.read_bytes())
+            expected_input_sha=getattr(self.args,'expected_input_sha256',None) or sha(input_path.read_bytes())
+            assert re.fullmatch(r'[0-9a-f]{64}',expected_input_sha)
+            assert manifest['input_sha256'] == expected_input_sha
         target_hash = sha((candidate if candidate is not None else self.target.read_text()).encode()) if not no_skills else None
         names={p.parent.name for p in (self.bench/task/'environment/skills').glob('*/SKILL.md')}
         attached_ids={e.get('tool_call_id') for e in events if e.get('type')=='tool_call.in_progress' and attached_skill_read(e,no_skills,names)}
@@ -276,6 +278,7 @@ After writing the original requested outputs under output/, package only those a
         metrics.update({'llm_turns': len(usages), 'tool_calls': len(calls)})
         result = {'label': label, 'task': task, 'completed': completed, 'error': error, 'elapsed_sec': round(time.monotonic()-began, 3), 'output_received': manifest is not None, 'native_zip_sha256': sha(archive) if archive else None, 'file_hashes': manifest['files'] if manifest else {}, 'skill_sha256': target_hash, 'target_skill_read_verified': bool(read_match) if not no_skills else None, 'skill_hash_marker_verified':target_hash in seen_hashes if not no_skills else None,'read_verification_method':'Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately','external_skill_tools_observed': [n for cid,n in calls.items() if 'skill' in n.lower() and cid not in attached_ids], 'supplied_benchmark_skills': not no_skills, 'tokens': metrics, 'profy_cost_usd': None}
         save(f/'usage.json', usages); save(f/'run_summary.json', result)
+        save(f/'SOLVER_RESULT_BEFORE_GRADING.json',result)
         result['score'] = self.grade(task, f)
         save(f/'result.json', result)
         print('DONE', label, json.dumps({'score': result['score'], 'elapsed_sec': result['elapsed_sec'], 'skill_read_verified': result['target_skill_read_verified']}), flush=True)

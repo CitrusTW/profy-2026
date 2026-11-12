@@ -11,6 +11,7 @@ from run import save,sha
 from native_evolution import require_paid
 
 PIN='f860ecf02ef53412a030f8661c83d644b739ff01'
+DELIVER_COMMAND="touch outputs/deliverables.zip && printf SBP_NATIVE_ZIP_SHA256: && sha256sum outputs/deliverables.zip && printf '[OUTPUT] ' && realpath outputs/deliverables.zip"
 
 def host_command_kind(command):
     command=command.strip()
@@ -118,7 +119,7 @@ class DockerStudy(LibraryStudy):
         files.append(MemoryUpload('case_config.json.gz',gzip.compress(json.dumps(config).encode())))
         files += [HERE/'remote_setup.py',HERE/'remote_tools.py',HERE/'remote_native.py']
         if any(len(p.read_bytes())>500000 for p in files):raise ValueError('Prototype upload exceeds bound; no model call started')
-        save(f/'started.json',{'task':task,'label':label,'model':'gpt-6.1-sol','adapter':'cloud-original-docker-prototype-v1','adapter_source_sha256':{p.name:sha(p.read_bytes()) for p in [HERE/'study.py',HERE/'remote_setup.py',HERE/'remote_tools.py',HERE/'remote_grade.py',HERE/'remote_native.py']} })
+        save(f/'started.json',{'task':task,'label':label,'model':'gpt-6.1-sol','adapter':'cloud-original-docker-prototype-v1','adapter_source_sha256':{p.name:sha(p.read_bytes()) for p in [HERE/'study.py',HERE/'remote_setup.py',HERE/'remote_tools.py',HERE/'remote_grade.py',HERE/'remote_native.py',HERE/'remote_namespace_grade.py']} })
         save(f/'case_config.json',config)
         user='cgl-native-'+sha(str(f).encode())[:20]
         uploads=[self.transport.upload(p,user) for p in files];save(f/'uploads.json',uploads)
@@ -164,15 +165,15 @@ For a visual/native file preview, use python3 remote_tools.py get with the same 
         payload=MemoryUpload('original_verifier.tar.gz',raw)
         control={'expected_context':state,'verifier_archive_sha256':sha(raw),'source_hashes':{n:sha(b) for n,b,m in rows},'expects_ctrf':any(n=='test.sh' and b'ctrf' in b for n,b,m in rows)}
         grader=Probe(argparse.Namespace(**{**vars(self.args),'out':str(root),'dev_task':task,'skill_name':self.skill_name,'hard_timeout_sec':1200}))
-        files=[payload,MemoryUpload('grade_config.json.gz',gzip.compress(json.dumps(control).encode())),HERE/'remote_grade.py',HERE/'remote_native.py']
+        files=[payload,MemoryUpload('grade_config.json.gz',gzip.compress(json.dumps(control).encode())),HERE/'remote_grade.py',HERE/'remote_native.py',HERE/'remote_namespace_grade.py']
         uploads=[grader.transport.upload(p,session['end_user']) for p in files]
         body={'agent':{'id':grader.transport.expert_id,'model':'gpt-6.1-sol','tools':[]},'rules':[],'environment':{'type':'profy_hosted','skills':[]},'enable_memory':False,'expert_partner':[],
-            'input':'Grading only, no further solving. Run exactly python3 remote_grade.py once using bash with background=true, then awaitbash on that same job until completion. Do not edit answers, scripts, config or tests, inspect the hidden verifier, use skills/Memory, purchase anything or ask questions. The script freezes/exports actual files before exposing the original verifier, runs the original test.sh, preserves source hashes and cleans only this case. Return the actual [OUTPUT] outputs/deliverables.zip. Do not rerun scoring.',
+            'input':'Grading only, no further solving. Run exactly python3 remote_grade.py once using bash with background=true, then awaitbash on that same job until completion. Do not edit answers, scripts, config or tests, inspect the hidden verifier, use skills/Memory, purchase anything or ask questions. The script freezes/exports actual files before exposing the original verifier, runs the original test.sh, preserves source hashes and cleans only this case. After completion, run exactly '+DELIVER_COMMAND+' in one foreground bash call to expose the actual attachment. Return [OUTPUT] outputs/deliverables.zip. Do not rerun scoring.',
             'stream':True,'session_id':session['id'],'attachment_file_ids':[x['file_id'] for x in uploads]}
         delivered=grader.execute(root,'grading-only','original-grading',None,True,body,session['id'],session['end_user'],payload)
         grade_events=[json.loads(s) for s in (root/'events.jsonl').read_text().splitlines()]
         commands=[e['parameters']['command'].strip() for e in grade_events if e.get('type')=='tool_call.in_progress' and e.get('tool_name')=='bash']
-        assert commands==['python3 remote_grade.py'],'Grader command changed or repeated'
+        assert commands==['python3 remote_grade.py',DELIVER_COMMAND],'Grader command changed or repeated'
         assert delivered['output_received'],'Actual grader artifact not received'
         report=json.loads((root/'output/score_receipt.json').read_text())
         save(folder/'ORIGINAL_SCORE.json',report)

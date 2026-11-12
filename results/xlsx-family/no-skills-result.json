@@ -1,0 +1,62 @@
+{
+  "label": "no-skills",
+  "task": "weighted-gdp-calc",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 151.985,
+  "output_received": true,
+  "native_zip_sha256": "b85990b773162b01369d5e21d585d85c0057e31d7ca110ce6c61c5acbff6612a",
+  "file_hashes": {
+    "output/original_verifier_stdout.log": "9e39218ca3d69ee6a424be0a865d7d7f400d52b508b1e94ff529332c0093dab8",
+    "output/score_receipt.json": "1efa7d871bcfa31553483d08d55b2517e8d1b07154ac77a86b51e08d5dc23121",
+    "output/fs/root/gdp.xlsx": "7b76971f6fac4c24e3767fe6c622809d9d71ef7d3bfe907f0baa80d0b94ed796"
+  },
+  "skill_sha256": null,
+  "target_skill_read_verified": null,
+  "skill_hash_marker_verified": null,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": false,
+  "tokens": {
+    "input_tokens": 151885,
+    "output_tokens": 3604,
+    "total_tokens": 155489,
+    "cache_read_tokens": 123260,
+    "cache_write_tokens": 27985,
+    "llm_turns": 8,
+    "tool_calls": 7
+  },
+  "profy_cost_usd": null,
+  "score": {
+    "original_verifier": true,
+    "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+    "task": "weighted-gdp-calc",
+    "pre_grade_file_hashes": {
+      "/root/gdp.xlsx": "7b76971f6fac4c24e3767fe6c622809d9d71ef7d3bfe907f0baa80d0b94ed796"
+    },
+    "original_source_hashes": {
+      "test.sh": "f6d94159004f2dcf9488d3f80920a60675f7b45fb22353592fa9b3a61c24843a",
+      "test_outputs.py": "94b1b6089c1c143cb1f54c5110cfe932e2d85194c19286c7201f5c29c2c87055"
+    },
+    "cleanup_errors": [],
+    "runtime_backend": "native-proot",
+    "runtime_difference": "Profy Debian with original task files and unmodified original verifier, not the official Ubuntu Docker image",
+    "original_returncode": 0,
+    "grading_backend": "private kernel mount namespace; original test.sh unchanged",
+    "uv_dependency_provisioning": "Official uv==0.9.7 wheel installed before grading; original installer still runs",
+    "grader_uv_version": "uv 0.9.7",
+    "original_reward": 1.0,
+    "strict": 1,
+    "tests": 27,
+    "passed": 27,
+    "failed": 0,
+    "skipped": 0,
+    "original_source_before_after_verified": true,
+    "answer_files_unchanged_by_grader": true,
+    "temporary_paths_removed": true,
+    "packages_remain_only_in_temporary_provider_environment": true
+  },
+  "grading_repair": true,
+  "new_solver_run_for_repair": false,
+  "condition_valid": true
+}

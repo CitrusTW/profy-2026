@@ -1,0 +1,26 @@
+{
+  "label": "no-skills",
+  "task": "weighted-gdp-calc",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 151.985,
+  "output_received": false,
+  "native_zip_sha256": null,
+  "file_hashes": {},
+  "skill_sha256": null,
+  "target_skill_read_verified": null,
+  "skill_hash_marker_verified": null,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": false,
+  "tokens": {
+    "input_tokens": 151885,
+    "output_tokens": 3604,
+    "total_tokens": 155489,
+    "cache_read_tokens": 123260,
+    "cache_write_tokens": 27985,
+    "llm_turns": 8,
+    "tool_calls": 7
+  },
+  "profy_cost_usd": null
+}

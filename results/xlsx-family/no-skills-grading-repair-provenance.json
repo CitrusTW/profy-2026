@@ -1,0 +1,30 @@
+{
+  "frozen_answer_sha256": "7b76971f6fac4c24e3767fe6c622809d9d71ef7d3bfe907f0baa80d0b94ed796",
+  "original_invalid_receipt": {
+    "original_verifier": true,
+    "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+    "task": "weighted-gdp-calc",
+    "pre_grade_file_hashes": {
+      "/root/gdp.xlsx": "7b76971f6fac4c24e3767fe6c622809d9d71ef7d3bfe907f0baa80d0b94ed796"
+    },
+    "original_source_hashes": {
+      "test.sh": "f6d94159004f2dcf9488d3f80920a60675f7b45fb22353592fa9b3a61c24843a",
+      "test_outputs.py": "94b1b6089c1c143cb1f54c5110cfe932e2d85194c19286c7201f5c29c2c87055"
+    },
+    "cleanup_errors": [],
+    "runtime_backend": "native-proot",
+    "runtime_difference": "Profy Debian with original task files and unmodified original verifier, not the official Ubuntu Docker image",
+    "original_returncode": 0,
+    "original_reward": 0.0,
+    "strict": 0,
+    "tests": null,
+    "passed": null,
+    "failed": null,
+    "skipped": null,
+    "infrastructure_error": "RuntimeError: Original pytest report missing: preserve raw reward, mark grading infrastructure error",
+    "temporary_paths_removed": true,
+    "packages_remain_only_in_temporary_provider_environment": true
+  },
+  "new_solver_run": false,
+  "original_verifier_archive_sha256": "e7b9025fc863c89bc1a9bb085ba3f0e34980bddecda58468bc04c7a0df0e9103"
+}

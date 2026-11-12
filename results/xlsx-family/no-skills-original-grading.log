@@ -1,0 +1,114 @@
+Using CPython 3.12.13 interpreter at: /usr/local/bin/python3
+Resolved 1 package in 1.09s
+Downloading uv (20.4MiB)
+ Downloaded uv
+Prepared 1 package in 255ms
+Installed 1 package in 1ms
+ + uv==0.9.7
+CGL_GRADER_UV_VERSION:uv 0.9.7
+Hit:1 http://mirrors.tencentyun.com/debian trixie InRelease
+Get:2 http://mirrors.tencentyun.com/debian trixie-updates InRelease [47.3 kB]
+Hit:3 https://cloud.r-project.org/bin/linux/debian trixie-cran40/ InRelease
+Hit:4 https://deb.nodesource.com/node_20.x nodistro InRelease
+Fetched 47.3 kB in 2s (20.9 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+curl is already the newest version (8.14.1-2+deb13u7).
+0 upgraded, 0 newly installed, 0 to remove and 125 not upgraded.
+downloading uv 0.9.7 x86_64-unknown-linux-gnu
+curl: (22) The requested URL returned error: 404
+failed to download https://releases.astral.sh/github/astral-sh/uv/releases/download/0.9.7/uv-x86_64-unknown-linux-gnu.tar.gz
+this may be a standard network error, but it may also indicate
+that uv's release process is not working. When in doubt
+please feel free to open an issue!
+Evaluating Excel formulas with gnumeric...
+Formula evaluation complete.
+Downloading pygments (1.2MiB)
+ Downloading pygments
+Installed 8 packages in 10ms
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.4.1, pluggy-1.7.0 -- /tmp/cgl-sock-zo2unett/uv-cache/archive-v0/G_qXaHrEFzfapRTFraAHz/bin/python
+cachedir: .pytest_cache
+rootdir: /verifier
+plugins: json-ctrf-0.3.5
+collecting ... collected 27 items
+
+../verifier/test_outputs.py::TestFileExists::test_excel_file_exists PASSED [  3%]
+../verifier/test_outputs.py::TestFileExists::test_excel_file_readable PASSED [  7%]
+../verifier/test_outputs.py::TestFileExists::test_sheet_structure PASSED [ 11%]
+../verifier/test_outputs.py::TestStep1LookupFormulas::test_exports_have_data PASSED [ 14%]
+../verifier/test_outputs.py::TestStep1LookupFormulas::test_imports_have_data PASSED [ 18%]
+../verifier/test_outputs.py::TestStep1LookupFormulas::test_gdp_have_data PASSED [ 22%]
+../verifier/test_outputs.py::TestStep1DataValues::test_exports_values PASSED [ 25%]
+../verifier/test_outputs.py::TestStep1DataValues::test_imports_values PASSED [ 29%]
+../verifier/test_outputs.py::TestStep1DataValues::test_gdp_values PASSED [ 33%]
+../verifier/test_outputs.py::TestStep2NetExportsCalculation::test_net_exports_pct_have_data PASSED [ 37%]
+../verifier/test_outputs.py::TestStep2NetExportsCalculation::test_net_exports_pct_values PASSED [ 40%]
+../verifier/test_outputs.py::TestStep2Statistics::test_statistics_have_data PASSED [ 44%]
+../verifier/test_outputs.py::TestStep2Statistics::test_min_values PASSED [ 48%]
+../verifier/test_outputs.py::TestStep2Statistics::test_max_values PASSED [ 51%]
+../verifier/test_outputs.py::TestStep2Statistics::test_median_values PASSED [ 55%]
+../verifier/test_outputs.py::TestStep2Statistics::test_mean_values PASSED [ 59%]
+../verifier/test_outputs.py::TestStep2Statistics::test_percentile_values PASSED [ 62%]
+../verifier/test_outputs.py::TestStep3WeightedMean::test_weighted_mean_has_data PASSED [ 66%]
+../verifier/test_outputs.py::TestStep3WeightedMean::test_weighted_mean_values_reasonable PASSED [ 70%]
+../verifier/test_outputs.py::TestStep3WeightedMean::test_weighted_mean_values PASSED [ 74%]
+../verifier/test_outputs.py::TestNoExcelErrors::test_no_formula_errors PASSED [ 77%]
+../verifier/test_outputs.py::TestSheetStructure::test_no_extra_sheets_added PASSED [ 81%]
+../verifier/test_outputs.py::TestSheetStructure::test_required_sheets_exist PASSED [ 85%]
+../verifier/test_outputs.py::TestFormattingPreserved::test_task_sheet_column_widths PASSED [ 88%]
+../verifier/test_outputs.py::TestFormattingPreserved::test_data_sheet_column_widths PASSED [ 92%]
+../verifier/test_outputs.py::TestNoMacros::test_no_vba_macros PASSED     [ 96%]
+../verifier/test_outputs.py::TestNoMacros::test_file_extension_xlsx PASSED [100%]
+
+=============================== warnings summary ===============================
+../tmp/cgl-sock-zo2unett/uv-cache/archive-v0/G_qXaHrEFzfapRTFraAHz/lib/python3.12/site-packages/_pytest/cacheprovider.py:475
+  /tmp/cgl-sock-zo2unett/uv-cache/archive-v0/G_qXaHrEFzfapRTFraAHz/lib/python3.12/site-packages/_pytest/cacheprovider.py:475: PytestCacheWarning: could not create cache path /verifier/.pytest_cache/v/cache/nodeids: [Errno 30] Read-only file system: '/verifier/pytest-cache-files-fclir3pa'
+    config.cache.set("cache/nodeids", sorted(self.cached_nodeids))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+==================================== PASSES ====================================
+_____________________ TestFileExists.test_sheet_structure ______________________
+----------------------------- Captured stdout call -----------------------------
+
+Available sheets: ['Task', 'Data']
+Task sheet: Task
+CSV file: /root/sheet.csv.0
+CSV data entries: 504
+
+Sample CSV values:
+  H12: 25.2077127659575
+  H35: 19.742460752527343
+  H42: 12.21962687715744
+  H50: None
+=========================== short test summary info ============================
+PASSED ../verifier/test_outputs.py::TestFileExists::test_excel_file_exists
+PASSED ../verifier/test_outputs.py::TestFileExists::test_excel_file_readable
+PASSED ../verifier/test_outputs.py::TestFileExists::test_sheet_structure
+PASSED ../verifier/test_outputs.py::TestStep1LookupFormulas::test_exports_have_data
+PASSED ../verifier/test_outputs.py::TestStep1LookupFormulas::test_imports_have_data
+PASSED ../verifier/test_outputs.py::TestStep1LookupFormulas::test_gdp_have_data
+PASSED ../verifier/test_outputs.py::TestStep1DataValues::test_exports_values
+PASSED ../verifier/test_outputs.py::TestStep1DataValues::test_imports_values
+PASSED ../verifier/test_outputs.py::TestStep1DataValues::test_gdp_values
+PASSED ../verifier/test_outputs.py::TestStep2NetExportsCalculation::test_net_exports_pct_have_data
+PASSED ../verifier/test_outputs.py::TestStep2NetExportsCalculation::test_net_exports_pct_values
+PASSED ../verifier/test_outputs.py::TestStep2Statistics::test_statistics_have_data
+PASSED ../verifier/test_outputs.py::TestStep2Statistics::test_min_values
+PASSED ../verifier/test_outputs.py::TestStep2Statistics::test_max_values
+PASSED ../verifier/test_outputs.py::TestStep2Statistics::test_median_values
+PASSED ../verifier/test_outputs.py::TestStep2Statistics::test_mean_values
+PASSED ../verifier/test_outputs.py::TestStep2Statistics::test_percentile_values
+PASSED ../verifier/test_outputs.py::TestStep3WeightedMean::test_weighted_mean_has_data
+PASSED ../verifier/test_outputs.py::TestStep3WeightedMean::test_weighted_mean_values_reasonable
+PASSED ../verifier/test_outputs.py::TestStep3WeightedMean::test_weighted_mean_values
+PASSED ../verifier/test_outputs.py::TestNoExcelErrors::test_no_formula_errors
+PASSED ../verifier/test_outputs.py::TestSheetStructure::test_no_extra_sheets_added
+PASSED ../verifier/test_outputs.py::TestSheetStructure::test_required_sheets_exist
+PASSED ../verifier/test_outputs.py::TestFormattingPreserved::test_task_sheet_column_widths
+PASSED ../verifier/test_outputs.py::TestFormattingPreserved::test_data_sheet_column_widths
+PASSED ../verifier/test_outputs.py::TestNoMacros::test_no_vba_macros
+PASSED ../verifier/test_outputs.py::TestNoMacros::test_file_extension_xlsx
+======================== 27 passed, 1 warning in 9.86s =========================

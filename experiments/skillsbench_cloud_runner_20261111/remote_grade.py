@@ -17,8 +17,10 @@ def main():
     def run(args,timeout=120):return subprocess.run(args,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=timeout)
     def file_sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
     try:
+        if native:
+            for rel,h in state['supplied_skill_hashes'].items():assert file_sha(base/rel)==h,'Supplied skill changed during solving'
         # Export changed task files before exposing any verifier material.
-        excluded={'.cache','.git','.npm','.local','.venv','node_modules','__pycache__','.pytest_cache','bench_skills','.claude','.agents','.codex','.bash_history'}
+        excluded={'.cache','.git','.npm','.local','.venv','node_modules','__pycache__','.pytest_cache','bench_skills','.claude','.agents','.codex','.bash_history','.config','.fonts','.gnupg'}
         if native:
             root=work/'root';paths=[]
             for item in root.rglob('*'):
@@ -49,14 +51,24 @@ def main():
         expected=config['source_hashes']
         report['original_source_hashes']={p.relative_to(verifier).as_posix():file_sha(p) for p in verifier.rglob('*') if p.is_file()}
         assert report['original_source_hashes']==expected
+        if native:
+            for item in verifier.rglob('*'):
+                if item.is_file():item.chmod(0o444)
+                elif item.is_dir():item.chmod(0o555)
+            verifier.chmod(0o555)
         logs=work/'verifier-logs'
         for p in logs.iterdir():
             if p.is_dir():shutil.rmtree(p)
             else:p.unlink()
-        command=(state['native_command']+['bash','/verifier/test.sh']) if native else cli+['exec','--user','0',container,'bash','/verifier/test.sh']
+        command=(['sudo','-n','env','PATH=/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin','unshare','--mount','--propagation','private','/usr/local/bin/python3',str(Path(__file__).with_name('remote_namespace_grade.py'))]) if native else cli+['exec','--user','0',container,'bash','/verifier/test.sh']
         graded=run(command,900)
         (out/'original_verifier_stdout.log').write_text(graded.stdout)
         report['original_returncode']=graded.returncode
+        if native:
+            report['grading_backend']='private kernel mount namespace; original test.sh unchanged'
+            report['uv_dependency_provisioning']='Official uv==0.9.7 wheel installed before grading; original installer still runs'
+            versions=re.findall(r'CGL_GRADER_UV_VERSION:(.+)',graded.stdout)
+            report['grader_uv_version']=versions[-1] if versions else None
         reward=logs/'reward.txt'
         if not reward.is_file():raise RuntimeError('Original verifier returned no reward; infrastructure error, not a zero score')
         value=float(reward.read_text().strip());assert 0<=value<=1
@@ -80,8 +92,9 @@ def main():
     finally:
         try:
             if native:
-                shutil.rmtree(work);shutil.rmtree(runtime)
+                cleaned=run(['sudo','-n','rm','-rf',str(work),str(runtime)],120)
                 report['temporary_paths_removed']=not work.exists() and not runtime.exists()
+                if cleaned.returncode:report['cleanup_errors'].append(cleaned.stdout[-1000:])
                 report['packages_remain_only_in_temporary_provider_environment']=True
             else:
                 run(cli+['rm','-f',container],30)
@@ -107,6 +120,6 @@ def main():
     with zipfile.ZipFile(delivery/'deliverables.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
         for name in manifest['files']:archive.write(base/name,name)
         archive.writestr('manifest.json',json.dumps(manifest))
-    print(json.dumps(report));print('SBP_NATIVE_ZIP_SHA256:'+file_sha(delivery/'deliverables.zip'));print('[OUTPUT] outputs/deliverables.zip')
+    print(json.dumps(report));print('SBP_NATIVE_ZIP_SHA256:'+file_sha(delivery/'deliverables.zip'));print('[OUTPUT] '+str(delivery/'deliverables.zip'))
 
 if __name__=='__main__':main()

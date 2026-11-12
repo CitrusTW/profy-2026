@@ -35,3 +35,9 @@
 已在 Profy 云端实际运行临时 Alpine Linux, [回执与排错记录](../results/2026-11-11_skillsbench_cloud_serial/environment-checks/README.md)单独保存. 公开工具通过内存分片中转, 本机没有保存镜像或运行环境. 原 benchmark Dockerfile 的云端流程仍未跑通; 不把环境检查计入题目成绩.
 
 原生 Docker 已在云端实际拉取并运行固定 SHA256 的公开 Alpine image, [实际记录与未解决的清理项](../results/2026-11-11_skillsbench_cloud_serial/environment-checks/NATIVE_DOCKER.md)已留档. 新的原题 runner 放在独立目录, [从这里看](../experiments/skillsbench_cloud_runner_20261111/README.md). 先验证 weighted-gdp-calc, 不提前算作三组完成. 原方法共享代码36项检查、新云端原型3项检查通过; 这不是benchmark题数.
+
+## Excel 开发题的最新进展
+
+weighted-gdp-calc 的 no-skills 已完成有效原评分: 27/27, reward1.0, 155489求解 tokens. 原版 xlsx skill 组正在串行运行, 新的第10轮 Evolution 尚未开始. [实际数字、原回答及评分修复证据](../results/xlsx-family/README.md).
+
+官方 image 的镜像文件已经下完, 但云端解压超时. 当前改用已验证的轻量 Profy Debian 文件任务环境; 与官方 Ubuntu image 的差别、实际软件版本和原评分源文件指纹均留档. 仍是4道题完成完整三组, 87题全库未完成.

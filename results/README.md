@@ -20,3 +20,7 @@
 | [早期 gpt-6.1-sol 运行](run-02-gpt61/) | 历史失败版 |
 
 文件名含 full_library 只是当时的工作目录名, 不表示87题跑完. 环境检查、评分程序自检、待运行配置也不算完成了模型实验.
+
+## 正在扩展: Excel 文件任务
+
+[weighted-gdp-calc 开发题](xlsx-family/README.md): no-skills 原评分27/27, 原版 skill 运行中, Evolution 尚未开始. 不计为新的三组完成.

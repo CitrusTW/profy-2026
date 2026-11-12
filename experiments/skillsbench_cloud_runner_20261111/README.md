@@ -1,58 +1,51 @@
-# 用原题的云端环境做实验
+# 在 Profy 云端跑 SkillsBench 原题
 
-这份代码优先复用 SkillsBench 维护方构建的原题环境, 核对源文件完全相同后才使用. 没有匹配镜像的题才尝试原 Dockerfile. 电脑只发 API 请求和保存小结果, 不在本机搭 Docker 环境.
+电脑只发 API 请求和保存小结果. 不在本机下载 Docker image、搭题目环境或留大缓存.
 
-## 现在到哪一步
+## 当前实际进度
 
-已在 Profy 云端成功运行固定 SHA256 的公开 Alpine image. 原题 Dockerfile 和完整三组还需要逐题验证. 当前代码是小范围原型, 不把它写成已经跑完87题.
+正在验证 weighted-gdp-calc: 给已有的 gdp.xlsx 填入查找公式和加权平均公式, 保留原格式. no-skills 已完成求解阶段, 正在等待原题评分. 这不是三组已完成, 更不是87题已完成.
 
-先验证 weighted-gdp-calc: 给一份已有的 gdp.xlsx 填入查找、统计和加权平均公式, 还要保留原格式. 不重新出题, 分数由这道题自带的 test.sh 和 test_outputs.py 给出.
+当前使用 Profy 的 Debian 环境, 安装 Gnumeric、LibreOffice Calc 和 PRoot, 新增约363MB云端空间. PRoot 把原题的 /root 路径对应到本次自己的文件夹. 原始 Excel 文件的指纹和实际路径已核对. 这与官方 Ubuntu Docker image 有差别, 在每题的运行记录中明确保存; 三组使用同一套软件版本.
 
-这道题只用一个 xlsx skill, 也就是处理 Excel 文件的操作说明. 同一版本的说明还出现在另外10道公开题里. 先用它调说明, 固定版本后再换题, 才能检查学到的办法能不能用到新任务上. 另外两份内容不同的 xlsx 说明不会直接套用这个版本.
+之前尝试官方 image 时, 虽然镜像文件下载完成, 但 Profy 文件系统里的解压超时. 所以当前先验证上面的轻量方式. 南京大学的公开缓存只在下载检查中使用, 不参与研究, 也不接收 key、题目附件或实验结果. 下载说明: https://doc.nju.edu.cn/books/e1654/page/ghcr .
 
-## 每一步做什么
+## 三组怎么比
 
-1. 从固定的公开版本读取原题材料, 核对 Git blob, 保留原文件内容和 Git 文件权限.
-2. 给每组开新 Profy session. 云端从官方 Debian 软件包取得运行工具, 只解包到本次目录, 不运行系统安装脚本. 优先拉取已经核对来源和 digest 的官方镜像. weighted-gdp-calc 的镜像约918MB, 只下载到云端. 没有匹配镜像时才用原 Dockerfile 搭题目环境.
-3. no-skills 不提供 benchmark skill 正文或资源. with-skills 提供原版. with-CogniLife-skills 必须明确提供新版本, 缺了就停止, 不回退成原版.
-4. 模型在原题容器里做题. 实际读到的 skill 正文、工具调用、tokens 和产出都留记录.
-5. 模型做完后, 才在单独的评分请求中提供原 verifier. 固定程序先导出实际文件, 再在同一题目容器里运行原 test.sh. 评分请求不再做题, 原测试内容不进入 skill 进化记录.
-6. 保存实际文件、原得分、检查通过数、hash 和环境记录, 清理本次云端目录. 如果软件环境或评分没跑通, 单独记错误, 不当成模型答错.
+1. no-skills: 提供原题和原附件, 不提供 benchmark skill, 禁止读取其他 skill.
+2. with-skills: 同样的题和附件, 加原版 SKILL.md 和它原有的资源.
+3. with-CogniLife-skills: 同样的题和附件, 只把选定的 SKILL.md 换成通过原 Evolution 组件产生的新版本. 缺新版本就停止, 不回退成原版.
 
-## 文件入口
+求解都用 Profy 的 gpt-6.1-sol. 做完后才提供原 verifier, 固定程序先保留实际回答文件, 再运行原 test.sh. 不改评分规则, 不把评分请求的历史或隐藏答案送进 Evolution. 软件或传输失败单独记录, 不记成答错.
+
+## 新 skill 怎么来
+
+`evolve_case.py` 读取已经完成的开发题求解记录, 调用收到的原 ContextManager、Evolution workflow、skill 工具和 evolution_log gate. 进化用现有 OpenRouter key, model 是 openai/gpt-6.1-sol. 这里没有另写学习 prompt 来顶替原组件.
+
+接续已记录的第1至9轮, 只允许第10至30轮. 每轮保留父版本、完整新 SKILL.md、来源、实际求解和分数. 退回原版、原样返回父版本、名字或格式不对的候选, 不再付费验证.
+
+原 gate 的建议分数不是实验成绩. 外部实验另检查实际质量和效率: 开发题全部通过, 再确认一次; 如果原版已全部通过, 两次都需要比原版少至少5%总 tokens 才固定版本. 5%只是这轮的选择规则, 不代表统计显著. 需要到未参与进化的题上再看是否有效.
+
+原代码里缺少或没接通的 native 能力继续记录在 provenance 和 FROZEN.json 中, 不声称完整复现整个 Profy 平台. 当前新的第10轮还没开始.
+
+## 换题之前核对什么
+
+11题的 xlsx/SKILL.md 完全相同, 其中10题的全部配套资源也相同. exceltable-in-ppt 的 recalc.py 不同, 需要保留这个区别. 当前轻量程序只开放已经检查过的 weighted-gdp-calc, 其他题还没验证运行, 不把它们写成已经可跑.
+
+87题里有84题找到源文件完全相同的官方 image 标签, 这只是来源清单, 不是运行成绩. 其余3题的环境版本不同, 暂不混用.
+
+## 文件从哪里看
 
 | 文件 | 做什么 |
 | --- | --- |
-| study.py | 电脑端发请求、核对来源、接结果 |
-| remote_setup.py | 只在 Profy 云端搭原题环境 |
-| remote_tools.py | 让模型在题目容器里执行命令, 需要时导出预览 |
-| remote_grade.py | 做完题后跑原评分, 保存实际文件并清理 |
-| test_study.py | 不用 key 的代码检查 |
+| study.py | 发请求、核对材料、收实际回答和分数 |
+| remote_setup.py | 选择本次的云端准备方式 |
+| remote_native.py | 当前轻量方式的软件准备和文件路径对应 |
+| remote_tools.py | 在准备好的环境里执行题目操作 |
+| remote_grade.py | 冻结回答后跑原评分, 保留评分日志, 清理本次文件 |
+| evolve_case.py | 一次做一轮开发题进化和检查 |
+| candidate_check.py, run.py | 位于旁边的 skillsbench_evolution_20261110 目录, 复用原有检查和请求程序 |
+| check_native_xlsx.py | 只查软件、空间或文件路径, 不做题、不评分 |
+| prebuilt_catalog.py | 只核对公开 image 标签和 environment Git tree, 不下载 image |
 
-key 从 repo 外读取. 进化继续复用上一目录 native_evolution.py 中收到的 Evolution 组件, 用 OpenRouter 的 gpt-6.1-sol. 这些执行脚本不编写或替代进化 prompt. 原方法缺少或未接通的实现继续在版本记录里列明.
-
-hash 是按文件内容计算的指纹, 用来核对传过去和评分用的是不是同一份文件. 开发题是用来调整说明的题; 同一道开发题再成功一次也不算换题后的效果.
-
-## 600秒记录说明
-
-600秒是一次实际 bash 调用和原题 build 配置里出现的数值, 目前没有证据证明它是 Profy 平台统一上限. 旧 weighted-gdp-calc 准备环境的尝试超时, 没有开始答题或得到分数, 不计为模型答错. 新尝试让准备程序在后台完成, 并复用官方预构建环境, 不修改原评分.
-
-## 公开环境与 xlsx 配套资源
-
-只核对公开源文件和镜像标签时, 87题中有84题的环境完全相同, 不代表84题已经执行过. 官方地址 ghcr.io 的云端连接已验证, 公共镜像站曾因 allowlist 拒绝拉取. 不绕过它的限制.
-
-有11题的 xlsx/SKILL.md 完全相同, 其中10题的全部配套资源也相同. exceltable-in-ppt 的 recalc.py 不同, 单独保留这一差别, 不直接声称可无差别复用. 原题不改写, 原脚本不复制进这个私人代码归档.
-
-## 南京大学在这里做什么
-
-它只是公开的 GHCR 下载缓存, 不参与研究. 官方说明: https://doc.nju.edu.cn/books/e1654/page/ghcr . 云端已经核对返回的 manifest 与官方 digest 完全相同; 两个1MB小样本各约2秒. 原官方地址的小样本分别约23秒收到1MB、约28秒收到0.81MB. 小样本不是整镜像下载时间的保证. 只通过缓存下载公开环境, 不向缓存发送 key、题目附件、回答或评分材料.
-
-## 环境跑通后怎么进化
-
-`evolve_case.py` 每次只做一轮. 它读取已经完成的 with-skills 开发题记录, 调用收到的原 Evolution 组件, 通过 OpenRouter 的 openai/gpt-6.1-sol 提出新 SKILL.md, 再通过 Profy 做同一道开发题. 不读取评分请求的历史或验证题答案.
-
-只有实际新版本才会付费验证: 原样返回父版本、退回 benchmark 原版、名字不对或格式不完整的候选, 会保留记录并停止该轮. 原 native gate 的建议分数不是实验成绩. 还要检查实际质量, 并在达到标准后再确认一次. 新增的检查属于外部实验检查, 不冒充原方法的实现.
-
-这份程序接续已记录的全局第1至9轮, 只允许第10至30轮. 一轮成功后固定版本, 再换未参与进化的题. 当前尚未运行新的第10轮, 没有新的进化成绩.
-
-进化使用本机已有的小检查环境: Python3.12, PyYAML6.0.3, Pydantic2.12.3, 不装模型或 Docker. 接收到的 Profy 原实现仍从工作区读取; 按要求不把其他人的代码复制进这个 repo. 缺少的 native 能力继续写在 provenance 和 FROZEN.json, 不声称完整复现整个平台.
+进化在本机已有的小检查环境中调用 API, 只需要 Python3.12、PyYAML6.0.3 和 Pydantic2.12.3, 不装模型. 收到的 Profy 原实现继续从工作区读取, 按要求不复制别人的代码到这个 repo. key 从 repo 外读取, 不写进日志或文档.

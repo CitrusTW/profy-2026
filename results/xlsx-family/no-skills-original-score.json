@@ -1,0 +1,29 @@
+{
+  "original_verifier": true,
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "task": "weighted-gdp-calc",
+  "pre_grade_file_hashes": {
+    "/root/gdp.xlsx": "7b76971f6fac4c24e3767fe6c622809d9d71ef7d3bfe907f0baa80d0b94ed796"
+  },
+  "original_source_hashes": {
+    "test.sh": "f6d94159004f2dcf9488d3f80920a60675f7b45fb22353592fa9b3a61c24843a",
+    "test_outputs.py": "94b1b6089c1c143cb1f54c5110cfe932e2d85194c19286c7201f5c29c2c87055"
+  },
+  "cleanup_errors": [],
+  "runtime_backend": "native-proot",
+  "runtime_difference": "Profy Debian with original task files and unmodified original verifier, not the official Ubuntu Docker image",
+  "original_returncode": 0,
+  "grading_backend": "private kernel mount namespace; original test.sh unchanged",
+  "uv_dependency_provisioning": "Official uv==0.9.7 wheel installed before grading; original installer still runs",
+  "grader_uv_version": "uv 0.9.7",
+  "original_reward": 1.0,
+  "strict": 1,
+  "tests": 27,
+  "passed": 27,
+  "failed": 0,
+  "skipped": 0,
+  "original_source_before_after_verified": true,
+  "answer_files_unchanged_by_grader": true,
+  "temporary_paths_removed": true,
+  "packages_remain_only_in_temporary_provider_environment": true
+}

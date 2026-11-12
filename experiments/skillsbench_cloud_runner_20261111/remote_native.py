@@ -30,15 +30,18 @@ def prepare(base,meta):
             for rel,h in meta['skill_hashes'].items():assert hashlib.sha256((base/rel).read_bytes()).hexdigest()==h
             target_sha=hashlib.sha256((base/'bench_skills'/meta['target_skill']/'SKILL.md').read_bytes()).hexdigest()
             (root/'bench_skills').symlink_to(base/'bench_skills',target_is_directory=True)
-        prefix=['proot','-0','-b',str(root)+':/root','-b',str(work/'verifier')+':/verifier','-b',str(work/'verifier-logs')+':/logs/verifier','-w','/root']
+        prefix=['env','HOME=/root','proot','-0','-b',str(root)+':/root','-b',str(work/'verifier')+':/verifier','-b',str(work/'verifier-logs')+':/logs/verifier','-w','/root']
         for alias in ['/mnt/skills/public','/mnt/skills/private']:
             if Path(alias).is_dir():prefix+=['-b',str(base/'bench_skills' if meta['skills'] else work/'empty-skills')+':'+alias]
         # This check uses no task answer or benchmark reference.
-        p=subprocess.run(prefix+['/bin/sh','-c','test "$PWD" = /root && test -r /root/gdp.xlsx'],capture_output=True,text=True,timeout=20)
+        check="import hashlib,json,os;print(json.dumps({'input':hashlib.sha256(open('/root/gdp.xlsx','rb').read()).hexdigest(),'verifier_inode':os.stat('/verifier').st_ino,'logs_inode':os.stat('/logs/verifier').st_ino}))"
+        p=subprocess.run(prefix+['/usr/local/bin/python3','-c',check],capture_output=True,text=True,timeout=20)
         assert p.returncode==0,p.stderr[-2000:]
+        checked=json.loads(p.stdout)
+        assert checked=={'input':inputs['/root/gdp.xlsx'],'verifier_inode':(work/'verifier').stat().st_ino,'logs_inode':(work/'verifier-logs').stat().st_ino},'Actual file mapping differs'
         package_versions={n:subprocess.check_output(['dpkg-query','-W','-f=${Version}',n],text=True).strip() for n in ['gnumeric','libreoffice-calc','proot']}
         assert all(package_versions.get(n)==v for n,v in versions.items()),'Native runtime package version differs'
-        state={'backend':'native-proot','runtime_difference':'Profy Debian with original task files and unmodified original verifier, not the official Ubuntu Docker image','workspace':str(base),'work':str(work),'runtime':str(runtime),'cli':[],'container':None,'image_id':None,'shell':'/bin/bash','input_sha256':meta['input_sha256'],'original_file_sha256':inputs,'skill_sha256':target_sha,'benchmark_pin':meta['benchmark_pin'],'task':meta['task'],'native_command':prefix,'native_package_versions':package_versions}
+        state={'backend':'native-proot','runtime_difference':'Profy Debian with original task files and unmodified original verifier, not the official Ubuntu Docker image','workspace':str(base),'work':str(work),'runtime':str(runtime),'cli':[],'container':None,'image_id':None,'shell':'/bin/bash','input_sha256':meta['input_sha256'],'original_file_sha256':inputs,'skill_sha256':target_sha,'benchmark_pin':meta['benchmark_pin'],'task':meta['task'],'native_command':prefix,'native_package_versions':package_versions,'supplied_skill_hashes':meta['skill_hashes']}
         (base/'case_context.json').write_text(json.dumps(state,indent=2))
         shutil.rmtree(work/'source');(base/'task_environment.tar.gz').unlink()
         print('CGL_CASE_READY:'+json.dumps(state),flush=True)
