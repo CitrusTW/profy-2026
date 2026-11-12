@@ -1,0 +1,21 @@
+{
+  "receipt_counts": {
+    "tests": 11,
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0
+  },
+  "pytest_terminal_counts": {
+    "passed": 11,
+    "failed": 0,
+    "skipped": 0,
+    "error": 0
+  },
+  "pytest_terminal_total": 11,
+  "counts_disagree": false,
+  "terminal_summary": "======================== 11 passed, 1 warning in 13.05s ========================",
+  "stdout_sha256": "d9f1452f46a4e4c2300d2639118b1c309d4d73e1f819819ead96dc18c5aed16d",
+  "original_reward_unchanged": 1.0,
+  "no_rerun": true,
+  "interpretation": "Raw receipt and raw pytest terminal counts are distinct. This sidecar does not rewrite the verifier or its reward."
+}

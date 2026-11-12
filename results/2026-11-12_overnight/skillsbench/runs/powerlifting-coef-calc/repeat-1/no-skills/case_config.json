@@ -1,0 +1,36 @@
+{
+  "task": "powerlifting-coef-calc",
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "input_sha256": "dc5ae7d38a01bbf6294348d5bd3fe86da4379d0c6904019afaa75ef0ccaa9ef6",
+  "transport": [
+    {
+      "name": "task_environment.tar.gz",
+      "size": 13939,
+      "sha256": "dc5ae7d38a01bbf6294348d5bd3fe86da4379d0c6904019afaa75ef0ccaa9ef6"
+    }
+  ],
+  "input_manifest": {
+    "Dockerfile": {
+      "sha256": "87cf1da3fa2003b9e0573ef76af7865480f5bb34a3c8033dc8d5b01a38e14ee5",
+      "size": 805,
+      "mode": 420
+    },
+    "data-readme.md": {
+      "sha256": "9250ae7e917c85dc775f2af8ec3d67af8513dd4163e80d034e405c5365181ee8",
+      "size": 9076,
+      "mode": 420
+    },
+    "openipf_cleaned.xlsx": {
+      "sha256": "68b725cb3dca83e3d7e579283ca8b51f187cf4b447f14b7f0428678a5a8d1489",
+      "size": 10370,
+      "mode": 420
+    }
+  },
+  "skills": [],
+  "target_skill": "xlsx",
+  "parent_md_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "skill_hashes": {},
+  "native_file_runtime": true,
+  "native_package_versions": {},
+  "expected_input_hashes": null
+}

@@ -17,3 +17,4 @@
 - 2026-11-12T02:14:00.506757-08:00 run-shock-analysis-supply-r1-with-CogniLife-skills; last_applied=I-002; latest_seen=I-002; new_completed_runs=6; USD=unknown.
 - 2026-11-12T02:14:02.737671-08:00 run-shock-analysis-supply-r1-with-skills; last_applied=I-002; latest_seen=I-002; new_completed_runs=6; USD=unknown.
 - 2026-11-12T02:18:16.416786-08:00 run-reserves-at-risk-calc-r1-with-CogniLife-skills; last_applied=I-002; latest_seen=I-002; new_completed_runs=7; USD=unknown.
+- 2026-11-12T02:25:28.899560-08:00 run-powerlifting-coef-calc-r1-no-skills; last_applied=I-002; latest_seen=I-003; new_completed_runs=8; USD=unknown.
