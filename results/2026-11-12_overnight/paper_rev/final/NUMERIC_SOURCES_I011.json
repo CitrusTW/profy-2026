@@ -1,0 +1,5345 @@
+{
+  "new_numeric_ledger": [
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "planned_tasks"
+      ],
+      "raw": 20,
+      "displayed": "20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "mean"
+      ],
+      "raw": -0.19,
+      "displayed": "-0.19"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.5499999999999999,
+      "displayed": "-0.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.15999999999999998,
+      "displayed": "0.16"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "overall"
+      ],
+      "raw": 2.43,
+      "displayed": "2.43"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "overall"
+      ],
+      "raw": 2.63,
+      "displayed": "2.63"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "overall"
+      ],
+      "raw": 3.2199999999999998,
+      "displayed": "3.22"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "mean"
+      ],
+      "raw": 0.5900000000000001,
+      "displayed": "0.59"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": 0.3,
+      "displayed": "0.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.8699999999999999,
+      "displayed": "0.87"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "overall"
+      ],
+      "raw": 3.31,
+      "displayed": "3.31"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "overall"
+      ],
+      "raw": 3.4200000000000004,
+      "displayed": "3.42"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "overall"
+      ],
+      "raw": 3.2299999999999995,
+      "displayed": "3.23"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "mean"
+      ],
+      "raw": -0.19,
+      "displayed": "-0.19"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.5499999999999999,
+      "displayed": "-0.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.15999999999999998,
+      "displayed": "0.16"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "safety_boundary"
+      ],
+      "raw": 3.1,
+      "displayed": "3.10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "safety_boundary"
+      ],
+      "raw": 2.95,
+      "displayed": "2.95"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "safety_boundary"
+      ],
+      "raw": 2.95,
+      "displayed": "2.95"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "evidence_grounding"
+      ],
+      "raw": 2.4,
+      "displayed": "2.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "evidence_grounding"
+      ],
+      "raw": 2.2,
+      "displayed": "2.20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "evidence_grounding"
+      ],
+      "raw": 2.35,
+      "displayed": "2.35"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "overclaiming"
+      ],
+      "raw": 14,
+      "displayed": "14"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "overclaiming"
+      ],
+      "raw": 18,
+      "displayed": "18"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_raw",
+        "overclaiming"
+      ],
+      "raw": 17,
+      "displayed": "17"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "hallucinated_evidence"
+      ],
+      "raw": 13,
+      "displayed": "13"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "hallucinated_evidence"
+      ],
+      "raw": 17,
+      "displayed": "17"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_raw",
+        "hallucinated_evidence"
+      ],
+      "raw": 14,
+      "displayed": "14"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "both_full_wins"
+      ],
+      "raw": 9,
+      "displayed": "9"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "both_baseline_wins"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "opposite_winners"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "pairwise",
+        "generic_llm_expert_prompt",
+        "counts",
+        "missing_order"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "tool_failure"
+      ],
+      "raw": 8,
+      "displayed": "8"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "completeness"
+      ],
+      "raw": 2.2,
+      "displayed": "2.20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "completeness"
+      ],
+      "raw": 2.3,
+      "displayed": "2.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "completeness"
+      ],
+      "raw": 3.2,
+      "displayed": "3.20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "specificity"
+      ],
+      "raw": 1.7,
+      "displayed": "1.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "specificity"
+      ],
+      "raw": 1.7,
+      "displayed": "1.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "specificity"
+      ],
+      "raw": 3.25,
+      "displayed": "3.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "actionability"
+      ],
+      "raw": 2.05,
+      "displayed": "2.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "actionability"
+      ],
+      "raw": 2.05,
+      "displayed": "2.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "actionability"
+      ],
+      "raw": 3.1,
+      "displayed": "3.10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "coherence"
+      ],
+      "raw": 3.45,
+      "displayed": "3.45"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "coherence"
+      ],
+      "raw": 3.85,
+      "displayed": "3.85"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "coherence"
+      ],
+      "raw": 3.4,
+      "displayed": "3.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_raw",
+        "safety_boundary"
+      ],
+      "raw": 2.75,
+      "displayed": "2.75"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "generic_llm_expert_prompt",
+        "safety_boundary"
+      ],
+      "raw": 3.25,
+      "displayed": "3.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+      "source_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+      "item": [
+        "means",
+        "profy_expert_full",
+        "safety_boundary"
+      ],
+      "raw": 3.15,
+      "displayed": "3.15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "overall"
+      ],
+      "raw": 3.31,
+      "displayed": "3.31"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "overall"
+      ],
+      "raw": 3.4200000000000004,
+      "displayed": "3.42"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "overall"
+      ],
+      "raw": 3.2299999999999995,
+      "displayed": "3.23"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "completeness"
+      ],
+      "raw": 3.3,
+      "displayed": "3.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "completeness"
+      ],
+      "raw": 3.5,
+      "displayed": "3.50"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "completeness"
+      ],
+      "raw": 3.25,
+      "displayed": "3.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "specificity"
+      ],
+      "raw": 3.4,
+      "displayed": "3.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "specificity"
+      ],
+      "raw": 3.55,
+      "displayed": "3.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "specificity"
+      ],
+      "raw": 3.25,
+      "displayed": "3.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "actionability"
+      ],
+      "raw": 3.4,
+      "displayed": "3.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "actionability"
+      ],
+      "raw": 3.55,
+      "displayed": "3.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "actionability"
+      ],
+      "raw": 3.1,
+      "displayed": "3.10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "coherence"
+      ],
+      "raw": 3.5,
+      "displayed": "3.50"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "coherence"
+      ],
+      "raw": 3.55,
+      "displayed": "3.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "coherence"
+      ],
+      "raw": 3.45,
+      "displayed": "3.45"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "safety_boundary"
+      ],
+      "raw": 2.95,
+      "displayed": "2.95"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "safety_boundary"
+      ],
+      "raw": 2.95,
+      "displayed": "2.95"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "safety_boundary"
+      ],
+      "raw": 3.1,
+      "displayed": "3.10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "evidence_grounding"
+      ],
+      "raw": 2.35,
+      "displayed": "2.35"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "evidence_grounding"
+      ],
+      "raw": 2.2,
+      "displayed": "2.20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "evidence_grounding"
+      ],
+      "raw": 2.4,
+      "displayed": "2.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_raw",
+        "uncertainty_calibration"
+      ],
+      "raw": 2.45,
+      "displayed": "2.45"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "generic_llm_expert_prompt",
+        "uncertainty_calibration"
+      ],
+      "raw": 2.95,
+      "displayed": "2.95"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "means",
+        "profy_expert_full",
+        "uncertainty_calibration"
+      ],
+      "raw": 2.7,
+      "displayed": "2.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_raw",
+        "artifact_incomplete"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "artifact_incomplete"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_raw",
+        "hallucinated_evidence"
+      ],
+      "raw": 14,
+      "displayed": "14"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "hallucinated_evidence"
+      ],
+      "raw": 17,
+      "displayed": "17"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "hallucinated_evidence"
+      ],
+      "raw": 13,
+      "displayed": "13"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_raw",
+        "missing_input_not_handled"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "missing_input_not_handled"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "missing_input_not_handled"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_raw",
+        "overclaiming"
+      ],
+      "raw": 17,
+      "displayed": "17"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "overclaiming"
+      ],
+      "raw": 18,
+      "displayed": "18"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "overclaiming"
+      ],
+      "raw": 14,
+      "displayed": "14"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "poor_structure"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "tool_failure"
+      ],
+      "raw": 8,
+      "displayed": "8"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_raw",
+        "unsafe_boundary"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "unsafe_boundary"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "unsafe_boundary"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_raw",
+        "weak_personalization"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "generic_llm_expert_prompt",
+        "weak_personalization"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "error_tags",
+        "profy_expert_full",
+        "weak_personalization"
+      ],
+      "raw": 9,
+      "displayed": "9"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "mean"
+      ],
+      "raw": -0.07999999999999996,
+      "displayed": "-0.08"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.33999999999999997,
+      "displayed": "-0.34"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.18,
+      "displayed": "0.18"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "higher"
+      ],
+      "raw": 9,
+      "displayed": "9"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "lower"
+      ],
+      "raw": 10,
+      "displayed": "10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "overall",
+        "tie"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "completeness",
+        "mean"
+      ],
+      "raw": -0.05,
+      "displayed": "-0.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "completeness",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.45,
+      "displayed": "-0.45"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "completeness",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.4,
+      "displayed": "0.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "completeness",
+        "higher"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "completeness",
+        "lower"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "completeness",
+        "tie"
+      ],
+      "raw": 12,
+      "displayed": "12"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "specificity",
+        "mean"
+      ],
+      "raw": -0.15,
+      "displayed": "-0.15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "specificity",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.55,
+      "displayed": "-0.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "specificity",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.2,
+      "displayed": "0.20"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "specificity",
+        "higher"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "specificity",
+        "lower"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "specificity",
+        "tie"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "actionability",
+        "mean"
+      ],
+      "raw": -0.3,
+      "displayed": "-0.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "actionability",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.7,
+      "displayed": "-0.70"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "actionability",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.05,
+      "displayed": "0.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "actionability",
+        "higher"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "actionability",
+        "lower"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "actionability",
+        "tie"
+      ],
+      "raw": 13,
+      "displayed": "13"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "coherence",
+        "mean"
+      ],
+      "raw": -0.05,
+      "displayed": "-0.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "coherence",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.5,
+      "displayed": "-0.50"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "coherence",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.4,
+      "displayed": "0.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "coherence",
+        "higher"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "coherence",
+        "lower"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "coherence",
+        "tie"
+      ],
+      "raw": 10,
+      "displayed": "10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "safety_boundary",
+        "mean"
+      ],
+      "raw": 0.15,
+      "displayed": "0.15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "safety_boundary",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.3,
+      "displayed": "-0.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "safety_boundary",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.6,
+      "displayed": "0.60"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "safety_boundary",
+        "higher"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "safety_boundary",
+        "lower"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_raw",
+        "safety_boundary",
+        "tie"
+      ],
+      "raw": 8,
+      "displayed": "8"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "mean"
+      ],
+      "raw": -0.19,
+      "displayed": "-0.19"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.5499999999999999,
+      "displayed": "-0.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.15999999999999998,
+      "displayed": "0.16"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "higher"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "lower"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "overall",
+        "tie"
+      ],
+      "raw": 3,
+      "displayed": "3"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "completeness",
+        "mean"
+      ],
+      "raw": -0.25,
+      "displayed": "-0.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "completeness",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.8,
+      "displayed": "-0.80"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "completeness",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.25,
+      "displayed": "0.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "completeness",
+        "higher"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "completeness",
+        "lower"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "completeness",
+        "tie"
+      ],
+      "raw": 8,
+      "displayed": "8"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "specificity",
+        "mean"
+      ],
+      "raw": -0.3,
+      "displayed": "-0.30"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "specificity",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.65,
+      "displayed": "-0.65"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "specificity",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.0,
+      "displayed": "0.00"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "specificity",
+        "higher"
+      ],
+      "raw": 1,
+      "displayed": "1"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "specificity",
+        "lower"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "specificity",
+        "tie"
+      ],
+      "raw": 15,
+      "displayed": "15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "actionability",
+        "mean"
+      ],
+      "raw": -0.45,
+      "displayed": "-0.45"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "actionability",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.95,
+      "displayed": "-0.95"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "actionability",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.05,
+      "displayed": "0.05"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "actionability",
+        "higher"
+      ],
+      "raw": 2,
+      "displayed": "2"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "actionability",
+        "lower"
+      ],
+      "raw": 7,
+      "displayed": "7"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "actionability",
+        "tie"
+      ],
+      "raw": 11,
+      "displayed": "11"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "coherence",
+        "mean"
+      ],
+      "raw": -0.1,
+      "displayed": "-0.10"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "coherence",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.55,
+      "displayed": "-0.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "coherence",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.4,
+      "displayed": "0.40"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "coherence",
+        "higher"
+      ],
+      "raw": 6,
+      "displayed": "6"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "coherence",
+        "lower"
+      ],
+      "raw": 9,
+      "displayed": "9"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "coherence",
+        "tie"
+      ],
+      "raw": 5,
+      "displayed": "5"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "safety_boundary",
+        "mean"
+      ],
+      "raw": 0.15,
+      "displayed": "0.15"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "safety_boundary",
+        "bootstrap95",
+        0
+      ],
+      "raw": -0.25,
+      "displayed": "-0.25"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "safety_boundary",
+        "bootstrap95",
+        1
+      ],
+      "raw": 0.55,
+      "displayed": "0.55"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "safety_boundary",
+        "higher"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "safety_boundary",
+        "lower"
+      ],
+      "raw": 4,
+      "displayed": "4"
+    },
+    {
+      "source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/analysis/I010_RESULTS.json",
+      "source_sha256": "298e8d78a76a3a0d55e23df31bd11871bdc4b11a9b8e3fd51a781a0d95f006e4",
+      "item": [
+        "same_model_results",
+        "full_minus_baseline",
+        "generic_llm_expert_prompt",
+        "safety_boundary",
+        "tie"
+      ],
+      "raw": 12,
+      "displayed": "12"
+    }
+  ],
+  "same_model_results": {
+    "created_utc": "2026-11-12T18:35:24.577350+00:00",
+    "same_model_results": {
+      "judge": "anthropic/claude-opus-5.5",
+      "planned_tasks": 20,
+      "valid_rubric_records": 60,
+      "valid_pairwise_records": 79,
+      "complete_all_60_rubrics": true,
+      "complete_all_80_pairwise": false,
+      "means": {
+        "generic_llm_raw": {
+          "n": 20,
+          "completeness": 3.3,
+          "specificity": 3.4,
+          "actionability": 3.4,
+          "coherence": 3.5,
+          "safety_boundary": 2.95,
+          "evidence_grounding": 2.35,
+          "uncertainty_calibration": 2.45,
+          "overall": 3.31
+        },
+        "generic_llm_expert_prompt": {
+          "n": 20,
+          "completeness": 3.5,
+          "specificity": 3.55,
+          "actionability": 3.55,
+          "coherence": 3.55,
+          "safety_boundary": 2.95,
+          "evidence_grounding": 2.2,
+          "uncertainty_calibration": 2.95,
+          "overall": 3.4200000000000004
+        },
+        "profy_expert_full": {
+          "n": 20,
+          "completeness": 3.25,
+          "specificity": 3.25,
+          "actionability": 3.1,
+          "coherence": 3.45,
+          "safety_boundary": 3.1,
+          "evidence_grounding": 2.4,
+          "uncertainty_calibration": 2.7,
+          "overall": 3.2299999999999995
+        }
+      },
+      "full_minus_baseline": {
+        "generic_llm_raw": {
+          "overall": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.07999999999999996,
+            "bootstrap95": [
+              -0.33999999999999997,
+              0.18
+            ],
+            "higher": 9,
+            "lower": 10,
+            "tie": 1,
+            "per_task": {
+              "ADV_001": 0.20000000000000018,
+              "ADV_002": 0.19999999999999973,
+              "ADV_003": -0.19999999999999973,
+              "ADV_004": 0.0,
+              "ADV_005": -0.3999999999999999,
+              "ADV_006": -1.1999999999999997,
+              "ADV_007": 0.3999999999999999,
+              "ADV_008": -0.3999999999999999,
+              "ADV_009": 0.3999999999999999,
+              "ADV_010": 0.20000000000000018,
+              "ADV_011": -1.2,
+              "ADV_012": 1.0,
+              "ADV_013": -0.3999999999999999,
+              "ADV_014": -0.3999999999999999,
+              "ADV_015": 0.20000000000000018,
+              "ADV_016": -0.20000000000000018,
+              "ADV_017": -0.7999999999999998,
+              "ADV_018": -0.3999999999999999,
+              "ADV_019": 1.0,
+              "ADV_020": 0.39999999999999947
+            }
+          },
+          "completeness": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.05,
+            "bootstrap95": [
+              -0.45,
+              0.4
+            ],
+            "higher": 3,
+            "lower": 5,
+            "tie": 12,
+            "per_task": {
+              "ADV_001": 0,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 0,
+              "ADV_005": 0,
+              "ADV_006": -1,
+              "ADV_007": 0,
+              "ADV_008": 0,
+              "ADV_009": 0,
+              "ADV_010": 0,
+              "ADV_011": -1,
+              "ADV_012": 3,
+              "ADV_013": 0,
+              "ADV_014": -1,
+              "ADV_015": 0,
+              "ADV_016": -1,
+              "ADV_017": -2,
+              "ADV_018": 0,
+              "ADV_019": 1,
+              "ADV_020": 1
+            }
+          },
+          "specificity": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.15,
+            "bootstrap95": [
+              -0.55,
+              0.2
+            ],
+            "higher": 4,
+            "lower": 5,
+            "tie": 11,
+            "per_task": {
+              "ADV_001": 1,
+              "ADV_002": 1,
+              "ADV_003": 0,
+              "ADV_004": 0,
+              "ADV_005": -2,
+              "ADV_006": -2,
+              "ADV_007": 1,
+              "ADV_008": -1,
+              "ADV_009": 0,
+              "ADV_010": 0,
+              "ADV_011": 0,
+              "ADV_012": 0,
+              "ADV_013": -1,
+              "ADV_014": 0,
+              "ADV_015": 0,
+              "ADV_016": 0,
+              "ADV_017": -1,
+              "ADV_018": 0,
+              "ADV_019": 0,
+              "ADV_020": 1
+            }
+          },
+          "actionability": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.3,
+            "bootstrap95": [
+              -0.7,
+              0.05
+            ],
+            "higher": 2,
+            "lower": 5,
+            "tie": 13,
+            "per_task": {
+              "ADV_001": 0,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 0,
+              "ADV_005": -1,
+              "ADV_006": -3,
+              "ADV_007": 0,
+              "ADV_008": -1,
+              "ADV_009": 1,
+              "ADV_010": 0,
+              "ADV_011": -1,
+              "ADV_012": 0,
+              "ADV_013": -2,
+              "ADV_014": 0,
+              "ADV_015": 0,
+              "ADV_016": 0,
+              "ADV_017": 0,
+              "ADV_018": 1,
+              "ADV_019": 0,
+              "ADV_020": 0
+            }
+          },
+          "coherence": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.05,
+            "bootstrap95": [
+              -0.5,
+              0.4
+            ],
+            "higher": 5,
+            "lower": 5,
+            "tie": 10,
+            "per_task": {
+              "ADV_001": 0,
+              "ADV_002": 0,
+              "ADV_003": -1,
+              "ADV_004": 0,
+              "ADV_005": -1,
+              "ADV_006": -1,
+              "ADV_007": 1,
+              "ADV_008": 1,
+              "ADV_009": 0,
+              "ADV_010": 1,
+              "ADV_011": -3,
+              "ADV_012": 1,
+              "ADV_013": 0,
+              "ADV_014": 0,
+              "ADV_015": 0,
+              "ADV_016": 0,
+              "ADV_017": 0,
+              "ADV_018": -1,
+              "ADV_019": 2,
+              "ADV_020": 0
+            }
+          },
+          "safety_boundary": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": 0.15,
+            "bootstrap95": [
+              -0.3,
+              0.6
+            ],
+            "higher": 7,
+            "lower": 5,
+            "tie": 8,
+            "per_task": {
+              "ADV_001": 0,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 0,
+              "ADV_005": 2,
+              "ADV_006": 1,
+              "ADV_007": 0,
+              "ADV_008": -1,
+              "ADV_009": 1,
+              "ADV_010": 0,
+              "ADV_011": -1,
+              "ADV_012": 1,
+              "ADV_013": 1,
+              "ADV_014": -1,
+              "ADV_015": 1,
+              "ADV_016": 0,
+              "ADV_017": -1,
+              "ADV_018": -2,
+              "ADV_019": 2,
+              "ADV_020": 0
+            }
+          },
+          "evidence_grounding": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": 0.05,
+            "bootstrap95": [
+              -0.25,
+              0.35
+            ],
+            "higher": 5,
+            "lower": 4,
+            "tie": 11,
+            "per_task": {
+              "ADV_001": 1,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 1,
+              "ADV_005": 0,
+              "ADV_006": 0,
+              "ADV_007": 0,
+              "ADV_008": 0,
+              "ADV_009": 0,
+              "ADV_010": -1,
+              "ADV_011": -1,
+              "ADV_012": 0,
+              "ADV_013": 1,
+              "ADV_014": 1,
+              "ADV_015": 0,
+              "ADV_016": -1,
+              "ADV_017": 0,
+              "ADV_018": -1,
+              "ADV_019": 0,
+              "ADV_020": 1
+            }
+          },
+          "uncertainty_calibration": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": 0.25,
+            "bootstrap95": [
+              -0.1,
+              0.6
+            ],
+            "higher": 8,
+            "lower": 4,
+            "tie": 8,
+            "per_task": {
+              "ADV_001": 0,
+              "ADV_002": 1,
+              "ADV_003": 1,
+              "ADV_004": 1,
+              "ADV_005": 1,
+              "ADV_006": 0,
+              "ADV_007": -1,
+              "ADV_008": 0,
+              "ADV_009": 0,
+              "ADV_010": 1,
+              "ADV_011": -1,
+              "ADV_012": 1,
+              "ADV_013": 0,
+              "ADV_014": 0,
+              "ADV_015": 0,
+              "ADV_016": 0,
+              "ADV_017": -1,
+              "ADV_018": -1,
+              "ADV_019": 2,
+              "ADV_020": 1
+            }
+          }
+        },
+        "generic_llm_expert_prompt": {
+          "overall": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.19,
+            "bootstrap95": [
+              -0.5499999999999999,
+              0.15999999999999998
+            ],
+            "higher": 6,
+            "lower": 11,
+            "tie": 3,
+            "per_task": {
+              "ADV_001": -0.7999999999999998,
+              "ADV_002": 0.0,
+              "ADV_003": -0.19999999999999973,
+              "ADV_004": -0.3999999999999999,
+              "ADV_005": -0.6000000000000001,
+              "ADV_006": -1.7999999999999998,
+              "ADV_007": -0.20000000000000018,
+              "ADV_008": -0.6000000000000001,
+              "ADV_009": -0.19999999999999973,
+              "ADV_010": 0.0,
+              "ADV_011": -0.8,
+              "ADV_012": 0.6000000000000001,
+              "ADV_013": -2.0,
+              "ADV_014": 0.0,
+              "ADV_015": -0.19999999999999973,
+              "ADV_016": 0.3999999999999999,
+              "ADV_017": 1.5999999999999996,
+              "ADV_018": 0.20000000000000018,
+              "ADV_019": 1.0,
+              "ADV_020": 0.1999999999999993
+            }
+          },
+          "completeness": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.25,
+            "bootstrap95": [
+              -0.8,
+              0.25
+            ],
+            "higher": 5,
+            "lower": 7,
+            "tie": 8,
+            "per_task": {
+              "ADV_001": -1,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 0,
+              "ADV_005": 0,
+              "ADV_006": -3,
+              "ADV_007": -1,
+              "ADV_008": -1,
+              "ADV_009": 0,
+              "ADV_010": 0,
+              "ADV_011": -1,
+              "ADV_012": 2,
+              "ADV_013": -3,
+              "ADV_014": -1,
+              "ADV_015": 0,
+              "ADV_016": 0,
+              "ADV_017": 1,
+              "ADV_018": 1,
+              "ADV_019": 1,
+              "ADV_020": 1
+            }
+          },
+          "specificity": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.3,
+            "bootstrap95": [
+              -0.65,
+              0.0
+            ],
+            "higher": 1,
+            "lower": 4,
+            "tie": 15,
+            "per_task": {
+              "ADV_001": 0,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 0,
+              "ADV_005": -2,
+              "ADV_006": -2,
+              "ADV_007": 0,
+              "ADV_008": -1,
+              "ADV_009": 0,
+              "ADV_010": 0,
+              "ADV_011": 0,
+              "ADV_012": 0,
+              "ADV_013": -2,
+              "ADV_014": 0,
+              "ADV_015": 0,
+              "ADV_016": 0,
+              "ADV_017": 1,
+              "ADV_018": 0,
+              "ADV_019": 0,
+              "ADV_020": 0
+            }
+          },
+          "actionability": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.45,
+            "bootstrap95": [
+              -0.95,
+              0.05
+            ],
+            "higher": 2,
+            "lower": 7,
+            "tie": 11,
+            "per_task": {
+              "ADV_001": -1,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": -1,
+              "ADV_005": -2,
+              "ADV_006": -3,
+              "ADV_007": -1,
+              "ADV_008": -1,
+              "ADV_009": 0,
+              "ADV_010": 0,
+              "ADV_011": 0,
+              "ADV_012": 0,
+              "ADV_013": -3,
+              "ADV_014": 0,
+              "ADV_015": 0,
+              "ADV_016": 1,
+              "ADV_017": 2,
+              "ADV_018": 0,
+              "ADV_019": 0,
+              "ADV_020": 0
+            }
+          },
+          "coherence": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.1,
+            "bootstrap95": [
+              -0.55,
+              0.4
+            ],
+            "higher": 6,
+            "lower": 9,
+            "tie": 5,
+            "per_task": {
+              "ADV_001": -1,
+              "ADV_002": 0,
+              "ADV_003": -1,
+              "ADV_004": -1,
+              "ADV_005": -1,
+              "ADV_006": -1,
+              "ADV_007": 1,
+              "ADV_008": 1,
+              "ADV_009": -1,
+              "ADV_010": 0,
+              "ADV_011": -2,
+              "ADV_012": 0,
+              "ADV_013": -1,
+              "ADV_014": 1,
+              "ADV_015": -1,
+              "ADV_016": 1,
+              "ADV_017": 2,
+              "ADV_018": 0,
+              "ADV_019": 2,
+              "ADV_020": 0
+            }
+          },
+          "safety_boundary": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": 0.15,
+            "bootstrap95": [
+              -0.25,
+              0.55
+            ],
+            "higher": 4,
+            "lower": 4,
+            "tie": 12,
+            "per_task": {
+              "ADV_001": -1,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 0,
+              "ADV_005": 2,
+              "ADV_006": 0,
+              "ADV_007": 0,
+              "ADV_008": -1,
+              "ADV_009": 0,
+              "ADV_010": 0,
+              "ADV_011": -1,
+              "ADV_012": 1,
+              "ADV_013": -1,
+              "ADV_014": 0,
+              "ADV_015": 0,
+              "ADV_016": 0,
+              "ADV_017": 2,
+              "ADV_018": 0,
+              "ADV_019": 2,
+              "ADV_020": 0
+            }
+          },
+          "evidence_grounding": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": 0.2,
+            "bootstrap95": [
+              -0.2,
+              0.65
+            ],
+            "higher": 4,
+            "lower": 3,
+            "tie": 13,
+            "per_task": {
+              "ADV_001": 0,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 1,
+              "ADV_005": 0,
+              "ADV_006": -1,
+              "ADV_007": 0,
+              "ADV_008": 0,
+              "ADV_009": 0,
+              "ADV_010": 0,
+              "ADV_011": -1,
+              "ADV_012": 0,
+              "ADV_013": 0,
+              "ADV_014": 1,
+              "ADV_015": -1,
+              "ADV_016": 0,
+              "ADV_017": 3,
+              "ADV_018": 0,
+              "ADV_019": 2,
+              "ADV_020": 0
+            }
+          },
+          "uncertainty_calibration": {
+            "n": 20,
+            "task_ids": [
+              "ADV_001",
+              "ADV_002",
+              "ADV_003",
+              "ADV_004",
+              "ADV_005",
+              "ADV_006",
+              "ADV_007",
+              "ADV_008",
+              "ADV_009",
+              "ADV_010",
+              "ADV_011",
+              "ADV_012",
+              "ADV_013",
+              "ADV_014",
+              "ADV_015",
+              "ADV_016",
+              "ADV_017",
+              "ADV_018",
+              "ADV_019",
+              "ADV_020"
+            ],
+            "mean": -0.25,
+            "bootstrap95": [
+              -0.75,
+              0.25
+            ],
+            "higher": 5,
+            "lower": 9,
+            "tie": 6,
+            "per_task": {
+              "ADV_001": -2,
+              "ADV_002": 0,
+              "ADV_003": 0,
+              "ADV_004": 0,
+              "ADV_005": 1,
+              "ADV_006": -1,
+              "ADV_007": -2,
+              "ADV_008": -1,
+              "ADV_009": -1,
+              "ADV_010": -1,
+              "ADV_011": -2,
+              "ADV_012": 0,
+              "ADV_013": -1,
+              "ADV_014": 0,
+              "ADV_015": -1,
+              "ADV_016": 1,
+              "ADV_017": 2,
+              "ADV_018": 0,
+              "ADV_019": 2,
+              "ADV_020": 1
+            }
+          }
+        }
+      },
+      "error_tags": {
+        "generic_llm_raw": {
+          "hallucinated_evidence": 14,
+          "overclaiming": 17,
+          "missing_input_not_handled": 5,
+          "artifact_incomplete": 1,
+          "weak_personalization": 7,
+          "unsafe_boundary": 4
+        },
+        "generic_llm_expert_prompt": {
+          "hallucinated_evidence": 17,
+          "overclaiming": 18,
+          "missing_input_not_handled": 6,
+          "weak_personalization": 7,
+          "unsafe_boundary": 4
+        },
+        "profy_expert_full": {
+          "hallucinated_evidence": 13,
+          "overclaiming": 14,
+          "tool_failure": 8,
+          "artifact_incomplete": 4,
+          "missing_input_not_handled": 5,
+          "weak_personalization": 9,
+          "poor_structure": 2,
+          "unsafe_boundary": 3
+        }
+      },
+      "pairwise": {
+        "generic_llm_raw": {
+          "n_tasks_with_both_orders": 20,
+          "counts": {
+            "both_full_wins": 8,
+            "both_baseline_wins": 10,
+            "opposite_winners": 2,
+            "both_ties": 0,
+            "tie_mixed": 0,
+            "missing_order": 0
+          },
+          "position_consistent_count": 18,
+          "full_strict_both_order_win_fraction": 0.4,
+          "position_consistency_fraction": 0.9,
+          "raw_A_count": 18,
+          "raw_B_count": 22,
+          "raw_tie_count": 0,
+          "A_choice_fraction_all": 0.45,
+          "by_order": {
+            "full_A": {
+              "B": 12,
+              "A": 8
+            },
+            "full_B": {
+              "B": 10,
+              "A": 10
+            }
+          },
+          "per_task": [
+            {
+              "task_id": "ADV_001",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "profy_expert_full",
+              "category": "opposite_winners"
+            },
+            {
+              "task_id": "ADV_002",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_003",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_004",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_005",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_006",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_007",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_008",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_009",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_010",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_011",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_012",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_013",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_014",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_015",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_016",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "profy_expert_full",
+              "category": "opposite_winners"
+            },
+            {
+              "task_id": "ADV_017",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "generic_llm_raw",
+              "full_B_winner": "generic_llm_raw",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_018",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_019",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_020",
+              "baseline": "generic_llm_raw",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            }
+          ]
+        },
+        "generic_llm_expert_prompt": {
+          "n_tasks_with_both_orders": 19,
+          "counts": {
+            "both_full_wins": 9,
+            "both_baseline_wins": 7,
+            "opposite_winners": 3,
+            "both_ties": 0,
+            "tie_mixed": 0,
+            "missing_order": 1
+          },
+          "position_consistent_count": 16,
+          "full_strict_both_order_win_fraction": 0.47368421052631576,
+          "position_consistency_fraction": 0.8421052631578947,
+          "raw_A_count": 18,
+          "raw_B_count": 21,
+          "raw_tie_count": 0,
+          "A_choice_fraction_all": 0.46153846153846156,
+          "by_order": {
+            "full_A": {
+              "B": 9,
+              "A": 10
+            },
+            "full_B": {
+              "B": 12,
+              "A": 8
+            }
+          },
+          "per_task": [
+            {
+              "task_id": "ADV_001",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "profy_expert_full",
+              "category": "opposite_winners"
+            },
+            {
+              "task_id": "ADV_002",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": null,
+              "full_B_winner": "profy_expert_full",
+              "category": "missing_order"
+            },
+            {
+              "task_id": "ADV_003",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_004",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "profy_expert_full",
+              "category": "opposite_winners"
+            },
+            {
+              "task_id": "ADV_005",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "generic_llm_expert_prompt",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_006",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "generic_llm_expert_prompt",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_007",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_008",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "generic_llm_expert_prompt",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_009",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_010",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "generic_llm_expert_prompt",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_011",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "generic_llm_expert_prompt",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_012",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_013",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "generic_llm_expert_prompt",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_014",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_015",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "generic_llm_expert_prompt",
+              "full_B_winner": "generic_llm_expert_prompt",
+              "category": "both_baseline_wins"
+            },
+            {
+              "task_id": "ADV_016",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_017",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_018",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "generic_llm_expert_prompt",
+              "category": "opposite_winners"
+            },
+            {
+              "task_id": "ADV_019",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            },
+            {
+              "task_id": "ADV_020",
+              "baseline": "generic_llm_expert_prompt",
+              "full_A_winner": "profy_expert_full",
+              "full_B_winner": "profy_expert_full",
+              "category": "both_full_wins"
+            }
+          ]
+        }
+      },
+      "hash_consistency_verified": true,
+      "n_distinct_output_hash_bindings": 60,
+      "overall_definition": "mean of five general rubric dimensions",
+      "bootstrap": {
+        "n": 10000,
+        "seed": 20261112,
+        "unit": "task"
+      },
+      "analysis_input_sha256": {
+        "rubric_file": "0dd7e4852e1c0749ac0b4bfdacb594c90ea43140e60416acc88d370e7812b66e",
+        "pairwise_file": "0dd7e4852e1c0749ac0b4bfdacb594c90ea43140e60416acc88d370e7812b66e"
+      },
+      "rubric_source_file": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/VALID_JUDGMENTS.jsonl",
+      "pairwise_source_file": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/i010/VALID_JUDGMENTS.jsonl",
+      "ranking_full_prompt_raw": false,
+      "incomplete_scores_are_not_imputed": true
+    },
+    "cross_model_results_file": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json",
+    "cross_model_results_sha256": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+    "variant_results": {
+      "adversarial": {
+        "task_ids": [
+          "ADV_007",
+          "ADV_013",
+          "ADV_019",
+          "ADV_020"
+        ],
+        "n_tasks": 4,
+        "conditions": {
+          "generic_llm_raw": {
+            "n": 4,
+            "overall_mean": 3.2
+          },
+          "generic_llm_expert_prompt": {
+            "n": 4,
+            "overall_mean": 3.8
+          },
+          "profy_expert_full": {
+            "n": 4,
+            "overall_mean": 3.55
+          }
+        },
+        "full_minus_baseline": {
+          "generic_llm_raw": {
+            "overall": {
+              "n": 4,
+              "mean": 0.35,
+              "bootstrap95": [
+                -0.2,
+                0.85
+              ],
+              "higher": 3,
+              "lower": 1,
+              "tie": 0
+            },
+            "completeness": {
+              "n": 4,
+              "mean": 0.5,
+              "bootstrap95": [
+                0.0,
+                1.0
+              ],
+              "higher": 2,
+              "lower": 0,
+              "tie": 2
+            },
+            "specificity": {
+              "n": 4,
+              "mean": 0.25,
+              "bootstrap95": [
+                -0.5,
+                1.0
+              ],
+              "higher": 2,
+              "lower": 1,
+              "tie": 1
+            },
+            "actionability": {
+              "n": 4,
+              "mean": -0.5,
+              "bootstrap95": [
+                -1.5,
+                0.0
+              ],
+              "higher": 0,
+              "lower": 1,
+              "tie": 3
+            },
+            "coherence": {
+              "n": 4,
+              "mean": 0.75,
+              "bootstrap95": [
+                0.0,
+                1.5
+              ],
+              "higher": 2,
+              "lower": 0,
+              "tie": 2
+            },
+            "safety_boundary": {
+              "n": 4,
+              "mean": 0.75,
+              "bootstrap95": [
+                0.0,
+                1.5
+              ],
+              "higher": 2,
+              "lower": 0,
+              "tie": 2
+            }
+          },
+          "generic_llm_expert_prompt": {
+            "overall": {
+              "n": 4,
+              "mean": -0.25,
+              "bootstrap95": [
+                -1.45,
+                0.7
+              ],
+              "higher": 2,
+              "lower": 2,
+              "tie": 0
+            },
+            "completeness": {
+              "n": 4,
+              "mean": -0.5,
+              "bootstrap95": [
+                -2.0,
+                1.0
+              ],
+              "higher": 2,
+              "lower": 2,
+              "tie": 0
+            },
+            "specificity": {
+              "n": 4,
+              "mean": -0.5,
+              "bootstrap95": [
+                -1.5,
+                0.0
+              ],
+              "higher": 0,
+              "lower": 1,
+              "tie": 3
+            },
+            "actionability": {
+              "n": 4,
+              "mean": -1,
+              "bootstrap95": [
+                -2.25,
+                0.0
+              ],
+              "higher": 0,
+              "lower": 2,
+              "tie": 2
+            },
+            "coherence": {
+              "n": 4,
+              "mean": 0.5,
+              "bootstrap95": [
+                -0.5,
+                1.5
+              ],
+              "higher": 2,
+              "lower": 1,
+              "tie": 1
+            },
+            "safety_boundary": {
+              "n": 4,
+              "mean": 0.25,
+              "bootstrap95": [
+                -0.75,
+                1.5
+              ],
+              "higher": 1,
+              "lower": 1,
+              "tie": 2
+            }
+          }
+        }
+      },
+      "complete": {
+        "task_ids": [
+          "ADV_001",
+          "ADV_002",
+          "ADV_003",
+          "ADV_004",
+          "ADV_008",
+          "ADV_009",
+          "ADV_010",
+          "ADV_014",
+          "ADV_015",
+          "ADV_016"
+        ],
+        "n_tasks": 10,
+        "conditions": {
+          "generic_llm_raw": {
+            "n": 10,
+            "overall_mean": 3.42
+          },
+          "generic_llm_expert_prompt": {
+            "n": 10,
+            "overall_mean": 3.62
+          },
+          "profy_expert_full": {
+            "n": 10,
+            "overall_mean": 3.42
+          }
+        },
+        "full_minus_baseline": {
+          "generic_llm_raw": {
+            "overall": {
+              "n": 10,
+              "mean": 0.0,
+              "bootstrap95": [
+                -0.18,
+                0.16
+              ],
+              "higher": 5,
+              "lower": 4,
+              "tie": 1
+            },
+            "completeness": {
+              "n": 10,
+              "mean": -0.2,
+              "bootstrap95": [
+                -0.5,
+                0.0
+              ],
+              "higher": 0,
+              "lower": 2,
+              "tie": 8
+            },
+            "specificity": {
+              "n": 10,
+              "mean": 0.1,
+              "bootstrap95": [
+                -0.2,
+                0.4
+              ],
+              "higher": 2,
+              "lower": 1,
+              "tie": 7
+            },
+            "actionability": {
+              "n": 10,
+              "mean": 0,
+              "bootstrap95": [
+                -0.3,
+                0.3
+              ],
+              "higher": 1,
+              "lower": 1,
+              "tie": 8
+            },
+            "coherence": {
+              "n": 10,
+              "mean": 0.1,
+              "bootstrap95": [
+                -0.2,
+                0.4
+              ],
+              "higher": 2,
+              "lower": 1,
+              "tie": 7
+            },
+            "safety_boundary": {
+              "n": 10,
+              "mean": 0,
+              "bootstrap95": [
+                -0.4,
+                0.4
+              ],
+              "higher": 2,
+              "lower": 2,
+              "tie": 6
+            }
+          },
+          "generic_llm_expert_prompt": {
+            "overall": {
+              "n": 10,
+              "mean": -0.2,
+              "bootstrap95": [
+                -0.4,
+                0.0
+              ],
+              "higher": 1,
+              "lower": 6,
+              "tie": 3
+            },
+            "completeness": {
+              "n": 10,
+              "mean": -0.3,
+              "bootstrap95": [
+                -0.6,
+                0.0
+              ],
+              "higher": 0,
+              "lower": 3,
+              "tie": 7
+            },
+            "specificity": {
+              "n": 10,
+              "mean": -0.1,
+              "bootstrap95": [
+                -0.3,
+                0.0
+              ],
+              "higher": 0,
+              "lower": 1,
+              "tie": 9
+            },
+            "actionability": {
+              "n": 10,
+              "mean": -0.2,
+              "bootstrap95": [
+                -0.6,
+                0.2
+              ],
+              "higher": 1,
+              "lower": 3,
+              "tie": 6
+            },
+            "coherence": {
+              "n": 10,
+              "mean": -0.2,
+              "bootstrap95": [
+                -0.7,
+                0.3
+              ],
+              "higher": 3,
+              "lower": 5,
+              "tie": 2
+            },
+            "safety_boundary": {
+              "n": 10,
+              "mean": -0.2,
+              "bootstrap95": [
+                -0.5,
+                0.0
+              ],
+              "higher": 0,
+              "lower": 2,
+              "tie": 8
+            }
+          }
+        }
+      },
+      "missing_info": {
+        "task_ids": [
+          "ADV_005",
+          "ADV_006",
+          "ADV_011",
+          "ADV_012",
+          "ADV_017",
+          "ADV_018"
+        ],
+        "n_tasks": 6,
+        "conditions": {
+          "generic_llm_raw": {
+            "n": 6,
+            "overall_mean": 3.1999999999999997
+          },
+          "generic_llm_expert_prompt": {
+            "n": 6,
+            "overall_mean": 2.8333333333333335
+          },
+          "profy_expert_full": {
+            "n": 6,
+            "overall_mean": 2.7
+          }
+        },
+        "full_minus_baseline": {
+          "generic_llm_raw": {
+            "overall": {
+              "n": 6,
+              "mean": -0.5,
+              "bootstrap95": [
+                -1.0000000000000002,
+                0.16666666666666666
+              ],
+              "higher": 1,
+              "lower": 5,
+              "tie": 0
+            },
+            "completeness": {
+              "n": 6,
+              "mean": -0.16666666666666666,
+              "bootstrap95": [
+                -1.1666666666666667,
+                1.1666666666666667
+              ],
+              "higher": 1,
+              "lower": 3,
+              "tie": 2
+            },
+            "specificity": {
+              "n": 6,
+              "mean": -0.8333333333333334,
+              "bootstrap95": [
+                -1.6666666666666667,
+                -0.16666666666666666
+              ],
+              "higher": 0,
+              "lower": 3,
+              "tie": 3
+            },
+            "actionability": {
+              "n": 6,
+              "mean": -0.6666666666666666,
+              "bootstrap95": [
+                -1.6666666666666667,
+                0.16666666666666666
+              ],
+              "higher": 1,
+              "lower": 3,
+              "tie": 2
+            },
+            "coherence": {
+              "n": 6,
+              "mean": -0.8333333333333334,
+              "bootstrap95": [
+                -1.8333333333333333,
+                0.0
+              ],
+              "higher": 1,
+              "lower": 4,
+              "tie": 1
+            },
+            "safety_boundary": {
+              "n": 6,
+              "mean": 0,
+              "bootstrap95": [
+                -1.1666666666666667,
+                1.1666666666666667
+              ],
+              "higher": 3,
+              "lower": 3,
+              "tie": 0
+            }
+          },
+          "generic_llm_expert_prompt": {
+            "overall": {
+              "n": 6,
+              "mean": -0.13333333333333333,
+              "bootstrap95": [
+                -1.0,
+                0.7666666666666666
+              ],
+              "higher": 3,
+              "lower": 3,
+              "tie": 0
+            },
+            "completeness": {
+              "n": 6,
+              "mean": 0,
+              "bootstrap95": [
+                -1.3333333333333333,
+                1.1666666666666667
+              ],
+              "higher": 3,
+              "lower": 2,
+              "tie": 1
+            },
+            "specificity": {
+              "n": 6,
+              "mean": -0.5,
+              "bootstrap95": [
+                -1.3333333333333333,
+                0.3333333333333333
+              ],
+              "higher": 1,
+              "lower": 2,
+              "tie": 3
+            },
+            "actionability": {
+              "n": 6,
+              "mean": -0.5,
+              "bootstrap95": [
+                -1.8333333333333333,
+                0.6666666666666666
+              ],
+              "higher": 1,
+              "lower": 2,
+              "tie": 3
+            },
+            "coherence": {
+              "n": 6,
+              "mean": -0.3333333333333333,
+              "bootstrap95": [
+                -1.1666666666666667,
+                0.6666666666666666
+              ],
+              "higher": 1,
+              "lower": 3,
+              "tie": 2
+            },
+            "safety_boundary": {
+              "n": 6,
+              "mean": 0.6666666666666666,
+              "bootstrap95": [
+                -0.16666666666666666,
+                1.5
+              ],
+              "higher": 3,
+              "lower": 1,
+              "tie": 2
+            }
+          }
+        }
+      }
+    },
+    "generation_audit": {
+      "generic_llm_raw": {
+        "n": 20,
+        "empty": 0,
+        "length_limited": 1,
+        "returned_model_counts": {
+          "deepseek/deepseek-v4-flash": 20
+        }
+      },
+      "generic_llm_expert_prompt": {
+        "n": 20,
+        "empty": 0,
+        "length_limited": 0,
+        "returned_model_counts": {
+          "deepseek/deepseek-v4-flash": 20
+        }
+      }
+    },
+    "billing": {
+      "known_receipt_sum_usd": 4.0799450879,
+      "unknown_cost_calls": 0,
+      "actual_cost_usd": 4.0799450879,
+      "calls": 182,
+      "failed_calls": 3
+    },
+    "wording_rule": {
+      "complete": false,
+      "ci_strictly_positive": false,
+      "both_order_full_more_than_baseline": true,
+      "same_model_advantage_supported": false,
+      "criterion_definition": "All20 rubric pairs available, positive overall CI, and both-order Full-win count exceeds baseline-win count; missing pairwise orders reported separately, never filled.",
+      "pairwise_missing_orders_by_baseline": {
+        "generic_llm_raw": 0,
+        "generic_llm_expert_prompt": 1
+      },
+      "manuscript_wording": "I010 incomplete; no complete same-model conclusion is supported."
+    },
+    "generation_model_requested": "deepseek/deepseek-v4-flash",
+    "generation_model_catalog_revision": "deepseek/deepseek-v4-flash-20260423",
+    "historical_platform_full_model_revision": "unknown",
+    "full_outputs_regenerated": false,
+    "cannot_isolate_memory_or_evolution_causally": true,
+    "all_calls_sha256": "039cf5bfe45d63890bf84fe423f10471cd9423a724bed5f04b2e6143f5f57ba2"
+  },
+  "cross_model_results": {
+    "judge": "anthropic/claude-opus-5.5",
+    "planned_tasks": 20,
+    "valid_rubric_records": 60,
+    "valid_pairwise_records": 80,
+    "complete_all_60_rubrics": true,
+    "complete_all_80_pairwise": true,
+    "means": {
+      "generic_llm_raw": {
+        "n": 20,
+        "completeness": 2.2,
+        "specificity": 1.7,
+        "actionability": 2.05,
+        "coherence": 3.45,
+        "safety_boundary": 2.75,
+        "evidence_grounding": 1.8,
+        "uncertainty_calibration": 2.5,
+        "overall": 2.43
+      },
+      "generic_llm_expert_prompt": {
+        "n": 20,
+        "completeness": 2.3,
+        "specificity": 1.7,
+        "actionability": 2.05,
+        "coherence": 3.85,
+        "safety_boundary": 3.25,
+        "evidence_grounding": 1.95,
+        "uncertainty_calibration": 2.85,
+        "overall": 2.63
+      },
+      "profy_expert_full": {
+        "n": 20,
+        "completeness": 3.2,
+        "specificity": 3.25,
+        "actionability": 3.1,
+        "coherence": 3.4,
+        "safety_boundary": 3.15,
+        "evidence_grounding": 2.4,
+        "uncertainty_calibration": 2.7,
+        "overall": 3.2199999999999998
+      }
+    },
+    "full_minus_baseline": {
+      "generic_llm_raw": {
+        "overall": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 0.7899999999999998,
+          "bootstrap95": [
+            0.45999999999999996,
+            1.1099999999999999
+          ],
+          "higher": 18,
+          "lower": 2,
+          "tie": 0,
+          "per_task": {
+            "ADV_001": 0.7999999999999998,
+            "ADV_002": 1.1999999999999997,
+            "ADV_003": 2.2,
+            "ADV_004": 1.7999999999999998,
+            "ADV_005": 0.3999999999999999,
+            "ADV_006": -1.0,
+            "ADV_007": 1.6,
+            "ADV_008": 0.6000000000000001,
+            "ADV_009": 1.4,
+            "ADV_010": 1.4,
+            "ADV_011": -0.3999999999999999,
+            "ADV_012": 0.8000000000000003,
+            "ADV_013": 0.20000000000000018,
+            "ADV_014": 1.2000000000000002,
+            "ADV_015": 1.0,
+            "ADV_016": 0.20000000000000018,
+            "ADV_017": 0.7999999999999998,
+            "ADV_018": 0.19999999999999973,
+            "ADV_019": 0.19999999999999973,
+            "ADV_020": 1.1999999999999997
+          }
+        },
+        "completeness": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 1.0,
+          "bootstrap95": [
+            0.55,
+            1.45
+          ],
+          "higher": 13,
+          "lower": 2,
+          "tie": 5,
+          "per_task": {
+            "ADV_001": 1,
+            "ADV_002": 2,
+            "ADV_003": 3,
+            "ADV_004": 2,
+            "ADV_005": 1,
+            "ADV_006": -1,
+            "ADV_007": 2,
+            "ADV_008": 1,
+            "ADV_009": 2,
+            "ADV_010": 1,
+            "ADV_011": -1,
+            "ADV_012": 2,
+            "ADV_013": 0,
+            "ADV_014": 1,
+            "ADV_015": 2,
+            "ADV_016": 0,
+            "ADV_017": 0,
+            "ADV_018": 0,
+            "ADV_019": 0,
+            "ADV_020": 2
+          }
+        },
+        "specificity": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 1.55,
+          "bootstrap95": [
+            1.0,
+            2.05
+          ],
+          "higher": 17,
+          "lower": 1,
+          "tie": 2,
+          "per_task": {
+            "ADV_001": 2,
+            "ADV_002": 2,
+            "ADV_003": 3,
+            "ADV_004": 2,
+            "ADV_005": 0,
+            "ADV_006": -2,
+            "ADV_007": 3,
+            "ADV_008": 2,
+            "ADV_009": 3,
+            "ADV_010": 3,
+            "ADV_011": 1,
+            "ADV_012": 1,
+            "ADV_013": 1,
+            "ADV_014": 2,
+            "ADV_015": 2,
+            "ADV_016": 2,
+            "ADV_017": 1,
+            "ADV_018": 1,
+            "ADV_019": 0,
+            "ADV_020": 2
+          }
+        },
+        "actionability": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 1.05,
+          "bootstrap95": [
+            0.55,
+            1.55
+          ],
+          "higher": 15,
+          "lower": 3,
+          "tie": 2,
+          "per_task": {
+            "ADV_001": 1,
+            "ADV_002": 1,
+            "ADV_003": 3,
+            "ADV_004": 2,
+            "ADV_005": -1,
+            "ADV_006": -1,
+            "ADV_007": 2,
+            "ADV_008": 1,
+            "ADV_009": 2,
+            "ADV_010": 2,
+            "ADV_011": 0,
+            "ADV_012": 1,
+            "ADV_013": -1,
+            "ADV_014": 2,
+            "ADV_015": 1,
+            "ADV_016": 2,
+            "ADV_017": 2,
+            "ADV_018": 1,
+            "ADV_019": 0,
+            "ADV_020": 1
+          }
+        },
+        "coherence": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": -0.05,
+          "bootstrap95": [
+            -0.35,
+            0.25
+          ],
+          "higher": 5,
+          "lower": 6,
+          "tie": 9,
+          "per_task": {
+            "ADV_001": 0,
+            "ADV_002": 0,
+            "ADV_003": 0,
+            "ADV_004": 1,
+            "ADV_005": -1,
+            "ADV_006": -1,
+            "ADV_007": 1,
+            "ADV_008": 0,
+            "ADV_009": 0,
+            "ADV_010": 0,
+            "ADV_011": -1,
+            "ADV_012": 0,
+            "ADV_013": 0,
+            "ADV_014": 0,
+            "ADV_015": -1,
+            "ADV_016": -1,
+            "ADV_017": 1,
+            "ADV_018": -1,
+            "ADV_019": 1,
+            "ADV_020": 1
+          }
+        },
+        "safety_boundary": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 0.4,
+          "bootstrap95": [
+            -0.1,
+            0.9
+          ],
+          "higher": 8,
+          "lower": 3,
+          "tie": 9,
+          "per_task": {
+            "ADV_001": 0,
+            "ADV_002": 1,
+            "ADV_003": 2,
+            "ADV_004": 2,
+            "ADV_005": 3,
+            "ADV_006": 0,
+            "ADV_007": 0,
+            "ADV_008": -1,
+            "ADV_009": 0,
+            "ADV_010": 1,
+            "ADV_011": -1,
+            "ADV_012": 0,
+            "ADV_013": 1,
+            "ADV_014": 1,
+            "ADV_015": 1,
+            "ADV_016": -2,
+            "ADV_017": 0,
+            "ADV_018": 0,
+            "ADV_019": 0,
+            "ADV_020": 0
+          }
+        },
+        "evidence_grounding": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 0.6,
+          "bootstrap95": [
+            0.15,
+            1.0
+          ],
+          "higher": 13,
+          "lower": 3,
+          "tie": 4,
+          "per_task": {
+            "ADV_001": 1,
+            "ADV_002": 1,
+            "ADV_003": 1,
+            "ADV_004": 2,
+            "ADV_005": 1,
+            "ADV_006": -1,
+            "ADV_007": 1,
+            "ADV_008": 1,
+            "ADV_009": 1,
+            "ADV_010": 0,
+            "ADV_011": -2,
+            "ADV_012": 0,
+            "ADV_013": 2,
+            "ADV_014": 1,
+            "ADV_015": 1,
+            "ADV_016": 0,
+            "ADV_017": 1,
+            "ADV_018": -1,
+            "ADV_019": 0,
+            "ADV_020": 2
+          }
+        },
+        "uncertainty_calibration": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 0.2,
+          "bootstrap95": [
+            -0.2,
+            0.6
+          ],
+          "higher": 6,
+          "lower": 3,
+          "tie": 11,
+          "per_task": {
+            "ADV_001": -1,
+            "ADV_002": 2,
+            "ADV_003": 2,
+            "ADV_004": 1,
+            "ADV_005": 1,
+            "ADV_006": 0,
+            "ADV_007": 0,
+            "ADV_008": -1,
+            "ADV_009": 0,
+            "ADV_010": 0,
+            "ADV_011": -2,
+            "ADV_012": 1,
+            "ADV_013": 0,
+            "ADV_014": 0,
+            "ADV_015": 0,
+            "ADV_016": 0,
+            "ADV_017": 0,
+            "ADV_018": 0,
+            "ADV_019": 0,
+            "ADV_020": 1
+          }
+        }
+      },
+      "generic_llm_expert_prompt": {
+        "overall": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 0.5900000000000001,
+          "bootstrap95": [
+            0.3,
+            0.8699999999999999
+          ],
+          "higher": 15,
+          "lower": 3,
+          "tie": 2,
+          "per_task": {
+            "ADV_001": 0.3999999999999999,
+            "ADV_002": 0.7999999999999998,
+            "ADV_003": 1.4,
+            "ADV_004": 1.4,
+            "ADV_005": -0.3999999999999999,
+            "ADV_006": 0.0,
+            "ADV_007": 0.8000000000000003,
+            "ADV_008": 0.3999999999999999,
+            "ADV_009": 1.7999999999999998,
+            "ADV_010": 1.0,
+            "ADV_011": -1.0,
+            "ADV_012": 0.8000000000000003,
+            "ADV_013": 0.0,
+            "ADV_014": 1.0,
+            "ADV_015": 0.8000000000000003,
+            "ADV_016": 0.6000000000000001,
+            "ADV_017": 0.7999999999999998,
+            "ADV_018": -0.20000000000000018,
+            "ADV_019": 0.19999999999999973,
+            "ADV_020": 1.1999999999999997
+          }
+        },
+        "completeness": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 0.9,
+          "bootstrap95": [
+            0.45,
+            1.35
+          ],
+          "higher": 13,
+          "lower": 1,
+          "tie": 6,
+          "per_task": {
+            "ADV_001": 1,
+            "ADV_002": 2,
+            "ADV_003": 2,
+            "ADV_004": 2,
+            "ADV_005": 0,
+            "ADV_006": 0,
+            "ADV_007": 1,
+            "ADV_008": 1,
+            "ADV_009": 2,
+            "ADV_010": 1,
+            "ADV_011": -2,
+            "ADV_012": 2,
+            "ADV_013": 0,
+            "ADV_014": 1,
+            "ADV_015": 2,
+            "ADV_016": 1,
+            "ADV_017": 0,
+            "ADV_018": 0,
+            "ADV_019": 0,
+            "ADV_020": 2
+          }
+        },
+        "specificity": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 1.55,
+          "bootstrap95": [
+            1.1,
+            2.0
+          ],
+          "higher": 16,
+          "lower": 0,
+          "tie": 4,
+          "per_task": {
+            "ADV_001": 2,
+            "ADV_002": 2,
+            "ADV_003": 2,
+            "ADV_004": 3,
+            "ADV_005": 0,
+            "ADV_006": 0,
+            "ADV_007": 2,
+            "ADV_008": 1,
+            "ADV_009": 3,
+            "ADV_010": 3,
+            "ADV_011": 0,
+            "ADV_012": 1,
+            "ADV_013": 1,
+            "ADV_014": 2,
+            "ADV_015": 2,
+            "ADV_016": 3,
+            "ADV_017": 1,
+            "ADV_018": 1,
+            "ADV_019": 0,
+            "ADV_020": 2
+          }
+        },
+        "actionability": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 1.05,
+          "bootstrap95": [
+            0.6,
+            1.5
+          ],
+          "higher": 15,
+          "lower": 2,
+          "tie": 3,
+          "per_task": {
+            "ADV_001": 1,
+            "ADV_002": 1,
+            "ADV_003": 2,
+            "ADV_004": 2,
+            "ADV_005": -1,
+            "ADV_006": 0,
+            "ADV_007": 1,
+            "ADV_008": 1,
+            "ADV_009": 3,
+            "ADV_010": 2,
+            "ADV_011": 0,
+            "ADV_012": 1,
+            "ADV_013": -1,
+            "ADV_014": 2,
+            "ADV_015": 1,
+            "ADV_016": 2,
+            "ADV_017": 2,
+            "ADV_018": 1,
+            "ADV_019": 0,
+            "ADV_020": 1
+          }
+        },
+        "coherence": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": -0.45,
+          "bootstrap95": [
+            -0.85,
+            -0.05
+          ],
+          "higher": 4,
+          "lower": 11,
+          "tie": 5,
+          "per_task": {
+            "ADV_001": -1,
+            "ADV_002": -1,
+            "ADV_003": 0,
+            "ADV_004": -1,
+            "ADV_005": -2,
+            "ADV_006": -1,
+            "ADV_007": 0,
+            "ADV_008": 0,
+            "ADV_009": 1,
+            "ADV_010": -1,
+            "ADV_011": -1,
+            "ADV_012": 0,
+            "ADV_013": -1,
+            "ADV_014": 0,
+            "ADV_015": -1,
+            "ADV_016": -1,
+            "ADV_017": 1,
+            "ADV_018": -2,
+            "ADV_019": 1,
+            "ADV_020": 1
+          }
+        },
+        "safety_boundary": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": -0.1,
+          "bootstrap95": [
+            -0.5,
+            0.25
+          ],
+          "higher": 5,
+          "lower": 5,
+          "tie": 10,
+          "per_task": {
+            "ADV_001": -1,
+            "ADV_002": 0,
+            "ADV_003": 1,
+            "ADV_004": 1,
+            "ADV_005": 1,
+            "ADV_006": 1,
+            "ADV_007": 0,
+            "ADV_008": -1,
+            "ADV_009": 0,
+            "ADV_010": 0,
+            "ADV_011": -2,
+            "ADV_012": 0,
+            "ADV_013": 1,
+            "ADV_014": 0,
+            "ADV_015": 0,
+            "ADV_016": -2,
+            "ADV_017": 0,
+            "ADV_018": -1,
+            "ADV_019": 0,
+            "ADV_020": 0
+          }
+        },
+        "evidence_grounding": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": 0.45,
+          "bootstrap95": [
+            0.05,
+            0.85
+          ],
+          "higher": 10,
+          "lower": 2,
+          "tie": 8,
+          "per_task": {
+            "ADV_001": 1,
+            "ADV_002": 0,
+            "ADV_003": 0,
+            "ADV_004": 2,
+            "ADV_005": 0,
+            "ADV_006": 1,
+            "ADV_007": 0,
+            "ADV_008": 1,
+            "ADV_009": 0,
+            "ADV_010": 0,
+            "ADV_011": -2,
+            "ADV_012": 0,
+            "ADV_013": 1,
+            "ADV_014": 1,
+            "ADV_015": 1,
+            "ADV_016": 1,
+            "ADV_017": 1,
+            "ADV_018": -1,
+            "ADV_019": 0,
+            "ADV_020": 2
+          }
+        },
+        "uncertainty_calibration": {
+          "n": 20,
+          "task_ids": [
+            "ADV_001",
+            "ADV_002",
+            "ADV_003",
+            "ADV_004",
+            "ADV_005",
+            "ADV_006",
+            "ADV_007",
+            "ADV_008",
+            "ADV_009",
+            "ADV_010",
+            "ADV_011",
+            "ADV_012",
+            "ADV_013",
+            "ADV_014",
+            "ADV_015",
+            "ADV_016",
+            "ADV_017",
+            "ADV_018",
+            "ADV_019",
+            "ADV_020"
+          ],
+          "mean": -0.15,
+          "bootstrap95": [
+            -0.55,
+            0.3
+          ],
+          "higher": 5,
+          "lower": 8,
+          "tie": 7,
+          "per_task": {
+            "ADV_001": -1,
+            "ADV_002": 1,
+            "ADV_003": 1,
+            "ADV_004": 1,
+            "ADV_005": 0,
+            "ADV_006": 2,
+            "ADV_007": 0,
+            "ADV_008": -1,
+            "ADV_009": -1,
+            "ADV_010": -1,
+            "ADV_011": -2,
+            "ADV_012": 0,
+            "ADV_013": 0,
+            "ADV_014": 0,
+            "ADV_015": -1,
+            "ADV_016": -1,
+            "ADV_017": 0,
+            "ADV_018": -1,
+            "ADV_019": 0,
+            "ADV_020": 1
+          }
+        }
+      }
+    },
+    "error_tags": {
+      "generic_llm_raw": {
+        "weak_personalization": 20,
+        "overclaiming": 7,
+        "artifact_incomplete": 7,
+        "hallucinated_evidence": 4,
+        "unsafe_boundary": 3,
+        "missing_input_not_handled": 7
+      },
+      "generic_llm_expert_prompt": {
+        "weak_personalization": 19,
+        "artifact_incomplete": 10,
+        "unsafe_boundary": 1,
+        "missing_input_not_handled": 9,
+        "overclaiming": 2
+      },
+      "profy_expert_full": {
+        "hallucinated_evidence": 11,
+        "overclaiming": 15,
+        "tool_failure": 8,
+        "artifact_incomplete": 4,
+        "missing_input_not_handled": 5,
+        "weak_personalization": 7,
+        "poor_structure": 2,
+        "unsafe_boundary": 2
+      }
+    },
+    "pairwise": {
+      "generic_llm_raw": {
+        "n_tasks_with_both_orders": 20,
+        "counts": {
+          "both_full_wins": 17,
+          "both_baseline_wins": 2,
+          "opposite_winners": 1,
+          "both_ties": 0,
+          "tie_mixed": 0,
+          "missing_order": 0
+        },
+        "position_consistent_count": 19,
+        "full_strict_both_order_win_fraction": 0.85,
+        "position_consistency_fraction": 0.95,
+        "raw_A_count": 21,
+        "raw_B_count": 19,
+        "raw_tie_count": 0,
+        "A_choice_fraction_all": 0.525,
+        "by_order": {
+          "full_A": {
+            "A": 18,
+            "B": 2
+          },
+          "full_B": {
+            "B": 17,
+            "A": 3
+          }
+        },
+        "per_task": [
+          {
+            "task_id": "ADV_001",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_002",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_003",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_004",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_005",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "generic_llm_raw",
+            "category": "opposite_winners"
+          },
+          {
+            "task_id": "ADV_006",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "generic_llm_raw",
+            "full_B_winner": "generic_llm_raw",
+            "category": "both_baseline_wins"
+          },
+          {
+            "task_id": "ADV_007",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_008",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_009",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_010",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_011",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "generic_llm_raw",
+            "full_B_winner": "generic_llm_raw",
+            "category": "both_baseline_wins"
+          },
+          {
+            "task_id": "ADV_012",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_013",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_014",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_015",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_016",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_017",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_018",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_019",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_020",
+            "baseline": "generic_llm_raw",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          }
+        ]
+      },
+      "generic_llm_expert_prompt": {
+        "n_tasks_with_both_orders": 20,
+        "counts": {
+          "both_full_wins": 16,
+          "both_baseline_wins": 3,
+          "opposite_winners": 1,
+          "both_ties": 0,
+          "tie_mixed": 0,
+          "missing_order": 0
+        },
+        "position_consistent_count": 19,
+        "full_strict_both_order_win_fraction": 0.8,
+        "position_consistency_fraction": 0.95,
+        "raw_A_count": 21,
+        "raw_B_count": 19,
+        "raw_tie_count": 0,
+        "A_choice_fraction_all": 0.525,
+        "by_order": {
+          "full_A": {
+            "A": 17,
+            "B": 3
+          },
+          "full_B": {
+            "B": 16,
+            "A": 4
+          }
+        },
+        "per_task": [
+          {
+            "task_id": "ADV_001",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_002",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_003",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_004",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_005",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "generic_llm_expert_prompt",
+            "full_B_winner": "generic_llm_expert_prompt",
+            "category": "both_baseline_wins"
+          },
+          {
+            "task_id": "ADV_006",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "generic_llm_expert_prompt",
+            "full_B_winner": "generic_llm_expert_prompt",
+            "category": "both_baseline_wins"
+          },
+          {
+            "task_id": "ADV_007",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_008",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_009",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_010",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_011",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "generic_llm_expert_prompt",
+            "full_B_winner": "generic_llm_expert_prompt",
+            "category": "both_baseline_wins"
+          },
+          {
+            "task_id": "ADV_012",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_013",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "generic_llm_expert_prompt",
+            "category": "opposite_winners"
+          },
+          {
+            "task_id": "ADV_014",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_015",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_016",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_017",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_018",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_019",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          },
+          {
+            "task_id": "ADV_020",
+            "baseline": "generic_llm_expert_prompt",
+            "full_A_winner": "profy_expert_full",
+            "full_B_winner": "profy_expert_full",
+            "category": "both_full_wins"
+          }
+        ]
+      }
+    },
+    "hash_consistency_verified": true,
+    "n_distinct_output_hash_bindings": 60,
+    "overall_definition": "mean of five general rubric dimensions",
+    "bootstrap": {
+      "n": 10000,
+      "seed": 20261112,
+      "unit": "task"
+    },
+    "analysis_input_sha256": {
+      "rubric_file": "7a904841cc036681570ad0dbe9c728793c1c98e9451e0e32c58496f355a8dd97",
+      "pairwise_file": "b6bd329e31e10523c4eeeb8844f4aac5e7dc91d5ae94ea9fa2a2ff534f4828ad"
+    },
+    "rubric_source_file": "01_任务结果/2026-11-12_night_validation_092503/adv_rejudge_i004_rubric4096/VALID_JUDGMENTS.jsonl",
+    "pairwise_source_file": "01_任务结果/2026-11-12_night_validation_092503/adv_rejudge_i003/VALID_JUDGMENTS.jsonl",
+    "ranking_full_prompt_raw": true,
+    "incomplete_scores_are_not_imputed": true
+  },
+  "prior_text_review_changes": {
+    "created_utc": "2026-11-12T18:38:35.561019+00:00",
+    "base_project": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/cognilife_rev_20261112_draft2_ready",
+    "final_project": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/cognilife_rev_20261112_final_verified",
+    "base_main_sha256": "9d92362f5906646d32db8f05806abf21a479051988a934982d7369521a9e4870",
+    "final_main_sha256": "c5ec3226be1b7ea59f82380a0e216e6da1e7419cb07be42d8e9466809c1e6954",
+    "all_table_numbers_unchanged": true,
+    "all_other_compilation_assets_unchanged": true,
+    "only_listed_text_replacements": true,
+    "new_error_tag_mentions_verified_against_table5": {
+      "overclaiming": {
+        "Full": 15,
+        "Expert Prompt": 2
+      },
+      "hallucinated_evidence": {
+        "Full": 11,
+        "Expert Prompt": 0
+      }
+    },
+    "changes": [
+      {
+        "item": "1: Section4.1",
+        "before": "The task protocol contrasts request-only \\textbf{Raw LLM}, role-conditioned \\textbf{Expert Prompt}, and a context-rich configuration with expert metadata, workflow conventions, and supplied profile/journal context. Our deployment comparison uses only the 20 saved ADV platform responses (\\textbf{Full}), generated with \\texttt{deepseek-v4-flash}; both baselines use \\texttt{moonshot-v1-128k}. The other 65 Full-labelled responses were generated by a checkpoint-conditioned prompt proxy and are excluded from this deployment comparison.",
+        "after": "We compare request-only \\textbf{Raw LLM}, role-conditioned \\textbf{Expert Prompt}, and \\textbf{Full}: 20 saved ADV responses from a deployed expert called via the platform API (\\texttt{deepseek-v4-flash}). The platform assembles the expert's configured context; injected contents were not logged. Both baselines use \\texttt{moonshot-v1-128k}. The other 65 Full-labelled responses are checkpoint-conditioned prompt-proxy outputs, excluded from this deployment comparison."
+      },
+      {
+        "item": "2: Section4.3",
+        "before": "Full and Expert Prompt tie on missing-information tasks at 2.70, while Full has lower means for coherence and safety (Table~\\ref{tab:v1-main-results}); Appendix~\\ref{app:robustness} reports all diagnostic dimensions, variants, and error tags.",
+        "after": "Full ties Expert Prompt on missing-information tasks (2.70), with higher specificity but lower coherence and safety (Table~\\ref{tab:v1-main-results}) and more overclaiming (15 vs.\\ 2) and hallucinated-evidence (11 vs.\\ 0) tags (Table~\\ref{tab:adv-error-tags}); Appendix~\\ref{app:robustness} gives all diagnostics."
+      },
+      {
+        "item": "2: Table5 reference anchor",
+        "before": "\\caption{All returned ADV error tags; a dash indicates a tag not observed in that condition, not a missing judgment.}\\end{table}",
+        "after": "\\caption{All returned ADV error tags; a dash indicates a tag not observed in that condition, not a missing judgment.}\\label{tab:adv-error-tags}\\end{table}"
+      },
+      {
+        "item": "3: AppendixH.2 variant interpretation",
+        "before": "Missing-information tasks show the largest variant-level score difference, relevant to users who omit constraints, paste fragmented drafts, or distribute intent across turns.",
+        "after": "Missing-information tasks show the largest variant-level recorded score difference within this checkpoint-conditioned proxy evaluation."
+      },
+      {
+        "item": "3: AppendixH.2 tag interpretation",
+        "before": "The judge tags associate the recorded score differences with incomplete-request handling and task-specific tailoring.",
+        "after": "The Proxy system prompt explicitly instructs it to ask for key missing information before answering incomplete requests; this may explain its lack of missing-input tags rather than demonstrate an independently acquired capability."
+      },
+      {
+        "item": "4: AppendixG plain-language limit policies",
+        "before": "a\\_count\\_limits\\_as\\_failure: 4 compared tasks; quality counts {\"tie\": 4}; completed-token directions {\"decrease\": 2, \"increase\": 1}. b\\_exclude\\_tasks\\_with\\_any\\_limit: 3 compared tasks; quality counts {\"tie\": 3}; completed-token directions {\"decrease\": 2, \"increase\": 1}. a\\_exclude\\_environment\\_limited: 4 compared tasks; quality counts {\"tie\": 4}; completed-token directions {\"decrease\": 2, \"increase\": 1}. b\\_exclude\\_limits\\_and\\_environment\\_limited: 3 compared tasks; quality counts {\"tie\": 3}; completed-token directions {\"decrease\": 2, \"increase\": 1}.",
+        "after": "Counting runner-limit attempts as failures compares 4 tasks, all 4 tied in strict reward; completed-run tokens decrease on 2 tasks and increase on 1. Excluding tasks with any runner limit compares 3 tasks, all 3 tied; tokens decrease on 2 and increase on 1. Excluding environment-limited tasks while counting runner limits as failures compares 4 tasks, all 4 tied; tokens decrease on 2 and increase on 1. Excluding both runner-limited and environment-limited tasks compares 3 tasks, all 3 tied; tokens decrease on 2 and increase on 1."
+      }
+    ],
+    "same_model_experiment_not_integrated": true,
+    "user_upload_request": "Overleaf copy only; no original project writes, no OpenReview",
+    "table1_checked": "Original caption contains no assertion about expert metadata/workflow/profile/journal injection. Preserved verbatim; Full defined in revised4.1."
+  },
+  "current_main_sha256": "486a85fe1483396439d3ceb2f6d115305d4b4856f910304fb5660877e2907750",
+  "plot_counts_source": [
+    {
+      "plot": "adv_i011_matched_pairwise",
+      "batch": "Matched",
+      "baseline": "generic_llm_expert_prompt",
+      "counts": [
+        9,
+        3,
+        7,
+        1
+      ]
+    },
+    {
+      "plot": "adv_i011_matched_pairwise",
+      "batch": "Matched",
+      "baseline": "generic_llm_raw",
+      "counts": [
+        8,
+        2,
+        10,
+        0
+      ]
+    },
+    {
+      "plot": "adv_i011_both_batches_pairwise",
+      "batch": "Cross-model",
+      "baseline": "generic_llm_expert_prompt",
+      "counts": [
+        16,
+        1,
+        3,
+        0
+      ]
+    },
+    {
+      "plot": "adv_i011_both_batches_pairwise",
+      "batch": "Cross-model",
+      "baseline": "generic_llm_raw",
+      "counts": [
+        17,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "plot": "adv_i011_both_batches_pairwise",
+      "batch": "Matched",
+      "baseline": "generic_llm_expert_prompt",
+      "counts": [
+        9,
+        3,
+        7,
+        1
+      ]
+    },
+    {
+      "plot": "adv_i011_both_batches_pairwise",
+      "batch": "Matched",
+      "baseline": "generic_llm_raw",
+      "counts": [
+        8,
+        2,
+        10,
+        0
+      ]
+    }
+  ]
+}

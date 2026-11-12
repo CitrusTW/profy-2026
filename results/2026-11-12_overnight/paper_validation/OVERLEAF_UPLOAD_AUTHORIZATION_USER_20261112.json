@@ -1,0 +1,6 @@
+{
+  "authorized_utc": "2026-11-12T18:43:35.164185+00:00",
+  "source": "direct user chat: 我允许你写入overleaf",
+  "scope": "Upload new final I011 source project copy only. Do not overwrite original project. No OpenReview upload.",
+  "resolves": "Older PROTOCOL Overleaf no-write restriction, explicitly overridden by current user."
+}
