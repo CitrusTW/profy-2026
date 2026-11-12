@@ -1,0 +1,444 @@
+{
+  "model": "anthropic/claude-opus-5.5",
+  "n_jobs": 60,
+  "rubric_jobs": 60,
+  "pairwise_jobs": 0,
+  "max_tokens": 4096,
+  "input_token_budget_rule": "UTF8 prompt bytes + 2048 envelope tokens per request, conservative byte-token upper bound; no hidden reasoning or tools requested",
+  "input_rate_upper_usd_per_token": "0.000008",
+  "output_rate_usd_per_token": "0.00002",
+  "primary_calls_calculated_cost_ceiling_usd": "8.054640",
+  "budget_ceiling_usd": "15",
+  "retry_policy": "up to2 retries for failed parse/length, actual receipt expense plus reserved remaining ceilings must remain<=15USD across both phases",
+  "temperature": "omitted, unsupported by catalog; effective server value unknown",
+  "prompt_source_sha256": "301813b481c80175e6cb20fc733c3a57ae92af13a8661b6eb297f1eeaba6f262",
+  "jobs": [
+    {
+      "kind": "rubric",
+      "task_id": "ADV_001",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 3957,
+      "upper_input_tokens": 6005
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_001",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4943,
+      "upper_input_tokens": 6991
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_001",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 5837,
+      "upper_input_tokens": 7885
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_002",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 2918,
+      "upper_input_tokens": 4966
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_002",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4584,
+      "upper_input_tokens": 6632
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_002",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 6936,
+      "upper_input_tokens": 8984
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_003",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 3272,
+      "upper_input_tokens": 5320
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_003",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4639,
+      "upper_input_tokens": 6687
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_003",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 7115,
+      "upper_input_tokens": 9163
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_004",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 3998,
+      "upper_input_tokens": 6046
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_004",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4598,
+      "upper_input_tokens": 6646
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_004",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 6177,
+      "upper_input_tokens": 8225
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_005",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 2439,
+      "upper_input_tokens": 4487
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_005",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 3977,
+      "upper_input_tokens": 6025
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_005",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 1914,
+      "upper_input_tokens": 3962
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_006",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 2644,
+      "upper_input_tokens": 4692
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_006",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 3901,
+      "upper_input_tokens": 5949
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_006",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 1925,
+      "upper_input_tokens": 3973
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_007",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 3571,
+      "upper_input_tokens": 5619
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_007",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4072,
+      "upper_input_tokens": 6120
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_007",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 3314,
+      "upper_input_tokens": 5362
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_008",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 4880,
+      "upper_input_tokens": 6928
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_008",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 5268,
+      "upper_input_tokens": 7316
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_008",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 4286,
+      "upper_input_tokens": 6334
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_009",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 5180,
+      "upper_input_tokens": 7228
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_009",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4785,
+      "upper_input_tokens": 6833
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_009",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 7579,
+      "upper_input_tokens": 9627
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_010",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 4980,
+      "upper_input_tokens": 7028
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_010",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 5120,
+      "upper_input_tokens": 7168
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_010",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 9752,
+      "upper_input_tokens": 11800
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_011",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 4644,
+      "upper_input_tokens": 6692
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_011",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4566,
+      "upper_input_tokens": 6614
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_011",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 4168,
+      "upper_input_tokens": 6216
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_012",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 4114,
+      "upper_input_tokens": 6162
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_012",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4483,
+      "upper_input_tokens": 6531
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_012",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 7667,
+      "upper_input_tokens": 9715
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_013",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 4239,
+      "upper_input_tokens": 6287
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_013",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 5075,
+      "upper_input_tokens": 7123
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_013",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 2152,
+      "upper_input_tokens": 4200
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_014",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 4706,
+      "upper_input_tokens": 6754
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_014",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4608,
+      "upper_input_tokens": 6656
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_014",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 8151,
+      "upper_input_tokens": 10199
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_015",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 4663,
+      "upper_input_tokens": 6711
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_015",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 5256,
+      "upper_input_tokens": 7304
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_015",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 9529,
+      "upper_input_tokens": 11577
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_016",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 3082,
+      "upper_input_tokens": 5130
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_016",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 3858,
+      "upper_input_tokens": 5906
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_016",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 6032,
+      "upper_input_tokens": 8080
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_017",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 4194,
+      "upper_input_tokens": 6242
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_017",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 4248,
+      "upper_input_tokens": 6296
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_017",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 1958,
+      "upper_input_tokens": 4006
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_018",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 3444,
+      "upper_input_tokens": 5492
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_018",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 3292,
+      "upper_input_tokens": 5340
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_018",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 4908,
+      "upper_input_tokens": 6956
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_019",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 3194,
+      "upper_input_tokens": 5242
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_019",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 3540,
+      "upper_input_tokens": 5588
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_019",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 3362,
+      "upper_input_tokens": 5410
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_020",
+      "condition": "generic_llm_raw",
+      "prompt_bytes": 2597,
+      "upper_input_tokens": 4645
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_020",
+      "condition": "generic_llm_expert_prompt",
+      "prompt_bytes": 2669,
+      "upper_input_tokens": 4717
+    },
+    {
+      "kind": "rubric",
+      "task_id": "ADV_020",
+      "condition": "profy_expert_full",
+      "prompt_bytes": 2590,
+      "upper_input_tokens": 4638
+    }
+  ],
+  "is_observed_cost": false,
+  "pricing_source": "https://openrouter.ai/api/v1/models",
+  "previous_batch_actual_cost_usd": "3.529044",
+  "receipt_uncached_input_rate_usd_per_token": "0.000004",
+  "receipt_output_rate_usd_per_token": "0.00002",
+  "previous_actual_plus_new_primary_ceiling_usd": "11.583684",
+  "instruction": "I-004"
+}

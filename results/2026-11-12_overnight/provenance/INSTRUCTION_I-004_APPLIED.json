@@ -1,0 +1,8 @@
+{
+  "epoch": 1794484543.978249,
+  "instruction": "I-004",
+  "progress": "accepted/in progress",
+  "source_sha256": "fc4475be4242c0ec240c4ef03248057de5febf39c5098f401ead9fbfc79ae2e2",
+  "old_actual_usd": "3.529044",
+  "new_primary_ceiling_usd": "8.054640"
+}

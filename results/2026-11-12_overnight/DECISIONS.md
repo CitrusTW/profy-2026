@@ -54,3 +54,6 @@
 - The stopped403 submissioncontroller still heldtheProfyserialmutex, so the oneboundedrecovery hadnotstarted. Verifiedno gradingfolder for unfinishedreservation, terminatedonlythatstoppedclient toreleaseitslock; pendingmetadata retained, no scoredanswerslost. The single recovery may nowproceed, withno additional retryloop.
 
 - Boundedrecovery capturedactual403body: Expert is not published. RequestedexpertId andmodel equal lastsuccessfulpowerliftingrun. This confirms an APIcallability/publication-state blocker, not provenbalanceexhaustion. StopallfurtherProfyrequests; do notpublishorchangeexpert/identity autonomously. NeedownerrestoreAPI-callablepublishedstate; no recharge. Oneboundedrecovery hadno inference/score.
+
+## I-004 1794484543.977937
+接受审核者I004: max_tokens1024→4096对全部60份rubric统一生效. 原因是Full8题系统性length截断; 决定在获得这些缺失题的分数之前作出, 不从半截JSON取分. 旧批完整保存不混用. 新费用按回执单价计算, 旧实际3.529044USD+新批保守上界8.054640USD=11.583684USD<=15USD. Pairwise80份不重跑. Profy每30分钟只探测原顺序下一次运行, 403不计科学运行, 恢复后串行继续; 不发布/换key/换模型. 如12:00PST仍403, 提前开始论文副本, 否则按13:30. 状态推送记录已在远端核实, 将提交可核查的最新commit/时间澄清旧状态观察.

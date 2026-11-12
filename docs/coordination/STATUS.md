@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T03:53:10.688830-08:00
-- Last applied instruction: I-003 (in progress)
-- Latest read: I-004; checkpoint: 30min-checkpoint
+- Updated (America/Los_Angeles): 2026-11-12T03:57:23.474476-08:00
+- Last applied instruction: I-004 (in progress)
+- Latest read: I-004; checkpoint: I004-preregister-uniform60-rubrics4096-before-any-new-call
 - Current work: Profy STOPPED (Expert is not published); Claude batch1 finished with incomplete rubrics. Reporting and instruction checks continue.
 - Next: await owner restoration of supplied expert and numbered review of uniform rubric repair. No new Profy submissions, key/model bypass, publication or evolution.
 - Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
@@ -57,5 +57,13 @@
 - Further Profy calls STOPPED. This is not a proven quota-exhaustion diagnosis. No recharge, key/model/identity bypass or autonomous expert publication.
 - Owner must restore API-callable published state of the supplied expert. See PROFY_BLOCKER_CONFIRMED.md and launch05 recovery evidence.
 - New Claude batch1 complete: rubric20/20/12, all80 pairwise valid; uniform60-rubric repair requested. Already received cost3.529044 USD + proposed repair ceiling8.054640 USD =11.583684 USD <=15.
+
+## I-004 update (supersedes previous waiting notes)
+- Uniform4096 rubric rerun authorized: all60, same model/prompt/parser; this is the only rubric batch usable in the paper. Prior52 valid rubrics remain audit-only; prior80 complete pairwise retained,3000-character prefix each output.
+- New batch calls0, valid0, receipt USD0; combined received USD3.529044. Combined actual budget<=15USD; quota exhausted stops, no recharge.
+- Profy: one original-plan next-run probe every30min;403 is not a scientific run. No publishing/key/model/identity change. Resume full serial schedule only if accepted.
+- If still403 at12:00PST, start revision copy then; otherwise13:30. Final by15:30.
+- Supply B/C skill-read-before-search scope remains unresolved; no answers rewritten and no reruns selected by outcome.
+- Reviewer reports stale02:18 status; this executor has pushed later commits to the exact prescribed branch, with receipts. Current STATUS timestamp and branch commit can verify delivery.
 - 待审核者指令: [REVIEW_QUESTION_I003_judge_output_limit.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_I003_judge_output_limit.md)；现有记录保留, 该项等待编号指令。
 - 待审核者指令: [REVIEW_QUESTION_I003_tool_search_scope.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_I003_tool_search_scope.md)；现有记录保留, 该项等待编号指令。
