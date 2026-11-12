@@ -71,3 +71,11 @@ I003 ADV judge: primary jobs processed90/140, valid84, failed calls20, received-
 I003 ADV judge: primary jobs processed100/140, valid93, failed calls23, received-cost sum USD2.701972, unknown-cost calls0, conservative reserved spent ceiling USD9.730312; not an observed expense estimate.
 
 2026-11-12T10:50:05.009142+00:00 {"task": "invoice-fraud-detection", "repeat": 1, "condition": "no-skills", "status": "infrastructure_failure", "cost_usd": "unknown", "completed_epoch": 1794480605.00832, "adapter_instruction": "I-003"}; strict=None; total_tokens=0
+
+I003 ADV judge: primary jobs processed110/140, valid102, failed calls27, received-cost sum USD3.053024, unknown-cost calls0, conservative reserved spent ceiling USD11.020800; not an observed expense estimate.
+
+I003 ADV judge: primary jobs processed120/140, valid112, failed calls27, received-cost sum USD3.210264, unknown-cost calls0, conservative reserved spent ceiling USD11.710576; not an observed expense estimate.
+
+I003 ADV judge: primary jobs processed130/140, valid122, failed calls27, received-cost sum USD3.396984, unknown-cost calls0, conservative reserved spent ceiling USD12.419840; not an observed expense estimate.
+
+I003 ADV judge: primary jobs processed140/140, valid132, failed calls27, received-cost sum USD3.529044, unknown-cost calls0, conservative reserved spent ceiling USD13.008400; not an observed expense estimate.

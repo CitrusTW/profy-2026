@@ -1,0 +1,16 @@
+{
+  "planned_primary_jobs": 140,
+  "processed_primary_jobs": 140,
+  "valid_judgments": 132,
+  "failed_calls": 27,
+  "all_calls": 159,
+  "actual_cost_usd": "3.529044",
+  "known_cost_receipts_sum_usd": "3.529044",
+  "unknown_cost_calls": 0,
+  "conservative_spent_ceiling_usd": "13.008400",
+  "terminal_reason": "all_jobs_processed",
+  "model": "anthropic/claude-opus-5.5",
+  "max_tokens": 1024,
+  "temperature_effective": "unknown",
+  "new_answers_generated": false
+}

@@ -24,3 +24,4 @@
 - 2026-11-12T02:42:44.060925-08:00 I003-adapter-repair-and-judge-limit-questions; last_applied=I-002; latest_seen=I-003; new_completed_runs=10; USD=unknown.
 - 2026-11-12T02:49:34.540325-08:00 I003-watcher-startup; last_applied=I-003; latest_seen=I-003; new_completed_runs=16; USD=unknown.
 - 2026-11-12T02:50:06.576633-08:00 run-invoice-fraud-detection-r1-no-skills; last_applied=I-003; latest_seen=I-003; new_completed_runs=17; USD=unknown.
+- 2026-11-12T02:55:06.809880-08:00 blocked-ProFy403-no-recharge-openrouter-continues; last_applied=I-003; latest_seen=I-003; new_completed_runs=17; USD=unknown.

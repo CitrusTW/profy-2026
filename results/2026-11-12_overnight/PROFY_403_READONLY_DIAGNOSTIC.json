@@ -1,0 +1,27 @@
+{
+  "epoch": 1794480686.316725,
+  "results": [
+    {
+      "path": "/v1/sessions/bcba42df-6b94-4312-9d9c-3ae0d50ad2fc",
+      "method": "GET",
+      "status": 200,
+      "technical_error": {
+        "code": 0,
+        "message": "ok"
+      },
+      "model_invoked": false
+    },
+    {
+      "path": "/v1/agents/run",
+      "method": "GET",
+      "status": 404,
+      "technical_error": {
+        "code": 404,
+        "message": "Expert not found"
+      },
+      "model_invoked": false
+    }
+  ],
+  "paid_model_requests_started": 0,
+  "no_recharge": true
+}

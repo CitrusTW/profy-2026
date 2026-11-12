@@ -44,3 +44,5 @@
 
 - I003 Claude1024-token cap caused length truncation onFull rubric ADV002/004; no partialJSON scores used, all3 failures kept. Exact response shows862/1024 output tokens were reasoning inone call. No post-hoc cap change; asked reviewer for uniform60-rubric4096-token repair batch within original15-dollar total, never selecting better scores. Existing runs continue exactlyregistered pending numbered instruction.
 - I003C literal no-skill-read condition applies unambiguously toA; B/C have expectedbenchmarkskill reads before discovery, no reads after. SupplementA only, raised scopeclarification, no unapproved grading.
+
+- After I003 first repaired reserve setup stream ended withoutcompletion, subsequent agent-run requests returned403 with zero usage. Pausedcontroller immediately; read-onlysessionGET200 confirms key canreadownsession but doesnotestablishquota state. Oldclientfailed tostore403body, markunavailable not reconstruct. Sentinterrupt toownedincomplete setup (notgrader) andreceivedack. No newProfy modelrequests, no recharge/identity/modelbypass pending diagnosis; OpenRouterjudge continues within15USD.

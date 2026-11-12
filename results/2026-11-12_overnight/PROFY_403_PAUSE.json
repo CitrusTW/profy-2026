@@ -1,0 +1,6 @@
+{
+  "pid": 64369,
+  "epoch": 1794480617.873535,
+  "reason": "Repeated403 with zero usage; pause new requests to investigate possible quota/account rejection, no recharge",
+  "active_score_interrupted": false
+}
