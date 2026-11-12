@@ -60,3 +60,5 @@
 
 ## I-005 1794488850.813374
 审核者确认状态推送一直正常, 无需额外修复Git. 对tool_search按分配的skill集合检查, 不再把读取本组已分配SKILL.md误判为违规. Supply三组离线检查均通过; B/C各自xlsx MD的hash和完整读取均核实. 只补原verifier, 不重新求解/改回答. 先维持I004原顺序reserves/A恢复探测; 一旦恢复, 在串行安全边界补supply B/C评分后继续固定顺序. Profy仍403期间不为补评分额外探测. 其他benchmark资源不改, 原判定/旧文件保留. 新ADV只用I00460份rubric+I00380份pairwise, 所有边界按I005 C保留.
+
+Citation metadata correction: SKILLSBENCH_CITATION_VERIFIED.json中的checked_utc是手写记录时间, 不能作为实测网页抓取时刻. 新CITATION_TIMESTAMP_CORRECTION.json保留原记录hash, 提供文件实际写入时刻; 网页精确抓取时刻unknown. 标题、前三位作者、arXiv ID/版本和发布日期均来自已读取的arXiv页面, 不受影响. 不改任何实验数字.
