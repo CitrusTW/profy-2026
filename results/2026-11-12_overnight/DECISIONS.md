@@ -79,3 +79,5 @@ Citation metadata correction: SKILLSBENCH_CITATION_VERIFIED.json中的checked_ut
 - 2026-11-12T17:50:28.580732+00:00 I008/I009 manuscript: preserved original framework/customs and all old85 numerical values, relabelled archive Proxy to avoid false deployment attribution; clean ADV figure and all5 dimension effects retained. Original untouched. Ready draft2 delivered without waiting for user resubmission.
 
 - 2026-11-12T17:54:56.731535+00:00 I010 direct user authorization: OpenRouter-only40 baseline generations plus60rubrics/80pairs, USD10 cap. Exact deepseek/deepseek-v4-flash catalog ID confirmed; latest/vision/4.1 not selected. Source parameters0.7/4096 retained; full-pipeline ADV template selected before generation, shorter standalone template difference documented; provider/version identity of historical Full remains unknown. PREREG_I010 frozen; original/published draft2 not overwritten.
+
+- 2026-11-12T18:08:53.891340+00:00 User direct amendment: finish I010 and report results first; DO NOT edit manuscript with I010 results. Existing draft2 unchanged. PREREG remains immutable; generation/judging/statistics unchanged.

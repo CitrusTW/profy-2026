@@ -153,3 +153,5 @@ I004 original-order next-run probe: {"instruction": "I-004", "started_epoch": 17
 2026-11-12T18:07:33.512318+00:00 I010 baseline task ADV_012 processed; calls=24, receipt USD=0.0096381887, unknown-cost calls=0.
 
 2026-11-12T18:08:11.215394+00:00 I010 baseline task ADV_013 processed; calls=26, receipt USD=0.0103661087, unknown-cost calls=0.
+
+- 2026-11-12T18:08:53.891340+00:00 I010 manuscript integration on hold by user. Paid run continues under same frozen protocol and USD10 cap; report before any further paper edit.
