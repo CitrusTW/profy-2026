@@ -74,7 +74,14 @@ class DockerStudy(LibraryStudy):
         dockerfile=next(raw.decode() for name,raw,mode in rows if name=='Dockerfile')
         refs=re.findall(r'^FROM\s+(\S+)',dockerfile,re.M)
         if len(refs)!=1:raise ValueError('Prototype requires one explicit base image; no model call started')
-        pins={ref:primary_pin(ref) for ref in refs}
+        prebuilt=None
+        if getattr(self.args,'prebuilt_record',None):
+            prebuilt=json.loads(Path(self.args.prebuilt_record).read_text())
+            tree=subprocess.check_output(['git','-C',str(bench),'rev-parse',PIN+':tasks/'+task+'/environment'],text=True).strip()
+            assert prebuilt['task']==task and prebuilt['benchmark_pin']==PIN
+            assert prebuilt['environment_tree_exact_match'] and prebuilt['environment_tree_sha']==tree
+            assert re.fullmatch(r'ghcr.io/benchflow-ai/skillsbench-task-env@sha256:[0-9a-f]{64}',prebuilt['primary_image'])
+        pins={} if prebuilt else {ref:primary_pin(ref) for ref in refs}
         skill_hashes={};skills=[];files=[input_file]
         if not no_skills:
             package=io.BytesIO()
@@ -85,7 +92,7 @@ class DockerStudy(LibraryStudy):
                     if candidate is not None and rel=='bench_skills/'+self.skill_name+'/SKILL.md':raw=candidate.encode()
                     archive.writestr(rel,raw);skill_hashes[rel]=sha(raw)
             skills=self.names;files.append(MemoryUpload('benchmark_skills.zip',package.getvalue()))
-        config={'task':task,'benchmark_pin':PIN,'input_sha256':sha(data),'skills':skills,'target_skill':self.skill_name,'skill_hashes':skill_hashes,'base_images':pins}
+        config={'task':task,'benchmark_pin':PIN,'input_sha256':sha(data),'skills':skills,'target_skill':self.skill_name,'skill_hashes':skill_hashes,'base_images':pins,'prebuilt':prebuilt}
         files.append(MemoryUpload('case_config.json.gz',gzip.compress(json.dumps(config).encode())))
         files += [HERE/'remote_setup.py',HERE/'remote_tools.py']
         if any(len(p.read_bytes())>500000 for p in files):raise ValueError('Prototype upload exceeds bound; no model call started')
@@ -97,7 +104,7 @@ class DockerStudy(LibraryStudy):
         save(f/'session.json',{'id':session,'end_user':user})
         tasktext=(self.bench/task/'task.md').read_text().split('---',2)[2].strip()
         skills_text=('Read all supplied benchmark skills in full using read: '+', '.join('bench_skills/'+n+'/SKILL.md' for n in self.names)+'. Follow their relevant instructions. ' if not no_skills else 'No benchmark skills are supplied. Do not discover, read, import or activate any expert/user/builtin skill package. ')
-        common="""Execution adapter, identical across conditions: First run exactly python3 remote_setup.py with foreground bash and timeout850. Do not inspect task_environment.tar.gz or case_config.json.gz. If setup fails, stop and report the failure without editing setup code. After CGL_CASE_READY, solve the original task in its original Docker environment. All task shell commands must use this exact quoted heredoc form:
+        common="""Execution adapter, identical across conditions: First run exactly python3 remote_setup.py using bash with background=true, then awaitbash on that same job until completion. Do not start setup twice. Do not inspect task_environment.tar.gz or case_config.json.gz. If setup fails, stop and report the failure without editing setup code. After CGL_CASE_READY, solve the original task in its original Docker environment. All task shell commands must use this exact quoted heredoc form:
 python3 remote_tools.py exec <<'SB_COMMAND'
 <ordinary shell commands running inside the task container>
 SB_COMMAND
@@ -122,10 +129,11 @@ For a visual/native file preview, use python3 remote_tools.py get with the same 
                 if kind=='setup':setup_ids.add(e['tool_call_id'])
                 elif kind!='container':
                     raise RuntimeError('Unapproved host shell command: invalid external adapter execution')
-            if e.get('type')=='tool_call.result' and e.get('tool_call_id') in setup_ids:
+            if e.get('type')=='tool_call.result':
                 for text in self.strings(e.get('result')):
                     for line in text.splitlines():
                         if line.startswith('CGL_CASE_READY:'):ready.append(json.loads(line.split(':',1)[1]))
+        ready=list({json.dumps(x,sort_keys=True):x for x in ready}.values())
         if len(ready)!=1:raise RuntimeError('No unique actual setup receipt; no grading call started')
         state=ready[0];session=json.loads((folder/'session.json').read_text())
         config=json.loads((folder/'case_config.json').read_text());assert state['input_sha256']==config['input_sha256'] and state['task']==task
@@ -137,7 +145,7 @@ For a visual/native file preview, use python3 remote_tools.py get with the same 
         files=[payload,MemoryUpload('grade_config.json.gz',gzip.compress(json.dumps(control).encode())),HERE/'remote_grade.py']
         uploads=[grader.transport.upload(p,session['end_user']) for p in files]
         body={'agent':{'id':grader.transport.expert_id,'model':'gpt-6.1-sol','tools':[]},'rules':[],'environment':{'type':'profy_hosted','skills':[]},'enable_memory':False,'expert_partner':[],
-            'input':'Grading only, no further solving. Run exactly python3 remote_grade.py in one foreground bash call with background=false and timeout1150. Do not edit answers, scripts, config or tests, inspect the hidden verifier, use skills/Memory, purchase anything or ask questions. The script freezes/exports actual files before exposing the original verifier, runs the original test.sh, preserves source hashes and cleans only this case. Return the actual [OUTPUT] outputs/deliverables.zip. Do not rerun scoring.',
+            'input':'Grading only, no further solving. Run exactly python3 remote_grade.py once using bash with background=true, then awaitbash on that same job until completion. Do not edit answers, scripts, config or tests, inspect the hidden verifier, use skills/Memory, purchase anything or ask questions. The script freezes/exports actual files before exposing the original verifier, runs the original test.sh, preserves source hashes and cleans only this case. Return the actual [OUTPUT] outputs/deliverables.zip. Do not rerun scoring.',
             'stream':True,'session_id':session['id'],'attachment_file_ids':[x['file_id'] for x in uploads]}
         delivered=grader.execute(root,'grading-only','original-grading',None,True,body,session['id'],session['end_user'],payload)
         grade_events=[json.loads(s) for s in (root/'events.jsonl').read_text().splitlines()]
@@ -151,7 +159,7 @@ For a visual/native file preview, use python3 remote_tools.py get with the same 
         return report
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--workspace',required=True);p.add_argument('--out',required=True);p.add_argument('--task',required=True);p.add_argument('--label',required=True);p.add_argument('--candidate');p.add_argument('--keys-file',required=True);p.add_argument('--allow-paid',action='store_true')
+    p=argparse.ArgumentParser();p.add_argument('--workspace',required=True);p.add_argument('--out',required=True);p.add_argument('--task',required=True);p.add_argument('--label',required=True);p.add_argument('--candidate');p.add_argument('--prebuilt-record');p.add_argument('--keys-file',required=True);p.add_argument('--allow-paid',action='store_true')
     args=p.parse_args();args.hard_timeout_sec=1600
     study=DockerStudy(args)
     candidate=Path(args.candidate).read_text() if args.candidate else None

@@ -1,5 +1,5 @@
 """Profy Linux only: prepare an original task environment, with no local Docker work."""
-import gzip,hashlib,json,os,shutil,subprocess,sys,tarfile,tempfile,time,uuid,zipfile
+import gzip,hashlib,json,os,re,shutil,subprocess,sys,tarfile,tempfile,time,uuid,zipfile
 from pathlib import Path
 
 def digest(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -41,15 +41,21 @@ def main():
             if subprocess.run(cli+['info'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=5).returncode==0:break
             time.sleep(1)
         else:raise RuntimeError('Private Docker engine unavailable')
-        with tarfile.open(base/'task_environment.tar.gz','r:gz') as archive:archive.extractall(work/'context',filter='data')
-        context=work/'context'
-        for ref,pin in meta['base_images'].items():
-            command(cli+['pull',ref.split(':')[0]+'@'+pin],180)
-            command(cli+['tag',ref.split(':')[0]+'@'+pin,ref],30)
-        image='cgl-task:'+uuid.uuid4().hex[:12]
-        env=dict(os.environ);env['DOCKER_BUILDKIT']='0'
-        build_cli=['sudo','-n','env','DOCKER_BUILDKIT=0',str(client),'--config='+str(work/'client'),'-H','unix://'+str(socket)]
-        command(build_cli+['build','--network','host','--pull=false','-t',image,str(context)],600,env=env)
+        context=None
+        if meta.get('prebuilt'):
+            image=meta['prebuilt']['public_mirror_image']
+            assert re.fullmatch(r'ghcr\.m\.daocloud\.io/benchflow-ai/skillsbench-task-env@sha256:[0-9a-f]{64}',image)
+            command(cli+['pull',image],600)
+        else:
+            with tarfile.open(base/'task_environment.tar.gz','r:gz') as archive:archive.extractall(work/'context',filter='data')
+            context=work/'context'
+            for ref,pin in meta['base_images'].items():
+                command(cli+['pull',ref.split(':')[0]+'@'+pin],180)
+                command(cli+['tag',ref.split(':')[0]+'@'+pin,ref],30)
+            image='cgl-task:'+uuid.uuid4().hex[:12]
+            env=dict(os.environ);env['DOCKER_BUILDKIT']='0'
+            build_cli=['sudo','-n','env','DOCKER_BUILDKIT=0',str(client),'--config='+str(work/'client'),'-H','unix://'+str(socket)]
+            command(build_cli+['build','--network','host','--pull=false','-t',image,str(context)],600,env=env)
         image_id=subprocess.check_output(cli+['image','inspect',image,'--format','{{.Id}}'],text=True).strip()
         (work/'verifier').mkdir();(work/'verifier-logs').mkdir()
         container='cgl-run-'+uuid.uuid4().hex[:12]
@@ -69,7 +75,8 @@ def main():
         shell='/bin/bash' if subprocess.run(cli+['exec',container,'/bin/sh','-c','test -x /bin/bash']).returncode==0 else '/bin/sh'
         state={'workspace':str(base),'work':str(work),'runtime':str(runtime),'cli':cli,'container':container,'image_id':image_id,'shell':shell,'input_sha256':meta['input_sha256'],'skill_sha256':target_sha,'package_sha256':package_hashes,'benchmark_pin':meta['benchmark_pin'],'task':meta['task']}
         (base/'case_context.json').write_text(json.dumps(state,indent=2))
-        shutil.rmtree(context);shutil.rmtree(packages)
+        if context is not None:shutil.rmtree(context)
+        shutil.rmtree(packages)
         (base/'task_environment.tar.gz').unlink()
         print('CGL_CASE_READY:'+json.dumps(state))
         if target_sha:print('SBP_ACTIVE_SKILL_SHA256:'+target_sha)
