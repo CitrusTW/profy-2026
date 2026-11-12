@@ -1,0 +1,27 @@
+{
+  "task": "shock-analysis-supply",
+  "repeat": 1,
+  "condition": "with-CogniLife-skills",
+  "historical_reused": false,
+  "score": {},
+  "runner_limit": false,
+  "infrastructure_failure": true,
+  "condition_valid": true,
+  "tokens": {
+    "input_tokens": 99569,
+    "output_tokens": 700,
+    "total_tokens": 100269,
+    "cache_read_tokens": 80003,
+    "cache_write_tokens": 18633,
+    "llm_turns": 6,
+    "tool_calls": 5
+  },
+  "solver_elapsed_sec": 202.705,
+  "end_to_end_elapsed_sec": 230.4499728679657,
+  "cost_usd": "unknown",
+  "skill_sha256": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+  "exception": "RuntimeError: Unexpected solver tool",
+  "folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/launch-03/runs/shock-analysis-supply/repeat-1/with-CogniLife-skills",
+  "tokens_comparable": false,
+  "status": "infrastructure_failure"
+}
