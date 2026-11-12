@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/adv_i004_analysis_v2/results.json": "18cf7c23e847f78259b4fd991d34b44fc18c77bdab2f93c5ccccceb39f317ec5",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/adv_i004_context_analysis/results.json": "64eee8cde636d22a7dac39c244c8a8360e6c1fb54d8362110308d235a8d0b844",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/skills_final/results.json": "2668ce128dbfa9ade4ba9242f2349a551e54e4af08218655e34e6605634c9c82",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/history_results.json": "64907726d03ee43445b28bcd763a2406e7448309e620eef784b9cf387d0f3db7",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/PAPER_PROTOCOL_VALUES.json": "2fe6b62e54ff21eb9febcc07508ea00f75c2caf5b3f4bbac63b8e956e5336628",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/selection_records.json": "5c670ca14f50c841772d4c6a64aa7b4454c6dca5797c11351891ee2494d5a4dd"
+  },
+  "original_main_sha256": "6e4656310c727a84dd58ed7602d9b2bab78db7c664b434d0528db387241bfb41",
+  "new_main_sha256": "9d92362f5906646d32db8f05806abf21a479051988a934982d7369521a9e4870",
+  "changes": [
+    "Abstract and contribution: highlight actual16/20 counterbalanced preference, with adjacent generation-model difference",
+    "New SkillsBench appendix: effective attempts, all task states, resource variation, gate comparison, development/held-out separation, failed/admitted first candidate",
+    "I007 final existing cohort, one completed run/condition/matched task; platform-unavailable/unscored cases explicit and excluded",
+    "Restore original85-task construction/family/variant/checkpoint description",
+    "Move all old85-task results to historical checkpoint-proxy appendix, unchanged numerical annotations; relabel old Full as Proxy only",
+    "Add objective deployment lessons, without unproven causal attribution",
+    "Add clean ADV stacked pairwise figure in main text; all5 dimension/CI forest plot in appendix",
+    "Customs case and all existing non-score figures/screenshots/listings preserved",
+    "Clarify only expert responses are platform-executed; archive heading explicitly not deployment; mean-level coherence/safety wording"
+  ],
+  "deletions": [
+    "Anonymous review copy omits original author/affiliation and equal-contribution markers; original files untouched.",
+    "The commercial-platform example footnote is omitted to respect the requested anonymous version without product names/links.",
+    "Old85-task superiority claims are removed ONLY from the main text and preserved numerically in the proxy archive.",
+    "The old conclusion paragraph attributing those proxy scores to Full is replaced; repeated customs numbers remain unchanged in4.5 and the customs appendix.",
+    "Historical condition name Full is replaced by Proxy in archive labels/captions/legend to avoid identifying it with deployed responses; no number is deleted or changed."
+  ],
+  "original_source_project": "/Users/mac/.codex/visualizations/2026/11/08/01a1b886-051f-79b3-8387-d10f16107fab/T03_20261109/overleaf_project/cognilife_profy_emnlp2026_v1_emnlp_industry_compilable"
+}

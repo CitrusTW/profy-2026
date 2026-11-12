@@ -75,3 +75,5 @@ Citation metadata correction: SKILLSBENCH_CITATION_VERIFIED.json中的checked_ut
 
 ## I007/I008/I009 2026-11-12T17:31:10.401728+00:00
 依次接受新指令. I007立即停止全部Profy探测, 最后探测时间见PROFY_STOPPED_I007.json; 停止来自用户决定, 不按结果选题. 未完成/未评分逐题列出, 只比较指定3道held-out及shock-demand两种口径, 每组每题1次; 不再保留恢复后补跑计划. I008保留仍有效原结构/框架/customs/截图/listings/85题任务集描述; 旧85结果数字完整归档附录, 条件仅标checkpoint prompt proxy而不称Full/部署结果. 新20题主结果突出16/20双序胜出并紧邻注明生成模型不同. Lessons描述已观测事实和泄漏风险, 不将rubric/pairwise差异擅写成已证明的因果抬分. I009正文新图只用干净ADV结果, 画完整16/1/3与17/1/2类别; 5维差值/CI全部保留, 不选有利维度. draft2在12:30前交, final15:30前交, 仍不改原项目/Overleaf/OpenReview.
+
+- 2026-11-12T17:50:28.580732+00:00 I008/I009 manuscript: preserved original framework/customs and all old85 numerical values, relabelled archive Proxy to avoid false deployment attribution; clean ADV figure and all5 dimension effects retained. Original untouched. Ready draft2 delivered without waiting for user resubmission.

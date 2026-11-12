@@ -1,0 +1,11 @@
+task,skill_family,version,status,new_attempts,historical_attempts_reused,runner_limit_count,infrastructure_failure_count,all_groups_present,historical_note,display_status
+shock-analysis-demand,xlsx,11,complete_with_runner_limit,1,2,1,0,True,Prior partial attempts reused; frozen only added tonight,complete_with_runner_limit
+shock-analysis-supply,xlsx,11,complete_with_infrastructure_gap,3,0,0,2,True,Prespecified frozen-version test,unscored comparison; platform unavailable
+reserves-at-risk-calc,xlsx,11,complete_with_infrastructure_gap,3,0,0,3,True,Prespecified frozen-version test,platform unavailable; incomplete
+powerlifting-coef-calc,xlsx,11,complete,3,0,0,0,True,Prespecified frozen-version test,complete
+xlsx-recover-data,xlsx,11,complete_with_infrastructure_gap,3,0,0,3,True,Prespecified frozen-version test,platform unavailable; incomplete
+invoice-fraud-detection,xlsx,11,partial,1,0,0,1,False,Prespecified frozen-version test,platform unavailable; incomplete
+pdf-excel-diff,xlsx,11,not_started,0,0,0,0,False,Prespecified frozen-version test,platform unavailable; incomplete
+jpg-ocr-stat,xlsx,11,not_started,0,0,0,0,False,Prespecified frozen-version test,platform unavailable; incomplete
+energy-market-pricing,economic-dispatch,6,complete,0,3,0,0,True,"Earlier held-out result, no new runs tonight",complete
+protein-expression-analysis,xlsx,11,complete,0,3,0,0,True,"Initially held-out for round11; used in selection after round12, not independent of that later selection",complete

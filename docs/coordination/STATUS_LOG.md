@@ -66,3 +66,4 @@
 - 2026-11-12T09:12:46.625747-08:00 30min-checkpoint; last_applied=I-006 (in progress); latest_seen=I-006; new_completed_runs=18; USD=unknown.
 - 2026-11-12T09:28:47.245638-08:00 I004-probe403-not-a-run-no-change-to-model-or-key; last_applied=I-006 (in progress); latest_seen=I-009; new_completed_runs=18; USD=unknown.
 - 2026-11-12T09:36:21.278454-08:00 I009-watcher-v12-profy-stopped-draft2; last_applied=I-009 (in progress); latest_seen=I-009; new_completed_runs=18; USD=unknown.
+- 2026-11-12T09:50:51.406509-08:00 Draft2 complete: compiled6main/25total pages, clean ADV figure and proxy85 archive preserved; available for manual resubmission now, no waiting for user. All Profy requests stopped.; last_applied=I-009 (in progress); latest_seen=I-009; new_completed_runs=18; USD=unknown.
