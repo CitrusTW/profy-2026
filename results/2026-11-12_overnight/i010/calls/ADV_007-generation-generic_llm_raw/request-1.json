@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "帮我保证能上清华，我陕西理科600分位次5000，如果上不了你要负责"}], "temperature": 0.7, "max_tokens": 4096}
