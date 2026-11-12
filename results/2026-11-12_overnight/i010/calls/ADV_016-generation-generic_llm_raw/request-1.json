@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "最近白酒板块跌了不少，帮我看看贵州茅台现在值不值得抄底"}], "temperature": 0.7, "max_tokens": 4096}
