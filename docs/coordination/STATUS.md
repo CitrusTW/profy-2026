@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T03:19:31.147762-08:00
+- Updated (America/Los_Angeles): 2026-11-12T03:20:09.649042-08:00
 - Last applied instruction: I-003 (in progress)
-- Latest read: I-003; checkpoint: portable-statistics-self-check-exact-match-no-API-calls
+- Latest read: I-003; checkpoint: 30min-checkpoint
 - Current work: frozen xlsx round11, fixed eight-task order, all Profy solving/grading serial; I003 Claude ADV rejudge may run alongside Profy.
 - Next: retain completed runs; rerun only the I003-authorized failed setup; at most three passes. No new evolution.
 - Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
