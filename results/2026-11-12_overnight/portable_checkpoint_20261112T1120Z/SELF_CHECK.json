@@ -1,0 +1,11 @@
+{
+  "reference_results_sha256": "00ed780943c3791f8833d9f3ded3dbc3399b5e6c1bb012077c09f47df3ff5cf8",
+  "recomputed_results_sha256": "00ed780943c3791f8833d9f3ded3dbc3399b5e6c1bb012077c09f47df3ff5cf8",
+  "all_analysis_fields_identical": true,
+  "no_model_calls": true,
+  "inputs": {
+    "skillsbench_all_original_attempts.jsonl": "4335d402b49d2cbabf3e64b1eabea099d398687d9e04d164a7cc605b597945d7",
+    "skillsbench_effective_trials.jsonl": "f57576df17bde332920a66c986b24d7dc20ab3aa380aec00c1ee9a82a0bf8440",
+    "round11_gate_estimates.json": "4fd9fd1686050aba361e7a8eab9b43423795e4aaaff8e9771e44146fb9e27d3e"
+  }
+}
