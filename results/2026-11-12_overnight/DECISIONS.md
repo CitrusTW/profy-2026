@@ -32,3 +32,5 @@
 - Updated paper-builder draft for actual1--3 counts, dual limit policies, skill-specific versions, missing original method components and historical gpt-4.1 counterexample. It has not edited or copied the paper yet; scheduled per I-002.
 
 - New shock-demand frozen run: original reward0, receipt says0passed/5failed, but unchanged pytest final stdout says7failed. The old no-skills receipt/stdout also disagree (3/2 versus5/2). No score or verifier repaired; retain both and add automatically parsed count-audit sidecars. Strict reward unchanged. This is a logging-count discrepancy, not a new scoring result.
+
+- shock-analysis-supply r1 no-skills setup succeeded; solver declined Excel-only/Playwright requirements, then adapter rejected native tool_search before grading. No reward exists. Raw wrapper marks infra but causal category is not established; do not treat it as proven pure infrastructure failure or agent score0. Preserve record, continue fixed order, send REVIEW_QUESTION_tool_search.md to reviewer; no whitelist/skill/scorer changes applied.
