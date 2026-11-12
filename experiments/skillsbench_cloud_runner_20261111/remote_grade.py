@@ -1,74 +1,51 @@
-"""After solving only: freeze/export actual files, execute the original verifier, clean this case."""
-import gzip,hashlib,json,os,re,shutil,subprocess,tarfile,time,zipfile
+"""Freeze/export before exposing the unchanged original verifier; fixed grading only."""
+import gzip,hashlib,json,re,shutil,subprocess,tarfile,zipfile
 from pathlib import Path
 from remote_setup import cloud_only,digest
+from remote_native import changed_files,root_file
 
 def main():
     cloud_only();base=Path.cwd();state=json.loads((base/'case_context.json').read_text())
     config=json.loads(gzip.decompress((base/'grade_config.json.gz').read_bytes()))
     assert state==config['expected_context'],'Prepared context changed'
+    assert state['backend']=='native-owned'
     work=Path(state['work']);runtime=Path(state['runtime'])
     assert work.parent==base and work.name.startswith('cgl-task-')
     assert runtime.parent==Path('/tmp') and runtime.name.startswith('cgl-sock-')
-    frozen=base/'case_frozen';frozen.touch(exist_ok=False)
-    cli=state['cli'];container=state['container'];native=state.get('backend')=='native-proot'
+    (base/'case_frozen').touch(exist_ok=False)
     out=base/'output';out.mkdir(exist_ok=True)
-    report={'original_verifier':True,'benchmark_pin':state['benchmark_pin'],'task':state['task'],'pre_grade_file_hashes':{},'original_source_hashes':{},'cleanup_errors':[],'runtime_backend':state.get('backend','docker'),'runtime_difference':state.get('runtime_difference')}
+    report={'original_verifier':True,'benchmark_pin':state['benchmark_pin'],'task':state['task'],'pre_grade_file_hashes':{},'original_source_hashes':{},'cleanup_errors':[],'runtime_backend':state['backend'],'runtime_difference':state['runtime_difference'],'dependency_receipt':state['dependency_receipt'],'original_input_hashes':state['original_file_sha256']}
     def run(args,timeout=120):return subprocess.run(args,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=timeout)
     def file_sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
     try:
-        if native:
-            for rel,h in state['supplied_skill_hashes'].items():assert file_sha(base/rel)==h,'Supplied skill changed during solving'
-        # Export changed task files before exposing any verifier material.
-        excluded={'.cache','.git','.npm','.local','.venv','node_modules','__pycache__','.pytest_cache','bench_skills','.claude','.agents','.codex','.bash_history','.config','.fonts','.gnupg'}
-        if native:
-            root=work/'root';paths=[]
-            for item in root.rglob('*'):
-                if not item.is_file() or item.is_symlink() or any(x in excluded for x in item.relative_to(root).parts):continue
-                path='/root/'+item.relative_to(root).as_posix()
-                if file_sha(item)!=state['original_file_sha256'].get(path):paths.append(path)
-        else:
-            diff=run(cli+['diff',container]);assert diff.returncode==0
-            roots={'root','app','workspace','workspaces','data','output','tmp','home'};paths=[]
-            for line in diff.stdout.splitlines():
-                kind,path=line.split(' ',1);p=Path(path)
-                if kind=='D' or len(p.parts)<3 or p.parts[1] not in roots or any(x in excluded for x in p.parts):continue
-                status=run(cli+['exec',container,'/bin/sh','-c','test -f "$1" && test ! -L "$1"','sh',path],10)
-                if status.returncode==0:paths.append(path)
-        for path in sorted(set(paths)):
+        for rel,h in state['supplied_skill_hashes'].items():assert file_sha(base/rel)==h,'Supplied skill changed during solving'
+        # No verifier is extracted until all actual changed task files are exported.
+        for path in changed_files(state):
             target=out/'fs'/path.lstrip('/');target.parent.mkdir(parents=True,exist_ok=True)
-            if native:
-                from remote_native import root_file
-                source=root_file(state,path);assert source.stat().st_size<=25_000_000
-                shutil.copyfile(source,target)
-            else:
-                p=run(cli+['cp',container+':'+path,str(target)],60);assert p.returncode==0
-            report['pre_grade_file_hashes'][path]=file_sha(target)
+            source=root_file(state,path);assert source.stat().st_size<=25_000_000
+            shutil.copyfile(source,target);report['pre_grade_file_hashes'][path]=file_sha(target)
         assert digest(base/'original_verifier.tar.gz')==config['verifier_archive_sha256']
-        verifier=work/'verifier'
+        verifier=work/'verifier';verifier.chmod(0o700)
         assert not any(verifier.iterdir()),'Verifier was available before freezing'
         with tarfile.open(base/'original_verifier.tar.gz','r:gz') as archive:archive.extractall(verifier,filter='data')
         expected=config['source_hashes']
         report['original_source_hashes']={p.relative_to(verifier).as_posix():file_sha(p) for p in verifier.rglob('*') if p.is_file()}
         assert report['original_source_hashes']==expected
-        if native:
-            for item in verifier.rglob('*'):
-                if item.is_file():item.chmod(0o444)
-                elif item.is_dir():item.chmod(0o555)
-            verifier.chmod(0o555)
-        logs=work/'verifier-logs'
+        for item in verifier.rglob('*'):
+            if item.is_file():item.chmod(0o444)
+            elif item.is_dir():item.chmod(0o555)
+        verifier.chmod(0o555)
+        logs=work/'verifier-logs';logs.chmod(0o700)
         for p in logs.iterdir():
             if p.is_dir():shutil.rmtree(p)
             else:p.unlink()
-        command=(['sudo','-n','env','PATH=/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin','unshare','--mount','--propagation','private','/usr/local/bin/python3',str(Path(__file__).with_name('remote_namespace_grade.py'))]) if native else cli+['exec','--user','0',container,'bash','/verifier/test.sh']
+        command=['sudo','-n','env','PATH=/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin','unshare','--mount','--propagation','private','/usr/local/bin/python3',str(Path(__file__).with_name('remote_namespace_grade.py'))]
         graded=run(command,900)
         (out/'original_verifier_stdout.log').write_text(graded.stdout)
         report['original_returncode']=graded.returncode
-        if native:
-            report['grading_backend']='private kernel mount namespace; original test.sh unchanged'
-            report['uv_dependency_provisioning']='Official uv==0.9.7 wheel installed before grading; original installer still runs'
-            versions=re.findall(r'CGL_GRADER_UV_VERSION:(.+)',graded.stdout)
-            report['grader_uv_version']=versions[-1] if versions else None
+        report['grading_backend']='private kernel mount namespace; original test.sh unchanged'
+        report['uv_dependency_provisioning']='Existing fixed grader provisions official uv==0.9.7 in its private runtime; original installer still runs'
+        versions=re.findall(r'CGL_GRADER_UV_VERSION:(.+)',graded.stdout);report['grader_uv_version']=versions[-1] if versions else None
         reward=logs/'reward.txt'
         if not reward.is_file():raise RuntimeError('Original verifier returned no reward; infrastructure error, not a zero score')
         value=float(reward.read_text().strip());assert 0<=value<=1
@@ -76,43 +53,20 @@ def main():
         if (logs/'ctrf.json').is_file():
             summary=json.loads((logs/'ctrf.json').read_text())['results']['summary']
             for key in ['tests','passed','failed','skipped']:report[key]=summary.get(key,0)
-        elif config['expects_ctrf']:
-            raise RuntimeError('Original pytest report missing: preserve raw reward, mark grading infrastructure error')
+        elif config['expects_ctrf']:raise RuntimeError('Original pytest report missing: preserve raw reward, mark grading infrastructure error')
         after={p.relative_to(verifier).as_posix():file_sha(p) for p in verifier.rglob('*') if p.is_file()}
         assert after==expected,'Verifier source changed'
         report['original_source_before_after_verified']=True
-        report['answer_files_unchanged_by_grader']=True
-        for path,expected_hash in report['pre_grade_file_hashes'].items():
-            if native:
-                if file_sha(root_file(state,path))!=expected_hash:report['answer_files_unchanged_by_grader']=False
-            else:
-                p=run(cli+['exec','--user','0',container,'sha256sum',path],20)
-                if p.returncode or not p.stdout.startswith(expected_hash):report['answer_files_unchanged_by_grader']=False
+        report['answer_files_unchanged_by_grader']=all(file_sha(root_file(state,p))==h for p,h in report['pre_grade_file_hashes'].items())
     except Exception as e:report['infrastructure_error']=type(e).__name__+': '+str(e)
     finally:
         try:
-            if native:
-                cleaned=run(['sudo','-n','rm','-rf',str(work),str(runtime)],120)
-                report['temporary_paths_removed']=not work.exists() and not runtime.exists()
-                if cleaned.returncode:report['cleanup_errors'].append(cleaned.stdout[-1000:])
-                report['packages_remain_only_in_temporary_provider_environment']=True
-            else:
-                run(cli+['rm','-f',container],30)
-                run(cli+['image','rm','-f',state['image_id']],60)
-                pid=runtime/'d.pid'
-                if pid.is_file():
-                    value=pid.read_text().strip();assert value.isdigit()
-                    cmdline=Path('/proc/'+value+'/cmdline')
-                    if cmdline.exists():
-                        assert ('--data-root='+str(work/'data')).encode() in cmdline.read_bytes()
-                        run(['sudo','-n','kill','-TERM',value],10)
-                for _ in range(20):
-                    if not pid.is_file() or not Path('/proc/'+value+'/cmdline').exists():break
-                    time.sleep(.5)
-                # Do not force removal of an OS-owned busy mount; remove only our files.
-                cleaned=run(['sudo','-n','rm','-rf',str(work),str(runtime)],120)
-                report['temporary_paths_removed']=not work.exists() and not runtime.exists()
-                if cleaned.returncode:report['cleanup_errors'].append(cleaned.stdout[-1000:])
+            cleaned=run(['sudo','-n','rm','-rf',str(work),str(runtime)],120)
+            report['temporary_paths_removed']=not work.exists() and not runtime.exists()
+            if cleaned.returncode:report['cleanup_errors'].append(cleaned.stdout[-1000:])
+            report['packages_remain_only_in_temporary_provider_environment']=True
+            for name in ['original_verifier.tar.gz','grade_config.json.gz','case_config.json.gz']:
+                if (base/name).exists():(base/name).unlink()
         except Exception as e:report['cleanup_errors'].append(str(e))
     (out/'score_receipt.json').write_text(json.dumps(report,indent=2))
     manifest={'input_sha256':config['verifier_archive_sha256'],'files':{p.relative_to(base).as_posix():file_sha(p) for p in out.rglob('*') if p.is_file() and not p.is_symlink()}}
@@ -120,6 +74,6 @@ def main():
     with zipfile.ZipFile(delivery/'deliverables.zip','w',compression=zipfile.ZIP_DEFLATED) as archive:
         for name in manifest['files']:archive.write(base/name,name)
         archive.writestr('manifest.json',json.dumps(manifest))
-    print(json.dumps(report));print('SBP_NATIVE_ZIP_SHA256:'+file_sha(delivery/'deliverables.zip'));print('[OUTPUT] '+str(delivery/'deliverables.zip'))
+    print(json.dumps(report));print('SBP_NATIVE_ZIP_SHA256:'+file_sha(delivery/'deliverables.zip'));print('[OUTPUT] '+str((delivery/'deliverables.zip').resolve()))
 
 if __name__=='__main__':main()

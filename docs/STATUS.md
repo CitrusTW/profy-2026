@@ -38,6 +38,8 @@
 
 ## Excel 开发题的最新进展
 
-weighted-gdp-calc 的 no-skills 已完成有效原评分: 27/27, reward1.0, 155489求解 tokens. 原版 xlsx skill 组正在串行运行, 新的第10轮 Evolution 尚未开始. [实际数字、原回答及评分修复证据](../results/xlsx-family/README.md).
+weighted-gdp-calc 三组已完成, 原评分都通过27/27. no-skills 用155489 solver tokens, 原版 xlsx 用248816. 第10轮进化版用291458, 未采用. 第11轮两次分别109337 / 133351, 均27/27, 比原版少56.06% / 46.41%, 已冻结. 这道题用于开发与选版, 不能证明独立泛化.
 
-官方 image 的镜像文件已经下完, 但云端解压超时. 当前改用已验证的轻量 Profy Debian 文件任务环境; 与官方 Ubuntu image 的差别、实际软件版本和原评分源文件指纹均留档. 仍是4道题完成完整三组, 87题全库未完成.
+目前共5道题完成三组. [实际数字、原回答、进化记录和评分修复证据](../results/xlsx-family/README.md). 87题全库未完成.
+
+接下来只在父版 SKILL.md 和附属资源匹配的题上使用冻结的第11轮, 不用评测题答案改 skill. 新的轻量文件任务 adapter 使用 Profy Linux uid1000 执行原题, 原评分在答案冻结后运行. 本机不保存镜像或大环境. 原生 Debian 与官方 Ubuntu image 不同, 软件版本、路径映射及依赖差异逐次留档.

@@ -1,0 +1,29 @@
+{
+  "purpose": "Adapter engineering only; no skill changes or benchmark answers",
+  "model": "openai/gpt-6.1-sol",
+  "request_sha256": "0778ec9a324dfd1e451485213d9365904011c25b08fa33ae342da91263239b26",
+  "usage": {
+    "prompt_tokens": 17166,
+    "completion_tokens": 16964,
+    "total_tokens": 34130,
+    "cost": 0.2125535,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 17163,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.2125535,
+      "upstream_inference_prompt_cost": 0.0429135,
+      "upstream_inference_completions_cost": 0.16964
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 1628,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "questions_verifier_gold_included": false
+}
