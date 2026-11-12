@@ -23,3 +23,5 @@
 2026-11-12T09:52:18.995903+00:00 Pass1 task shock-analysis-demand: [{"condition": "with-CogniLife-skills", "repeat": 1, "status": "scored", "reward": 0.0, "tokens": 885699}]; Profy USD unknown; OpenRouter newcalls0.
 
 2026-11-12T10:03:05.128619+00:00 Pass1 task shock-analysis-supply: [{"condition": "no-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 73630}, {"condition": "with-CogniLife-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 100269}, {"condition": "with-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 104019}]; Profy USD unknown; OpenRouter newcalls0.
+
+2026-11-12T10:18:15.108967+00:00 Pass1 task reserves-at-risk-calc: [{"condition": "no-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 44468}, {"condition": "with-CogniLife-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 44912}, {"condition": "with-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 44956}]; Profy USD unknown; OpenRouter newcalls0.

@@ -1,0 +1,26 @@
+{
+  "label": "with-CogniLife-skills",
+  "task": "reserves-at-risk-calc",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 278.424,
+  "output_received": false,
+  "native_zip_sha256": null,
+  "file_hashes": {},
+  "skill_sha256": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+  "target_skill_read_verified": false,
+  "skill_hash_marker_verified": false,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": true,
+  "tokens": {
+    "input_tokens": 44760,
+    "output_tokens": 152,
+    "total_tokens": 44912,
+    "cache_read_tokens": 27566,
+    "cache_write_tokens": 17185,
+    "llm_turns": 3,
+    "tool_calls": 2
+  },
+  "profy_cost_usd": null
+}
