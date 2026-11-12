@@ -1,0 +1,45 @@
+{
+  "instruction": "I-005 B",
+  "epoch": 1794488850.812921,
+  "before_sha256": "64f9e1871595157e3d106ed0f73b6ee098f53bb3c171d3346858cf2e6b258801",
+  "after_sha256": "94f598b027566411e55bdad9c3badecd421755657fe87df12967c7699569392f",
+  "affected_task": "shock-analysis-supply",
+  "checks": [
+    {
+      "condition": "no-skills",
+      "offline_I005_checks_pass": true,
+      "supplied_skills": [],
+      "assigned_md_sha256": null,
+      "external_skill_reads_or_activations": false,
+      "tool_search_count": 1,
+      "new_API_calls": 0,
+      "source_NIGHT_sha256": "b94de7b0e7e67911f98734601b161b4ce0e4244ffe56b68ffbc5a9622e637e07"
+    },
+    {
+      "condition": "with-skills",
+      "offline_I005_checks_pass": true,
+      "supplied_skills": [
+        "xlsx"
+      ],
+      "assigned_md_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "external_skill_reads_or_activations": false,
+      "tool_search_count": 1,
+      "new_API_calls": 0,
+      "source_NIGHT_sha256": "751992ea18084777ad2844c6ddf6bb1510517e81801933b81ca86e313cf51443"
+    },
+    {
+      "condition": "with-CogniLife-skills",
+      "offline_I005_checks_pass": true,
+      "supplied_skills": [
+        "xlsx"
+      ],
+      "assigned_md_sha256": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+      "external_skill_reads_or_activations": false,
+      "tool_search_count": 1,
+      "new_API_calls": 0,
+      "source_NIGHT_sha256": "db8da42a442ecff67d4c1f8717e91ac6b0d3c5dbcd06908bd00305c18888704d"
+    }
+  ],
+  "solver_inputs_skills_answers_verifier_unchanged": true,
+  "native_activation_note": "Only supplied file reads are version/hash attributable; unverified native skill tool activation remains forbidden."
+}

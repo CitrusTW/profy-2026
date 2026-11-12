@@ -1,0 +1,18 @@
+--- I003/study.py
++++ I005/study.py
+@@ -151,14 +151,9 @@
+         config=json.loads((folder/'case_config.json').read_text())
+         for e in events:
+             if e.get('type')=='tool_call.in_progress' and forbidden_skill_read(e,not config['skills'],self.names):raise RuntimeError('Read of an unsupplied skill')
++            if e.get('type')=='tool_call.in_progress' and e.get('tool_name')=='skills_read':raise RuntimeError('Native skill activation is not the supplied benchmark file')
+             if e.get('type')=='tool_call.in_progress' and e.get('tool_name') not in ['read','bash','awaitbash','skills_read','tool_search']:raise RuntimeError('Unexpected solver tool')
+             if e.get('type')=='tool_call.in_progress' and e.get('tool_name')=='bash' and host_command_kind(e['parameters']['command'].strip()) not in ['setup','container']:raise RuntimeError('Unapproved host shell command')
+-        if any(e.get('type')=='tool_call.in_progress' and e.get('tool_name')=='tool_search' for e in events):
+-            for e in events:
+-                if e.get('type')!='tool_call.in_progress':continue
+-                params=e.get('parameters') or {}
+-                if e.get('tool_name')=='skills_read' or (e.get('tool_name')=='read' and Path(params.get('file_path','')).name=='SKILL.md'):
+-                    raise RuntimeError('I003 tool_search condition: skill read in trace, supplementary grading requires clarification')
+         ready=setup_receipts(events,self.strings)
+         recovery=folder/'SETUP_CONTEXT_RECOVERY.json'
+         if not ready and recovery.exists():ready=[json.loads(recovery.read_text())]
