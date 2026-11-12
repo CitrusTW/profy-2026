@@ -1,0 +1,12 @@
+{
+  "files_sha256": {
+    "REPORT.md": "88bc06e66a7cd048db5bff7d589d826e3b28b0dd637b89d0cf493c2b5f98acbc",
+    "逐题完整性记录.jsonl": "133def4ceaab41ecff0c15df0cd9a0acbe209ad6e7c2f2ce183e96e34be2a71d",
+    "audit_results.json": "ddd6640f9b5ac71f9618e43e3bba76e89b9969b9b5afba65ea8c655d10a5aedd",
+    "每组每类问题及全部task_id.csv": "c862c3c2a9c4577face3f2e593118ccec683896b3d9bf926b5133b6c2874adc6",
+    "audit_85_input_output_20261112.py": "dac4d9dcf99e69af3713241df34052eb79a963bf108d74811d447285ddaddbdc"
+  },
+  "github_result_path": "results/2026-11-12_85task_input_output_audit",
+  "github_code_path": "experiments/paper_judge_audit/audit_85_input_output_20261112.py",
+  "scope": "Offline audit only; no keys or received company source included; no new judge calls; pending user review."
+}

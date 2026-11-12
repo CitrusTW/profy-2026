@@ -2,6 +2,7 @@
 
 | 从哪里开始 | 做什么 | 当前状态 |
 | --- | --- | --- |
+| [85题输入/输出审计](paper_judge_audit/audit_85_input_output_20261112.py) | 只读检查三组保存记录, 输出数量、task_id和未知项; 不调用API | 已运行, [看报告](../results/2026-11-12_85task_input_output_audit/REPORT.md) |
 | [云端原题 runner](skillsbench_cloud_runner_20261111/README.md) | 在 Profy 云端用原 Dockerfile 做题、再用原评分检查 | 新的小范围原型, 正在验证, 还不是已完成的87题入口 |
 | [原方法适配代码](skillsbench_evolution_20261110/) | native_evolution.py 调用收到的原 Evolution 组件; run.py 保留 Profy 请求和轨迹 | threejs、economic-dispatch、mesh-analysis 已有记录 |
 | [原方法核对](native_method_feasibility_20261110/) | 论文方法、收到的代码、API 和缺口对照 | 查方法边界 |

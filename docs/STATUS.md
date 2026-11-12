@@ -1,5 +1,15 @@
 # 当前做到哪里
 
+## 2026-11-12: 当前任务停在审计报告
+
+[85题三组生成输入和输出审计](../results/2026-11-12_85task_input_output_audit/REPORT.md)已经完成, 含每类数量、全部 task_id、255条逐题记录和源文件 hashes. 本轮无新增模型调用、无修复、无重跑、无论文修改. 缺原始生成请求和 finish_reason 的记录标为无法核实, 不当作正常通过. Full 的平台调用标签/proxy标签和 proxy源码直接加入checkpoints的差异均单独列出, 不把代码推测当作历史请求.
+
+新 judge 调用暂停, 旧 Moonshot 凭据不使用, 等待确认审计结果. SkillsBench Evolution 也保持暂停. 以下保留此前实验快照供查历史; 其中“正在运行/继续进化”等旧描述不代表当前后台状态.
+
+---
+
+# 此前实验快照
+
 | 已完成三组的题 | 版本 | 看结果 |
 | --- | --- | --- |
 | Threejs 两题 | 第5轮 | [报告](../results/run-04-up-to30/full-compatible-two/REPORT.md) |

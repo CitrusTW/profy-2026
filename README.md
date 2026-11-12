@@ -2,6 +2,10 @@
 
 这里保存三组 SkillsBench 实验的代码、skills 和实际结果. 先看结果, 想了解怎么做的再往下找.
 
+## 2026-11-12: 85 题完整性审计已完成
+
+[先看审计报告](results/2026-11-12_85task_input_output_audit/REPORT.md). Raw / Expert Prompt / Full 共255份保存记录按同一标准检查. 原始生成请求和 finish_reason 缺失的地方标为无法核实, 不算通过. 新 judge 和 SkillsBench 进化均暂停, 等待审计确认; 本轮没有修复、重跑或改论文.
+
 ## 从哪里开始
 
 | 想知道什么 | 点这里 |
