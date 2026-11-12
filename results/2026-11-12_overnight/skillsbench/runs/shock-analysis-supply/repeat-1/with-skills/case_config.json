@@ -1,0 +1,37 @@
+{
+  "task": "shock-analysis-supply",
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "input_sha256": "baa41dcdf94e26712d48a9265224fa50b4a51a10d9b43cfe14f4bf837ff7a1e3",
+  "transport": [
+    {
+      "name": "task_environment.tar.gz",
+      "size": 44031,
+      "sha256": "baa41dcdf94e26712d48a9265224fa50b4a51a10d9b43cfe14f4bf837ff7a1e3"
+    }
+  ],
+  "input_manifest": {
+    "Dockerfile": {
+      "sha256": "8fbcb5f76cb44d3c995b003643920fc1927da42211a4d981819e3de358303373",
+      "size": 502,
+      "mode": 420
+    },
+    "test-supply.xlsx": {
+      "sha256": "633dc9a157273c9f643c2b267440c57babb4b1cc8b5f1e3ee8e930001834e097",
+      "size": 62018,
+      "mode": 420
+    }
+  },
+  "skills": [
+    "xlsx"
+  ],
+  "target_skill": "xlsx",
+  "parent_md_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "skill_hashes": {
+    "bench_skills/xlsx/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+    "bench_skills/xlsx/SKILL.md": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+    "bench_skills/xlsx/recalc.py": "f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409"
+  },
+  "native_file_runtime": true,
+  "native_package_versions": {},
+  "expected_input_hashes": null
+}
