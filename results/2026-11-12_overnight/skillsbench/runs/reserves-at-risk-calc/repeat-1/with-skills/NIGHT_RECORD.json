@@ -1,0 +1,27 @@
+{
+  "task": "reserves-at-risk-calc",
+  "repeat": 1,
+  "condition": "with-skills",
+  "historical_reused": false,
+  "score": {},
+  "runner_limit": false,
+  "infrastructure_failure": true,
+  "condition_valid": false,
+  "tokens": {
+    "input_tokens": 44810,
+    "output_tokens": 146,
+    "total_tokens": 44956,
+    "cache_read_tokens": 27599,
+    "cache_write_tokens": 17202,
+    "llm_turns": 3,
+    "tool_calls": 2
+  },
+  "solver_elapsed_sec": 276.649,
+  "end_to_end_elapsed_sec": 309.9211027622223,
+  "cost_usd": "unknown",
+  "skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "exception": "RuntimeError: No unique setup receipt; no grading call started",
+  "folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/launch-03/runs/reserves-at-risk-calc/repeat-1/with-skills",
+  "tokens_comparable": false,
+  "status": "infrastructure_failure"
+}
