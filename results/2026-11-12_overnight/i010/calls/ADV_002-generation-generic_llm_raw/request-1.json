@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "河北物理类，568分，位次32000，想学计算机相关专业，不想去偏远地区，可以接受民办但优先公办"}], "temperature": 0.7, "max_tokens": 4096}
