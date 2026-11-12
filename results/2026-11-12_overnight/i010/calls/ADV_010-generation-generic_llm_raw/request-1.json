@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "我们公司做B2B工业传感器，想开拓欧洲市场，客单价高但决策链长，如何制定数字营销+展会策略？年预算100万人民币"}], "temperature": 0.7, "max_tokens": 4096}
