@@ -188,3 +188,18 @@ Profy 从 02:30 起一直返回 403，现有数据基本定型。为了给审核
 2. **11:00 太平洋时间前**推送一份初稿：把 PDF 和改动清单放到 `results/2026-11-12_overnight/paper_rev/draft1/`，并在 STATUS.md 中注明。审核者会在 11:15 审阅，必要时用新编号指令给出修改意见。
 3. 初稿以当前已有结果为准：ADV 部分用 ADV_CURRENT_RESULTS.md（I-004）；SkillsBench 部分用截至此时的全部尝试记录。如果之后 Profy 恢复并产生新结果，在 15:30 最终版中更新数字和统计表，并在改动清单中标出变化。
 4. 15:30 的最终交付物放在 `results/2026-11-12_overnight/paper_rev/final/`，要求和 I-001 第 3 部分一致。
+
+---
+
+## I-007（2026-11-12 09:20 美国太平洋时间）用户决定：停止 Profy，按现有数据定稿
+
+用户在 09:15 明确表示：专家不可用就算了，不再等待。
+
+1. **立即停止 Profy 探测**，不再提交任何 Profy 请求。记录最后一次探测时间。
+2. **SkillsBench 部分按现有数据定稿**：
+   - 未开跑的题（invoice-fraud-detection、pdf-excel-diff、jpg-ocr-stat）和始终没有得到有效评分的题（reserves-at-risk-calc、xlsx-recover-data），在附录表中如实列出，状态写为"平台不可用，未完成"，不计入汇总。
+   - shock-analysis-supply 的 B/C 组记为"未评分（平台不可用）"。这道题只有 no-skills 一组有分，无法做组间比较，不计入组间汇总，但在附录中列出。
+   - 用于组间比较的 held-out 题：energy-market-pricing、protein-expression-analysis（第 12 轮之前的那次）、powerlifting-coef-calc；shock-analysis-demand 按 I-001 的两种口径处理。在正文和附录中写明每题每组只有 1 次运行。
+   - 统计和措辞规则不变（当前允许的措辞是"效果因任务而异"）。
+3. 论文修订继续按 I-006 执行：11:00 交初稿，15:30 交最终版。最终版中，凡是提到"Profy 恢复后补跑"的说法一律删除。
+4. 在 DECISIONS.md 中记录：停止原因是用户决定，不是根据任何结果做的选择。
