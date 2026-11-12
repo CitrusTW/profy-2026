@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "我做跨境电商卖女装，主要在Shopee和TikTok Shop，想从泰国拓展到印尼和菲律宾，月预算3万人民币，请帮我分析可行性和具体打法"}], "temperature": 0.7, "max_tokens": 4096}
