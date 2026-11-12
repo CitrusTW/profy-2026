@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "帮我制定一个3个月内让品牌在美国市场销售额突破1000万美金的方案，预算5万人民币"}], "temperature": 0.7, "max_tokens": 4096}
