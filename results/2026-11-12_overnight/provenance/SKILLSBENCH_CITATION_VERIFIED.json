@@ -1,0 +1,18 @@
+{
+  "source_url": "https://arxiv.org/abs/2602.12670",
+  "checked_utc": "2026-11-12T11:24:00Z",
+  "title": "SkillsBench: Benchmarking How Well Agent Skills Work Across Diverse Tasks",
+  "first_three_authors": [
+    "Xiangyi Li",
+    "Yimin Liu",
+    "Wenbo Chen"
+  ],
+  "additional_authors_present": true,
+  "arxiv_id": "2602.12670",
+  "version": "v4",
+  "year": 2026,
+  "first_submitted": "2026-02-13",
+  "version_date": "2026-06-14",
+  "bibtex_author_form": "Li, Xiangyi and Liu, Yimin and Chen, Wenbo and others",
+  "purpose": "Verified citation metadata only; no benchmark performance figures imported."
+}
