@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T10:00:42.116594-08:00
+- Updated (America/Los_Angeles): 2026-11-12T10:01:12.590780-08:00
 - Last applied instruction: I-010 (direct user message; newer than coordination I009).
-- Latest read: I-009; checkpoint: I010 completed_generation_ADV_004-generation-generic_llm_expert_prompt
+- Latest read: I-009; checkpoint: I010 completed_generation_ADV_005-generation-generic_llm_raw
 - Current work: manuscript draft2 per I008/I009, existing evidence only; no more Profy requests.
 - Next: restore valid original structure and archive proxy85 numbers unchanged; add clean ADV figure and deployment lessons. Draft2 by12:30PST, final by15:30; no waiting for resubmission.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
@@ -65,5 +65,5 @@
 ## I010 same-declared-model ADV control
 - Direct user I010 accepted; PREREG_I010 frozen before paid calls. Exact OpenRouter ID deepseek/deepseek-v4-flash; no substitution. Provider/revision match to historical Full unknown.
 - USD10 hard actual-receipt ceiling; initial estimate4.418166196721311USD, not observed expense. All Profy requests remain stopped.
-- Latest phase/state: {"updated_utc": "2026-11-12T18:00:41.464238+00:00", "phase": "completed_generation_ADV_004-generation-generic_llm_expert_prompt", "last_job": null, "calls": 8, "known_actual_usd": "0.0043541704", "unknown_cost_calls": 0, "reserved_unknown_cost_ceiling_usd": "0", "terminal": null, "elapsed_seconds": 256.4087438583374, "full_regenerated": false}
+- Latest phase/state: {"updated_utc": "2026-11-12T18:01:11.758670+00:00", "phase": "completed_generation_ADV_005-generation-generic_llm_raw", "last_job": null, "calls": 9, "known_actual_usd": "0.0046591804", "unknown_cost_calls": 0, "reserved_unknown_cost_ceiling_usd": "0", "terminal": null, "elapsed_seconds": 286.7031829357147, "full_regenerated": false}
 - Use complete-pipeline ADV template including its uncertainty warning; standalone template differs and historical requests unavailable.40 new baselines,60 fresh rubrics,80counterbalanced pairs. Full unchanged.

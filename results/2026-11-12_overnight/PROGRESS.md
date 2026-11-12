@@ -133,3 +133,5 @@ I004 original-order next-run probe: {"instruction": "I-004", "started_epoch": 17
 2026-11-12T17:58:36.168183+00:00 I010 baseline task ADV_002 processed; calls=4, receipt USD=0.0014019213, unknown-cost calls=0.
 
 2026-11-12T17:59:29.548799+00:00 I010 baseline task ADV_003 processed; calls=6, receipt USD=0.0019682613, unknown-cost calls=0.
+
+2026-11-12T18:00:44.651348+00:00 I010 baseline task ADV_004 processed; calls=8, receipt USD=0.0043541704, unknown-cost calls=0.
