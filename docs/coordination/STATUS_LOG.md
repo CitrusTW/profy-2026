@@ -145,3 +145,5 @@
 - 2026-11-12T19:53:33.420305+00:00: Completed exact abstract replacement and layout-only Figure1 resizing; body6/total27, Overleaf copy verified; original and OpenReview untouched; no new paid calls.
 
 - 2026-11-12T20:03:05.684689+00:00: Organized repo navigation and evidence index;2933file inventory,148links checked;raw experiments unchanged,no paid calls.
+
+- 2026-11-12T20:10:02.350027+00:00: 用户明确要求整理main,已只更新main README: 全部3个远端分支用途、实验分支各主要目录及重复子目录命名、coordination文件用途和跨分支链接.69个目标路径按Git树核对通过.main提交ec8a5a3;实验数据、论文和coordination分支未改,无模型调用.
