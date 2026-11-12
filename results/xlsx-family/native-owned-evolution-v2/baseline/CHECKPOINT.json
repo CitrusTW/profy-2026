@@ -1,0 +1,156 @@
+{
+  "round": null,
+  "status": null,
+  "stop_optimization": null,
+  "evolution_inputs_development_only": null,
+  "validation_used_for_selection": null,
+  "results": {
+    "with-skills": {
+      "task": "weighted-gdp-calc",
+      "reward": 1.0,
+      "passed": 27,
+      "tests": 27,
+      "tokens": 208843,
+      "elapsed_sec": 274.566,
+      "condition_valid": true
+    }
+  },
+  "artifact_hashes": [
+    {
+      "path": "with-skills/ORIGINAL_SCORE.json",
+      "bytes": 45022,
+      "sha256": "c55790fd16dbfc35d157d0691092b87c00463e5f879c44b2732a842ea0d1ed91"
+    },
+    {
+      "path": "with-skills/SOLVER_RESULT_BEFORE_GRADING.json",
+      "bytes": 833,
+      "sha256": "749f23d9019377f27ecc7d6030ef505f029d66036b99d5f3720a729bfa5608ec"
+    },
+    {
+      "path": "with-skills/case_config.json",
+      "bytes": 1261,
+      "sha256": "c2bbeb4f97b651d0c636a01dbfd973c4fb09be188daffd3258b489394af258ab"
+    },
+    {
+      "path": "with-skills/events.jsonl",
+      "bytes": 245049,
+      "sha256": "5ae7614f71a39ead19aa1dd0ca9605344e893130f0cbb2fc24c1413ac07d5833"
+    },
+    {
+      "path": "with-skills/grading-only/SOLVER_RESULT_BEFORE_GRADING.json",
+      "bytes": 1574,
+      "sha256": "654b6e160e321c871664951a91d0648da7b672a464be931b40fff820b161e07d"
+    },
+    {
+      "path": "with-skills/grading-only/deliverables.zip",
+      "bytes": 118803,
+      "sha256": "3c94a86756b13b43364777853bae1791a30a2d1d8016105a6bc9cf79fce1e164"
+    },
+    {
+      "path": "with-skills/grading-only/events.jsonl",
+      "bytes": 48331,
+      "sha256": "c0490ee96951eea863a498359528f2982c6dbfea65525c1ca065a6d04bd2383f"
+    },
+    {
+      "path": "with-skills/grading-only/manifest.json",
+      "bytes": 812,
+      "sha256": "2fed17ae2eb12d2eca81145c330643134d6242511e6a58346a8975b376c3c833"
+    },
+    {
+      "path": "with-skills/grading-only/output/dependency_receipt.json",
+      "bytes": 41078,
+      "sha256": "dab0faaa77a4890338b28e88ffa1aa9c01a1d8d9b324adf5a226a4f783c6d637"
+    },
+    {
+      "path": "with-skills/grading-only/output/fs/root/gdp.xlsx",
+      "bytes": 147361,
+      "sha256": "3222f2e8338bc58c2e4681ce49ef253cc77327fdb208e0abcf0681642b5ffca9"
+    },
+    {
+      "path": "with-skills/grading-only/output/fs/root/work/final.xlsx",
+      "bytes": 147361,
+      "sha256": "3222f2e8338bc58c2e4681ce49ef253cc77327fdb208e0abcf0681642b5ffca9"
+    },
+    {
+      "path": "with-skills/grading-only/output/fs/root/work/formulas.json",
+      "bytes": 10465,
+      "sha256": "3b5187a07b6a4c77ae936fd34d006e169d644fa0caea0aff590dbd0645a940bd"
+    },
+    {
+      "path": "with-skills/grading-only/output/fs/root/work/recalculated.xlsx",
+      "bytes": 84896,
+      "sha256": "0182b39fe581bf63b2006d831f2837c3972503fbc3efbfcf3df76cb5c62fdc30"
+    },
+    {
+      "path": "with-skills/grading-only/output/original_verifier_stdout.log",
+      "bytes": 7397,
+      "sha256": "2ce5cfc0b7e9cf0a5e0dd3504f0f1e96582464165e5fe53653cb49fb102ce144"
+    },
+    {
+      "path": "with-skills/grading-only/output/score_receipt.json",
+      "bytes": 45022,
+      "sha256": "c55790fd16dbfc35d157d0691092b87c00463e5f879c44b2732a842ea0d1ed91"
+    },
+    {
+      "path": "with-skills/grading-only/request.json",
+      "bytes": 1438,
+      "sha256": "e386f13dd79ac372b12e01af2d5e31df24aed09011bdf62b245bc0747eca65b0"
+    },
+    {
+      "path": "with-skills/grading-only/result.json",
+      "bytes": 1748,
+      "sha256": "dfd833b66592511a56447a54d0110df907af5373d3f047286811ae5a71e20b3d"
+    },
+    {
+      "path": "with-skills/grading-only/run_summary.json",
+      "bytes": 1574,
+      "sha256": "654b6e160e321c871664951a91d0648da7b672a464be931b40fff820b161e07d"
+    },
+    {
+      "path": "with-skills/grading-only/usage.json",
+      "bytes": 2935,
+      "sha256": "af9cc20bb25c723ebf3c1b04a29e62462af67eada19d477bb3c2943012025420"
+    },
+    {
+      "path": "with-skills/native_input_hashes.json",
+      "bytes": 90,
+      "sha256": "ff37ad50befa0722243fca0d372769e094067ccf3b408a140ed4c91d55713c79"
+    },
+    {
+      "path": "with-skills/request.json",
+      "bytes": 4240,
+      "sha256": "eb5803c6daf7e13d1622456bac3f5c350f03b9468530550236a1086f134beac5"
+    },
+    {
+      "path": "with-skills/result.json",
+      "bytes": 48828,
+      "sha256": "72a95d39a3269c0cbb622d963e3719dae4dfd44004584b6d915e06d7340dfe03"
+    },
+    {
+      "path": "with-skills/run_summary.json",
+      "bytes": 833,
+      "sha256": "749f23d9019377f27ecc7d6030ef505f029d66036b99d5f3720a729bfa5608ec"
+    },
+    {
+      "path": "with-skills/session.json",
+      "bytes": 99,
+      "sha256": "472f94d64795e4091dbc3f5c3c98e4ff07da1aa18051473b23f0f04141b2fd84"
+    },
+    {
+      "path": "with-skills/started.json",
+      "bytes": 896,
+      "sha256": "2ad06ea3a73cc7262d46982a4f4aaf57b7e5448bbad4bf7170c6321f2ae9a9a7"
+    },
+    {
+      "path": "with-skills/uploads.json",
+      "bytes": 1613,
+      "sha256": "62d72902784f7d9868f0f6bbd700d80b7081f33059b50db9fdf9d5f9c2a8b46a"
+    },
+    {
+      "path": "with-skills/usage.json",
+      "bytes": 6615,
+      "sha256": "0c2124eda77e71659c5373fc2c31937a6929471c98d4b679e0b1346833d7b0af"
+    }
+  ],
+  "bundle_sha256": "4c7994b6fa4c07488a6fd0e41b8a6d3ae396f51bebe9e6ea52e4015ade65eb40"
+}
