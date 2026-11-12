@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "我想做出海，帮我制定个营销方案"}], "temperature": 0.7, "max_tokens": 4096}
