@@ -1,0 +1,62 @@
+{
+  "task": "powerlifting-coef-calc",
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "input_sha256": "c8e81d79fa62733959c36ed12f4f0f869eb8576524f831988fd5356fdf56b173",
+  "transport": [
+    {
+      "name": "task_environment.tar.gz",
+      "size": 13939,
+      "sha256": "c8e81d79fa62733959c36ed12f4f0f869eb8576524f831988fd5356fdf56b173"
+    }
+  ],
+  "input_manifest": {
+    "Dockerfile": {
+      "sha256": "87cf1da3fa2003b9e0573ef76af7865480f5bb34a3c8033dc8d5b01a38e14ee5",
+      "size": 805,
+      "mode": 420
+    },
+    "data-readme.md": {
+      "sha256": "9250ae7e917c85dc775f2af8ec3d67af8513dd4163e80d034e405c5365181ee8",
+      "size": 9076,
+      "mode": 420
+    },
+    "openipf_cleaned.xlsx": {
+      "sha256": "68b725cb3dca83e3d7e579283ca8b51f187cf4b447f14b7f0428678a5a8d1489",
+      "size": 10370,
+      "mode": 420
+    }
+  },
+  "skills": [
+    "powerlifting",
+    "senior-data-scientist",
+    "xlsx"
+  ],
+  "target_skill": "xlsx",
+  "parent_md_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "skill_hashes": {
+    "bench_skills/powerlifting/SKILL.md": "8767b92aa10814cc7504b78c5c053d68925a1d33e1ac7c68e7f4d46f353949d6",
+    "bench_skills/senior-data-scientist/SKILL.md": "1e6974ea60451055b3b11ff8b12d6bbb8ef90ab2bf973830718271c8ed53de06",
+    "bench_skills/senior-data-scientist/references/experiment_design_frameworks.md": "4bb669406f3a3e2482bfc775e328643bda472a334dea7cdcb41c1b0bb87b4673",
+    "bench_skills/senior-data-scientist/references/feature_engineering_patterns.md": "6657db3b24fc5fc721f4a29ce6be0ff0a6da1dae92aca67d56945ecc74858cd0",
+    "bench_skills/senior-data-scientist/references/statistical_methods_advanced.md": "2ad183277b8e57a307085ca7265258d31a08761bc5d3f5844a33dbc79a40a48b",
+    "bench_skills/senior-data-scientist/scripts/experiment_designer.py": "5d7c456612717a10d00a420eaa214e665dd89c7ed9f3f5c4e26bd7b8f140f961",
+    "bench_skills/senior-data-scientist/scripts/feature_engineering_pipeline.py": "0d163ee74177498ab0ff86a5374ba965076edb8a5f4a273aa01dc9e87540700c",
+    "bench_skills/senior-data-scientist/scripts/model_evaluation_suite.py": "761843bd69e60acfd40a18c06f7e939dc7c31d63ec64ba4545c894adbb4c8313",
+    "bench_skills/xlsx/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+    "bench_skills/xlsx/SKILL.md": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+    "bench_skills/xlsx/recalc.py": "f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409"
+  },
+  "native_file_runtime": true,
+  "native_package_versions": {
+    "python3": "3.13.5-1",
+    "python3-pip": "25.1.1+dfsg-1",
+    "python3-venv": "3.13.5-1",
+    "libreoffice": "4:25.2.3-2+deb13u6",
+    "gnumeric": "1.12.57-1.1+b1",
+    "curl": "8.14.1-2+deb13u7"
+  },
+  "expected_input_hashes": {
+    "/root/data/openipf.xlsx": "68b725cb3dca83e3d7e579283ca8b51f187cf4b447f14b7f0428678a5a8d1489",
+    "/root/data/data-readme.md": "9250ae7e917c85dc775f2af8ec3d67af8513dd4163e80d034e405c5365181ee8"
+  }
+}

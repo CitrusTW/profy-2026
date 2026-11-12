@@ -20,3 +20,4 @@
 - 2026-11-12T02:25:28.899560-08:00 run-powerlifting-coef-calc-r1-no-skills; last_applied=I-002; latest_seen=I-003; new_completed_runs=8; USD=unknown.
 - 2026-11-12T02:32:30.420262-08:00 I003-ADV-preregistered-before-paid-calls; last_applied=I-002; latest_seen=I-003; new_completed_runs=8; USD=unknown.
 - 2026-11-12T02:32:33.499490-08:00 run-powerlifting-coef-calc-r1-with-skills; last_applied=I-002; latest_seen=I-003; new_completed_runs=9; USD=unknown.
+- 2026-11-12T02:39:58.859144-08:00 run-powerlifting-coef-calc-r1-with-CogniLife-skills; last_applied=I-002; latest_seen=I-003; new_completed_runs=10; USD=unknown.

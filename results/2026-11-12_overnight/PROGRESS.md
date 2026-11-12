@@ -25,3 +25,11 @@
 2026-11-12T10:03:05.128619+00:00 Pass1 task shock-analysis-supply: [{"condition": "no-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 73630}, {"condition": "with-CogniLife-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 100269}, {"condition": "with-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 104019}]; Profy USD unknown; OpenRouter newcalls0.
 
 2026-11-12T10:18:15.108967+00:00 Pass1 task reserves-at-risk-calc: [{"condition": "no-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 44468}, {"condition": "with-CogniLife-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 44912}, {"condition": "with-skills", "repeat": 1, "status": "infrastructure_failure", "reward": null, "tokens": 44956}]; Profy USD unknown; OpenRouter newcalls0.
+
+I003 ADV judge: primary jobs processed10/140, valid9, failed calls3, received-cost sum USD0.318060, unknown-cost calls0, conservative reserved spent ceiling USD1.007576; not an observed expense estimate.
+
+I003 ADV judge: primary jobs processed20/140, valid18, failed calls6, received-cost sum USD0.627180, unknown-cost calls0, conservative reserved spent ceiling USD2.104000; not an observed expense estimate.
+
+I003 ADV judge: primary jobs processed30/140, valid27, failed calls9, received-cost sum USD0.913192, unknown-cost calls0, conservative reserved spent ceiling USD3.113600; not an observed expense estimate.
+
+2026-11-12T10:39:57.141642+00:00 Pass1 task powerlifting-coef-calc: [{"condition": "no-skills", "repeat": 1, "status": "scored", "reward": 1.0, "tokens": 180811}, {"condition": "with-CogniLife-skills", "repeat": 1, "status": "scored", "reward": 1.0, "tokens": 230840}, {"condition": "with-skills", "repeat": 1, "status": "scored", "reward": 1.0, "tokens": 235561}]; Profy USD unknown; OpenRouter newcalls0.
