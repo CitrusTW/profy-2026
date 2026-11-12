@@ -1,9 +1,9 @@
 # STATUS
 
-- 更新时间（美国太平洋时间）：2026-11-12T01:55:49.343126-08:00
+- 更新时间（美国太平洋时间）：2026-11-12T01:56:46.319254-08:00
 - 已执行到的最后一条指令编号：I-002
 - 最新读到的指令：I-002; INSTRUCTIONS SHA256 97157a76de8ed7e0b9adb6f713e4fa1ed38c44ba3b10d8c143bd18301756c769
-- 触发节点：run-shock-analysis-supply-r1-no-skills
+- 触发节点：run-shock-analysis-demand-r1-with-CogniLife-skills
 - 当前任务：xlsx第11轮冻结版、8题全串行广度优先; 不再进化。当前首题冻结版正在运行或后续三组顺序运行, 详见运行表。
 - 下一步：每题三组第一遍后再补第二遍/第三遍; shock-demand只补冻结版、不重跑旧基线。I-002截止13:30 PST, 15:30交付。
 - 时间实现：当前launch-03不强杀; 结束后I-002延续控制器跳过已完成记录、补齐最多第三遍; 截止13:30 PST。
@@ -33,7 +33,7 @@
 - 本轮原PREREG已按用户直接修正变更为8题广度优先; I-001/I-002再接管, 变更保留在DECISIONS.md和预注册修正, 不覆盖旧版本。
 - launch-01本机DNS受限, 72次客户端提交没有创建session或模型调用; 不算实验run, 无0分。
 - launch-02修正前已开始一次重复shock-demand no-skills; 收到用户不重跑的修正后中止, 不计成绩, 保留466072个已观察tokens消耗及完整轨迹, 美元unknown。
-- 原shock-demand no-skills评分回执与stdout测试计数不同, 原reward0不变; 原版中止无评分, 不将中止tokens与完成tokens比较。
+- shock-demand原no-skills回执3passed/2failed, stdout5passed/2failed; 本夜冻结版回执0passed/5failed, stdout7failed。两份原reward均0不变, receipt与stdout分列, 不修改verifier。原版中止无评分, 不比较中止tokens。
 - 原24轮上限保持不变。原始limit无评分, 两种口径只在分析时处理。
 - 未接通capability-gap classifier、通用semantic applicability和native promotion; 外部adapter不是官方Docker。xlsx11进化/当前求解为gpt-6.1-sol; 首个threejs历史反例进化为gpt-4.1, 需要单独披露。
 - STATUS/STATUS_LOG和PROGRESS是协议明确要求更新的管理文件; 原论文、已有实验记录、已发布数据结果不覆盖。
