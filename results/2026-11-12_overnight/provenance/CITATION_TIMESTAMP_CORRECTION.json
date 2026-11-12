@@ -1,0 +1,10 @@
+{
+  "original_record": "SKILLSBENCH_CITATION_VERIFIED.json",
+  "original_sha256": "9aee5344696d4a155379aa4fcda74f9cd86f38edf9d18628b553ba162de6c2f7",
+  "original_checked_utc_field_reliable": false,
+  "reason": "A manually typed checked_utc value was not sourced from the clock. Do not use it as a measured fetch timestamp.",
+  "record_file_written_utc_from_filesystem": "2026-11-12T11:19:41.276135+00:00",
+  "exact_web_fetch_utc": "unknown",
+  "citation_title_authors_arxiv_version_unaffected": true,
+  "correction_recorded_utc": "2026-11-12T13:45:56.349157+00:00"
+}

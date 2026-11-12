@@ -1,0 +1,9 @@
+{
+  "epoch": 1794488936.286767,
+  "old_pid": 66764,
+  "all_existing_probes_completed": true,
+  "serial_lock_free_verified": true,
+  "new_controller": "profy_probe_i004_v2.py",
+  "cadence_preserved": true,
+  "reason": "Use I005 grade checks and current status writer; solver/skill/model/budget unchanged"
+}

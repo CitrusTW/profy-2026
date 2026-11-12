@@ -1,0 +1,36 @@
+{
+  "values": {
+    "total_original_output_records": 85,
+    "platform_adv_output_records": 20,
+    "excluded_nonADV_full_count": 65,
+    "pairwise_output_character_limit": 3000,
+    "initial_judge_max_tokens": 1024,
+    "final_rubric_max_tokens": 4096,
+    "runner_model_turn_cap": 24,
+    "runner_tool_call_cap": 48,
+    "runner_solver_seconds_cap": 1600,
+    "max_configured_repeats": 3,
+    "solver_model_label": "gpt-6.1-sol",
+    "first_threejs_evolution_model": "openai/gpt-4.1",
+    "frozen_xlsx_round": 11
+  },
+  "source_sha256": {
+    "full_outputs": "a53a0d434a4755ca15b2b016f52d5183d0a532c323be849fb496d1017aab45b1",
+    "pairwise_jobs": "76769fa27268aa2e836d3813b1cae4951b87ad80f7e063aaf0b2d7a455f9a4c3",
+    "initial_budget": "290096bf2413d898a779bf6862a5599c748ef28f9338380c83db8880c955ab8b",
+    "final_budget": "56b9d3839103d6c4a58609b339af92e14f23afb0f9d123e9658db523563e95e6",
+    "runner_request": "c5d95995fbb3914ff6335887ef7dc36fd89a4670c684671f73d081c2c1e55c7c",
+    "runner_source": "3f7301a3f4a81a3262b97457e8842aedfef0ee1cbc5924a5e0fd5714d79f933e",
+    "first_evolution_request": "5efbcd23b530adc5d2a2d04f1910809b70a51ac5a78241399c955d4ea41cb358"
+  },
+  "source_files": {
+    "full_outputs": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/04_\u9879\u76ee\u6570\u636e\u4e0e\u4ee3\u7801/Profy-main/knowledge/benchmarks/profybench-v1/results/outputs_profy_expert_full.jsonl",
+    "pairwise_jobs": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/adv_rejudge_i003/JOBS.json",
+    "initial_budget": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/I003_ADV_BUDGET_PLAN.json",
+    "final_budget": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/adv_rejudge_i004_rubric4096/BUDGET_PLAN.json",
+    "runner_request": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/launch-03/runs/powerlifting-coef-calc/repeat-1/no-skills/request.json",
+    "runner_source": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/run_breadth_i003.py",
+    "first_evolution_request": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-10_skillsbench_evolution/run-01/evolution/request_1.json"
+  },
+  "note": "Derived configuration/provenance values, not performance estimates; original output classification is documented in I003."
+}
