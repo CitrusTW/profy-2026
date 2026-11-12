@@ -1,0 +1,26 @@
+{
+  "label": "with-skills",
+  "task": "powerlifting-coef-calc",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 275.167,
+  "output_received": false,
+  "native_zip_sha256": null,
+  "file_hashes": {},
+  "skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "target_skill_read_verified": true,
+  "skill_hash_marker_verified": true,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": true,
+  "tokens": {
+    "input_tokens": 233128,
+    "output_tokens": 2433,
+    "total_tokens": 235561,
+    "cache_read_tokens": 199887,
+    "cache_write_tokens": 33211,
+    "llm_turns": 10,
+    "tool_calls": 9
+  },
+  "profy_cost_usd": null
+}
