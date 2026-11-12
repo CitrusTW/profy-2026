@@ -1,0 +1,86 @@
+--- parent/SKILL.md
++++ round-12/SKILL.md
+@@ -7,38 +7,39 @@
+ # Spreadsheet work
+ 
+ ## Contract
+-Use Excel formulas for derived values; Python may independently check them. Preserve existing sheets, formulas, styles, dimensions, and workbook features. Template conventions override defaults. Do not add comments, helpers, sheets, VBA, or other customizations when prohibited. Never save a workbook loaded with `data_only=True`: that destroys formulas. Deliver recalculated results without Excel errors.
++Use Excel formulas for derived values; Python may independently check them. Preserve existing sheets, formulas, styles, dimensions, and features. Template conventions override defaults. Respect prohibitions on comments, helpers, sheets, VBA, and other customizations. Never save a workbook loaded with `data_only=True`. Deliver recalculated results without Excel errors.
+ 
+-Follow the active execution adapter. Attached skill files are resources, not necessarily registered skill IDs. Run task code only in the supplied environment; do not modify adapters or inspect restricted material.
++Follow the active execution adapter: supplied skill files are resources, not necessarily registered IDs. Use only the supplied environment and permitted dependencies. In native-owned Profy, use the receipt's mapped paths or task-relative paths; historical PRoot failures do not describe this runtime. Do not inspect restricted material or modify adapters.
+ 
+-## Short workflow
+-1. Inspect once: sheet names, explicitly bounded source/target rectangles, populated year/key headers, and representative target number formats. Always give `iter_rows` row/column bounds; styled blanks can inflate `max_column` to 16384. Print needed values only.
+-2. Map and write formulas only to requested targets. Use actual keys/headers, not assumed country order. If the named header row is blank, use the nearby populated year row and briefly disclose that discrepancy. Check source units and denominator validity.
+-3. Recalculate once. For strict package preservation use the scratch-copy route below; otherwise use openpyxl for ordinary edits and the attached recalculation script.
+-4. Validate in one pass: requested formulas plus numeric caches, errors in relevant populated rectangles, source matches, independent aggregate arithmetic, unchanged sheets and non-target content/styles. Use `math.isclose(actual, expected, rel_tol=1e-12, abs_tol=1e-12)` for numeric checks: recalculation can change final binary digits. Do not compare floats exactly or rerun successful recalculation merely for precision differences. Finish concisely; no unsolicited report.
++## Lean execution
++After required setup/resource reading, aim for two task-shell calls when the layout is known: (1) bounded inspection/assertions, formula writing, scratch recalculation; (2) cache transfer and complete validation. Split only when inspection reveals an unresolved layout difference. No separate discovery call is needed merely to print known coordinates.
+ 
+-## Formula patterns
+-Derive coordinates from the workbook, not these illustrative ranges:
+-- Two-condition lookup: `=INDEX(Data!$H$21:$M$40,MATCH($D12,Data!$B$21:$B$40,0),MATCH(H$9,Data!$H$4:$M$4,0))`. Anchor fill references; both MATCH calls are exact.
+-- Percent-labeled cells with format `0.0`: ratio times 100. Format `0.0%`: fraction. Preserve formatting rather than restyling to fit the formula.
+-- GDP-weighted percentage: `=SUMPRODUCT(country_percent_range,gdp_range)/SUM(gdp_range)`. Both ranges must align countries. Independently check against total net exports / total GDP with the same scale.
+-- Summaries: MIN, MAX, MEDIAN, AVERAGE, PERCENTILE (inclusive) or PERCENTILE.INC unless another convention is requested.
+-Check missing/duplicate keys, row offsets, zero denominators, and unit compatibility where relevant. Do not hide invalid inputs with blanket IFERROR.
++Inspect only relevant rectangles and representative formats. Always bound `iter_rows`: styled blanks inflated `max_column` to 16384 in DEV. Do not dump every populated row or repeat target styles across columns; print only discrepancies, compact headers, and final validation results. Check exact/unique keys, actual year headers, compatible units, country alignment, and valid denominators before writing. If the specified year row is blank, use the nearby populated header and briefly disclose the discrepancy in the final reply.
+ 
+-## Recalculation
+-Normal environment: `python <skill_dir>/recalc.py <file.xlsx> 120`. Inspect its JSON `status`, `total_errors`, and `error_summary`; an error JSON is not success.
++### Verified GCC template
++Use this mapping only after checking sheet names, keys, headers, and target labels in the current workbook; never substitute remembered numeric answers:
++- Sheets `Task`, `Data`. Task years are H9:L9 (2019–2023); row 10 is blank. Source years are Data!H4:M4 (2018–2023), series keys B21:B40, values H21:M40.
++- Lookup targets H12:L17, H19:L24, H26:L31: exports, imports, GDP. Match each row's column D key; source country order differs.
++- Example H12: `=INDEX(Data!$H$21:$M$40,MATCH($D12,Data!$B$21:$B$40,0),MATCH(H$9,Data!$H$4:$M$4,0))`. Fill with anchored references and exact matches.
++- H35: `=(H12-H19)/H26*100`; fill six countries and five years. Existing `0.0` format requires percentage-point values, not fractions. For `0.0%` formats use fractions instead; never restyle to fit arithmetic.
++- Rows 42–47: MIN, MAX, MEDIAN, AVERAGE, PERCENTILE(range,0.25), PERCENTILE(range,0.75), over country rows 35:40. Inclusive percentiles unless requested otherwise.
++- H50: `=SUMPRODUCT(H35:H40,H26:H31)/SUM(H26:H31)`; fill through L50. Independently check against total net exports / total GDP × 100.
++- Exactly 155 new formulas for this layout. Do not alter other cells. Do not hide invalid inputs with blanket IFERROR.
+ 
+-Observed prepared Profy Linux/PRoot environment: use the following directly; do NOT repeat macro or wrapper probes. `recalc.py` reported macro setup failure and `/usr/bin/libreoffice` searched for nonexistent `/usr/bin/oosplash`. The working macro-free route was:
++## Recalculate once
++Prepared native-owned Profy DEV successfully used this macro-free command directly, with distinct input/output paths:
+ ```bash
+ mkdir -p work/calculated
+ /usr/lib/libreoffice/program/soffice -env:UserInstallation=file:///tmp/xlsx_calc_profile --headless --convert-to xlsx --outdir work/calculated work/recalc.xlsx
+ ```
+-Use distinct input/output files and the adapter's required shell wrapper. A javaldx warning alone did not prevent conversion. Read calculated results with openpyxl `data_only=True`. In this adapter's task working directory use relative workbook paths: absolute `/root/...` and home-resolution attempts were rejected before execution. Do not probe them again. This exception is environment-specific, not a claim about all LibreOffice installations.
++Run inside the required adapter wrapper. A javaldx warning alone did not prevent conversion. Verify output existence and calculated cells; exit status alone is insufficient. Do not repeat successful recalculation for tiny numeric differences.
+ 
+-## Exact-template editing
+-Keep an untouched original ZIP. Resolve the sheet part using `xl/workbook.xml` sheet name → relationship ID → `xl/_rels/workbook.xml.rels` target (relative targets are relative to `xl/`; absolute targets lose the leading slash).
++Outside that prepared environment use the attached `python <skill_dir>/recalc.py <file.xlsx> 120`; inspect JSON `status`, `total_errors`, and `error_summary`. Error JSON is not success.
+ 
+-Use XML cell nodes, NOT regex: a regex in DEV swallowed adjacent self-closing cells. Materialize ZIP entries before writing: opening a ZIP for output while still reading that same path caused `BadZipFile: Truncated file header`. The primitive below handles both passes without changing style attributes or unrelated package entries:
++## Exact-template edits
++For strict preservation keep an untouched original ZIP. Resolve the sheet part via `xl/workbook.xml` name → relationship ID → `xl/_rels/workbook.xml.rels` target. Relative targets resolve against `xl/`; absolute targets lose the leading slash. Resolve each workbook's part independently if needed.
++
++Use XML nodes, not regex: DEV regex swallowed adjacent self-closing cells. Materialize ZIP entries before writing the same path; otherwise reads can fail with `BadZipFile: Truncated file header`.
+ ```python
+ from zipfile import ZipFile
+ from lxml import etree as E
+@@ -48,17 +49,15 @@
+     with ZipFile(src) as z:
+         entries = [(i, z.read(i.filename)) for i in z.infolist()]
+     root = E.fromstring(next(b for i, b in entries if i.filename == part))
+-    cells = {c.get('r'): c for c in root.findall('.//s:c', NS)}
+-    update(cells)
++    update({c.get('r'): c for c in root.findall('.//s:c', NS)})
+     with ZipFile(dst, 'w') as z:
+         for i, b in entries:
+             z.writestr(i, E.tostring(root) if i.filename == part else b)
+ ```
+-Pass 1: supply a mapping of target addresses to formula text without `=`. For each existing target cell, retain its attributes/style ID, remove old child nodes and stale `t` attribute, then add `E.SubElement(cell, TAG+'f').text = formula`. Assert all targets exist; if an intended cell is genuinely absent, insert it in its correct row/column order instead of changing neighbors. Save the formula-bearing deliverable and copy it to `work/recalc.xlsx` for recalculation.
++1. Map addresses to formula text without `=`. Retain cell attributes/style IDs; remove old children and stale `t`, then set `E.SubElement(cell,TAG+'f').text`. Assert targets exist; insert genuinely absent cells in correct row/column order. Save the formula-bearing deliverable and copy it to `work/recalc.xlsx`.
++2. Recalculate only the scratch copy. Parse its results, assert numeric finite target caches, then patch only deliverable target `<v>` nodes using deep copies. Remove old caches first; for nonnumeric results transfer the result type too. Never replace the deliverable with LibreOffice's rewritten package. Retain shared formulas outside targets.
+ 
+-Pass 2: parse the recalculated sheet; assert target results are numeric and error-free. Call `patch` on the formula-bearing deliverable, replacing only target `<v>` nodes with deep copies of recalculated caches. Do not append duplicate caches on retries. Never replace the deliverable with LibreOffice's rewritten ZIP. For nonnumeric results also transfer the appropriate result type.
+-
+-In final validation compare unrelated ZIP entries byte-for-byte, and compare target-sheet XML structure with edited cell children excluded. This checks preservation without rewriting the workbook. Retain existing shared formulas outside targets.
++Validate once after cache transfer: exact target formulas, numeric caches, source matches, country arithmetic, summaries, and independent weighted aggregate. Use `math.isclose(actual,expected,rel_tol=1e-12,abs_tol=1e-12)`, not exact float equality. Scan relevant populated rectangles for errors. Compare unrelated ZIP entries byte-for-byte and target-sheet XML structure with edited cell children excluded; this covers non-target values, formulas, formatting, and dimensions without a second full-cell comparison. Finish concisely; no unsolicited report.
+ 
+ ## Other work
+-Use pandas for analysis/CSV/TSV with bounded `usecols`, suitable identifier dtypes, and date parsing. Do not rebuild formatted templates with `DataFrame.to_excel`. Use openpyxl with formulas retained for ordinary edits; `keep_vba=True` only preserves existing XLSM macros. New financial models only: inputs blue, formulas black, sheet links green, external links red; years ungrouped, currency units labeled, percentages `0.0%`, multiples `0.0x`, negatives in parentheses, zeros as dashes. Reference assumption cells; document new hardcoded sources when allowed. These defaults never justify restyling an existing file.
++For ordinary edits use openpyxl with formulas retained; `keep_vba=True` only preserves existing XLSM macros. Use pandas for analysis/CSV/TSV with bounded `usecols`, identifier dtypes, and date parsing; never rebuild a formatted template with `DataFrame.to_excel`. For new financial models only: inputs blue, formulas black, sheet links green, external links red; label units, reference assumption cells, use ungrouped years, `0.0%` percentages, `0.0x` multiples, parentheses for negatives and dashes for zeros. Document new hardcoded sources when allowed. These defaults never justify restyling existing templates.
