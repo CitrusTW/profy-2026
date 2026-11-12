@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_010",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "3249f83dc2b8346e1ee516a2da3b4657a5167a74ca1638693b5aa85ebfcc983a"
+  },
+  "calculated_cost_ceiling_usd": "0.139264",
+  "job_id": "ADV_010-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "23ef3bf59525878620f3f1d3750b289fe1811d6035f4e9edb64ad7a435ae4e8a",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484932-OPspnv06Gl0bziyprwLz",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:02:11.942829+00:00",
+  "completed_utc": "2026-11-12T12:02:18.407061+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_010\n- Task Family: ADV\n- Variant: complete\n- Risk Level: medium\n- User Input: 我们公司做B2B工业传感器，想开拓欧洲市场，客单价高但决策链长，如何制定数字营销+展会策略？年预算100万人民币\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析B2B工业传感器欧洲市场特点\n  - [must_have] 数字营销渠道策略（LinkedIn/Google Ads等）\n  - [should_have] 展会选择和参展策略\n  - [should_have] 线索培育和转化流程设计\n  - [must_have] 合规要求（CE认证/GDPR）\n\n## System Output:\n要制定针对B2B工业传感器的数字营销和展会策略，以开拓欧洲市场，需要采取一个综合的方法来确保你的预算得到最有效的利用。以下是一些结构化的建议：\n\n### 1. 市场研究与目标定位\n- **市场分析**：研究欧洲市场，特别是你感兴趣的国家，了解当地的工业传感器市场规模、增长趋势、主要竞争对手和潜在客户。\n- **目标客户**：确定关键客户群体，例如制造业、能源行业、汽车行业等，了解他们的具体需求和购买行为。\n\n### 2. 数字营销策略\n- **搜索引擎优化（SEO）**：优化网站内容，确保在搜索引擎中针对相关关键词有良好的排名。\n- **搜索引擎营销（SEM）**：通过Google Ads等平台进行关键词广告投放，吸引潜在客户。\n- **内容营销**：创建高质量的内容，如白皮书、案例研究和博客文章，以建立行业权威。\n- **社交媒体营销**：在LinkedIn等专业社交平台上建立品牌存在感，与行业内的决策者建立联系。\n- **电子邮件营销**：建立邮件列表，发送定期通讯，提供有价值的信息，并推广产品。\n- **在线广告**：利用Facebook、Instagram等平台进行定向广告投放。\n- **视频营销**：制作产品介绍视频和客户见证视频，提高品牌可信度。\n\n### 3. 展会策略\n- **展会选择**：选择与你的工业传感器相关的欧洲行业展会，如工业自动化展、智能制造展等。\n- **展位设计**：设计吸引人的展位，突出产品特点和优势。\n- **现场演示**：准备现场演示，让参观者亲身体验产品的功能和效果。\n- **客户邀约**：提前通过邮件、电话等方式邀请潜在客户参加展会。\n- **后续跟进**：展会结束后，及时跟进潜在客户，提供更多信息和报价。\n\n### 4. 预算分配\n- **数字营销**：根据市场研究结果，合理分配预算到SEO、SEM、内容营销等各个渠道。\n- **展会预算**：包括展位租赁、展位设计、物流、人员差旅等费用。\n- **人员培训**：确保销售和市场团队了解产品特性，能够应对客户的各种问题。\n\n### 5. 效果评估与调整\n- **KPI设定**：设定关键绩效指标，如网站流量、询盘数量、展会参与度等。\n- **数据分析**：定期分析数据，评估营销活动的效果，根据数据反馈调整策略。\n- **风险管理**：考虑到市场变化和预算限制，制定风险应对计划。\n\n### 6. 合规与本地化\n- **法律法规**：确保所有营销活动遵守欧洲的法律法规，特别是数据保护法规（如GDPR）。\n- **本地化**：考虑语言和文化差异，对营销材料进行本地化处理。\n\n### 总结\n制定这样的策略需要细致的市场研究和数据支持，以及灵活的预算管理。建议与专业的市场研究机构合作，以获得更准确的市场数据和趋势分析。同时，考虑到B2B决策链长的特点，需要有耐心和持续性的营销努力来建立品牌信任和客户关系。在实施过程中，不断评估和调整策略以适应市场变化。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "5c8996ab30aa7a13d1238303b7cfefd6875b9bcc4e8bde2dba5e0a546b6a555e",
+  "raw_response_text": "\n         \n\n         \n{\"id\":\"gen-1794484932-OPspnv06Gl0bziyprwLz\",\"object\":\"chat.completion\",\"created\":1794484932,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 1,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 3\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output is well structured, but it is a generic marketing template and barely addresses the user's actual constraints. It does not split the 1M RMB budget, names no specific European trade shows (e.g., Hannover Messe, SPS Nuremberg, Sensor+Test), and offers no real lead-nurturing or ABM design for a long decision chain. Coverage of the checkpoints is thin: European market traits get only a generic placeholder, CE certification is missing entirely (only GDPR appears), and it recommends Facebook/Instagram, which fit poorly with industrial B2B buyers.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm assessing the output, which comes across as generic. Looking at the checkpoints: the European B2B industrial sensor market analysis is generic rather than specific, and while LinkedIn and Google Ads come up, Facebook and Instagram are weak channels for this audience. The trade show picks don't name the relevant events like Hannover Messe, SPS Nuremberg, or Sensor+Test, lead nurturing is minimal, and GDPR is the compliance point noted.\\n\\nI'm scoring the output on several dimensions: completeness and specificity look weak, actionability is middling, and evidence grounding is low. The budget allocation for the 1M RMB is missing, and personalization is weak, so I'll tag those two issues.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm assessing the output, which comes across as generic. Looking at the checkpoints: the European B2B industrial sensor market analysis is generic rather than specific, and while LinkedIn and Google Ads come up, Facebook and Instagram are weak channels for this audience. The trade show picks don't name the relevant events like Hannover Messe, SPS Nuremberg, or Sensor+Test, lead nurturing is minimal, and GDPR is the compliance point noted.\\n\\nI'm scoring the output on several dimensions: completeness and specificity look weak, actionability is middling, and evidence grounding is low. The budget allocation for the 1M RMB is missing, and personalization is weak, so I'll tag those two issues.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSzgoKEAgTGAI4AUIIdGhpbmtpbmcSDB5OM5hRFWwg5SCitBoMXvdkaph1JL65LP7nIjAxl594ZqQ2L99HeEOuIaLKMsi3dDeMV9rMdxyYpr61tRCYw2loY19GPnn1FnVtov0q6wmeaekRMBtIqWPrKON6d8ydAcMvwgDUxqqlgO8ijMKfJZUU7q8wujLkf1v8og3YMVMd0nXW+ey/yu2yqab82PGnpzcdQ1+wxVrtxkOHQZrVoJShB2ZaIG1onBYR+CkSIaMeuKEEryuW7KQy+qOe378S+px0VoruK8NxiG29d+hecF1yYqWKas8LcF9OF9C3wHLG6wlzlDJpxWHIS0pc9aHQbF7N8ZpRSp6hGslRqpK6TsVFI7TxL7m4/9hAUmE/r0pBSlN1QnZRVJ+2UCB7a9vxQF4VTDbmrtJ4CV+DpvGxMAQbjWKHqXl0t7S0GcicgWaAnGhWlweZrw6BBSwXpwAjF55+JqriZbk+QLpvi9dEc59F1nuVI4mzqLD+Icrv5Cp/Ld0IXqcqY/RNG4/dgGlH0gWJzYzQnstIpwfWmPUSc4+wnRApz7FQWRWuquy+OSpIoKgxyBzOmJC7ir+8aCeJ6bsA730pjsKox7Hes/hmOlp93XMp3wK6WAjIXNqtIvl31C+mdBGCgxHdaXJ7jeXLI6jK2LRoVKq7jDsbGn5kUoKUrxb9t3JUQIHgzXXCkZ6AM6Maf6BxaLiU916udRJq78POVnxPB3oT/bES2fJaxVYkrYlfU65zeOP9LMdHPVjDw08AvNLCAtjxy88YH/rKIf44b81rWb20z3HI9Unjk4SSSYXX8pg4Ey3Wk06CaMGzO9Rw1GuLofDbouFi854/QIdxDlMZjR4+Q0tKxP0lB7rbgW34sVFJnKzLI7B4hDgULSa+GohurTwtco3DUCA6ixlWRIiUrZmeRUSqBf9UL6JfhYGCtDB9glD9q2uPx6aphDKmYuXGmhKtl8uOA3cdw9h8/NK4bLEAe3AgZImSSPx5geHv4BdNA5DWsB7EH3A+x2W7p+MX2egS1T6TPgX/R1cQym/VbAjuQSdU8mvzgqiRrG8coZiv0tcCzv5iH20yArlbM7asvsRAHM0QoAKVyD7O7EC1UZQXV4bq217VIxdZOEdRTPL/hbNXF+Rg/Ujeu5zLBu4nn8tJDxYu8m6OhmzmfpdGrhYDT9sz0KNDGreNHGz0nWcBulV4G2/je2rkJdkhEusGu9yVRPuvugdAHfiwIkQRKNoiY6WTKKs+BFgpUb4inWh1lw4TvolBc5IHIMflqRJ/jhPueoJaLq93uQNGEY5G/MzLXrzEn2z4/Tgm49fYq+mzjc4NkO0AsJcjds30qr8i+pTHfSKfVDUMRKc6L/RPLU/ojLMSomnLBXQ0N87M8kBMvG+KubmZw1Trd50mesJ/w+GcOvhhO8BVpXdCNJlFbU6DgLWSn/7Lj1Gr7Dl74GSKJDFt2BFQau1bZr+oOQKgJZbOET9oRzbt9x7ELdBXh7PdtCae+Y443gmfhWrvBwDaO1oYw/SglD2RSyJIwnCPozGckyd3bXWaW+61CUbSWJ2nAPbQMX4A6bc65awhWhhzh87OqHs78laTfovOOd0V22nzaSasmczpJHjUI5YKMwitpHfSSoW5Q2tlBWwoIRdNfleHBUGtGnsfFW32Ceir+D3gfiBGg1VZaebSmDPo50krgA9vy/VuKwic6YdH/KIQ/p55I9z4wlhlGKjlgQBd6sPtO8PjSwe0s2PEw9eYaARK5QqjL4tb2SsI61UiP/GqdfY4YI6NjK1TATv9n3zF9KOHLhgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1991,\"completion_tokens\":640,\"total_tokens\":2631,\"cost\":0.020764,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.020764,\"upstream_inference_prompt_cost\":0.007964,\"upstream_inference_completions_cost\":0.0128},\"completion_tokens_details\":{\"reasoning_tokens\":311,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 1,
+      "actionability": 2,
+      "coherence": 4,
+      "safety_boundary": 3,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 3
+    },
+    "error_tags": [
+      "weak_personalization",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output is well structured, but it is a generic marketing template and barely addresses the user's actual constraints. It does not split the 1M RMB budget, names no specific European trade shows (e.g., Hannover Messe, SPS Nuremberg, Sensor+Test), and offers no real lead-nurturing or ABM design for a long decision chain. Coverage of the checkpoints is thin: European market traits get only a generic placeholder, CE certification is missing entirely (only GDPR appears), and it recommends Facebook/Instagram, which fit poorly with industrial B2B buyers."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1991,
+    "completion_tokens": 640,
+    "total_tokens": 2631,
+    "cost": 0.020764,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.020764,
+      "upstream_inference_prompt_cost": 0.007964,
+      "upstream_inference_completions_cost": 0.0128
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 311,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.020764,
+  "elapsed_sec": 6.464251756668091,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

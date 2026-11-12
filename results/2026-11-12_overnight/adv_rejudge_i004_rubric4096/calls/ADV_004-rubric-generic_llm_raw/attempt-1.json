@@ -1,0 +1,80 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_004",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "a38e81fa00f7a7c141c3abd9384b62de408eb905a14fe725d237057d55f44cbc"
+  },
+  "calculated_cost_ceiling_usd": "0.130288",
+  "job_id": "ADV_004-rubric-generic_llm_raw",
+  "prompt_sha256": "1843abcca3aa3ee90e15aeef1454075cd59466fc4c7bc18a6f354ab56b246c94",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484766-qW2fD7DxDrP9mpE3wRLo",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:59:26.070127+00:00",
+  "completed_utc": "2026-11-12T11:59:35.528576+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_004\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 山东综合改革，480分，位次22万，选科物化生，想上个好专科或者冲一下本科，目标方向是护理或检验\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析该分数段本专科录取可能性\n  - [must_have] 推荐护理/检验相关院校\n  - [should_have] 区分本科和专科层次\n  - [should_have] 说明选科匹配情况\n  - [must_have] 声明风险并建议查询官方系统\n\n## System Output:\n根据您提供的分数和位次信息，您在山东省综合改革中的成绩是480分，位次22万，选科为物理、化学和生物。您希望选择护理或检验专业，同时考虑专科或本科院校。以下是一些建议：\n\n1. **查询历年分数线**：首先，您可以查询历年山东省护理或检验专业的专科和本科录取分数线，以了解您的分数是否接近或超过这些分数线。\n\n2. **专科院校**：如果您的分数更接近专科院校的录取分数线，可以考虑以下几所山东省内较为知名的专科院校：\n   - 山东医学高等专科学校\n   - 山东中医药高等专科学校\n   - 潍坊医学院\n\n3. **本科院校**：如果您的分数接近本科院校的录取分数线，可以尝试申请以下几所本科院校：\n   - 潍坊医学院\n   - 滨州医学院\n   - 济宁医学院\n\n4. **考虑地区和学校特色**：在选择学校时，除了考虑分数线，还应该考虑学校的地理位置、学校特色、专业实力等因素。\n\n5. **专业选择**：护理和检验专业在医学领域都非常重要。护理专业更侧重于病人的日常护理和健康教育，而检验专业则侧重于实验室检测和诊断技术。\n\n6. **考虑未来就业**：在选择专业时，也要考虑毕业后的就业前景。护理专业毕业生通常在医院、社区卫生服务中心等地工作，而检验专业毕业生则可能在医院检验科、疾病控制中心、检验检疫机构等地工作。\n\n7. **咨询专业人士**：如果可能，可以咨询已经在这些领域工作的专业人士，了解行业动态和职业发展路径。\n\n8. **准备调剂**：如果本科院校竞争激烈，也可以考虑在填报志愿时选择“服从调剂”，以增加被录取的机会。\n\n请注意，每年的录取分数线可能会有所变化，具体的录取情况还需参考当年的招生计划和分数线。建议您密切关注教育考试院发布的最新信息，并结合自己的兴趣和职业规划做出选择。祝您选择顺利，未来学业有成！\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "0bc2232790a43794a8b772470dfba1901c187b3e8b91f0591c3b332ea35bc505",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794484766-qW2fD7DxDrP9mpE3wRLo\",\"object\":\"chat.completion\",\"created\":1794484766,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 2,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"hallucinated_evidence\\\", \\\"weak_personalization\\\", \\\"overclaiming\\\", \\\"missing_input_not_handled\\\"],\\n  \\\"rationale\\\": \\\"The output never analyzes what 480 points and a rank of about 220,000 mean for 本科 versus 专科 admission. It does not address subject-combination (选科) eligibility. It lists institutions without score or rank evidence. It also contains factual errors: 潍坊医学院 (an undergraduate university, now 山东第二医科大学) appears under both 专科 and 本科. The '服从调剂' advice does not apply to Shandong's 专业+院校 volunteer model, where 调剂 does not exist. The risk disclaimer is generic and only vaguely points to the exam authority, with no concrete reachable or safety-tier guidance for the user's rank.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking whether a 480 score in Shandong 2024 is plausible for the rank I'd guessed, comparing it against the 2023 special-type and ordinary undergraduate cutoffs. At 480 I'm above the 本科 line, which points to a lower-tier public or a private undergraduate school. The draft doesn't analyze any of that yet.\\n\\nI'm noticing the draft recommends 潍坊医学院 as a 专科 when it's actually an undergraduate school, and it lists that school under both categories. The \\\"服从调剂\\\" wording is also a problem, since Shandong's new gaokao system uses a 专业+院校 model with no 调剂, so that advice is simply wrong. Beyond these errors, the response never assesses admission probability or checks the 选科 match, and its risk statement is generic.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking whether a 480 score in Shandong 2024 is plausible for the rank I'd guessed, comparing it against the 2023 special-type and ordinary undergraduate cutoffs. At 480 I'm above the 本科 line, which points to a lower-tier public or a private undergraduate school. The draft doesn't analyze any of that yet.\\n\\nI'm noticing the draft recommends 潍坊医学院 as a 专科 when it's actually an undergraduate school, and it lists that school under both categories. The \\\"服从调剂\\\" wording is also a problem, since Shandong's new gaokao system uses a 专业+院校 model with no 调剂, so that advice is simply wrong. Beyond these errors, the response never assesses admission probability or checks the 选科 match, and its risk statement is generic.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1530,\"completion_tokens\":775,\"total_tokens\":2305,\"cost\":0.02162,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.02162,\"upstream_inference_prompt_cost\":0.00612,\"upstream_inference_completions_cost\":0.0155},\"completion_tokens_details\":{\"reasoning_tokens\":402,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 2,
+      "safety_boundary": 2,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "hallucinated_evidence",
+      "weak_personalization",
+      "overclaiming",
+      "missing_input_not_handled"
+    ],
+    "rationale": "The output never analyzes what 480 points and a rank of about 220,000 mean for 本科 versus 专科 admission. It does not address subject-combination (选科) eligibility. It lists institutions without score or rank evidence. It also contains factual errors: 潍坊医学院 (an undergraduate university, now 山东第二医科大学) appears under both 专科 and 本科. The '服从调剂' advice does not apply to Shandong's 专业+院校 volunteer model, where 调剂 does not exist. The risk disclaimer is generic and only vaguely points to the exam authority, with no concrete reachable or safety-tier guidance for the user's rank."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 775,
+    "total_tokens": 2305,
+    "cost": 0.02162,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02162,
+      "upstream_inference_prompt_cost": 0.00612,
+      "upstream_inference_completions_cost": 0.0155
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 402,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.02162,
+  "elapsed_sec": 9.458491086959839,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

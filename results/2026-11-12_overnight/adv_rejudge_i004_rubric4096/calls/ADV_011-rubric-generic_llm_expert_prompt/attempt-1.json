@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_011",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "75e771489714e51ef717e5cf411e5ccc70481234f7c77d21cece47c82f6ee75f"
+  },
+  "calculated_cost_ceiling_usd": "0.134832",
+  "job_id": "ADV_011-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "f4ce5ccd8ec20bef3c679ebde536b187f70ef338fef723f11f96c9275e170b73",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484957-47eGTJ1nzC3VdKQBS4Jk",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:02:37.530289+00:00",
+  "completed_utc": "2026-11-12T12:02:43.567883+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_011\n- Task Family: ADV\n- Variant: missing_info\n- Risk Level: medium\n- User Input: 我想做出海，帮我制定个营销方案\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 追问产品类型和目标市场\n  - [must_have] 追问预算和时间线\n  - [must_have] 不在信息不全时给出具体方案\n\n## System Output:\n制定一个出海营销方案需要考虑多个因素，包括目标市场、产品特性、竞争对手、预算和时间线等。以下是一个基于这些因素的营销方案框架：\n\n1. **市场研究**\n   - **目标市场选择**：确定哪些国家或地区是潜在市场，考虑因素包括市场需求、经济状况、文化差异和贸易政策。\n   - **消费者分析**：了解目标市场的消费者行为、偏好和购买力。\n   - **竞争分析**：分析竞争对手的产品、价格、推广和分销策略。\n\n2. **产品定位**\n   - **产品适应性**：根据目标市场的特点调整产品，包括语言、包装、品牌名称等。\n   - **价值主张**：明确产品的独特卖点（USP）和消费者为何选择你的产品。\n\n3. **营销策略**\n   - **定价策略**：根据成本、竞争和市场接受度设定价格。\n   - **推广策略**：选择合适的推广渠道，如数字营销、公关活动、社交媒体、线下活动等。\n   - **分销策略**：确定是通过直销、当地分销商还是跨境电商平台销售。\n\n4. **数字营销计划**\n   - **搜索引擎优化（SEO）**：优化网站和内容，提高在搜索引擎中的排名。\n   - **搜索引擎营销（SEM）**：使用付费广告提高在线可见性。\n   - **社交媒体营销**：在目标市场的流行社交平台上建立品牌存在感。\n   - **内容营销**：创造有价值的内容吸引和保留消费者。\n\n5. **本地化营销**\n   - **语言翻译**：确保所有营销材料和沟通都是本地语言。\n   - **文化适应**：调整营销活动以适应当地文化和习俗。\n\n6. **合作伙伴和分销**\n   - **寻找当地合作伙伴**：与当地分销商、零售商或代理商合作，以更好地进入市场。\n   - **建立分销网络**：确保产品可以高效地分发到消费者手中。\n\n7. **预算和时间线**\n   - **预算规划**：根据预期回报制定合理的营销预算。\n   - **时间线规划**：设定关键里程碑和完成日期。\n\n8. **风险评估和应急计划**\n   - **政治和经济风险**：评估目标市场的稳定性和潜在风险。\n   - **应急计划**：为可能的市场变化制定应对策略。\n\n9. **监测和评估**\n   - **关键绩效指标（KPIs）**：设定可量化的目标来衡量营销活动的成功。\n   - **数据分析**：使用工具监控营销活动的效果，并根据数据调整策略。\n\n10. **合规和法律**\n    - **遵守当地法规**：确保所有营销活动符合目标国家的法律法规。\n\n请注意，这只是一个大致的框架，具体的营销方案需要根据你的产品、市场和资源进行定制。如果你能提供更多的信息，比如你的产品类型、目标市场、预算和时间线等，我可以为你提供更具体的建议。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "d73e7b6ccd3654899f8a602c81fa3313f3f57fc6c7bfb6ad791714292a907919",
+  "raw_response_text": "\n         \n\n         \n{\"id\":\"gen-1794484957-47eGTJ1nzC3VdKQBS4Jk\",\"object\":\"chat.completion\",\"created\":1794484957,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 3,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 4,\\n    \\\"evidence_grounding\\\": 3,\\n    \\\"uncertainty_calibration\\\": 3\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"missing_input_not_handled\\\"],\\n  \\\"rationale\\\": \\\"The output does ask for product type, target market, budget and timeline, but only in a single closing sentence after a long generic 10-section framework. This means the missing-info handling is weak rather than leading. It avoids a fabricated concrete plan, which partially satisfies the third checkpoint, but the content is boilerplate that applies to any company going overseas, so it has little specificity or direct actionability. The structure is clear and coherent, and it makes no false claims. The 'this is only a rough framework' caveat shows some uncertainty awareness, but the response should have prioritized clarifying questions.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the output against the checkpoints: it asks about product type, market, budget, and timeline, but only at the end and weakly. It also leads with a generic framework instead of asking first, which partly misses the point, though it doesn't go as far as a specific plan. That makes completeness about a 3 and specificity about a 2.\\n\\nI'm going through the remaining scores for actionability, coherence, safety, grounding and calibration, and deciding to tag the response with weak personalization and a clarification that's buried at the end.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the output against the checkpoints: it asks about product type, market, budget, and timeline, but only at the end and weakly. It also leads with a generic framework instead of asking first, which partly misses the point, though it doesn't go as far as a specific plan. That makes completeness about a 3 and specificity about a 2.\\n\\nI'm going through the remaining scores for actionability, coherence, safety, grounding and calibration, and deciding to tag the response with weak personalization and a clarification that's buried at the end.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSwAoKEAgTGAI4AUIIdGhpbmtpbmcSDMyOX9KwT9zKXh2eExoM5CSPBVXff31jSaB9IjCWO9KtDrLgJfBJ/j/BPukwdVVwT46zjgwOfvZFCq0caPMBO/lmfRgPVUv0cPKJvqoq3QmDHx+EL95k8FSn1emcCjcpA0LxKRM8B09kNWOxxbaIv9NSa1Z5oM3vqZN9zmWmNRSXFlh606KvOEo1GmnsZetGpxszr/vc386NyDq4yepuo+4aAq0H8pCsBOI/056v8YN3l+SVkehjERwENeydBZwds1ykJ1sboDT2q1lckPeg9mR59CJ737Bkv06BJLKZcE87ESdFknKsNpBg4Yk5UMig1mKfBYR0VtNll3Jkg8OCioB7+k38VHiFo63s+LRkx0V9cfDT38sDbDOPlIRDHXs+IeIuAzh4MNcAOoOj/27SFo6IZacFgACJxaHpowZGEDdZh/DrOzc1shFyLIEY6i49qFJBRvsHntG6Ptosp3IDxrPUmAWjE8xPE97QCkoLhBgzl63mczjdCemTTiweE0qFnQNls3FWPt8YcKX7+JrWlx+er0gGlmqog32yM0gey+gS1UBpDvp/DgY1qtN6CmrzDMQETuD8RsWswEX4kl8qil+DcXZ+vli04tqGXBramOFxLeHlWooQhcB+W1sU2uL7wshREUuCTAPoSHnskzk07qbAkyvAfUySsflgUQh2J9IrBoSmQLDR/rljH0Bmne9ZFzfibCeda+GPGpde6bvsK9hyrKv+KWEIfdYqwLWqMT4j9vVk/cZt6ogbrm5iMtNqLVeQooTlLRaaILyKA7pnJuXLHRhWYLeQ1O8qdhaH8kWnRC9Urr6Owe8YLtyqtSfyAtBx12gtb/hN5JE0YtfX8brKgyKNG746Val2iwpV6zz9hbCvAciVDvigKrbrk1aGca87XCjC3VjygZFhBBfU5MIBGB8nzFC80OIBQFkxKNshtCO8fJnzjwKOhK67g0DGBtxl80IaOachzv3D3CG5qkLrpyuVeboHfURwkLCzD1LlOlKfi4eILn0bpjIZ2lqz0OPAxM1L1mJnnG8pk62/XnbY+R08C3JjGmZfmqGRg1Fmw30Z++qeIThH0ihC6gqiogw1NngsI2eBxSF4cZ20HWrzvrmAWZs2RikX+874uCUQbKTDA63a4G/E02FCOhdEIBbu0GPb1O2WQzeX95aEtpbcKH5x1odK0qjuGBi4oOIRkU8mLKs2gNI5GeQmpWRL3Op6A/gjtE3LGvERXa65cf/SaG/f5BE+21LvWD7Y1b9M0WZ9waQ0o0+bJWVPaRn3QTFqk8+NxOx0P2Wft/Ab3Aw34pCgdPnT3/x8uWVah4jdn0uQfwHVIrNlPybz0VGgjnze2atayQso2jJreoBnoEJWCvHrXpQ+CPRl2L2Ti/pfqFkbX6+lze+dRSiTfxA2bnwj8M8jGAY1/ql1q5N5YDIoKxXwHr8ExOpL00SSpZbL+M9eMvLOwxMsQcwG5r/GPgEyzo6Ov7GgPLYg82iH5w1WTteprZtddQwvpsz+RolI3MVnhiHMNdD0jziVb+vtdqSfgTRVowCtoLOH5rD7wfdPsZh/mah5ErpDFeHtK7nFwlxgrWXljK5/6OhbM1SB6bhtZ8qJmxRrxwGYvPp1bj/VgfLL5qSVgMM/hChfy94bNJOePWJL3dweRvvuPIEEFuVdiFewjlJqrBRVB2Y2ZGnWX3+uwSGH5ioIBQ5+/SfpKXoqTHyb8b1BRWEPeu4fUvz6rIcIiCLhlM8i10kU2icnFQAUB/4Ad23UVAAYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1751,\"completion_tokens\":577,\"total_tokens\":2328,\"cost\":0.018544,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.018544,\"upstream_inference_prompt_cost\":0.007004,\"upstream_inference_completions_cost\":0.01154},\"completion_tokens_details\":{\"reasoning_tokens\":252,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 3,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 4,
+      "safety_boundary": 4,
+      "evidence_grounding": 3,
+      "uncertainty_calibration": 3
+    },
+    "error_tags": [
+      "weak_personalization",
+      "missing_input_not_handled"
+    ],
+    "rationale": "The output does ask for product type, target market, budget and timeline, but only in a single closing sentence after a long generic 10-section framework. This means the missing-info handling is weak rather than leading. It avoids a fabricated concrete plan, which partially satisfies the third checkpoint, but the content is boilerplate that applies to any company going overseas, so it has little specificity or direct actionability. The structure is clear and coherent, and it makes no false claims. The 'this is only a rough framework' caveat shows some uncertainty awareness, but the response should have prioritized clarifying questions."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1751,
+    "completion_tokens": 577,
+    "total_tokens": 2328,
+    "cost": 0.018544,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.018544,
+      "upstream_inference_prompt_cost": 0.007004,
+      "upstream_inference_completions_cost": 0.01154
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 252,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.018544,
+  "elapsed_sec": 6.037621974945068,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

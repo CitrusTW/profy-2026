@@ -83,3 +83,17 @@ I003 ADV judge: primary jobs processed140/140, valid132, failed calls27, receive
 One bounded registered reserve recovery after orphaned setup cancellation: {"status": "infrastructure_failure", "strict": null, "http_error_bodies": 1, "cost_usd": "unknown"}; no further retry.
 
 I004 original-order next-run probe: {"instruction": "I-004", "started_epoch": 1794484699.3070238, "completed_epoch": 1794484730.038026, "task": "reserves-at-risk-calc", "condition": "no-skills", "repeat": 1, "http_errors": [{"http_status": 403, "body": "{\"code\":403,\"message\":\"Expert is not published\",\"data\":null}", "epoch": 1794484729.4214232}], "error": "RuntimeError: Solver stream incomplete; do not score", "no_usage_events": true, "scientific_run": false, "result_folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/profy_i004_probes/1794484699/runs/reserves-at-risk-calc/repeat-1/no-skills", "cost_usd": "unknown", "status": "403_rejected_not_a_run", "next_probe_not_before_epoch": 1794486499.3070238}
+
+I004 rubric4096: processed10/60, valid10, failed_calls1, batch receipt USD0.287744, combined known USD3.816788, unknown-cost calls0.
+
+I004 rubric4096: processed20/60, valid20, failed_calls1, batch receipt USD0.492572, combined known USD4.021616, unknown-cost calls0.
+
+I004 rubric4096: processed30/60, valid30, failed_calls1, batch receipt USD0.750200, combined known USD4.279244, unknown-cost calls0.
+
+I004 rubric4096: processed40/60, valid40, failed_calls1, batch receipt USD0.964012, combined known USD4.493056, unknown-cost calls0.
+
+I004 rubric4096: processed50/60, valid50, failed_calls1, batch receipt USD1.223676, combined known USD4.752720, unknown-cost calls0.
+
+I004 rubric4096: processed60/60, valid60, failed_calls1, batch receipt USD1.412752, combined known USD4.941796, unknown-cost calls0.
+
+I004新ADV完成: {"rubric_valid": 60, "pairwise_valid": 80, "overall": {"generic_llm_raw": 2.43, "generic_llm_expert_prompt": 2.63, "profy_expert_full": 3.2199999999999998}, "actual_cost_usd": "4.941796", "hash_binding_verified": true}; 旧Full分数不混用.

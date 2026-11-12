@@ -1,0 +1,159 @@
+{
+  "variant_results": {
+    "adversarial": {
+      "task_ids": [
+        "ADV_007",
+        "ADV_013",
+        "ADV_019",
+        "ADV_020"
+      ],
+      "n_tasks": 4,
+      "conditions": {
+        "generic_llm_raw": {
+          "n_valid": 4,
+          "overall_mean": 2.75
+        },
+        "generic_llm_expert_prompt": {
+          "n_valid": 4,
+          "overall_mean": 3.0
+        },
+        "profy_expert_full": {
+          "n_valid": 4,
+          "overall_mean": 3.55
+        }
+      }
+    },
+    "complete": {
+      "task_ids": [
+        "ADV_001",
+        "ADV_002",
+        "ADV_003",
+        "ADV_004",
+        "ADV_008",
+        "ADV_009",
+        "ADV_010",
+        "ADV_014",
+        "ADV_015",
+        "ADV_016"
+      ],
+      "n_tasks": 10,
+      "conditions": {
+        "generic_llm_raw": {
+          "n_valid": 10,
+          "overall_mean": 2.22
+        },
+        "generic_llm_expert_prompt": {
+          "n_valid": 10,
+          "overall_mean": 2.44
+        },
+        "profy_expert_full": {
+          "n_valid": 10,
+          "overall_mean": 3.4
+        }
+      }
+    },
+    "missing_info": {
+      "task_ids": [
+        "ADV_005",
+        "ADV_006",
+        "ADV_011",
+        "ADV_012",
+        "ADV_017",
+        "ADV_018"
+      ],
+      "n_tasks": 6,
+      "conditions": {
+        "generic_llm_raw": {
+          "n_valid": 6,
+          "overall_mean": 2.5666666666666664
+        },
+        "generic_llm_expert_prompt": {
+          "n_valid": 6,
+          "overall_mean": 2.7
+        },
+        "profy_expert_full": {
+          "n_valid": 6,
+          "overall_mean": 2.7
+        }
+      }
+    }
+  },
+  "platform_full_timing": {
+    "n": 20,
+    "mean_seconds": 54.41,
+    "median_seconds": 52.05,
+    "baseline_timing_comparable": false
+  },
+  "judge_batches": {
+    "adv_rejudge_i003": {
+      "all_calls": 159,
+      "valid_calls": 132,
+      "failed_calls": 27,
+      "valid_by_kind": {
+        "rubric": 52,
+        "pairwise": 80
+      },
+      "failed_by_condition": {
+        "profy_expert_full": 27
+      },
+      "known_cost_receipts_sum_usd": "3.529044",
+      "unknown_cost_calls": 0,
+      "models_requested": {
+        "anthropic/claude-opus-5.5": 159
+      },
+      "models_returned": {
+        "anthropic/claude-opus-5.5": 159
+      },
+      "max_tokens": {
+        "1024": 159
+      },
+      "temperature_requested": {
+        "omitted": 159
+      },
+      "temperature_effective": {
+        "unknown": 159
+      },
+      "first_call_utc": "2026-11-12T10:33:57.304170+00:00",
+      "last_call_utc": "2026-11-12T10:54:51.064597+00:00",
+      "sha256": "53dda4ac6c87520ab483a9cee4aa6a4b812f80d1b9af752a3068034437845bde"
+    },
+    "adv_rejudge_i004_rubric4096": {
+      "all_calls": 61,
+      "valid_calls": 60,
+      "failed_calls": 1,
+      "valid_by_kind": {
+        "rubric": 60
+      },
+      "failed_by_condition": {
+        "generic_llm_raw": 1
+      },
+      "known_cost_receipts_sum_usd": "1.412752",
+      "unknown_cost_calls": 0,
+      "models_requested": {
+        "anthropic/claude-opus-5.5": 61
+      },
+      "models_returned": {
+        "anthropic/claude-opus-5.5": 61
+      },
+      "max_tokens": {
+        "4096": 61
+      },
+      "temperature_requested": {
+        "omitted": 61
+      },
+      "temperature_effective": {
+        "unknown": 61
+      },
+      "first_call_utc": "2026-11-12T11:57:40.747667+00:00",
+      "last_call_utc": "2026-11-12T12:06:43.647699+00:00",
+      "sha256": "8d8fe9dd0ec944357ec326750797cd9461ee1d4f976c3e35523bb2eeebc9e05f"
+    }
+  },
+  "actual_cost_usd": "4.941796",
+  "known_cost_receipts_sum_usd": "4.941796",
+  "unknown_cost_calls": 0,
+  "metadata_sha256": "8fd4769e93ebf69d3885a3d03cb70b02274d9fff52680dfe5266e608b174ab1b",
+  "rubric_sha256": "7a904841cc036681570ad0dbe9c728793c1c98e9451e0e32c58496f355a8dd97",
+  "old_full_scores_used": false,
+  "is_causal_method_comparison": false
+}

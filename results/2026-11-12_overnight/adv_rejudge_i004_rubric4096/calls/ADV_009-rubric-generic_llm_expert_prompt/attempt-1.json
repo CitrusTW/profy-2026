@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_009",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "04d58d603434c33653b019939c0d30063f18b1fb56847370833cd1da745ee1ba"
+  },
+  "calculated_cost_ceiling_usd": "0.136584",
+  "job_id": "ADV_009-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "e1b6b6774dcfdedfc43a36fc072009d1709aef62a87a47f65377b6d387235949",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484905-8lxADUm6TMHnNZcdl879",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:01:44.988264+00:00",
+  "completed_utc": "2026-11-12T12:01:54.799065+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_009\n- Task Family: ADV\n- Variant: complete\n- Risk Level: medium\n- User Input: 我做跨境电商卖女装，主要在Shopee和TikTok Shop，想从泰国拓展到印尼和菲律宾，月预算3万人民币，请帮我分析可行性和具体打法\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 对比印尼和菲律宾女装市场差异\n  - [must_have] 分平台给出运营策略\n  - [should_have] 预算分配和ROI预期\n  - [should_have] 本地化建议（尺码/风格/支付）\n  - [must_have] 可行性评估而非一味乐观\n\n## System Output:\n拓展跨境电商业务到新的市场是一个复杂的过程，需要考虑多个因素。以下是一些基于您提供信息的可行性分析和具体打法建议：\n\n### 可行性分析：\n\n1. **市场潜力**：\n   - **印尼**和**菲律宾**都是东南亚地区的重要国家，人口众多，互联网普及率逐年上升，电子商务市场增长迅速。根据eMarketer的数据，这两个国家的电商市场规模在东南亚排名靠前。\n\n2. **文化和消费习惯**：\n   - 需要研究印尼和菲律宾消费者的购买习惯、时尚偏好以及文化差异，以确保您的产品能够满足当地市场需求。\n\n3. **竞争环境**：\n   - 分析当地的竞争对手，了解他们的优势和劣势，以及您的产品如何能在竞争中脱颖而出。\n\n4. **物流和供应链**：\n   - 考虑物流成本和时效性，以及如何有效地管理供应链以满足新市场的需要。\n\n5. **法规和税收**：\n   - 了解目标国家的进口法规、税收政策和电商法规，确保业务合规。\n\n6. **预算**：\n   - 您的月预算为3万人民币，需要合理分配到市场调研、广告推广、物流、本地化运营等方面。\n\n### 具体打法：\n\n1. **市场调研**：\n   - 进行深入的市场调研，包括消费者行为、竞争对手分析、产品需求等。预算分配：10%-20%。\n\n2. **本地化**：\n   - 将产品描述、营销材料等进行本地化，以适应当地文化和语言。预算分配：10%-15%。\n\n3. **平台选择**：\n   - 继续利用Shopee和TikTok Shop，同时考虑是否需要加入其他本地电商平台或自建网站。预算分配：5%-10%。\n\n4. **物流解决方案**：\n   - 寻找可靠的物流合作伙伴，确保产品能够高效、低成本地运输到印尼和菲律宾。预算分配：20%-30%。\n\n5. **营销和广告**：\n   - 在Shopee和TikTok Shop上进行广告推广，同时也考虑使用本地社交媒体平台和影响者营销。预算分配：20%-30%。\n\n6. **客户服务**：\n   - 提供本地语言的客户服务，解决消费者疑虑和问题。预算分配：5%-10%。\n\n7. **合规性**：\n   - 确保业务遵守当地法规，包括税务和进口规定。预算分配：5%-10%。\n\n8. **风险管理**：\n   - 制定风险管理计划，包括汇率风险、政治风险、市场接受度风险等。预算分配：剩余预算。\n\n### 结论：\n\n拓展到印尼和菲律宾的可行性是存在的，但需要细致的规划和执行。您的预算需要合理分配到各个关键领域，同时留有足够的灵活性以应对不可预见的挑战。建议您在实施前进行详细的市场调研，制定详细的商业计划，并准备好应对各种可能的风险。由于市场环境和具体情况可能会变化，以上建议需要根据实际情况进行调整。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "f5b371f19cf756dc68f5866475562a6c0a8950360d871c763e5d7c041e45895a",
+  "raw_response_text": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1794484905-8lxADUm6TMHnNZcdl879\",\"object\":\"chat.completion\",\"created\":1794484905,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 1,\\n    \\\"actionability\\\": 1,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 3\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output misses two must-have checkpoints: it never contrasts the Indonesian and Philippine women's apparel markets (e.g., modest fashion and Muslim demand in Indonesia versus Western-leaning style in the Philippines, sizing, COD habits), and it offers no separate Shopee versus TikTok Shop strategy. Budget allocation is given only as generic percentage ranges that do not add up (minimums sum to about 75%, maximums exceed 130%), with no yuan amounts tied to the ¥30k monthly budget and no ROI expectations. The feasibility verdict is a vague hedge rather than a real assessment, the single citation ('eMarketer data') is unspecific, and most advice ('conduct research', 'find logistics partners') is boilerplate that ignores the user's existing Thailand experience.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the draft against the brief: it doesn't compare Indonesia with the Philippines, and it has no per-platform strategy, both required. The budget split is generic with no ROI, and the percentages don't add up to a sensible total. Localization is vague too, with nothing on sizes, styles, or payment options like COD or modest fashion for Indonesia, and I'm now starting on the feasibility section.\\n\\nI'm weighing the draft's weak spots: the eMarketer citation is vague, the budget line for market research looks odd, and logistics is listed as a budget item. I'm also settling on scores, leaning toward low marks for completeness and specificity because the must-haves are largely missing and the actions are mostly just \\\"conduct research.\\\"\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the draft against the brief: it doesn't compare Indonesia with the Philippines, and it has no per-platform strategy, both required. The budget split is generic with no ROI, and the percentages don't add up to a sensible total. Localization is vague too, with nothing on sizes, styles, or payment options like COD or modest fashion for Indonesia, and I'm now starting on the feasibility section.\\n\\nI'm weighing the draft's weak spots: the eMarketer citation is vague, the budget line for market research looks odd, and logistics is listed as a budget item. I'm also settling on scores, leaning toward low marks for completeness and specificity because the must-haves are largely missing and the actions are mostly just \\\"conduct research.\\\"\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1888,\"completion_tokens\":924,\"total_tokens\":2812,\"cost\":0.026032,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.026032,\"upstream_inference_prompt_cost\":0.007552,\"upstream_inference_completions_cost\":0.01848},\"completion_tokens_details\":{\"reasoning_tokens\":515,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 1,
+      "actionability": 1,
+      "coherence": 3,
+      "safety_boundary": 3,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 3
+    },
+    "error_tags": [
+      "weak_personalization",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output misses two must-have checkpoints: it never contrasts the Indonesian and Philippine women's apparel markets (e.g., modest fashion and Muslim demand in Indonesia versus Western-leaning style in the Philippines, sizing, COD habits), and it offers no separate Shopee versus TikTok Shop strategy. Budget allocation is given only as generic percentage ranges that do not add up (minimums sum to about 75%, maximums exceed 130%), with no yuan amounts tied to the ¥30k monthly budget and no ROI expectations. The feasibility verdict is a vague hedge rather than a real assessment, the single citation ('eMarketer data') is unspecific, and most advice ('conduct research', 'find logistics partners') is boilerplate that ignores the user's existing Thailand experience."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1888,
+    "completion_tokens": 924,
+    "total_tokens": 2812,
+    "cost": 0.026032,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.026032,
+      "upstream_inference_prompt_cost": 0.007552,
+      "upstream_inference_completions_cost": 0.01848
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 515,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.026032,
+  "elapsed_sec": 9.810839176177979,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_004",
+  "condition": "profy_expert_full",
+  "output_sha256": {
+    "profy_expert_full": "17c3e509dc0b10c3c3bc77fd4e61899e812c94321d01579d715cfb3f998e83f1"
+  },
+  "calculated_cost_ceiling_usd": "0.147720",
+  "job_id": "ADV_004-rubric-profy_expert_full",
+  "prompt_sha256": "f0f45ecffcfc13af3a0bdc17e4374791dde916c7df7e0a69c3e8d504c4a73f5a",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484785-euG1Uw8LhUJJQzu56JRw",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:59:45.868134+00:00",
+  "completed_utc": "2026-11-12T11:59:59.753890+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_004\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 山东综合改革，480分，位次22万，选科物化生，想上个好专科或者冲一下本科，目标方向是护理或检验\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析该分数段本专科录取可能性\n  - [must_have] 推荐护理/检验相关院校\n  - [should_have] 区分本科和专科层次\n  - [should_have] 说明选科匹配情况\n  - [must_have] 声明风险并建议查询官方系统\n\n## System Output:\n以下是基于你的分数和位次的详细分析，供参考。\n\n---\n\n## 一、2024年山东高考分数线参考\n\n| 批次 | 分数线 |\n|------|--------|\n| 特殊类型招生控制线 | 约 521 分 |\n| **一段线（本科线）** | **约 444 分** |\n| 二段线（专科线） | 150 分 |\n\n**你的分数：480分，高于一段线约36分**，从分数上看具备填报本科资格。但关键要看**位次**——综合改革下位次比分数更有参考价值。\n\n---\n\n## 二、位次分析：22万名 → 本科还是专科？\n\n山东省一段线划线比例约为 **1:1.2**，即一段线对应的实际本科招生计划大约在 **28~30万** 左右（含民办、独立学院）。\n\n| 情况 | 分析 |\n|------|------|\n| **位次22万** | 低于一段线理论招生序列，但还在本科\"尾巴\"范围内 |\n| **本科希望** | 有，但必须**放平心态**——方向是**民办本科、校企合作、偏远地区院校** |\n| **好专科** | 位次22万对优质专科来说**非常充裕**，选择空间大 |\n\n**结论**：本科可以冲（偏后段院校），好的专科稳稳绰绰有余。\n\n---\n\n## 三、护理/检验方向——可选院校\n\n### A. 可冲击的本科层次（冲一冲）\n\n480分/22万位次可尝试以下学校的**护理学/医学检验技术**（但专业录取分可能高于投档线）：\n\n| 院校 | 层次 | 说明 |\n|------|------|------|\n| **齐鲁医药学院** | 民办本科 | 有护理学、医学检验技术，招生计划较多 |\n| **山东协和学院** | 民办本科 | 护理学为特色专业，机会较大 |\n| **青岛滨海学院** | 民办本科 | 有护理学专业 |\n| **山东英才学院** | 民办本科 | 护理学可考虑 |\n| 省外部分偏远公办本科 | 公办 | 如黑龙江、甘肃、新疆等地的医学院校，分数可能友好 |\n\n> 注意：公办医学类本科（如潍坊医学院、滨州医学院、济宁医学院、山东中医药大学）的**护理学/检验**专业录取位次通常在 **15~18万名** 以内，22万位次希望较小。\n\n### B. 好专科层次（稳妥推荐）\n\n位次22万能报**省内最好的医学类专科院校**：\n\n| 院校 | 推荐专业 | 推荐理由 |\n|------|----------|----------|\n| **山东医学高等专科学校**（济南/临沂） | 护理、医学检验技术 | **省内医学专科龙头**，护理和检验都是王牌专业，就业口碑好 |\n| **菏泽医学专科学校** | 护理、医学检验技术 | 老牌医学专科，省内有大量校友资源 |\n| **山东中医药高等专科学校**（烟台） | 护理 | 中医特色，护理方向偏中西医结合 |\n| **滨州职业学院** | 护理 | 国家双高院校，护理为骨干专业 |\n| **淄博职业学院** | 护理 | 综合实力强的国家双高校 |\n| **潍坊护理职业学院** | 护理 | 专业对口，专注护理 |\n\n---\n\n## 四、填报策略建议\n\n| 志愿策略 | 具体做法 |\n|----------|----------|\n| **冲（前10~20个）** | 民办本科护理/检验 + 省外偏远公办本科护理 |\n| **稳（中间20~30个）** | 山东医专 / 菏泽医专 / 山东中医药高专（护理、检验） |\n| **保（最后10个）** | 其余高职护理院校 + 省内综合类高职护理专业 |\n\n---\n\n## 五、几个关键提醒\n\n1. **护理和检验的区别**：\n   - 护理：好就业、需求量大，但工作强度高，需要倒班\n   - 医学检验技术：工作压力相对小，但就业门槛在提高，专科以后多考虑考本或考编\n\n2. **专升本路径**：专科护理/检验毕业后可以参加**山东省专升本考试**，考入本科院校继续深造，这是非常成熟的路径。\n\n3. **选科优势**：你选了物化生，几乎**所有医学类专业都可以报**，没有限制。\n\n4. **同时关注**：如果愿意跳出护理/检验，480分还可以考虑**药学、医学影像技术、康复治疗技术**等方向，就业前景也不错。\n\n---\n\n> **注意**：以上分析基于往年录取数据推断，2025年各校招生计划和录取分数线可能有变动。建议你在山东省教育招生考试院官网（www.sdzk.cn）或\"山东高考通\"等官方渠道进一步核实历年录取位次。你可以把具体想了解的院校告诉我，我帮你做进一步分析。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "a0f5e98ca437ace2cda01d0c0d9ee49af1947f8dba98d649ed3116f7329ce25b",
+  "raw_response_text": "\n         \n\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1794484785-euG1Uw8LhUJJQzu56JRw\",\"object\":\"chat.completion\",\"created\":1794484785,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 4,\\n    \\\"specificity\\\": 4,\\n    \\\"actionability\\\": 4,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 4,\\n    \\\"evidence_grounding\\\": 3,\\n    \\\"uncertainty_calibration\\\": 3\\n  },\\n  \\\"error_tags\\\": [\\\"hallucinated_evidence\\\", \\\"overclaiming\\\"],\\n  \\\"rationale\\\": \\\"The output covers every required checkpoint. It analyzes 本科 vs 专科 chances, lists concrete nursing/检验 schools at both levels, notes that 物化生 qualifies for medical majors, and gives a 冲稳保 strategy with a sdzk.cn verification disclaimer. The 2024 cutoffs (521/444/150) are accurate. However, the rank analysis contradicts itself: it estimates undergraduate capacity at ~28–30万, then says 22万 is 'below' that and in the 本科 'tail', when 22万 is actually well inside the undergraduate range. Unsourced figures (the 1:1.2 ratio and public medical nursing ranks of 15–18万) likely understate the user's chances at public institutions. It also omits health and physical-exam restrictions such as color vision for 检验.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the 2024 Shandong figures: special-type control line 521, first-tier line 444, second-tier line 150, and those match. I'm trying to recall the rank behind the 444 cutoff, and I think it was somewhere around 30 to 33万, but I'm not certain of that number.\\n\\nI'm checking whether the 22万 figure lands inside the undergraduate range for Shandong, and it does, since it sits well above the 444 line. That makes my earlier phrasing about it being in the tail look wrong. I'm also doubting the 1:1.2 ratio, and I'm weighing whether some public nursing programs might actually sit near that rank. On the strategy side, I'm recalling that Shandong merged 本科 and 专科 into the same 常规批 volunteer table from 2020, so mixing them in the plan is workable.\\n\\nI'm going through the rest of the review: the Weifang and Zibo nursing programs, the vocational colleges I'm listing, and the Shandong 本专科 merged batch. I'm also noting that physical exam requirements and color-vision limits for lab tech majors are missing, and that the scoring leans toward overconfidence on the 1:1.2 ratio and the rank estimates.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the 2024 Shandong figures: special-type control line 521, first-tier line 444, second-tier line 150, and those match. I'm trying to recall the rank behind the 444 cutoff, and I think it was somewhere around 30 to 33万, but I'm not certain of that number.\\n\\nI'm checking whether the 22万 figure lands inside the undergraduate range for Shandong, and it does, since it sits well above the 444 line. That makes my earlier phrasing about it being in the tail look wrong. I'm also doubting the 1:1.2 ratio, and I'm weighing whether some public nursing programs might actually sit near that rank. On the strategy side, I'm recalling that Shandong merged 本科 and 专科 into the same 常规批 volunteer table from 2020, so mixing them in the plan is workable.\\n\\nI'm going through the rest of the review: the Weifang and Zibo nursing programs, the vocational colleges I'm listing, and the Shandong 本专科 merged batch. I'm also noting that physical exam requirements and color-vision limits for lab tech majors are missing, and that the scoring leans toward overconfidence on the 1:1.2 ratio and the rank estimates.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2471,\"completion_tokens\":1310,\"total_tokens\":3781,\"cost\":0.036084,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.036084,\"upstream_inference_prompt_cost\":0.009884,\"upstream_inference_completions_cost\":0.0262},\"completion_tokens_details\":{\"reasoning_tokens\":899,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 4,
+      "specificity": 4,
+      "actionability": 4,
+      "coherence": 3,
+      "safety_boundary": 4,
+      "evidence_grounding": 3,
+      "uncertainty_calibration": 3
+    },
+    "error_tags": [
+      "hallucinated_evidence",
+      "overclaiming"
+    ],
+    "rationale": "The output covers every required checkpoint. It analyzes 本科 vs 专科 chances, lists concrete nursing/检验 schools at both levels, notes that 物化生 qualifies for medical majors, and gives a 冲稳保 strategy with a sdzk.cn verification disclaimer. The 2024 cutoffs (521/444/150) are accurate. However, the rank analysis contradicts itself: it estimates undergraduate capacity at ~28–30万, then says 22万 is 'below' that and in the 本科 'tail', when 22万 is actually well inside the undergraduate range. Unsourced figures (the 1:1.2 ratio and public medical nursing ranks of 15–18万) likely understate the user's chances at public institutions. It also omits health and physical-exam restrictions such as color vision for 检验."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 2471,
+    "completion_tokens": 1310,
+    "total_tokens": 3781,
+    "cost": 0.036084,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.036084,
+      "upstream_inference_prompt_cost": 0.009884,
+      "upstream_inference_completions_cost": 0.0262
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 899,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.036084,
+  "elapsed_sec": 13.885770320892334,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

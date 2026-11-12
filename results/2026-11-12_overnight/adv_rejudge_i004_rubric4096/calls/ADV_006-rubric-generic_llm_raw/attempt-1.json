@@ -1,0 +1,77 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_006",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "08489cc04bd6d63d7ff5d3d5d3fe47ff57b863d76df0efa3fd403ce110a613d4"
+  },
+  "calculated_cost_ceiling_usd": "0.119456",
+  "job_id": "ADV_006-rubric-generic_llm_raw",
+  "prompt_sha256": "fcf25a297905f7a05077e2c479c8c99222ca8735cf71a2aa98fc0d9d6a68f499",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484820-37H9RiF0liCOrcBWMofw",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:00:20.911207+00:00",
+  "completed_utc": "2026-11-12T12:00:28.408352+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_006\n- Task Family: ADV\n- Variant: missing_info\n- Risk Level: high\n- User Input: 我家孩子今年高考，成绩还行，想问问能上什么大学\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 系统性追问省份、分数、位次、科类等关键信息\n  - [must_have] 不在无任何数据时给出具体院校建议\n  - [should_have] 引导用户提供结构化信息\n\n## System Output:\n了解您对孩子未来的关心。在中国，高考成绩是决定孩子能上哪些大学的关键因素之一。不过，要给出具体的大学建议，我需要更多的信息，比如：\n\n1. **孩子的高考成绩**：具体分数可以让我们更好地评估可能的大学选择。\n2. **所在省份**：不同省份的分数线和录取政策可能有所不同。\n3. **专业兴趣**：孩子感兴趣的专业方向也会影响大学选择。\n4. **是否考虑外地院校**：有些学生可能更愿意留在本省，而有些学生则愿意去外地求学。\n\n如果您能提供这些信息，我可以帮您更准确地分析和推荐适合的大学。同时，您也可以参考教育部发布的《普通高等学校招生工作规定》和各省市的教育考试院网站，了解最新的招生政策和分数线信息。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "58a52766130f4fcbca534d5fb3fde83e29f989b75c243dd7ecfbe5a93efe5587",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794484820-37H9RiF0liCOrcBWMofw\",\"object\":\"chat.completion\",\"created\":1794484820,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 3,\\n    \\\"specificity\\\": 3,\\n    \\\"actionability\\\": 3,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 4,\\n    \\\"evidence_grounding\\\": 4,\\n    \\\"uncertainty_calibration\\\": 4\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\"],\\n  \\\"rationale\\\": \\\"The output correctly declines to recommend specific universities without data, and its numbered list of follow-up questions (score, province, major interest, willingness to study out of province) guides the user toward structured input. However, it misses two of the most critical factors in Chinese admissions: provincial rank (位次) and subject track or elective combination (科类/选科组合). This leaves the 'systematic follow-up' checkpoint only partly met. Pointing to official sources (provincial education examination authority websites, the Ministry of Education admissions regulations) is accurate and appropriately cautious, but the response stays generic, with no explanation of why rank matters more than raw score and no mention of tiered applications (冲稳保) or the admissions timeline.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the response against the checklist: it asks for province, score, rank, and subject track, but leaves out rank and the subject combination, which are key, so it only partly meets the first must-have. It avoids naming specific schools, which is right, and it lays out the questions as a numbered list. On completeness and specificity I'd give it a 3 each, since it's generic and misses rank.\\n\\nNow I'm scoring specificity, actionability, and coherence, and I'm settling on weak_personalization as the tag since the response is only mildly generic.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the response against the checklist: it asks for province, score, rank, and subject track, but leaves out rank and the subject combination, which are key, so it only partly meets the first must-have. It avoids naming specific schools, which is right, and it lays out the questions as a numbered list. On completeness and specificity I'd give it a 3 each, since it's generic and misses rank.\\n\\nNow I'm scoring specificity, actionability, and coherence, and I'm settling on weak_personalization as the tag since the response is only mildly generic.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSuAsKEAgTGAI4AUIIdGhpbmtpbmcSDD4PJObvDTh+SSzJyRoMRqX0JmCbyE7GZg8tIjDZmD/dSqgWdkbm2evU/1ZzEP68gVhE98mQlllQnn6NgbD4z+Bbb3Ta3A8SI9lPZQcq1Qp6G8xJX4KvrSR+rqAERI8OHzlIHD/Go5m3qoPn+p2uwdopskBOF/b2KnUQ07+9gwMRR/MlHfts34m1gvuEsk9ZnoozX1Ttp1LFmM3CLcgnPiySuyiE0v1h6d2dnDp9UEQD3F0MMpSXLEC/RXtWmX0HwitV6SagNDfu2eEv+/38FAHt+HoxTi9eIRnoO/FS+UpJQm0F8Rdvj462aCDEoboAiXUDdyve8MoWOpcX+YOm9Jo6jkmfHDniiKIvPaI5tFbmLuOf4ycSOZW8G+CeYwMLUX7NA2XTlvhWb4PSg/5x43FOrBCLyrjNwcQaxNrHH20e/LEb+9vsKNMW475pnOiWZqUwKjt5M/Nrv3WuvbE+Del6TZ34nnVK/qxo/azANBEf5ZJkSfUcDPYW+255GSujSz53PpB5LRjXWpL34J7cVU9sjV7XbK144GfL2P6Fgiukf/ovRZATbMnSHnZVl5n3CBxybdCQQhyNgdi0euWJlYV80VJqwVHCucZgJ1WResL5+XxD48IPZVSYeukPMhoilNcoP16C+lA6BMuekCBMozDfmR3K6OJwqOg8OVAZ++VAX8JcR1CDJ7TCqPcBIdbSr4J1XIMiu0QcCYc050DPTKBVwFoEkiJXsLy20zPsV1Ask4zRe0J6vakq+jBG5MEQmV45tj5MKQNLORh2fzZf9CjldLHluTYva4ZrQT11ikKZtM9jbT2rYSgRp4U7sNzPiBGbmgQfyaKEct2GErxmNNsvkRJoqa7smst/Fm8yu+g1Nvfzl4gjpbrHDHXIsOlo7XYu9bBbyWUapwC2ECKJzvdl4uSRXxXPKom2EiS2/b/+wyPyqxc9VYRPErqaRz26VZZitzhwdMxb1Iv+a161xIxVKdf/gEDhGJWfDCjB+6ikCgqvSKrlpYGYfOs5LUai1uGJcxEF+LVpBdbbxE9mVx01jfcLzjKv6GN6TiwrIzyD8oZQwCeZQqVm+aMhd+DG7nqgJrpEhB8EHWVjh5Qa4t3d+VpMUWcHWx7V+C4ega7EO3PU/If6+uEm2KlO4noGb7Mc9XvPp5QkQJKCaZobJUbgxPLATPY5Ljt0i+HG5P1DUe5VTes/7wnPQuUQ5Bm225Q9KDGQPNCRlYY0KELMQh7vqtEteI980g0ixqjM82yE0noT6EV17xWf1mBZdRvzuM/N1gW2mygHJbCPP3sd80SZHNXTs7aXkp5tg1fJB0JR8bKmpApPZFcgFaBP2EMuMFMCnN6B+fhzSm9LteBNjrobG8kOXBlTf8nTEszUY4b64GfO9gZfsER8yV2Rg6HKYCWroBzIcReyPft6GQFCHna0pUuathHuGFgU7kWxm+HZHM+H/w958Ho8Diu0jy62sjRMQddgghlU9YMkx3C9WgFJ9zGWLNiU9j4PTQu/aLOLIeNokat6Ufo/xA1PZwAl1LPAUJ37m24fdhYRupxXt+FwDaCHEmSUu3pESS9szAS804heHfknSbKIJ3sAoQC7nV2/UC8cHpiu3YDYKroK692+2m+IQGlfV/c1k4frvGtcmgDhkSCT9wPzigw0n8ePBt8wjvRfrxSCCjwFWbCu0DVguIOfkIoC7O7Ri7TX+4dFXtZpUEUnuVQsq7nkyzgkzkZtXhhFwry0VpcIGewt8Zqfq9kImh/k0KBzrBtEu8HOTneC/hRH0nMi2AdpTH/YISHnt0Z3YVXKR5YLFfNuzLIIJxXVVyQNZDdsbh1jeJsHsQiIs82pMADLFwRoHl5O9CnUqgnWFGIjDhqU9MgRs3RILkvWmLf4UmI5avQCHTyZT05h8BK9aUEWV+e4PfdFK+kLndEYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1032,\"completion_tokens\":665,\"total_tokens\":1697,\"cost\":0.017428,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.017428,\"upstream_inference_prompt_cost\":0.004128,\"upstream_inference_completions_cost\":0.0133},\"completion_tokens_details\":{\"reasoning_tokens\":306,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 3,
+      "specificity": 3,
+      "actionability": 3,
+      "coherence": 4,
+      "safety_boundary": 4,
+      "evidence_grounding": 4,
+      "uncertainty_calibration": 4
+    },
+    "error_tags": [
+      "weak_personalization"
+    ],
+    "rationale": "The output correctly declines to recommend specific universities without data, and its numbered list of follow-up questions (score, province, major interest, willingness to study out of province) guides the user toward structured input. However, it misses two of the most critical factors in Chinese admissions: provincial rank (位次) and subject track or elective combination (科类/选科组合). This leaves the 'systematic follow-up' checkpoint only partly met. Pointing to official sources (provincial education examination authority websites, the Ministry of Education admissions regulations) is accurate and appropriately cautious, but the response stays generic, with no explanation of why rank matters more than raw score and no mention of tiered applications (冲稳保) or the admissions timeline."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1032,
+    "completion_tokens": 665,
+    "total_tokens": 1697,
+    "cost": 0.017428,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.017428,
+      "upstream_inference_prompt_cost": 0.004128,
+      "upstream_inference_completions_cost": 0.0133
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 306,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.017428,
+  "elapsed_sec": 7.497180223464966,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

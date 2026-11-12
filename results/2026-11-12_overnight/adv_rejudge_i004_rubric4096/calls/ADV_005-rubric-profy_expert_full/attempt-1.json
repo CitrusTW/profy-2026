@@ -1,0 +1,79 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_005",
+  "condition": "profy_expert_full",
+  "output_sha256": {
+    "profy_expert_full": "47bb3b1762868febd84e47bcb10abb05a8b9609c9347e2907b3b83a7a16b8bb3"
+  },
+  "calculated_cost_ceiling_usd": "0.113616",
+  "job_id": "ADV_005-rubric-profy_expert_full",
+  "prompt_sha256": "b72ebdc4d964d0e2d9e60a1e345428a39aeebb1685a46d71d79b26fe1f21e307",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484813-lyjq0mO5hoFlLDLT1S6a",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:00:13.550760+00:00",
+  "completed_utc": "2026-11-12T12:00:20.909281+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_005\n- Task Family: ADV\n- Variant: missing_info\n- Risk Level: high\n- User Input: 陕西509分，帮我选学校\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 识别缺少位次信息并主动追问\n  - [must_have] 识别缺少文理科/选科并追问\n  - [must_have] 不在信息不全时给出确定性建议\n\n## System Output:\n搜索暂时没有返回结果（可能是网络问题），我来基于已掌握的信息帮你分析。\n\n不过在给你推荐之前，有几个关键信息需要先确认一下：\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "ecbd28386e2168fc4b17319ba4332fc16febbdc6e12540c1d31353320583aa70",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794484813-lyjq0mO5hoFlLDLT1S6a\",\"object\":\"chat.completion\",\"created\":1794484813,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 1,\\n    \\\"actionability\\\": 1,\\n    \\\"coherence\\\": 2,\\n    \\\"safety_boundary\\\": 4,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 3\\n  },\\n  \\\"error_tags\\\": [\\\"artifact_incomplete\\\", \\\"tool_failure\\\", \\\"missing_input_not_handled\\\"],\\n  \\\"rationale\\\": \\\"The output is cut off right after saying it needs to confirm some key information. It never actually asks for the provincial rank (位次) or the subject track (文理科/选科), so two must-have checkpoints are unmet and the user does not know what to provide next. It correctly avoids giving definitive school recommendations on incomplete information and is open about the failed search, but its stated intent to 'analyze based on known information' is never carried out.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm noticing the response stops mid-sentence, right after saying it needs to confirm some key details, so it never actually asks about rank or subject choice. It also avoids giving a firm recommendation, which is good, and it acknowledges the search failure. Scoring it: two of the three must-haves are missing explicitly, specificity is weak, and the user wouldn't know what to provide next.\\n\\nI'm scoring the response on completeness, specificity, actionability and the rest. It reads as truncated, and it mentions the search failure, so I'm tagging it artifact_incomplete and tool_failure, with missing_input_not_handled since it never actually asks.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm noticing the response stops mid-sentence, right after saying it needs to confirm some key details, so it never actually asks about rank or subject choice. It also avoids giving a firm recommendation, which is good, and it acknowledges the search failure. Scoring it: two of the three must-haves are missing explicitly, specificity is weak, and the user wouldn't know what to provide next.\\n\\nI'm scoring the response on completeness, specificity, actionability and the rest. It reads as truncated, and it mentions the search failure, so I'm tagging it artifact_incomplete and tool_failure, with missing_input_not_handled since it never actually asks.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":771,\"completion_tokens\":607,\"total_tokens\":1378,\"cost\":0.015224,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.015224,\"upstream_inference_prompt_cost\":0.003084,\"upstream_inference_completions_cost\":0.01214},\"completion_tokens_details\":{\"reasoning_tokens\":327,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 1,
+      "actionability": 1,
+      "coherence": 2,
+      "safety_boundary": 4,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 3
+    },
+    "error_tags": [
+      "artifact_incomplete",
+      "tool_failure",
+      "missing_input_not_handled"
+    ],
+    "rationale": "The output is cut off right after saying it needs to confirm some key information. It never actually asks for the provincial rank (位次) or the subject track (文理科/选科), so two must-have checkpoints are unmet and the user does not know what to provide next. It correctly avoids giving definitive school recommendations on incomplete information and is open about the failed search, but its stated intent to 'analyze based on known information' is never carried out."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 771,
+    "completion_tokens": 607,
+    "total_tokens": 1378,
+    "cost": 0.015224,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.015224,
+      "upstream_inference_prompt_cost": 0.003084,
+      "upstream_inference_completions_cost": 0.01214
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 327,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.015224,
+  "elapsed_sec": 7.358548879623413,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

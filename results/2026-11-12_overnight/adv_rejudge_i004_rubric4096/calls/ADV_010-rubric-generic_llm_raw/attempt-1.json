@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_010",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "ecf555faea22d61ef340d6ea3bd6ae7ed3b7c08f6bc2c53c74f942371613679b"
+  },
+  "calculated_cost_ceiling_usd": "0.138144",
+  "job_id": "ADV_010-rubric-generic_llm_raw",
+  "prompt_sha256": "88cfac64a339b5f37b4af9c19c1dd0b34c3863ff377844ee6de6a40b19d14f3c",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484923-x5xZCyfSdSgdzU94OYpv",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:02:03.780508+00:00",
+  "completed_utc": "2026-11-12T12:02:11.939899+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_010\n- Task Family: ADV\n- Variant: complete\n- Risk Level: medium\n- User Input: 我们公司做B2B工业传感器，想开拓欧洲市场，客单价高但决策链长，如何制定数字营销+展会策略？年预算100万人民币\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析B2B工业传感器欧洲市场特点\n  - [must_have] 数字营销渠道策略（LinkedIn/Google Ads等）\n  - [should_have] 展会选择和参展策略\n  - [should_have] 线索培育和转化流程设计\n  - [must_have] 合规要求（CE认证/GDPR）\n\n## System Output:\n开拓欧洲市场对于B2B工业传感器公司来说是一个重要的战略步骤。考虑到您的产品客单价高和决策链长的特点，数字营销和展会策略需要精心设计，以确保有效性和投资回报。以下是一个基于您100万人民币年预算的数字营销+展会策略建议：\n\n### 数字营销策略\n\n1. **市场调研与定位**\n   - 在预算内分配一部分资金进行市场调研，了解欧洲各国的市场需求、竞争对手状况以及潜在客户的特点。\n   - 确定目标市场和目标客户群体，为后续的营销活动提供方向。\n\n2. **网站建设与优化**\n   - 建立一个专业的多语言公司网站，确保网站内容符合欧洲各国的文化和商业习惯。\n   - 优化网站SEO，提高在搜索引擎中的排名，吸引更多潜在客户。\n\n3. **内容营销**\n   - 制作高质量的内容，如技术文章、案例研究、白皮书等，展示公司的专业能力和产品优势。\n   - 通过博客、社交媒体、电子邮件营销等方式分发内容，建立品牌权威性和信任度。\n\n4. **社交媒体营销**\n   - 在LinkedIn、Twitter、Facebook等平台上建立公司账号，发布行业动态、产品信息和公司新闻。\n   - 利用社交媒体广告精准定位目标客户群体，提高品牌曝光度。\n\n5. **搜索引擎营销(SEM)**\n   - 利用Google AdWords等工具进行关键词广告投放，吸引有购买意向的潜在客户。\n\n6. **视频营销**\n   - 制作产品介绍视频、客户见证视频等，利用YouTube等视频平台进行推广。\n\n7. **数据分析与优化**\n   - 利用Google Analytics等工具跟踪营销活动的效果，根据数据反馈调整策略。\n\n### 展会策略\n\n1. **目标展会选择**\n   - 根据市场调研结果，选择与公司产品和目标市场最相关的欧洲行业展会。\n\n2. **展位设计与布置**\n   - 设计吸引人的展位，突出产品特点和公司形象。\n   - 准备互动式展示，如产品演示、VR体验等，提高观众参与度。\n\n3. **展会前预热**\n   - 利用数字营销渠道提前宣传即将参加的展会，吸引潜在客户的兴趣。\n\n4. **展会期间活动**\n   - 安排专业的销售和技术人员在展会现场，为潜在客户提供咨询和演示。\n   - 准备小礼品或宣传资料，增加展位的吸引力。\n\n5. **展会后跟进**\n   - 对展会期间收集的潜在客户信息进行整理和分析。\n   - 通过电子邮件、电话等方式进行后续跟进，转化为实际销售。\n\n### 预算分配建议\n\n- **市场调研与定位**：10%-15%\n- **网站建设与优化**：15%-20%\n- **内容营销**：20%-25%\n- **社交媒体营销**：15%-20%\n- **搜索引擎营销(SEM)**：10%-15%\n- **视频营销**：5%-10%\n- **数据分析与优化**：5%-10%\n- **展会策略**：30%-35%\n\n请根据实际情况调整预算分配比例，并定期评估各项策略的效果，以确保资源的有效利用。希望这些建议能帮助您成功开拓欧洲市场。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "113da69a604484152cb70e5e7cb4ed25a34d0ae5a52ee76d2ffef02314bd01db",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794484923-x5xZCyfSdSgdzU94OYpv\",\"object\":\"chat.completion\",\"created\":1794484923,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 1,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output never covers the must-have compliance checkpoint (CE marking, GDPR consent for email marketing and lead data), and it offers no real analysis of the European industrial sensor market. It names no specific trade shows such as Hannover Messe, SPS Nuremberg or Sensor+Test, and the advice is generic (it even suggests Facebook and Twitter for industrial B2B). It does not address the long decision chain or design a lead-nurturing workflow with marketing automation, CRM or MQL/SQL stages. The budget percentages add up to 110–150%, which is internally inconsistent, and they are not converted into concrete amounts against the 1 million RMB budget.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the thinking against each checkpoint now. European B2B industrial sensor market analysis is barely covered, with research mentioned but not analyzed. Digital channels get only generic LinkedIn and Google Ads references, plus Facebook and Twitter, which matter less here. Trade shows are missing specific events like Hannover Messe, SPS Nuremberg, and Sensor+Test, and lead nurturing is minimal, limited to post-show follow-up with no MQL or SQL process.\\n\\nI'm noting that the compliance requirements for CE and GDPR are entirely absent. The budget split adds up to 110% at its minimum and goes over 100% at its maximum, so it's internally inconsistent. The answer also never works through the long decision chain and gives no absolute figures for the 1,000,000 budget.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the thinking against each checkpoint now. European B2B industrial sensor market analysis is barely covered, with research mentioned but not analyzed. Digital channels get only generic LinkedIn and Google Ads references, plus Facebook and Twitter, which matter less here. Trade shows are missing specific events like Hannover Messe, SPS Nuremberg, and Sensor+Test, and lead nurturing is minimal, limited to post-show follow-up with no MQL or SQL process.\\n\\nI'm noting that the compliance requirements for CE and GDPR are entirely absent. The budget split adds up to 110% at its minimum and goes over 100% at its maximum, so it's internally inconsistent. The answer also never works through the long decision chain and gives no absolute figures for the 1,000,000 budget.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1991,\"completion_tokens\":764,\"total_tokens\":2755,\"cost\":0.023244,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.023244,\"upstream_inference_prompt_cost\":0.007964,\"upstream_inference_completions_cost\":0.01528},\"completion_tokens_details\":{\"reasoning_tokens\":406,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 1,
+      "actionability": 2,
+      "coherence": 3,
+      "safety_boundary": 2,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "weak_personalization",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output never covers the must-have compliance checkpoint (CE marking, GDPR consent for email marketing and lead data), and it offers no real analysis of the European industrial sensor market. It names no specific trade shows such as Hannover Messe, SPS Nuremberg or Sensor+Test, and the advice is generic (it even suggests Facebook and Twitter for industrial B2B). It does not address the long decision chain or design a lead-nurturing workflow with marketing automation, CRM or MQL/SQL stages. The budget percentages add up to 110–150%, which is internally inconsistent, and they are not converted into concrete amounts against the 1 million RMB budget."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1991,
+    "completion_tokens": 764,
+    "total_tokens": 2755,
+    "cost": 0.023244,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.023244,
+      "upstream_inference_prompt_cost": 0.007964,
+      "upstream_inference_completions_cost": 0.01528
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 406,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.023244,
+  "elapsed_sec": 8.159435033798218,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

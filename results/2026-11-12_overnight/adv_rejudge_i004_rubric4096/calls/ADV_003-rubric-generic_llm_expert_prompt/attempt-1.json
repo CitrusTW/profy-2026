@@ -1,0 +1,80 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_003",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "dd1d604585cd7b74bac7fcc8976f14db258fa1bf408bb5854d611f2520c102fa"
+  },
+  "calculated_cost_ceiling_usd": "0.135416",
+  "job_id": "ADV_003-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "e700aebda9ceab175ed9339f0a6f214e87a35c9f133bd947f5dc150519662231",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484741-4DxNR3qtbFbr411CtUgH",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:59:01.811517+00:00",
+  "completed_utc": "2026-11-12T11:59:11.466802+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_003\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 广东历史类，502分，位次58000，家里希望学医或者师范，将来回老家县城工作，预算有限不考虑中外合办\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 识别历史类学医的限制并说明\n  - [must_have] 分层推荐师范类院校\n  - [should_have] 分析县城就业导向下的专业选择\n  - [should_have] 标注中外合办项目并排除\n  - [must_have] 声明录取数据时效性\n\n## System Output:\n根据您提供的信息，您在广东省的历史类高考分数为502分，位次58000，家里希望您学医或者师范专业，并且您计划在毕业后回到县城工作，同时预算有限不考虑中外合作办学项目。以下是一些建议：\n\n1. **选择合适的医学院校**：\n   - 考虑到您的分数和位次，您可能需要选择一些在本地较为知名的医学院，同时考虑到录取分数线和您的分数相匹配。广东省内一些医学院如南方医科大学、广州医科大学、广东医科大学等，您需要查看这些学校往年的录取分数线和位次，看是否有可能被录取。\n   - 考虑到预算限制，您可以优先考虑公立院校，因为它们通常学费较低。\n\n2. **师范专业选择**：\n   - 师范专业方面，可以考虑广东技术师范大学、韩山师范学院等，这些学校师范专业较为知名，且更有可能在毕业后回到家乡县城工作。\n   - 师范专业通常有定向培养计划，可以咨询学校是否有与您家乡县城合作的定向培养项目，这将有助于您毕业后直接回到家乡工作。\n\n3. **专业选择的考虑因素**：\n   - 考虑您的兴趣和职业规划，选择一个您真正感兴趣的专业可以让您在未来职业生涯中更有动力和满足感。\n   - 考虑就业前景，医学和师范都是相对稳定的职业选择，但在小县城可能更需要考虑当地的医疗和教育需求。\n\n4. **志愿填报策略**：\n   - 根据您的分数和位次，合理填报志愿，可以考虑“冲一冲、稳一稳、保一保”的策略，即填报一些分数线稍高的院校作为冲刺，和自己分数相近的院校作为稳妥选择，以及一些分数线稍低的院校作为保底。\n   - 同时，也可以考虑一些非热门但就业前景良好的专业，这些专业可能竞争较小，录取机会更大。\n\n5. **了解助学政策**：\n   - 考虑到预算限制，可以了解国家和地方的助学贷款、奖学金政策，以及学校提供的助学金、勤工俭学机会等，这些都可以帮助减轻经济压力。\n\n6. **咨询和信息搜集**：\n   - 可以咨询高中的升学指导老师，或者联系目标院校的招生办公室，获取更详细的招生信息和往年录取数据。\n   - 参加高校举办的招生咨询会，直接与招生老师交流，了解更多信息。\n\n请记住，这些建议是基于您提供的信息和一般情况提出的，实际情况可能会有所不同。您需要根据最新的招生政策、院校信息以及个人情况做出最终决定。同时，建议在做出选择前，充分调研和咨询，以确保您的决定符合您的长远规划。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "3bb6c2059f1d2979d2e46e463ebbcee404dd70ff308bdbf3123d6e2d17f05e93",
+  "raw_response_text": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1794484741-4DxNR3qtbFbr411CtUgH\",\"object\":\"chat.completion\",\"created\":1794484741,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"unsafe_boundary\\\", \\\"missing_input_not_handled\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output misses the most important must-have: it never says that under Guangdong's 3+1+2 system, history-track students generally cannot apply to clinical medicine. Instead it recommends 南方医科大学, 广州医科大学 and 广东医科大学, which is misleading on a high-stakes decision, and it names only two teacher-training schools with no reach/match/safety tiers, no analysis of where rank 58000 fits, no specific mention of 公费师范生 (publicly funded teacher training), and no handling of the excluded Sino-foreign programs. The closing disclaimer is generic rather than a clear note that admission data changes year to year, the user's home county is never asked about, and the advice stays boilerplate despite a readable structure.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm noticing that Guangdong history-track students usually can't apply to clinical medicine, since most of those programs require physics and chemistry under the 3+1+2 system. The draft recommends several medical schools without flagging that restriction, which is a serious problem, and a 58000 rank for 南方医科大学 on the history track looks unrealistic. The list also has no tiered safe, target, and reach schools, and it only names two teacher colleges.\\n\\nI'm scoring the draft on completeness, specificity, safety and evidence, and I'm tagging the weak spots: the teacher-school tiers are missing, and the timeliness note is only partial. The medical-school recommendations are the most serious issue, since history-track students generally can't apply to those programs.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm noticing that Guangdong history-track students usually can't apply to clinical medicine, since most of those programs require physics and chemistry under the 3+1+2 system. The draft recommends several medical schools without flagging that restriction, which is a serious problem, and a 58000 rank for 南方医科大学 on the history track looks unrealistic. The list also has no tiered safe, target, and reach schools, and it only names two teacher colleges.\\n\\nI'm scoring the draft on completeness, specificity, safety and evidence, and I'm tagging the weak spots: the teacher-school tiers are missing, and the timeliness note is only partial. The medical-school recommendations are the most serious issue, since history-track students generally can't apply to those programs.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1765,\"completion_tokens\":925,\"total_tokens\":2690,\"cost\":0.02556,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.02556,\"upstream_inference_prompt_cost\":0.00706,\"upstream_inference_completions_cost\":0.0185},\"completion_tokens_details\":{\"reasoning_tokens\":528,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 3,
+      "safety_boundary": 2,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "weak_personalization",
+      "unsafe_boundary",
+      "missing_input_not_handled",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output misses the most important must-have: it never says that under Guangdong's 3+1+2 system, history-track students generally cannot apply to clinical medicine. Instead it recommends 南方医科大学, 广州医科大学 and 广东医科大学, which is misleading on a high-stakes decision, and it names only two teacher-training schools with no reach/match/safety tiers, no analysis of where rank 58000 fits, no specific mention of 公费师范生 (publicly funded teacher training), and no handling of the excluded Sino-foreign programs. The closing disclaimer is generic rather than a clear note that admission data changes year to year, the user's home county is never asked about, and the advice stays boilerplate despite a readable structure."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 925,
+    "total_tokens": 2690,
+    "cost": 0.02556,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02556,
+      "upstream_inference_prompt_cost": 0.00706,
+      "upstream_inference_completions_cost": 0.0185
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 528,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.02556,
+  "elapsed_sec": 9.655316829681396,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

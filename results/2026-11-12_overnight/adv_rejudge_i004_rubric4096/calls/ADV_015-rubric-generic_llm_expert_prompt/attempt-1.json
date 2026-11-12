@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_015",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "5e000b9179b9a3da022bee389fd8b2b4ac89c76f80060218ba4b91dea4f2dac7"
+  },
+  "calculated_cost_ceiling_usd": "0.140352",
+  "job_id": "ADV_015-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "e34400fdc0a34f4360958084dfcf2d29132ac349b738f9e4b8299b0c18623560",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794485061-d7iXqFkkJzPI3NzyS82U",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:04:21.207563+00:00",
+  "completed_utc": "2026-11-12T12:04:30.651279+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_015\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 请帮我对比分析宁德时代和亿纬锂能，我想在锂电板块做一个中长期配置，持有1-3年\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 两家公司财务指标对比\n  - [must_have] 行业地位和竞争格局对比\n  - [should_have] 估值对比\n  - [must_have] 中长期持有的风险因素\n  - [must_have] 免责声明\n\n## System Output:\n宁德时代（CATL）和亿纬锂能（EVE Energy）都是中国锂电池行业中的重要企业，它们在锂电池领域有着各自的优势和市场定位。以下是对这两家公司的一些对比分析，你可以基于这些信息来帮助你做出中长期配置的决策：\n\n1. **市场地位和规模**：\n   - **宁德时代**：作为全球最大的锂电池制造商之一，宁德时代在全球电动汽车（EV）电池市场的份额领先。公司不仅在中国市场占据主导地位，还与多家国际汽车制造商建立了合作关系。\n   - **亿纬锂能**：虽然规模小于宁德时代，但亿纬锂能也是中国领先的锂电池制造商之一，特别是在圆柱形锂电池领域具有较强的竞争力。\n\n2. **产品和技术**：\n   - **宁德时代**：宁德时代以其高能量密度和高安全性的电池技术而闻名，公司在研发上的投入较大，持续推动电池技术的创新。\n   - **亿纬锂能**：亿纬锂能专注于圆柱形电池的研发和生产，其产品在消费电子、电动工具、电动自行车等领域有广泛应用。\n\n3. **财务状况**：\n   - **宁德时代**：由于其市场领导地位，宁德时代的收入和利润规模较大，财务状况稳健。\n   - **亿纬锂能**：亿纬锂能的财务状况也相对健康，但与宁德时代相比，其规模较小，可能在抗风险能力上略有不足。\n\n4. **增长潜力**：\n   - **宁德时代**：随着全球电动汽车市场的快速增长，宁德时代有巨大的增长潜力，特别是在国际市场上。\n   - **亿纬锂能**：亿纬锂能虽然在国际市场上的知名度不如宁德时代，但其在特定领域的专注也可能带来稳定的增长。\n\n5. **风险因素**：\n   - **宁德时代**：面临的风险包括全球供应链的波动、原材料价格的波动、以及国际竞争对手的竞争压力。\n   - **亿纬锂能**：除了上述风险外，由于规模较小，亿纬锂能可能更容易受到市场波动的影响。\n\n6. **政策和市场趋势**：\n   - 两家公司都将受益于全球对清洁能源和电动汽车的推动，以及中国政府对新能源汽车行业的支持。\n\n7. **投资风险和回报**：\n   - **宁德时代**：作为行业龙头，宁德时代的股票可能提供稳定的增长和较低的风险，但预期回报可能相对较低。\n   - **亿纬锂能**：由于规模较小，亿纬锂能可能提供更高的增长潜力，但相应的风险也更高。\n\n在做出中长期配置时，你可以考虑以下几点：\n\n- **风险承受能力**：如果你更倾向于稳健投资，宁德时代可能是一个更好的选择。如果你愿意承担更高的风险以换取更高的潜在回报，亿纬锂能可能更适合你。\n- **投资组合多样化**：为了分散风险，你可以考虑在两家公司之间分配投资，以实现风险和回报的平衡。\n- **市场动态和政策变化**：持续关注锂电池行业的最新动态和政策变化，这可能会影响两家公司的业绩和股价。\n- **个人投资目标**：你的投资目标和期望的回报率将直接影响你的投资决策。\n\n请注意，以上分析仅供参考，实际投资决策应基于个人的财务状况、投资目标和风险承受能力，并建议在做出投资决策前咨询专业的财务顾问。此外，市场有风险，投资需谨慎。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "f7615f448f1d494a0618a8202d0a9f6e4cadf13f43645ebeba8c0163cf13a716",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794485061-d7iXqFkkJzPI3NzyS82U\",\"object\":\"chat.completion\",\"created\":1794485061,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 1,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 3\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output covers market position, risks and a disclaimer, so it is clear and well organized, but the substance is thin. There are no concrete financial metrics (revenue, net profit, gross margin, ROE, cash flow) and no valuation comparison (PE/PB). It also misdescribes 亿纬锂能 as mainly a cylindrical-cell maker for consumer electronics, overlooking its large power-battery and energy-storage businesses. The risk analysis is generic and ignores the 1-3 year holding period, missing overcapacity, price wars, technology shifts and overseas policy risk, so the advice gives little basis for an actual allocation decision.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the response against the requirements: the financial metrics are vague, with no concrete figures, so the must-have is only partly met. Industry position is only touched on, and valuation (like PE) is missing entirely. The risks are generic and not tied to a 1-3 year horizon. There's also a factual problem: the answer describes EVE as focusing on cylindrical batteries for consumer electronics.\\n\\nI'm noticing the answer mischaracterizes EVE's business: it's mainly large power batteries and energy storage, not just cylindrical cells for small devices. I'm also weighing whether the \\\"lower risk\\\" claim for CATL is overstated and whether the growth-potential logic for the smaller firm is too generic. The main gaps are that the 1-3 year horizon isn't addressed and valuation and financials are missing.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the response against the requirements: the financial metrics are vague, with no concrete figures, so the must-have is only partly met. Industry position is only touched on, and valuation (like PE) is missing entirely. The risks are generic and not tied to a 1-3 year horizon. There's also a factual problem: the answer describes EVE as focusing on cylindrical batteries for consumer electronics.\\n\\nI'm noticing the answer mischaracterizes EVE's business: it's mainly large power batteries and energy storage, not just cylindrical cells for small devices. I'm also weighing whether the \\\"lower risk\\\" claim for CATL is overstated and whether the growth-potential logic for the smaller firm is too generic. The main gaps are that the 1-3 year horizon isn't addressed and valuation and financials are missing.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2045,\"completion_tokens\":826,\"total_tokens\":2871,\"cost\":0.0247,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.0247,\"upstream_inference_prompt_cost\":0.00818,\"upstream_inference_completions_cost\":0.01652},\"completion_tokens_details\":{\"reasoning_tokens\":476,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 1,
+      "actionability": 2,
+      "coherence": 4,
+      "safety_boundary": 3,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 3
+    },
+    "error_tags": [
+      "weak_personalization",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output covers market position, risks and a disclaimer, so it is clear and well organized, but the substance is thin. There are no concrete financial metrics (revenue, net profit, gross margin, ROE, cash flow) and no valuation comparison (PE/PB). It also misdescribes 亿纬锂能 as mainly a cylindrical-cell maker for consumer electronics, overlooking its large power-battery and energy-storage businesses. The risk analysis is generic and ignores the 1-3 year holding period, missing overcapacity, price wars, technology shifts and overseas policy risk, so the advice gives little basis for an actual allocation decision."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 2045,
+    "completion_tokens": 826,
+    "total_tokens": 2871,
+    "cost": 0.0247,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0247,
+      "upstream_inference_prompt_cost": 0.00818,
+      "upstream_inference_completions_cost": 0.01652
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 476,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.0247,
+  "elapsed_sec": 9.443741083145142,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

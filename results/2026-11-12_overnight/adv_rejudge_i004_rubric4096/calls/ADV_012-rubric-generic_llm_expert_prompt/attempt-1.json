@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_012",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "e7805cd15182ea25a452fd9b9eee3d915fda34c1d55459916b110dd7adddd230"
+  },
+  "calculated_cost_ceiling_usd": "0.134168",
+  "job_id": "ADV_012-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "00114f2242f176f32fbf797525100d970544fad94a3b5f29714796f1f6fb3eb0",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484978-8RLkL9Xo2RLkBW42rOnR",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:02:58.720954+00:00",
+  "completed_utc": "2026-11-12T12:03:04.182075+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_012\n- Task Family: ADV\n- Variant: missing_info\n- Risk Level: medium\n- User Input: 帮我分析下印度市场怎么做，我预算不多\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 追问具体产品品类\n  - [should_have] 追问预算范围以便给出可行建议\n  - [should_have] 可以先给印度市场概况但标注需要更多信息\n\n## System Output:\n分析和进入印度市场需要考虑多个因素，包括市场调研、文化差异、法规政策、竞争环境以及成本控制等。以下是一些基于您预算有限情况下的建议：\n\n1. **市场调研**：\n   - **在线调研**：利用免费的在线资源进行初步市场调研，比如Google Trends了解消费者趋势，免费的市场研究报告了解行业概况。\n   - **社交媒体和论坛**：加入行业相关的社交媒体群组和论坛，了解消费者的需求和反馈。\n\n2. **文化和法规适应**：\n   - **了解文化差异**：印度是一个文化多元的国家，了解主要语言、宗教、节日和社会习俗对于产品定位至关重要。\n   - **遵守法规**：研究印度的商业法规、税收政策和进口限制，确保你的业务合法合规。\n\n3. **竞争分析**：\n   - **本地竞争对手**：分析本地的竞争对手，了解他们的产品、价格和市场策略。\n   - **国际竞争对手**：研究在印度市场上已经成功的国际品牌，学习他们的成功案例。\n\n4. **产品定位**：\n   - **成本效益**：考虑到预算限制，专注于提供性价比高的产品或服务。\n   - **差异化**：找到可以与竞争对手区分开来的独特卖点（USP）。\n\n5. **销售渠道**：\n   - **电子商务平台**：利用印度的电子商务平台如Flipkart、Amazon India等低成本进入市场。\n   - **合作伙伴**：寻找本地的分销商或合作伙伴，这可以帮助减少初期的市场营销和物流成本。\n\n6. **营销策略**：\n   - **内容营销**：创建高质量的内容来吸引潜在客户，比如博客文章、视频和社交媒体帖子。\n   - **口碑营销**：利用满意的客户作为品牌大使，鼓励他们分享他们的体验。\n\n7. **风险管理**：\n   - **汇率风险**：印度卢比与您本国货币之间的汇率波动可能会影响成本和定价。\n   - **政治和经济风险**：印度的政治和经济环境可能会影响商业活动，需要密切关注。\n\n8. **逐步扩张**：\n   - **试点项目**：在全面进入市场之前，可以先进行小规模的试点项目，以便测试市场反应和调整策略。\n\n9. **成本控制**：\n   - **精简团队**：在初期，可能需要一个小型高效的团队来控制成本。\n   - **外包服务**：考虑将某些非核心业务流程外包给成本较低的服务提供商。\n\n在制定具体策略时，重要的是要灵活并准备好根据市场反馈调整计划。由于预算有限，可能需要更多的创意和策略性思考来最大化资源的使用效率。同时，也要注意不确定性和风险，随时准备调整策略以适应市场变化。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "ee0ab5d45ccc806c552fdedcdd59c2e493d2b586bac96889c7b3433bc34385b3",
+  "raw_response_text": "\n         \n\n         \n{\"id\":\"gen-1794484978-8RLkL9Xo2RLkBW42rOnR\",\"object\":\"chat.completion\",\"created\":1794484978,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 1,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"missing_input_not_handled\\\", \\\"weak_personalization\\\"],\\n  \\\"rationale\\\": \\\"The output misses the must-have checkpoint: it never asks what product or industry the user is in, and it never asks for an actual budget range. It gives a generic market-entry checklist without saying that tailored advice needs more information. The structure is clear and nothing is overclaimed, but the content is boilerplate (e.g., 'use Flipkart/Amazon India', 'content marketing') that could apply to any country, so it is neither specific to India nor tailored to a small budget.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the response against the rubric: it skips asking about product category and budget range, and gives a generic overview without flagging that more information is needed. Completeness and specificity both look weak, around 1-2, since it's generic and only mentions Flipkart and Amazon India. Coherence is solid at 4, and evidence grounding is low at 2 with no hallucinations spotted.\\n\\nI'm scoring the uncertainty calibration at 2 since the response never acknowledges the missing information. The tags I'm assigning are missing input not handled and weak personalization.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the response against the rubric: it skips asking about product category and budget range, and gives a generic overview without flagging that more information is needed. Completeness and specificity both look weak, around 1-2, since it's generic and only mentions Flipkart and Amazon India. Coherence is solid at 4, and evidence grounding is low at 2 with no hallucinations spotted.\\n\\nI'm scoring the uncertainty calibration at 2 since the response never acknowledges the missing information. The tags I'm assigning are missing input not handled and weak personalization.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQS2ggKEAgTGAI4AUIIdGhpbmtpbmcSDHWnNMyQOKXBD1bFaxoMyAZ0+6Ws+p7DlnjAIjDdD3dDJT3rzFgTka+HyIwd0Aw+sOsuQHE7P40xGUZ13bDQ9GfgQ8PMXpKBtFpi2egq9wdQrAeJog0+8x45hDX0v5BHM2mdG/9fnrEn9kOTSJTLm21mQ67y90ASsiTljbowxp2FmwYRKJupH6atiS5V9LEbOWD8fyC7YoaviDYzarlAkGajBKAUiUtV0sqiHLsoh4u7uEY3w4asQ6HGbYOGmZuPWmMuT940CFCkepyp+IysmNqpPGft/DMjPkwTt0lljYL5dFA3zs+zgBgNyUMeBDbjP2+ItT/kNKXtrbsCEFVMfnpTwyxmr4OQSNrkTDSuYh5TAAg9xAdzJqemtvWrM6g5iO7XRgeHl6bbP1s32iGVtpYIozd336N5WUkvKd0/Ue6CJNYp5TJRb4/IZyh2PRC1+eknNHM4k8MGeRbf5h1kk9WeQbDVXUmQOUTaw0rN1a3NXU68qYPhNVnDpfOQXKClouJHEkXKe7CJA+001Zpik+isydP55AGYXf7pmw/zeK7ykRRRBhKclzmIIQK7D/H+GCq5Zr2n5g+5TzV+QuQCcIC+7U/PvUMYn/0CSgORAfvbk5QSOOGohyBgEvMuLuqkjelWK9kRFCXAyNDToPEX8GyeFtpUwpcBcLwOXv8WMJLr09zqUZCunrKTST3xVVNVMIwrtwsK7eKmW2X15Fquo+VBbmUz80woB11KHZmB47ZRXSsQ0EqP1AyZh4oWcnogZVUMOc2Fc/0+NtKWD/Hxr3J0hJxgfsCtvOd0Jdl5lxEZNIa/rWMe9psU/cJYVWh0BvR+S9tpd3uXjbv2taqy2ANF6q68DA3YQGQ2mITbrhYA/lM+nAQm2dKAOzQAOcvMZ6zYCVkKNgsovJQapMzNvoTdBmgwY1jI/fRG5HIbas8eXuKRiqa14iDGU6Ko20DoYtOzP25QiE1WCmHy4z9HS8ERO7gubNs2l83r207v1fvcwJawdBVX09E84aERi3CWwObP9rGMjFJkya90Rv75Q3S2z0OW+6lq+V/q/QvCkxfEDHmR2CbL2BNGwHykkwmhkCXbZp4wqY5FdlXsRP26VibWCppjijX0j83LEoPUBqGsH5Hzdq6vz8wG02r/lYXsRG1+9Q/CX9ANoDh2WaJEegiQsc2H4qvZDbze6L6xMnkSy+DhU0Bd3RqEpRJiGrH+d1VIIUxp9MGOcncoZgVgDPSJm5ZA8wHxIT/mQSZzzPYtlJh+5MgAy/0oFAEd55o2UyKjaG7hzzoVprw6EA21RlLVKzP9jBaXe+wE0zCCy/dxIcKXhvN1D2VJdTeUfXTOOUHoBuqf2NK5hjLATCTNkmEXGRslbva8bW2aozGERkV9QAg0c88iLJYKjjTjRwuwuO69AgMcCPcZ/14Yg9YGk2OPt1vdZAzcJpVhgAvXiCz1nrAdg9G2GAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1713,\"completion_tokens\":481,\"total_tokens\":2194,\"cost\":0.016472,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.016472,\"upstream_inference_prompt_cost\":0.006852,\"upstream_inference_completions_cost\":0.00962},\"completion_tokens_details\":{\"reasoning_tokens\":193,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 1,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 4,
+      "safety_boundary": 3,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "missing_input_not_handled",
+      "weak_personalization"
+    ],
+    "rationale": "The output misses the must-have checkpoint: it never asks what product or industry the user is in, and it never asks for an actual budget range. It gives a generic market-entry checklist without saying that tailored advice needs more information. The structure is clear and nothing is overclaimed, but the content is boilerplate (e.g., 'use Flipkart/Amazon India', 'content marketing') that could apply to any country, so it is neither specific to India nor tailored to a small budget."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1713,
+    "completion_tokens": 481,
+    "total_tokens": 2194,
+    "cost": 0.016472,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016472,
+      "upstream_inference_prompt_cost": 0.006852,
+      "upstream_inference_completions_cost": 0.00962
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 193,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.016472,
+  "elapsed_sec": 5.4611499309539795,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

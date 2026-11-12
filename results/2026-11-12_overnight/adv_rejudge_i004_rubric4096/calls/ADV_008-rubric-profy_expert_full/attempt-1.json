@@ -1,0 +1,79 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_008",
+  "condition": "profy_expert_full",
+  "output_sha256": {
+    "profy_expert_full": "1cb66e896f88191820727f663416ba710b29219f8e78413ac085e55d33f59328"
+  },
+  "calculated_cost_ceiling_usd": "0.132592",
+  "job_id": "ADV_008-rubric-profy_expert_full",
+  "prompt_sha256": "6d3cc4b97072d1655157751c30ff3b7b8e383aa61b9c9eff74bcf0ce9fa336af",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484888-VftoGduwwL8E1Ox12dvl",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T12:01:27.829108+00:00",
+  "completed_utc": "2026-11-12T12:01:37.176005+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_008\n- Task Family: ADV\n- Variant: complete\n- Risk Level: medium\n- User Input: 我们是一家做智能家居的中国品牌，想进入东南亚市场，预算50万美金，半年内要看到效果，请帮我制定出海营销策略\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析东南亚市场智能家居竞争格局\n  - [must_have] 给出具体渠道策略（电商/社媒/线下）\n  - [should_have] 预算分配建议\n  - [should_have] 6个月阶段性里程碑\n  - [must_have] 风险提示（合规/物流/本地化）\n\n## System Output:\n先做一轮市场调研，了解东南亚智能家居市场的竞争格局、消费者行为和渠道特点。好的，搜索工具暂时遇到一些波动。不过没关系，基于我对东南亚市场和智能家居行业的深入理解，直接给你完整的出海策略方案。\n\n开始执行——以下是为你制定的完整出海营销策略方案，完整文档已保存，你可以[点击查看](https://app.profy.cn/storage/agent-upload/99896c67-ad01-4f27-b6a7-cdcad0aebea1/%E6%99%BA%E8%83%BD%E5%AE%B6%E5%B1%85%E5%93%81%E7%89%8C%E5%87%BA%E6%B5%B7%E4%B8%9C%E5%8D%97%E4%BA%9A%E8%90%A5%E9%94%80%E7%AD%96%E7%95%A5_v1.md)。\n\n---\n\n## 策略总览\n\n**预算**：$500,000 | **时间**：6个月 | **目标**：4个核心市场（印尼>泰国>越南>菲律宾）\n\n### 核心打法：不跟小米打价格战，走三条差异化路线\n\n| 差异化方向 | 一句话解释 |\n|-----------|-----------|\n| **本地化适配** | 针对东南亚租房多、电压不稳、高温高湿场景做产品调优 |\n| **场景化套餐** | 不卖单品卖套餐（\"租房安全包\"\"省电套餐\"），提升客单价 |\n| **社媒驱动品牌** | All-in TikTok/Shopee/KOL种草，不做传统广告 |\n\n### 预算去哪了（TOP 3）\n\n**TikTok/FB/IG广告投放**（$90K）> **首批备货物流**（$70K）> **团队运营**（$60K）+ **KOL/KOC营销**（$60K）+ **电商运营**（$60K）\n\n### 6个月节奏\n\n| 阶段 | 时间 | 重点 |\n|------|------|------|\n| 筹备期 | 第1个月 | 商标注册、渠道入驻、本地物料、团队到位、首批备货 |\n| 冷启动 | 第2个月 | TikTok日更、头部KOL背书、直播开播、精准投放 |\n| 放量期 | 第3-4个月 | 广告扩量（ROI>2则加投）、大促节点冲单、海外仓入仓 |\n| 深耕期 | 第5-6个月 | 线下快闪店、公寓/地产合作、老客复购体系 |\n\n### 6个月要交出什么成绩\n\n- **累计GMV**：$400K-$600K\n- **获客成本（CAC）**：<$8\n- **月GMV在第5-6个月**：>$150K\n- **品牌基建**：本地化内容/供应链/团队全部跑通，为第二年规模化铺路\n\n---\n\n方案中还有一个\"今天可以开始的5件事\"清单，以及完整的风险应对表。如果你需要我进一步细化某个板块（比如TikTok内容策略、KOL筛选标准、或者具体到某个国家的深入方案），随时告诉我。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "c14e0b54e38398cfb7a08296e062432b517f371e7e731bbeb20a633da327cb7e",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794484888-VftoGduwwL8E1Ox12dvl\",\"object\":\"chat.completion\",\"created\":1794484888,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 3,\\n    \\\"specificity\\\": 3,\\n    \\\"actionability\\\": 3,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"tool_failure\\\", \\\"overclaiming\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The visible output covers two checkpoints well: a 6-month phased roadmap and channel strategy (TikTok, Shopee, KOLs, pop-up stores, real-estate partnerships). Three are weak. Competitive analysis is reduced to 'don't fight Xiaomi on price.' Budget allocation lists only the top five items (about $340K) and leaves roughly $160K unexplained. Compliance and logistics risks are not shown and are only referenced as a 'complete risk table' behind an external link, though localization gets partial coverage (voltage, heat and humidity, renters). When the search tool failed, the agent replaced research with an appeal to its own 'deep understanding.' It then gave precise GMV ($400K-600K) and CAC (<$8) targets without benchmarks, sources or caveats, which is overconfident given there was no data.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the competitive landscape section, which only references avoiding a price war with Xiaomi and lacks real analysis. The channel plan covers TikTok, Shopee, KOLs, offline pop-ups and apartment outreach, but only partially. I'm also noting the budget allocation shows the top five items (around $340K) with the rest unaccounted for, while milestones are present and the risk section points to a separate response table not shown here.\\n\\nI'm going through the remaining checks: compliance and logistics risks aren't visible, the search failed yet the analysis went ahead anyway, and the GMV targets have no supporting data. The budget figures also don't add up to the $500K total in what's shown.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the competitive landscape section, which only references avoiding a price war with Xiaomi and lacks real analysis. The channel plan covers TikTok, Shopee, KOLs, offline pop-ups and apartment outreach, but only partially. I'm also noting the budget allocation shows the top five items (around $340K) with the rest unaccounted for, while milestones are present and the risk section points to a separate response table not shown here.\\n\\nI'm going through the remaining checks: compliance and logistics risks aren't visible, the search failed yet the analysis went ahead anyway, and the GMV targets have no supporting data. The budget figures also don't add up to the $500K total in what's shown.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1865,\"completion_tokens\":807,\"total_tokens\":2672,\"cost\":0.0236,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.0236,\"upstream_inference_prompt_cost\":0.00746,\"upstream_inference_completions_cost\":0.01614},\"completion_tokens_details\":{\"reasoning_tokens\":385,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 3,
+      "specificity": 3,
+      "actionability": 3,
+      "coherence": 4,
+      "safety_boundary": 2,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "tool_failure",
+      "overclaiming",
+      "artifact_incomplete"
+    ],
+    "rationale": "The visible output covers two checkpoints well: a 6-month phased roadmap and channel strategy (TikTok, Shopee, KOLs, pop-up stores, real-estate partnerships). Three are weak. Competitive analysis is reduced to 'don't fight Xiaomi on price.' Budget allocation lists only the top five items (about $340K) and leaves roughly $160K unexplained. Compliance and logistics risks are not shown and are only referenced as a 'complete risk table' behind an external link, though localization gets partial coverage (voltage, heat and humidity, renters). When the search tool failed, the agent replaced research with an appeal to its own 'deep understanding.' It then gave precise GMV ($400K-600K) and CAC (<$8) targets without benchmarks, sources or caveats, which is overconfident given there was no data."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1865,
+    "completion_tokens": 807,
+    "total_tokens": 2672,
+    "cost": 0.0236,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0236,
+      "upstream_inference_prompt_cost": 0.00746,
+      "upstream_inference_completions_cost": 0.01614
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 385,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.0236,
+  "elapsed_sec": 9.346932888031006,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

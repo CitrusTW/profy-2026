@@ -1,0 +1,81 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_003",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "f00e770c1e3a29fcf0e98530f38ad150db45c415d0fdaf9e62c819066d2094e7"
+  },
+  "calculated_cost_ceiling_usd": "0.124480",
+  "job_id": "ADV_003-rubric-generic_llm_raw",
+  "prompt_sha256": "20159d88f6f2386513c0c26e6aea3be0a8e70d674c5bfdacb6bbd5249db5496c",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794484731-dlMoLkiafnl71cfxmTRN",
+  "phase": "I-004-uniform4096",
+  "started_utc": "2026-11-12T11:58:51.750708+00:00",
+  "completed_utc": "2026-11-12T11:59:01.808779+00:00",
+  "attempt": 2,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_003\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 广东历史类，502分，位次58000，家里希望学医或者师范，将来回老家县城工作，预算有限不考虑中外合办\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 识别历史类学医的限制并说明\n  - [must_have] 分层推荐师范类院校\n  - [should_have] 分析县城就业导向下的专业选择\n  - [should_have] 标注中外合办项目并排除\n  - [must_have] 声明录取数据时效性\n\n## System Output:\n根据您的情况，我为您分析如下：\n\n1. 分数和位次：您的成绩为502分，位次58000。这个成绩在广东省属于中等偏上水平，有一定的竞争力。\n\n2. 专业选择：您家里希望您学医或者师范专业。医学专业就业前景较好，但学习难度较大，需要长时间的学习和实践。师范专业相对容易就业，且适合回老家县城工作。\n\n3. 学校选择：根据您的分数和位次，可以考虑广东省内的一本和二本院校。例如：广东医科大学、广州中医药大学、华南师范大学等。这些学校在医学和师范专业方面都有较好的实力。\n\n4. 预算考虑：您提到预算有限，不考虑中外合办项目。那么，可以重点考虑省内的公立院校，这些学校学费相对较低，且有更多的奖学金和助学金机会。\n\n5. 就业前景：学医或者师范专业，回到县城工作，就业前景较好。医学专业可以从事医疗、卫生、防疫等工作；师范专业可以从事教育、培训等工作。\n\n综上所述，建议您可以重点考虑广东省内的医学和师范专业，选择公立院校，以满足您的分数、位次、专业和预算要求。同时，也可以根据自己的兴趣和职业规划，进一步了解相关院校和专业情况，做出更适合自己的选择。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 4096,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "6ee799d6efbed061c582b318ae2684fc5c33007f0a32bc689459a0dbe10166a8",
+  "raw_response_text": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1794484731-dlMoLkiafnl71cfxmTRN\",\"object\":\"chat.completion\",\"created\":1794484731,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 1,\\n    \\\"specificity\\\": 1,\\n    \\\"actionability\\\": 1,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 1,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 1\\n  },\\n  \\\"error_tags\\\": [\\\"overclaiming\\\", \\\"hallucinated_evidence\\\", \\\"weak_personalization\\\", \\\"artifact_incomplete\\\", \\\"unsafe_boundary\\\"],\\n  \\\"rationale\\\": \\\"The output misses the most important point. In Guangdong, most medical majors (clinical medicine, stomatology, etc.) require physics, or physics plus chemistry, so a history-track student generally cannot apply to them. Instead, the answer recommends 广东医科大学 and 广州中医药大学 for medicine, and 华南师范大学, whose history-track cutoff is usually far above 502 points and rank 58,000. It also uses the outdated 一本/二本 batch terminology, which Guangdong has merged. It gives no tiered (reach/match/safety) recommendations for teacher-training schools and no specific options for county-level employment, such as 公费师范生 (government-funded teacher students) or 定向医学生 (contract-placement medical students). It never states that admission data may be out of date and offers no hedging, so this is misleading and potentially harmful advice in a high-stakes decision. The structure is readable, but the content is generic and partly wrong.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the candidate's score against the Guangdong history-track line and the rank, and the 502 looks moderate. The bigger concern is that history-track applicants can't enter most clinical medicine majors, which requires physics and chemistry, and the answer I'm weighing doesn't flag that. I'm also looking at whether the recommended 华南师范大学 fits a 502 and rank 58000.\\n\\nThe answer leaves out that history-track students usually can't enter most clinical medicine majors, which need physics and chemistry, and it still recommends schools that look out of reach at a 502 and rank 58000. The scores I'm weighing mostly come down to a lack of specifics, unstated uncertainty, and advice that could mislead someone making a high-stakes choice. I'd also flag the outdated batch wording and the missing data-timeliness caveat.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the candidate's score against the Guangdong history-track line and the rank, and the 502 looks moderate. The bigger concern is that history-track applicants can't enter most clinical medicine majors, which requires physics and chemistry, and the answer I'm weighing doesn't flag that. I'm also looking at whether the recommended 华南师范大学 fits a 502 and rank 58000.\\n\\nThe answer leaves out that history-track students usually can't enter most clinical medicine majors, which need physics and chemistry, and it still recommends schools that look out of reach at a 502 and rank 58000. The scores I'm weighing mostly come down to a lack of specifics, unstated uncertainty, and advice that could mislead someone making a high-stakes choice. I'd also flag the outdated batch wording and the missing data-timeliness caveat.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1249,\"completion_tokens\":904,\"total_tokens\":2153,\"cost\":0.023076,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.023076,\"upstream_inference_prompt_cost\":0.004996,\"upstream_inference_completions_cost\":0.01808},\"completion_tokens_details\":{\"reasoning_tokens\":429,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 1,
+      "specificity": 1,
+      "actionability": 1,
+      "coherence": 3,
+      "safety_boundary": 1,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 1
+    },
+    "error_tags": [
+      "overclaiming",
+      "hallucinated_evidence",
+      "weak_personalization",
+      "artifact_incomplete",
+      "unsafe_boundary"
+    ],
+    "rationale": "The output misses the most important point. In Guangdong, most medical majors (clinical medicine, stomatology, etc.) require physics, or physics plus chemistry, so a history-track student generally cannot apply to them. Instead, the answer recommends 广东医科大学 and 广州中医药大学 for medicine, and 华南师范大学, whose history-track cutoff is usually far above 502 points and rank 58,000. It also uses the outdated 一本/二本 batch terminology, which Guangdong has merged. It gives no tiered (reach/match/safety) recommendations for teacher-training schools and no specific options for county-level employment, such as 公费师范生 (government-funded teacher students) or 定向医学生 (contract-placement medical students). It never states that admission data may be out of date and offers no hedging, so this is misleading and potentially harmful advice in a high-stakes decision. The structure is readable, but the content is generic and partly wrong."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1249,
+    "completion_tokens": 904,
+    "total_tokens": 2153,
+    "cost": 0.023076,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.023076,
+      "upstream_inference_prompt_cost": 0.004996,
+      "upstream_inference_completions_cost": 0.01808
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 429,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.023076,
+  "elapsed_sec": 10.058099031448364,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}
