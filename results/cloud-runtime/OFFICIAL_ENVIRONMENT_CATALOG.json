@@ -1,0 +1,706 @@
+{
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "builder_commit": "12ebd8653093e0734c7902835cb20c054196026c",
+  "image_repository": "ghcr.io/benchflow-ai/skillsbench-task-env",
+  "image_layers_downloaded": false,
+  "model_calls": 0,
+  "tasks": [
+    {
+      "task": "3d-scan-calc",
+      "environment_tree_sha": "f4c9015b8eca9e9ed2788022321a2d643ea17650",
+      "builder_environment_tree_sha": "f4c9015b8eca9e9ed2788022321a2d643ea17650",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-3d-scan-calc-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "ada-bathroom-plan-repair",
+      "environment_tree_sha": "6c343ae0343cfa4ac189bbac267d67f7f311c3ea",
+      "builder_environment_tree_sha": "6c343ae0343cfa4ac189bbac267d67f7f311c3ea",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-ada-bathroom-plan-repair-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "adaptive-cruise-control",
+      "environment_tree_sha": "1f4ba22c51c5b32a10f3b4ae44933955f0c5ba34",
+      "builder_environment_tree_sha": "1f4ba22c51c5b32a10f3b4ae44933955f0c5ba34",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-adaptive-cruise-control-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "azure-bgp-oscillation-route-leak",
+      "environment_tree_sha": "13a87cede7a113801e9d9e4654d20bf2076b1364",
+      "builder_environment_tree_sha": "13a87cede7a113801e9d9e4654d20bf2076b1364",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-azure-bgp-oscillation-route-leak-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "bike-rebalance",
+      "environment_tree_sha": "9fe53087dea51ceda8ff8adc0c8a2862f3c37359",
+      "builder_environment_tree_sha": "9fe53087dea51ceda8ff8adc0c8a2862f3c37359",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-bike-rebalance-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "citation-check",
+      "environment_tree_sha": "4ff9a5dce97c89c445b168097c3b3610a6de3504",
+      "builder_environment_tree_sha": "4ff9a5dce97c89c445b168097c3b3610a6de3504",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-citation-check-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "civ6-adjacency-optimizer",
+      "environment_tree_sha": "09c66c0c2f596194b7ceb92f768b4404ab16b396",
+      "builder_environment_tree_sha": "09c66c0c2f596194b7ceb92f768b4404ab16b396",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-civ6-adjacency-optimizer-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "court-form-filling",
+      "environment_tree_sha": "508867327aa37e6d97a61dc66acbbac336cb4c02",
+      "builder_environment_tree_sha": "508867327aa37e6d97a61dc66acbbac336cb4c02",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-court-form-filling-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "crystallographic-wyckoff-position-analysis",
+      "environment_tree_sha": "8cc2a848437f219a9e1a81a22ff1cbc6609c7182",
+      "builder_environment_tree_sha": "8cc2a848437f219a9e1a81a22ff1cbc6609c7182",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-crystallographic-wyckoff-position-analysis-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "dapt-intrusion-detection",
+      "environment_tree_sha": "c673b349aea281e2ba2b6a91c1bc35400c7f25ac",
+      "builder_environment_tree_sha": "c673b349aea281e2ba2b6a91c1bc35400c7f25ac",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-dapt-intrusion-detection-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "data-to-d3",
+      "environment_tree_sha": "03a9173fe58e5a8f7971a9d39f93c989f2bd47bf",
+      "builder_environment_tree_sha": "03a9173fe58e5a8f7971a9d39f93c989f2bd47bf",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-data-to-d3-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "debug-trl-grpo",
+      "environment_tree_sha": "4d0288e2d446b217931a71c3b57da34e4354c7d7",
+      "builder_environment_tree_sha": "4d0288e2d446b217931a71c3b57da34e4354c7d7",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-debug-trl-grpo-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "dialogue-parser",
+      "environment_tree_sha": "2aa630f67806131f176c3e6e3c88540b6f6942de",
+      "builder_environment_tree_sha": "2aa630f67806131f176c3e6e3c88540b6f6942de",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-dialogue-parser-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "drone-planning-control",
+      "environment_tree_sha": "336505356f8f6e9f2b2813e72ffa85d494a19532",
+      "builder_environment_tree_sha": "336505356f8f6e9f2b2813e72ffa85d494a19532",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-drone-planning-control-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "dynamic-object-aware-egomotion",
+      "environment_tree_sha": "0113de5dd6878265b3b2a6de5eb93870138bad80",
+      "builder_environment_tree_sha": "0113de5dd6878265b3b2a6de5eb93870138bad80",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-dynamic-object-aware-egomotion-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "earthquake-phase-association",
+      "environment_tree_sha": "176ddd590fcc51c109f8f3914ffc2f7580505839",
+      "builder_environment_tree_sha": "176ddd590fcc51c109f8f3914ffc2f7580505839",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-earthquake-phase-association-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "earthquake-plate-calculation",
+      "environment_tree_sha": "b6a44f9b377d727beb188f21624f871a8e7d5e2e",
+      "builder_environment_tree_sha": "b6a44f9b377d727beb188f21624f871a8e7d5e2e",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-earthquake-plate-calculation-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "econ-detrending-correlation",
+      "environment_tree_sha": "e8e8ad0220d96c2cb5ecea14b72579d43d0225ab",
+      "builder_environment_tree_sha": "e8e8ad0220d96c2cb5ecea14b72579d43d0225ab",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-econ-detrending-correlation-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "edit-pdf",
+      "environment_tree_sha": "9de6211453b0b7dc6381077a22ad88fc7cb5f181",
+      "builder_environment_tree_sha": "9de6211453b0b7dc6381077a22ad88fc7cb5f181",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-edit-pdf-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "energy-ac-optimal-power-flow",
+      "environment_tree_sha": "6cab4186c416aba4668fa2fad535d61616f97890",
+      "builder_environment_tree_sha": "6cab4186c416aba4668fa2fad535d61616f97890",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-energy-ac-optimal-power-flow-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "energy-market-pricing",
+      "environment_tree_sha": "11ed8c164d6f0cd07276ae29e50035aaf6d7a3ca",
+      "builder_environment_tree_sha": "11ed8c164d6f0cd07276ae29e50035aaf6d7a3ca",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-energy-market-pricing-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "energy-unit-commitment",
+      "environment_tree_sha": "a40fd5f90a5b0712ad08766a31d5d19853e37c35",
+      "builder_environment_tree_sha": "a40fd5f90a5b0712ad08766a31d5d19853e37c35",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-energy-unit-commitment-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "enterprise-information-search",
+      "environment_tree_sha": "cedbade210593739edf298d8687646dec56dce17",
+      "builder_environment_tree_sha": "cedbade210593739edf298d8687646dec56dce17",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-enterprise-information-search-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "exam-block-sequencing",
+      "environment_tree_sha": "bac9f8b66ce4185d21b9f42c9835fe302f00ee39",
+      "builder_environment_tree_sha": "bac9f8b66ce4185d21b9f42c9835fe302f00ee39",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-exam-block-sequencing-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "exceltable-in-ppt",
+      "environment_tree_sha": "15836bd73d8d5f76bbe94a8c9b66407eafdcd133",
+      "builder_environment_tree_sha": "15836bd73d8d5f76bbe94a8c9b66407eafdcd133",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-exceltable-in-ppt-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "exoplanet-detection-period",
+      "environment_tree_sha": "1cac5293ca40471317492d31883d472d616216ad",
+      "builder_environment_tree_sha": "1cac5293ca40471317492d31883d472d616216ad",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-exoplanet-detection-period-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "financial-modeling-qa",
+      "environment_tree_sha": "d279c0ab37031b010e34b96a12eb49cbbb007130",
+      "builder_environment_tree_sha": "d279c0ab37031b010e34b96a12eb49cbbb007130",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-financial-modeling-qa-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "fix-build-agentops",
+      "environment_tree_sha": "451b520311990631edf96177ffef5b1f56aa68df",
+      "builder_environment_tree_sha": "451b520311990631edf96177ffef5b1f56aa68df",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-fix-build-agentops-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "fix-build-google-auto",
+      "environment_tree_sha": "d03f49f0b7c68fda6901c69a8c302223883bf8a7",
+      "builder_environment_tree_sha": "d03f49f0b7c68fda6901c69a8c302223883bf8a7",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-fix-build-google-auto-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "fix-druid-loophole-cve",
+      "environment_tree_sha": "e0d9d38fef4b9f08bff672926f00509bf48cda52",
+      "builder_environment_tree_sha": "e0d9d38fef4b9f08bff672926f00509bf48cda52",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-fix-druid-loophole-cve-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "fix-erlang-ssh-cve",
+      "environment_tree_sha": "bcd0a1a82213f5bce83cddb4bac349df749fcad7",
+      "builder_environment_tree_sha": "bcd0a1a82213f5bce83cddb4bac349df749fcad7",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-fix-erlang-ssh-cve-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "fix-visual-stability",
+      "environment_tree_sha": "761b4a9235e4f6b513ec63419c6ad8d1373a47a7",
+      "builder_environment_tree_sha": "5941eeb2a97eef065bcac54952b238f6c454d809",
+      "environment_tree_exact_match": false,
+      "tag": "skillsbench-v1.1-fix-visual-stability-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "flink-query",
+      "environment_tree_sha": "a92dbccc5f556ddd95e09c4a7f295af7337c494e",
+      "builder_environment_tree_sha": "a92dbccc5f556ddd95e09c4a7f295af7337c494e",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-flink-query-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "flood-risk-analysis",
+      "environment_tree_sha": "46d6845e229b1b5b3a4cfed02c52af0fc0761d48",
+      "builder_environment_tree_sha": "46d6845e229b1b5b3a4cfed02c52af0fc0761d48",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-flood-risk-analysis-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "glm-lake-mendota",
+      "environment_tree_sha": "c05f19a7977aa45e510986a1b9231a458c8b063a",
+      "builder_environment_tree_sha": "c05f19a7977aa45e510986a1b9231a458c8b063a",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-glm-lake-mendota-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "gravitational-wave-detection",
+      "environment_tree_sha": "58dd830eb829191d7c4337a7ab2dc37a3b9b3997",
+      "builder_environment_tree_sha": "03d01f6ef5194806808740594826f3ff6255c0d5",
+      "environment_tree_exact_match": false,
+      "tag": "skillsbench-v1.1-gravitational-wave-detection-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "grid-dispatch-operator",
+      "environment_tree_sha": "7cd88ef58d66662852801e93aca71e9731e2708e",
+      "builder_environment_tree_sha": "7cd88ef58d66662852801e93aca71e9731e2708e",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-grid-dispatch-operator-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "hvac-control",
+      "environment_tree_sha": "4c4d221dee9bb6d9af6efe49e759a4ee36d74f8d",
+      "builder_environment_tree_sha": "4c4d221dee9bb6d9af6efe49e759a4ee36d74f8d",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-hvac-control-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "invoice-fraud-detection",
+      "environment_tree_sha": "60bd6eca21e76e2c8710b174be7713922d140975",
+      "builder_environment_tree_sha": "60bd6eca21e76e2c8710b174be7713922d140975",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-invoice-fraud-detection-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "jax-computing-basics",
+      "environment_tree_sha": "536153113a7537be5a6fedf71aaeec87b0295f8d",
+      "builder_environment_tree_sha": "536153113a7537be5a6fedf71aaeec87b0295f8d",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-jax-computing-basics-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "jpg-ocr-stat",
+      "environment_tree_sha": "ebe9f4403a974a9695aeab75f2e8bf4d1ee37856",
+      "builder_environment_tree_sha": "ebe9f4403a974a9695aeab75f2e8bf4d1ee37856",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-jpg-ocr-stat-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "lab-unit-harmonization",
+      "environment_tree_sha": "dc35d887625938581412a80459699b7e74bcc232",
+      "builder_environment_tree_sha": "dc35d887625938581412a80459699b7e74bcc232",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-lab-unit-harmonization-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "lake-warming-attribution",
+      "environment_tree_sha": "3e09a0e4889bbf420aa5e0151899436579b30827",
+      "builder_environment_tree_sha": "3e09a0e4889bbf420aa5e0151899436579b30827",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-lake-warming-attribution-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "latex-formula-extraction",
+      "environment_tree_sha": "a7871dae4e7b1505fae3af67e0ffd81a7fcfb56e",
+      "builder_environment_tree_sha": "a7871dae4e7b1505fae3af67e0ffd81a7fcfb56e",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-latex-formula-extraction-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "lean4-proof",
+      "environment_tree_sha": "03118c6858b8bc3d0e233213425894f9b9700a87",
+      "builder_environment_tree_sha": "03118c6858b8bc3d0e233213425894f9b9700a87",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-lean4-proof-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "llm-prefix-cache-replay",
+      "environment_tree_sha": "99f28b3f30922ce1606ded4a15c5bfe3def1193e",
+      "builder_environment_tree_sha": "5ad878440812af5cd655d8d68bc6473db45b8722",
+      "environment_tree_exact_match": false,
+      "tag": "skillsbench-v1.1-llm-prefix-cache-replay-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "manufacturing-codebook-normalization",
+      "environment_tree_sha": "41a39ac8d68c96f8f4d1c3b7ba5bd707a144cc1e",
+      "builder_environment_tree_sha": "41a39ac8d68c96f8f4d1c3b7ba5bd707a144cc1e",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-manufacturing-codebook-normalization-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "manufacturing-equipment-maintenance",
+      "environment_tree_sha": "d061d574f747f3dfd430ba7d94bd12c7b05126d1",
+      "builder_environment_tree_sha": "d061d574f747f3dfd430ba7d94bd12c7b05126d1",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-manufacturing-equipment-maintenance-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "manufacturing-fjsp-optimization",
+      "environment_tree_sha": "800abf6bf1ef0e8783e41870c85f29990034444d",
+      "builder_environment_tree_sha": "800abf6bf1ef0e8783e41870c85f29990034444d",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-manufacturing-fjsp-optimization-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "mario-coin-counting",
+      "environment_tree_sha": "a380c6b63857ca10c2de46644098a2b157c95cd2",
+      "builder_environment_tree_sha": "a380c6b63857ca10c2de46644098a2b157c95cd2",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-mario-coin-counting-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "mars-clouds-clustering",
+      "environment_tree_sha": "4c6c0c17300bdbb4ce2c64eff0592dd70a809c97",
+      "builder_environment_tree_sha": "4c6c0c17300bdbb4ce2c64eff0592dd70a809c97",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-mars-clouds-clustering-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "multilingual-video-dubbing",
+      "environment_tree_sha": "cd8912196e2f89a78e70a59b413b27b8f4892d8c",
+      "builder_environment_tree_sha": "cd8912196e2f89a78e70a59b413b27b8f4892d8c",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-multilingual-video-dubbing-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "offer-letter-generator",
+      "environment_tree_sha": "7c509842a3acfb0bae3d8d40f35ef89a0738407e",
+      "builder_environment_tree_sha": "7c509842a3acfb0bae3d8d40f35ef89a0738407e",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-offer-letter-generator-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "organize-messy-files",
+      "environment_tree_sha": "3690817a0a9e752ee402e36fa4f9e7e9e1210d20",
+      "builder_environment_tree_sha": "3690817a0a9e752ee402e36fa4f9e7e9e1210d20",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-organize-messy-files-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "paper-anonymizer",
+      "environment_tree_sha": "4724d558a82b0b921b793ceab24d30a6a773c04f",
+      "builder_environment_tree_sha": "4724d558a82b0b921b793ceab24d30a6a773c04f",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-paper-anonymizer-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "parallel-tfidf-search",
+      "environment_tree_sha": "499be80b7ca4de2c727c3718e69f14f865b68192",
+      "builder_environment_tree_sha": "499be80b7ca4de2c727c3718e69f14f865b68192",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-parallel-tfidf-search-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "paratransit-routing",
+      "environment_tree_sha": "c8129ca693dd98e161f74700876f605e5b1ce296",
+      "builder_environment_tree_sha": "c8129ca693dd98e161f74700876f605e5b1ce296",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-paratransit-routing-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "pddl-airport-planning",
+      "environment_tree_sha": "ea3fe15d1ebaca6e33e1cad386412933b3274bd3",
+      "builder_environment_tree_sha": "ea3fe15d1ebaca6e33e1cad386412933b3274bd3",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-pddl-airport-planning-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "pddl-tpp-planning",
+      "environment_tree_sha": "76e7f9ff77fdc8b2305e546dcecb6885372458f0",
+      "builder_environment_tree_sha": "76e7f9ff77fdc8b2305e546dcecb6885372458f0",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-pddl-tpp-planning-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "pdf-excel-diff",
+      "environment_tree_sha": "57b464b0bde47d320fafbb3d586e27020858c04a",
+      "builder_environment_tree_sha": "57b464b0bde47d320fafbb3d586e27020858c04a",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-pdf-excel-diff-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "powerlifting-coef-calc",
+      "environment_tree_sha": "a1e90e994fccedba0cba78143218fde37006d2b1",
+      "builder_environment_tree_sha": "a1e90e994fccedba0cba78143218fde37006d2b1",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-powerlifting-coef-calc-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "pptx-reference-formatting",
+      "environment_tree_sha": "48d077c70a4c25b20d39f098644ee69dfb119fc1",
+      "builder_environment_tree_sha": "48d077c70a4c25b20d39f098644ee69dfb119fc1",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-pptx-reference-formatting-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "protein-expression-analysis",
+      "environment_tree_sha": "906ce0fae27a1411ac566b4a7a692f5b54745ad4",
+      "builder_environment_tree_sha": "906ce0fae27a1411ac566b4a7a692f5b54745ad4",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-protein-expression-analysis-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "python-scala-translation",
+      "environment_tree_sha": "355713c4e4ad8e156dfb45fba6d410c8b2315e1d",
+      "builder_environment_tree_sha": "355713c4e4ad8e156dfb45fba6d410c8b2315e1d",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-python-scala-translation-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "quantum-numerical-simulation",
+      "environment_tree_sha": "72cf13664b7b99c51c29df705bbfe74110de50b9",
+      "builder_environment_tree_sha": "72cf13664b7b99c51c29df705bbfe74110de50b9",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-quantum-numerical-simulation-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "r2r-mpc-control",
+      "environment_tree_sha": "8f80f83cb488d819d34057bc64a1c7ea56cc8fdc",
+      "builder_environment_tree_sha": "8f80f83cb488d819d34057bc64a1c7ea56cc8fdc",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-r2r-mpc-control-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "radar-vital-signs",
+      "environment_tree_sha": "55ddf0f1846c2996982f66c2fb43f250b98a5c04",
+      "builder_environment_tree_sha": "55ddf0f1846c2996982f66c2fb43f250b98a5c04",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-radar-vital-signs-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "react-performance-debugging",
+      "environment_tree_sha": "bc451969174e368c8564e24bcf9212b5fd35b6b8",
+      "builder_environment_tree_sha": "bc451969174e368c8564e24bcf9212b5fd35b6b8",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-react-performance-debugging-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "reserves-at-risk-calc",
+      "environment_tree_sha": "20a917a0c109b7ed8da6b43dda84b17c3523f0c7",
+      "builder_environment_tree_sha": "20a917a0c109b7ed8da6b43dda84b17c3523f0c7",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-reserves-at-risk-calc-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "sales-pivot-analysis",
+      "environment_tree_sha": "b8607594df474bdc5e6c859ac1e4c3897a5da7fc",
+      "builder_environment_tree_sha": "b8607594df474bdc5e6c859ac1e4c3897a5da7fc",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-sales-pivot-analysis-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "sec-financial-report",
+      "environment_tree_sha": "3d11c65197ccd0a574621adf2b8c001a18bfe46c",
+      "builder_environment_tree_sha": "3d11c65197ccd0a574621adf2b8c001a18bfe46c",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-sec-financial-report-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "seismic-phase-picking",
+      "environment_tree_sha": "4693145dbb636fe83ae1413955d50a9523221ef3",
+      "builder_environment_tree_sha": "4693145dbb636fe83ae1413955d50a9523221ef3",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-seismic-phase-picking-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "setup-fuzzing-py",
+      "environment_tree_sha": "d2981a8ac5ee02908fa4dcd3693fc4c417fb1f63",
+      "builder_environment_tree_sha": "d2981a8ac5ee02908fa4dcd3693fc4c417fb1f63",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-setup-fuzzing-py-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "shock-analysis-demand",
+      "environment_tree_sha": "83bedcb43488c8256de0f52cd3a06b4a4667e694",
+      "builder_environment_tree_sha": "83bedcb43488c8256de0f52cd3a06b4a4667e694",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-shock-analysis-demand-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "shock-analysis-supply",
+      "environment_tree_sha": "feae31fd9441f73472e223a521377b409967f717",
+      "builder_environment_tree_sha": "feae31fd9441f73472e223a521377b409967f717",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-shock-analysis-supply-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "simpo-code-reproduction",
+      "environment_tree_sha": "0beedfec713fa4de4412b518faf609ab1f240233",
+      "builder_environment_tree_sha": "0beedfec713fa4de4412b518faf609ab1f240233",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-simpo-code-reproduction-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "software-dependency-audit",
+      "environment_tree_sha": "b4941a2e2745a9b718e90a0299e38a0c78e68a9f",
+      "builder_environment_tree_sha": "b4941a2e2745a9b718e90a0299e38a0c78e68a9f",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-software-dependency-audit-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "spring-boot-jakarta-migration",
+      "environment_tree_sha": "cd0d1c4d39867e28377852f45c0038bbc4658c7a",
+      "builder_environment_tree_sha": "cd0d1c4d39867e28377852f45c0038bbc4658c7a",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-spring-boot-jakarta-migration-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "suricata-custom-exfil",
+      "environment_tree_sha": "92af859493ba78c584ecb3a1973ab70bc3f618dc",
+      "builder_environment_tree_sha": "92af859493ba78c584ecb3a1973ab70bc3f618dc",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-suricata-custom-exfil-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "syzkaller-ppdev-syzlang",
+      "environment_tree_sha": "13f2eb40f7af52077a13005d0f8987a7b1d4b94a",
+      "builder_environment_tree_sha": "13f2eb40f7af52077a13005d0f8987a7b1d4b94a",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-syzkaller-ppdev-syzlang-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "threejs-structure-parser",
+      "environment_tree_sha": "214448907d8fe71267e9db13588da80c85e7a2bd",
+      "builder_environment_tree_sha": "214448907d8fe71267e9db13588da80c85e7a2bd",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-threejs-structure-parser-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "threejs-to-obj",
+      "environment_tree_sha": "984d0a9f60bd8d6702acac77bcfd2e7e15fcce43",
+      "builder_environment_tree_sha": "984d0a9f60bd8d6702acac77bcfd2e7e15fcce43",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-threejs-to-obj-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "tictoc-unnecessary-abort-detection",
+      "environment_tree_sha": "01bd709b3d5d520c4931d60b561681f1dde6d51d",
+      "builder_environment_tree_sha": "01bd709b3d5d520c4931d60b561681f1dde6d51d",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-tictoc-unnecessary-abort-detection-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "travel-planning",
+      "environment_tree_sha": "28045b458017a6e039c1a0ece619558297a6bec5",
+      "builder_environment_tree_sha": "28045b458017a6e039c1a0ece619558297a6bec5",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-travel-planning-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "video-silence-remover",
+      "environment_tree_sha": "8359fc637c049ef0be1da8b75a97cabaccf7a756",
+      "builder_environment_tree_sha": "8359fc637c049ef0be1da8b75a97cabaccf7a756",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-video-silence-remover-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "weighted-gdp-calc",
+      "environment_tree_sha": "d6a776c3757624ade5a20b363a7839814ab3ab34",
+      "builder_environment_tree_sha": "d6a776c3757624ade5a20b363a7839814ab3ab34",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-weighted-gdp-calc-12ebd8653093",
+      "tag_exists": true
+    },
+    {
+      "task": "xlsx-recover-data",
+      "environment_tree_sha": "0dd413288650c9be9ff80146530cf4468493689c",
+      "builder_environment_tree_sha": "0dd413288650c9be9ff80146530cf4468493689c",
+      "environment_tree_exact_match": true,
+      "tag": "skillsbench-v1.1-xlsx-recover-data-12ebd8653093",
+      "tag_exists": true
+    }
+  ],
+  "matching_and_available": 84
+}

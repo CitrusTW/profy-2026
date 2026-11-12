@@ -43,8 +43,8 @@ def main():
         else:raise RuntimeError('Private Docker engine unavailable')
         context=None
         if meta.get('prebuilt'):
-            image=meta['prebuilt']['public_mirror_image']
-            assert re.fullmatch(r'ghcr\.m\.daocloud\.io/benchflow-ai/skillsbench-task-env@sha256:[0-9a-f]{64}',image)
+            image=meta['prebuilt']['primary_image']
+            assert re.fullmatch(r'ghcr\.io/benchflow-ai/skillsbench-task-env@sha256:[0-9a-f]{64}',image)
             command(cli+['pull',image],600)
         else:
             with tarfile.open(base/'task_environment.tar.gz','r:gz') as archive:archive.extractall(work/'context',filter='data')
@@ -94,6 +94,7 @@ def main():
             error['cleanup_returncode']=result.returncode
         except Exception as cleanup:error['cleanup_error']=str(cleanup)
         (base/'setup_error.json').write_text(json.dumps(error,indent=2))
+        print('CGL_SETUP_ERROR:'+json.dumps(error),flush=True)
         raise
 
 if __name__=='__main__':main()

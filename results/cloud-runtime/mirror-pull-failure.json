@@ -1,0 +1,31 @@
+{
+  "diagnosis_only": true,
+  "new_solver_run": false,
+  "new_scoring_run": false,
+  "paths": {
+    "/home/user/workspace/distilled-99707679/e0c573e5-a4f4-4958-a58a-3fa243299329": {
+      "free_bytes": 484095033344,
+      "filesystem": "fuse"
+    },
+    "/": {
+      "free_bytes": 1055453184,
+      "filesystem": "overlayfs"
+    },
+    "/tmp": {
+      "free_bytes": 1055453184,
+      "filesystem": "overlayfs"
+    },
+    "/var/tmp": {
+      "free_bytes": 1055453184,
+      "filesystem": "overlayfs"
+    }
+  },
+  "setup_error.json": {
+    "type": "RuntimeError",
+    "error": "Setup command failed 1: ['sudo', '-n']",
+    "log_tail": "Get:1 http://mirrors.tencentyun.com/debian trixie InRelease [140 kB]\nGet:2 http://mirrors.tencentyun.com/debian trixie-updates InRelease [47.3 kB]\nGet:3 http://mirrors.tencentyun.com/debian trixie/main amd64 Packages [9678 kB]\nGet:4 http://mirrors.tencentyun.com/debian trixie-updates/main amd64 Packages [1108 B]\nGet:5 https://deb.nodesource.com/node_20.x nodistro InRelease [12.1 kB]\nGet:6 https://deb.nodesource.com/node_20.x nodistro/main amd64 Packages [14.4 kB]\nGet:7 https://cloud.r-project.org/bin/linux/debian trixie-cran40/ InRelease [4369 B]\nGet:8 https://cloud.r-project.org/bin/linux/debian trixie-cran40/ Packages [26.9 kB]\nFetched 9925 kB in 2s (5021 kB/s)\nReading package lists...\nGet:1 http://mirrors.tencentyun.com/debian trixie/main amd64 containerd amd64 1.7.24~ds1-6+deb13u1 [32.8 MB]\nGet:2 http://mirrors.tencentyun.com/debian trixie/main amd64 docker-cli amd64 26.1.5+dfsg1-9+deb13u1 [7337 kB]\nGet:3 http://mirrors.tencentyun.com/debian trixie/main amd64 docker.io amd64 26.1.5+dfsg1-9+deb13u1 [23.0 MB]\nGet:4 http://mirrors.tencentyun.com/debian trixie/main amd64 runc amd64 1.1.15+ds1-2+b4 [3230 kB]\nGet:5 http://mirrors.tencentyun.com/debian trixie/main amd64 tini amd64 0.19.0-3+b8 [280 kB]\nFetched 66.7 MB in 3s (21.7 MB/s)\nError response from daemon: pull access denied for ghcr.m.daocloud.io/benchflow-ai/skillsbench-task-env, repository does not exist or may require 'docker login': denied: \ud83d\udeab \ud83d\udc40-> https://github.com/DaoCloud/public-image-mirror/issues/2328 \ud83d\udd17 \u8fd9\u955c\u50cf\u4e0d\u5728\u767d\u540d\u5355. this image is not in the allowlist.\n",
+    "cleanup_returncode": 1
+  },
+  "setup_logs": {},
+  "daemon_logs": {}
+}
