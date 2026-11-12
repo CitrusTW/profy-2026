@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T09:50:51.406509-08:00
-- Last applied instruction: I-009 (in progress)
-- Latest read: I-009; checkpoint: Draft2 complete: compiled6main/25total pages, clean ADV figure and proxy85 archive preserved; available for manual resubmission now, no waiting for user. All Profy requests stopped.
+- Updated (America/Los_Angeles): 2026-11-12T09:56:14.072954-08:00
+- Last applied instruction: I-010 (direct user message; newer than coordination I009).
+- Latest read: I-009; checkpoint: I010-preflight-frozen-openrouter-only
 - Current work: manuscript draft2 per I008/I009, existing evidence only; no more Profy requests.
 - Next: restore valid original structure and archive proxy85 numbers unchanged; add clean ADV figure and deployment lessons. Draft2 by12:30PST, final by15:30; no waiting for resubmission.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
@@ -61,3 +61,9 @@
 - I008: preserve usable original content. Old85 numeric records are archived with checkpoint-prompt-proxy labels only, never as Full/deployment results. Main result is newADV20 with generation-model difference noted next to16/20 in abstract/contributions.
 - I009: new single-column stacked pairwise plot includes all three categories; all5 dimension differences/CI retained. Lessons avoid unproven causal claims.
 - Latest paper PAPER_DRAFT2_VALIDATION.json: results/2026-11-12_overnight/paper_rev/draft2/CogniLife_revision_draft2.pdf, body_pages=6, total_pdf_pages=25.
+
+## I010 same-declared-model ADV control
+- Direct user I010 accepted; PREREG_I010 frozen before paid calls. Exact OpenRouter ID deepseek/deepseek-v4-flash; no substitution. Provider/revision match to historical Full unknown.
+- USD10 hard actual-receipt ceiling; initial estimate4.418166196721311USD, not observed expense. All Profy requests remain stopped.
+- Latest phase/state: {"phase": "preflight_frozen", "paid_calls": 0}
+- Use complete-pipeline ADV template including its uncertainty warning; standalone template differs and historical requests unavailable.40 new baselines,60 fresh rubrics,80counterbalanced pairs. Full unchanged.

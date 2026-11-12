@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-11-12T17:54:56.731535+00:00",
+  "model": "deepseek/deepseek-v4-flash",
+  "canonical_slug": "deepseek/deepseek-v4-flash-20260423",
+  "platform_full_model_label": "deepseek-v4-flash",
+  "platform_exact_revision": "unknown",
+  "revision_identity_caveat": "Same declared model label, hosted provider/revision identity not independently verified. Do not claim all runtime details controlled.",
+  "baseline_parameters": {
+    "temperature": 0.7,
+    "max_tokens": 4096,
+    "other_sampling_parameters": "omitted, same as source scripts"
+  },
+  "template_source": "run_full_pipeline.py:EXPERT_PROMPT_TEMPLATES[ADV]",
+  "source_template_difference": "run_full_pipeline.py includes 注意声明不确定性，不要过度承诺。; run_baselines.py omits it. Use the complete pipeline template exactly, selected before any new output. Historical saved requests unavailable, exact old template lineage unknown.",
+  "source_sha256": {
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/04_项目数据与代码/Profy-main/knowledge/benchmarks/profybench-v1/scripts/run_baselines.py": "6ccdeec85845cde8ff5710c46c30169c82676a222d6cc36535b771fd64c1245e",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/04_项目数据与代码/Profy-main/knowledge/benchmarks/profybench-v1/scripts/run_full_pipeline.py": "75a8c20ee73f3d270e6a5cedf1e1067a3bf12a0bdc2a5ff56389257a7ed175dd",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/04_项目数据与代码/Profy-main/knowledge/benchmarks/profybench-v1/scripts/llm_judge.py": "301813b481c80175e6cb20fc733c3a57ae92af13a8661b6eb297f1eeaba6f262",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/04_项目数据与代码/Profy-main/knowledge/benchmarks/profybench-v1/profybench_v0.jsonl": "49706b7180934e85c75e1a4031e703521a785d85b27c000c99de1be45af0f2bf",
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/04_项目数据与代码/Profy-main/knowledge/benchmarks/profybench-v1/results/outputs_profy_expert_full.jsonl": "a53a0d434a4755ca15b2b016f52d5183d0a532c323be849fb496d1017aab45b1"
+  },
+  "judge": "anthropic/claude-opus-5.5",
+  "judge_rubric_max_tokens": 4096,
+  "judge_pairwise_max_tokens": 1024,
+  "judge_temperature": "omitted (catalog unsupported), effective unknown, same as I004",
+  "estimated_usd": 4.418166196721311,
+  "estimate_components": {
+    "generation": 0.036864,
+    "rubric": 2.0843881967213114,
+    "pairwise": 2.296914
+  },
+  "estimate_basis": "Prior observed I004 rubric and I003 pairwise mean receipt costs times1.5 for changed answers, plus40 baseline generation estimates. Not actual expenditure.",
+  "budget_usd": 10,
+  "budget_guard": "Before each call, reserve UTF8 request bytes +2048 input tokens at catalog uncached rate, plus max_tokens at output rate. Stop if known actual expense plus unknown reserved costs plus next call ceiling exceeds10. Unknown charge reserves retained. No recharge.",
+  "generation_retry": "Only API errors, at most2 retries. Empty/truncated valid responses preserved, no content retry. HTTP402 stop immediately.",
+  "judge_retry": "Same I004 parser; up to2 retries for API/parse/length failures. Preserve all.",
+  "tasks": [
+    "ADV_001",
+    "ADV_002",
+    "ADV_003",
+    "ADV_004",
+    "ADV_005",
+    "ADV_006",
+    "ADV_007",
+    "ADV_008",
+    "ADV_009",
+    "ADV_010",
+    "ADV_011",
+    "ADV_012",
+    "ADV_013",
+    "ADV_014",
+    "ADV_015",
+    "ADV_016",
+    "ADV_017",
+    "ADV_018",
+    "ADV_019",
+    "ADV_020"
+  ],
+  "full_not_regenerated": true
+}
