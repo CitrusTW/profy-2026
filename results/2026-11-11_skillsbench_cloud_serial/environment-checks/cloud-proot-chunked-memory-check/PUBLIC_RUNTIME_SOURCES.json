@@ -1,0 +1,13 @@
+{
+  "official_engine_url": "https://download.a.incd.pt/udocker/udocker-englib-1.2.11.tar.gz",
+  "engine_archive_sha256": "2a4804ba82e087ca3e99305fce9887227925d2b56aaefcad6474c4cb86b7a157",
+  "member": "udocker_dir/bin/proot-x86_64",
+  "member_sha256": "c98f47857afc865cd6ad491d7938388a114865e0dac78a5b77c92236a682bd67",
+  "alpine": {
+    "image": "alpine:3.20",
+    "platform": "linux/amd64",
+    "layer_digest": "sha256:25f1d6b1951ac8eb3740558fe94cb83d377bdadf95fd9f98b50d2e1b96130471",
+    "bytes": 3630321
+  },
+  "local_binary_or_image_written": false
+}

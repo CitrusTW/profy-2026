@@ -1,0 +1,12 @@
+{
+  "scope": "local guards and small cloud transfer helpers; not benchmark experiments",
+  "unittest_tests": 36,
+  "unittest_passed": 36,
+  "relative_links_checked_in_navigation_commit": "c19f9d890c08fc64a685546431b3d3eebfd2b8eb",
+  "navigation_files_read_back": 11,
+  "local_docker_bulk_preparation_disabled": true,
+  "local_docker_grading_disabled": true,
+  "cloud_proot_runtime_verified": true,
+  "full_library_complete": false,
+  "paper_changed": false
+}

@@ -1,0 +1,8 @@
+{
+  "cloud_only": true,
+  "new_service_purchased": false,
+  "runtime_passed": true,
+  "returncode": 0,
+  "actual_output": "cgl-proot-runtime-okx86_64\n",
+  "temporary_runtime_removed": true
+}

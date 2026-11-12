@@ -29,3 +29,7 @@
 继续使用已有 API, 全部串行, 不在本机搭全库环境或堆缓存. 每轮记录与实际候选上传, 最多30轮. 论文和 OpenReview 未改.
 
 [全部结果](../results/README.md) | [三组 skills](../skills/README.md) | [每轮进化](../skills/evolution-history/README.md)
+
+## 环境补充
+
+已在 Profy 云端实际运行临时 Alpine Linux, [回执与排错记录](../results/2026-11-11_skillsbench_cloud_serial/environment-checks/README.md)单独保存. 公开工具通过内存分片中转, 本机没有保存镜像或运行环境. 原 benchmark Dockerfile 的云端流程仍未跑通; 不把环境检查计入题目成绩.

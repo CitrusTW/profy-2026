@@ -1,0 +1,37 @@
+{
+  "label": "cloud-proot-small-memory-check",
+  "task": "environment-check",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 50.415,
+  "output_received": true,
+  "native_zip_sha256": "8e1b2333479bb09a635c0635761740e81d9fbc8e1a51a275a6f16a48024ab768",
+  "file_hashes": {
+    "output/runtime_check.json": "1caad02cfe6909e00cd4c4558de2c94f0cf03aa7e39899fd6714a223bede54b0"
+  },
+  "skill_sha256": null,
+  "target_skill_read_verified": null,
+  "skill_hash_marker_verified": null,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": false,
+  "tokens": {
+    "input_tokens": 42251,
+    "output_tokens": 184,
+    "total_tokens": 42435,
+    "cache_read_tokens": 27365,
+    "cache_write_tokens": 14877,
+    "llm_turns": 3,
+    "tool_calls": 2
+  },
+  "profy_cost_usd": null,
+  "score": {
+    "strict": 0,
+    "tests": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "environment_probe_only": true,
+    "not_a_benchmark_result": true
+  }
+}

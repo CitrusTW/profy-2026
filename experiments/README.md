@@ -24,3 +24,14 @@
 旧的本地 Docker 构建入口不再使用. 全部串行, 不在本机搭全库环境或堆缓存. 目前只验证了部分题目的云端流程, 没有一个已验证的87题一键入口.
 
 keys 只从 repo 外的文件读取; 不把值写进代码、命令参数、报告或聊天.
+
+## 环境排错代码
+
+这些不是正式实验入口, 不需要逐个运行. [排错结果](../results/2026-11-11_skillsbench_cloud_serial/environment-checks/README.md)解释目前验证到哪一步.
+
+- cloud_proot_check.py --chunked: 已实际验证的云端小 Linux 环境与内存分片传输.
+- cloud_runtime_bridge.py、cloud_user_engine_retry.py: 保留过往传输与下载尝试, 包括失败.
+- cloud_engine_check.py、cloud_engine_retry.py、cloud_engine_secure_path.py: 原生 Docker 安装与启动检查, 还不是可用的全库入口.
+- cloud_system_diagnosis.py: 检查云端权限和软件包管理器错误.
+
+本机旧的 Docker 输入准备、评分与批量构建入口现在会直接停止, 避免误用后再次占满硬盘.
