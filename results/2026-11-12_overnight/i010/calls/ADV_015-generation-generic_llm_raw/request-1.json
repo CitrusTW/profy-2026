@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "请帮我对比分析宁德时代和亿纬锂能，我想在锂电板块做一个中长期配置，持有1-3年"}], "temperature": 0.7, "max_tokens": 4096}

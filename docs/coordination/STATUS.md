@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T10:08:55.699139-08:00
+- Updated (America/Los_Angeles): 2026-11-12T10:09:08.233669-08:00
 - Last applied instruction: I-010 (direct user message; newer than coordination I009).
-- Latest read: I-009; checkpoint: I010 completed_generation_ADV_014-generation-generic_llm_expert_prompt
+- Latest read: I-009; checkpoint: USER DIRECT: finish I010 and report actual results FIRST; manuscript integration ON HOLD; existing draft2 unchanged.
 - Current work: manuscript draft2 per I008/I009, existing evidence only; no more Profy requests.
 - Next: restore valid original structure and archive proxy85 numbers unchanged; add clean ADV figure and deployment lessons. Draft2 by12:30PST, final by15:30; no waiting for resubmission.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
