@@ -19,3 +19,5 @@
 2026-11-12T09:27:34.519966+00:00 {"task": "jpg-ocr-stat", "attempts": 9, "complete_nine_attempts": true, "invalid_infrastructure": true, "fresh_test": true, "elapsed_sec": 8.089849948883057}; cost_usd=unknown (no Profy billing receipt), OpenRouter=0 new calls.
 
 2026-11-12T09:27:34.528513+00:00 Runner stopped. Total new solver attempts=72; no new Evolution or judge calls. Profy USD unknown.
+
+2026-11-12T09:52:18.995903+00:00 Pass1 task shock-analysis-demand: [{"condition": "with-CogniLife-skills", "repeat": 1, "status": "scored", "reward": 0.0, "tokens": 885699}]; Profy USD unknown; OpenRouter newcalls0.
