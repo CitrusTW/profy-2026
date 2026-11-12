@@ -100,7 +100,10 @@ class DockerStudy(LibraryStudy):
             assert prebuilt['task']==task and prebuilt['benchmark_pin']==PIN
             assert prebuilt['environment_tree_exact_match'] and prebuilt['environment_tree_sha']==tree
             assert re.fullmatch(r'ghcr.io/benchflow-ai/skillsbench-task-env@sha256:[0-9a-f]{64}',prebuilt['primary_image'])
-        pins={} if prebuilt else {ref:primary_pin(ref) for ref in refs}
+        native=bool(getattr(self.args,'native_file_runtime',False))
+        if native:assert task=='weighted-gdp-calc','Only the reviewed native single-file prototype is enabled'
+        versions=json.loads(Path(self.args.native_package_versions).read_text()) if getattr(self.args,'native_package_versions',None) else {}
+        pins={} if prebuilt or native else {ref:primary_pin(ref) for ref in refs}
         skill_hashes={};skills=[];files=[input_file]
         if not no_skills:
             package=io.BytesIO()
@@ -111,11 +114,11 @@ class DockerStudy(LibraryStudy):
                     if candidate is not None and rel=='bench_skills/'+self.skill_name+'/SKILL.md':raw=candidate.encode()
                     archive.writestr(rel,raw);skill_hashes[rel]=sha(raw)
             skills=self.names;files.append(MemoryUpload('benchmark_skills.zip',package.getvalue()))
-        config={'task':task,'benchmark_pin':PIN,'input_sha256':sha(data),'skills':skills,'target_skill':self.skill_name,'skill_hashes':skill_hashes,'base_images':pins,'prebuilt':prebuilt}
+        config={'task':task,'benchmark_pin':PIN,'input_sha256':sha(data),'skills':skills,'target_skill':self.skill_name,'skill_hashes':skill_hashes,'base_images':pins,'prebuilt':prebuilt,'native_file_runtime':native,'native_package_versions':versions}
         files.append(MemoryUpload('case_config.json.gz',gzip.compress(json.dumps(config).encode())))
-        files += [HERE/'remote_setup.py',HERE/'remote_tools.py']
+        files += [HERE/'remote_setup.py',HERE/'remote_tools.py',HERE/'remote_native.py']
         if any(len(p.read_bytes())>500000 for p in files):raise ValueError('Prototype upload exceeds bound; no model call started')
-        save(f/'started.json',{'task':task,'label':label,'model':'gpt-6.1-sol','adapter':'cloud-original-docker-prototype-v1','adapter_source_sha256':{p.name:sha(p.read_bytes()) for p in [HERE/'study.py',HERE/'remote_setup.py',HERE/'remote_tools.py',HERE/'remote_grade.py']} })
+        save(f/'started.json',{'task':task,'label':label,'model':'gpt-6.1-sol','adapter':'cloud-original-docker-prototype-v1','adapter_source_sha256':{p.name:sha(p.read_bytes()) for p in [HERE/'study.py',HERE/'remote_setup.py',HERE/'remote_tools.py',HERE/'remote_grade.py',HERE/'remote_native.py']} })
         save(f/'case_config.json',config)
         user='cgl-native-'+sha(str(f).encode())[:20]
         uploads=[self.transport.upload(p,user) for p in files];save(f/'uploads.json',uploads)
@@ -128,6 +131,7 @@ python3 remote_tools.py exec <<'SB_COMMAND'
 <ordinary shell commands running inside the task container>
 SB_COMMAND
 For a visual/native file preview, use python3 remote_tools.py get with the same quoted heredoc, whose body is a JSON string containing the original absolute file path. It prints PREVIEW_PATH for read. Do not run task code on the host or edit the adapter/context files. Do not access /verifier, /logs/verifier, oracle, reference answers, Memory, other sessions or other skills. Do not attempt scoring. At most48 tool calls and24 model turns. Finish when the requested task files are ready. The harness exports actual changed files and runs the original scorer afterwards; do not create a transport ZIP or extra report."""
+        if native:common=common.replace('original Docker environment','prepared Profy Linux environment, using PRoot to preserve original file paths; this is not the official Ubuntu image')
         body={'agent':{'id':self.transport.expert_id,'model':'gpt-6.1-sol','tools':[]},'rules':[],'environment':{'type':'profy_hosted','skills':[]},'enable_memory':False,'expert_partner':[],'input':tasktext+'\n\n'+common+'\nAfter setup: '+skills_text+'All operations must be sequential; do not delegate.','stream':True,'session_id':session,'attachment_file_ids':[x['file_id'] for x in uploads]}
         row=super().execute(f,label,task,candidate,no_skills,body,session,user,input_file)
         delivered=json.loads((f/'grading-only/result.json').read_text())
@@ -160,7 +164,7 @@ For a visual/native file preview, use python3 remote_tools.py get with the same 
         payload=MemoryUpload('original_verifier.tar.gz',raw)
         control={'expected_context':state,'verifier_archive_sha256':sha(raw),'source_hashes':{n:sha(b) for n,b,m in rows},'expects_ctrf':any(n=='test.sh' and b'ctrf' in b for n,b,m in rows)}
         grader=Probe(argparse.Namespace(**{**vars(self.args),'out':str(root),'dev_task':task,'skill_name':self.skill_name,'hard_timeout_sec':1200}))
-        files=[payload,MemoryUpload('grade_config.json.gz',gzip.compress(json.dumps(control).encode())),HERE/'remote_grade.py']
+        files=[payload,MemoryUpload('grade_config.json.gz',gzip.compress(json.dumps(control).encode())),HERE/'remote_grade.py',HERE/'remote_native.py']
         uploads=[grader.transport.upload(p,session['end_user']) for p in files]
         body={'agent':{'id':grader.transport.expert_id,'model':'gpt-6.1-sol','tools':[]},'rules':[],'environment':{'type':'profy_hosted','skills':[]},'enable_memory':False,'expert_partner':[],
             'input':'Grading only, no further solving. Run exactly python3 remote_grade.py once using bash with background=true, then awaitbash on that same job until completion. Do not edit answers, scripts, config or tests, inspect the hidden verifier, use skills/Memory, purchase anything or ask questions. The script freezes/exports actual files before exposing the original verifier, runs the original test.sh, preserves source hashes and cleans only this case. Return the actual [OUTPUT] outputs/deliverables.zip. Do not rerun scoring.',
@@ -177,7 +181,7 @@ For a visual/native file preview, use python3 remote_tools.py get with the same 
         return report
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--workspace',required=True);p.add_argument('--out',required=True);p.add_argument('--task',required=True);p.add_argument('--label',required=True);p.add_argument('--candidate');p.add_argument('--prebuilt-record');p.add_argument('--keys-file',required=True);p.add_argument('--allow-paid',action='store_true')
+    p=argparse.ArgumentParser();p.add_argument('--workspace',required=True);p.add_argument('--out',required=True);p.add_argument('--task',required=True);p.add_argument('--label',required=True);p.add_argument('--candidate');p.add_argument('--prebuilt-record');p.add_argument('--native-file-runtime',action='store_true');p.add_argument('--native-package-versions');p.add_argument('--keys-file',required=True);p.add_argument('--allow-paid',action='store_true')
     args=p.parse_args();args.hard_timeout_sec=1600
     study=DockerStudy(args)
     candidate=Path(args.candidate).read_text() if args.candidate else None

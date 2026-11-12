@@ -6,7 +6,11 @@ from remote_setup import cloud_only
 def main():
     cloud_only();base=Path.cwd();state=json.loads((base/'case_context.json').read_text())
     if (base/'case_frozen').exists():raise RuntimeError('Solving is finished; no answer changes allowed')
-    mode=sys.argv[1];raw=sys.stdin.read();cli=state['cli'];container=state['container']
+    mode=sys.argv[1];raw=sys.stdin.read()
+    if state.get('backend')=='native-proot':
+        from remote_native import execute
+        raise SystemExit(execute(base,state,mode,raw))
+    cli=state['cli'];container=state['container']
     if mode=='exec':
         p=subprocess.run(cli+['exec','-i',container,state['shell'],'-lc',raw],timeout=480)
         raise SystemExit(p.returncode)

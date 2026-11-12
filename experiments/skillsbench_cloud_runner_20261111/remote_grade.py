@@ -11,24 +11,36 @@ def main():
     assert work.parent==base and work.name.startswith('cgl-task-')
     assert runtime.parent==Path('/tmp') and runtime.name.startswith('cgl-sock-')
     frozen=base/'case_frozen';frozen.touch(exist_ok=False)
-    cli=state['cli'];container=state['container'];out=base/'output';out.mkdir(exist_ok=True)
-    report={'original_verifier':True,'benchmark_pin':state['benchmark_pin'],'task':state['task'],'pre_grade_file_hashes':{},'original_source_hashes':{},'cleanup_errors':[]}
+    cli=state['cli'];container=state['container'];native=state.get('backend')=='native-proot'
+    out=base/'output';out.mkdir(exist_ok=True)
+    report={'original_verifier':True,'benchmark_pin':state['benchmark_pin'],'task':state['task'],'pre_grade_file_hashes':{},'original_source_hashes':{},'cleanup_errors':[],'runtime_backend':state.get('backend','docker'),'runtime_difference':state.get('runtime_difference')}
     def run(args,timeout=120):return subprocess.run(args,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=timeout)
     def file_sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
     try:
         # Export changed task files before exposing any verifier material.
-        diff=run(cli+['diff',container]);assert diff.returncode==0
-        roots={'root','app','workspace','workspaces','data','output','tmp','home'}
         excluded={'.cache','.git','.npm','.local','.venv','node_modules','__pycache__','.pytest_cache','bench_skills','.claude','.agents','.codex','.bash_history'}
-        paths=[]
-        for line in diff.stdout.splitlines():
-            kind,path=line.split(' ',1);p=Path(path)
-            if kind=='D' or len(p.parts)<3 or p.parts[1] not in roots or any(s in excluded for s in p.parts):continue
-            status=run(cli+['exec',container,'/bin/sh','-c','test -f "$1" && test ! -L "$1"','sh',path],10)
-            if status.returncode==0:paths.append(path)
+        if native:
+            root=work/'root';paths=[]
+            for item in root.rglob('*'):
+                if not item.is_file() or item.is_symlink() or any(x in excluded for x in item.relative_to(root).parts):continue
+                path='/root/'+item.relative_to(root).as_posix()
+                if file_sha(item)!=state['original_file_sha256'].get(path):paths.append(path)
+        else:
+            diff=run(cli+['diff',container]);assert diff.returncode==0
+            roots={'root','app','workspace','workspaces','data','output','tmp','home'};paths=[]
+            for line in diff.stdout.splitlines():
+                kind,path=line.split(' ',1);p=Path(path)
+                if kind=='D' or len(p.parts)<3 or p.parts[1] not in roots or any(x in excluded for x in p.parts):continue
+                status=run(cli+['exec',container,'/bin/sh','-c','test -f "$1" && test ! -L "$1"','sh',path],10)
+                if status.returncode==0:paths.append(path)
         for path in sorted(set(paths)):
             target=out/'fs'/path.lstrip('/');target.parent.mkdir(parents=True,exist_ok=True)
-            p=run(cli+['cp',container+':'+path,str(target)],60);assert p.returncode==0
+            if native:
+                from remote_native import root_file
+                source=root_file(state,path);assert source.stat().st_size<=25_000_000
+                shutil.copyfile(source,target)
+            else:
+                p=run(cli+['cp',container+':'+path,str(target)],60);assert p.returncode==0
             report['pre_grade_file_hashes'][path]=file_sha(target)
         assert digest(base/'original_verifier.tar.gz')==config['verifier_archive_sha256']
         verifier=work/'verifier'
@@ -41,9 +53,9 @@ def main():
         for p in logs.iterdir():
             if p.is_dir():shutil.rmtree(p)
             else:p.unlink()
-        command=cli+['exec','--user','0',container,'bash','/verifier/test.sh']
+        command=(state['native_command']+['bash','/verifier/test.sh']) if native else cli+['exec','--user','0',container,'bash','/verifier/test.sh']
         graded=run(command,900)
-        (work/'original_verifier_stdout.log').write_text(graded.stdout)
+        (out/'original_verifier_stdout.log').write_text(graded.stdout)
         report['original_returncode']=graded.returncode
         reward=logs/'reward.txt'
         if not reward.is_file():raise RuntimeError('Original verifier returned no reward; infrastructure error, not a zero score')
@@ -59,27 +71,35 @@ def main():
         report['original_source_before_after_verified']=True
         report['answer_files_unchanged_by_grader']=True
         for path,expected_hash in report['pre_grade_file_hashes'].items():
-            p=run(cli+['exec','--user','0',container,'sha256sum',path],20)
-            if p.returncode or not p.stdout.startswith(expected_hash):report['answer_files_unchanged_by_grader']=False
+            if native:
+                if file_sha(root_file(state,path))!=expected_hash:report['answer_files_unchanged_by_grader']=False
+            else:
+                p=run(cli+['exec','--user','0',container,'sha256sum',path],20)
+                if p.returncode or not p.stdout.startswith(expected_hash):report['answer_files_unchanged_by_grader']=False
     except Exception as e:report['infrastructure_error']=type(e).__name__+': '+str(e)
     finally:
         try:
-            run(cli+['rm','-f',container],30)
-            run(cli+['image','rm','-f',state['image_id']],60)
-            pid=runtime/'d.pid'
-            if pid.is_file():
-                value=pid.read_text().strip();assert value.isdigit()
-                cmdline=Path('/proc/'+value+'/cmdline')
-                if cmdline.exists():
-                    assert ('--data-root='+str(work/'data')).encode() in cmdline.read_bytes()
-                    run(['sudo','-n','kill','-TERM',value],10)
-            for _ in range(20):
-                if not pid.is_file() or not Path('/proc/'+value+'/cmdline').exists():break
-                time.sleep(.5)
-            # Do not force removal of an OS-owned busy mount; remove only our files.
-            cleaned=run(['sudo','-n','rm','-rf',str(work),str(runtime)],120)
-            report['temporary_paths_removed']=not work.exists() and not runtime.exists()
-            if cleaned.returncode:report['cleanup_errors'].append(cleaned.stdout[-1000:])
+            if native:
+                shutil.rmtree(work);shutil.rmtree(runtime)
+                report['temporary_paths_removed']=not work.exists() and not runtime.exists()
+                report['packages_remain_only_in_temporary_provider_environment']=True
+            else:
+                run(cli+['rm','-f',container],30)
+                run(cli+['image','rm','-f',state['image_id']],60)
+                pid=runtime/'d.pid'
+                if pid.is_file():
+                    value=pid.read_text().strip();assert value.isdigit()
+                    cmdline=Path('/proc/'+value+'/cmdline')
+                    if cmdline.exists():
+                        assert ('--data-root='+str(work/'data')).encode() in cmdline.read_bytes()
+                        run(['sudo','-n','kill','-TERM',value],10)
+                for _ in range(20):
+                    if not pid.is_file() or not Path('/proc/'+value+'/cmdline').exists():break
+                    time.sleep(.5)
+                # Do not force removal of an OS-owned busy mount; remove only our files.
+                cleaned=run(['sudo','-n','rm','-rf',str(work),str(runtime)],120)
+                report['temporary_paths_removed']=not work.exists() and not runtime.exists()
+                if cleaned.returncode:report['cleanup_errors'].append(cleaned.stdout[-1000:])
         except Exception as e:report['cleanup_errors'].append(str(e))
     (out/'score_receipt.json').write_text(json.dumps(report,indent=2))
     manifest={'input_sha256':config['verifier_archive_sha256'],'files':{p.relative_to(base).as_posix():file_sha(p) for p in out.rglob('*') if p.is_file() and not p.is_symlink()}}

@@ -12,6 +12,9 @@ def main():
     if (base/'case_context.json').exists():raise RuntimeError('Case already prepared; no duplicate setup')
     meta=json.loads(gzip.decompress((base/'case_config.json.gz').read_bytes()))
     assert digest(base/'task_environment.tar.gz')==meta['input_sha256']
+    if meta.get('native_file_runtime'):
+        from remote_native import prepare
+        return prepare(base,meta)
     work=Path(tempfile.mkdtemp(prefix='cgl-task-',dir=str(base)))
     runtime=Path(tempfile.mkdtemp(prefix='cgl-sock-',dir='/tmp'))
     assert shutil.disk_usage(work).free>30_000_000_000,'Insufficient cloud workspace space'

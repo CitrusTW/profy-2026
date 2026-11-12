@@ -1,0 +1,33 @@
+{
+  "dependency_check_only": true,
+  "packages_installed": false,
+  "benchmark_solver_run": false,
+  "root_free_bytes": 667136000,
+  "path_checks": {
+    "proot": {
+      "returncode": 0,
+      "stdout": "{\"cwd\": \"/root\", \"uid\": 0, \"readable\": true, \"sha256\": \"fb8873433c7206cf431a01d2dec7e943b91d3faacfe2ce4c30b9de65c8842caa\"}\n",
+      "stderr": ""
+    },
+    "kernel_namespace": {
+      "returncode": 0,
+      "stdout": "{\"cwd\": \"/root\", \"uid\": 0, \"readable\": true, \"sha256\": \"fb8873433c7206cf431a01d2dec7e943b91d3faacfe2ce4c30b9de65c8842caa\"}\n",
+      "stderr": ""
+    }
+  },
+  "commands": {
+    "ssconvert": "/usr/bin/ssconvert",
+    "libreoffice": "/usr/bin/libreoffice",
+    "python3": "/usr/local/bin/python3",
+    "uv": "/usr/local/bin/uv",
+    "proot": "/usr/bin/proot"
+  },
+  "python_versions": {
+    "openpyxl": "3.1.5",
+    "pytest": "8.3.5"
+  },
+  "own_prior_workspace_visible": {
+    "76e679d0-0644-4b5a-a9a6-fe81a70d05b0": false,
+    "e0c573e5-a4f4-4958-a58a-3fa243299329": false
+  }
+}

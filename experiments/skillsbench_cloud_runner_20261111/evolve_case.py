@@ -75,5 +75,6 @@ def run(args):
 
 if __name__=='__main__':
     p=argparse.ArgumentParser()
-    for name in ['workspace','out','task','baseline','prebuilt-record','keys-file']:p.add_argument('--'+name,required=True)
+    for name in ['workspace','out','task','baseline','keys-file']:p.add_argument('--'+name,required=True)
+    p.add_argument('--prebuilt-record');p.add_argument('--native-file-runtime',action='store_true');p.add_argument('--native-package-versions');
     p.add_argument('--round',type=int,required=True);p.add_argument('--allow-paid',action='store_true');a=p.parse_args();a.hard_timeout_sec=1600;run(a)

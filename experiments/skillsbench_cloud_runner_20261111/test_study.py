@@ -2,6 +2,7 @@ import io,tarfile,unittest,tempfile
 from unittest.mock import patch
 from pathlib import Path
 from prebuilt_catalog import catalog,BUILDER
+from remote_native import root_file,execute
 from study import archive_rows,host_command_kind,setup_receipts,forbidden_skill_read
 from remote_setup import cloud_only
 
@@ -39,6 +40,16 @@ class StudyTests(unittest.TestCase):
         self.assertTrue(forbidden_skill_read(event('/mnt/skills/public/xlsx/SKILL.md'),False,['xlsx']))
         self.assertFalse(forbidden_skill_read(event('/home/user/workspace/bench_skills/xlsx/SKILL.md'),False,['xlsx']))
         self.assertTrue(forbidden_skill_read(event('bench_skills/xlsx/../other/SKILL.md'),False,['xlsx']))
+    def test_native_export_cannot_escape_task_root(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)/'root';root.mkdir();(root/'gdp.xlsx').touch()
+            self.assertEqual(root_file({'work':d},'/root/gdp.xlsx'),root/'gdp.xlsx')
+            with self.assertRaises(AssertionError):root_file({'work':d},'/root/../etc/passwd')
+            (root/'link').symlink_to('/etc/passwd')
+            with self.assertRaises(AssertionError):root_file({'work':d},'/root/link')
+    def test_native_no_skill_blocks_shell_import_before_execution(self):
+        with self.assertRaisesRegex(RuntimeError,'extra skill access refused'):
+            execute(Path('/not-used'),{'skill_sha256':None},'exec','cat /mnt/skills/public/xlsx/SKILL.md')
     def test_cloud_script_refuses_local_execution(self):
         with self.assertRaisesRegex(RuntimeError,'Cloud-only'):cloud_only()
 

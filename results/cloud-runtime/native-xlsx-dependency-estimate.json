@@ -1,0 +1,23 @@
+{
+  "dependency_check_only": true,
+  "packages_installed": false,
+  "benchmark_solver_run": false,
+  "root_free_bytes": 1052471296,
+  "package_estimate_returncode": 1,
+  "package_estimate_output": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following additional packages will be installed:\n  coinor-libcbc3.1 coinor-libcgl1 coinor-libclp1 coinor-libcoinmp0\n  coinor-libcoinutils3v5 coinor-libosi1v5 fonts-opensymbol gnumeric-common\n  iso-codes libabsl20240722 libargon2-1 libboost-iostreams1.83.0\n  libboost-locale1.83.0 libboost-thread1.83.0 libcap2 libcap2-bin\n  libclucene-contribs1t64 libclucene-core1t64 libcmis-0.6-6t64 libcolamd3\n  libeot0 libetonyek-0.1-1 libexttextcat-2.0-0 libexttextcat-data\n  libgoffice-0.10-10-common libgoffice-0.10-10t64 libgsf-1-114 libgsf-1-common\n  libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 libhunspell-1.7-0\n  libhyphen0 liblangtag-common liblangtag1 libmhash2 libmwaw-0.3-3\n  libmythes-1.2-0 libnumbertext-1.0-0 libnumbertext-data libodfgen-0.1-1\n  liborc-0.4-0t64 liborcus-0.18-0 liborcus-parser-0.18-0 libraptor2-0\n  librasqal3t64 librdf0t64 libreoffice-base-core libreoffice-common\n  libreoffice-core libreoffice-style-colibre libreoffice-uiconfig-calc\n  libreoffice-uiconfig-common librevenge-0.0-0 libstaroffice-0.0-0\n  libsuitesparseconfig7 libuno-cppu3t64 libuno-cppuhelpergcc3-3t64\n  libuno-purpenvhelpergcc3-3t64 libuno-sal3t64 libuno-salhelpergcc3-3t64\n  libwps-0.4-4 libxmlsec1t64 libxmlsec1t64-nss libyajl2 libzxcvbn0 libzxing3\n  pxlib1 uno-libs-private ure\nSuggested packages:\n  gnumeric-plugins-extra libgsf-1-dev isoquery libvisual-0.4-plugins\n  gstreamer1.0-tools raptor2-utils rasqal-utils librdf-storage-mysql\n  librdf-storage-postgresql librdf-storage-sqlite librdf-storage-virtuoso\n  redland-utils libreoffice-base python3-scriptforge\nRecommended packages:\n  gnumeric-doc evince lp-solve libpam-cap gstreamer1.0-plugins-base\n  hunspell-en-us | hunspell-dictionary | myspell-dictionary poppler-data\n  apparmor python3-uno gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly\n  gstreamer1.0-plugins-bad gstreamer1.0-libav\nThe following NEW packages will be installed:\n  coinor-libcbc3.1 coinor-libcgl1 coinor-libclp1 coinor-libcoinmp0\n  coinor-libcoinutils3v5 coinor-libosi1v5 fonts-opensymbol gnumeric\n  gnumeric-common iso-codes libabsl20240722 libargon2-1\n  libboost-iostreams1.83.0 libboost-locale1.83.0 libboost-thread1.83.0\n  libcap2-bin libclucene-contribs1t64 libclucene-core1t64 libcmis-0.6-6t64\n  libcolamd3 libeot0 libetonyek-0.1-1 libexttextcat-2.0-0 libexttextcat-data\n  libgoffice-0.10-10-common libgoffice-0.10-10t64 libgsf-1-114 libgsf-1-common\n  libgstreamer-plugins-base1.0-0 libgstreamer1.0-0 libhunspell-1.7-0\n  libhyphen0 liblangtag-common liblangtag1 libmhash2 libmwaw-0.3-3\n  libmythes-1.2-0 libnumbertext-1.0-0 libnumbertext-data libodfgen-0.1-1\n  liborc-0.4-0t64 liborcus-0.18-0 liborcus-parser-0.18-0 libraptor2-0\n  librasqal3t64 librdf0t64 libreoffice-base-core libreoffice-calc\n  libreoffice-common libreoffice-core libreoffice-style-colibre\n  libreoffice-uiconfig-calc libreoffice-uiconfig-common librevenge-0.0-0\n  libstaroffice-0.0-0 libsuitesparseconfig7 libuno-cppu3t64\n  libuno-cppuhelpergcc3-3t64 libuno-purpenvhelpergcc3-3t64 libuno-sal3t64\n  libuno-salhelpergcc3-3t64 libwps-0.4-4 libxmlsec1t64 libxmlsec1t64-nss\n  libyajl2 libzxcvbn0 libzxing3 pxlib1 uno-libs-private ure\nThe following packages will be upgraded:\n  libcap2\n1 upgraded, 70 newly installed, 0 to remove and 125 not upgraded.\nNeed to get 102 MB of archives.\nAfter this operation, 363 MB of additional disk space will be used.\nDo you want to continue? [Y/n] N\nAbort.\n",
+  "commands": {
+    "ssconvert": null,
+    "libreoffice": null,
+    "python3": "/usr/local/bin/python3",
+    "uv": "/usr/local/bin/uv",
+    "proot": null
+  },
+  "python_versions": {
+    "openpyxl": "3.1.5",
+    "pytest": "8.3.5"
+  },
+  "own_prior_workspace_visible": {
+    "76e679d0-0644-4b5a-a9a6-fe81a70d05b0": false,
+    "e0c573e5-a4f4-4958-a58a-3fa243299329": false
+  }
+}
