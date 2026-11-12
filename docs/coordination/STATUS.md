@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T08:58:45.438227-08:00
+- Updated (America/Los_Angeles): 2026-11-12T09:09:11.949604-08:00
 - Last applied instruction: I-006 (in progress)
-- Latest read: I-006; checkpoint: I004-probe403-not-a-run-no-change-to-model-or-key
+- Latest read: I-006; checkpoint: I006-draft-delivered-cutoff-boundary-question-for-review-no-budget-change
 - Current work: I006 manuscript revision copy and original-order Profy recovery probes; frozen skills, no new evolution.
 - Next: continue one next-planned-run probe every30min; if accepted, resume serial schedule and supplement supply B/C original-verifier grading. Draft1 due11:00PST, reviewer11:15; final15:30; no new run after13:30.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
@@ -56,3 +56,4 @@
 - Current frozen workflow is an external native-Linux adaptation, not official Docker; classifier, general applicability and native promotion not connected. First historical threejs evolution usedgpt-4.1, current xlsx/solving usegpt-6.1-sol.
 - DNS-only and cancelled superseded client launches retained outside protocol comparisons. No hidden-answer skill edits; no selective deletion.
 - Interim report delivered08:00. Draft and final are separate immutable deliveries under paper_rev/draft1 and paper_rev/final.
+- 待审核者指令: [REVIEW_QUESTION_CUTOFF_GUARD.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_CUTOFF_GUARD.md)；现有记录保留, 该项等待编号指令。
