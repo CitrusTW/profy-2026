@@ -41,3 +41,4 @@
 - 2026-11-12T04:29:04.729028-08:00 I004-probe403-not-a-run-no-change-to-model-or-key; last_applied=I-004 (in progress); latest_seen=I-004; new_completed_runs=18; USD=unknown.
 - 2026-11-12T04:57:36.206014-08:00 30min-checkpoint; last_applied=I-004 (in progress); latest_seen=I-004; new_completed_runs=18; USD=unknown.
 - 2026-11-12T04:58:55.917318-08:00 I004-probe403-not-a-run-no-change-to-model-or-key; last_applied=I-004 (in progress); latest_seen=I-004; new_completed_runs=18; USD=unknown.
+- 2026-11-12T05:04:58.315590-08:00 I004-report-client-rejections-separately-from-model-runs-no-new-solving; last_applied=I-004 (in progress); latest_seen=I-005; new_completed_runs=18; USD=unknown.
