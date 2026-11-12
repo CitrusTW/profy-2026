@@ -127,3 +127,31 @@
 
 - 此前 threejs 历史反例的进化模型是 gpt-4.1，论文修订副本中要单独说明。
 - shock-analysis-demand 的结果（冻结版 0/5，no-skills 3/2，原版 runner_limit）照实列入，不另作解读。
+
+---
+
+## I-004（2026-11-12 03:40 美国太平洋时间）ADV rubric 截断修复；Profy 403 处理；状态推送
+
+### A. ADV rubric：统一提高 max_tokens 后全部重跑
+
+- 第一批 rubric 中，profy_expert_full 有 8 题因 "length-limited judgment" 缺失，而且缺失只出现在 Full 组。缺失和条件相关，不能直接用 52/60 的结果。
+- 处理：把 rubric 调用的 max_tokens 从 1024 统一改为 4096，prompt（Listing 1）、模型（anthropic/claude-opus-5.5）、解析规则都不变，对 20 题 × 3 个条件共 60 次 rubric **全部重跑**。论文和统计**只使用这次重跑的 60 个结果**，第一批 rubric 保留为审计记录，不和新结果混用。
+- Pairwise 第一批 80/80 全部有效，不重跑，照常使用。
+- 预算：I-003 和本条合计的**实际费用**（按 OpenRouter 回执）不超过 15 美元。第一批实际已花 3.529044 美元。运行前先按回执单价估算这批的费用；估算会让合计超过 15 美元就不运行。如果有调用在 4096 下仍然截断，最多重试 2 次；仍然失败就记为缺失，并按条件报告缺失数。
+- 写进 DECISIONS.md：偏离点（max_tokens 1024 → 4096）、原因（Full 组系统性截断）、决定时间（在看到缺失题的分数之前）。
+
+### B. Profy 403 "Expert is not published"
+
+- 你的处理是正确的：不发布专家、不换 key 或模型、不创建替代身份。
+- 从现在起每 30 分钟探测一次：只提交原计划顺序中的下一次运行（一次）。如果仍然返回 403，记录下来，不计为运行；如果成功，就恢复原计划（I-001/I-002/I-003），不做其他改动。
+- 用户在上班，可能会在白天重新发布专家。恢复之后，继续按原顺序补跑；之前因 pin 检查失败的题（reserves-at-risk-calc、xlsx-recover-data），按 I-003 B 修复后的检查重新准备。
+- 运行截止仍为 13:30 太平洋时间。
+
+### C. 第 3 部分（论文修订副本）提前开始的条件
+
+- 如果到 12:00 太平洋时间 Profy 仍然是 403，就在 12:00 开始第 3 部分，不必等到 13:30。之后如果 Profy 恢复并产生了新结果，在 15:30 交付前把新结果补进统计表和修订稿。
+- ADV 部分用 A 中重跑的 rubric 结果，加上第一批的正反序 pairwise 结果。必须写明：judge 是 anthropic/claude-opus-5.5；Full 是 deepseek-v4-flash、基线是 moonshot-v1-128k，生成模型不同；pairwise 沿用原函数，每份输出只截取前 3000 字符；pairwise 正反序都判 Full 赢的计数。不得使用任何旧的 Full 分数。
+
+### D. 状态推送
+
+- 实验分支 origin/codex/three-arm-skill-pilot-20261110 上的 docs/coordination/STATUS.md 从 02:18 之后就没有更新。请按 PROTOCOL 每 30 分钟把 STATUS.md、STATUS_LOG.md 推送到这个分支。如果推送失败，把失败原因写进本地 STATUS.md，下一个节点重试。
