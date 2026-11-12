@@ -1,0 +1,12 @@
+{
+  "http_status": 400,
+  "request_body": "{",
+  "valid_json": false,
+  "agent_id_supplied": false,
+  "input_supplied": false,
+  "model_supplied": false,
+  "purpose": "one invalid-body validation diagnostic, not an experiment or model retry",
+  "response_body": "{\"code\":400,\"message\":\"Request body must be JSON\",\"data\":null}",
+  "epoch": 1794481408.466728,
+  "no_recharge": true
+}

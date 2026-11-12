@@ -1,0 +1,16 @@
+{
+  "task": "reserves-at-risk-calc",
+  "label": "no-skills",
+  "model": "gpt-6.1-sol",
+  "adapter": "cloud-native-owned-files-v2",
+  "adapter_source_sha256": {
+    "native_support.py": "4ef285130fa2e84f79a08c1e072f45d414bc6076e96277cb05c32d915cafdfa3",
+    "remote_grade.py": "dcad4760b6db6731437dfed267a3d125b7489c87e0b73011b41ae1d420d47c71",
+    "remote_namespace_grade.py": "d760a66888977c1e52bec1cd84008afb0b1a6409b2d3a828140f63fa87666f5e",
+    "remote_native.py": "96ff886aa8770a526914196ab50be7d50aab14c8360b9f38cd55f4e76f7bc76c",
+    "remote_setup.py": "2048f4fb10f692de86fcd82835112d3f01842c255a9800907395be1b9212cc99",
+    "remote_tools.py": "d0211c1907c65f03d80ae000985fc7a5b1c44ca317db7d8ac47186df451ec58a",
+    "study.py": "64f9e1871595157e3d106ed0f73b6ee098f53bb3c171d3346858cf2e6b258801",
+    "task_specs.json": "c7bc5540a65dd54aab0c67008ef54435adb45ff3c3dde1e53202e1cae3b113e0"
+  }
+}

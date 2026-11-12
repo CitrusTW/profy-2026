@@ -1,0 +1,12 @@
+{
+  "epoch": 1794481940.58817,
+  "cause_reported_by_api": "Expert is not published",
+  "http_status": 403,
+  "same_requested_expert_id_as_last_scored_run": true,
+  "same_solver_model": true,
+  "key_can_read_owned_session": true,
+  "quota_exhaustion_proven": false,
+  "further_profy_runs_stopped": true,
+  "no_recharge_or_key_rotation": true,
+  "needed_resource": "Owner must restore published/API-callable state of the supplied expert, or explicitly provide an authorized equivalent. Do not publish it autonomously."
+}

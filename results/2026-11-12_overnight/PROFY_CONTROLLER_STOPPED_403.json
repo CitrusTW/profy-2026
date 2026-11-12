@@ -1,0 +1,14 @@
+{
+  "epoch": 1794481718.0988622,
+  "pid": 64369,
+  "reason": "terminate stopped submission controller to release its serial lock; no scorer active",
+  "pending_client_reservations": [
+    {
+      "folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/launch-04-i003/runs/invoice-fraud-detection/repeat-1/with-skills",
+      "request_saved": false,
+      "grading_started": false,
+      "usage": "unknown"
+    }
+  ],
+  "bounded_recovery_queued_separately": true
+}

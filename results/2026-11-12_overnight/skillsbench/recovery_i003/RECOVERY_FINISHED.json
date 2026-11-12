@@ -1,0 +1,7 @@
+{
+  "status": "infrastructure_failure",
+  "error": "RuntimeError: Solver stream incomplete; do not score",
+  "http_error_bodies": 1,
+  "no_further_automatic_retries": true,
+  "epoch": 1794481744.846903
+}

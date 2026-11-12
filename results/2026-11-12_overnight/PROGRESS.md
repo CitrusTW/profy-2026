@@ -79,3 +79,5 @@ I003 ADV judge: primary jobs processed120/140, valid112, failed calls27, receive
 I003 ADV judge: primary jobs processed130/140, valid122, failed calls27, received-cost sum USD3.396984, unknown-cost calls0, conservative reserved spent ceiling USD12.419840; not an observed expense estimate.
 
 I003 ADV judge: primary jobs processed140/140, valid132, failed calls27, received-cost sum USD3.529044, unknown-cost calls0, conservative reserved spent ceiling USD13.008400; not an observed expense estimate.
+
+One bounded registered reserve recovery after orphaned setup cancellation: {"status": "infrastructure_failure", "strict": null, "http_error_bodies": 1, "cost_usd": "unknown"}; no further retry.

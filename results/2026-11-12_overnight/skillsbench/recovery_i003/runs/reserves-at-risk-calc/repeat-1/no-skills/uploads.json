@@ -1,0 +1,44 @@
+[
+  {
+    "filename": "task_environment.tar.gz",
+    "file_id": "6a336d86-ffc0-4a85-80e8-d8ddee4ae2ae",
+    "sha256": "55f7c4e424db69bcd40f476991f5c936241d47334bbed4fd90bc50985ab07ae5",
+    "bytes": 103961
+  },
+  {
+    "filename": "case_config.json.gz",
+    "file_id": "c647229f-c645-44b9-b0cd-e922bfe87dae",
+    "sha256": "08d3e10e95ab78c94528c9db944da520b2b705b7057d34429cfd469c4005a19e",
+    "bytes": 473
+  },
+  {
+    "filename": "remote_setup.py",
+    "file_id": "9e1ccf6f-cb07-4e24-ba93-bd47652c7fc5",
+    "sha256": "2048f4fb10f692de86fcd82835112d3f01842c255a9800907395be1b9212cc99",
+    "bytes": 954
+  },
+  {
+    "filename": "remote_tools.py",
+    "file_id": "b68b77a2-3883-4871-b1be-38cd8083eff5",
+    "sha256": "d0211c1907c65f03d80ae000985fc7a5b1c44ca317db7d8ac47186df451ec58a",
+    "bytes": 591
+  },
+  {
+    "filename": "remote_native.py",
+    "file_id": "cb65d4fe-b8d5-4c69-aa76-eaf8261d76d3",
+    "sha256": "96ff886aa8770a526914196ab50be7d50aab14c8360b9f38cd55f4e76f7bc76c",
+    "bytes": 13348
+  },
+  {
+    "filename": "native_support.py",
+    "file_id": "6e8211b8-53f8-4e14-a3ec-3ff0d42f9696",
+    "sha256": "4ef285130fa2e84f79a08c1e072f45d414bc6076e96277cb05c32d915cafdfa3",
+    "bytes": 6424
+  },
+  {
+    "filename": "task_specs.json",
+    "file_id": "ceec183e-53a2-4625-be55-93b71414f2c6",
+    "sha256": "c7bc5540a65dd54aab0c67008ef54435adb45ff3c3dde1e53202e1cae3b113e0",
+    "bytes": 3907
+  }
+]

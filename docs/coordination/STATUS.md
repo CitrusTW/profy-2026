@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T02:58:58.425607-08:00
+- Updated (America/Los_Angeles): 2026-11-12T03:12:24.944820-08:00
 - Last applied instruction: I-003 (in progress)
-- Latest read: I-003; checkpoint: I003-batch1-complete-8FullJSON-missing-80pairwise-valid
+- Latest read: I-003; checkpoint: Profy403-confirmed-expert-not-published-stop-no-recharge
 - Current work: frozen xlsx round11, fixed eight-task order, all Profy solving/grading serial; I003 Claude ADV rejudge may run alongside Profy.
 - Next: retain completed runs; rerun only the I003-authorized failed setup; at most three passes. No new evolution.
 - Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
@@ -56,6 +56,12 @@
 - All NEW Profy model submissions are paused; no recharge/key rotation. Read-only session query succeeds200, so quota exhaustion is not established. Reason remains unknown.
 - Owned incomplete setup activity was interrupted through its existing session; no scorer was active. OpenRouter ADV judge continues independently within15USD.
 - See PROFY_403_READONLY_DIAGNOSTIC.json and PROFY_ABANDONED_SETUP_INTERRUPT.json. Await explicit diagnostic/resume direction; other reporting continues.
+
+## CONFIRMED UPDATE: Expert is not published
+- One bounded original-plan reserve recovery captured the403 JSON body: Expert is not published. Requested expertId/model match the last successfully scored run.
+- Further Profy calls STOPPED. This is not a proven quota-exhaustion diagnosis. No recharge, key/model/identity bypass or autonomous expert publication.
+- Owner must restore API-callable published state of the supplied expert. See PROFY_BLOCKER_CONFIRMED.md and launch05 recovery evidence.
+- New Claude batch1 complete: rubric20/20/12, all80 pairwise valid; uniform60-rubric repair requested. Already received cost3.529044 USD + proposed repair ceiling8.054640 USD =11.583684 USD <=15.
 - 待审核者指令: [REVIEW_QUESTION_I003_judge_output_limit.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_I003_judge_output_limit.md)；现有原始记录保留, 尚未改adapter。
 - 待审核者指令: [REVIEW_QUESTION_I003_tool_search_scope.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_I003_tool_search_scope.md)；现有原始记录保留, 尚未改adapter。
 - 待审核者指令: [REVIEW_QUESTION_pip_pin_check.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_pip_pin_check.md)；现有原始记录保留, 尚未改adapter。
