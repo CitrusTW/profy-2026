@@ -1,0 +1,23 @@
+{
+  "model": "gpt-6.1-sol",
+  "wire_model": "openai/gpt-6.1-sol",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "parent_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "request_sha256": "8bc9b0cfe656f252dc5810fcafee18eb2a647ceef5383a36c97e8563389d4945",
+  "development_history_runs": 1,
+  "adapter_contract": {
+    "origin": "Execution metadata, not a replacement learning prompt",
+    "environment": "Original public task runs inside its own cloud container. Supplied skills and their unchanged resources are attached files, not native registered skill IDs.",
+    "data_boundary": "Only complete DEV solving records and scalar run_stats. No grader-context history, verifier, gold, unseen task outputs, or validation-answer-derived rules."
+  },
+  "context": {
+    "original_context_sha256": "1f63318511cf1836ce58a7f4a35fc44e7360428e95378e700cae860bd765ed8d",
+    "received_runtime_prompt_content_not_copied_to_repo": true
+  },
+  "missing_implementations": {
+    "capability_gap_classifier": "No callable implementation identified in the received source.",
+    "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+    "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+  },
+  "history_adapter": "public DEV SSE roles and complete tool-call/result pairs; not native DB replay"
+}

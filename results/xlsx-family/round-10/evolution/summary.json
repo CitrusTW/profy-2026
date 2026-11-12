@@ -1,0 +1,111 @@
+{
+  "accepted_by_original_gate": true,
+  "model": "gpt-6.1-sol",
+  "wire_model": "openai/gpt-6.1-sol",
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "requests": 4,
+  "usage": [
+    {
+      "prompt_tokens": 36857,
+      "completion_tokens": 23,
+      "total_tokens": 36880,
+      "cost": 0.092371,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 0,
+        "cache_write_tokens": 36854,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.092371,
+        "upstream_inference_prompt_cost": 0.092141,
+        "upstream_inference_completions_cost": 0.00023
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    {
+      "prompt_tokens": 38210,
+      "completion_tokens": 17,
+      "total_tokens": 38227,
+      "cost": 0.0072439,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 36854,
+        "cache_write_tokens": 1353,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0072439,
+        "upstream_inference_prompt_cost": 0.0070739,
+        "upstream_inference_completions_cost": 0.00017
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    {
+      "prompt_tokens": 38401,
+      "completion_tokens": 23,
+      "total_tokens": 38424,
+      "cost": 0.0045342,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 38207,
+        "cache_write_tokens": 191,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0045342,
+        "upstream_inference_prompt_cost": 0.0043042,
+        "upstream_inference_completions_cost": 0.00023
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 0,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    },
+    {
+      "prompt_tokens": 41358,
+      "completion_tokens": 1913,
+      "total_tokens": 43271,
+      "cost": 0.0303683,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 38398,
+        "cache_write_tokens": 2957,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.0303683,
+        "upstream_inference_prompt_cost": 0.0112383,
+        "upstream_inference_completions_cost": 0.01913
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 98,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  ],
+  "elapsed_sec": 44.872,
+  "storage": "external adapter local pending, not Profy database",
+  "source_functions_modified": false,
+  "native_promoted": false,
+  "semantic_applicability_verified": false,
+  "missing_implementations": {
+    "capability_gap_classifier": "No callable implementation identified in the received source.",
+    "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+    "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+  }
+}

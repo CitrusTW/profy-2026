@@ -1,0 +1,14 @@
+{
+  "round": 10,
+  "task": "weighted-gdp-calc",
+  "development_only": true,
+  "serial": true,
+  "baseline_folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-proot-v2/development/with-skills",
+  "parent_execution_folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-proot-v2/development/with-skills",
+  "parent_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "evolution_provider": "OpenRouter owner key",
+  "solver_provider": "Profy owner key",
+  "minimum_token_reduction_fraction": 0.05,
+  "threshold_is_external_safeguard": true,
+  "hidden_verifier_feedback_used": false
+}
