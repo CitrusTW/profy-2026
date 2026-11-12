@@ -1,0 +1,30 @@
+{
+  "task": "invoice-fraud-detection",
+  "repeat": 1,
+  "condition": "no-skills",
+  "historical_reused": false,
+  "score": {},
+  "runner_limit": false,
+  "infrastructure_failure": true,
+  "condition_valid": true,
+  "tokens": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "llm_turns": 0,
+    "tool_calls": 0
+  },
+  "solver_elapsed_sec": 2.359,
+  "end_to_end_elapsed_sec": 32.61904501914978,
+  "cost_usd": "unknown",
+  "skill_sha256": null,
+  "exception": "RuntimeError: Solver stream incomplete; do not score",
+  "folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/launch-04-i003/runs/invoice-fraud-detection/repeat-1/no-skills",
+  "tokens_comparable": false,
+  "status": "infrastructure_failure",
+  "adapter_instruction": "I-003",
+  "completed_epoch": 1794480605.00832,
+  "supersedes_setup_attempt": null
+}

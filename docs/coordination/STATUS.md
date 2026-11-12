@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T02:49:34.540325-08:00
+- Updated (America/Los_Angeles): 2026-11-12T02:50:06.576633-08:00
 - Last applied instruction: I-003 (in progress)
-- Latest read: I-003; checkpoint: I003-watcher-startup
+- Latest read: I-003; checkpoint: run-invoice-fraud-detection-r1-no-skills
 - Current work: frozen xlsx round11, fixed eight-task order, all Profy solving/grading serial; I003 Claude ADV rejudge may run alongside Profy.
 - Next: retain completed runs; rerun only the I003-authorized failed setup; at most three passes. No new evolution.
 - Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
@@ -22,6 +22,7 @@
 | shock-analysis-supply | no-skills | 1 | scored(supplement) | 0 | 1/8/0 | 73630 | 182.307 |
 | shock-analysis-supply | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 100269 | 202.705 |
 | shock-analysis-supply | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 104019 | 181.555 |
+| invoice-fraud-detection | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 2.359 |
 | reserves-at-risk-calc | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 27292 | 186.075 |
 | reserves-at-risk-calc | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 1.835 |
 | reserves-at-risk-calc | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 1.99 |
@@ -32,7 +33,7 @@
 ## ADV20: I003 supersedes use of old Full scores
 - Old Full rubric/pairwise scores are proxy-output audit records. They will not support ANY revised-paper Full conclusion.
 - New judge: anthropic/claude-opus-5.5; original Listing1/2; hashes bind actual saved outputs to every request/response; no regenerated answers.
-- Primary jobs observed: 98/140; calls: 114; failed calls: 23. Received cost USD2.654128; unknown-cost calls0.
+- Primary jobs observed: 101/140; calls: 117; failed calls: 24. Received cost USD2.738544; unknown-cost calls0.
 - Registered primary-call conservative ceiling11.200208 USD, total ceiling15 USD. A ceiling is not an observed bill.
 - Some Full rubric calls hit1024 output tokens (including reasoning); no partial JSON scores used. Uniform rubric repair requested, no unapproved parameter change.
 

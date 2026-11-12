@@ -1,0 +1,18 @@
+task,repeat,condition,source_phase,status,strict_reward,total_tokens,supersedes_setup_attempt,raw_record_sha256
+powerlifting-coef-calc,1,no-skills,launch-03,scored,1,180811,,65af9545cf320ab14586098b038f672691a5e991047e4c9aff9eb0c92aadae21
+powerlifting-coef-calc,1,with-CogniLife-skills,launch-03,scored,1,230840,,f4fbf0c06b23e979eae9202daa97b4abfc389f5e76a5ac8dfc0b23f09c3663bb
+powerlifting-coef-calc,1,with-skills,launch-03,scored,1,235561,,95fd6eb5344c8ae640c77a397d57d25f4756774c0ecd7da340eafdf54abace25
+reserves-at-risk-calc,1,no-skills,launch-03,infrastructure_failure,,44468,,24a1109247fc80cfa0a3aa8cbb818cfe0fc66ccc8b7503f6263ea46ce25c91dc
+reserves-at-risk-calc,1,with-CogniLife-skills,launch-03,infrastructure_failure,,44912,,c766e06ad2855216dcaa1f24f18a84390b8f30754c74844d66a9a622df4fe99e
+reserves-at-risk-calc,1,with-skills,launch-03,infrastructure_failure,,44956,,aa4d754699ff1565ae8923e046726f3f68a42a10559701ece5a057ca357b225b
+shock-analysis-demand,1,with-CogniLife-skills,launch-03,scored,0,885699,,f512f02601fe1b92758cd1bf9d25cbf3091b4d12626cb6ca3275f2aa91ff7770
+shock-analysis-supply,1,no-skills,launch-03,infrastructure_failure,,73630,,b94de7b0e7e67911f98734601b161b4ce0e4244ffe56b68ffbc5a9622e637e07
+shock-analysis-supply,1,with-CogniLife-skills,launch-03,infrastructure_failure,,100269,,db8da42a442ecff67d4c1f8717e91ac6b0d3c5dbcd06908bd00305c18888704d
+shock-analysis-supply,1,with-skills,launch-03,infrastructure_failure,,104019,,751992ea18084777ad2844c6ddf6bb1510517e81801933b81ca86e313cf51443
+invoice-fraud-detection,1,no-skills,launch-04-i003,infrastructure_failure,,0,,564fcc5ff6d5f8c324f14c65c9c1f946dfeaeb13b2ae9aa349081158cc0f8c21
+reserves-at-risk-calc,1,no-skills,launch-04-i003,infrastructure_failure,,27292,/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/launch-03/runs/reserves-at-risk-calc/repeat-1/no-skills,95ea82531de41d9afc833517633063663bc2b7aa1fdfc3c43118cd61b399ebed
+reserves-at-risk-calc,1,with-CogniLife-skills,launch-04-i003,infrastructure_failure,,0,/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/launch-03/runs/reserves-at-risk-calc/repeat-1/with-CogniLife-skills,74766f8f770d9a2b9bfff56540456258a361c6d411e98bb5c53dbdf2d80f76bc
+reserves-at-risk-calc,1,with-skills,launch-04-i003,infrastructure_failure,,0,/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/launch-03/runs/reserves-at-risk-calc/repeat-1/with-skills,9fbb8dcb21632f817eb218bc4787b28f3bfd6069a1f79b08d4c23b921a706b28
+xlsx-recover-data,1,no-skills,launch-04-i003,infrastructure_failure,,0,,0e1a0e0a7ed8b07758b6a8d07a871714b8c5b5321a4c6e60fd93da686f0882d4
+xlsx-recover-data,1,with-CogniLife-skills,launch-04-i003,infrastructure_failure,,0,,f4b4b1f1aa3287aa9683df7e520d2db0b5068ba772735b0a006f1a36021f18c4
+xlsx-recover-data,1,with-skills,launch-04-i003,infrastructure_failure,,0,,d3d0cff5521d05680b6c49ff0a1e9a8d7ea75e102a266a2f3de667f1cf38ac86

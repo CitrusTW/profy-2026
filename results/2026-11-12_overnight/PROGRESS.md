@@ -67,3 +67,7 @@ I003 ADV judge: primary jobs processed90/140, valid84, failed calls20, received-
 2026-11-12T10:49:29.315819+00:00 {"task": "xlsx-recover-data", "repeat": 1, "condition": "with-CogniLife-skills", "status": "infrastructure_failure", "cost_usd": "unknown", "completed_epoch": 1794480569.315168, "adapter_instruction": "I-003"}; strict=None; total_tokens=0
 
 2026-11-12T10:49:32.326779+00:00 I003 task pass finished: xlsx-recover-data, repeat1, Profy USDunknown; fixed order retained.
+
+I003 ADV judge: primary jobs processed100/140, valid93, failed calls23, received-cost sum USD2.701972, unknown-cost calls0, conservative reserved spent ceiling USD9.730312; not an observed expense estimate.
+
+2026-11-12T10:50:05.009142+00:00 {"task": "invoice-fraud-detection", "repeat": 1, "condition": "no-skills", "status": "infrastructure_failure", "cost_usd": "unknown", "completed_epoch": 1794480605.00832, "adapter_instruction": "I-003"}; strict=None; total_tokens=0

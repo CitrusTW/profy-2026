@@ -1,0 +1,41 @@
+{
+  "task": "invoice-fraud-detection",
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "input_sha256": "d5eac7f0f7c0b0ed887d8de820c0e2c2c4ef47c8614759da5753e290049c3379",
+  "transport": [
+    {
+      "name": "task_environment.tar.gz",
+      "size": 39084,
+      "sha256": "d5eac7f0f7c0b0ed887d8de820c0e2c2c4ef47c8614759da5753e290049c3379"
+    }
+  ],
+  "input_manifest": {
+    "Dockerfile": {
+      "sha256": "971f8682d9505d0bae1a83faffda2891e15a3cf162738aae6b3128aa910135b9",
+      "size": 785,
+      "mode": 420
+    },
+    "invoices.pdf": {
+      "sha256": "a76ee7651a4e088ba566d3e5d5d9f499e773f1166cb2d7f888ea19291c4a813e",
+      "size": 29461,
+      "mode": 420
+    },
+    "purchase_orders.csv": {
+      "sha256": "6f84df07d8195331d71940dbcd65e4369094063acece2fe86ca4883a50e35be8",
+      "size": 52085,
+      "mode": 420
+    },
+    "vendors.xlsx": {
+      "sha256": "19ff6138112d84c2c695c8369fa315d0de42bd966dfdbd95d5a9553e8e9a08d3",
+      "size": 14744,
+      "mode": 420
+    }
+  },
+  "skills": [],
+  "target_skill": "xlsx",
+  "parent_md_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "skill_hashes": {},
+  "native_file_runtime": true,
+  "native_package_versions": {},
+  "expected_input_hashes": null
+}
