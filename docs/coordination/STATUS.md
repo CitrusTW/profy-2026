@@ -1,9 +1,9 @@
 # STATUS
 
-- 更新时间（美国太平洋时间）：2026-11-12T02:39:58.859144-08:00
+- 更新时间（美国太平洋时间）：2026-11-12T02:42:44.060925-08:00
 - 已执行到的最后一条指令编号：I-002
 - 最新读到的指令：I-003; INSTRUCTIONS SHA256 5c62651db2150ef32370b536c557a80b23d13b228c527783b098224b978503fc
-- 触发节点：run-powerlifting-coef-calc-r1-with-CogniLife-skills
+- 触发节点：I003-adapter-repair-and-judge-limit-questions
 - 当前任务：xlsx第11轮冻结版、8题全串行广度优先; 不再进化。当前首题冻结版正在运行或后续三组顺序运行, 详见运行表。
 - 下一步：每题三组第一遍后再补第二遍/第三遍; shock-demand只补冻结版、不重跑旧基线。I-002截止13:30 PST, 15:30交付。
 - 时间实现：当前launch-03不强杀; 结束后I-002延续控制器跳过已完成记录、补齐最多第三遍; 截止13:30 PST。
@@ -46,5 +46,7 @@
 - 未接通capability-gap classifier、通用semantic applicability和native promotion; 外部adapter不是官方Docker。xlsx11进化/当前求解为gpt-6.1-sol; 首个threejs历史反例进化为gpt-4.1, 需要单独披露。
 - STATUS/STATUS_LOG和PROGRESS是协议明确要求更新的管理文件; 原论文、已有实验记录、已发布数据结果不覆盖。
 - 发现ADV版本对应问题将如实报告, 不把无法绑定的评分冒称当前平台输出的评分。
+- 待审核者指令: [REVIEW_QUESTION_I003_judge_output_limit.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_I003_judge_output_limit.md)；现有原始记录保留, 尚未改adapter。
+- 待审核者指令: [REVIEW_QUESTION_I003_tool_search_scope.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_I003_tool_search_scope.md)；现有原始记录保留, 尚未改adapter。
 - 待审核者指令: [REVIEW_QUESTION_pip_pin_check.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_pip_pin_check.md)；现有原始记录保留, 尚未改adapter。
 - 待审核者指令: [REVIEW_QUESTION_tool_search.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_tool_search.md)；现有原始记录保留, 尚未改adapter。
