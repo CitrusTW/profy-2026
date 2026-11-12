@@ -103,3 +103,4 @@
 - 2026-11-12T10:10:01.002106-08:00 I010 completed_generation_ADV_016-generation-generic_llm_raw; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-009; new_completed_runs=18; USD=unknown.
 - 2026-11-12T10:10:27.262842-08:00 I010 completed_generation_ADV_016-generation-generic_llm_expert_prompt; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-009; new_completed_runs=18; USD=unknown.
 - 2026-11-12T10:10:36.479130-08:00 I010 completed_generation_ADV_017-generation-generic_llm_raw; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-009; new_completed_runs=18; USD=unknown.
+- 2026-11-12T10:10:53.477913-08:00 I010 completed_generation_ADV_017-generation-generic_llm_expert_prompt; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-009; new_completed_runs=18; USD=unknown.
