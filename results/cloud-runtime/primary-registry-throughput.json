@@ -1,0 +1,52 @@
+{
+  "diagnosis_only": true,
+  "new_solver_run": false,
+  "new_scoring_run": false,
+  "paths": {
+    "/home/user/workspace/distilled-99707679/76e679d0-0644-4b5a-a9a6-fe81a70d05b0": {
+      "free_bytes": 482900705280,
+      "filesystem": "fuse"
+    },
+    "/": {
+      "free_bytes": 1052913664,
+      "filesystem": "overlayfs"
+    },
+    "/tmp": {
+      "free_bytes": 1052913664,
+      "filesystem": "overlayfs"
+    },
+    "/var/tmp": {
+      "free_bytes": 1052913664,
+      "filesystem": "overlayfs"
+    }
+  },
+  "primary_registry_checks": {
+    "anonymous_token": "ok",
+    "manifest_layers": 5,
+    "throughput_samples": [
+      {
+        "digest": "sha256:cb259a83ac3dd9fea0b394df41df2b298adf0df938fef5999475af18a751c257",
+        "compressed_bytes": 29732805,
+        "status": 206,
+        "sample_bytes_received": 1048576,
+        "seconds": 23.452
+      },
+      {
+        "digest": "sha256:5e8f2b17298299fa3fd75c264b61f1ffdb04cf8d70941686811534f14c52a217",
+        "compressed_bytes": 887823207,
+        "status": 206,
+        "sample_bytes_received": 851968,
+        "seconds": 27.501
+      }
+    ]
+  },
+  "device_fuse_exists": true,
+  "setup_error.json": {
+    "type": "TimeoutExpired",
+    "error": "Command '['sudo', '-n', '/home/user/workspace/distilled-99707679/76e679d0-0644-4b5a-a9a6-fe81a70d05b0/cgl-task-896f07ta/vendor/usr/bin/docker', '--config=/home/user/workspace/distilled-99707679/76e679d0-0644-4b5a-a9a6-fe81a70d05b0/cgl-task-896f07ta/client', '-H', 'unix:///tmp/cgl-sock-lu83cngp/d.sock', 'pull', 'ghcr.io/benchflow-ai/skillsbench-task-env@sha256:d9618c07819af2ba140c9c673580cc9e672845febba33e961e55cd03cda2a833']' timed out after 599.99998528 seconds",
+    "log_tail": "Get:1 http://mirrors.tencentyun.com/debian trixie InRelease [140 kB]\nGet:2 http://mirrors.tencentyun.com/debian trixie-updates InRelease [47.3 kB]\nGet:3 http://mirrors.tencentyun.com/debian trixie/main amd64 Packages [9678 kB]\nGet:4 http://mirrors.tencentyun.com/debian trixie-updates/main amd64 Packages [1108 B]\nGet:5 https://deb.nodesource.com/node_20.x nodistro InRelease [12.1 kB]\nGet:6 https://deb.nodesource.com/node_20.x nodistro/main amd64 Packages [14.4 kB]\nGet:7 https://cloud.r-project.org/bin/linux/debian trixie-cran40/ InRelease [4369 B]\nGet:8 https://cloud.r-project.org/bin/linux/debian trixie-cran40/ Packages [26.9 kB]\nFetched 9925 kB in 2s (5199 kB/s)\nReading package lists...\nGet:1 http://mirrors.tencentyun.com/debian trixie/main amd64 containerd amd64 1.7.24~ds1-6+deb13u1 [32.8 MB]\nGet:2 http://mirrors.tencentyun.com/debian trixie/main amd64 docker-cli amd64 26.1.5+dfsg1-9+deb13u1 [7337 kB]\nGet:3 http://mirrors.tencentyun.com/debian trixie/main amd64 docker.io amd64 26.1.5+dfsg1-9+deb13u1 [23.0 MB]\nGet:4 http://mirrors.tencentyun.com/debian trixie/main amd64 runc amd64 1.1.15+ds1-2+b4 [3230 kB]\nGet:5 http://mirrors.tencentyun.com/debian trixie/main amd64 tini amd64 0.19.0-3+b8 [280 kB]\nFetched 66.7 MB in 2s (37.3 MB/s)\nghcr.io/benchflow-ai/skillsbench-task-env@sha256:d9618c07819af2ba140c9c673580cc9e672845febba33e961e55cd03cda2a833: Pulling from benchflow-ai/skillsbench-task-env\ncb259a83ac3d: Pulling fs layer\n5e8f2b172982: Pulling fs layer\n4f4fb700ef54: Pulling fs layer\n903d1f665bed: Pulling fs layer\na9f98ba24c66: Pulling fs layer\n903d1f665bed: Waiting\na9f98ba24c66: Waiting\n4f4fb700ef54: Verifying Checksum\n4f4fb700ef54: Download complete\n903d1f665bed: Verifying Checksum\n903d1f665bed: Download complete\na9f98ba24c66: Verifying Checksum\na9f98ba24c66: Download complete\n",
+    "cleanup_returncode": 1
+  },
+  "setup_logs": {},
+  "daemon_logs": {}
+}

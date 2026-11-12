@@ -34,7 +34,7 @@ def main():
         path=':'.join(str(vendor/p) for p in ['usr/bin','usr/sbin','usr/libexec/docker'])+':/usr/sbin:/usr/bin:/sbin:/bin'
         (work/'client').mkdir();socket=runtime/'d.sock';pidfile=runtime/'d.pid'
         daemon_log=(work/'daemon.log').open('w')
-        daemon_args=['sudo','-n','env','PATH='+path,str(server),'--group=root','--data-root='+str(work/'data'),'--exec-root='+str(runtime/'run'),'--pidfile='+str(pidfile),'--host=unix://'+str(socket),'--iptables=false','--bridge=none','--storage-driver=vfs','--registry-mirror=https://mirror.gcr.io','--registry-mirror=https://docker.m.daocloud.io']
+        daemon_args=['sudo','-n','env','PATH='+path,str(server),'--group=root','--data-root='+str(work/'data'),'--exec-root='+str(runtime/'run'),'--pidfile='+str(pidfile),'--host=unix://'+str(socket),'--iptables=false','--bridge=none','--max-concurrent-downloads=1','--max-concurrent-uploads=1','--storage-driver=vfs','--registry-mirror=https://mirror.gcr.io','--registry-mirror=https://docker.m.daocloud.io']
         subprocess.Popen(daemon_args,stdout=daemon_log,stderr=subprocess.STDOUT,start_new_session=True)
         cli=['sudo','-n',str(client),'--config='+str(work/'client'),'-H','unix://'+str(socket)]
         for _ in range(40):
@@ -43,8 +43,9 @@ def main():
         else:raise RuntimeError('Private Docker engine unavailable')
         context=None
         if meta.get('prebuilt'):
-            image=meta['prebuilt']['primary_image']
-            assert re.fullmatch(r'ghcr\.io/benchflow-ai/skillsbench-task-env@sha256:[0-9a-f]{64}',image)
+            image=meta['prebuilt'].get('download_image',meta['prebuilt']['primary_image'])
+            assert re.fullmatch(r'(?:ghcr\.io|ghcr\.nju\.edu\.cn)/benchflow-ai/skillsbench-task-env@sha256:[0-9a-f]{64}',image)
+            assert image.split('/',1)[1]==meta['prebuilt']['primary_image'].split('/',1)[1],'Download mirror must preserve repository and digest'
             command(cli+['pull',image],600)
         else:
             with tarfile.open(base/'task_environment.tar.gz','r:gz') as archive:archive.extractall(work/'context',filter='data')
@@ -81,7 +82,7 @@ def main():
         print('CGL_CASE_READY:'+json.dumps(state))
         if target_sha:print('SBP_ACTIVE_SKILL_SHA256:'+target_sha)
     except Exception as exc:
-        error={'type':type(exc).__name__,'error':str(exc),'log_tail':log.read_text(errors='replace')[-5000:] if log.exists() else ''}
+        error={'daemon_tail':(work/'daemon.log').read_text(errors='replace')[-3000:] if (work/'daemon.log').exists() else '', 'type':type(exc).__name__,'error':str(exc),'log_tail':log.read_text(errors='replace')[-5000:] if log.exists() else ''}
         try:
             pid=runtime/'d.pid'
             if pid.is_file():

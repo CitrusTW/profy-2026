@@ -1,0 +1,77 @@
+{
+  "comparison_only": true,
+  "no_scores_or_verifier_read": true,
+  "tasks": [
+    {
+      "task": "exceltable-in-ppt",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": false,
+      "resource_files": 3
+    },
+    {
+      "task": "invoice-fraud-detection",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "jpg-ocr-stat",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "pdf-excel-diff",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "powerlifting-coef-calc",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "protein-expression-analysis",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "reserves-at-risk-calc",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "shock-analysis-demand",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "shock-analysis-supply",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "weighted-gdp-calc",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    },
+    {
+      "task": "xlsx-recover-data",
+      "original_skill_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+      "all_original_skill_resources_identical": true,
+      "resource_files": 3
+    }
+  ],
+  "different_resource_paths": {
+    "exceltable-in-ppt": [
+      "recalc.py"
+    ]
+  }
+}

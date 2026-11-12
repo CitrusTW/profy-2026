@@ -1,0 +1,16 @@
+{
+  "task": "weighted-gdp-calc",
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "builder_commit": "12ebd8653093e0734c7902835cb20c054196026c",
+  "environment_tree_sha": "d6a776c3757624ade5a20b363a7839814ab3ab34",
+  "environment_tree_exact_match": true,
+  "primary_image": "ghcr.io/benchflow-ai/skillsbench-task-env@sha256:d9618c07819af2ba140c9c673580cc9e672845febba33e961e55cd03cda2a833",
+  "public_mirror_image": "ghcr.m.daocloud.io/benchflow-ai/skillsbench-task-env@sha256:d9618c07819af2ba140c9c673580cc9e672845febba33e961e55cd03cda2a833",
+  "tag": "skillsbench-v1.1-weighted-gdp-calc-12ebd8653093",
+  "platform": "linux/amd64",
+  "local_image_downloaded": false,
+  "download_image": "ghcr.nju.edu.cn/benchflow-ai/skillsbench-task-env@sha256:d9618c07819af2ba140c9c673580cc9e672845febba33e961e55cd03cda2a833",
+  "download_manifest_primary_digest_verified": true,
+  "download_source_documentation": "https://doc.nju.edu.cn/books/e1654/page/ghcr",
+  "download_probe": "xlsx-family/prebuilt-primary/diagnose-nju-throughput/output/diagnostic.json"
+}

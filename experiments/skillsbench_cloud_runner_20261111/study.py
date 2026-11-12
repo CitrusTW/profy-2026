@@ -62,6 +62,25 @@ def primary_pin(reference):
     assert len(selected)==1
     return selected[0]['digest']
 
+def forbidden_skill_read(event,no_skills,names):
+    if event.get('tool_name')!='read':return False
+    path=Path((event.get('parameters') or {}).get('file_path',''))
+    parts=path.parts
+    looks_like_skill=path.name=='SKILL.md' or any(x in ['skills','bench_skills'] for x in parts)
+    if not looks_like_skill:return False
+    if no_skills or '..' in parts:return True
+    return not any(parts[i]=='bench_skills' and i+1<len(parts) and parts[i+1] in names for i in range(len(parts)))
+
+def setup_receipts(events,strings):
+    receipts={}
+    for event in events:
+        if event.get('type')!='tool_call.result':continue
+        for text in strings(event.get('result')):
+            for line in text.splitlines():
+                if line.startswith('CGL_CASE_READY:'):
+                    value=json.loads(line.split(':',1)[1]);receipts[json.dumps(value,sort_keys=True)]=value
+    return list(receipts.values())
+
 class DockerStudy(LibraryStudy):
     def solve(self,label,task,candidate=None,no_skills=False):
         require_paid(self.args.allow_paid)
@@ -96,7 +115,7 @@ class DockerStudy(LibraryStudy):
         files.append(MemoryUpload('case_config.json.gz',gzip.compress(json.dumps(config).encode())))
         files += [HERE/'remote_setup.py',HERE/'remote_tools.py']
         if any(len(p.read_bytes())>500000 for p in files):raise ValueError('Prototype upload exceeds bound; no model call started')
-        save(f/'started.json',{'task':task,'label':label,'model':'gpt-6.1-sol','adapter':'cloud-original-docker-prototype-v1'})
+        save(f/'started.json',{'task':task,'label':label,'model':'gpt-6.1-sol','adapter':'cloud-original-docker-prototype-v1','adapter_source_sha256':{p.name:sha(p.read_bytes()) for p in [HERE/'study.py',HERE/'remote_setup.py',HERE/'remote_tools.py',HERE/'remote_grade.py']} })
         save(f/'case_config.json',config)
         user='cgl-native-'+sha(str(f).encode())[:20]
         uploads=[self.transport.upload(p,user) for p in files];save(f/'uploads.json',uploads)
@@ -119,8 +138,11 @@ For a visual/native file preview, use python3 remote_tools.py get with the same 
         summary=json.loads((folder/'run_summary.json').read_text())
         if not summary['completed'] or summary['error']:raise RuntimeError('Solver stream incomplete; do not score')
         events=[json.loads(s) for s in (folder/'events.jsonl').read_text().splitlines()]
-        ready=[];setup_ids=set()
+        setup_ids=set()
+        config=json.loads((folder/'case_config.json').read_text())
         for e in events:
+            if e.get('type')=='tool_call.in_progress' and forbidden_skill_read(e,not config['skills'],self.names):
+                raise RuntimeError('Read of an unsupplied skill; experimental condition invalid')
             if e.get('type')=='tool_call.in_progress' and e.get('tool_name') not in ['read','bash','awaitbash','skills_read']:
                 raise RuntimeError('Unexpected solver tool outside the execution adapter')
             if e.get('type')=='tool_call.in_progress' and e.get('tool_name')=='bash':
@@ -129,11 +151,7 @@ For a visual/native file preview, use python3 remote_tools.py get with the same 
                 if kind=='setup':setup_ids.add(e['tool_call_id'])
                 elif kind!='container':
                     raise RuntimeError('Unapproved host shell command: invalid external adapter execution')
-            if e.get('type')=='tool_call.result':
-                for text in self.strings(e.get('result')):
-                    for line in text.splitlines():
-                        if line.startswith('CGL_CASE_READY:'):ready.append(json.loads(line.split(':',1)[1]))
-        ready=list({json.dumps(x,sort_keys=True):x for x in ready}.values())
+        ready=setup_receipts(events,self.strings)
         if len(ready)!=1:raise RuntimeError('No unique actual setup receipt; no grading call started')
         state=ready[0];session=json.loads((folder/'session.json').read_text())
         config=json.loads((folder/'case_config.json').read_text());assert state['input_sha256']==config['input_sha256'] and state['task']==task

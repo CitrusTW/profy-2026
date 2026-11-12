@@ -2,7 +2,7 @@ import io,tarfile,unittest,tempfile
 from unittest.mock import patch
 from pathlib import Path
 from prebuilt_catalog import catalog,BUILDER
-from study import archive_rows,host_command_kind
+from study import archive_rows,host_command_kind,setup_receipts,forbidden_skill_read
 from remote_setup import cloud_only
 
 class StudyTests(unittest.TestCase):
@@ -29,6 +29,16 @@ class StudyTests(unittest.TestCase):
             self.assertEqual(row['matching_and_available'],1)
             self.assertFalse(row['image_layers_downloaded'])
             self.assertEqual(row['model_calls'],0)
+    def test_ready_receipt_can_arrive_from_background_await(self):
+        result={'type':'tool_call.result','tool_name':'awaitbash','result':'CGL_CASE_READY:{"task":"example"}'}
+        self.assertEqual(setup_receipts([result,result],lambda x:[x]),[{'task':'example'}])
+        self.assertEqual(setup_receipts([{'type':'output.text.delta','result':result['result']}],lambda x:[x]),[])
+    def test_plain_read_cannot_silently_import_builtin_skill(self):
+        event=lambda p:{'tool_name':'read','parameters':{'file_path':p}}
+        self.assertTrue(forbidden_skill_read(event('/mnt/skills/public/xlsx/SKILL.md'),True,['xlsx']))
+        self.assertTrue(forbidden_skill_read(event('/mnt/skills/public/xlsx/SKILL.md'),False,['xlsx']))
+        self.assertFalse(forbidden_skill_read(event('/home/user/workspace/bench_skills/xlsx/SKILL.md'),False,['xlsx']))
+        self.assertTrue(forbidden_skill_read(event('bench_skills/xlsx/../other/SKILL.md'),False,['xlsx']))
     def test_cloud_script_refuses_local_execution(self):
         with self.assertRaisesRegex(RuntimeError,'Cloud-only'):cloud_only()
 
