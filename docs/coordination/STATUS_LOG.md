@@ -10,3 +10,4 @@
 - 2026-11-12T02:08:00.734467-08:00 run-reserves-at-risk-calc-r1-no-skills; last_applied=I-002; latest_seen=I-002; new_completed_runs=5; USD=unknown.
 - 2026-11-12T02:11:26.959751-08:00 native-pip-inventory-check-review-question; last_applied=I-002; latest_seen=I-002; new_completed_runs=5; USD=unknown.
 - 2026-11-12T02:13:09.728492-08:00 run-reserves-at-risk-calc-r1-with-skills; last_applied=I-002; latest_seen=I-002; new_completed_runs=6; USD=unknown.
+- 2026-11-12T02:13:51.119935-08:00 run-reserves-at-risk-calc-r1-no-skills; last_applied=I-002; latest_seen=I-002; new_completed_runs=6; USD=unknown.

@@ -1,9 +1,9 @@
 # STATUS
 
-- 更新时间（美国太平洋时间）：2026-11-12T02:13:09.728492-08:00
+- 更新时间（美国太平洋时间）：2026-11-12T02:13:51.119935-08:00
 - 已执行到的最后一条指令编号：I-002
 - 最新读到的指令：I-002; INSTRUCTIONS SHA256 97157a76de8ed7e0b9adb6f713e4fa1ed38c44ba3b10d8c143bd18301756c769
-- 触发节点：run-reserves-at-risk-calc-r1-with-skills
+- 触发节点：run-reserves-at-risk-calc-r1-no-skills
 - 当前任务：xlsx第11轮冻结版、8题全串行广度优先; 不再进化。当前首题冻结版正在运行或后续三组顺序运行, 详见运行表。
 - 下一步：每题三组第一遍后再补第二遍/第三遍; shock-demand只补冻结版、不重跑旧基线。I-002截止13:30 PST, 15:30交付。
 - 时间实现：当前launch-03不强杀; 结束后I-002延续控制器跳过已完成记录、补齐最多第三遍; 截止13:30 PST。
@@ -42,3 +42,5 @@
 - 未接通capability-gap classifier、通用semantic applicability和native promotion; 外部adapter不是官方Docker。xlsx11进化/当前求解为gpt-6.1-sol; 首个threejs历史反例进化为gpt-4.1, 需要单独披露。
 - STATUS/STATUS_LOG和PROGRESS是协议明确要求更新的管理文件; 原论文、已有实验记录、已发布数据结果不覆盖。
 - 发现ADV版本对应问题将如实报告, 不把无法绑定的评分冒称当前平台输出的评分。
+- 待审核者指令: [REVIEW_QUESTION_pip_pin_check.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_pip_pin_check.md)；现有原始记录保留, 尚未改adapter。
+- 待审核者指令: [REVIEW_QUESTION_tool_search.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_tool_search.md)；现有原始记录保留, 尚未改adapter。
