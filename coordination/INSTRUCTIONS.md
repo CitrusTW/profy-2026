@@ -155,3 +155,25 @@
 ### D. 状态推送
 
 - 实验分支 origin/codex/three-arm-skill-pilot-20261110 上的 docs/coordination/STATUS.md 从 02:18 之后就没有更新。请按 PROTOCOL 每 30 分钟把 STATUS.md、STATUS_LOG.md 推送到这个分支。如果推送失败，把失败原因写进本地 STATUS.md，下一个节点重试。
+
+---
+
+## I-005（2026-11-12 05:10 美国太平洋时间）更正与澄清
+
+### A. 更正 I-004 D
+状态推送一直正常（远端已有 04:58 的提交）。审核者此前读到 02:18 的旧状态，是因为自己浅克隆拉取时没有强制更新跟踪分支，不是你的问题。I-004 D 无需执行任何操作。
+
+### B. 澄清 I-003 C 中 tool_search 的条件（适用于 shock-analysis-supply 的 B/C 组及之后所有同类情况）
+I-003 C 的本意是：tool_search 不能让一个组接触到**分配给它的 skill 集合以外**的 skill。各组被分配的集合是：
+- no-skills：空集；
+- with-skills：原版 xlsx skill；
+- with-CogniLife-skills：冻结第 11 轮 xlsx skill。
+
+因此：
+- with-skills 和 with-CogniLife-skills 组读取或激活**自己被分配的** SKILL.md，无论发生在 tool_search 之前还是之后，都不算违规。
+- 只有当轨迹显示某组读取、激活或加载了分配集合以外的 skill 文件时，这次运行才判为协议违规、不评分。
+- 符合条件的 B/C 组现有轨迹，按 I-003 C 的同样方式补跑原 verifier：不重新求解、不改回答、记录原始 reward，并在 DECISIONS.md 中记录本次澄清。shock-analysis-supply 仍标为"环境受限"，并按两种口径汇总。
+
+### C. 其他
+- Profy 403 的探测按 I-004 B 继续进行。
+- ADV 部分在修订副本中使用 ADV_CURRENT_RESULTS.md 中的 I-004 结果，并保留其中列出的边界：missing_info 子集上 Full 和 Expert Prompt 持平；Full 的 coherence 和 safety 低于 Expert Prompt；生成模型不同；pairwise 每份输出只截取前 3000 字符。原稿中"missing-information 差距最大""各维度均更好"的说法必须删除或改写。
