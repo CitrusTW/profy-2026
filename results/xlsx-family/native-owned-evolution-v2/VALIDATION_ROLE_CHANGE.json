@@ -1,0 +1,11 @@
+{
+  "task": "protein-expression-analysis",
+  "old_role": "first independent test of frozen round11",
+  "new_role": "selection validation for rounds12..30",
+  "prior_results_preserved": true,
+  "future_results_are_not_independent_test_evidence": true,
+  "validation_trajectories_answers_scores_sent_to_evolution": false,
+  "dev_task": "weighted-gdp-calc",
+  "global_round_start": 12,
+  "global_round_cap": 30
+}

@@ -16,7 +16,13 @@ weighted-gdp-calc 三组都27/27. no-skills 用155489 solver tokens, 原版24881
 
 但第一道未参与进化的 protein-expression-analysis, 三组虽都6/6, 第11轮却用264808 tokens, 原版187869, no-skills183191. 进化版比原版多40.95%, 这道题没有显示质量或效率提升. 不把开发题的收益写成普遍收益, 不用这道题答案回改 skill.
 
-## 8题批次已停止
+## 正在继续进化 xlsx
+
+从第12轮继续, 最多到第30轮. 只把 weighted-gdp-calc 开发轨迹交给原 Evolution 组件; 纠正旧 PRoot 环境描述. 用 protein-expression-analysis 做候选选版检查, 不把它的答案、轨迹、评分源码或分数交给 Evolution. 后续这题不再算独立新题证据. 开发和验证都要保持原评分全过, 并两次比原版至少少5% solver tokens, 才采用. [完整计划](../results/xlsx-family/native-owned-evolution-v2/PLAN.md).
+
+现有第11版和先前不理想的结果均保留. 当前先取得同一 native-owned 环境的开发题原版与第11版记录. 论文未改.
+
+## 上轮8题批次已停止
 
 这8题中0题完成三组, 1题部分完成, 7题未开始. shock-analysis-demand 的 no-skills 原 reward0, 使用839001 solver tokens. 原版 skill 组在25次 usage记录超过runner的24轮限制后中止, 已使用1168850 tokens, 没有有效评分. 进化版尚未运行. 不是仍在后台运行, 不把未完成的组算为0分.
 
