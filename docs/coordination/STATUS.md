@@ -1,4 +1,4 @@
-# STATUS: completed final manuscript and Overleaf copy
+# STATUS: completed abstract six-lessons revision
 
 - 更新时间: 2026-11-12T11:34:00.819684-08:00
 - 最新用户指令已完成: Lessons第一条Match base models;28处负号为数学负号;只压缩4.5耗时段落以保持正文6页。数据与其他内容未变。
@@ -24,3 +24,11 @@
 - 在线核对: paper_validation/OVERLEAF_UPLOAD_COMPLETED.json, OVERLEAF_NUMERICAL_CHECK.json, Overleaf_final_verification.jpg。
 - earlier final文件保留作为历史版本,不覆盖。系统.DS_Store/用户.textClipping忽略,未删除未改写。
 - 费用未增加:OpenRouterI003/I004=USD4.941796,I010=USD4.0799450879;Profyunknown。全部模型运行停止。
+
+## Latest direct user abstract change 2026-11-12T19:53:33.420305+00:00
+
+- Replaced only the requested abstract sentence; remaining abstract and manuscript prose/numbers unchanged. Figure1 width 1.00→0.88 textwidth for layout; fonts/margins unchanged.
+- Compiled body6/total27; authorized Overleaf revision copy updated and compiled27pages, Limitations starts page7. Original project/OpenReview untouched.
+- Latest PDF: results/2026-11-12_overnight/paper_rev/final/CogniLife_final_SixLessons.pdf
+- Exact full abstract: paper_validation/ABSTRACT_SixLessons.txt; validation and screenshot in paper_validation.
+- Last coordination instruction read: I-010 (review); user direct I-011 and subsequent abstract instructions applied. No new runs/cost.

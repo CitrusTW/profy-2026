@@ -95,3 +95,5 @@ Citation metadata correction: SKILLSBENCH_CITATION_VERIFIED.json中的checked_ut
 - 2026-11-12T19:01:44.823885+00:00 Latest direct user scope: add1lesson first, unify numerical minus and compress4.5if needed. New copy and filenames preserve earlier deliveries. Only missing standard math font cmsy7 downloaded, existing compiler/cache reused; no new environment or paid API calls.
 
 - 2026-11-12T19:34:00.776559+00:00 Ignore mutable Finder .DS_Store and unrelated .textClipping during final publishing; do not delete/overwrite them. Earlier automatic publisher failed safely on existing .DS_Store mismatch, so final approved deliverables are explicitly copied with immutable byte checks. User-enabled fileURL permission and new direct Overleaf authorization used for new project only.
+
+- 2026-11-12T19:53:33.420305+00:00: Completed exact abstract replacement and layout-only Figure1 resizing; body6/total27, Overleaf copy verified; original and OpenReview untouched; no new paid calls.

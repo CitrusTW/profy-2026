@@ -141,3 +141,5 @@
 - 2026-11-12T10:53:46.046933-08:00 I011 final6/27pages pushed, same-model negative result integrated per NEW user instruction. Overleaf explicitly authorized; file-URL permission remains technical upload blocker. Original/OpenReview untouched.
 - 2026-11-12T11:03:08.135159-08:00 Latest completion: Match base models first,28 mathematical negative signs,4.5timing shortened. Compiled6body/27totalpages, exact values and other text unchanged. Latest PDF CogniLife_final_MatchBaseModels.pdf. User enabled fileURL permission; Overleaf ZIP upload currently0%, verifying. No original/OpenReview changes.; last_applied=I-010 (direct user message; newer than coordination I009).; latest_seen=I-010; new_completed_runs=18; USD=unknown.
 - 2026-11-12T11:34:00.819684-08:00 COMPLETE: Match-base-models final6/27pages, uploaded new Overleaf6af60d555de89ef585537738, online numeric verification27/27pages, original/OpenReview untouched.
+
+- 2026-11-12T19:53:33.420305+00:00: Completed exact abstract replacement and layout-only Figure1 resizing; body6/total27, Overleaf copy verified; original and OpenReview untouched; no new paid calls.

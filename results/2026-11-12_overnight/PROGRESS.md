@@ -219,3 +219,5 @@ I004 original-order next-run probe: {"instruction": "I-004", "started_epoch": 17
 - 2026-11-12T19:01:44.823885+00:00 Match base models added first;28 numeric minus signs changed to math;4.5timing shortened only. Verified6main/27total pages, values unchanged. Source ZIP compiled and page text identical. User enabled Chrome fileURL permission; upload in progress in NEW Overleaf project, original untouched.
 
 - 2026-11-12T19:34:00.776559+00:00 Overleaf NEW project upload and online compilation verified:6body/27totalpages. URL https://www.overleaf.com/project/6af60d555de89ef585537738 . Online PDF downloaded; Match-base-models lesson confirmed onpage6, all27pages content numeric sequences agree with local build. Original project/OpenReview untouched. Browser download blocked tool for~27min unexpectedly despite requested30s wait; final verification now complete.
+
+- 2026-11-12T19:53:33.420305+00:00: Completed exact abstract replacement and layout-only Figure1 resizing; body6/total27, Overleaf copy verified; original and OpenReview untouched; no new paid calls.
