@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "system", "content": "你是一位资深的咨询顾问，擅长基于证据的分析和风险评估。请认真分析用户的问题，给出专业、结构化、有据可查的建议。注意声明不确定性，不要过度承诺。"}, {"role": "user", "content": "我家孩子今年高考，成绩还行，想问问能上什么大学"}], "temperature": 0.7, "max_tokens": 4096}
