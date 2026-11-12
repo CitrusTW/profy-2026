@@ -1,0 +1,37 @@
+{
+  "label": "cloud-private-engine-short-path",
+  "task": "environment-check",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 100.443,
+  "output_received": true,
+  "native_zip_sha256": "04401ba05f779c2e38829ce9c32fb5540de3f0ed5d4a772ea124ba613e4ab6a7",
+  "file_hashes": {
+    "output/private_engine_check.json": "d273a00f84efb4b5d9de33e6609b3b87d925e5f5632a9d916aafc05a96792edf"
+  },
+  "skill_sha256": null,
+  "target_skill_read_verified": null,
+  "skill_hash_marker_verified": null,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": false,
+  "tokens": {
+    "input_tokens": 48031,
+    "output_tokens": 158,
+    "total_tokens": 48189,
+    "cache_read_tokens": 40957,
+    "cache_write_tokens": 7065,
+    "llm_turns": 3,
+    "tool_calls": 2
+  },
+  "profy_cost_usd": null,
+  "score": {
+    "strict": 0,
+    "tests": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "environment_probe_only": true,
+    "not_a_benchmark_result": true
+  }
+}

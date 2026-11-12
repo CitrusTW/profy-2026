@@ -33,7 +33,11 @@ def attached_skill_read(event, no_skills, names):
     if no_skills or event.get('tool_name')!='skills_read':return False
     package=(event.get('parameters') or {}).get('package','')
     parts=Path(package).parts
-    return len(parts)>=2 and '..' not in parts and parts[-2]=='bench_skills' and parts[-1] in names
+    resource=(event.get('parameters') or {}).get('resource','')
+    if '..' in parts or Path(resource).is_absolute() or '..' in Path(resource).parts:return False
+    directory=len(parts)>=2 and parts[-2]=='bench_skills' and parts[-1] in names
+    markdown=len(parts)>=3 and parts[-3]=='bench_skills' and parts[-2] in names and parts[-1]=='SKILL.md'
+    return directory or markdown
 
 def target_file_read(event,name):
     if event.get('tool_name')=='skills_read':
@@ -218,7 +222,7 @@ After writing the original requested outputs under output/, package only those a
             stop.set()
             try: self.transport.api('/v1/sessions/'+session+'/interrupt', {}, user)
             except Exception: pass
-        timer = threading.Timer(900, interrupt); timer.daemon = True; timer.start()
+        timer = threading.Timer(getattr(self.args,'hard_timeout_sec',900), interrupt); timer.daemon = True; timer.start()
         began = time.monotonic(); events = []; calls = {}; usages = []; error = None; completed = False; archive = None
         print('START', label, flush=True)
         try:

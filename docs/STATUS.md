@@ -33,3 +33,5 @@
 ## 环境补充
 
 已在 Profy 云端实际运行临时 Alpine Linux, [回执与排错记录](../results/2026-11-11_skillsbench_cloud_serial/environment-checks/README.md)单独保存. 公开工具通过内存分片中转, 本机没有保存镜像或运行环境. 原 benchmark Dockerfile 的云端流程仍未跑通; 不把环境检查计入题目成绩.
+
+原生 Docker 已在云端实际拉取并运行固定 SHA256 的公开 Alpine image, [实际记录与未解决的清理项](../results/2026-11-11_skillsbench_cloud_serial/environment-checks/NATIVE_DOCKER.md)已留档. 新的原题 runner 放在独立目录, [从这里看](../experiments/skillsbench_cloud_runner_20261111/README.md). 先验证 weighted-gdp-calc, 不提前算作三组完成. 原方法共享代码36项检查、新云端原型3项检查通过; 这不是benchmark题数.
