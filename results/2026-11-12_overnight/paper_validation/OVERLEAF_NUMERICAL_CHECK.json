@@ -1,0 +1,7 @@
+{
+  "all27pages_content_numeric_token_sequences_identical": true,
+  "margin_line_numbers_and_page_footers_excluded": true,
+  "online_body_pages": 6,
+  "online_total_pages": 27,
+  "text_extraction_variations": "Font-encoded braces/listing arrows/accent glyphs and minor hyphenation/line-number reflow; content numbers unchanged."
+}
