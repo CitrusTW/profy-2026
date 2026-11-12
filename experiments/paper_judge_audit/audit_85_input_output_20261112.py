@@ -47,7 +47,7 @@ def output_check(row):
 
 def write_csv(path, rows, fields):
     with path.open('w', newline='', encoding='utf-8-sig') as stream:
-        writer = csv.DictWriter(stream, fields)
+        writer = csv.DictWriter(stream, fields, lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
 
