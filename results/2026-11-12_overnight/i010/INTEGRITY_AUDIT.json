@@ -1,0 +1,21 @@
+{
+  "prereg_and_plan_unchanged": true,
+  "all_original_source_hashes_unchanged": true,
+  "original_messages_and_parameters_exact": true,
+  "no_duplicate_successful_generation": true,
+  "all_judge_templates_and_parameters_exact": true,
+  "all_scored_output_hashes_verified": true,
+  "full_not_regenerated_or_modified": true,
+  "valid_records_by_kind": {
+    "generation": 40,
+    "rubric": 60,
+    "pairwise": 79
+  },
+  "observed_actual_receipt_sum_usd": "4.0799450879",
+  "unknown_cost_calls": 0,
+  "within10usd_observed": true,
+  "generation_empty_outputs": 0,
+  "generation_length_limited": 1,
+  "all_records_preserved": 182,
+  "no_api_calls_from_audit": true
+}

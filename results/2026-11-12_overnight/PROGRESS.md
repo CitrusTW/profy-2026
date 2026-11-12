@@ -209,3 +209,5 @@ I004 original-order next-run probe: {"instruction": "I-004", "started_epoch": 17
 2026-11-12T18:34:01.505195+00:00 I010 judging task ADV_019 processed; calls=175, receipt USD=3.9821650879, unknown-cost calls=0.
 
 2026-11-12T18:34:55.328296+00:00 I010 judging task ADV_020 processed; calls=182, receipt USD=4.0799450879, unknown-cost calls=0.
+
+- 2026-11-12T18:36:15.401537+00:00 I010 finished all180 targets in182calls; valid40generation+60rubric+79pairwise. USD4.0799450879, elapsed38.56min. Full3.23 vsExpertPrompt3.42, delta-0.19 CI[-0.55,0.16]; no retained-advantage conclusion. One pairwise order missing after3length failures. Original/draft2 unchanged; paper integration held. Full report i010/analysis/RESULT_REPORT_ZH.md.

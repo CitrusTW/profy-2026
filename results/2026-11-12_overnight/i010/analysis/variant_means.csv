@@ -1,0 +1,10 @@
+variant,condition,n,overall_mean
+adversarial,generic_llm_raw,4,3.2
+adversarial,generic_llm_expert_prompt,4,3.8
+adversarial,profy_expert_full,4,3.55
+complete,generic_llm_raw,10,3.42
+complete,generic_llm_expert_prompt,10,3.62
+complete,profy_expert_full,10,3.42
+missing_info,generic_llm_raw,6,3.1999999999999997
+missing_info,generic_llm_expert_prompt,6,2.8333333333333335
+missing_info,profy_expert_full,6,2.7

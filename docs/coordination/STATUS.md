@@ -1,9 +1,9 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T10:34:59.542489-08:00
+- Updated (America/Los_Angeles): 2026-11-12T10:36:34.727456-08:00
 - Last applied instruction: I-010 (direct user message; newer than coordination I009).
-- Latest read: I-010; checkpoint: I010 finished_all_jobs_processed
-- Current work: manuscript draft2 per I008/I009, existing evidence only; no more Profy requests.
-- Next: restore valid original structure and archive proxy85 numbers unchanged; add clean ADV figure and deployment lessons. Draft2 by12:30PST, final by15:30; no waiting for resubmission.
+- Current work: I010 OpenRouter-only generation/judging/statistics. Manuscript integration ON HOLD by direct user instruction; existing draft2 unchanged.
+- Next: report actual I010 results and anomalies first; DO NOT write them into paper until user authorizes.
+- Latest read: I-010; checkpoint: I010 RESULTS: Full3.23 vs ExpertPrompt3.42, delta-0.19 bootstrap95CI[-0.55,0.16]; Full-vs-Prompt pairwise9Full/7baseline/3flip/1missing, vsRaw8/10/2/0. Valid60rubrics+79pairs, all40baselines; USD4.0799450879. No retained advantage. USER HOLD: DO NOT EDIT PAPER. See i010/analysis/RESULT_REPORT_ZH.md; original and draft2 hashes unchanged. All paid calls and watcher stopped.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
 - OpenRouter judge received expense USD4.941796; unknown-cost calls0. Profy USDunknown. No purchase/recharge.
 

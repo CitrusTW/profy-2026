@@ -1,0 +1,17 @@
+baseline,dimension,n,mean,bootstrap95,higher,lower,tie
+generic_llm_raw,overall,20,-0.07999999999999996,"[-0.33999999999999997, 0.18]",9,10,1
+generic_llm_raw,completeness,20,-0.05,"[-0.45, 0.4]",3,5,12
+generic_llm_raw,specificity,20,-0.15,"[-0.55, 0.2]",4,5,11
+generic_llm_raw,actionability,20,-0.3,"[-0.7, 0.05]",2,5,13
+generic_llm_raw,coherence,20,-0.05,"[-0.5, 0.4]",5,5,10
+generic_llm_raw,safety_boundary,20,0.15,"[-0.3, 0.6]",7,5,8
+generic_llm_raw,evidence_grounding,20,0.05,"[-0.25, 0.35]",5,4,11
+generic_llm_raw,uncertainty_calibration,20,0.25,"[-0.1, 0.6]",8,4,8
+generic_llm_expert_prompt,overall,20,-0.19,"[-0.5499999999999999, 0.15999999999999998]",6,11,3
+generic_llm_expert_prompt,completeness,20,-0.25,"[-0.8, 0.25]",5,7,8
+generic_llm_expert_prompt,specificity,20,-0.3,"[-0.65, 0.0]",1,4,15
+generic_llm_expert_prompt,actionability,20,-0.45,"[-0.95, 0.05]",2,7,11
+generic_llm_expert_prompt,coherence,20,-0.1,"[-0.55, 0.4]",6,9,5
+generic_llm_expert_prompt,safety_boundary,20,0.15,"[-0.25, 0.55]",4,4,12
+generic_llm_expert_prompt,evidence_grounding,20,0.2,"[-0.2, 0.65]",4,3,13
+generic_llm_expert_prompt,uncertainty_calibration,20,-0.25,"[-0.75, 0.25]",5,9,6

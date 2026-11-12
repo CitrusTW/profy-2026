@@ -83,3 +83,5 @@ Citation metadata correction: SKILLSBENCH_CITATION_VERIFIED.json中的checked_ut
 - 2026-11-12T18:08:53.891340+00:00 User direct amendment: finish I010 and report results first; DO NOT edit manuscript with I010 results. Existing draft2 unchanged. PREREG remains immutable; generation/judging/statistics unchanged.
 
 - 2026-11-12T18:30:56.897924+00:00 I010 reporting implementation check before inspecting any judge scores: numerical decision uses the user-registered positive overall CI and both-order Full-win count greater than baseline-win count. Pairwise completeness is reported separately, not converted into a different decision rule; missing orders are neither imputed nor omitted from task tables. No analysis output has yet been computed. Manuscript integration remains on hold.
+
+- 2026-11-12T18:36:15.402075+00:00 I010 all planned jobs attempted, single missing pairwise order preserved; no extra paid call to repair it. Registered positive-CI criterion fails on complete20-task rubric; report shrinking/non-significant gap, not retained advantage. First report to STATUS, then user. No I010 manuscript editing under direct user hold.
