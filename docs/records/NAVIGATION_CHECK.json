@@ -1,0 +1,32 @@
+{
+  "base_commit": "dcb9b5c922664e90d77c98bf92eeb05388a6bbca",
+  "inventory_rows": 2933,
+  "relative_links_checked": 148,
+  "broken_links": [],
+  "raw_results_edited": false,
+  "new_model_calls": 0,
+  "changed_navigation": [
+    "README.md",
+    "docs/STATUS.md",
+    "docs/EXPERIMENTS.md",
+    "results/README.md",
+    "results/2026-11-12_overnight/README.md",
+    "results/2026-11-12_overnight/paper_rev/README.md",
+    "skills/README.md",
+    "skills/evolution-history/README.md",
+    "experiments/README.md",
+    "docs/records/README.md",
+    "docs/records/ORGANIZATION_CHANGELOG.md"
+  ],
+  "preexisting_changed_paths": [
+    "README.md",
+    "docs/STATUS.md",
+    "docs/coordination/STATUS.md",
+    "docs/coordination/STATUS_LOG.md",
+    "experiments/README.md",
+    "results/README.md",
+    "skills/README.md",
+    "skills/evolution-history/README.md"
+  ],
+  "only_navigation_and_coordination_changed": true
+}

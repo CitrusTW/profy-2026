@@ -1,51 +1,28 @@
-# 当前做到哪里
+# 当前状态
 
-## 2026-11-12: 当前任务停在审计报告
+更新日期: 2026-11-12. 本页替代旧入口中的“审计后暂停 / 继续进化 / 等待上传”状态; 原说明保存在 [整理前快照](../archive/navigation-before-2026-11-12/).
 
-[85题三组生成输入和输出审计](../results/2026-11-12_85task_input_output_audit/REPORT.md)已经完成, 含每类数量、全部 task_id、255条逐题记录和源文件 hashes. 本轮无新增模型调用、无修复、无重跑、无论文修改. 缺原始生成请求和 finish_reason 的记录标为无法核实, 不当作正常通过. Full 的平台调用标签/proxy标签和 proxy源码直接加入checkpoints的差异均单独列出, 不把代码推测当作历史请求.
+## 已完成
 
-新 judge 调用暂停, 旧 Moonshot 凭据不使用, 等待确认审计结果. SkillsBench Evolution 也保持暂停. 以下保留此前实验快照供查历史; 其中“正在运行/继续进化”等旧描述不代表当前后台状态.
-
----
-
-# 此前实验快照
-
-| 已完成三组的题 | 版本 | 看结果 |
+| 工作 | 当前结果 | 证据 |
 | --- | --- | --- |
-| Threejs 两题 | 第5轮 | [报告](../results/run-04-up-to30/full-compatible-two/REPORT.md) |
-| energy-market-pricing | 第6轮 | [报告](../results/2026-11-11_skillsbench_full_library/network-family/REPORT.md) |
-| 3d-scan-calc, 开发题 | 第9轮 | [报告](../results/2026-11-11_skillsbench_cloud_serial/mesh-evolution/frozen-three-arm/REPORT.md) |
-| weighted-gdp-calc, 开发题 | 第11轮 | [报告](../results/xlsx-family/README.md) |
-| protein-expression-analysis, 未参与进化 | 冻结第11轮 | [报告和实际 Excel](../results/xlsx-family/heldout/protein-expression-analysis/REPORT.md) |
+| ADV 跨模型对照 I-004 | 20题; overall: Raw 2.43 / Expert Prompt 2.63 / Full 3.22. Full−Expert Prompt 0.59, 95% CI [0.30, 0.87] | [最终统计](../results/2026-11-12_overnight/adv_i004_analysis_v2/REPORT.md) |
+| ADV 同模型标签对照 I-010 | 20题; overall: Raw 3.31 / Expert Prompt 3.42 / Full 3.23. 差值 -0.19, 95% CI [-0.55, 0.16]. 没有保留 overall 优势 | [结果与异常说明](../results/2026-11-12_overnight/i010/analysis/RESULT_REPORT_ZH.md) |
+| SkillsBench held-out | energy-market-pricing、protein-expression-analysis 的第12轮前记录、powerlifting-coef-calc, 每题每组各1次; 三组正确率持平, tokens 因题而异 | [最终记录](../results/2026-11-12_overnight/skills_final/REPORT.md) |
+| 85题输入/输出审计 | 255份保存记录按相同标准检查; 原请求或 finish_reason 缺失处是无法核实, 不是正常通过 | [审计报告](../results/2026-11-12_85task_input_output_audit/REPORT.md) |
+| 论文修订副本 | 最新 SixLessons PDF, 正文6页 / 总27页; Overleaf修订副本已更新, 原项目和 OpenReview 未修改 | [版本与数字出处](../results/2026-11-12_overnight/paper_rev/README.md) |
 
-共6道题完成三组, 其中开发题用于改 skill 和选版, 不能一起算成独立泛化结果. 另有 grid-dispatch-operator 开发记录.
+## 尚未完成或不能据此证明
 
-## 最新数字意味着什么
+- SkillsBench 全库没有跑完. 8道 xlsx 计划题里只有 powerlifting-coef-calc 新增了完整三组有效评分; 不能把中止或平台失败算成完成.
+- shock-analysis-demand 的原版组碰到 runner_limit, 没有评分; 同时保留“按失败计”和“整题排除”两种统计, 中止前 tokens 不用于效率比较.
+- shock-analysis-supply 只有 no-skills 有评分; reserves-at-risk-calc、xlsx-recover-data、invoice-fraud-detection、pdf-excel-diff、jpg-ocr-stat 未完成. 各次尝试仍保留.
+- 同模型 I-010 的 pairwise 有79/80有效顺序, ADV_002 的一个顺序因截断缺失; 不能写成80/80完整.
+- Profy Full 的实际上下文注入和服务端模型版本没有记录. 同模型实验只匹配模型标签, 不等于完全控制平台差异.
+- 当前 SkillsBench 是收到的 Evolution workflow / gate 的外部适配, 不是完整原生实现. capability-gap classifier、通用适用性检查、native promotion 尚未接通.
 
-weighted-gdp-calc 三组都27/27. no-skills 用155489 solver tokens, 原版248816. 第10轮291458, 未采用. 第11轮两次109337 / 133351, 比原版少56.06% / 46.41%, 已冻结.
+## 是否还在跑
 
-但第一道未参与进化的 protein-expression-analysis, 三组虽都6/6, 第11轮却用264808 tokens, 原版187869, no-skills183191. 进化版比原版多40.95%, 这道题没有显示质量或效率提升. 不把开发题的收益写成普遍收益, 不用这道题答案回改 skill.
+全部模型运行和 Profy 探测已停止. 后续没有新进化轮次. 本次仅整理 Git 里的文档和索引, 不改结果、论文或评分, 不产生 API 费用.
 
-## 正在继续进化 xlsx
-
-从第12轮继续, 最多到第30轮. 只把 weighted-gdp-calc 开发轨迹交给原 Evolution 组件; 纠正旧 PRoot 环境描述. 用 protein-expression-analysis 做候选选版检查, 不把它的答案、轨迹、评分源码或分数交给 Evolution. 后续这题不再算独立新题证据. 开发和验证都要保持原评分全过, 并两次比原版至少少5% solver tokens, 才采用. [完整计划](../results/xlsx-family/native-owned-evolution-v2/PLAN.md).
-
-现有第11版和先前不理想的结果均保留. 当前先取得同一 native-owned 环境的开发题原版与第11版记录. 论文未改.
-
-## 上轮8题批次已停止
-
-这8题中0题完成三组, 1题部分完成, 7题未开始. shock-analysis-demand 的 no-skills 原 reward0, 使用839001 solver tokens. 原版 skill 组在25次 usage记录超过runner的24轮限制后中止, 已使用1168850 tokens, 没有有效评分. 进化版尚未运行. 不是仍在后台运行, 不把未完成的组算为0分.
-
-原 no-skills 评分回执的计数与 pytest stdout 不一致, 两种计数和原始 reward均保留并标注. [本批完整进度、实际数字与停止证据](../results/xlsx-family/heldout/BATCH_REPORT.md).
-
-本次只复查已有记录并上传证据, 没有付费重跑、修改 skill 或修改论文. 原串行入口仍保留, 未改为自动跳过中止记录.
-
-## 还没完成什么
-
-- SkillsBench 全库87题还没跑完. 一份 xlsx skill 不能用于所有不相关任务.
-- 当前是 Profy 原生 Linux 文件任务 adapter, 不是官方 Ubuntu Docker image. 环境、软件版本、输入和 source hashes 随题留档. [早期云端环境检查](../results/2026-11-11_skillsbench_cloud_serial/environment-checks/README.md)不计入题目成绩.
-- 尚未完整复现 CogniLife 平台. 收到的实现缺少或未接通 capability-gap classifier、通用 semantic applicability check 和 native acceptance/promotion. 本实验只测已明确记录边界的外部适配.
-
-已有原版、采用的进化版、候选历史和每轮来路均保留. 第8轮 OpenRouter SSL 失败未收到候选, 也计入最多30轮. 当前已使用到第11轮. 继续使用已有 API, 不充值或购买服务, 全部串行, 本机不留镜像或大缓存. 论文、Overleaf、OpenReview 未改.
-
-[全部结果](../results/README.md) | [三组 skills](../skills/README.md) | [每轮进化](../skills/evolution-history/README.md)
+最新执行状态见 [coordination/STATUS.md](coordination/STATUS.md); 按实验找记录见 [EXPERIMENTS.md](EXPERIMENTS.md).

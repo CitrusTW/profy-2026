@@ -143,3 +143,5 @@
 - 2026-11-12T11:34:00.819684-08:00 COMPLETE: Match-base-models final6/27pages, uploaded new Overleaf6af60d555de89ef585537738, online numeric verification27/27pages, original/OpenReview untouched.
 
 - 2026-11-12T19:53:33.420305+00:00: Completed exact abstract replacement and layout-only Figure1 resizing; body6/total27, Overleaf copy verified; original and OpenReview untouched; no new paid calls.
+
+- 2026-11-12T20:03:05.684689+00:00: Organized repo navigation and evidence index;2933file inventory,148links checked;raw experiments unchanged,no paid calls.

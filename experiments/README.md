@@ -1,13 +1,18 @@
-# 找运行代码
+# 运行与分析代码入口
 
-| 从哪里开始 | 做什么 | 当前状态 |
+所有模型运行已停止. 这里只索引代码, 不建议为了看结果重新运行脚本. 实验来源和结论先看 [总览](../docs/EXPERIMENTS.md).
+
+| 要查什么 | 代码或说明 | 对应输出 |
 | --- | --- | --- |
-| [85题输入/输出审计](paper_judge_audit/audit_85_input_output_20261112.py) | 只读检查三组保存记录, 输出数量、task_id和未知项; 不调用API | 已运行, [看报告](../results/2026-11-12_85task_input_output_audit/REPORT.md) |
-| [云端原题 runner](skillsbench_cloud_runner_20261111/README.md) | 在 Profy 云端用原 Dockerfile 做题、再用原评分检查 | 新的小范围原型, 正在验证, 还不是已完成的87题入口 |
-| [原方法适配代码](skillsbench_evolution_20261110/) | native_evolution.py 调用收到的原 Evolution 组件; run.py 保留 Profy 请求和轨迹 | threejs、economic-dispatch、mesh-analysis 已有记录 |
-| [原方法核对](native_method_feasibility_20261110/) | 论文方法、收到的代码、API 和缺口对照 | 查方法边界 |
-| [早期三组原型](three_arm_pilot_20261110/) | 早期实验, 包括 PersonaMem | 历史尝试, 不当成当前方法效果证据 |
+| ADV跨模型统计 | [analyze_adv_judge_v2.py](../results/2026-11-12_overnight/scripts/analyze_adv_judge_v2.py) | [adv_i004_analysis_v2](../results/2026-11-12_overnight/adv_i004_analysis_v2/) |
+| ADV同模型生成与评分 | [run_i010.py](../results/2026-11-12_overnight/i010/run_i010.py)、[预注册](../results/2026-11-12_overnight/i010/PREREG_I010.md) | [i010](../results/2026-11-12_overnight/i010/) |
+| ADV同模型分析 | [analyze_i010_v3.py](../results/2026-11-12_overnight/i010/analyze_i010_v3.py) | [I010_RESULTS.json](../results/2026-11-12_overnight/i010/analysis/I010_RESULTS.json) |
+| 冻结新题统计 | [analyze_skills_v7.py](../results/2026-11-12_overnight/scripts/analyze_skills_v7.py) | [skills_final](../results/2026-11-12_overnight/skills_final/) |
+| 中途离线重算 | [recompute_skills_portable.py](../results/2026-11-12_overnight/scripts/recompute_skills_portable.py)、[对应快照说明](../results/2026-11-12_overnight/PORTABLE_ANALYSIS_README.md) | 只对应11:20UTC中途快照, 不是最终结果 |
+| 85题完整性审计 | [audit_85_input_output_20261112.py](paper_judge_audit/audit_85_input_output_20261112.py) | [审计报告](../results/2026-11-12_85task_input_output_audit/REPORT.md) |
+| Profy原生Linux文件任务adapter | [skillsbench_cloud_runner_20261111](skillsbench_cloud_runner_20261111/README.md) | [SkillsBench证据](../results/2026-11-12_overnight/skillsbench/) |
+| 原方法Evolution外部适配 | [native_evolution.py](skillsbench_evolution_20261110/native_evolution.py) | [各轮实际候选](../skills/evolution-history/README.md) |
+| 方法、代码、API缺口 | [METHOD_CODE_API_MAP.md](native_method_feasibility_20261110/METHOD_CODE_API_MAP.md) | 解释哪些未接通, 不冒充完整原生复现 |
+| 早期原型/PersonaMem | [three_arm_pilot_20261110](three_arm_pilot_20261110/README.md) | 历史尝试, 不作为论文方法效果证据 |
 
-日常先看云端 runner 的 README. 原方法组件在 skillsbench_evolution_20261110/native_evolution.py, skills 归档在 export_skill_archive.py. 云端排错记录集中从 [环境检查](../results/2026-11-11_skillsbench_cloud_serial/environment-checks/README.md)查, 不需要逐个运行历史检查脚本.
-
-本机旧的 Docker 批量构建、输入准备和评分入口已停用. 电脑只发请求、保存轻量代码与结果, 不搭全库环境或堆缓存. 全部串行, 不购买新服务. key 从 repo 外的文件读取.
+原始运行会调用API, 分析脚本只读记录. 运行前仍须检查脚本参数和数据版本; 中途说明中的路径与预算不是自动重跑授权. 只读整理不需要key. keys、收到的公司源码、隐藏tests不归档. 本机不新建Docker或下载整套环境.

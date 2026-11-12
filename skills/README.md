@@ -22,6 +22,10 @@
 
 每版EVOLUTION_RECORD.json保存实际模型、调用步骤、parent/candidate/request hash、开发记录数量、模型修改说明和实际得分. 只在能核对parent文件时提供diff, 不补造缺失历史.
 
-## xlsx 原版
+## xlsx 当前冻结版
 
-[SkillsBench 原版 xlsx/SKILL.md](with-skills/xlsx/SKILL.md)和[来源与资源指纹](with-skills/xlsx/SOURCE.json)已归档. 新的 xlsx 进化版尚未生成, 不用原版冒充第三组.
+原版见 [with-skills/xlsx/SKILL.md](with-skills/xlsx/SKILL.md), 来源见 [SOURCE.json](with-skills/xlsx/SOURCE.json).
+
+本次新题使用 [第11轮冻结正文](../results/2026-11-12_overnight/skills/frozen_xlsx_round11_SKILL.md); [第11轮历史正文](evolution-history/xlsx/round-11/SKILL.md)和 [进化过程](with-CogniLife-skills/xlsx/HOW_EVOLVED.md)保留. 先看每批冻结记录, 不根据“当前目录”名称推断该批实际使用版本.
+
+第12、13轮的后续候选在evolution-history/xlsx中, 本次评测没有换用它们. [最终新题结果与边界](../results/2026-11-12_overnight/skills_final/REPORT.md).

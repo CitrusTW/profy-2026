@@ -32,3 +32,11 @@
 - Latest PDF: results/2026-11-12_overnight/paper_rev/final/CogniLife_final_SixLessons.pdf
 - Exact full abstract: paper_validation/ABSTRACT_SixLessons.txt; validation and screenshot in paper_validation.
 - Last coordination instruction read: I-010 (review); user direct I-011 and subsequent abstract instructions applied. No new runs/cost.
+
+## Repo记录整理 2026-11-12T20:03:05.684689+00:00
+
+- 用户要求只在Git repo整理实验记录. 已更新首页、结果入口、当前状态、skills与代码导航, 新增docs/EXPERIMENTS.md、夜间批次README和论文版本入口.
+- 最终结果 / 开发选版 / 审计和失败 / 原始证据分开索引. 原始文件与旧路径不搬动不改写. 旧导航另存archive/navigation-before-2026-11-12/.
+- 清单覆盖整理前results/skills/experiments下2933个文件;148个导航相对链接通过. 不下载环境、不重算实验、不产生API费用、不修改论文或云端文档.
+- 最新论文仍为SixLessons PDF,正文6/总27页. 所有模型运行仍停止.
+- 最新协作指令仍I-010审核,用户后续直接指令已按优先级执行.

@@ -1,31 +1,28 @@
-# 看实验结果
+# 实验结果入口
 
-## 2026-11-12: 85题输入/输出审计, 不是新得分
+[先看实验总览](../docs/EXPERIMENTS.md). 这里按用途找目录, 不把中途快照当最终结果.
 
-[审计报告](2026-11-12_85task_input_output_audit/REPORT.md) | [每类数量和全部 task_id](2026-11-12_85task_input_output_audit/每组每类问题及全部task_id.csv). 只读检查三组255份保存记录. 没有付费重跑或继续judge. 以下旧实验进度保留供查历史, 当前 SkillsBench 进化暂停.
+## 当前论文使用的批次
 
-
-先打开报告, 它解释题目做什么、三组差在哪、实际数字是什么. 再打开同目录 RESULTS.json 查记录. 正确率、tokens 和耗时分别看, 不把 tokens 直接当成费用.
-
-## 已完成的三组对照
-
-| 实验 | 先读报告 | 适用范围 |
+| 内容 | 最新入口 | 注意 |
 | --- | --- | --- |
-| 3d-scan-calc | [三组数字与结论](2026-11-11_skillsbench_cloud_serial/mesh-evolution/frozen-three-arm/REPORT.md) | 第9轮; 同一开发题, 与 no-skills 基本持平 |
-| energy-market-pricing | [三组报告](2026-11-11_skillsbench_full_library/network-family/REPORT.md) | 第6轮冻结后评测; 与开发题共享公开电网数据 |
-| threejs 两题 | [两题三组报告](run-04-up-to30/full-compatible-two/REPORT.md) | 第5轮; 两题参与过调试 |
+| ADV20跨模型 | [I-004最终统计](2026-11-12_overnight/adv_i004_analysis_v2/REPORT.md) | Full与基线生成模型不同 |
+| ADV20同模型标签 | [I-010中文结果](2026-11-12_overnight/i010/analysis/RESULT_REPORT_ZH.md) | 不支持overall优势; 一处pairwise顺序缺失 |
+| SkillsBench held-out | [最终报告](2026-11-12_overnight/skills_final/REPORT.md) | 3道完整可比较题, 每题每组1次; 未完成题也保留 |
+| 论文和数字出处 | [版本说明](2026-11-12_overnight/paper_rev/README.md) | SixLessons为最新PDF |
 
-## 查失败和旧尝试
+## 所有历史批次
 
-| 入口 | 查什么 |
-| --- | --- |
-| [云端实验记录](2026-11-11_skillsbench_cloud_serial/README.md) | 第7轮、8轮故障、第9轮和原评分接通记录 |
-| [第4至5轮进度](run-04-up-to30/PROGRESS.md) | 保留成本没改善的第4轮 |
-| [第1至3轮](run-03-iterative/) | 历史运行, 包含输出表示问题 |
-| [早期 gpt-6.1-sol 运行](run-02-gpt61/) | 历史失败版 |
+| 原目录 | 里面是什么 | 先看哪里 |
+| --- | --- | --- |
+| 2026-11-12_overnight | 夜间补跑、ADV重评、同模型对照、最终统计、论文副本 | [目录说明](2026-11-12_overnight/README.md) |
+| 2026-11-12_85task_input_output_audit | 三组255份记录的完整性审计 | [REPORT.md](2026-11-12_85task_input_output_audit/REPORT.md) |
+| xlsx-family | weighted-gdp开发、10至13轮相关记录、先前protein和8题批次 | [开发结果](xlsx-family/README.md)、[旧8题批次](xlsx-family/heldout/BATCH_REPORT.md) |
+| 2026-11-11_skillsbench_full_library | economic-dispatch与energy-market-pricing, 不是全库成绩 | [network-family报告](2026-11-11_skillsbench_full_library/network-family/REPORT.md) |
+| 2026-11-11_skillsbench_cloud_serial | mesh开发、云端环境和原评分接通 | [README.md](2026-11-11_skillsbench_cloud_serial/README.md) |
+| run-04-up-to30 | threejs后续轮次和两题冻结版 | [PROGRESS.md](run-04-up-to30/PROGRESS.md)、[两题报告](run-04-up-to30/full-compatible-two/REPORT.md) |
+| run-03-iterative | threejs早期迭代 | [原目录](run-03-iterative/) |
+| run-02-gpt61 | 早期gpt-6.1-sol候选尝试 | [原目录](run-02-gpt61/) |
+| cloud-runtime | 云端环境准备与故障记录, 不是答题结果 | [STATUS.md](cloud-runtime/STATUS.md) |
 
-文件名含 full_library 只是当时的工作目录名, 不表示87题跑完. 环境检查、评分程序自检、待运行配置也不算完成了模型实验.
-
-## 正在扩展: Excel 文件任务
-
-[weighted-gdp-calc 开发题](xlsx-family/README.md): no-skills 原评分27/27, 原版 skill 运行中, Evolution 尚未开始. 不计为新的三组完成.
+无评分、触发runner_limit、API拒绝和环境检查都不能写成“完成一道实验题”. 原目录和原分数不改. [文件清单](../docs/records/FILE_INVENTORY.csv)列出所有已归档路径.

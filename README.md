@@ -1,51 +1,29 @@
-# profy-2026
+# CogniLife 实验记录
 
-这里保存三组 SkillsBench 实验的代码、skills 和实际结果. 先看结果, 想了解怎么做的再往下找.
+先看 [实验总览](docs/EXPERIMENTS.md). 这里说明每批做了什么、实际得到什么、哪些结果进入论文、证据在哪里.
 
-## 2026-11-12: 85 题完整性审计已完成
-
-[先看审计报告](results/2026-11-12_85task_input_output_audit/REPORT.md). Raw / Expert Prompt / Full 共255份保存记录按同一标准检查. 原始生成请求和 finish_reason 缺失的地方标为无法核实, 不算通过. 新 judge 和 SkillsBench 进化均暂停, 等待审计确认; 本轮没有修复、重跑或改论文.
-
-## 从哪里开始
-
-| 想知道什么 | 点这里 |
+| 想查什么 | 从这里开始 |
 | --- | --- |
-| 现在做完了什么, 还缺什么 | [当前状态](docs/STATUS.md) |
-| 三组分别用了哪些 skills | [skills 目录说明](skills/README.md) |
-| 每一轮改了什么, 为什么采用或没采用 | [进化记录](skills/evolution-history/README.md) |
-| 实际回答、得分、tokens 和耗时 | [实验结果](results/README.md) |
-| 运行代码在哪里 | [代码目录说明](experiments/README.md) |
-| 以前试过什么 | [历史入口](archive/README.md) |
+| 最新结果和未完成的部分 | [当前状态](docs/STATUS.md) |
+| 每批实验怎么区分 | [实验总览与证据入口](docs/EXPERIMENTS.md) |
+| ADV 20题、SkillsBench 新题的最终记录 | [11月12日批次说明](results/2026-11-12_overnight/README.md) |
+| 最新论文、完整摘要和数字出处 | [论文版本说明](results/2026-11-12_overnight/paper_rev/README.md) |
+| no-skills / 原版 / 进化版实际用了什么 | [三组 skills](skills/README.md) |
+| 每轮怎么进化、有没有采用 | [进化版本记录](skills/evolution-history/README.md) |
+| 开发、失败、审计和早期尝试 | [全部实验目录](results/README.md) |
+| 运行和分析代码 | [代码入口](experiments/README.md) |
+| 按文件名找全部记录 | [文件清单 CSV](docs/records/FILE_INVENTORY.csv) |
 
-## 文件夹怎么分
+**当前结论:** ADV 的跨模型对照有优势, 换成相同模型标签的基线后, overall 优势没有保留. SkillsBench 可比较的3道 held-out 题正确率持平, tokens 有增有减. 这些边界已经写进论文, 不把开发题收益当作新题效果.
 
-```text
-docs/         当前进度和说明
-skills/       三组配置、原版 skills、采用的进化版和每轮记录
-results/      实际结果; 每个实验从 REPORT.md 开始看
-experiments/  运行与分析代码
-archive/      旧尝试的入口和整理前的状态快照
-```
+本仓库的完整记录在 `codex/three-arm-skill-pilot-20261110` 分支; `coordination` 只传递协作指令. 全部模型运行已停止, 本次整理没有调用模型或重跑实验.
 
-每个实验通常先看 REPORT.md, 再查 RESULTS.json 的数字. SKILL.md 是实际给模型读的操作说明; EVOLUTION_RECORD.json 记录它怎么生成; changes_from_parent.diff 显示相对上一版改了哪些文字. 没收到候选的轮次不会伪造 SKILL.md.
+## 目录怎么读
 
-## 已完成的三组对照
+- `results/`: 每次实际运行、原始返回、评分、统计与失败记录.
+- `skills/`: 三组配置、公开原版 SKILL.md、实际候选和进化过程.
+- `experiments/`: 自写运行、适配与分析代码. 收到的公司源码和隐藏评分材料不放进来.
+- `docs/`: 当前状态、实验总览、文件清单和协作状态.
+- `archive/`: 历史入口及整理前的说明快照.
 
-| SkillsBench 题目范围 | no-skills | 原版 skills | 进化版 skills | 能说明什么 |
-| --- | --- | --- | --- | --- |
-| threejs 两题 | 1/2题通过 | 2/2题通过, 237638 tokens | 2/2题通过, 217326 tokens | 相比原版合计少8.55%; 两题参与过调试 |
-| energy-market-pricing | 4/4检查, 204038 tokens | 4/4检查, 181580 tokens | 4/4检查, 98354 tokens | 相比原版少45.83%; 未用于生成 skill, 与开发题共享公开电网数据 |
-| 3d-scan-calc | 2/2检查, 127350 tokens | 2/2检查, 161063 tokens | 两次2/2检查, 125369 / 127654 tokens | 相比原版少22.16% / 20.74%, 与 no-skills 基本持平; 这是开发题 |
-
-这里共4道题完成三组对照. 2/2、4/4检查是单题内部测试数, 不是题目数. 这些结果不能当成87题全库成绩, tokens 也不等于实际费用.
-
-## 执行约定
-
-- 进化走已有 OpenRouter key, 求解走已有 Profy key, 使用 gpt-6.1-sol.
-- 全部串行. 本机不搭全库环境, 不堆 Docker 镜像或大缓存, 不额外购买服务.
-- 每轮保留候选、来源、修改过程和实际结果. 开发题可用于调整, 评测题答案不送进进化.
-- 收到的原方法代码仍有缺失或未接通部分, [当前状态](docs/STATUS.md)明确说明. 不把外部适配说成完整平台复现.
-- 不上传 keys、收到的 Profy 公司源码、隐藏评分材料或无关第三方代码. 原版和进化版 SKILL.md 按要求归档; 其他公开资源只记录固定来源和 hash.
-- 论文与 OpenReview 未改.
-
-旧路径保留, 以前的链接仍可用. archive 是查旧记录的入口, 不是把重复文件再存一份.
+旧结果和路径保留. 报告中的“运行中”可能是当时的快照, 现在是否还在运行以当前状态为准. `full_library` 是旧目录名, 不代表 SkillsBench 全库跑完; tokens 不是美元费用.
