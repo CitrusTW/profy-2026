@@ -252,3 +252,21 @@ Profy 从 02:30 起一直返回 403，现有数据基本定型。为了给审核
 4. 图注写明：n=20 道 ADV 任务；judge 是 anthropic/claude-opus-5.5；Full 是 deepseek-v4-flash，基线是 moonshot-v1-128k；pairwise 每份输出截取前 3000 字符。
 5. 风格和全文其他图保持一致（字体、字号、色盲友好配色），宽度控制在单栏内。用脚本从结果文件直接生成，脚本和数据出处写进改动清单。
 6. 正文仍不超过 6 页。
+
+---
+
+## I-010（2026-11-12 10:20 美国太平洋时间）draft2 审核意见（最终版中修改）
+
+审核者已完整审阅 draft2。下面的修改在 15:30 的最终版中完成，其余部分保持不变。
+
+### 必须修改
+1. **4.1 节对 Full 的描述**：删除或改写 "a context-rich configuration with expert metadata, workflow conventions, and supplied profile/journal context"。ADV 的 Full 输出是通过平台 API 调用已部署专家生成的，平台实际注入了哪些上下文没有记录，profile/journal 也无法证实。改为如实的说法：通过平台 API 调用已部署的专家配置，由平台组装其配置的上下文，实际注入的内容没有记录。Table 1 图注等其他地方如果有同样的说法，一并修改。
+
+### 建议修改
+2. **4.3 节**：补半句，说明 Full 在 overclaiming（15，Expert Prompt 为 2）和 hallucinated_evidence（11，Expert Prompt 为 0）上的错误标签更多，并引用 Table 5。语气客观，可以写成"更具体，但这两类标签也更多"的取舍。数字必须和 Table 5 一致。
+3. **附录 H.2**：补一句说明，Proxy 的 system prompt 中明确要求"信息不完整时先追问"，这可能就是它 missing-input 标签为 0 的原因；删除或改写 "relevant to users who omit constraints..." 以及 "The judge tags associate the recorded score differences with incomplete-request handling and task-specific tailoring" 这两处把旧结果解读为真实能力的说法。
+4. **（可选）附录 G**：把 a_count_limits_as_failure 这类脚本标签和引号格式的计数，改写成普通句子，数字不变。
+
+### 约束
+- 正文仍不超过 6 页；不改动任何数字；其他内容不动。
+- 在改动清单中逐条列出本条的修改。
