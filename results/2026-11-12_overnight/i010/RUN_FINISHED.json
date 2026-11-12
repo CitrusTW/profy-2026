@@ -1,0 +1,12 @@
+{
+  "updated_utc": "2026-11-12T18:34:58.935421+00:00",
+  "phase": "finished",
+  "last_job": null,
+  "calls": 182,
+  "known_actual_usd": "4.0799450879",
+  "unknown_cost_calls": 0,
+  "reserved_unknown_cost_ceiling_usd": "0",
+  "terminal": "all_jobs_processed",
+  "elapsed_seconds": 2313.879937648773,
+  "full_regenerated": false
+}
