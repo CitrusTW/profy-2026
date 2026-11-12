@@ -25,3 +25,4 @@
 - 2026-11-12T02:49:34.540325-08:00 I003-watcher-startup; last_applied=I-003; latest_seen=I-003; new_completed_runs=16; USD=unknown.
 - 2026-11-12T02:50:06.576633-08:00 run-invoice-fraud-detection-r1-no-skills; last_applied=I-003; latest_seen=I-003; new_completed_runs=17; USD=unknown.
 - 2026-11-12T02:55:06.809880-08:00 blocked-ProFy403-no-recharge-openrouter-continues; last_applied=I-003; latest_seen=I-003; new_completed_runs=17; USD=unknown.
+- 2026-11-12T02:58:58.425607-08:00 I003-batch1-complete-8FullJSON-missing-80pairwise-valid; last_applied=I-003; latest_seen=I-003; new_completed_runs=17; USD=unknown.

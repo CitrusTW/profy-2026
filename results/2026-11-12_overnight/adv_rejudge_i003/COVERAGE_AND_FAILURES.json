@@ -1,0 +1,69 @@
+{
+  "n_valid": 132,
+  "missing_jobs": [
+    {
+      "job_id": "ADV_002-rubric-profy_expert_full",
+      "kind": "rubric",
+      "condition": "profy_expert_full",
+      "baseline": null,
+      "order": null
+    },
+    {
+      "job_id": "ADV_003-rubric-profy_expert_full",
+      "kind": "rubric",
+      "condition": "profy_expert_full",
+      "baseline": null,
+      "order": null
+    },
+    {
+      "job_id": "ADV_004-rubric-profy_expert_full",
+      "kind": "rubric",
+      "condition": "profy_expert_full",
+      "baseline": null,
+      "order": null
+    },
+    {
+      "job_id": "ADV_009-rubric-profy_expert_full",
+      "kind": "rubric",
+      "condition": "profy_expert_full",
+      "baseline": null,
+      "order": null
+    },
+    {
+      "job_id": "ADV_010-rubric-profy_expert_full",
+      "kind": "rubric",
+      "condition": "profy_expert_full",
+      "baseline": null,
+      "order": null
+    },
+    {
+      "job_id": "ADV_012-rubric-profy_expert_full",
+      "kind": "rubric",
+      "condition": "profy_expert_full",
+      "baseline": null,
+      "order": null
+    },
+    {
+      "job_id": "ADV_014-rubric-profy_expert_full",
+      "kind": "rubric",
+      "condition": "profy_expert_full",
+      "baseline": null,
+      "order": null
+    },
+    {
+      "job_id": "ADV_015-rubric-profy_expert_full",
+      "kind": "rubric",
+      "condition": "profy_expert_full",
+      "baseline": null,
+      "order": null
+    }
+  ],
+  "valid_rubric_counts": {
+    "generic_llm_raw": 20,
+    "generic_llm_expert_prompt": 20,
+    "profy_expert_full": 12
+  },
+  "valid_pairwise_count": 80,
+  "attempts_failed": 27,
+  "all_calls_retained": 159
+}

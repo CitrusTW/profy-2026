@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T02:55:06.809880-08:00
+- Updated (America/Los_Angeles): 2026-11-12T02:58:58.425607-08:00
 - Last applied instruction: I-003 (in progress)
-- Latest read: I-003; checkpoint: blocked-ProFy403-no-recharge-openrouter-continues
+- Latest read: I-003; checkpoint: I003-batch1-complete-8FullJSON-missing-80pairwise-valid
 - Current work: frozen xlsx round11, fixed eight-task order, all Profy solving/grading serial; I003 Claude ADV rejudge may run alongside Profy.
 - Next: retain completed runs; rerun only the I003-authorized failed setup; at most three passes. No new evolution.
 - Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
