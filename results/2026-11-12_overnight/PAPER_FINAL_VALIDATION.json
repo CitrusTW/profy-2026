@@ -1,0 +1,14 @@
+{
+  "compiled": true,
+  "body_pages": 6,
+  "total_pdf_pages": 25,
+  "source_project": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/cognilife_rev_20261112_final_verified",
+  "pdf_path": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/paper_rev_delivery/final/CogniLife_final.pdf",
+  "pdf_sha256": "473c8a1ca65aa98fa4a8f12e9b06b34d6b4e96ce11c0017827b2b14da7f66a33",
+  "main_tex_sha256": "c5ec3226be1b7ea59f82380a0e216e6da1e7419cb07be42d8e9466809c1e6954",
+  "git_pdf_path": "results/2026-11-12_overnight/paper_rev/final/CogniLife_final.pdf",
+  "all_table_numbers_unchanged": true,
+  "only_listed_text_changes": true,
+  "same_model_experiment_not_integrated": true,
+  "original_project_unchanged": true
+}
