@@ -20,7 +20,7 @@ def development_efficiency_gate(before, after):
             'rule_origin': 'New external experiment safeguard motivated by documented objective; not a received original implementation.'}
 
 
-def check_candidate(run_dir, target):
+def check_candidate(run_dir, target, dev_task='threejs-to-obj'):
     run_dir, target = Path(run_dir), Path(target)
     evo = run_dir/'evolution'
     checks = {}
@@ -44,6 +44,7 @@ def check_candidate(run_dir, target):
     checks['recorded_request_model'] = bool(request_rows) and all(r.get('model') == EVOLUTION_WIRE_MODEL for r in request_rows)
     checks['first_request_matches_provenance'] = bool(request_rows) and provenance.get('request_sha256') == digest(json.dumps(request_rows[0], ensure_ascii=False, sort_keys=True).encode())
     checks['candidate_matches_pending'] = bool(raw) and raw == pending.get('improved_content', '').encode()
+    checks['candidate_changed_from_parent'] = bool(raw) and digest(raw) != digest(target.read_bytes())
     checks['preselected_target_only'] = pending.get('skill_name') == target.parent.name
     checks['candidate_body_size'] = 0 < len(raw.decode()) <= 60000
     # Structure only. This cannot tell whether natural-language advice generalizes.
@@ -56,7 +57,7 @@ def check_candidate(run_dir, target):
         checks['candidate_frontmatter'] = False
     for label, row, expected in [('dev_original', before, digest(target.read_bytes())), ('dev_candidate', after, digest(raw))]:
         score = row.get('score', {})
-        checks[label+' execution'] = row.get('task') == 'threejs-to-obj' and row.get('completed') is True and row.get('error') is None and row.get('output_received') is True
+        checks[label+' execution'] = row.get('task') == dev_task and row.get('completed') is True and row.get('error') is None and row.get('output_received') is True
         checks[label+' skill read'] = row.get('target_skill_read_verified') is True and row.get('skill_sha256') == expected and row.get('external_skill_tools_observed') == []
         checks[label+' scoring complete'] = score.get('tests', 0) > 0 and score.get('skipped') == 0 and score.get('tests') == score.get('passed', 0)+score.get('failed', 0)
         checks[label+' strict consistent'] = score.get('strict') == int(score.get('tests', 0) > 0 and score.get('failed') == 0 and score.get('skipped') == 0 and score.get('original_returncode') == 0)

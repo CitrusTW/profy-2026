@@ -125,6 +125,13 @@ class AdapterChecks(unittest.TestCase):
             write(root/'dev_candidate/result.json', {**base, 'skill_sha256': sha(body.encode())})
             result = check_candidate(root, TARGET)
             self.assertTrue(result['structural_and_dev_pass'])
+            self.assertFalse(check_candidate(root,TARGET,'weighted-gdp-calc')['checks']['dev_original execution'])
+            new_base={**base,'task':'weighted-gdp-calc'}
+            write(root/'dev_original/result.json',{**new_base,'skill_sha256':sha(TARGET.read_bytes())})
+            write(root/'dev_candidate/result.json',{**new_base,'skill_sha256':sha(body.encode())})
+            self.assertTrue(check_candidate(root,TARGET,'weighted-gdp-calc')['structural_and_dev_pass'])
+            write(root/'dev_original/result.json',{**base,'skill_sha256':sha(TARGET.read_bytes())})
+            write(root/'dev_candidate/result.json',{**base,'skill_sha256':sha(body.encode())})
             self.assertFalse(result['full_paper_method_verified'])
             write(root/'evolution/request_1.json', {**request, 'model': 'openai/gpt-4.1'})
             self.assertFalse(check_candidate(root, TARGET)['checks']['recorded_request_model'])

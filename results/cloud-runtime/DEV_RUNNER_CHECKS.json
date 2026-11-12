@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-11",
+  "model_calls": 0,
+  "checks_passed": 19,
+  "original_adapter_checks": 11,
+  "cloud_and_evolution_checks": 8,
+  "python": "3.12.14",
+  "PyYAML": "6.0.3",
+  "Pydantic": "2.12.3",
+  "new_evolution_round_started": false,
+  "missing_Pydantic_in_default_interpreter_resolved_in_existing_small_review_env": true,
+  "installation_cache_retained": false
+}
