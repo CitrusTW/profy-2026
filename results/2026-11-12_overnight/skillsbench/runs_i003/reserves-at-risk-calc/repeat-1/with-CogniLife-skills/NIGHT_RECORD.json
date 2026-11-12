@@ -1,0 +1,30 @@
+{
+  "task": "reserves-at-risk-calc",
+  "repeat": 1,
+  "condition": "with-CogniLife-skills",
+  "historical_reused": false,
+  "score": {},
+  "runner_limit": false,
+  "infrastructure_failure": true,
+  "condition_valid": false,
+  "tokens": {
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "total_tokens": 0,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 0,
+    "llm_turns": 0,
+    "tool_calls": 0
+  },
+  "solver_elapsed_sec": 1.835,
+  "end_to_end_elapsed_sec": 37.89432978630066,
+  "cost_usd": "unknown",
+  "skill_sha256": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+  "exception": "RuntimeError: Solver stream incomplete; do not score",
+  "folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/launch-04-i003/runs/reserves-at-risk-calc/repeat-1/with-CogniLife-skills",
+  "tokens_comparable": false,
+  "status": "infrastructure_failure",
+  "adapter_instruction": "I-003",
+  "completed_epoch": 1794480459.1340039,
+  "supersedes_setup_attempt": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_任务结果/2026-11-12_night_validation_092503/launch-03/runs/reserves-at-risk-calc/repeat-1/with-CogniLife-skills"
+}

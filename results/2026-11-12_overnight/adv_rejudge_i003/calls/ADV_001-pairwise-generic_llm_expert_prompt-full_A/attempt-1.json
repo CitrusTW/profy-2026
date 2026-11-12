@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_001",
+  "baseline": "generic_llm_expert_prompt",
+  "order": "full_A",
+  "system_a": "profy_expert_full",
+  "system_b": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9",
+    "generic_llm_expert_prompt": "4fdc294fd8251592fb7605ad5a573e1abba2a6e7166b9a311c2caffba76258aa"
+  },
+  "visible_output_sha256": {
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9",
+    "generic_llm_expert_prompt": "4fdc294fd8251592fb7605ad5a573e1abba2a6e7166b9a311c2caffba76258aa"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.096016",
+  "job_id": "ADV_001-pairwise-generic_llm_expert_prompt-full_A",
+  "prompt_sha256": "07e6d316fb3e0f5473d7e165cefa8ea3495122bb09193c1482540d11bbf96684",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479686-EEW51TrNaYu1rfbTBUP6",
+  "started_utc": "2026-11-12T10:34:46.495061+00:00",
+  "completed_utc": "2026-11-12T10:34:55.636805+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 陕西理科，509分，位次4万，想考公，希望留在西安，家庭条件一般，帮妹妹选学校和专业\n- Task Family: ADV\n- Variant: complete\n\n## Output A:\n好的，我来帮你妹妹分析一下。关于陕西2024年高考情况和考公专业选择，我整理了以下建议。\n\n---\n\n## 2024年陕西高考参考数据\n\n- 理科一本线：475分\n- 妹妹分数：509分（超一本线34分）\n- 位次：约4万名\n\n---\n\n## 推荐策略：稳体制 × 保就业 × 低学费\n\n考虑到家庭条件一般 + 想考公 + 想留西安，核心原则是：**选个好考公的专业，进可考编上岸，退可去企业就业，学费还不贵。**\n\n### 一、专业推荐（按推荐度排序）\n\n| 推荐 | 专业 | 考公优势 | 企业就业 | 学习难度 |\n|:---:|:---|:---|:---|:---:|\n| ★★★★★ | **会计学/财务管理** | 财政局、税务局、审计局、各单位财务，岗位超多 | 企业刚需，就业面极广 | 中等 |\n| ★★★★☆ | **计算机科学与技术** | 政务数字化、大数据局、网信办 | 工资最高，就业火 | 偏难 |\n| ★★★★☆ | **经济学/经济统计学** | 发改委、统计局、税务、人行 | 银行、企业都可去 | 中等 |\n| ★★★☆☆ | **法学** | 法院、检察院、司法局、公安，是考公大户 | 考不上公则就业面窄（需过法考） | 偏难 |\n| ★★★☆☆ | **汉语言文学** | 综合岗、文秘、宣传、党建 | 就业一般 | 较易 |\n\n> **特别推荐会计学**——这是最契合家庭条件一般+考公需求的选择：公办一科学费才5000-6000元/年；考公招录人数排前三，岗位分布在财政、税务、审计、甚至公检法的财务岗；万一考不上公务员，企业对小会计的需求永远不会少，就业双保险。\n\n### 二、西安可选学校（按把握度排列）\n\n位次4万在西安能上的公办一本主要有这些：\n\n| 学校 | 预估位次区间 | 把握度 | 推荐报考专业 |\n|:---|:---:|:---:|:---|\n| **西安工程大学** | 4万-4.8万 | ★★★★★ **稳妥** | 会计学、财务管理、经济学、法学 |\n| **西安工业大学** | 3.7万-4.4万 | ★★★★☆ **可报** | 会计学、经济学、计算机 |\n| **西安财经大学** | 3.8万-4.6万 | ★★★★☆ **可报** | **会计学（这个学校财经类专业最有特色）** |\n| **西安石油大学** | 3.6万-4.3万 | ★★★☆☆ **可冲** | 会计学、计算机、经济类 |\n| **西安科技大学** | 3.5万-4万 | ★★★☆☆ **可冲** | 计算机、会计学 |\n| **陕西科技大学** | 3.4万-4万 | ★★☆☆☆ **冲一冲** | 会计学 |\n| **西安文理学院** | 4.2万-5万 | ★★★★☆ **保底** | 汉语言文学、会计学 |\n\n### 三、我的方案建议\n\n**最佳方案：西安财经大学的会计学**\n\n理由：西安财经大学的会计学是它的王牌专业，在陕西体制内认可度很高。位次4万左右刚好在录取范围内。会计学考公岗位多、企业就业也好，是最稳妥的选择。\n\n**冲刺方案：西安工业大学的计算机/会计学**\n\n如果对计算机有兴趣，西安工业大学的计算机性价比很高，以后考公（政务数字化岗）和去企业都能走。\n\n**稳妥方案：西安工程大学的会计学**\n\n工程大学录取位次更宽裕，会计学专业同样好考公，4万名进去比较稳。\n\n### 四、家庭条件相关提醒\n\n- 这些学校都是**公办一本**，学费5000-6000元/年，住宿费800-1200元/年\n- 录取时**避开中外合作办学专业**（学费2-6万/年）\n- 可以查看学校是否有**贫困生助学金**和**勤工助学**机会\n\n---\n\n**总结：** 如果是我妹妹，我会优先推荐 **西安财经大学的会计学或财务管理**，进可考公进体制（财政/税务/审计），退可去企业做财务，毕业找工作不愁。如果分数不够财大，**西安工程大学的会计学**做稳妥保底。\n\n需要我再详细说说某个学校或专业的报考细节吗？\n\n## Output B:\n根据您提供的信息，您的妹妹在陕西省高考理科取得了509分，位次大约在4万，想要留在西安读大学，并有考上公务员的打算。我会根据这些条件，给出一些建议来帮助她选择合适的学校和专业。\n\n### 1. 学校选择\n\n考虑到分数和位次，以及留在西安的意愿，以下是一些建议的学校：\n\n**西安理工大学**：以工科为主，同时也提供管理类和文科专业，适合理科生。\n\n**西安科技大学**：提供多个学科的专业选择，特别是在工程和科技领域。\n\n**西安建筑科技大学**：在建筑和土木工程领域有较强的实力。\n\n**西安工程大学**：以工程为主，提供多样化的专业选择。\n\n**西安邮电大学**：在通信和信息技术领域有特色。\n\n**西北政法大学**：如果您的妹妹对法律专业感兴趣，这是一所不错的选择，法律专业也是公务员考试的热门专业之一。\n\n**西安财经学院**：对于经济和管理类专业感兴趣的学生，这所学校提供了良好的教育。\n\n### 2. 专业选择\n\n考虑到公务员考试，以下是一些建议的专业：\n\n**法学**：公务员岗位中法律相关职位较多，法学专业适合公务员考试。\n\n**行政管理**：公务员系统中行政管理职位较多，行政管理专业对口。\n\n**汉语言文学**：适合从事文字工作和政策研究的岗位。\n\n**经济学、财政学**：经济学和财政学专业适合财政、税务等经济管理部门的公务员岗位。\n\n**计算机科学与技术**：随着信息化的发展，计算机专业在公务员系统中需求也在增加。\n\n**工程管理**：适合从事工程项目管理的岗位。\n\n**会计学**：适合财政、审计等经济管理部门的公务员岗位。\n\n### 3. 综合考虑\n\n- **就业前景**：选择那些就业前景较好的专业，可以为公务员考试提供更多机会。\n- **个人兴趣**：考虑妹妹的个人兴趣和特长，选择她喜欢并擅长的专业。\n- **家庭条件**：如果家庭条件一般，可以考虑那些学费相对较低的专业和学校。\n- **学校实力**：选择那些在特定领域有较强实力的学校，可以为公务员考试和未来就业提供更好的平台。\n\n### 4. 注意事项\n\n- **分数匹配**：根据509分的实际分数，参考往年各大学的录取分数线，确保选择的学校和专业是实际可行的。\n- **政策变化**：公务员考试的政策和要求可能会变化，需要持续关注最新的公务员招聘信息。\n- **备选方案**：除了公务员考试，也可以考虑其他职业路径，如企业就业等，为未来职业规划提供更多选择。\n\n最后，建议与您的妹妹进行深入沟通，了解她的兴趣和职业规划，结合以上建议，做出最合适的选择。同时，也可以咨询学校的招生办公室或者专业的职业规划顾问，获取更多个性化的建议。\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "7e8f1eb1a01ce51441e6266bf620d6999595866a547ddb23273de512c61a13a4",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794479686-EEW51TrNaYu1rfbTBUP6\",\"object\":\"chat.completion\",\"created\":1794479686,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"preference\\\": \\\"A\\\",\\n  \\\"rationale\\\": \\\"Output A is much more specific and actionable. It gives the cutoff context (2024 Shaanxi science first-tier line of 475), ranks majors by civil-service suitability, and lists Xi'an schools with estimated rank ranges and reach/match/safety tiers. It also names a clear first choice (accounting at Xi'an University of Finance and Economics, 西安财经大学) and addresses the family's finances (fees, avoiding Sino-foreign programs, financial aid). It has some likely data inaccuracies: it calls 西安文理学院, a second-tier school, a public first-tier university, and its rank ranges are estimates. Output B is generic and gives no rank matching. Several of its schools, such as 西安建筑科技大学 (Xi'an University of Architecture and Technology), 西安理工大学 (Xi'an University of Technology) and 西北政法大学 (Northwest University of Political Science and Law), may be out of reach for a rank of about 40,000. It also uses the outdated name 西安财经学院 and barely engages with the limited family budget. Overall, A is far more useful.\\\"\\n}\",\"refusal\":null,\"reasoning\":\"I'm checking the Shaanxi science cutoff: the 2024 第一批 理工 line at 475 holds up, and a 509 score ranking around 40,000 looks plausible given the pool of roughly 150,000 science candidates. Next I'm drafting a response that is specific and uses tables and numbers, while flagging that some school-level figures, such as the 陕西科技大学 3.4–4万 range, may not be accurate.\\n\\nI'm comparing the two drafts: the first one is more specific and actionable, though a few school ranks and names in it look shaky, like the 西安文理学院 tier label and the 西安财经 recommendation. The second draft is more generic and includes reaches like 西建大 and 西安理工 that probably sit well beyond a 509 score, so the first one is the better base.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the Shaanxi science cutoff: the 2024 第一批 理工 line at 475 holds up, and a 509 score ranking around 40,000 looks plausible given the pool of roughly 150,000 science candidates. Next I'm drafting a response that is specific and uses tables and numbers, while flagging that some school-level figures, such as the 陕西科技大学 3.4–4万 range, may not be accurate.\\n\\nI'm comparing the two drafts: the first one is more specific and actionable, though a few school ranks and names in it look shaky, like the 西安文理学院 tier label and the 西安财经 recommendation. The second draft is more generic and includes reaches like 西建大 and 西安理工 that probably sit well beyond a 509 score, so the first one is the better base.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQS8gsKEAgTGAI4AUIIdGhpbmtpbmcSDPSEmrkh5CPGidc4GxoMd38Yvgcs/3J/36VYIjCecTpV1/I71EvbLs9K6WiLRfLAeGTBQIZpZglgrQfj3PbkJe8NeRNmslFQ94LAkyUqjwsmxA4WkOJ9GIHhC7EPMxXELfgeSUeX8JMJol6EEHyb+BTigeh+A959LCYRcuQxPfBSmpzhz3fFaRXFfs+y1i01MXbHgZ+WwjHCot7wKhW+OW6vSojtiQZLv5yo2gl07SHBEiUw6BXDc/YvEojEnsokOdq2DQg/G1nrfxF+/xgnotoI3+6yc/hWY3153h2UH3ZYP2KQ0TY93nXNJLjDgpGbxZYDqipfoAuEot0N9eoPQjQKe2M3AvjFyEpz+W9JtqR6FbZefHEsVrI8DDhw2Tpr3PQ1s6ZlODYrYDGL9Lp7mMr/LvojjFk/X9f99Jx1/uurmbRJcWiRxGGmHraM3xLL6MoJATJfWWbZGnET0lupqa97fGukQdkbykBDFzG9CWHHv4YXuh4POLHueawttwEILUVg8dOAi0bmgsUkSYY4YiZXqMIybC8j3GL0udgTtUivyMFqF2yLxE+8IvieOAEZ3BrDMdSLuP+xCCP7WwtmMYrLbbQhDVhwYjDhEqSeNEOb+g9P3J3rmk62X1gGlk/r2di8RgaL7OhPsj2bxL2jtkXjJieZWrzhHqCwMshb9Q1rzi2x5JpXiqRwogpX83k5fbSIsN+oElRj1rUvyQ2YZC16pO9l0mnf5W+FzSLtS/XiySAoJm1OOxR911HgHFa4ja/3u9xGEgtR9XqZrmYoW0KiHlulrw8gWnUqrtPzC4PpWK5woKpgcmekW5xT2mO84CQoFWL6BUoUPyzRA/Ctd8YjGIfIgvKSxhEZTbnVlFaLbiKEJY7Fwlf2k6+JVNQnFdtu9APds36lLew4nnWxkem2b2GNdbOSCKqpBW+wa70HYrY2rN/sJ1M6Z/rhswA186A0hEJVKKLmgfDYhcAscuSDCfBZHQoAmv3+bLgi61A6I+/ikwJKlVbRu5ubMqT+cSNEJ7w3+B9rZFEmxIJ2VBb3rWwcrq8l6Uxa8z8HTZc+RIeNHEhRJhLwoYF5UCqZzN6Bf1RrGX4AhbcvSP+SPp9OiP+9oH64VfRyXrqVhGq2lUnoay0CydPoM5LJoVOYGimDqDmOH/iqcExxEMzr/4l0mxf2pTMrJOZAZxr8tMZqvKWgtCfAy4SFqCfyyI8l7zgWNb7DkLbHbzkI3WxxPUlqTN2i06G9SMWwwtm1Vlc310/FSHiH2mtjwMlOBJLfCXOsTL0wDrAnqvCRVUgbcK73+VTE22F1oiQoZFaygzggpGDXIQ07KAQn9ta1F1PpfL6Ss/9yp4oP1zIt/YeIm0Oo5kwuI91q3q7i1SJhLJNEx6Jflr7NygbTORsWlF48iCk6C1n7xZBL6BpbuQxGAB1R5UvaW71nJI7wgsKa+vz+HtpLLRfhgLwDfgbVMbOtTJcf7TGq9UHzNVFlwsktnSMNB0o/g5jXp12tjK3fsY+dPP15wJoY1LY75vLxz4l2SOvHFyLOTe6JJNYjX4howmIV8neYz0XnMaMiy+0kFGWwZk9mHYweZ6AAvABeHPAsv/6M53mmZ8EhowKhHX3bqMtVkTzXUE89neEz/QVoi8PYkzT8aUGoESFdbR0YdSG+lC27rNj84tWRl8LbrYN+2YvuMF+P9HVkf59+w+8kQpnyj3n0HnN7jxZ/23v7Qq0zWTfEb+1v8/gKWiU02nMpjWwZzBsR+UKItgnhQcOrlZbDNPA3FS/vdO9+uSJ3h/QiyY5p85uN1M9XNwGIgKpAmMj4YwoqL9UW7vd/3J3vZFgAF/YWQJJXMGWiMO+Q+bLsvpdtEje/Zi8BbYg9/WxF3dFRBqwKWV7oGDQ551uW3w8KbXntpSb18LbgvbXWuiukcbHMBJEi9SrjzT/n+kF1APGGEYLY4j65kFEwtVYO7XX4VwX/zBfy4U71aMRrrH7k5TysmF4zcWaJi2kArc1vGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2901,\"completion_tokens\":773,\"total_tokens\":3674,\"cost\":0.027064,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.027064,\"upstream_inference_prompt_cost\":0.011604,\"upstream_inference_completions_cost\":0.01546},\"completion_tokens_details\":{\"reasoning_tokens\":390,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "A",
+    "rationale": "Output A is much more specific and actionable. It gives the cutoff context (2024 Shaanxi science first-tier line of 475), ranks majors by civil-service suitability, and lists Xi'an schools with estimated rank ranges and reach/match/safety tiers. It also names a clear first choice (accounting at Xi'an University of Finance and Economics, 西安财经大学) and addresses the family's finances (fees, avoiding Sino-foreign programs, financial aid). It has some likely data inaccuracies: it calls 西安文理学院, a second-tier school, a public first-tier university, and its rank ranges are estimates. Output B is generic and gives no rank matching. Several of its schools, such as 西安建筑科技大学 (Xi'an University of Architecture and Technology), 西安理工大学 (Xi'an University of Technology) and 西北政法大学 (Northwest University of Political Science and Law), may be out of reach for a rank of about 40,000. It also uses the outdated name 西安财经学院 and barely engages with the limited family budget. Overall, A is far more useful."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 2901,
+    "completion_tokens": 773,
+    "total_tokens": 3674,
+    "cost": 0.027064,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.027064,
+      "upstream_inference_prompt_cost": 0.011604,
+      "upstream_inference_completions_cost": 0.01546
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 390,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.027064,
+  "elapsed_sec": 9.141794204711914,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

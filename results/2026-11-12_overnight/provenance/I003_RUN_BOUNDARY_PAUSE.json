@@ -1,0 +1,9 @@
+{
+  "pid": 61534,
+  "epoch": 1794479997.19009,
+  "completed_record_files": [
+    "/Users/mac/Desktop/naacl 2026.10 - CogniLife/01_\u4efb\u52a1\u7ed3\u679c/2026-11-12_night_validation_092503/launch-03/runs/powerlifting-coef-calc/repeat-1/with-CogniLife-skills/NIGHT_RECORD.json"
+  ],
+  "active_paid_request_folders": [],
+  "reason": "I003 adapter repair, paused only after completed run and before next model request"
+}

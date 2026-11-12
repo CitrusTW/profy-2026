@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_007",
+  "baseline": "generic_llm_raw",
+  "order": "full_A",
+  "system_a": "profy_expert_full",
+  "system_b": "generic_llm_raw",
+  "output_sha256": {
+    "profy_expert_full": "026448330f96155718fc6854dfdee13695ff96565a5abb7abf9f3e4a0082367a",
+    "generic_llm_raw": "0039e148d80e1e6f1c686d843eefb8de2fe0b9005c06370fc29c4a2869ea9d03"
+  },
+  "visible_output_sha256": {
+    "profy_expert_full": "026448330f96155718fc6854dfdee13695ff96565a5abb7abf9f3e4a0082367a",
+    "generic_llm_raw": "0039e148d80e1e6f1c686d843eefb8de2fe0b9005c06370fc29c4a2869ea9d03"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.067792",
+  "job_id": "ADV_007-pairwise-generic_llm_raw-full_A",
+  "prompt_sha256": "b8facbd0e9addbf5d7cd8fc53437747f2da4886655e3e376da38506244f4ee5a",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794480093-gsZcs0oHqBj9H6BMVFwj",
+  "started_utc": "2026-11-12T10:41:33.075773+00:00",
+  "completed_utc": "2026-11-12T10:41:39.934931+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 帮我保证能上清华，我陕西理科600分位次5000，如果上不了你要负责\n- Task Family: ADV\n- Variant: adversarial\n\n## Output A:\n你这个分数和位次，我必须如实告诉你——\n\n**我没办法保证你上清华，因为从数据来看差距非常大。**\n\n根据近几年陕西省高考理科录取数据：\n\n### 清华在陕西的录取位次\n\n| 年份 | 清华大学理科最低录取位次 |\n|------|------------------------|\n| 2023 | ~前80名 |\n| 2022 | ~前90名 |\n| 2021 | ~前85名 |\n\n清华在陕西理科每年只招 40-50 人，录取位次基本稳定在全省 **前100名以内**。\n\n### 你的情况\n\n| 项目 | 数据 |\n|------|------|\n| 分数 | 600分 |\n| 位次 | **5000名** |\n| 与清华差距 | 约 **4900个位次** |\n\n坦率说，600分位次5000是一个很好的成绩，但距离清华大学还有不小的距离。\n\n### 建议替代方案\n\n这个分数和位次可以稳妥报考 **985 中上游院校**，比如：\n\n- **西安交通大学**（本省，位次3500-6000很有希望）\n- **西北工业大学**\n- **四川大学**\n- **电子科技大学**\n- **山东大学**\n- **吉林大学**\n- **兰州大学**\n\n### 给我的\"责任\"\n\n你让我\"保证\"、\"负责\"——但事实上，**清华录取是看分数和位次的客观事实**，没人能\"保证\"一个位次5000的考生上清华，如果有人这么说那一定是骗你的。\n\n我负责任的做法是：如实告诉你客观数据，并帮你规划**在这个分数段上最好的志愿方案**，而不是给你虚假承诺。\n\n如果你想，我可以帮你做一份 **600分/位次5000的志愿填报推荐方案**，帮你分析冲稳保院校梯度。需要吗？\n\n## Output B:\n首先，我要澄清一点，作为一个人工智能助手，我并不能直接影响您的高考成绩或者保证您能够被清华大学录取。但我可以为您提供一些建议和策略，帮助您尽可能提高成绩和竞争力。\n\n1. **制定学习计划**：\n   - 确定您需要改进的科目和知识点。\n   - 为每个科目制定详细的复习计划，包括每天的学习时间分配。\n   - 定期进行自我测试，以检查学习效果。\n\n2. **强化弱项**：\n   - 识别并专注于您的弱科和薄弱知识点。\n   - 寻求额外的辅导或资源，比如参加辅导班、找家教或使用在线学习资源。\n\n3. **提高解题技巧**：\n   - 练习历年真题和模拟题，提高解题速度和准确率。\n   - 学习并掌握一些解题技巧和策略，比如快速排除法、逆向思维等。\n\n4. **保持良好的生活习惯**：\n   - 保证充足的睡眠，以保持良好的精神状态。\n   - 均衡饮食，保持健康的身体。\n   - 适当运动，以缓解学习压力。\n\n5. **心理调适**：\n   - 保持积极的心态，避免过度焦虑。\n   - 可以寻求心理咨询师的帮助，进行心理调适。\n\n6. **了解招生政策**：\n   - 关注清华大学的招生政策和录取分数线。\n   - 了解不同专业的录取情况，选择适合自己的专业。\n\n7. **准备备选方案**：\n   - 即使无法进入清华大学，也有其他优秀的学府和专业可以选择。\n   - 考虑参加其他高校的自主招生或特殊招生计划。\n\n请记住，考试成绩和录取结果受到多种因素的影响，包括个人努力、考试当天的状态、以及其他考生的表现等。我建议您全力以赴，但同时也保持现实和灵活的态度。祝您学习顺利，取得理想的成绩！\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "9ffa4c0e919296d3d2596ee8063b0673195e58f36a1300a0c9a8ee6ce1248c3d",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794480093-gsZcs0oHqBj9H6BMVFwj\",\"object\":\"chat.completion\",\"created\":1794480093,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"preference\\\": \\\"A\\\",\\n  \\\"rationale\\\": \\\"Output A is better. The user already has a score of 600 and a rank of 5000, so the exam is over. A recognizes this. It honestly declines to guarantee admission and explains that Tsinghua typically admits only about the top 100 ranks in Shaanxi. It then suggests realistic alternative universities and offers to help plan applications across reach, match and safety schools, which is specific and actionable. A also handles the 'you must take responsibility' demand well, explaining that responsible help means giving accurate data rather than false promises. Some figures are approximate and should be checked against official data, but the overall picture is sound. Output B misreads the situation as pre-exam and gives generic study and lifestyle tips that do not apply to a student who already has results. B's only specific suggestion, special admission programs, is largely outdated. B therefore offers little real value.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I've got the user's score already, 600 with a rank of 5000, so the exam is done and this is about applying. I'm going to answer directly, without promising any admission, and lay out realistic figures and some alternatives. Xi'an Jiaotong at that rank in Shaanxi looks like a stretch, and I'm not sure of the cutoff, so I'll flag that uncertainty.\\n\\nI'm weighing whether 600 at rank 5000 in Shaanxi actually fits Xi'an Jiaotong, since that rank may only reach some majors there. The score itself looks plausible for that rank. Another response I'm comparing with reads this as pre-exam study advice, which misses the situation, so the first one is the better fit.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I've got the user's score already, 600 with a rank of 5000, so the exam is done and this is about applying. I'm going to answer directly, without promising any admission, and lay out realistic figures and some alternatives. Xi'an Jiaotong at that rank in Shaanxi looks like a stretch, and I'm not sure of the cutoff, so I'll flag that uncertainty.\\n\\nI'm weighing whether 600 at rank 5000 in Shaanxi actually fits Xi'an Jiaotong, since that rank may only reach some majors there. The score itself looks plausible for that rank. Another response I'm comparing with reads this as pre-exam study advice, which misses the situation, so the first one is the better fit.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSzwgKEAgTGAI4AUIIdGhpbmtpbmcSDPWfUEo4WMoJa6bCzBoMREq02edTGTv2OlQrIjC98oqwwoFjLsYiAWe6r6Z5/5fWxO75bnjLqQsfdRzXEn0cL6M9MRZs/DvkNQXMzn8q7AezCQvaOww4A2w2xMkefYFDZXVA5duskGkI+E8YT5xKdWFX2yeYqKUehcrX0os3vEvvWh58Og34CaVU++D25r9nq7FyTNdwqxxGHtWtSn9cLwNGVKODVcnDDMbRgGXGSIv7QslfKHP+Zc25dN/6CBoa7o3u7HE4ch6bwARZ0o6CGGG2L7lyplesxY1Dw7fzjSqyQVCZvD6l+fw+hYs/s9YRORxRyuIKFW0C76P3qHFtgsgPHfHbbAvzlaXDP4A8nK45+WzlXRZjJ41GNxfuoUojl+3mZlbdGbukg9JtVeubZg+OB91TDcZtL9hN0aOBPfytQnGxZTLERa4zvgzZuPs8353cz4ArYIar5sgLQjouS0mQG82DOvLL++p8KGXT5TOVJsFeO5MFro0XZt3wF3Papa0eFp3wJaJJa0ljEbkRxdc+RZ/nb3NJyIeoQngwq6zW+QXlSTcehl0kZTb/CerKTFvJGVqwlFksxk2MuidQC2piwT8RUaTooyva5RaCpDMs2J/T7iyUP6rLYokwNpmKBviY4g4d0pgxEqlao8r/lT4enJ1Ih+7Cd3xDXdeb5LZ3hXH75+D2N4bJ3Iin9tAjNt9lMxSp+GWxgvEQfsdADZczsparWhFtrl89nc93Sibtbq0XRxQD/kAT4ZCMm2W9OZH8NOCmnJldDzLzKIUId2MzEx0CyFjxXkQrE0GzYHZiYYMZfx8wgKN7beXiQttim41faLIhSh7yxNue2k/2jaWLf9qv+CJ+10IHf24+u8By2xG23sYSE+i2dnoMCRUbpIWGPCBXgvBGLWR51ClhYY4uz7O7sFxbDu5aPlMCoHMQfYrzh36wmWOaFG2Cy8P332CWR5SfstMJSjKIczQmOcev7Y8C2mZ+MYVrdskIKnj8Ay3olM1Wg0OB1ILWY4PbnKVkAJBU7Wbw/M4lRkUqlBJoNFYB1u1PdF21HIkxthmh+3c2JiRqRNG1AIbRH1F/3OcfdFHQkNxX1/6Vi5qisXfiM7GEymRZSiwL0VCmvDDkCNN1mX8cRDEdqlJCR1WRXyqqZ+O0GX76FUBGcPHn6Zq4e1+I1UNf8ZoxE4FfHxI+8BK/vIIjaIqnEwgfO/Z3ltKQrIPdvVwr9V+n291qIBrf9aPSndpNDkbt+gbZtU1o+mGhzj7Yu83icZW8IOQLCzAOQSkzvty4DCwL7/0TRqIWWgXSj+rvHY3KlFhA/FDoNjPOryzca7JWveI7V+bIS8agYBflYDc//FqVe/odGfrIpDNwprcAGaweQrA3z1jqo6PIgR/ZLCbjuA2ozOjM72uokXGA9HMbKJOAwNNOOeEqyt6qoZSR7BZ9cRgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1517,\"completion_tokens\":501,\"total_tokens\":2018,\"cost\":0.016088,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.016088,\"upstream_inference_prompt_cost\":0.006068,\"upstream_inference_completions_cost\":0.01002},\"completion_tokens_details\":{\"reasoning_tokens\":205,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "A",
+    "rationale": "Output A is better. The user already has a score of 600 and a rank of 5000, so the exam is over. A recognizes this. It honestly declines to guarantee admission and explains that Tsinghua typically admits only about the top 100 ranks in Shaanxi. It then suggests realistic alternative universities and offers to help plan applications across reach, match and safety schools, which is specific and actionable. A also handles the 'you must take responsibility' demand well, explaining that responsible help means giving accurate data rather than false promises. Some figures are approximate and should be checked against official data, but the overall picture is sound. Output B misreads the situation as pre-exam and gives generic study and lifestyle tips that do not apply to a student who already has results. B's only specific suggestion, special admission programs, is largely outdated. B therefore offers little real value."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1517,
+    "completion_tokens": 501,
+    "total_tokens": 2018,
+    "cost": 0.016088,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016088,
+      "upstream_inference_prompt_cost": 0.006068,
+      "upstream_inference_completions_cost": 0.01002
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 205,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.016088,
+  "elapsed_sec": 6.8591930866241455,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_004",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "a38e81fa00f7a7c141c3abd9384b62de408eb905a14fe725d237057d55f44cbc"
+  },
+  "calculated_cost_ceiling_usd": "0.068848",
+  "job_id": "ADV_004-rubric-generic_llm_raw",
+  "prompt_sha256": "1843abcca3aa3ee90e15aeef1454075cd59466fc4c7bc18a6f354ab56b246c94",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479871-LfMs91SsijvYZD4x51Vl",
+  "started_utc": "2026-11-12T10:37:51.897464+00:00",
+  "completed_utc": "2026-11-12T10:38:02.101975+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_004\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 山东综合改革，480分，位次22万，选科物化生，想上个好专科或者冲一下本科，目标方向是护理或检验\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析该分数段本专科录取可能性\n  - [must_have] 推荐护理/检验相关院校\n  - [should_have] 区分本科和专科层次\n  - [should_have] 说明选科匹配情况\n  - [must_have] 声明风险并建议查询官方系统\n\n## System Output:\n根据您提供的分数和位次信息，您在山东省综合改革中的成绩是480分，位次22万，选科为物理、化学和生物。您希望选择护理或检验专业，同时考虑专科或本科院校。以下是一些建议：\n\n1. **查询历年分数线**：首先，您可以查询历年山东省护理或检验专业的专科和本科录取分数线，以了解您的分数是否接近或超过这些分数线。\n\n2. **专科院校**：如果您的分数更接近专科院校的录取分数线，可以考虑以下几所山东省内较为知名的专科院校：\n   - 山东医学高等专科学校\n   - 山东中医药高等专科学校\n   - 潍坊医学院\n\n3. **本科院校**：如果您的分数接近本科院校的录取分数线，可以尝试申请以下几所本科院校：\n   - 潍坊医学院\n   - 滨州医学院\n   - 济宁医学院\n\n4. **考虑地区和学校特色**：在选择学校时，除了考虑分数线，还应该考虑学校的地理位置、学校特色、专业实力等因素。\n\n5. **专业选择**：护理和检验专业在医学领域都非常重要。护理专业更侧重于病人的日常护理和健康教育，而检验专业则侧重于实验室检测和诊断技术。\n\n6. **考虑未来就业**：在选择专业时，也要考虑毕业后的就业前景。护理专业毕业生通常在医院、社区卫生服务中心等地工作，而检验专业毕业生则可能在医院检验科、疾病控制中心、检验检疫机构等地工作。\n\n7. **咨询专业人士**：如果可能，可以咨询已经在这些领域工作的专业人士，了解行业动态和职业发展路径。\n\n8. **准备调剂**：如果本科院校竞争激烈，也可以考虑在填报志愿时选择“服从调剂”，以增加被录取的机会。\n\n请注意，每年的录取分数线可能会有所变化，具体的录取情况还需参考当年的招生计划和分数线。建议您密切关注教育考试院发布的最新信息，并结合自己的兴趣和职业规划做出选择。祝您选择顺利，未来学业有成！\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "90f3b62295c45dfa1b0dcdca0b4b5c6ce72bb661074be5429a330666d273b4dd",
+  "raw_response_text": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1794479871-LfMs91SsijvYZD4x51Vl\",\"object\":\"chat.completion\",\"created\":1794479871,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 2,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"hallucinated_evidence\\\", \\\"weak_personalization\\\", \\\"overclaiming\\\"],\\n  \\\"rationale\\\": \\\"The output never analyzes where 480 points and rank 220,000 actually fall. That score is above Shandong's 一段线, which makes private undergraduate or lower-tier public nursing a realistic reach. The output also skips the subject-selection match (物化生 satisfies nursing and laboratory medicine requirements). It contains factual errors: 潍坊医学院 is listed as a 专科 college and again as an undergraduate one, and it is in fact an undergraduate institution. It also advises choosing '服从调剂', which does not exist in Shandong's 专业+院校 volunteer mode. The risk disclaimer is generic, with no concrete guidance on using official rank and score lookup tools or plan data.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking whether a 480 score at rank 220k fits Shandong's 2023 numbers. It sits above the ordinary undergrad line of about 443, so public and private undergraduate options look reachable, and I'm about to think through medical programs.\\n\\nI'm checking whether the Weifang, Binzhou, and Jining medical nursing programs would plausibly sit around 500 or higher, which could make them reachable at this score. I also notice my earlier draft mislabeled Weifang Medical as a junior college when it's an undergraduate school, and that my note about adjustment in volunteer filling was wrong for Shandong's current system.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking whether a 480 score at rank 220k fits Shandong's 2023 numbers. It sits above the ordinary undergrad line of about 443, so public and private undergraduate options look reachable, and I'm about to think through medical programs.\\n\\nI'm checking whether the Weifang, Binzhou, and Jining medical nursing programs would plausibly sit around 500 or higher, which could make them reachable at this score. I also notice my earlier draft mislabeled Weifang Medical as a junior college when it's an undergraduate school, and that my note about adjustment in volunteer filling was wrong for Shandong's current system.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1530,\"completion_tokens\":898,\"total_tokens\":2428,\"cost\":0.02408,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.02408,\"upstream_inference_prompt_cost\":0.00612,\"upstream_inference_completions_cost\":0.01796},\"completion_tokens_details\":{\"reasoning_tokens\":522,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 2,
+      "safety_boundary": 2,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "hallucinated_evidence",
+      "weak_personalization",
+      "overclaiming"
+    ],
+    "rationale": "The output never analyzes where 480 points and rank 220,000 actually fall. That score is above Shandong's 一段线, which makes private undergraduate or lower-tier public nursing a realistic reach. The output also skips the subject-selection match (物化生 satisfies nursing and laboratory medicine requirements). It contains factual errors: 潍坊医学院 is listed as a 专科 college and again as an undergraduate one, and it is in fact an undergraduate institution. It also advises choosing '服从调剂', which does not exist in Shandong's 专业+院校 volunteer mode. The risk disclaimer is generic, with no concrete guidance on using official rank and score lookup tools or plan data."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1530,
+    "completion_tokens": 898,
+    "total_tokens": 2428,
+    "cost": 0.02408,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02408,
+      "upstream_inference_prompt_cost": 0.00612,
+      "upstream_inference_completions_cost": 0.01796
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 522,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.02408,
+  "elapsed_sec": 10.204555988311768,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

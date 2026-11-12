@@ -1,0 +1,37 @@
+{
+  "task": "reserves-at-risk-calc",
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "input_sha256": "21eca2c32748b9662647cc9abc7f88f5ce1273a2339cd9930f663cb46498e411",
+  "transport": [
+    {
+      "name": "task_environment.tar.gz",
+      "size": 103961,
+      "sha256": "21eca2c32748b9662647cc9abc7f88f5ce1273a2339cd9930f663cb46498e411"
+    }
+  ],
+  "input_manifest": {
+    "Dockerfile": {
+      "sha256": "0d38dce65931366e5d40dd8b20a1c274ad33cd02fb22a04a52d7d7fe9f4a0e62",
+      "size": 696,
+      "mode": 420
+    },
+    "test-rar.xlsx": {
+      "sha256": "2d61c05fae65a34352ebfd32edecc05b1f4282cf792280a2b18298deec7dcec4",
+      "size": 107649,
+      "mode": 420
+    }
+  },
+  "skills": [
+    "xlsx"
+  ],
+  "target_skill": "xlsx",
+  "parent_md_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "skill_hashes": {
+    "bench_skills/xlsx/LICENSE.txt": "79f6d8f5b427252fa3b1c11ecdbdb6bf610b944f7530b4de78f770f38741cfaa",
+    "bench_skills/xlsx/SKILL.md": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+    "bench_skills/xlsx/recalc.py": "f0833720e26fa894c9c1ccf0bd71dfc4609f8a310360fb2de2071efb64fbd409"
+  },
+  "native_file_runtime": true,
+  "native_package_versions": {},
+  "expected_input_hashes": null
+}

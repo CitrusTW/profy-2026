@@ -1,0 +1,52 @@
+--- original/remote_native.py
++++ i003/remote_native.py
+@@ -110,7 +110,12 @@
+                 requirements.append(requirement)
+         if requirements:command([uv,'pip','install','--no-cache','--python',str(python),*requirements],600)
+         pip_receipt=json.loads(command([str(python),'-c','import importlib.metadata,json;print(json.dumps(sorted([(d.metadata["Name"],d.version) for d in importlib.metadata.distributions()])))'],60))
+-        resolved={n.lower().replace('_','-'):v for n,v in pip_receipt}
++        # I-003: distributions() includes hidden system-site versions. Query the
++        # active task interpreter's metadata resolution, retain the full inventory.
++        requested_names=[x.split('==')[0] for x in requirements]
++        active_code='import importlib.metadata as m,json,sys; names=json.loads(sys.argv[1]); print(json.dumps({n.lower().replace("_","-"):{"version":m.version(n),"location":str(m.distribution(n).locate_file(""))} for n in names}))'
++        active_distributions=json.loads(command([str(python),'-c',active_code,json.dumps(requested_names)],60))
++        resolved={n:v['version'] for n,v in active_distributions.items()}
+         for requirement in requirements:
+             n,v=requirement.split('==');assert resolved.get(n.lower().replace('_','-'))==v,'Declared pip pin not active'
+         apt_receipt=command(['dpkg-query','-W','-f=${binary:Package}\t${Version}\n'],60)
+@@ -131,7 +136,7 @@
+                     target.chmod(((info.external_attr>>16)&0o111)|0o444)
+             target_sha=file_sha(base/'bench_skills'/meta['target_skill']/'SKILL.md')
+             (work/'root/bench_skills').symlink_to(base/'bench_skills',target_is_directory=True)
+-        receipt={'apt_packages':package_versions,'all_installed_apt':apt_receipt,'python_distributions':pip_receipt,'python':str(python),'host_python':host_python,'uv':command([uv,'--version'],30).strip(),'declared_pip':spec['pip'],'omitted_blocked_pip':omitted,'apt_space_guard':guard}
++        receipt={'apt_packages':package_versions,'all_installed_apt':apt_receipt,'python_distributions':pip_receipt,'active_python_distributions':active_distributions,'python':str(python),'host_python':host_python,'uv':command([uv,'--version'],30).strip(),'declared_pip':spec['pip'],'omitted_blocked_pip':omitted,'apt_space_guard':guard}
+         (work/'dependency_receipt.json').write_text(json.dumps(receipt,indent=2))
+         state={'backend':'native-owned','runtime_difference':'Native Profy host, not the official Ubuntu image. Solver uses uid1000 without path interception or mount namespaces. All apt installs use --no-install-recommends as a disclosed native adaptation. Host system-site-packages and pre-existing apt packages remain visible. Blocked declared packages are omitted and may not be used. Existing platform uv replaces Dockerfile uv installers. This runner is not a security sandbox.','workspace':str(base),'work':str(work),'runtime':str(runtime),'cli':[],'container':None,'image_id':None,'shell':'/bin/bash','input_sha256':meta['input_sha256'],'original_file_sha256':inputs,'skill_sha256':target_sha,'benchmark_pin':meta['benchmark_pin'],'task':meta['task'],'workdir':spec['workdir'],'cwd':str(cwd),'task_roots':{'/root':str(work/'root'),'/app':str(work/'app')},'task_python':str(python),'task_path':str(venv/'bin')+':'+os.environ.get('PATH','/usr/local/bin:/usr/bin:/bin'),'native_package_versions':package_versions,'dependency_receipt':receipt,'runtime_adaptations':spec.get('adaptations',[]),'supplied_skill_hashes':meta['skill_hashes']}
+         assert all(file_sha(task_directory(work,p))==h for p,h in inputs.items())
+--- original/study.py
++++ i003/study.py
+@@ -3,7 +3,7 @@
+ from pathlib import Path
+ 
+ HERE=Path(__file__).resolve().parent
+-sys.path.insert(0,str(HERE.parent/'skillsbench_evolution_20261110'))
++sys.path.insert(0,str(HERE.parents[2]/'04_项目数据与代码/辅助代码/skillsbench_evolution_20261110'))
+ from library_tasks import LibraryStudy
+ from profy_cloud_probe import Probe
+ from cloud_runtime_bridge import MemoryUpload
+@@ -151,8 +151,14 @@
+         config=json.loads((folder/'case_config.json').read_text())
+         for e in events:
+             if e.get('type')=='tool_call.in_progress' and forbidden_skill_read(e,not config['skills'],self.names):raise RuntimeError('Read of an unsupplied skill')
+-            if e.get('type')=='tool_call.in_progress' and e.get('tool_name') not in ['read','bash','awaitbash','skills_read']:raise RuntimeError('Unexpected solver tool')
++            if e.get('type')=='tool_call.in_progress' and e.get('tool_name') not in ['read','bash','awaitbash','skills_read','tool_search']:raise RuntimeError('Unexpected solver tool')
+             if e.get('type')=='tool_call.in_progress' and e.get('tool_name')=='bash' and host_command_kind(e['parameters']['command'].strip()) not in ['setup','container']:raise RuntimeError('Unapproved host shell command')
++        if any(e.get('type')=='tool_call.in_progress' and e.get('tool_name')=='tool_search' for e in events):
++            for e in events:
++                if e.get('type')!='tool_call.in_progress':continue
++                params=e.get('parameters') or {}
++                if e.get('tool_name')=='skills_read' or (e.get('tool_name')=='read' and Path(params.get('file_path','')).name=='SKILL.md'):
++                    raise RuntimeError('I003 tool_search condition: skill read in trace, supplementary grading requires clarification')
+         ready=setup_receipts(events,self.strings)
+         recovery=folder/'SETUP_CONTEXT_RECOVERY.json'
+         if not ready and recovery.exists():ready=[json.loads(recovery.read_text())]

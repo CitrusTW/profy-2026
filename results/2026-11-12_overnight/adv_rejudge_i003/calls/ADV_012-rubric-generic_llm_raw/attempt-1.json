@@ -1,0 +1,77 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_012",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "84335be47b72083520335038e16818c4302607ae6048a951b0382d50bacc7d1e"
+  },
+  "calculated_cost_ceiling_usd": "0.069776",
+  "job_id": "ADV_012-rubric-generic_llm_raw",
+  "prompt_sha256": "6214dc222ba642d3cf1aa1471a4967446e89ddc27c9c35df130d557c489525b3",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794480364-PbztCfBBMphHwlSOE0B3",
+  "started_utc": "2026-11-12T10:46:04.317597+00:00",
+  "completed_utc": "2026-11-12T10:46:12.131798+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_012\n- Task Family: ADV\n- Variant: missing_info\n- Risk Level: medium\n- User Input: 帮我分析下印度市场怎么做，我预算不多\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 追问具体产品品类\n  - [should_have] 追问预算范围以便给出可行建议\n  - [should_have] 可以先给印度市场概况但标注需要更多信息\n\n## System Output:\n在预算有限的情况下进入印度市场，你需要采取一种谨慎而有策略的方法。以下是一些关键步骤和建议，帮助你在印度市场取得成功：\n\n1. **市场研究**：\n   - **了解消费者需求**：研究印度消费者的偏好、购买习惯和需求。\n   - **竞争分析**：分析竞争对手的产品、价格和市场策略。\n   - **市场趋势**：关注印度市场的最新趋势和变化。\n\n2. **定位和产品调整**：\n   - **本地化**：根据印度市场的特点调整产品和服务。\n   - **价格敏感性**：考虑到印度市场的价格敏感性，定价策略应具有竞争力。\n\n3. **分销渠道**：\n   - **本地合作伙伴**：寻找可靠的本地分销商和零售商。\n   - **电子商务平台**：利用印度的电子商务平台，如Flipkart和Amazon India。\n\n4. **营销和广告**：\n   - **社交媒体**：利用Facebook、Instagram和WhatsApp等社交媒体平台进行营销。\n   - **内容营销**：创建与印度文化和语言相关的本地化内容。\n   - **口碑营销**：在预算有限的情况下，口碑营销尤为重要。\n\n5. **合规性和法律**：\n   - **了解法规**：确保你的产品符合印度的法律和行业标准。\n   - **税务和关税**：了解并遵守印度的税务和关税规定。\n\n6. **客户服务**：\n   - **本地化服务**：提供本地语言的客户服务。\n   - **快速响应**：快速响应消费者的问题和反馈。\n\n7. **风险管理**：\n   - **货币风险**：考虑汇率波动对成本的影响。\n   - **供应链风险**：确保供应链的稳定性和灵活性。\n\n8. **预算管理**：\n   - **成本效益分析**：对每项支出进行成本效益分析。\n   - **优先级排序**：根据预算优先分配资源到最重要的市场活动。\n\n9. **持续学习和适应**：\n   - **市场反馈**：定期收集市场反馈并据此调整策略。\n   - **灵活调整**：根据市场变化灵活调整你的市场进入策略。\n\n10. **文化敏感性**：\n    - **尊重文化差异**：在营销和产品设计中考虑到印度的文化差异。\n\n进入印度市场是一个复杂的过程，需要深入了解当地的商业环境和文化。在预算有限的情况下，建议你从小规模开始，逐步扩大，同时不断学习和适应市场的变化。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "ad7ecda8d5a98806d1e94e7c40091b63bb58afaa14b8d4759bb6c556635fe76b",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794480364-PbztCfBBMphHwlSOE0B3\",\"object\":\"chat.completion\",\"created\":1794480364,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 1\\n  },\\n  \\\"error_tags\\\": [\\\"missing_input_not_handled\\\", \\\"weak_personalization\\\"],\\n  \\\"rationale\\\": \\\"The response misses the must-have checkpoint: it never asks what product category the user sells. It also never asks for a budget range, so '预算不多' (limited budget) is not turned into feasible, tiered advice. It gives a generic market-entry overview without noting that the advice depends on missing information. The structure is clear and logical, and the few concrete details (Flipkart, Amazon India, WhatsApp, price sensitivity) are accurate but boilerplate. The steps could apply to any country or product, so the user cannot act on them directly.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the output against the required checks: it never asks about product category or budget range, and it gives a general overview without saying more information is needed. I'm scoring it low on completeness, specificity, and actionability, with coherence somewhat better.\\n\\nI'm weighing whether to score uncertainty calibration a 1 or a 2. The response never acknowledges the missing product information and sounds confident despite that, though it doesn't overclaim specific facts, so I'm leaning toward 2 with the closing's \\\"need to understand more\\\" counting as weak.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the output against the required checks: it never asks about product category or budget range, and it gives a general overview without saying more information is needed. I'm scoring it low on completeness, specificity, and actionability, with coherence somewhat better.\\n\\nI'm weighing whether to score uncertainty calibration a 1 or a 2. The response never acknowledges the missing product information and sounds confident despite that, though it doesn't overclaim specific facts, so I'm leaning toward 2 with the closing's \\\"need to understand more\\\" counting as weak.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1600,\"completion_tokens\":652,\"total_tokens\":2252,\"cost\":0.01944,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.01944,\"upstream_inference_prompt_cost\":0.0064,\"upstream_inference_completions_cost\":0.01304},\"completion_tokens_details\":{\"reasoning_tokens\":343,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 4,
+      "safety_boundary": 3,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 1
+    },
+    "error_tags": [
+      "missing_input_not_handled",
+      "weak_personalization"
+    ],
+    "rationale": "The response misses the must-have checkpoint: it never asks what product category the user sells. It also never asks for a budget range, so '预算不多' (limited budget) is not turned into feasible, tiered advice. It gives a generic market-entry overview without noting that the advice depends on missing information. The structure is clear and logical, and the few concrete details (Flipkart, Amazon India, WhatsApp, price sensitivity) are accurate but boilerplate. The steps could apply to any country or product, so the user cannot act on them directly."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1600,
+    "completion_tokens": 652,
+    "total_tokens": 2252,
+    "cost": 0.01944,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01944,
+      "upstream_inference_prompt_cost": 0.0064,
+      "upstream_inference_completions_cost": 0.01304
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 343,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.01944,
+  "elapsed_sec": 7.814239025115967,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

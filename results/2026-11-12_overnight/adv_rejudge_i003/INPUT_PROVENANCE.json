@@ -1,0 +1,23 @@
+{
+  "source_sha256": {
+    "profybench_v0.jsonl": "49706b7180934e85c75e1a4031e703521a785d85b27c000c99de1be45af0f2bf",
+    "scripts/llm_judge.py": "301813b481c80175e6cb20fc733c3a57ae92af13a8661b6eb297f1eeaba6f262",
+    "results/outputs_generic_llm_raw.jsonl": "77664fc6a08506c976798f32992028a21dd6836667f08d7bbb3ec67c2a046532",
+    "results/outputs_generic_llm_expert_prompt.jsonl": "9641a88c15e86442acec2b82562f123266c0b6426b5f279dc8edd552d5a32275",
+    "results/outputs_profy_expert_full.jsonl": "a53a0d434a4755ca15b2b016f52d5183d0a532c323be849fb496d1017aab45b1"
+  },
+  "model": "anthropic/claude-opus-5.5",
+  "new_answers_generated": false,
+  "output_model_labels": {
+    "generic_llm_raw": [
+      "moonshot-v1-128k"
+    ],
+    "generic_llm_expert_prompt": [
+      "moonshot-v1-128k"
+    ],
+    "profy_expert_full": [
+      "deepseek-v4-flash"
+    ]
+  },
+  "source_folder": "/Users/mac/Desktop/naacl 2026.10 - CogniLife/04_项目数据与代码/Profy-main/knowledge/benchmarks/profybench-v1"
+}

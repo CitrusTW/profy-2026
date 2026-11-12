@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_005",
+  "baseline": "generic_llm_expert_prompt",
+  "order": "full_A",
+  "system_a": "profy_expert_full",
+  "system_b": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "profy_expert_full": "47bb3b1762868febd84e47bcb10abb05a8b9609c9347e2907b3b83a7a16b8bb3",
+    "generic_llm_expert_prompt": "1fb14abbf057ac175835f4d16ba52656f3ce43f14e9e18598d73f5fc280a6a68"
+  },
+  "visible_output_sha256": {
+    "profy_expert_full": "47bb3b1762868febd84e47bcb10abb05a8b9609c9347e2907b3b83a7a16b8bb3",
+    "generic_llm_expert_prompt": "1fb14abbf057ac175835f4d16ba52656f3ce43f14e9e18598d73f5fc280a6a68"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.060072",
+  "job_id": "ADV_005-pairwise-generic_llm_expert_prompt-full_A",
+  "prompt_sha256": "579bef16521db518dfa785c3753beaf09ea33b399d054e4ae7648d8a3c1846da",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479993-9oBs6AlUuBRhxV2Y60nm",
+  "started_utc": "2026-11-12T10:39:53.589826+00:00",
+  "completed_utc": "2026-11-12T10:39:58.089058+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 陕西509分，帮我选学校\n- Task Family: ADV\n- Variant: missing_info\n\n## Output A:\n搜索暂时没有返回结果（可能是网络问题），我来基于已掌握的信息帮你分析。\n\n不过在给你推荐之前，有几个关键信息需要先确认一下：\n\n## Output B:\n您好，对于高考志愿的填报，我可以帮助您进行一些基础的分析和建议。但请注意，最终的决策应基于您个人的兴趣、职业规划以及对学校和专业的全面了解。以下是一些参考步骤：\n\n1. **确定分数线定位**：\n   - 首先，您需要确定您的分数相对于陕西省的分数线。509分相对于陕西省的一本、二本分数线如何，这将决定您可以选择的学校范围。\n\n2. **了解历年录取数据**：\n   - 查看过去几年陕西省509分左右的录取情况，了解这个分数段通常能进入哪些学校和专业。\n\n3. **考虑专业偏好**：\n   - 根据您的兴趣和职业规划，确定您希望学习的专业。不同专业的录取分数线可能会有所不同。\n\n4. **学校地理位置**：\n   - 考虑您是否对学校的地理位置有特定要求，比如是否希望留在省内，或者是否愿意去外省学习。\n\n5. **学校综合实力**：\n   - 考虑学校的综合实力，包括师资力量、科研能力、就业情况等。\n\n6. **学校特色和资源**：\n   - 了解各个学校的特色和优势资源，比如实验室、实习机会、校企合作等。\n\n7. **咨询学长学姐和教育顾问**：\n   - 可以咨询已经在大学就读的学长学姐，或者专业的教育顾问，获取第一手的信息和建议。\n\n8. **考虑未来发展规划**：\n   - 考虑您的长远发展，比如是否计划继续深造、出国等，选择对这些规划有帮助的学校和专业。\n\n9. **风险评估**：\n   - 考虑到每年的录取情况可能会有变化，您的分数可能存在一定的不确定性，因此建议您在填报志愿时，也要考虑一些保底的学校。\n\n10. **志愿填报策略**：\n    - 根据您的分数和上述因素，制定一个志愿填报策略，通常建议按照“冲一冲、稳一稳、保一保”的原则来填报。\n\n由于我无法提供实时的分数线数据和具体的学校信息，建议您使用一些高考志愿填报辅助工具或者咨询专业的教育顾问来获取更详细的信息。同时，您也可以参考教育部官方网站、各高校的招生网站以及高考志愿填报指南等资源，来做出更加明智的选择。\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "345d2aed6010c5ee3519628aed8cd95da7efb0b409a4b74c04f9ae99f84d1f35",
+  "raw_response_text": "\n         \n\n         \n{\"id\":\"gen-1794479993-9oBs6AlUuBRhxV2Y60nm\",\"object\":\"chat.completion\",\"created\":1794479993,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"preference\\\": \\\"B\\\",\\n  \\\"rationale\\\": \\\"Output A is truncated. It says it needs to confirm key information but never actually asks any questions, so the user gets nothing actionable. Output B is generic: it gives no specific schools and does not directly ask for missing details such as 文理科/选科 or 位次. It does lay out a reasonable framework, flags relevant factors (专业偏好, 地域, 冲稳保 strategy) and points to resources. B is therefore more complete and useful than A's empty response.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm looking at output A, which cuts off after saying it needs to confirm some key information without listing any of it. The ideal version would ask clarifying questions about the exam track, the rank, major preferences, and location, but A only mentions wanting to and never actually asks. B offers general steps and touches on major preference and location without naming specific schools or asking anything directly. Overall B is more useful, since A is essentially empty.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm looking at output A, which cuts off after saying it needs to confirm some key information without listing any of it. The ideal version would ask clarifying questions about the exam track, the rank, major preferences, and location, but A only mentions wanting to and never actually asks. B offers general steps and touches on major preference and location without naming specific schools or asking anything directly. Overall B is more useful, since A is essentially empty.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSiggKEAgTGAI4AUIIdGhpbmtpbmcSDGj4jxshUA41S5MbtRoMejfRIie0kxKThMK6IjB0enwNi32pbe5GruU2WKs4Wt5uQ1bYy99vLAeZ3KwJei3LGpcx/DAV/vsW7lxZOFoqpwfjYvhdVbGpCbaujqcBK8kxR9WkjL28TKCTEw0/6z+QtFDSUXafkceV5dS5OdTLduSvihaMBP00LMptXIC8tTzdKIp+tozLQv4GMjeC16+mnlVH/q9w+qI5YbhfeR+QJbXMnEd44d4G9CFPdQ9v8k/+ZWH3htjzgbqcCNy2aZUTEzU9fJahPlJSBn9EIpTyoBGmV8mVZMIlkoQ4MsPl/gK+XG3XdhRMO5XpQfajEu+Jom+Qv3tQihfxy3GNwTYevp79XEnU9nwPr6/iVr+j9pNlRIB6Khpu/Tux3CY2mz4dEpNYXyJZvHflhnmQwhN6FzjxtjlGfJLU8zO5woPT0GLrd3M3aAgDFUHD/EmrgW8IYnGBHZadzpvAacywhBlGW0276jA3PvP4BkAKkqLfRXnBNcdlylpDIEb1Tk4o1oGRCKZqv6iz9qBxNAsYmIRI/BKHthKDN+iwlyC3uljpl/T8W1P0wZg46pr+KqnFhJUR/sZVe8MNgJ4AtlJ1BRBPIfIj9COCbxsdSCFo5dndzqGjcZ1JPig/FhXA57NdebaiSpZYAKoXu6ZOjxmDgXv4/IMj1jiLIrh4j/qt+H1vyHNVty/MtG5PAAOu16Icl3eRCih/wHLqBUNcbpRa4FnDvvf6UjYMpZRtOH775vwAFcyJlCRJaMtvawCzo1JO8EC5kruDsBdQSvMm6yP+V+vdZ0LqF/7hUPXWG4C5qevZQR/IK4byg01GxZB8qm+murYjZGZmp1uGaSGIViqqokmlDjGj+aTdh48Nt4/WO5v+HzdR96T1JQvcC80com7xJNqNO1AXRzCta/CP7ESLH7MhJT7aVpfYmt0XKQSYms4rbCQkVoDk4nUMCi+6jQfLx0L+MgLJugD8OHrf69CoasKtkeNWe2MUHVjr2g+8QyYGWMSCf5r89EP/jhdBtCubdWy7acoeah9KL8O9YJe7ifb1npSyOJNSHWT2yG+Ff/Ga8/T4dHY33c5FbKdj0puuoKjgpjbTahDuNDeyQHqnA2BFL887OmRaoxm8Gt8x1JFjweO6eyaRAiK9+iDA53TiSHLno7wUPX21MMO2r2nHLhFx2B63b/qV6S99rqynRh32/JwAmBTAJGi5j9SNvtnPUulugXFZCG/LD5uYyvsngMavsJFFYH8pEuU+R07/4NNmi13U21sLVjVwi8fFbqLnCmqrvF2yX320969nhXRvwGYtVgvoMf7W5h1mN/PrAUAU8tyeA1Pph89LDRgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1087,\"completion_tokens\":321,\"total_tokens\":1408,\"cost\":0.010768,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.010768,\"upstream_inference_prompt_cost\":0.004348,\"upstream_inference_completions_cost\":0.00642},\"completion_tokens_details\":{\"reasoning_tokens\":146,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "B",
+    "rationale": "Output A is truncated. It says it needs to confirm key information but never actually asks any questions, so the user gets nothing actionable. Output B is generic: it gives no specific schools and does not directly ask for missing details such as 文理科/选科 or 位次. It does lay out a reasonable framework, flags relevant factors (专业偏好, 地域, 冲稳保 strategy) and points to resources. B is therefore more complete and useful than A's empty response."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1087,
+    "completion_tokens": 321,
+    "total_tokens": 1408,
+    "cost": 0.010768,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010768,
+      "upstream_inference_prompt_cost": 0.004348,
+      "upstream_inference_completions_cost": 0.00642
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 146,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.010768,
+  "elapsed_sec": 4.499244928359985,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_003",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "dd1d604585cd7b74bac7fcc8976f14db258fa1bf408bb5854d611f2520c102fa"
+  },
+  "calculated_cost_ceiling_usd": "0.073976",
+  "job_id": "ADV_003-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "e700aebda9ceab175ed9339f0a6f214e87a35c9f133bd947f5dc150519662231",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479797-HsVIHqZ82ESsPSfNicya",
+  "started_utc": "2026-11-12T10:36:37.873073+00:00",
+  "completed_utc": "2026-11-12T10:36:46.282606+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_003\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 广东历史类，502分，位次58000，家里希望学医或者师范，将来回老家县城工作，预算有限不考虑中外合办\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 识别历史类学医的限制并说明\n  - [must_have] 分层推荐师范类院校\n  - [should_have] 分析县城就业导向下的专业选择\n  - [should_have] 标注中外合办项目并排除\n  - [must_have] 声明录取数据时效性\n\n## System Output:\n根据您提供的信息，您在广东省的历史类高考分数为502分，位次58000，家里希望您学医或者师范专业，并且您计划在毕业后回到县城工作，同时预算有限不考虑中外合作办学项目。以下是一些建议：\n\n1. **选择合适的医学院校**：\n   - 考虑到您的分数和位次，您可能需要选择一些在本地较为知名的医学院，同时考虑到录取分数线和您的分数相匹配。广东省内一些医学院如南方医科大学、广州医科大学、广东医科大学等，您需要查看这些学校往年的录取分数线和位次，看是否有可能被录取。\n   - 考虑到预算限制，您可以优先考虑公立院校，因为它们通常学费较低。\n\n2. **师范专业选择**：\n   - 师范专业方面，可以考虑广东技术师范大学、韩山师范学院等，这些学校师范专业较为知名，且更有可能在毕业后回到家乡县城工作。\n   - 师范专业通常有定向培养计划，可以咨询学校是否有与您家乡县城合作的定向培养项目，这将有助于您毕业后直接回到家乡工作。\n\n3. **专业选择的考虑因素**：\n   - 考虑您的兴趣和职业规划，选择一个您真正感兴趣的专业可以让您在未来职业生涯中更有动力和满足感。\n   - 考虑就业前景，医学和师范都是相对稳定的职业选择，但在小县城可能更需要考虑当地的医疗和教育需求。\n\n4. **志愿填报策略**：\n   - 根据您的分数和位次，合理填报志愿，可以考虑“冲一冲、稳一稳、保一保”的策略，即填报一些分数线稍高的院校作为冲刺，和自己分数相近的院校作为稳妥选择，以及一些分数线稍低的院校作为保底。\n   - 同时，也可以考虑一些非热门但就业前景良好的专业，这些专业可能竞争较小，录取机会更大。\n\n5. **了解助学政策**：\n   - 考虑到预算限制，可以了解国家和地方的助学贷款、奖学金政策，以及学校提供的助学金、勤工俭学机会等，这些都可以帮助减轻经济压力。\n\n6. **咨询和信息搜集**：\n   - 可以咨询高中的升学指导老师，或者联系目标院校的招生办公室，获取更详细的招生信息和往年录取数据。\n   - 参加高校举办的招生咨询会，直接与招生老师交流，了解更多信息。\n\n请记住，这些建议是基于您提供的信息和一般情况提出的，实际情况可能会有所不同。您需要根据最新的招生政策、院校信息以及个人情况做出最终决定。同时，建议在做出选择前，充分调研和咨询，以确保您的决定符合您的长远规划。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "1aff00d37f4aab494c921506d137f274ce2196f6a3c8ee63bed21aae13d8f373",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794479797-HsVIHqZ82ESsPSfNicya\",\"object\":\"chat.completion\",\"created\":1794479797,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 2,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"overclaiming\\\", \\\"weak_personalization\\\", \\\"unsafe_boundary\\\"],\\n  \\\"rationale\\\": \\\"The output misses the most critical must-have checkpoint: under Guangdong's 3+1+2 system, most clinical medicine programs require physics and chemistry, so a 历史类 candidate is largely excluded, yet the answer recommends 南方医科大学, 广州医科大学 and 广东医科大学 as if they were feasible, which is misleading for a high-risk decision. The 师范 recommendations name only two schools, without 冲/稳/保 tiers, without tying them to the 58000 rank, and with no specific mention of Guangdong's 公费定向师范生 program beyond a vague nod to 定向培养. There is also no explicit handling of 中外合办 programs, and the data-timeliness warning is only a generic disclaimer rather than a clear statement that admission scores and ranks change each year.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"The history track in Guangdong usually can't get into clinical medicine, since most of those programs want physics and chemistry under the 3+1+2 system, and the earlier answer missed that entirely while suggesting 南方医科大学. With a 502 score on the history track, that suggestion is unrealistic too. The normal-school options, including 广东技术师范大学 and 韩山师范学院, are also listed without any tiering.\\n\\nI'm noting that the scores are low across completeness, specificity, and safety, and that the response never flags the Guangdong history-track restriction on clinical medicine. I'm tagging it for misleading feasibility, weak personalization, and an unsafe boundary.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"The history track in Guangdong usually can't get into clinical medicine, since most of those programs want physics and chemistry under the 3+1+2 system, and the earlier answer missed that entirely while suggesting 南方医科大学. With a 502 score on the history track, that suggestion is unrealistic too. The normal-school options, including 广东技术师范大学 and 韩山师范学院, are also listed without any tiering.\\n\\nI'm noting that the scores are low across completeness, specificity, and safety, and that the response never flags the Guangdong history-track restriction on clinical medicine. I'm tagging it for misleading feasibility, weak personalization, and an unsafe boundary.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1765,\"completion_tokens\":787,\"total_tokens\":2552,\"cost\":0.0228,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.0228,\"upstream_inference_prompt_cost\":0.00706,\"upstream_inference_completions_cost\":0.01574},\"completion_tokens_details\":{\"reasoning_tokens\":378,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 3,
+      "safety_boundary": 2,
+      "evidence_grounding": 2,
+      "uncertainty_calibration": 2
+    },
+    "error_tags": [
+      "overclaiming",
+      "weak_personalization",
+      "unsafe_boundary"
+    ],
+    "rationale": "The output misses the most critical must-have checkpoint: under Guangdong's 3+1+2 system, most clinical medicine programs require physics and chemistry, so a 历史类 candidate is largely excluded, yet the answer recommends 南方医科大学, 广州医科大学 and 广东医科大学 as if they were feasible, which is misleading for a high-risk decision. The 师范 recommendations name only two schools, without 冲/稳/保 tiers, without tying them to the 58000 rank, and with no specific mention of Guangdong's 公费定向师范生 program beyond a vague nod to 定向培养. There is also no explicit handling of 中外合办 programs, and the data-timeliness warning is only a generic disclaimer rather than a clear statement that admission scores and ranks change each year."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1765,
+    "completion_tokens": 787,
+    "total_tokens": 2552,
+    "cost": 0.0228,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0228,
+      "upstream_inference_prompt_cost": 0.00706,
+      "upstream_inference_completions_cost": 0.01574
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 378,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.0228,
+  "elapsed_sec": 8.409582138061523,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

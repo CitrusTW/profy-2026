@@ -1,0 +1,62 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_004",
+  "condition": "profy_expert_full",
+  "output_sha256": {
+    "profy_expert_full": "17c3e509dc0b10c3c3bc77fd4e61899e812c94321d01579d715cfb3f998e83f1"
+  },
+  "calculated_cost_ceiling_usd": "0.086280",
+  "job_id": "ADV_004-rubric-profy_expert_full",
+  "prompt_sha256": "f0f45ecffcfc13af3a0bdc17e4374791dde916c7df7e0a69c3e8d504c4a73f5a",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479916-0ArlmibxLfSb47ODsrfJ",
+  "started_utc": "2026-11-12T10:38:36.890519+00:00",
+  "completed_utc": "2026-11-12T10:38:47.932699+00:00",
+  "attempt": 3,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_004\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 山东综合改革，480分，位次22万，选科物化生，想上个好专科或者冲一下本科，目标方向是护理或检验\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析该分数段本专科录取可能性\n  - [must_have] 推荐护理/检验相关院校\n  - [should_have] 区分本科和专科层次\n  - [should_have] 说明选科匹配情况\n  - [must_have] 声明风险并建议查询官方系统\n\n## System Output:\n以下是基于你的分数和位次的详细分析，供参考。\n\n---\n\n## 一、2024年山东高考分数线参考\n\n| 批次 | 分数线 |\n|------|--------|\n| 特殊类型招生控制线 | 约 521 分 |\n| **一段线（本科线）** | **约 444 分** |\n| 二段线（专科线） | 150 分 |\n\n**你的分数：480分，高于一段线约36分**，从分数上看具备填报本科资格。但关键要看**位次**——综合改革下位次比分数更有参考价值。\n\n---\n\n## 二、位次分析：22万名 → 本科还是专科？\n\n山东省一段线划线比例约为 **1:1.2**，即一段线对应的实际本科招生计划大约在 **28~30万** 左右（含民办、独立学院）。\n\n| 情况 | 分析 |\n|------|------|\n| **位次22万** | 低于一段线理论招生序列，但还在本科\"尾巴\"范围内 |\n| **本科希望** | 有，但必须**放平心态**——方向是**民办本科、校企合作、偏远地区院校** |\n| **好专科** | 位次22万对优质专科来说**非常充裕**，选择空间大 |\n\n**结论**：本科可以冲（偏后段院校），好的专科稳稳绰绰有余。\n\n---\n\n## 三、护理/检验方向——可选院校\n\n### A. 可冲击的本科层次（冲一冲）\n\n480分/22万位次可尝试以下学校的**护理学/医学检验技术**（但专业录取分可能高于投档线）：\n\n| 院校 | 层次 | 说明 |\n|------|------|------|\n| **齐鲁医药学院** | 民办本科 | 有护理学、医学检验技术，招生计划较多 |\n| **山东协和学院** | 民办本科 | 护理学为特色专业，机会较大 |\n| **青岛滨海学院** | 民办本科 | 有护理学专业 |\n| **山东英才学院** | 民办本科 | 护理学可考虑 |\n| 省外部分偏远公办本科 | 公办 | 如黑龙江、甘肃、新疆等地的医学院校，分数可能友好 |\n\n> 注意：公办医学类本科（如潍坊医学院、滨州医学院、济宁医学院、山东中医药大学）的**护理学/检验**专业录取位次通常在 **15~18万名** 以内，22万位次希望较小。\n\n### B. 好专科层次（稳妥推荐）\n\n位次22万能报**省内最好的医学类专科院校**：\n\n| 院校 | 推荐专业 | 推荐理由 |\n|------|----------|----------|\n| **山东医学高等专科学校**（济南/临沂） | 护理、医学检验技术 | **省内医学专科龙头**，护理和检验都是王牌专业，就业口碑好 |\n| **菏泽医学专科学校** | 护理、医学检验技术 | 老牌医学专科，省内有大量校友资源 |\n| **山东中医药高等专科学校**（烟台） | 护理 | 中医特色，护理方向偏中西医结合 |\n| **滨州职业学院** | 护理 | 国家双高院校，护理为骨干专业 |\n| **淄博职业学院** | 护理 | 综合实力强的国家双高校 |\n| **潍坊护理职业学院** | 护理 | 专业对口，专注护理 |\n\n---\n\n## 四、填报策略建议\n\n| 志愿策略 | 具体做法 |\n|----------|----------|\n| **冲（前10~20个）** | 民办本科护理/检验 + 省外偏远公办本科护理 |\n| **稳（中间20~30个）** | 山东医专 / 菏泽医专 / 山东中医药高专（护理、检验） |\n| **保（最后10个）** | 其余高职护理院校 + 省内综合类高职护理专业 |\n\n---\n\n## 五、几个关键提醒\n\n1. **护理和检验的区别**：\n   - 护理：好就业、需求量大，但工作强度高，需要倒班\n   - 医学检验技术：工作压力相对小，但就业门槛在提高，专科以后多考虑考本或考编\n\n2. **专升本路径**：专科护理/检验毕业后可以参加**山东省专升本考试**，考入本科院校继续深造，这是非常成熟的路径。\n\n3. **选科优势**：你选了物化生，几乎**所有医学类专业都可以报**，没有限制。\n\n4. **同时关注**：如果愿意跳出护理/检验，480分还可以考虑**药学、医学影像技术、康复治疗技术**等方向，就业前景也不错。\n\n---\n\n> **注意**：以上分析基于往年录取数据推断，2025年各校招生计划和录取分数线可能有变动。建议你在山东省教育招生考试院官网（www.sdzk.cn）或\"山东高考通\"等官方渠道进一步核实历年录取位次。你可以把具体想了解的院校告诉我，我帮你做进一步分析。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "7c1dd2be60650373e07b0473d12f16f68742e4280ff19844ec9c95f104df59ad",
+  "raw_response_text": "\n         \n\n         \n\n         \n\n         \n{\"id\":\"gen-1794479916-0ArlmibxLfSb47ODsrfJ\",\"object\":\"chat.completion\",\"created\":1794479916,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"length\",\"native_finish_reason\":\"max_tokens\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 4,\\n    \\\"specificity\\\": 4,\\n    \\\"actionability\\\": 3,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 3,\\n    \\\"uncertainty_calibration\\\": 2\\n  },\\n  \\\"error_tags\\\": [\\\"overclaiming\\\", \\\"hallucinated_evidence\\\"],\\n  \\\"rationale\\\": \\\"The output covers all checkpoints. It analyzes the score band, recommends named nursing and lab-medicine schools at both bachelor's (本科) and associate (专科) levels, confirms that 物化生 qualifies for medical majors, and ends with a disclaimer pointing to sdzk.cn. The 2024 cutoffs it cites (444, 150, 521) are accurate\",\"refusal\":null,\"reasoning\":\"I'm checking the Shandong 2024 figures: the special-type line at 521, the first-tier line at 444, and the second-tier line at 150. Those match. I'm now trying to work out what rank a 480 score would have landed at, and whether the user's 22万 position fits that.\\n\\nNow I'm checking the claim that 好专科 is more than comfortably safe. For 山东医专, nursing and clinical medicine can sit well above 22万, so that overstatement needs softening. I'm also noticing the volunteer list mixes 本科 and 专科 in one 96-slot ordering, though Shandong runs those as separate batches, which is a real error I should flag.\\n\\nI'm settling on the score ratings now: completeness, specificity and actionability sit at 4, 4 and 3, while coherence, safety, evidence and uncertainty each get a 3. The overclaiming and possibly unverified rank figures are the two issues I'll tag.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the Shandong 2024 figures: the special-type line at 521, the first-tier line at 444, and the second-tier line at 150. Those match. I'm now trying to work out what rank a 480 score would have landed at, and whether the user's 22万 position fits that.\\n\\nNow I'm checking the claim that 好专科 is more than comfortably safe. For 山东医专, nursing and clinical medicine can sit well above 22万, so that overstatement needs softening. I'm also noticing the volunteer list mixes 本科 and 专科 in one 96-slot ordering, though Shandong runs those as separate batches, which is a real error I should flag.\\n\\nI'm settling on the score ratings now: completeness, specificity and actionability sit at 4, 4 and 3, while coherence, safety, evidence and uncertainty each get a 3. The overclaiming and possibly unverified rank figures are the two issues I'll tag.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2471,\"completion_tokens\":1024,\"total_tokens\":3495,\"cost\":0.030364,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.030364,\"upstream_inference_prompt_cost\":0.009884,\"upstream_inference_completions_cost\":0.02048},\"completion_tokens_details\":{\"reasoning_tokens\":768,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": null,
+  "parse_failed": true,
+  "error": "AssertionError: length-limited judgment",
+  "usage": {
+    "prompt_tokens": 2471,
+    "completion_tokens": 1024,
+    "total_tokens": 3495,
+    "cost": 0.030364,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.030364,
+      "upstream_inference_prompt_cost": 0.009884,
+      "upstream_inference_completions_cost": 0.02048
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 768,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.030364,
+  "elapsed_sec": 11.042224884033203,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

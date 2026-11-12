@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_001",
+  "baseline": "generic_llm_raw",
+  "order": "full_A",
+  "system_a": "profy_expert_full",
+  "system_b": "generic_llm_raw",
+  "output_sha256": {
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9",
+    "generic_llm_raw": "ea2a3da7124f4eea93b2b5d053a06d03d1d336bc03559298ea79bf586eeb5ba2"
+  },
+  "visible_output_sha256": {
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9",
+    "generic_llm_raw": "ea2a3da7124f4eea93b2b5d053a06d03d1d336bc03559298ea79bf586eeb5ba2"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.088128",
+  "job_id": "ADV_001-pairwise-generic_llm_raw-full_A",
+  "prompt_sha256": "8206057bd77502b2c00d4cbe74b5fe509c513f47996eb7619071ef6a6c3e036b",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479671-vw6ZQUxkN6yVV4ZjzXcX",
+  "started_utc": "2026-11-12T10:34:31.166437+00:00",
+  "completed_utc": "2026-11-12T10:34:39.204960+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 陕西理科，509分，位次4万，想考公，希望留在西安，家庭条件一般，帮妹妹选学校和专业\n- Task Family: ADV\n- Variant: complete\n\n## Output A:\n好的，我来帮你妹妹分析一下。关于陕西2024年高考情况和考公专业选择，我整理了以下建议。\n\n---\n\n## 2024年陕西高考参考数据\n\n- 理科一本线：475分\n- 妹妹分数：509分（超一本线34分）\n- 位次：约4万名\n\n---\n\n## 推荐策略：稳体制 × 保就业 × 低学费\n\n考虑到家庭条件一般 + 想考公 + 想留西安，核心原则是：**选个好考公的专业，进可考编上岸，退可去企业就业，学费还不贵。**\n\n### 一、专业推荐（按推荐度排序）\n\n| 推荐 | 专业 | 考公优势 | 企业就业 | 学习难度 |\n|:---:|:---|:---|:---|:---:|\n| ★★★★★ | **会计学/财务管理** | 财政局、税务局、审计局、各单位财务，岗位超多 | 企业刚需，就业面极广 | 中等 |\n| ★★★★☆ | **计算机科学与技术** | 政务数字化、大数据局、网信办 | 工资最高，就业火 | 偏难 |\n| ★★★★☆ | **经济学/经济统计学** | 发改委、统计局、税务、人行 | 银行、企业都可去 | 中等 |\n| ★★★☆☆ | **法学** | 法院、检察院、司法局、公安，是考公大户 | 考不上公则就业面窄（需过法考） | 偏难 |\n| ★★★☆☆ | **汉语言文学** | 综合岗、文秘、宣传、党建 | 就业一般 | 较易 |\n\n> **特别推荐会计学**——这是最契合家庭条件一般+考公需求的选择：公办一科学费才5000-6000元/年；考公招录人数排前三，岗位分布在财政、税务、审计、甚至公检法的财务岗；万一考不上公务员，企业对小会计的需求永远不会少，就业双保险。\n\n### 二、西安可选学校（按把握度排列）\n\n位次4万在西安能上的公办一本主要有这些：\n\n| 学校 | 预估位次区间 | 把握度 | 推荐报考专业 |\n|:---|:---:|:---:|:---|\n| **西安工程大学** | 4万-4.8万 | ★★★★★ **稳妥** | 会计学、财务管理、经济学、法学 |\n| **西安工业大学** | 3.7万-4.4万 | ★★★★☆ **可报** | 会计学、经济学、计算机 |\n| **西安财经大学** | 3.8万-4.6万 | ★★★★☆ **可报** | **会计学（这个学校财经类专业最有特色）** |\n| **西安石油大学** | 3.6万-4.3万 | ★★★☆☆ **可冲** | 会计学、计算机、经济类 |\n| **西安科技大学** | 3.5万-4万 | ★★★☆☆ **可冲** | 计算机、会计学 |\n| **陕西科技大学** | 3.4万-4万 | ★★☆☆☆ **冲一冲** | 会计学 |\n| **西安文理学院** | 4.2万-5万 | ★★★★☆ **保底** | 汉语言文学、会计学 |\n\n### 三、我的方案建议\n\n**最佳方案：西安财经大学的会计学**\n\n理由：西安财经大学的会计学是它的王牌专业，在陕西体制内认可度很高。位次4万左右刚好在录取范围内。会计学考公岗位多、企业就业也好，是最稳妥的选择。\n\n**冲刺方案：西安工业大学的计算机/会计学**\n\n如果对计算机有兴趣，西安工业大学的计算机性价比很高，以后考公（政务数字化岗）和去企业都能走。\n\n**稳妥方案：西安工程大学的会计学**\n\n工程大学录取位次更宽裕，会计学专业同样好考公，4万名进去比较稳。\n\n### 四、家庭条件相关提醒\n\n- 这些学校都是**公办一本**，学费5000-6000元/年，住宿费800-1200元/年\n- 录取时**避开中外合作办学专业**（学费2-6万/年）\n- 可以查看学校是否有**贫困生助学金**和**勤工助学**机会\n\n---\n\n**总结：** 如果是我妹妹，我会优先推荐 **西安财经大学的会计学或财务管理**，进可考公进体制（财政/税务/审计），退可去企业做财务，毕业找工作不愁。如果分数不够财大，**西安工程大学的会计学**做稳妥保底。\n\n需要我再详细说说某个学校或专业的报考细节吗？\n\n## Output B:\n根据你妹妹的情况，她的成绩、位次和家庭条件，以下是一些建议：\n\n1. **学校选择**：\n   - **西安理工大学**：该校以理工科为主，有不错的专业，录取分数线相对较低，适合你妹妹的分数。\n   - **西安建筑科技大学**：该校以建筑、土木等专业闻名，也适合理科生报考，分数线也相对适中。\n   - **西安科技大学**：该校以地质、矿业等专业为主，分数线适中，可以考虑。\n   - **西安石油大学**：该校以石油相关专业为主，分数线相对较低，可以考虑。\n\n2. **专业选择**：\n   - **计算机科学与技术**：这个专业就业前景好，薪资水平高，适合理科生报考。\n   - **电子信息工程**：这个专业也是理工科的热门专业，就业前景好。\n   - **机械工程**：这个专业也是理工科的传统专业，就业前景稳定。\n   - **建筑学**：这个专业需要一定的艺术天赋，但就业前景也很好。\n   - **土木工程**：这个专业就业前景稳定，薪资水平也不错。\n\n3. **考虑家庭条件**：\n   - 考虑到家庭条件一般，可以选择一些学费相对较低的学校和专业，减轻家庭负担。\n\n4. **考虑就业前景和个人兴趣**：\n   - 选择专业时，除了考虑就业前景，也要充分考虑个人兴趣和特长，这样才能在未来的学习和工作中发挥出最大的潜力。\n\n5. **考虑地理位置**：\n   - 你提到希望留在西安，因此选择学校时可以优先考虑西安本地的高校。\n\n6. **考虑公务员考试**：\n   - 如果你妹妹有意向考公务员，那么选择一些和公务员工作相关的专业，如行政管理、法学等，可能会有所帮助。\n\n最后，建议多咨询一些学校的招生办公室，了解具体的录取分数线和专业情况，同时也可以考虑参加一些教育展或者咨询会，了解更多信息。希望这些建议对你妹妹有所帮助。\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "8c820d3e175e7b9b22e950460b2fed715b893d6de357970984c99a39305f3751",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794479671-vw6ZQUxkN6yVV4ZjzXcX\",\"object\":\"chat.completion\",\"created\":1794479671,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"preference\\\": \\\"A\\\",\\n  \\\"rationale\\\": \\\"Output A is much better. It addresses every constraint the user gave: civil-service goals, staying in Xi'an, limited family finances, and the score and rank. It names concrete schools with estimated rank ranges and labels each as a reach, a fit or a safety option. It recommends majors that suit civil-service exams (accounting, economics, law) and gives a clear plan, plus cost advice such as avoiding Sino-foreign joint programs and looking into financial aid. Some numbers are estimates, and calling Xi'an University (西安文理学院) a public first-tier school is a minor error. Output B is generic. Its school picks are questionable: Xi'an University of Architecture and Technology and Xi'an University of Technology likely require a better rank than about 40,000. Its main major suggestions are engineering fields that fit civil-service exams poorly, and only its final note briefly mentions related majors. It also gives no concrete guidance on admission likelihood or costs.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the accuracy of the figures in Output A. Shaanxi still used the 文理 split in 2024, and I think its 理科 first-batch undergraduate cutoff was 475, which fits the 509 score mentioned. I'm also looking at how the school rankings line up.\\n\\nI'm checking the remaining accuracy points: 陕西科技大学's 3.4–4万 range looks reasonable, but 西安文理学院 is mostly a 二本 school, not a 公办一本, so that's a minor error. Overall, Output A is clearly more useful. Output B's picks of 西安建筑科技大学 and 西安理工大学 probably need a higher rank, and its engineering majors don't line up with 考公 goals, so A wins.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the accuracy of the figures in Output A. Shaanxi still used the 文理 split in 2024, and I think its 理科 first-batch undergraduate cutoff was 475, which fits the 509 score mentioned. I'm also looking at how the school rankings line up.\\n\\nI'm checking the remaining accuracy points: 陕西科技大学's 3.4–4万 range looks reasonable, but 西安文理学院 is mostly a 二本 school, not a 公办一本, so that's a minor error. Overall, Output A is clearly more useful. Output B's picks of 西安建筑科技大学 and 西安理工大学 probably need a higher rank, and its engineering majors don't line up with 考公 goals, so A wins.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSrwoKEAgTGAI4AUIIdGhpbmtpbmcSDD40bvT0RO1+7ubYsxoM7zJB7zLQPZ2VpzotIjCfd61H/yY/XwKFn1XzcZ27NA6NwBaay/K87mcu5xDq5rtt+QyLkONRG9c2pidOBDkqzAltOK/NxHT/tiq92Sz6XSVm8tmpTOsWaTTC+awcg0nzNQzWFxIx8O0DLmwJWLQVYlcSYTLYAmUdvISQ96CUC9odLT/zQjZ7esXpWOX6FCWPhwQBdNX1lBvyEsEpgjcaJAsiBahIe/Hf6Q5c+dxAn2I96ZIpN9Ri2/jwzt+/aMAUC7mlVhIYSpvVxYLIOHD+Ye83u5RhY74aTEOItWbAjlLKv8Pkw3CBLUyfpv5gk/aGZr6L1v/pa6NFBJJEYT6z/ol4qlWXOssvPHqlhqFcRsca5qOQhKUGeEm9qydBT5BkrlhrBm0Ery3aLuwWL1PrmPydvvBwxQgv+7I/rDYASImCs5416dvn6y+hC+65ukL1n/Qzg/efqm/ZYkQAFmYJOKZGr4JEQu74EH4RmQtzQ63bLCNoLxRiG+Q8ejEHEjoyI6TbgHQAMU8jrxmj8yRkVqFP3j/yPi+n2FD91G55GqUY+uNAT+ESntLCfBvk4h1S7U2XvkPdBtwxb409T5hNh1MrlgoZ5NBslUXs4AhiWS8CuQrxGrfHBnbdxKS4g7lcgKqjJh23f0AAgAWEsyaMtOftWJkmnSeztvH9RVMcGa0pmP4RevM9552HiQF2v0RkxEg9H6M7T6+12e7nVU6mJj6WeUvkFz5/3WyXC8tyr/RnKrLgKhVAM/6j16jHd1nTvnR1gx+KJKBEaWU3oYCpnKECrqacEOoR4i5x567DILLveDsBaEhHXBNLlgG/HOFEZUH8pjennxjackA6gBceeMTmmLzrAjgGPx8xoqxMgC5xIaHW4nlgGN3PsrXUoRgPcK1SfrtwuIgz0ajchotbh+Fx09+4vnv3M4vW2Vu9qRKQ0ZamrmwPylEdTto9CsEBPqBNA/B2JXssMpMoAcmxwb6Xa+dlc7Pj8tq/+etXb9PMyTj5mim7TxI2oYGmOCdsJJqfgYY3gmlOPGqV+/ptdTy7zYz/p2x/Xeuq7cQlg73vtnlh4nU9Qf9SKcKBrLy72+FA4yo0oo4x0Sy1f1YjDca3iSgf5KGak1DULOYd3gHDc6oaJKCed98uHdBqCp1feWeiQCIV9bPvnba0ZOCfp/vjQggx3UEmttzcounpJeiCIBGrbpp0QSSph45s4Sc9J5foC/6+GnkI5Lzu6I8V2nex8mbiuK1Ff3efxQ31xeQ0sjHHRlr3xdrozybqon1XNVyRWKYgkkGeTn9KVcgGj3aebx9iXNAF7JSbNVgDliAxU9uw7UBm+9FzYFhdH29hXQkrfeEe9yOzVdDEQhPMwK6JA8iEKrBtU9LLlLLDG0zk69aQqwwoIJQ45tcpkzzoMYoL1pA7uO/qcXV3MpEFpW8qLg/EKWoJSi7bJbAnUk0Ic/burfvYCEN4qtfqOQOYF2jMTC7W+uCyELVcruk038JMO/+bZl0gHyVmnA62NsuR7TSvhvv4a5hbzooFaGC6J+hC5+0nHmB3Bw6B9bd8r59hMD9LQlEKwmiOQY2PjsMN2tdDM5ABuzKxuujCJiQIulw8dQM7JV/ppqr+5GTM3nQa1IOKKYsHdlhH56BGccaSxkLmSzNNhRvm3UhaqoXwBG5NsjQDmu1RTrtaNmlsNFnU+WUeeOOiP8zO3eHbpYQLnvaLL5X8rRaKfi5bGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2569,\"completion_tokens\":629,\"total_tokens\":3198,\"cost\":0.022856,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.022856,\"upstream_inference_prompt_cost\":0.010276,\"upstream_inference_completions_cost\":0.01258},\"completion_tokens_details\":{\"reasoning_tokens\":292,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "A",
+    "rationale": "Output A is much better. It addresses every constraint the user gave: civil-service goals, staying in Xi'an, limited family finances, and the score and rank. It names concrete schools with estimated rank ranges and labels each as a reach, a fit or a safety option. It recommends majors that suit civil-service exams (accounting, economics, law) and gives a clear plan, plus cost advice such as avoiding Sino-foreign joint programs and looking into financial aid. Some numbers are estimates, and calling Xi'an University (西安文理学院) a public first-tier school is a minor error. Output B is generic. Its school picks are questionable: Xi'an University of Architecture and Technology and Xi'an University of Technology likely require a better rank than about 40,000. Its main major suggestions are engineering fields that fit civil-service exams poorly, and only its final note briefly mentions related majors. It also gives no concrete guidance on admission likelihood or costs."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 2569,
+    "completion_tokens": 629,
+    "total_tokens": 3198,
+    "cost": 0.022856,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.022856,
+      "upstream_inference_prompt_cost": 0.010276,
+      "upstream_inference_completions_cost": 0.01258
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 292,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.022856,
+  "elapsed_sec": 8.038558959960938,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

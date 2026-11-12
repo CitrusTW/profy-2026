@@ -1,17 +1,14 @@
 # STATUS
+- Updated (America/Los_Angeles): 2026-11-12T02:49:34.540325-08:00
+- Last applied instruction: I-003 (in progress)
+- Latest read: I-003; checkpoint: I003-watcher-startup
+- Current work: frozen xlsx round11, fixed eight-task order, all Profy solving/grading serial; I003 Claude ADV rejudge may run alongside Profy.
+- Next: retain completed runs; rerun only the I003-authorized failed setup; at most three passes. No new evolution.
+- Deadline: 13:30 PST no new run; paper copy then; final report/PDF by15:30 PST.
+- ETA: unknown. ADV archive audit complete; fresh judge progress below. Profy USD unknown; no recharge.
 
-- 更新时间（美国太平洋时间）：2026-11-12T02:42:44.060925-08:00
-- 已执行到的最后一条指令编号：I-002
-- 最新读到的指令：I-003; INSTRUCTIONS SHA256 5c62651db2150ef32370b536c557a80b23d13b228c527783b098224b978503fc
-- 触发节点：I003-adapter-repair-and-judge-limit-questions
-- 当前任务：xlsx第11轮冻结版、8题全串行广度优先; 不再进化。当前首题冻结版正在运行或后续三组顺序运行, 详见运行表。
-- 下一步：每题三组第一遍后再补第二遍/第三遍; shock-demand只补冻结版、不重跑旧基线。I-002截止13:30 PST, 15:30交付。
-- 时间实现：当前launch-03不强杀; 结束后I-002延续控制器跳过已完成记录、补齐最多第三遍; 截止13:30 PST。
-- 预计剩余时间：第1部分unknown（任务耗时尚不足以预测）; 第2部分已完成; 第3部分13:30 PST开始或任务全部完成后开始。
-- 累计费用或额度：Profy美元账单unknown; 本夜OpenRouter新调用0。
-
-## 已完成的运行
-| 任务 | 组别 | 第几次 | 状态 | strict reward | 通过/失败/跳过 | total tokens | 秒 |
+## Completed attempts (old setup failures retained)
+| Task | Condition | Rep | Status | Strict | Pass/fail/skip (receipt) | Tokens | Solver seconds |
 |---|---|---:|---|---|---|---:|---:|
 | shock-analysis-demand | with-skills | 1 | runner_limit | unknown | unknown/unknown/unknown | 1168850 | 836.448 |
 | shock-analysis-demand | no-skills | 1 | scored | 0 | 3/2/0 | 839001 | 760.071 |
@@ -22,30 +19,36 @@
 | reserves-at-risk-calc | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 44912 | 278.424 |
 | reserves-at-risk-calc | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 44956 | 276.649 |
 | shock-analysis-demand | with-CogniLife-skills | 1 | scored | 0 | 0/5/0 | 885699 | 731.195 |
-| shock-analysis-supply | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 73630 | 182.307 |
+| shock-analysis-supply | no-skills | 1 | scored(supplement) | 0 | 1/8/0 | 73630 | 182.307 |
 | shock-analysis-supply | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 100269 | 202.705 |
 | shock-analysis-supply | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 104019 | 181.555 |
+| reserves-at-risk-calc | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 27292 | 186.075 |
+| reserves-at-risk-calc | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 1.835 |
+| reserves-at-risk-calc | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 1.99 |
+| xlsx-recover-data | no-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 1.96 |
+| xlsx-recover-data | with-CogniLife-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 3.65 |
+| xlsx-recover-data | with-skills | 1 | infrastructure_failure | unknown | unknown/unknown/unknown | 0 | 2.455 |
 
-## 第2部分 ADV20
-- 已完成, 无生成或judge新调用。
-- overall: Raw 3.88; Prompt 4.03; Full 4.43.
-- Full−Prompt mean 0.40, bootstrap95% CI [0.23, 0.60]; higher/lower/tie 16/1/3.
-- ADV Full评分与当前回答没有hash绑定; 20个Full评分/偏好时间字段早于当前保存回答。时间字段无时区, 不能据此推断真实时钟同步或作者行为; 当前回答与评分的版本对应仍无法核实。
+## ADV20: I003 supersedes use of old Full scores
+- Old Full rubric/pairwise scores are proxy-output audit records. They will not support ANY revised-paper Full conclusion.
+- New judge: anthropic/claude-opus-5.5; original Listing1/2; hashes bind actual saved outputs to every request/response; no regenerated answers.
+- Primary jobs observed: 98/140; calls: 114; failed calls: 23. Received cost USD2.654128; unknown-cost calls0.
+- Registered primary-call conservative ceiling11.200208 USD, total ceiling15 USD. A ceiling is not an observed bill.
+- Some Full rubric calls hit1024 output tokens (including reasoning); no partial JSON scores used. Uniform rubric repair requested, no unapproved parameter change.
 
-## 第3部分 论文修订副本
-- 尚未修改或复制论文。已准备构建脚本, 会按I-002与最终结果更新后执行。
-- 原Overleaf/OpenReview未操作; 原论文项目未改。
-- 新PDF目标路径 results/2026-11-12_overnight/paper_rev/, 仅PDF和改动清单, 不提交LaTeX。
+## Paper revision copy
+- Not created yet; original project/Overleaf/OpenReview untouched. Start per I002 at13:30 PST.
+- I003: use only successful fresh-judge data; if incomplete/omitted, remove Full judge-comparison claims and flag user decision. Never fill gaps with old scores.
+- Deliver only PDF and change ledger under results/2026-11-12_overnight/paper_rev; no LaTeX in Git.
 
-## 异常与决定
-- 本轮原PREREG已按用户直接修正变更为8题广度优先; I-001/I-002再接管, 变更保留在DECISIONS.md和预注册修正, 不覆盖旧版本。
-- launch-01本机DNS受限, 72次客户端提交没有创建session或模型调用; 不算实验run, 无0分。
-- launch-02修正前已开始一次重复shock-demand no-skills; 收到用户不重跑的修正后中止, 不计成绩, 保留466072个已观察tokens消耗及完整轨迹, 美元unknown。
-- shock-demand原no-skills回执3passed/2failed, stdout5passed/2failed; 本夜冻结版回执0passed/5failed, stdout7failed。两份原reward均0不变, receipt与stdout分列, 不修改verifier。原版中止无评分, 不比较中止tokens。
-- 原24轮上限保持不变。原始limit无评分, 两种口径只在分析时处理。
-- 未接通capability-gap classifier、通用semantic applicability和native promotion; 外部adapter不是官方Docker。xlsx11进化/当前求解为gpt-6.1-sol; 首个threejs历史反例进化为gpt-4.1, 需要单独披露。
-- STATUS/STATUS_LOG和PROGRESS是协议明确要求更新的管理文件; 原论文、已有实验记录、已发布数据结果不覆盖。
-- 发现ADV版本对应问题将如实报告, 不把无法绑定的评分冒称当前平台输出的评分。
+## Exceptions and decisions
+- I003 pin fix queries active distribution version/location in the same task Python. Pins, dependencies, skills,24-turn cap and original verifier unchanged. Old failed setups remain in the evidence.
+- Existing powerlifting three-arm first pass finished before the safe controller boundary. No active solving/grading was killed.
+- Supply A had pure tool_search with no skill read: original verifier supplemented without solving/answer changes. B/C supplied-skill reads before discovery await scope clarification.
+- Original receipt/pytest counts disagree on shock-demand; both retained, reward unchanged. See count-audit sidecars.
+- Capability-gap classifier, general applicability and native promotion not connected. Native Linux adapter is not official Docker. Historical first threejs evolution usedgpt-4.1; current xlsx11/solving usegpt-6.1-sol.
+- Earlier DNS-only submissions created no model sessions; one superseded baseline interrupted on direct user amendment, excluded from results, observed466072 tokens retained. USDunknown.
+- New adapter and judge questions below are sent to the authorized reviewer; all original artifacts preserved.
 - 待审核者指令: [REVIEW_QUESTION_I003_judge_output_limit.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_I003_judge_output_limit.md)；现有原始记录保留, 尚未改adapter。
 - 待审核者指令: [REVIEW_QUESTION_I003_tool_search_scope.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_I003_tool_search_scope.md)；现有原始记录保留, 尚未改adapter。
 - 待审核者指令: [REVIEW_QUESTION_pip_pin_check.md](../../results/2026-11-12_overnight/REVIEW_QUESTION_pip_pin_check.md)；现有原始记录保留, 尚未改adapter。

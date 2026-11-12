@@ -1,0 +1,42 @@
+[
+  {
+    "round": 12,
+    "task": "weighted-gdp-calc",
+    "role": "development",
+    "tests": 27,
+    "passed": 27,
+    "strict": 1,
+    "tokens": 138896,
+    "source": "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-owned-evolution-v2/evolution/round-12/ROUND.json"
+  },
+  {
+    "round": 12,
+    "task": "weighted-gdp-calc",
+    "role": "confirmation",
+    "tests": 27,
+    "passed": 27,
+    "strict": 1,
+    "tokens": 135746,
+    "source": "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-owned-evolution-v2/evolution/round-12/ROUND.json"
+  },
+  {
+    "round": 12,
+    "task": "protein-expression-analysis",
+    "role": "validation",
+    "tests": 6,
+    "passed": 6,
+    "strict": 1,
+    "tokens": 180448,
+    "source": "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-owned-evolution-v2/evolution/round-12/ROUND.json"
+  },
+  {
+    "round": 13,
+    "task": "weighted-gdp-calc",
+    "role": "development",
+    "tests": 27,
+    "passed": 27,
+    "strict": 1,
+    "tokens": 224533,
+    "source": "01_\u4efb\u52a1\u7ed3\u679c/2026-11-11_skillsbench_cloud_serial/xlsx-family/native-owned-evolution-v2/evolution/round-13/ROUND.json"
+  }
+]

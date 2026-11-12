@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_001",
+  "baseline": "generic_llm_expert_prompt",
+  "order": "full_B",
+  "system_a": "generic_llm_expert_prompt",
+  "system_b": "profy_expert_full",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "4fdc294fd8251592fb7605ad5a573e1abba2a6e7166b9a311c2caffba76258aa",
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9"
+  },
+  "visible_output_sha256": {
+    "generic_llm_expert_prompt": "4fdc294fd8251592fb7605ad5a573e1abba2a6e7166b9a311c2caffba76258aa",
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.096016",
+  "job_id": "ADV_001-pairwise-generic_llm_expert_prompt-full_B",
+  "prompt_sha256": "1db0bd9fab6cd57463ac12e812d9aa33d626444dc7ff67240758ec20281fae94",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479695-B2y1Q0OQSe4ocihKwGQ6",
+  "started_utc": "2026-11-12T10:34:55.639422+00:00",
+  "completed_utc": "2026-11-12T10:35:03.100432+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 陕西理科，509分，位次4万，想考公，希望留在西安，家庭条件一般，帮妹妹选学校和专业\n- Task Family: ADV\n- Variant: complete\n\n## Output A:\n根据您提供的信息，您的妹妹在陕西省高考理科取得了509分，位次大约在4万，想要留在西安读大学，并有考上公务员的打算。我会根据这些条件，给出一些建议来帮助她选择合适的学校和专业。\n\n### 1. 学校选择\n\n考虑到分数和位次，以及留在西安的意愿，以下是一些建议的学校：\n\n**西安理工大学**：以工科为主，同时也提供管理类和文科专业，适合理科生。\n\n**西安科技大学**：提供多个学科的专业选择，特别是在工程和科技领域。\n\n**西安建筑科技大学**：在建筑和土木工程领域有较强的实力。\n\n**西安工程大学**：以工程为主，提供多样化的专业选择。\n\n**西安邮电大学**：在通信和信息技术领域有特色。\n\n**西北政法大学**：如果您的妹妹对法律专业感兴趣，这是一所不错的选择，法律专业也是公务员考试的热门专业之一。\n\n**西安财经学院**：对于经济和管理类专业感兴趣的学生，这所学校提供了良好的教育。\n\n### 2. 专业选择\n\n考虑到公务员考试，以下是一些建议的专业：\n\n**法学**：公务员岗位中法律相关职位较多，法学专业适合公务员考试。\n\n**行政管理**：公务员系统中行政管理职位较多，行政管理专业对口。\n\n**汉语言文学**：适合从事文字工作和政策研究的岗位。\n\n**经济学、财政学**：经济学和财政学专业适合财政、税务等经济管理部门的公务员岗位。\n\n**计算机科学与技术**：随着信息化的发展，计算机专业在公务员系统中需求也在增加。\n\n**工程管理**：适合从事工程项目管理的岗位。\n\n**会计学**：适合财政、审计等经济管理部门的公务员岗位。\n\n### 3. 综合考虑\n\n- **就业前景**：选择那些就业前景较好的专业，可以为公务员考试提供更多机会。\n- **个人兴趣**：考虑妹妹的个人兴趣和特长，选择她喜欢并擅长的专业。\n- **家庭条件**：如果家庭条件一般，可以考虑那些学费相对较低的专业和学校。\n- **学校实力**：选择那些在特定领域有较强实力的学校，可以为公务员考试和未来就业提供更好的平台。\n\n### 4. 注意事项\n\n- **分数匹配**：根据509分的实际分数，参考往年各大学的录取分数线，确保选择的学校和专业是实际可行的。\n- **政策变化**：公务员考试的政策和要求可能会变化，需要持续关注最新的公务员招聘信息。\n- **备选方案**：除了公务员考试，也可以考虑其他职业路径，如企业就业等，为未来职业规划提供更多选择。\n\n最后，建议与您的妹妹进行深入沟通，了解她的兴趣和职业规划，结合以上建议，做出最合适的选择。同时，也可以咨询学校的招生办公室或者专业的职业规划顾问，获取更多个性化的建议。\n\n## Output B:\n好的，我来帮你妹妹分析一下。关于陕西2024年高考情况和考公专业选择，我整理了以下建议。\n\n---\n\n## 2024年陕西高考参考数据\n\n- 理科一本线：475分\n- 妹妹分数：509分（超一本线34分）\n- 位次：约4万名\n\n---\n\n## 推荐策略：稳体制 × 保就业 × 低学费\n\n考虑到家庭条件一般 + 想考公 + 想留西安，核心原则是：**选个好考公的专业，进可考编上岸，退可去企业就业，学费还不贵。**\n\n### 一、专业推荐（按推荐度排序）\n\n| 推荐 | 专业 | 考公优势 | 企业就业 | 学习难度 |\n|:---:|:---|:---|:---|:---:|\n| ★★★★★ | **会计学/财务管理** | 财政局、税务局、审计局、各单位财务，岗位超多 | 企业刚需，就业面极广 | 中等 |\n| ★★★★☆ | **计算机科学与技术** | 政务数字化、大数据局、网信办 | 工资最高，就业火 | 偏难 |\n| ★★★★☆ | **经济学/经济统计学** | 发改委、统计局、税务、人行 | 银行、企业都可去 | 中等 |\n| ★★★☆☆ | **法学** | 法院、检察院、司法局、公安，是考公大户 | 考不上公则就业面窄（需过法考） | 偏难 |\n| ★★★☆☆ | **汉语言文学** | 综合岗、文秘、宣传、党建 | 就业一般 | 较易 |\n\n> **特别推荐会计学**——这是最契合家庭条件一般+考公需求的选择：公办一科学费才5000-6000元/年；考公招录人数排前三，岗位分布在财政、税务、审计、甚至公检法的财务岗；万一考不上公务员，企业对小会计的需求永远不会少，就业双保险。\n\n### 二、西安可选学校（按把握度排列）\n\n位次4万在西安能上的公办一本主要有这些：\n\n| 学校 | 预估位次区间 | 把握度 | 推荐报考专业 |\n|:---|:---:|:---:|:---|\n| **西安工程大学** | 4万-4.8万 | ★★★★★ **稳妥** | 会计学、财务管理、经济学、法学 |\n| **西安工业大学** | 3.7万-4.4万 | ★★★★☆ **可报** | 会计学、经济学、计算机 |\n| **西安财经大学** | 3.8万-4.6万 | ★★★★☆ **可报** | **会计学（这个学校财经类专业最有特色）** |\n| **西安石油大学** | 3.6万-4.3万 | ★★★☆☆ **可冲** | 会计学、计算机、经济类 |\n| **西安科技大学** | 3.5万-4万 | ★★★☆☆ **可冲** | 计算机、会计学 |\n| **陕西科技大学** | 3.4万-4万 | ★★☆☆☆ **冲一冲** | 会计学 |\n| **西安文理学院** | 4.2万-5万 | ★★★★☆ **保底** | 汉语言文学、会计学 |\n\n### 三、我的方案建议\n\n**最佳方案：西安财经大学的会计学**\n\n理由：西安财经大学的会计学是它的王牌专业，在陕西体制内认可度很高。位次4万左右刚好在录取范围内。会计学考公岗位多、企业就业也好，是最稳妥的选择。\n\n**冲刺方案：西安工业大学的计算机/会计学**\n\n如果对计算机有兴趣，西安工业大学的计算机性价比很高，以后考公（政务数字化岗）和去企业都能走。\n\n**稳妥方案：西安工程大学的会计学**\n\n工程大学录取位次更宽裕，会计学专业同样好考公，4万名进去比较稳。\n\n### 四、家庭条件相关提醒\n\n- 这些学校都是**公办一本**，学费5000-6000元/年，住宿费800-1200元/年\n- 录取时**避开中外合作办学专业**（学费2-6万/年）\n- 可以查看学校是否有**贫困生助学金**和**勤工助学**机会\n\n---\n\n**总结：** 如果是我妹妹，我会优先推荐 **西安财经大学的会计学或财务管理**，进可考公进体制（财政/税务/审计），退可去企业做财务，毕业找工作不愁。如果分数不够财大，**西安工程大学的会计学**做稳妥保底。\n\n需要我再详细说说某个学校或专业的报考细节吗？\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "541195e8a5cb03be07b21a8fd5531966d7949e64a5f7578b4a8ef92c6a577c56",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794479695-B2y1Q0OQSe4ocihKwGQ6\",\"object\":\"chat.completion\",\"created\":1794479695,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"preference\\\": \\\"B\\\", \\\"rationale\\\": \\\"B is more useful because it is specific and actionable. It anchors 509 against the 2024 Shaanxi first-tier cutoff (475) and tiers Xi'an public universities into reach, match and safety picks with rough rank ranges. It also ranks majors by civil-service fit and backup job prospects, and gives concrete family-budget advice: typical tuition and steering clear of costly Sino-foreign programs. B's rank estimates are approximate and should be checked against official data, but the guidance is far more decision-ready. A stays generic, gives no rank or tier analysis, and uses an outdated school name (西安财经学院). A also suggests 西北政法 without checking whether it is reachable at this rank.\\\"}\",\"refusal\":null,\"reasoning\":\"Judging B as the more specific and actionable option. Checking the facts: 2024 Shaanxi still used the old gaokao, and the 理科本科一批 cutoff I recall is 475, which seems right. The position estimates look plausible but may be off, since 西安科技大学 might rank higher than I'm assuming.\\n\\nI'm weighing whether 西北政法 at 509 is realistic for a science-track student, since its law programs usually sit around 520 to 540 and might be a stretch. I also notice option A uses the outdated name 西安财经学院 and gives no concrete detail on 行政管理 or 汉语言文学, so B still looks stronger.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"Judging B as the more specific and actionable option. Checking the facts: 2024 Shaanxi still used the old gaokao, and the 理科本科一批 cutoff I recall is 475, which seems right. The position estimates look plausible but may be off, since 西安科技大学 might rank higher than I'm assuming.\\n\\nI'm weighing whether 西北政法 at 509 is realistic for a science-track student, since its law programs usually sit around 520 to 540 and might be a stretch. I also notice option A uses the outdated name 西安财经学院 and gives no concrete detail on 行政管理 or 汉语言文学, so B still looks stronger.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQS0wkKEAgTGAI4AUIIdGhpbmtpbmcSDOwVLJomP60GH7/oRxoMieYQNyGqiuXRHAsdIjBEEoW7r4Rr06/R7OapgKufdny3gzmneg628ZIjyXr+Eoy3Agi6b6beDtgE3T2ZVlEq8AifcA1UIxmyYkVbYSI1yjdOG4EWaSrLVMBlC1WSDpQHa1PJy9OA2xgi5PGohZtKw313diheTlYNHqKVayYKeDyZy3deQbYYHtmlVnttxH66MONjsdbYanhqLvhwlHUynZjnYelGT1LshiqeU+Ho83hSEdhfOFKiVsQGrt6yThWvxJae2GZfB+2FafMp2fEp7lnexlmNl8q8F7ya9KjYf7nHXeCcJorrd+kMNevAAeWHIAOUMvRW6VQ2dEyqtxRrdyYbdxtxeHRWKu/WXtvID3pUG7w6PIF8oeRByxBc/1fsazugvCbaUNIRuMi2q1l9+bmKgXV/Wbil3CvyctQfagdGCyQT4cKDh+dBb8kazQWIR+ntCRC0yb1JaIapiA3AXgHlzcN1XaUJKVKeYdCCSB6cNLR2xPRC3SyWGdiAzjtyRgywxq6u/3VhuBKS4fX9K61aZrtuRUMRyDIEk6+tgiWhrm85/5sL8DZpsk8EvjA4ma1n+H0v1+Ce3dw8AC64UJvx11P3hNSfk+bFKPtKrBcW5kLYbYv2KHoZIGZUmrQ97qQnNXJw/F1Oz5E5LEuPHcu06/h4q0UfTPOVS3gvZgSEc0WBdAtgMqo4TYfBvCtojtJpXdUmu33dzgghrd7QDMmF0WZoeJP/lEKU6+yN+P7unhF1ybzSl3O7Y+XDAmRHC3E1P/30vagXFT9J6sLBA6zVCKphDqZmG95lVDD9iLIB3krfp1dYoL8zoa0AebgNy7a4KCj0XnNDgsxg3LI5k6mLQ5k9fnzrZoorBWLOwwdXx+DzH3WsVvNXOkOAe5jLgWCIrGPvJBVaUP8ZczCzHisoWSfbLBuKlvAloDz/0FaFDi0/tKnRyaSM1YaUk4A10rnHk0JM50DuA7Ko0uSbE+M9DCbLxhHjsv9Jwsh5fvGeeHKJFXTondy/KPMt+Ya0RGJIUgZ2W+gYMHjKACFtne36kluXgk0vPNfmYOUlP4RcLhWw5H22+bNBqaXRqh+CDwIiKUcN81wbqsVARP6cpz5YMu22n9RvXpZzfbBKzH6LfdxnzgiPxgoAzTxDEnd2qgjCi3hkzMA8CXCn4lQsGDE0VLNZmkjtFODb+15llOWJZk9+cJjWvERjEHFDSe1yPxa1OZanrGxPBhPfG7TKrzpuShktfJh+XijrZQVNGsfvkfoMZKkj2j2mx2UroQRE8mnjJGkhnDf9xpXn37IlkjCE4W8VJIb2lCGUea5oKxgOFSngBa7Q/x0NVcwM60KZgEnZHVNGoyOYDJpAcZy+8ct4QoMUU1JpCtqBQMsw1TmvIwgDB6ldSIn3xyBszor3pu+D0i7YZvLYe9+nNNBs3OQXVbmmcgZ874P9OxvoBLX7M+G7ve8+D5Jh8MiZy0Gwb8JPYX4dDd7TmIsc9nM93pGUviyuDP/an0BhYgx3nQ/HAl0LfIsDdFb7Xzx3bK2/mRu8XI6+x1R16a3tkbdG3o0J/8Ca8XSW3CL/f/TtzRcuqRmpXnFoTpuT2oEWpvRT+BgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2901,\"completion_tokens\":504,\"total_tokens\":3405,\"cost\":0.021684,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.021684,\"upstream_inference_prompt_cost\":0.011604,\"upstream_inference_completions_cost\":0.01008},\"completion_tokens_details\":{\"reasoning_tokens\":258,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "B",
+    "rationale": "B is more useful because it is specific and actionable. It anchors 509 against the 2024 Shaanxi first-tier cutoff (475) and tiers Xi'an public universities into reach, match and safety picks with rough rank ranges. It also ranks majors by civil-service fit and backup job prospects, and gives concrete family-budget advice: typical tuition and steering clear of costly Sino-foreign programs. B's rank estimates are approximate and should be checked against official data, but the guidance is far more decision-ready. A stays generic, gives no rank or tier analysis, and uses an outdated school name (西安财经学院). A also suggests 西北政法 without checking whether it is reachable at this rank."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 2901,
+    "completion_tokens": 504,
+    "total_tokens": 3405,
+    "cost": 0.021684,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021684,
+      "upstream_inference_prompt_cost": 0.011604,
+      "upstream_inference_completions_cost": 0.01008
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 258,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.021684,
+  "elapsed_sec": 7.4610559940338135,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

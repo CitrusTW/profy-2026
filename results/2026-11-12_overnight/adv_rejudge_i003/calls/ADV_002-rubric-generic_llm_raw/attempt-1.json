@@ -1,0 +1,78 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_002",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "1b3beab78cef1f15fab83da41b69a3803389dfe0fc2c485d959b610b30c41c96"
+  },
+  "calculated_cost_ceiling_usd": "0.060208",
+  "job_id": "ADV_002-rubric-generic_llm_raw",
+  "prompt_sha256": "a2d50125b2268ce23a442317251495691bb246bcb994ffc3065e4dc8cafc3ba1",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479703-ZaTssAVLA7ifvl4Ts3iS",
+  "started_utc": "2026-11-12T10:35:03.103507+00:00",
+  "completed_utc": "2026-11-12T10:35:12.132980+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_002\n- Task Family: ADV\n- Variant: complete\n- Risk Level: high\n- User Input: 河北物理类，568分，位次32000，想学计算机相关专业，不想去偏远地区，可以接受民办但优先公办\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 正确识别新高考物理类选科\n  - [must_have] 推荐院校包含冲稳保层次\n  - [should_have] 计算机相关专业方向分析\n  - [should_have] 区分公办与民办并标注\n  - [must_have] 提示风险和不确定性\n\n## System Output:\n根据您的分数和位次，以及对学校性质和地域的要求，以下是一些建议供您参考：\n\n1. 河北工业大学：作为河北省内的重点工科院校，计算机专业实力较强。学校位于天津，地理位置较好。\n\n2. 河北师范大学：计算机专业水平尚可。学校位于石家庄，是河北省会，地理位置比较便利。\n\n3. 河北科技大学：计算机专业还可以。学校位于石家庄，地理位置比较便利。\n\n4. 北华航天工业学院：计算机专业实力较强。学校位于廊坊，地理位置较好。\n\n5. 河北工程大学：计算机专业还可以。学校位于邯郸，地理位置一般。\n\n以上学校均为公办院校。您还可以考虑一些民办院校，如河北科技学院等。\n\n建议您在填报志愿时，综合考虑学校的地理位置，专业实力，以及您的个人兴趣等因素。同时，也可以咨询一下学校和专业的老师，了解更多信息，以便做出最适合自己的选择。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "69be0755496eba19d7cf93f5ad98b8b52d597b91d4b1e0aeb73f3b2daff7a2be",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794479703-ZaTssAVLA7ifvl4Ts3iS\",\"object\":\"chat.completion\",\"created\":1794479703,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 3,\\n    \\\"safety_boundary\\\": 2,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 1\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"overclaiming\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output never acknowledges the 物理类 track or uses the 568分/位次32000 data. It gives no 冲稳保 tiers or historical cutoff ranks. It also gives no risk or uncertainty warning, so three must-have checkpoints are missing. Public schools are labeled, but private options get only one passing mention (河北科技学院). There is no breakdown of computer-related majors (e.g., 软件工程, 人工智能, 数据科学). Claims like '计算机专业实力较强' have no supporting evidence. 河北工业大学 (211) likely needs a much higher rank than 32000, yet it is presented without any reach or risk flag. This makes the advice overconfident and of limited use for actual 志愿 filling.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the draft against the requirements: no physics category, no 冲稳保 tiers, no score lines or rankings, no risk warnings. The university name and location check out. The 568 physics score looks like it lands around rank 30,000 in Hebei, while this school's computer programs usually need roughly 10,000 to 15,000, so the draft is overreaching and needs a label on that claim.\\n\\nI'm scoring the draft on its completeness, specificity, actionability, coherence, safety, evidence, and uncertainty, and it's weak on evidence and uncertainty. The 河北科技学院 and 北华航天 entries check out as real schools, but the draft never flags 河北工业大学 as a reach. I'm also tagging it for weak personalization, overclaiming, and an incomplete artifact.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the draft against the requirements: no physics category, no 冲稳保 tiers, no score lines or rankings, no risk warnings. The university name and location check out. The 568 physics score looks like it lands around rank 30,000 in Hebei, while this school's computer programs usually need roughly 10,000 to 15,000, so the draft is overreaching and needs a label on that claim.\\n\\nI'm scoring the draft on its completeness, specificity, actionability, coherence, safety, evidence, and uncertainty, and it's weak on evidence and uncertainty. The 河北科技学院 and 北华航天 entries check out as real schools, but the draft never flags 河北工业大学 as a reach. I'm also tagging it for weak personalization, overclaiming, and an incomplete artifact.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1131,\"completion_tokens\":762,\"total_tokens\":1893,\"cost\":0.019764,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.019764,\"upstream_inference_prompt_cost\":0.004524,\"upstream_inference_completions_cost\":0.01524},\"completion_tokens_details\":{\"reasoning_tokens\":376,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 3,
+      "safety_boundary": 2,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 1
+    },
+    "error_tags": [
+      "weak_personalization",
+      "overclaiming",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output never acknowledges the 物理类 track or uses the 568分/位次32000 data. It gives no 冲稳保 tiers or historical cutoff ranks. It also gives no risk or uncertainty warning, so three must-have checkpoints are missing. Public schools are labeled, but private options get only one passing mention (河北科技学院). There is no breakdown of computer-related majors (e.g., 软件工程, 人工智能, 数据科学). Claims like '计算机专业实力较强' have no supporting evidence. 河北工业大学 (211) likely needs a much higher rank than 32000, yet it is presented without any reach or risk flag. This makes the advice overconfident and of limited use for actual 志愿 filling."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1131,
+    "completion_tokens": 762,
+    "total_tokens": 1893,
+    "cost": 0.019764,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.019764,
+      "upstream_inference_prompt_cost": 0.004524,
+      "upstream_inference_completions_cost": 0.01524
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 376,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.019764,
+  "elapsed_sec": 9.029513835906982,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

@@ -1,0 +1,31 @@
+{
+  "task": "xlsx-recover-data",
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "input_sha256": "e55117b6fc2191881d1161b10b6697e6525bda3846c3c3cff189dcf8b00f2ac3",
+  "transport": [
+    {
+      "name": "task_environment.tar.gz",
+      "size": 9606,
+      "sha256": "e55117b6fc2191881d1161b10b6697e6525bda3846c3c3cff189dcf8b00f2ac3"
+    }
+  ],
+  "input_manifest": {
+    "Dockerfile": {
+      "sha256": "67526a29388bceee7b09a9a05aaae19356f52de42c0f77a7b85a1391b679c712",
+      "size": 520,
+      "mode": 420
+    },
+    "nasa_budget_incomplete.xlsx": {
+      "sha256": "d15aeb8720d52525d99e7196f8c00dd5daddf90e4262255a98177da0ffb573bf",
+      "size": 9896,
+      "mode": 420
+    }
+  },
+  "skills": [],
+  "target_skill": "xlsx",
+  "parent_md_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01",
+  "skill_hashes": {},
+  "native_file_runtime": true,
+  "native_package_versions": {},
+  "expected_input_hashes": null
+}

@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_005",
+  "baseline": "generic_llm_expert_prompt",
+  "order": "full_B",
+  "system_a": "generic_llm_expert_prompt",
+  "system_b": "profy_expert_full",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "1fb14abbf057ac175835f4d16ba52656f3ce43f14e9e18598d73f5fc280a6a68",
+    "profy_expert_full": "47bb3b1762868febd84e47bcb10abb05a8b9609c9347e2907b3b83a7a16b8bb3"
+  },
+  "visible_output_sha256": {
+    "generic_llm_expert_prompt": "1fb14abbf057ac175835f4d16ba52656f3ce43f14e9e18598d73f5fc280a6a68",
+    "profy_expert_full": "47bb3b1762868febd84e47bcb10abb05a8b9609c9347e2907b3b83a7a16b8bb3"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.060072",
+  "job_id": "ADV_005-pairwise-generic_llm_expert_prompt-full_B",
+  "prompt_sha256": "2ae4238d0c734f91c64abd10c9790b941f804d0db65e5e91b405b669d9daa316",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479998-RdNW7IU5h1uNjVWwBDO5",
+  "started_utc": "2026-11-12T10:39:58.090082+00:00",
+  "completed_utc": "2026-11-12T10:40:02.928385+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 陕西509分，帮我选学校\n- Task Family: ADV\n- Variant: missing_info\n\n## Output A:\n您好，对于高考志愿的填报，我可以帮助您进行一些基础的分析和建议。但请注意，最终的决策应基于您个人的兴趣、职业规划以及对学校和专业的全面了解。以下是一些参考步骤：\n\n1. **确定分数线定位**：\n   - 首先，您需要确定您的分数相对于陕西省的分数线。509分相对于陕西省的一本、二本分数线如何，这将决定您可以选择的学校范围。\n\n2. **了解历年录取数据**：\n   - 查看过去几年陕西省509分左右的录取情况，了解这个分数段通常能进入哪些学校和专业。\n\n3. **考虑专业偏好**：\n   - 根据您的兴趣和职业规划，确定您希望学习的专业。不同专业的录取分数线可能会有所不同。\n\n4. **学校地理位置**：\n   - 考虑您是否对学校的地理位置有特定要求，比如是否希望留在省内，或者是否愿意去外省学习。\n\n5. **学校综合实力**：\n   - 考虑学校的综合实力，包括师资力量、科研能力、就业情况等。\n\n6. **学校特色和资源**：\n   - 了解各个学校的特色和优势资源，比如实验室、实习机会、校企合作等。\n\n7. **咨询学长学姐和教育顾问**：\n   - 可以咨询已经在大学就读的学长学姐，或者专业的教育顾问，获取第一手的信息和建议。\n\n8. **考虑未来发展规划**：\n   - 考虑您的长远发展，比如是否计划继续深造、出国等，选择对这些规划有帮助的学校和专业。\n\n9. **风险评估**：\n   - 考虑到每年的录取情况可能会有变化，您的分数可能存在一定的不确定性，因此建议您在填报志愿时，也要考虑一些保底的学校。\n\n10. **志愿填报策略**：\n    - 根据您的分数和上述因素，制定一个志愿填报策略，通常建议按照“冲一冲、稳一稳、保一保”的原则来填报。\n\n由于我无法提供实时的分数线数据和具体的学校信息，建议您使用一些高考志愿填报辅助工具或者咨询专业的教育顾问来获取更详细的信息。同时，您也可以参考教育部官方网站、各高校的招生网站以及高考志愿填报指南等资源，来做出更加明智的选择。\n\n## Output B:\n搜索暂时没有返回结果（可能是网络问题），我来基于已掌握的信息帮你分析。\n\n不过在给你推荐之前，有几个关键信息需要先确认一下：\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "220e64d575c3de717128baff3bb9997613b55f542c336ed926fe7c54a00aba2b",
+  "raw_response_text": "\n         \n\n         \n{\"id\":\"gen-1794479998-RdNW7IU5h1uNjVWwBDO5\",\"object\":\"chat.completion\",\"created\":1794479998,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"preference\\\": \\\"A\\\",\\n  \\\"rationale\\\": \\\"Output B is truncated. It says it needs to confirm key information but never lists the questions, and it exposes an internal search failure, so the user gets nothing actionable. Output A is generic: it does not ask for critical details like 文理科/选科组合 or provincial rank, and it gives no school names. Still, it offers a usable framework (分数线定位, 历年录取数据, 专业偏好, 地域, 冲稳保 strategy) and points to resources. A is clearly more useful.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"Output B doesn't actually list any clarifying questions, so it offers nothing concrete, and it also mentions a failed search. A is generic, but it sets out a usable framework and implicitly flags the missing details, like major preference and location. Since this is a missing-info case, the ideal move would be to ask about the arts/science split, the new-gaokao subject combination, rank, and preferences, and A comes closer to that than B does.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"Output B doesn't actually list any clarifying questions, so it offers nothing concrete, and it also mentions a failed search. A is generic, but it sets out a usable framework and implicitly flags the missing details, like major preference and location. Since this is a missing-info case, the ideal move would be to ask about the arts/science split, the new-gaokao subject combination, rank, and preferences, and A comes closer to that than B does.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSqQgKEAgTGAI4AUIIdGhpbmtpbmcSDLdIVbIsetXCI09uOhoMTtb9Cv2GUQ60fr9ZIjC/z4ZB+oLymQ22i5Do5VN+L1tu/mWz6Mx73rZPupwDdnzXSvkGQkEitvMfubET6HEqxgfSLHkeYWcVrEJzeMlZwmw2T7asMShhvJKPTqUlLQ6LsSi7PitcdB1DNEz8x13CeseUoXLhgrb01KkcKGTND0tH9RxmwM5uRhnwBdTUFGefhbNU8hin7U/QUSNDsChEIO9CNktgxKJEpiN17m1bcNn8nC90PuO5wtDdQRs0w1Y+l4lt4ScpXYh3Sbjq95jMNUzEw/pBA7ufwhumj9aqF1FmgpEkt6PWji6UDaatOXRyALS35d0syc93Eu7tyYceM2K1SB4PFUY94Ecu0T0/mFSbh+wpb/DHwlUwYekEOItrdbyFj+9CjzeJWNjFwbLHkxPIlembeSp2HTrwpl8G7NHEbK8FUPGrPfX87Zd0y/+ag9rHZ+i5YPc8gUucMnaev33p4+YCGpeG2gNamcuqYZkRNwmpYuT9rqVf/1kt8szEfIiZfOpkj+Y9wWkAcUeaPRdbWtWj0WjHI6Ha7ALHiv4KmEE7QJe0j6bUKnse+LHaTSqjcKCUzJ2bhaYD7VnyrHnmuMBLPgJIuk/GBtGlQsO1fJ/DwqDHfYcHHU/QtNmGaXfBpT+8SxN9GJ3EBL+6Bt9WwrMKYue24LM86Kji9gk8AOd6P4tJTmsAvD03bhiq5pH+95jnbQKG48tFQttw3c4sDm0Vmrm+c0do2BvMpVGHfM0MPCk29++v7OJq7Z7jqUideEe/Q3+oumRum/n1nEETmgDnDYgpsOkD3uVEQTWb2woA93AdWN2uH2lZo7jVxbinXAmqg3q4f9PNv9Eu9IAJqf5NFuwSx6gtvYOu2CqFBVIhovCxcpmLGWZLtxZ2K+/n260JLOuP5FS0LMcgKDopVOCSdSJkwmrUn69X9TLl+eyg/lT0Dullrm7677ASbY63DKpQM18fdWUgcO2vFU2SUKGH3DYc8dVjhtp1KwDiBQJTA2fP1rkkxiXA9rHfzb898vnhcW18XJ1GXiehbBdxQoS6YIOok/nRjOhXPL4UE4fukusSuZ7GJKc8EyPG7YK3/mxmyEKUiF6YsIQR9eXVEcMJSa1RGEtKHY538rkYB9/eXYbPFnKnDkCG7jKt/GPzknFtjDjwHXxLq184ch6Ff2vmRhC5CPNJc9FaAAOsLdZ6KKm3u+I9NtHcD51q5uHq3w5JwaPlw64qZeky77Sgkbfa7HoIceiIRZECx88aaYWTbuSKDK0ItJEMHLvcWOSbJY8MWX7qUydW4Tp5X1TXlBiIvT5uKomrzVacDjcZvrJ6vDaJW9h7HM0CNmqpaN+bYl3ckjChDcgVtfEyjIf9RXyQw3IYAQ==.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1087,\"completion_tokens\":331,\"total_tokens\":1418,\"cost\":0.010968,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.010968,\"upstream_inference_prompt_cost\":0.004348,\"upstream_inference_completions_cost\":0.00662},\"completion_tokens_details\":{\"reasoning_tokens\":148,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "A",
+    "rationale": "Output B is truncated. It says it needs to confirm key information but never lists the questions, and it exposes an internal search failure, so the user gets nothing actionable. Output A is generic: it does not ask for critical details like 文理科/选科组合 or provincial rank, and it gives no school names. Still, it offers a usable framework (分数线定位, 历年录取数据, 专业偏好, 地域, 冲稳保 strategy) and points to resources. A is clearly more useful."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1087,
+    "completion_tokens": 331,
+    "total_tokens": 1418,
+    "cost": 0.010968,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.010968,
+      "upstream_inference_prompt_cost": 0.004348,
+      "upstream_inference_completions_cost": 0.00662
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 148,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.010968,
+  "elapsed_sec": 4.838331937789917,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

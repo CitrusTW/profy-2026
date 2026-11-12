@@ -1,0 +1,77 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_008",
+  "condition": "generic_llm_expert_prompt",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "9687519de7e6b5d38d8c81981a685db40f72d6910352f57a5521df41c6bb1503"
+  },
+  "calculated_cost_ceiling_usd": "0.079008",
+  "job_id": "ADV_008-rubric-generic_llm_expert_prompt",
+  "prompt_sha256": "055d2fe097925b11aa326de54bc57df365a4a045ca7314193a5c0e5b6efddc3b",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794480125-1JQKGOYaCj2tegPBzbN9",
+  "started_utc": "2026-11-12T10:42:05.151479+00:00",
+  "completed_utc": "2026-11-12T10:42:12.927462+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_008\n- Task Family: ADV\n- Variant: complete\n- Risk Level: medium\n- User Input: 我们是一家做智能家居的中国品牌，想进入东南亚市场，预算50万美金，半年内要看到效果，请帮我制定出海营销策略\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析东南亚市场智能家居竞争格局\n  - [must_have] 给出具体渠道策略（电商/社媒/线下）\n  - [should_have] 预算分配建议\n  - [should_have] 6个月阶段性里程碑\n  - [must_have] 风险提示（合规/物流/本地化）\n\n## System Output:\n进入东南亚市场对于中国的智能家居品牌来说，是一个充满机遇的挑战。以下是一份基于您所提供预算和时间框架的营销策略概要：\n\n### 1. 市场调研与定位\n\n- **市场分析**：首先，需要对东南亚各国的市场进行深入调研，了解当地的消费者需求、竞争对手、文化差异、法律法规等。\n- **产品定位**：根据调研结果，调整产品以满足当地市场的需求，可能需要进行本地化设计或功能调整。\n\n### 2. 品牌本地化\n\n- **品牌命名与形象**：确保品牌名称和形象在不同国家的文化中都是正面的，必要时进行本地化调整。\n- **语言与文化**：确保所有营销材料和客户服务都使用当地语言，并考虑到文化敏感性。\n\n### 3. 营销渠道选择\n\n- **线上渠道**：\n  - **社交媒体营销**：利用Facebook、Instagram、Twitter等平台进行品牌宣传和互动。\n  - **搜索引擎营销**（SEM）：通过Google AdWords等工具进行关键词广告投放。\n  - **内容营销**：发布高质量的博客文章、视频和图文，提供有价值的信息，建立品牌权威。\n- **线下渠道**：\n  - **展会参展**：参加当地的智能家居和科技展会，直接与潜在客户和分销商接触。\n  - **合作伙伴关系**：与当地的零售商和分销商建立合作关系，进行产品展示和销售。\n\n### 4. 营销活动与促销\n\n- **限时优惠**：推出新产品时，可以提供限时折扣或特别优惠，吸引早期用户。\n- **试用与反馈**：提供免费试用或样品，收集用户反馈，进行产品迭代。\n- **用户推荐计划**：鼓励满意的用户推荐新用户，提供推荐奖励。\n\n### 5. 销售渠道建设\n\n- **线上商城**：建立自己的电子商务平台，或者在Lazada、Shopee等当地流行的电商平台上销售。\n- **线下零售**：与当地的电器连锁店、家居用品店合作，进行产品分销。\n\n### 6. 客户服务与支持\n\n- **本地化客服**：提供多语言的客户服务，包括电话、在线聊天和电子邮件支持。\n- **售后服务**：确保有良好的售后服务网络，包括安装、维修和技术支持。\n\n### 7. 预算分配\n\n- **市场调研与定位**：约10%（5万美金）\n- **品牌本地化**：约10%（5万美金）\n- **线上营销**：约30%（15万美金）\n- **线下营销**：约20%（10万美金）\n- **促销活动**：约15%（7.5万美金）\n- **销售渠道建设**：约10%（5万美金）\n- **客户服务与支持**：约5%（2.5万美金）\n\n### 8. 时间线规划\n\n- **第1-2个月**：市场调研与品牌本地化。\n- **第3-4个月**：营销渠道建设和初步营销活动。\n- **第5-6个月**：全面推广和销售渠道建设，监控效果并进行调整。\n\n### 9. 效果评估与调整\n\n- **定期评估**：每两周进行一次营销效果评估，包括流量、转化率、用户反馈等。\n- **灵活调整**：根据评估结果，灵活调整营销策略和预算分配。\n\n请注意，以上策略需要根据实际市场情况和反馈进行调整。同时，考虑到市场环境的不确定性，预测的效果可能与实际情况有所差异。建议在实施过程中保持灵活性，随时准备根据市场反馈进行策略调整。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "7e84fcb590f2d6ec3942d7e4b78cf09e15926fdf7d646cd7bcfe32631f50f5dd",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794480125-1JQKGOYaCj2tegPBzbN9\",\"object\":\"chat.completion\",\"created\":1794480125,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 2,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 3\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"Two must-have checkpoints are effectively missing. There is no competitive landscape analysis: it only says 'do research' and names no competitors such as Xiaomi or Tuya-based brands. There are no concrete risk warnings on compliance (e.g., SIRIM/IMDA/NBTC certification, data privacy), logistics, or localization beyond a passing mention of 'laws and regulations'. The channel strategy and budget split are present but generic: no country prioritization, it omits TikTok Shop while listing Twitter, there are no KPIs for the six-month '看到效果' goal, and the milestones are vague. The structure is clean and the closing caveat avoids overclaiming, but the plan rests on no data or market evidence and reads like a template that could apply to any product in any region.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm checking the plan against the checkpoints. The competitive landscape analysis is missing; it only says to do research and doesn't name any competitors. The channel strategy is there but generic, since Twitter matters less in Southeast Asia and TikTok Shop, which is major there, isn't mentioned. The budget sums to 100%, and the 6-month milestones are present but vague with no KPIs. Risk warnings touch on legal regulations only in passing, and I'm now looking at logistics.\\n\\nI'm weighing the rest of the checklist: compliance requirements like certification and data privacy are barely covered, and the must-haves for competition and risk are still open. I'm scoring the plan on completeness, specificity, actionability, and coherence, with a note on a timeline inconsistency around months 5 and 6, and I'm leaning toward tagging it as weakly personalized and incomplete.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm checking the plan against the checkpoints. The competitive landscape analysis is missing; it only says to do research and doesn't name any competitors. The channel strategy is there but generic, since Twitter matters less in Southeast Asia and TikTok Shop, which is major there, isn't mentioned. The budget sums to 100%, and the 6-month milestones are present but vague with no KPIs. Risk warnings touch on legal regulations only in passing, and I'm now looking at logistics.\\n\\nI'm weighing the rest of the checklist: compliance requirements like certification and data privacy are barely covered, and the must-haves for competition and risk are still open. I'm scoring the plan on completeness, specificity, actionability, and coherence, with a note on a timeline inconsistency around months 5 and 6, and I'm leaning toward tagging it as weakly personalized and incomplete.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2057,\"completion_tokens\":765,\"total_tokens\":2822,\"cost\":0.023528,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.023528,\"upstream_inference_prompt_cost\":0.008228,\"upstream_inference_completions_cost\":0.0153},\"completion_tokens_details\":{\"reasoning_tokens\":372,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 2,
+      "actionability": 2,
+      "coherence": 4,
+      "safety_boundary": 3,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 3
+    },
+    "error_tags": [
+      "weak_personalization",
+      "artifact_incomplete"
+    ],
+    "rationale": "Two must-have checkpoints are effectively missing. There is no competitive landscape analysis: it only says 'do research' and names no competitors such as Xiaomi or Tuya-based brands. There are no concrete risk warnings on compliance (e.g., SIRIM/IMDA/NBTC certification, data privacy), logistics, or localization beyond a passing mention of 'laws and regulations'. The channel strategy and budget split are present but generic: no country prioritization, it omits TikTok Shop while listing Twitter, there are no KPIs for the six-month '看到效果' goal, and the milestones are vague. The structure is clean and the closing caveat avoids overclaiming, but the plan rests on no data or market evidence and reads like a template that could apply to any product in any region."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 2057,
+    "completion_tokens": 765,
+    "total_tokens": 2822,
+    "cost": 0.023528,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.023528,
+      "upstream_inference_prompt_cost": 0.008228,
+      "upstream_inference_completions_cost": 0.0153
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 372,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.023528,
+  "elapsed_sec": 7.7760279178619385,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

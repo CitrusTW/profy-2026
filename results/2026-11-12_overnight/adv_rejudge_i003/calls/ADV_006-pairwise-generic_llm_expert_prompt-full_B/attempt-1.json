@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_006",
+  "baseline": "generic_llm_expert_prompt",
+  "order": "full_B",
+  "system_a": "generic_llm_expert_prompt",
+  "system_b": "profy_expert_full",
+  "output_sha256": {
+    "generic_llm_expert_prompt": "a19a0deafd611fc7f017f24ad539c098057d695f6c8a411c9d9b23d131f7cbd6",
+    "profy_expert_full": "d724314af8b144b1622d3f19ae54cf886dce8e6481c50136939d107c1f742ec1"
+  },
+  "visible_output_sha256": {
+    "generic_llm_expert_prompt": "a19a0deafd611fc7f017f24ad539c098057d695f6c8a411c9d9b23d131f7cbd6",
+    "profy_expert_full": "d724314af8b144b1622d3f19ae54cf886dce8e6481c50136939d107c1f742ec1"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.058792",
+  "job_id": "ADV_006-pairwise-generic_llm_expert_prompt-full_B",
+  "prompt_sha256": "d9e59743c13a30ae1b28a349666364c950c98ed0a1d1390f2a680d0c7cd604ba",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794480034-7Y1Rxyc7LqZ2dfRNWwV0",
+  "started_utc": "2026-11-12T10:40:34.208076+00:00",
+  "completed_utc": "2026-11-12T10:40:39.689558+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 我家孩子今年高考，成绩还行，想问问能上什么大学\n- Task Family: ADV\n- Variant: missing_info\n\n## Output A:\n您好！孩子高考是家庭中的一件大事，选择大学和专业是一个需要综合考虑的问题。以下是一些步骤和因素，可以帮助您和您的孩子一起决定适合的大学：\n\n1. **成绩定位**：\n   - 首先，了解孩子的成绩在全省或全国的排名情况，这将帮助确定孩子可以申请的大学范围。\n   - 参考往年的录取分数线，看看孩子的成绩与哪些大学的录取线相匹配。\n\n2. **兴趣和专业选择**：\n   - 了解孩子的兴趣和职业倾向，选择与其兴趣和能力相匹配的专业。\n   - 考虑孩子的未来职业规划，选择有利于就业和职业发展的专业。\n\n3. **大学排名和声誉**：\n   - 查看国内外大学排名，了解不同大学在学术、科研、师资等方面的实力。\n   - 考虑大学的地理位置，是否符合孩子的生活习惯和家庭的期望。\n\n4. **就业前景**：\n   - 了解不同专业的就业率和薪资水平，选择就业前景较好的专业。\n   - 考虑是否需要继续深造，选择有利于国内外研究生申请的专业。\n\n5. **费用和奖学金**：\n   - 考虑家庭的经济状况，评估不同大学的学费和生活费用。\n   - 查看是否有奖学金、助学金等资助机会。\n\n6. **咨询和信息收集**：\n   - 参加高校招生咨询会，直接向招生老师了解信息。\n   - 利用网络资源，比如教育部门官网、大学官网等，收集更多信息。\n\n7. **综合评估**：\n   - 综合以上因素，列出几所目标大学和专业。\n   - 与孩子充分沟通，考虑他们的意见和感受。\n\n8. **备选方案**：\n   - 考虑是否有备选方案，比如提前批、调剂等。\n\n请注意，每个省份的高考分数线和招生政策可能有所不同，因此具体操作时需要参考当地的具体规定。建议您和孩子一起，根据以上步骤，结合实际情况，做出最合适的选择。同时，也可以咨询学校的老师和专业的教育咨询顾问，以获得更专业的建议。祝您的孩子高考顺利，能够进入理想的大学！\n\n## Output B:\n高考刚结束，现在正是估分选校的关键时期。我需要您提供一些信息才能给出有针对性的建议。\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "e55f1ffc3ddaff7aa294e6bbbcb3a6562075c9e8ed6b34151acc266d5dafd5d7",
+  "raw_response_text": "\n         \n\n         \n{\"id\":\"gen-1794480034-7Y1Rxyc7LqZ2dfRNWwV0\",\"object\":\"chat.completion\",\"created\":1794480034,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\n  \\\"preference\\\": \\\"A\\\",\\n  \\\"rationale\\\": \\\"The user didn't give a score, province, ranking, or subject track, so neither answer can recommend specific universities. B correctly sees that information is missing but never says which details it needs, such as score, provincial rank, province, or subject combination. That leaves the parent unsure how to reply, so B is neither specific nor actionable. A also doesn't directly ask for the missing details, and its advice is generic. Still, it points to the key factors (provincial ranking, past admission cutoffs, province-specific policies, interests, and finances) and gives concrete steps the parent can take. A is more complete and more useful overall.\\\"\\n}\",\"refusal\":null,\"reasoning\":\"Since the user left out their score, province, and subject combination, I'm weighing two responses. The first gives general guidance and touches on ranking and provincial differences but never asks directly for the missing details. The second says more information is needed without saying which details. I lean toward the first as more useful, though a reader might value the second for spotting the gap. Still, the second doesn't name what's needed, so it isn't something the user can act on.\\n\\nI'm settling on the first response, since it gives useful guidance on ranking and provincial differences, even though it never directly asks for the missing details. The second one flags the gap but doesn't say what's missing, so it gives the user nothing to act on.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"Since the user left out their score, province, and subject combination, I'm weighing two responses. The first gives general guidance and touches on ranking and provincial differences but never asks directly for the missing details. The second says more information is needed without saying which details. I lean toward the first as more useful, though a reader might value the second for spotting the gap. Still, the second doesn't name what's needed, so it isn't something the user can act on.\\n\\nI'm settling on the first response, since it gives useful guidance on ranking and provincial differences, even though it never directly asks for the missing details. The second one flags the gap but doesn't say what's missing, so it gives the user nothing to act on.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSggkKEAgTGAI4AUIIdGhpbmtpbmcSDNWjuanuLcnBXwdEhBoMS49Ktt0WnB4jMkXVIjCu8ZbKgCQ9lzCJKMWvDNsElv4xzAA8/XZHlwsx7XGbL08LXcrdiJCA+IZ8YDKlpM8qnwhPt4ST7uEKsm1XTnMYWRot0QOHdp57rYNKpduJOpJiDaJwQrbWfYYZWH7PlIqzY+CwJlhIrDTUFUW/XRLwh2F1zvBCWllf3COS/7HnhFfJpfQMLmSa2kr5cMJ2duXXKMWcWMDOIxLumEJ2QEtuK5pduXgqmjcfNAupOgrphKXhnRwpnN6bfqM6d4Zw10Nf8vOBHxR7nOfhhXbtyVRR3xUdf6gMdJ1KQNJyJa5AX5E7HzGFJwm5vmZhKxzX7aFcvKUJzZbTQOamudQDBidGqLgrmi83elurrepiAQKLJNAUnOOagLWTwQCF0ea5VSGewH+vEdkWPCue840U6wuk0ue104naqcf6g+Bm7e14uTofNEY058s2qGDwcfWvk6Eo8EzN8fZnRIH81aep66mPcuwzezBbQVg1gFJJyK/zrWKnXBMZ4KfAleUbGPb096IDJ8WjSZr/X9HPQAbSDnqauP1ICzqXlfIKVq6uJbAKDJ1k3/n8G6Z/ZrYfsFEc+jr9sI6PEmpOL9X0jpOc8AnIJPS5B1jwWDnKe9/pRu+r5Q7bJiPW8hFnEvjy4GXkVlZIyg2GBGONR5Gowy2iGd0PAur3K4AW2KTOJWbX34lmWQz4m3RuuIxAsNGPV3xKWelPxo2el+xkQdI4lxAsDw1Kn6ua7CjzrBjK21s/hoj0e3QL/r3vgMwhHNf+TCDmoo5CMqI1MJxkrWbbgktEZizPP4GXICb9Jf5w+gVcpTWVvOiv5XMFM3m+MuMKH9C898SENh3O+FCsA30p2dPF/AQu8SuwTdYeS/BJc04X07jFWRVV6IKsUoyEpeSXWN3Xhg8AHN9JcE06p0ZuYtOvflRLL6xXXSkmxQGzyJ56cFop7Avid0uiaznbfB8wNPGs4wBHidGzlfI5zn/gKCAQF7cg5D9wB4KPxPnrBtrm2Fz/OQQI3PIqEqP1ejTwCfycrlKktEBg/Z9uAHwhTaVxhibRKlyelSBy7q7kvJorUyO+M43h5zoRm0tSfvwJe6FlVX+Yk7rdq1mXyVWjFep6hE/PZy1HgoV47V2dBgE7J0u4qldqpcWGL1MEqa6H9Yd0YOMx0pgoXGqPMVB0Khc1TimdapVDUJxS0NSsulxEUuIhXjINLOqDXhDyXMFxQt38vm3tnb2gRDngPIj/CnIwT4mfTLvZUQy3aiVdi7E+X6u7/vaDYjO/49Oh6p9iapfqgM8RrBOfXnVRTzoGgm8vyXvPvFeKxmG6GwABB/PpRjydC0n4uHl1HmHNYrhTwbBtto0nJVmZH4Uv49wb3tyuzxnd9UjGO5yrNg+50zUlyP07Gkp04H8SVgPf6kjdHbnS6GEb1szdQBeFaQ3eMXT+POgpMKmKN/+3EsDOTF6q2BGibtdK86cmEv+uykTsFdqCXekI0xgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1050,\"completion_tokens\":391,\"total_tokens\":1441,\"cost\":0.01202,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.01202,\"upstream_inference_prompt_cost\":0.0042,\"upstream_inference_completions_cost\":0.00782},\"completion_tokens_details\":{\"reasoning_tokens\":178,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "A",
+    "rationale": "The user didn't give a score, province, ranking, or subject track, so neither answer can recommend specific universities. B correctly sees that information is missing but never says which details it needs, such as score, provincial rank, province, or subject combination. That leaves the parent unsure how to reply, so B is neither specific nor actionable. A also doesn't directly ask for the missing details, and its advice is generic. Still, it points to the key factors (provincial ranking, past admission cutoffs, province-specific policies, interests, and finances) and gives concrete steps the parent can take. A is more complete and more useful overall."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1050,
+    "completion_tokens": 391,
+    "total_tokens": 1441,
+    "cost": 0.01202,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.01202,
+      "upstream_inference_prompt_cost": 0.0042,
+      "upstream_inference_completions_cost": 0.00782
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 178,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.01202,
+  "elapsed_sec": 5.481518030166626,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

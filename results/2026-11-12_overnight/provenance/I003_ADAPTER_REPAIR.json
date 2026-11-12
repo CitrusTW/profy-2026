@@ -1,0 +1,20 @@
+{
+  "instruction": "I-003 B,C",
+  "changes": {
+    "remote_native.py": {
+      "before_sha256": "3c4e23ba27ebbe73f63e0c423496e52398531adbca2b665f0ddf10c0e6ea202a",
+      "after_sha256": "96ff886aa8770a526914196ab50be7d50aab14c8360b9f38cd55f4e76f7bc76c"
+    },
+    "study.py": {
+      "before_sha256": "ea7d488c1f42eafefcc050938abbb071ce4f3231ee326350112a28d65c77c2d3",
+      "after_sha256": "64f9e1871595157e3d106ed0f73b6ee098f53bb3c171d3346858cf2e6b258801"
+    }
+  },
+  "skills_changed": false,
+  "pins_changed": false,
+  "verifier_changed": false,
+  "model_or_budget_changed": false,
+  "offline_fixture_test_passed": true,
+  "fixture_is_not_an_experimental_result": true,
+  "original_helpers_unchanged": true
+}

@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_001",
+  "baseline": "generic_llm_raw",
+  "order": "full_B",
+  "system_a": "generic_llm_raw",
+  "system_b": "profy_expert_full",
+  "output_sha256": {
+    "generic_llm_raw": "ea2a3da7124f4eea93b2b5d053a06d03d1d336bc03559298ea79bf586eeb5ba2",
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9"
+  },
+  "visible_output_sha256": {
+    "generic_llm_raw": "ea2a3da7124f4eea93b2b5d053a06d03d1d336bc03559298ea79bf586eeb5ba2",
+    "profy_expert_full": "66e20ed7476d3e1758e5212e5e0b1873ed253eefdfb4277ec3be9d81b2af45a9"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.088128",
+  "job_id": "ADV_001-pairwise-generic_llm_raw-full_B",
+  "prompt_sha256": "7431838fae73ce683855252a22e3d6bbec5f4f87156a020b185a404771a1348f",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794479679-2q5zuVp3ed6iEMynR9yV",
+  "started_utc": "2026-11-12T10:34:39.207636+00:00",
+  "completed_utc": "2026-11-12T10:34:46.492196+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 陕西理科，509分，位次4万，想考公，希望留在西安，家庭条件一般，帮妹妹选学校和专业\n- Task Family: ADV\n- Variant: complete\n\n## Output A:\n根据你妹妹的情况，她的成绩、位次和家庭条件，以下是一些建议：\n\n1. **学校选择**：\n   - **西安理工大学**：该校以理工科为主，有不错的专业，录取分数线相对较低，适合你妹妹的分数。\n   - **西安建筑科技大学**：该校以建筑、土木等专业闻名，也适合理科生报考，分数线也相对适中。\n   - **西安科技大学**：该校以地质、矿业等专业为主，分数线适中，可以考虑。\n   - **西安石油大学**：该校以石油相关专业为主，分数线相对较低，可以考虑。\n\n2. **专业选择**：\n   - **计算机科学与技术**：这个专业就业前景好，薪资水平高，适合理科生报考。\n   - **电子信息工程**：这个专业也是理工科的热门专业，就业前景好。\n   - **机械工程**：这个专业也是理工科的传统专业，就业前景稳定。\n   - **建筑学**：这个专业需要一定的艺术天赋，但就业前景也很好。\n   - **土木工程**：这个专业就业前景稳定，薪资水平也不错。\n\n3. **考虑家庭条件**：\n   - 考虑到家庭条件一般，可以选择一些学费相对较低的学校和专业，减轻家庭负担。\n\n4. **考虑就业前景和个人兴趣**：\n   - 选择专业时，除了考虑就业前景，也要充分考虑个人兴趣和特长，这样才能在未来的学习和工作中发挥出最大的潜力。\n\n5. **考虑地理位置**：\n   - 你提到希望留在西安，因此选择学校时可以优先考虑西安本地的高校。\n\n6. **考虑公务员考试**：\n   - 如果你妹妹有意向考公务员，那么选择一些和公务员工作相关的专业，如行政管理、法学等，可能会有所帮助。\n\n最后，建议多咨询一些学校的招生办公室，了解具体的录取分数线和专业情况，同时也可以考虑参加一些教育展或者咨询会，了解更多信息。希望这些建议对你妹妹有所帮助。\n\n## Output B:\n好的，我来帮你妹妹分析一下。关于陕西2024年高考情况和考公专业选择，我整理了以下建议。\n\n---\n\n## 2024年陕西高考参考数据\n\n- 理科一本线：475分\n- 妹妹分数：509分（超一本线34分）\n- 位次：约4万名\n\n---\n\n## 推荐策略：稳体制 × 保就业 × 低学费\n\n考虑到家庭条件一般 + 想考公 + 想留西安，核心原则是：**选个好考公的专业，进可考编上岸，退可去企业就业，学费还不贵。**\n\n### 一、专业推荐（按推荐度排序）\n\n| 推荐 | 专业 | 考公优势 | 企业就业 | 学习难度 |\n|:---:|:---|:---|:---|:---:|\n| ★★★★★ | **会计学/财务管理** | 财政局、税务局、审计局、各单位财务，岗位超多 | 企业刚需，就业面极广 | 中等 |\n| ★★★★☆ | **计算机科学与技术** | 政务数字化、大数据局、网信办 | 工资最高，就业火 | 偏难 |\n| ★★★★☆ | **经济学/经济统计学** | 发改委、统计局、税务、人行 | 银行、企业都可去 | 中等 |\n| ★★★☆☆ | **法学** | 法院、检察院、司法局、公安，是考公大户 | 考不上公则就业面窄（需过法考） | 偏难 |\n| ★★★☆☆ | **汉语言文学** | 综合岗、文秘、宣传、党建 | 就业一般 | 较易 |\n\n> **特别推荐会计学**——这是最契合家庭条件一般+考公需求的选择：公办一科学费才5000-6000元/年；考公招录人数排前三，岗位分布在财政、税务、审计、甚至公检法的财务岗；万一考不上公务员，企业对小会计的需求永远不会少，就业双保险。\n\n### 二、西安可选学校（按把握度排列）\n\n位次4万在西安能上的公办一本主要有这些：\n\n| 学校 | 预估位次区间 | 把握度 | 推荐报考专业 |\n|:---|:---:|:---:|:---|\n| **西安工程大学** | 4万-4.8万 | ★★★★★ **稳妥** | 会计学、财务管理、经济学、法学 |\n| **西安工业大学** | 3.7万-4.4万 | ★★★★☆ **可报** | 会计学、经济学、计算机 |\n| **西安财经大学** | 3.8万-4.6万 | ★★★★☆ **可报** | **会计学（这个学校财经类专业最有特色）** |\n| **西安石油大学** | 3.6万-4.3万 | ★★★☆☆ **可冲** | 会计学、计算机、经济类 |\n| **西安科技大学** | 3.5万-4万 | ★★★☆☆ **可冲** | 计算机、会计学 |\n| **陕西科技大学** | 3.4万-4万 | ★★☆☆☆ **冲一冲** | 会计学 |\n| **西安文理学院** | 4.2万-5万 | ★★★★☆ **保底** | 汉语言文学、会计学 |\n\n### 三、我的方案建议\n\n**最佳方案：西安财经大学的会计学**\n\n理由：西安财经大学的会计学是它的王牌专业，在陕西体制内认可度很高。位次4万左右刚好在录取范围内。会计学考公岗位多、企业就业也好，是最稳妥的选择。\n\n**冲刺方案：西安工业大学的计算机/会计学**\n\n如果对计算机有兴趣，西安工业大学的计算机性价比很高，以后考公（政务数字化岗）和去企业都能走。\n\n**稳妥方案：西安工程大学的会计学**\n\n工程大学录取位次更宽裕，会计学专业同样好考公，4万名进去比较稳。\n\n### 四、家庭条件相关提醒\n\n- 这些学校都是**公办一本**，学费5000-6000元/年，住宿费800-1200元/年\n- 录取时**避开中外合作办学专业**（学费2-6万/年）\n- 可以查看学校是否有**贫困生助学金**和**勤工助学**机会\n\n---\n\n**总结：** 如果是我妹妹，我会优先推荐 **西安财经大学的会计学或财务管理**，进可考公进体制（财政/税务/审计），退可去企业做财务，毕业找工作不愁。如果分数不够财大，**西安工程大学的会计学**做稳妥保底。\n\n需要我再详细说说某个学校或专业的报考细节吗？\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "5b38d83539752dfe2a8883ba483cff200b41bf5a645839aa5cd41398d4360075",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794479679-2q5zuVp3ed6iEMynR9yV\",\"object\":\"chat.completion\",\"created\":1794479679,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"{\\\"preference\\\": \\\"B\\\", \\\"rationale\\\": \\\"Output B is much better tailored to the stated needs: civil-service exams (考公), staying in Xi'an, and limited family finances. It explains how each recommended major maps to government job openings and also gives a corporate fallback. It lists Xi'an schools with estimated rank ranges, labeled as reach, match or safety, and gives concrete plans. It adds practical cost advice, such as tuition levels and avoiding expensive Sino-foreign joint programs. Some rank estimates are approximate and should be checked against official data, but the structure and reasoning are sound. Output A is generic: its major suggestions largely ignore the civil-service goal until a brief afterthought. It includes poorly matched options like architecture, offers no rank analysis, and gives vague advice such as choosing lower-tuition schools without specifics.\\\"}\",\"refusal\":null,\"reasoning\":\"I'm weighing whether the Shaanxi 2024 numbers hold up: I believe the 理科一本 cutoff was 475, and that a score of 509 would land around rank 38,000 to 40,000. I'll treat the school rank ranges as estimates rather than fixed facts.\\n\\nI'm comparing the two options: B is more tailored and tied to civil-service exam prospects, while A reads as generic and treats 考公 as an afterthought. Some of B's specifics, like the rank estimates for the schools, may be off, but it's far more actionable overall.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm weighing whether the Shaanxi 2024 numbers hold up: I believe the 理科一本 cutoff was 475, and that a score of 509 would land around rank 38,000 to 40,000. I'll treat the school rank ranges as estimates rather than fixed facts.\\n\\nI'm comparing the two options: B is more tailored and tied to civil-service exam prospects, while A reads as generic and treats 考公 as an afterthought. Some of B's specifics, like the rank estimates for the schools, may be off, but it's far more actionable overall.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQS2QkKEAgTGAI4AUIIdGhpbmtpbmcSDKPYpcsAlMAp8LPN0RoMh/X8MO+dKZ879TyxIjDUSmlsJE50Br6AvhDtfWUpFQGvgDOVv+p4yxb5C/2/OWWiItyNgJRrsdxJufylQ/Aq9gj8rcuZxSQ/ICKq3A7EEKmlDN6Q69Q3JIEWL4alOf2/X8WzmK6zX51XR5EKWN188DWFSRPBuQ6RjG4MAOdWEH2iXpvQj/t6BLaJS+GwBNJc4/cuVNwayoZs6XjF1Nes+p9bzF0E69S05fu859rdfOzNPc8ABnYTvzY2nIGZwPBPRpZKw5Fsxzkf98qCc5u8f1+cK0svnP8yLku8tMIk3AUc7gF0ZoGd0d/WuIb3IhKOXmSCugx3r8/P7nL7r7Yn5lKNcfz2Ky2asqhU9kZ3T0kq+/xD2p6AlpJWBy785ZzXRi0hlBPQ9SFYBLs7i6Ydv3kBaIFhiyMAL/tkyUKynuHjaZq0yQmQydf53wRYkhlZOitqaC1ZGslNx9+gFKacThlut8o0CDszYLSES3vsiXTVIWaZpN+tm/aQZbKw/EObtreP54lT4w32wijsJlni+aEGxVN1TqrB0cIiPK+MRNJVmKWf7bXWoig+66hspigRKampu+Rd1vv9n8OgDfAnS4dOavu57TBG5IYCnffMKv429I/yCl4M3iuSHtfoRTpPHip+cLegdA2sPEV0KUh4RFXoXSuxzCgl5fW1u0Kgwx19ft8+llkCU3UYR5OPja2MgSddJ7BOiOopbUFD5H7GJM8AFDDLyAXyzc+htQ+xsrJccn9P9MfQV0oKK2hcNGYxrNv2iMME4+amp14ahoIa/RjRaKsNZnGKOpml21bNhGJNyh6lU3pTJV6AoFO1vHtk+FJqsl2Wu1OtpXjPLGSlZhdkjNGRWDpzj2eAjxG7uUqUU1/7pGByAk23GesxpHcQMu+1DTEIsdoz9W1GTPBiyXJWaznYB3aN37lWVS0UCf6brsJUr+Km6lGIbbIMD16ul9QXi6go47jiCNAuye69WnMDVAlFgkUN7xpSkkmrMj99ZZ85vdlacONvFbJAJ8xDq4QnOA0WvgTKd/+yPLd5JqThPep9ALeykrZjyrZ6lxNyZwbXBRzEHXzucgi4gH8Sytv6wJ1wgBvtFCzTiBFU+lLRlwzhIX9pfZYxtXylg33NULxtRJ00YexSTy6MaN4HE56s3ovWKOPdys60vS+EHjuayXEnGA2TTvwp2gq+ObAYdgTn0KCgallu1PrygXCdbS+U8Q8fGNZf5ioE3mYoF1uA7bptLafaY7jfnRJA9A8h7YJ3q79JqK/gxto2lVqU9Q/DX42LYdUEuUiSaZ1dhnfLfA09ZT3Ugk7+Bo5+H3T4DK4QdwjdnK3jJMIs5n3a4NlSfMZx4rBbASL6Emtt7qDGwKj4LWbEI5l7c9c/uzTWY0VAUx0qb/DOXaC1uQOnT3g/5yevmQAokYHLKy1SHLbsFb6YS3beWKDZA2/177mTi6qTXcAq9So2DrpF9RXv9Pw5ChtU62yHlYWHRnqtBJYLN0WLB/zvFJSve+7QUtOgvgyDeSWtPjO3GWaCcqb8d7X9NtJ8UJfJ7lrKeid/+TVmmfFUlhM19eKV0xwW3UoUjPp3AfMZV+ed9wCxrydEvFFcH7cLGRgB.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":2569,\"completion_tokens\":543,\"total_tokens\":3112,\"cost\":0.021136,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.021136,\"upstream_inference_prompt_cost\":0.010276,\"upstream_inference_completions_cost\":0.01086},\"completion_tokens_details\":{\"reasoning_tokens\":263,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "B",
+    "rationale": "Output B is much better tailored to the stated needs: civil-service exams (考公), staying in Xi'an, and limited family finances. It explains how each recommended major maps to government job openings and also gives a corporate fallback. It lists Xi'an schools with estimated rank ranges, labeled as reach, match or safety, and gives concrete plans. It adds practical cost advice, such as tuition levels and avoiding expensive Sino-foreign joint programs. Some rank estimates are approximate and should be checked against official data, but the structure and reasoning are sound. Output A is generic: its major suggestions largely ignore the civil-service goal until a brief afterthought. It includes poorly matched options like architecture, offers no rank analysis, and gives vague advice such as choosing lower-tuition schools without specifics."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 2569,
+    "completion_tokens": 543,
+    "total_tokens": 3112,
+    "cost": 0.021136,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.021136,
+      "upstream_inference_prompt_cost": 0.010276,
+      "upstream_inference_completions_cost": 0.01086
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 263,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.021136,
+  "elapsed_sec": 7.284607172012329,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

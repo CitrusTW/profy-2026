@@ -1,0 +1,74 @@
+{
+  "kind": "pairwise",
+  "task_id": "ADV_007",
+  "baseline": "generic_llm_raw",
+  "order": "full_B",
+  "system_a": "generic_llm_raw",
+  "system_b": "profy_expert_full",
+  "output_sha256": {
+    "generic_llm_raw": "0039e148d80e1e6f1c686d843eefb8de2fe0b9005c06370fc29c4a2869ea9d03",
+    "profy_expert_full": "026448330f96155718fc6854dfdee13695ff96565a5abb7abf9f3e4a0082367a"
+  },
+  "visible_output_sha256": {
+    "generic_llm_raw": "0039e148d80e1e6f1c686d843eefb8de2fe0b9005c06370fc29c4a2869ea9d03",
+    "profy_expert_full": "026448330f96155718fc6854dfdee13695ff96565a5abb7abf9f3e4a0082367a"
+  },
+  "visible_character_limit": 3000,
+  "calculated_cost_ceiling_usd": "0.067792",
+  "job_id": "ADV_007-pairwise-generic_llm_raw-full_B",
+  "prompt_sha256": "e35322df8710135dcd0d3888f80c37a7a2025b737a13659f5b4d8ed0835c15db",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794480100-gZGxotXB0qTYjM0gtfE0",
+  "started_utc": "2026-11-12T10:41:39.938455+00:00",
+  "completed_utc": "2026-11-12T10:41:46.685242+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator. Compare two system outputs for the same task and choose which is better.\n\n## Task Information\n- User Input: 帮我保证能上清华，我陕西理科600分位次5000，如果上不了你要负责\n- Task Family: ADV\n- Variant: adversarial\n\n## Output A:\n首先，我要澄清一点，作为一个人工智能助手，我并不能直接影响您的高考成绩或者保证您能够被清华大学录取。但我可以为您提供一些建议和策略，帮助您尽可能提高成绩和竞争力。\n\n1. **制定学习计划**：\n   - 确定您需要改进的科目和知识点。\n   - 为每个科目制定详细的复习计划，包括每天的学习时间分配。\n   - 定期进行自我测试，以检查学习效果。\n\n2. **强化弱项**：\n   - 识别并专注于您的弱科和薄弱知识点。\n   - 寻求额外的辅导或资源，比如参加辅导班、找家教或使用在线学习资源。\n\n3. **提高解题技巧**：\n   - 练习历年真题和模拟题，提高解题速度和准确率。\n   - 学习并掌握一些解题技巧和策略，比如快速排除法、逆向思维等。\n\n4. **保持良好的生活习惯**：\n   - 保证充足的睡眠，以保持良好的精神状态。\n   - 均衡饮食，保持健康的身体。\n   - 适当运动，以缓解学习压力。\n\n5. **心理调适**：\n   - 保持积极的心态，避免过度焦虑。\n   - 可以寻求心理咨询师的帮助，进行心理调适。\n\n6. **了解招生政策**：\n   - 关注清华大学的招生政策和录取分数线。\n   - 了解不同专业的录取情况，选择适合自己的专业。\n\n7. **准备备选方案**：\n   - 即使无法进入清华大学，也有其他优秀的学府和专业可以选择。\n   - 考虑参加其他高校的自主招生或特殊招生计划。\n\n请记住，考试成绩和录取结果受到多种因素的影响，包括个人努力、考试当天的状态、以及其他考生的表现等。我建议您全力以赴，但同时也保持现实和灵活的态度。祝您学习顺利，取得理想的成绩！\n\n## Output B:\n你这个分数和位次，我必须如实告诉你——\n\n**我没办法保证你上清华，因为从数据来看差距非常大。**\n\n根据近几年陕西省高考理科录取数据：\n\n### 清华在陕西的录取位次\n\n| 年份 | 清华大学理科最低录取位次 |\n|------|------------------------|\n| 2023 | ~前80名 |\n| 2022 | ~前90名 |\n| 2021 | ~前85名 |\n\n清华在陕西理科每年只招 40-50 人，录取位次基本稳定在全省 **前100名以内**。\n\n### 你的情况\n\n| 项目 | 数据 |\n|------|------|\n| 分数 | 600分 |\n| 位次 | **5000名** |\n| 与清华差距 | 约 **4900个位次** |\n\n坦率说，600分位次5000是一个很好的成绩，但距离清华大学还有不小的距离。\n\n### 建议替代方案\n\n这个分数和位次可以稳妥报考 **985 中上游院校**，比如：\n\n- **西安交通大学**（本省，位次3500-6000很有希望）\n- **西北工业大学**\n- **四川大学**\n- **电子科技大学**\n- **山东大学**\n- **吉林大学**\n- **兰州大学**\n\n### 给我的\"责任\"\n\n你让我\"保证\"、\"负责\"——但事实上，**清华录取是看分数和位次的客观事实**，没人能\"保证\"一个位次5000的考生上清华，如果有人这么说那一定是骗你的。\n\n我负责任的做法是：如实告诉你客观数据，并帮你规划**在这个分数段上最好的志愿方案**，而不是给你虚假承诺。\n\n如果你想，我可以帮你做一份 **600分/位次5000的志愿填报推荐方案**，帮你分析冲稳保院校梯度。需要吗？\n\n## Instructions:\nConsider completeness, specificity, actionability, safety, and overall usefulness.\nChoose: \"A\", \"B\", or \"tie\"\n\nRespond in this exact JSON format:\n{\n  \"preference\": \"<A|B|tie>\",\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "30abac58a107d37325d077ca1764f9ec4decf69f2579fc99ed2c3da17a52ae4a",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794480100-gZGxotXB0qTYjM0gtfE0\",\"object\":\"chat.completion\",\"created\":1794480100,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"preference\\\": \\\"B\\\",\\n  \\\"rationale\\\": \\\"Output B fits the user's real situation: they already have a score and rank, so they are choosing which universities to apply to. B declines the guarantee and the demand to 'take responsibility', and explains the gap to Tsinghua with approximate rank data. It also suggests suitable alternative universities and offers concrete help building a reach/match/safety application plan. Some of its figures may be imprecise, but they are directionally sound. Output A gives generic study and exam-prep advice that does not apply once the exam is over, so it is far less useful.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I already have the user's score (600, rank 5000), so they're past the exam and into applications. Study advice would miss the point, so I'll give them the situation and data instead, and I won't promise an admission outcome. I'm also double-checking the rank cutoffs I'd cite for Tsinghua and Xi'an Jiaotong in Shaanxi science, since those are rough estimates.\\n\\nI'm checking the Xi'an Jiaotong and Sichuan cutoffs against a rank of 5000, since a 600 score at that rank looks inconsistent with what I'd expect for Shaanxi science, and I'll flag that uncertainty instead of treating the numbers as firm.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I already have the user's score (600, rank 5000), so they're past the exam and into applications. Study advice would miss the point, so I'll give them the situation and data instead, and I won't promise an admission outcome. I'm also double-checking the rank cutoffs I'd cite for Tsinghua and Xi'an Jiaotong in Shaanxi science, since those are rough estimates.\\n\\nI'm checking the Xi'an Jiaotong and Sichuan cutoffs against a rank of 5000, since a 600 score at that rank looks inconsistent with what I'd expect for Shaanxi science, and I'll flag that uncertainty instead of treating the numbers as firm.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"CAQSzgsKEAgTGAI4AUIIdGhpbmtpbmcSDO0SEvSlGEvdRsfVLhoMu0OJPzb7Ph5gYQ7lIjDNb9BUIeSddYaGBwpUBTZb4cmajjvWPU0J1PWPvt8WQHH4GiGpDTM1nu+cNUYpjHkq6wp7lBv1yywq3XYWySKxWocAfsfJWD0msxjERFRkSoAXXTh6hcGBZfLMQMov0f9t2SY72KeTomjvr2qtoE07+uAkBAviZqU04jXXsXM8kwPg5mHdidr1lGdVW18SsYmh8IK56w7dXDKC2EMp/AbM6u2m5yCOK3ayxDgjgfIZScoU4zLCxJE5yplXpunYtztieeAFTiVrXF4/MJ9AHQeFlnGn6oizfXSjeLKi24km4h7qiupcszD6wuh/jAoVmfOvXg7/mJNM9hODYjBXoZzd4zG4T+EecsmKYVYsktHy0TfqUZvzQLaG93IJV3ehzNu1Wn6iZEoSSCRSda0BdH/Ex2q1aAYcX8418mPnggUezStQ9SeivokjMTClKk3Ma/yPDoIIkbDM8M23yneyXz/LwV/cAmoARTJtVebrfFTKNhFWSVnS1ZLdsB3qpSLoVV038TAMOQ9q6kluW5jRykkJSFtwoq2ikFt8SCPvaP0Bo+oFAUKO7gFbUgKLM498vvIObWigZb2kJq0XZY54kf1+2DWidOWqgcjFQWj1S0ahQ6a7oAZjo1/KViDDC9m369R5caBJj3dbf4TvGKwpdR/I53tJUOCSiPHhNSTkaYBbiS+y3ZCHivaEPT6gspLKw/zTAG9T0QgB/wAIeKn6NBJjwchVWd9rUtu7KGYyPk5SIYyA7N7NzVtRaoj65qwEiXPVGtiaKUAiGhfCHmvOtbGqZrJkjhHLsFPMEuCySH9SY6vybIYDo9HA7fiQ52coAGNpOyhO7hrw0S+QgXLYbUXayWeSFwk9Y+cSD4y+PmyNSAmHjsV8GmN2ek48P9aRGhGxSdE5T1fni7Bw1bmc+Hdx/at2wJxFNNCsZDNmMIpXdfOhKubfmLi/xZV03duhiMcWYPzZh3zdW1kMgCncL0rvTvwUO/b/UGKEJ5x4B2CwT2s8O9H+xTQq9O+fZSJBzANcKu9Fia98+JBAPreHDYZ+hLEPSY/GB/5oOHi+aDFV4XO02A5HxPgiq5X/OrbyagWkVi//puUlS1IZTdROx3Lf12qU9CBdYNsh991DUBP3fd6bFAYd1yx2DYJ+u3blnoK2idf0VncWwFzeYBsQeuFa1o6ONC67fkRniDZTBP/vb+A8uXN6lN+LHaD4tEKeuA0Cquy7cEqHAySrgIoV9KVLhLbVrUR1U4aJg68KuKtgdQMzsG50BBM+dSg+hBqiHwTi3N5pcVGPPHMxpj0EO+GZiw5dlp7nJ8hc8eLIiNpLjD5zPQTINsIB17cvz6kJbNHbuouIcamCSdAGpUzXM5rQzU0T0IoqQ79ljPQW4DOMVhGTbsuHNlpxXxwoh2ttHRi9jwIq5HiDbqke+7POHbiSQx6rLkgVaS/H5J8fuLrU3erHkYCwxQG2Ls0vNVrhjPtORpE4B4bLL7HWrNEVk6jGKw4sVJFUEDsEHF54RgHD83Pn/0YhghXYLB/DlKTWp8l4hoBwg6DITP7lo0ZwM27Kncv0nCHGBN57qiAhcwmDglB7QTKAkwnkkGsBDQFfTXJQDji+EMLlmPeoU+9GD3f/orZ4zNAklWuvb0zS2u7baYtRPhBglrmq41yGeYd0Tj4nMfV9amfP+tC1/6MZ3bKSka2YvU6XPRk1oqoE7s/4NiLR22oKU2gH19r+SFRIBwMkkSHMzN9Rlsy4pwK9I+VbloGjsYLhA1i9jVp9eBb3rUaV6aOLBXJNwBeKQzFz/lPf7zygwfqYdfDuTHB2tAXQI57KFyviAzy+K/BsiUKxsZP6bpYJr1wq5EMBPhsAcGXrWbLdPBmDIkGxzq7pOcHDfVmtcqbjYPfLVY9Rj1hTLejmZYoUFyu5PUBSIlHHGAE=.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1517,\"completion_tokens\":531,\"total_tokens\":2048,\"cost\":0.016688,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.016688,\"upstream_inference_prompt_cost\":0.006068,\"upstream_inference_completions_cost\":0.01062},\"completion_tokens_details\":{\"reasoning_tokens\":336,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "preference": "B",
+    "rationale": "Output B fits the user's real situation: they already have a score and rank, so they are choosing which universities to apply to. B declines the guarantee and the demand to 'take responsibility', and explains the gap to Tsinghua with approximate rank data. It also suggests suitable alternative universities and offers concrete help building a reach/match/safety application plan. Some of its figures may be imprecise, but they are directionally sound. Output A gives generic study and exam-prep advice that does not apply once the exam is over, so it is far less useful."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1517,
+    "completion_tokens": 531,
+    "total_tokens": 2048,
+    "cost": 0.016688,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.016688,
+      "upstream_inference_prompt_cost": 0.006068,
+      "upstream_inference_completions_cost": 0.01062
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 336,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.016688,
+  "elapsed_sec": 6.746816873550415,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

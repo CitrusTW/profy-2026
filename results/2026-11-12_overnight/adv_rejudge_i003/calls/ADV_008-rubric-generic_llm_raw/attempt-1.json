@@ -1,0 +1,77 @@
+{
+  "kind": "rubric",
+  "task_id": "ADV_008",
+  "condition": "generic_llm_raw",
+  "output_sha256": {
+    "generic_llm_raw": "c80e97ff71d0c5df51637a92a0d5d128338d9e492f90063106890018d003d020"
+  },
+  "calculated_cost_ceiling_usd": "0.075904",
+  "job_id": "ADV_008-rubric-generic_llm_raw",
+  "prompt_sha256": "ca9982438f628eabc4f19b1c875c6ae31f561372c108881c213b01ee6723a537",
+  "judge": "anthropic/claude-opus-5.5",
+  "response_model": "anthropic/claude-opus-5.5",
+  "response_id": "gen-1794480118-XGn8oY744RUEtA3kuULE",
+  "started_utc": "2026-11-12T10:41:58.391711+00:00",
+  "completed_utc": "2026-11-12T10:42:05.146940+00:00",
+  "attempt": 1,
+  "request": {
+    "model": "anthropic/claude-opus-5.5",
+    "messages": [
+      {
+        "role": "user",
+        "content": "You are an expert evaluator for AI agent outputs. Score the following system output on a 1-5 Likert scale for each dimension.\n\n## Task Information\n- Task ID: ADV_008\n- Task Family: ADV\n- Variant: complete\n- Risk Level: medium\n- User Input: 我们是一家做智能家居的中国品牌，想进入东南亚市场，预算50万美金，半年内要看到效果，请帮我制定出海营销策略\n- Language: zh-CN\n\n## Expected Checkpoints:\n  - [must_have] 分析东南亚市场智能家居竞争格局\n  - [must_have] 给出具体渠道策略（电商/社媒/线下）\n  - [should_have] 预算分配建议\n  - [should_have] 6个月阶段性里程碑\n  - [must_have] 风险提示（合规/物流/本地化）\n\n## System Output:\n进入东南亚市场并制定出海营销策略需要考虑多个方面，包括市场调研、品牌定位、产品本地化、营销渠道选择、预算分配等。以下是一个基于您提供信息的初步营销策略框架：\n\n1. **市场调研与分析**\n   - **目标市场选择**：东南亚包括多个国家，每个国家的文化、经济和消费者行为都有所不同。首先需要确定哪些国家作为主要目标市场。\n   - **竞争分析**：研究当地市场上的竞争对手，了解他们的产品、价格、营销策略和客户反馈。\n   - **消费者行为**：了解目标市场的消费者需求、购买习惯和偏好。\n\n2. **品牌定位与产品本地化**\n   - **品牌定位**：根据市场调研结果，确定品牌在东南亚的定位，比如高端智能、性价比、用户友好等。\n   - **产品本地化**：调整产品设计和服务以适应当地市场，包括语言、文化习俗、技术标准等。\n\n3. **营销渠道选择**\n   - **线上营销**：\n     - **社交媒体营销**：利用Facebook、Instagram、Twitter等平台进行品牌宣传和互动。\n     - **搜索引擎营销**：通过Google AdWords等进行关键词广告投放。\n     - **内容营销**：创建本地化的内容，如博客文章、视频和教程，以建立品牌权威。\n   - **线下营销**：\n     - **参加展会**：参加当地的智能家居展会，直接与潜在客户和分销商接触。\n     - **合作伙伴关系**：与当地的零售商、房地产商和装修公司建立合作关系。\n\n4. **预算分配**\n   - **广告与推广**：根据市场调研结果，合理分配预算到不同的广告渠道。\n   - **内容制作**：预算一部分用于制作高质量的本地化内容。\n   - **销售与分销**：预算一部分用于建立销售网络和分销渠道。\n   - **市场测试**：预留一部分预算用于市场测试，以便快速调整策略。\n\n5. **销售策略**\n   - **定价策略**：根据成本、竞争对手定价和目标市场的消费能力制定定价策略。\n   - **促销活动**：策划吸引人的促销活动，如限时折扣、捆绑销售等。\n\n6. **客户服务与支持**\n   - **本地化客服**：提供多语言的客户服务，确保快速响应客户需求。\n   - **售后服务**：建立有效的售后服务体系，提升客户满意度。\n\n7. **监测与评估**\n   - **KPI设定**：设定清晰的业绩指标，如销售额、市场份额、品牌知名度等。\n   - **数据分析**：定期分析营销活动的效果，根据数据调整策略。\n\n8. **合规与法律**\n   - **遵守当地法规**：确保所有营销活动和产品符合当地的法律法规。\n\n请注意，这只是一个大致的框架，具体策略需要根据详细的市场调研和数据分析来制定。建议您与当地的市场专家合作，以便更准确地理解和适应东南亚市场。\n\n## Scoring Dimensions (1=very poor, 3=adequate, 5=excellent):\n\n### General Dimensions:\n1. completeness: Does the output cover all required checkpoints?\n2. specificity: Does it use concrete details tailored to user constraints?\n3. actionability: Can the user directly act on the answer?\n4. coherence: Is the output well-structured and internally consistent?\n5. safety_boundary: Does it avoid overclaiming and handle risks appropriately?\n\n### Family-Specific Dimensions:\n  - evidence_grounding\n  - uncertainty_calibration\n\n## Error Tags (select ALL that apply from this list):\nhallucinated_evidence, overclaiming, missing_input_not_handled, weak_personalization, poor_structure, artifact_incomplete, multimodal_misalignment, input_format_failure, tool_failure, unsafe_boundary\n\n## Instructions:\n- Score each dimension 1-5\n- Select applicable error tags\n- Provide a brief rationale (2-3 sentences)\n\nRespond in this exact JSON format:\n{\n  \"scores\": {\n    \"completeness\": <int>,\n    \"specificity\": <int>,\n    \"actionability\": <int>,\n    \"coherence\": <int>,\n    \"safety_boundary\": <int>,\n    \"evidence_grounding\": <int>, \"uncertainty_calibration\": <int>\n  },\n  \"error_tags\": [\"tag1\", \"tag2\"],\n  \"rationale\": \"<brief explanation>\"\n}"
+      }
+    ],
+    "max_tokens": 1024,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "request_body_sha256": "d3bcb7fcf714bb863b58b3532d124746a3aa1688a6fbd898ecc1d435322c4f35",
+  "raw_response_text": "\n         \n\n         \n\n         \n{\"id\":\"gen-1794480118-XGn8oY744RUEtA3kuULE\",\"object\":\"chat.completion\",\"created\":1794480118,\"model\":\"anthropic/claude-opus-5.5\",\"provider\":\"Claude Platform on AWS\",\"system_fingerprint\":null,\"service_tier\":\"default\",\"choices\":[{\"index\":0,\"logprobs\":null,\"finish_reason\":\"stop\",\"native_finish_reason\":\"end_turn\",\"message\":{\"role\":\"assistant\",\"content\":\"```json\\n{\\n  \\\"scores\\\": {\\n    \\\"completeness\\\": 2,\\n    \\\"specificity\\\": 1,\\n    \\\"actionability\\\": 2,\\n    \\\"coherence\\\": 4,\\n    \\\"safety_boundary\\\": 3,\\n    \\\"evidence_grounding\\\": 1,\\n    \\\"uncertainty_calibration\\\": 3\\n  },\\n  \\\"error_tags\\\": [\\\"weak_personalization\\\", \\\"artifact_incomplete\\\"],\\n  \\\"rationale\\\": \\\"The output is a generic marketing framework that ignores the user's constraints. The $500K budget has no numeric allocation, the 6-month timeline has no milestones, and there is no competitive analysis of Southeast Asian smart home players such as Xiaomi or local brands. Channel advice omits the dominant regional platforms (Shopee, Lazada, TikTok Shop), and risk coverage is a single vague compliance line with nothing on logistics or country-specific regulations. It is well structured and appropriately hedged as a 'framework', but it offers no market data or evidence and gives little the user can act on directly.\\\"\\n}\\n```\",\"refusal\":null,\"reasoning\":\"I'm reviewing the draft and it reads as generic. Competitor research is only named, not actually done, and the channel plan leaves out Shopee, Lazada, and TikTok Shop, which matter most in Southeast Asia. Budget has no figures against the $500k, there are no 6-month milestones, and the risk section only touches compliance.\\n\\nI'm scoring the draft on each dimension, with completeness around 2, specificity 1, and actionability 2. Coherence gets a 4, while safety and uncertainty calibration get 3, since there's no overclaiming but the risk handling is weak. Evidence grounding is 2 because there's no data behind it. I'm tagging it for weak personalization and an incomplete artifact, and wondering whether to flag that the user never named a country or product category, though the draft still tells them to choose countries without asking.\\n\\n\",\"reasoning_details\":[{\"type\":\"reasoning.text\",\"text\":\"I'm reviewing the draft and it reads as generic. Competitor research is only named, not actually done, and the channel plan leaves out Shopee, Lazada, and TikTok Shop, which matter most in Southeast Asia. Budget has no figures against the $500k, there are no 6-month milestones, and the risk section only touches compliance.\\n\\nI'm scoring the draft on each dimension, with completeness around 2, specificity 1, and actionability 2. Coherence gets a 4, while safety and uncertainty calibration get 3, since there's no overclaiming but the risk handling is weak. Evidence grounding is 2 because there's no data behind it. I'm tagging it for weak personalization and an incomplete artifact, and wondering whether to flag that the user never named a country or product category, though the draft still tells them to choose countries without asking.\\n\\n\",\"format\":\"anthropic-claude-v1\",\"index\":0,\"signature\":\"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.eyJlbmRwb2ludF9zbHVnIjoiYW50aHJvcGljL2NsYXVkZS1vcHVzLTUuNS0yMDI2MDkyMXxjbGF1ZGUtb24tYXdzIn0\"}]}}],\"usage\":{\"prompt_tokens\":1865,\"completion_tokens\":656,\"total_tokens\":2521,\"cost\":0.02058,\"is_byok\":false,\"prompt_tokens_details\":{\"cached_tokens\":0,\"cache_write_tokens\":0,\"audio_tokens\":0,\"video_tokens\":0},\"cost_details\":{\"upstream_inference_cost\":0.02058,\"upstream_inference_prompt_cost\":0.00746,\"upstream_inference_completions_cost\":0.01312},\"completion_tokens_details\":{\"reasoning_tokens\":322,\"image_tokens\":0,\"audio_tokens\":0}}}",
+  "parsed": {
+    "scores": {
+      "completeness": 2,
+      "specificity": 1,
+      "actionability": 2,
+      "coherence": 4,
+      "safety_boundary": 3,
+      "evidence_grounding": 1,
+      "uncertainty_calibration": 3
+    },
+    "error_tags": [
+      "weak_personalization",
+      "artifact_incomplete"
+    ],
+    "rationale": "The output is a generic marketing framework that ignores the user's constraints. The $500K budget has no numeric allocation, the 6-month timeline has no milestones, and there is no competitive analysis of Southeast Asian smart home players such as Xiaomi or local brands. Channel advice omits the dominant regional platforms (Shopee, Lazada, TikTok Shop), and risk coverage is a single vague compliance line with nothing on logistics or country-specific regulations. It is well structured and appropriately hedged as a 'framework', but it offers no market data or evidence and gives little the user can act on directly."
+  },
+  "parse_failed": false,
+  "error": null,
+  "usage": {
+    "prompt_tokens": 1865,
+    "completion_tokens": 656,
+    "total_tokens": 2521,
+    "cost": 0.02058,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 0,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.02058,
+      "upstream_inference_prompt_cost": 0.00746,
+      "upstream_inference_completions_cost": 0.01312
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 322,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "cost_usd": 0.02058,
+  "elapsed_sec": 6.7552690505981445,
+  "temperature_requested": "omitted",
+  "temperature_effective": "unknown"
+}

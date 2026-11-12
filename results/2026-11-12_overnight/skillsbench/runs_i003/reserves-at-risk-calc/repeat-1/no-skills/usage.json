@@ -1,0 +1,58 @@
+[
+  {
+    "timestamp": "2026-11-12T10:43:33.685141Z",
+    "seq": 36,
+    "provenance": "live",
+    "timestamp_ms": 1794480213685,
+    "prompt_tokens": 13483,
+    "completion_tokens": 46,
+    "total_tokens": 13529,
+    "cache_read_tokens": 0,
+    "cache_write_tokens": 13480,
+    "context_window": 1050000,
+    "breakdown": {
+      "security_fence": 122,
+      "identity": 1071,
+      "soul": 203,
+      "tools": 1004,
+      "permissions_instructions": 2555,
+      "skills_instructions": 446,
+      "user_instructions": 9,
+      "environment_context": 219,
+      "tool_schemas": 3929,
+      "conversation": 3925
+    },
+    "sandbox_duration_seconds": 0,
+    "bocha_call_count": 0,
+    "event_id": 37,
+    "type": "usage.token"
+  },
+  {
+    "timestamp": "2026-11-12T10:43:41.044455Z",
+    "seq": 66,
+    "provenance": "live",
+    "timestamp_ms": 1794480221044,
+    "prompt_tokens": 13724,
+    "completion_tokens": 39,
+    "total_tokens": 13763,
+    "cache_read_tokens": 13480,
+    "cache_write_tokens": 241,
+    "context_window": 1050000,
+    "breakdown": {
+      "security_fence": 122,
+      "identity": 1071,
+      "soul": 203,
+      "tools": 1004,
+      "permissions_instructions": 2555,
+      "skills_instructions": 446,
+      "user_instructions": 9,
+      "environment_context": 219,
+      "tool_schemas": 3929,
+      "conversation": 4166
+    },
+    "sandbox_duration_seconds": 1,
+    "bocha_call_count": 0,
+    "event_id": 65,
+    "type": "usage.token"
+  }
+]
