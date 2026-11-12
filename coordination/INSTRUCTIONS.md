@@ -85,3 +85,45 @@
 4. **第 3 部分（论文修订副本）**：13:30 太平洋时间开始，使用截至此时已完成的全部运行结果。
 5. **最终交付**：15:30 太平洋时间（= 2026-11-13 07:30 北京时间）之前，完成 MORNING_REPORT.md（可以保留这个文件名）、全部统计表和 paper_rev/ 下的修订版 PDF，并推送。
 6. **运行间波动**：同一题同一组有 2 次以上运行时，报告 tokens 的范围和标准差，并标明冻结版与原版的 tokens 差异是否超出原版自身的波动范围。只有 1 次的题标注为"单次，未估计波动"。I-001 中"降低 token 消耗"的措辞规则改为：只有当多数 held-out 题的 tokens 下降、并且下降幅度超出原版自身的运行间波动时才能使用；没有波动估计的题不能计入"明显下降"。
+
+---
+
+## I-003（2026-11-12 02:30 美国太平洋时间）ADV 分数不可用；回复两个 adapter 问题
+
+### A. ADV 20 题：现有 Full 分数不得使用（优先处理，影响第 3 部分）
+
+审核者已核对时间线：ADV 的 Full judge 分数（15:19–15:26）和 pairwise（15:43）都早于当前平台输出的生成时间（17:37–19:01），而晚于 proxy_backup 中代理输出的生成时间（15:03–15:07）。因此现有 Full 分数对应的是注入了 checkpoints 的代理输出，不是平台输出。
+
+1. 现有 judge_scores.jsonl / pairwise_preferences.jsonl 中 profy_expert_full 的任何分数，都不得用于论文中关于 Full 的任何结论（包括 85 题和 ADV 20 题）。第 2 部分的统计保留为审计记录，在报告中如实标注"对应代理输出"。
+2. **重新打分 ADV 20 题**（这是 I-001 范围内的必要修正，不是新实验）：
+   - 输入：已保存的 Raw、Expert Prompt 输出（moonshot-v1-128k）和当前平台 Full 输出（deepseek-v4-flash），一律不重新生成。
+   - Judge：只用 1 个，即此前多 judge 任务中已经配置好的 Claude judge（通过 OpenRouter）；运行前把确切模型 ID 写进 PREREG.md，之后不得更换。
+   - Rubric：20 题 × 3 个条件，prompt 与论文 Listing 1 完全一致；解析时只去掉最外层代码围栏。
+   - Pairwise：Full vs Expert Prompt、Full vs Raw，各 20 题，正反顺序各一次，prompt 与 Listing 2 一致。
+   - 每次调用都保存原始请求和原始返回，并记录被评分输出的 hash，确保分数和输出能一一对应。
+   - 正式运行前先估算费用。估算超过 15 美元就不运行，在 STATUS 中说明。只用现有额度，不充值。
+   - 这一步走 OpenRouter，与 Profy 上的 SkillsBench 运行互不影响，可以和 SkillsBench 并行，但不得打乱 SkillsBench 的串行顺序。
+   - 统计：各条件均值、Full 相对两个基线的逐题差值（bootstrap 95% CI、更高/更低/打平）、正反序 pairwise 计数、位置偏差比例。
+3. **第 3 部分（论文修订副本）相应修改**：
+   - 如果重新打分完成：4.1–4.4 只报告这次重新打分的 ADV 20 题结果，并如实写明：judge 是新的 Claude judge（不是 moonshot）；Full 用 deepseek-v4-flash、基线用 moonshot-v1-128k，生成模型不同；其余 65 题因 Full 输出来自包含任务要求的代理而不使用。85 题的旧数字（Table 3/4、Figure 2、error tags、pairwise 53/31）全部不出现在正文中。
+   - 如果重新打分未完成或被跳过：修订副本中删除 Full 与基线的 LLM-judge 对比结论，保留任务集描述、SkillsBench 和 customs 部分，并在 MORNING_REPORT.md 中写明"LLM-judge 部分待用户决定"。
+   - 两种情况都不得把旧的 Full 分数写成平台输出的分数。
+
+### B. 回复 REVIEW_QUESTION_pip_pin_check.md：同意修复
+
+- 同意按你提出的最小修复改 adapter 的 pin 检查：在同一个 task Python 中用 importlib.metadata.version(name) 读取实际生效的版本并记录 location，再和原 pin 比较。不改 pin、不加依赖、不改题、不改 skill、不改 24 轮、不改 verifier。
+- 修复对三组一律生效。reserves-at-risk-calc 的三组在 setup 阶段就都失败了，还没有任何评分结果，因此可以在保留旧失败记录的前提下，重新准备并运行这道题的三组。之后其他题如果出现同样的 setup 失败，按同样方式处理。
+- 如果修复后实际生效的版本确实不等于原 pin，那就是真实的环境问题：照旧标为 setup 失败，不要为了通过检查去改 pin 或强装版本。
+- 写进 DECISIONS.md，作为 adapter 修复记录（注明修复时间、修复前后受影响的运行）。
+
+### C. 回复 REVIEW_QUESTION_tool_search.md：有条件同意补评分
+
+- 同意把原生 tool_search 作为纯发现调用加入 adapter 预评分检查的白名单，对三组一律生效，前提是该次运行的轨迹中没有读取、激活或加载任何 skill 文件。如果轨迹显示 tool_search 之后读取或激活了 skill，这次运行仍判为协议违规，不评分。
+- 对符合条件的现有轨迹，不重新求解、不修改回答，直接补跑原 verifier，记录原始 reward。
+- shock-analysis-supply 三组如果都属于同类情况，都按此规则处理。由于 solver 自述原题的 Excel-only / Playwright MCP 约束与 adapter 环境不符，这道题在汇总中单独标注为"环境受限"，held-out 汇总同时报告包含和不包含它的两种结果。
+- 写进 DECISIONS.md。
+
+### D. 其他
+
+- 此前 threejs 历史反例的进化模型是 gpt-4.1，论文修订副本中要单独说明。
+- shock-analysis-demand 的结果（冻结版 0/5，no-skills 3/2，原版 runner_limit）照实列入，不另作解读。
