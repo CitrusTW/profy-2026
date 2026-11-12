@@ -1,0 +1,164 @@
+{
+  "round": 7,
+  "development_task": "3d-scan-calc",
+  "evaluation_role": "Development on this singleton skill task; not unseen generalization",
+  "baseline_tokens": 161063,
+  "evolution_provider": "OpenRouter owner key",
+  "solver_provider": "Profy owner key",
+  "serial": true,
+  "local_environment_installed": false,
+  "evolution": {
+    "accepted_by_original_gate": true,
+    "model": "gpt-6.1-sol",
+    "wire_model": "openai/gpt-6.1-sol",
+    "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+    "requests": 4,
+    "usage": [
+      {
+        "prompt_tokens": 27539,
+        "completion_tokens": 23,
+        "total_tokens": 27562,
+        "cost": 0.069076,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 27536,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.069076,
+          "upstream_inference_prompt_cost": 0.068846,
+          "upstream_inference_completions_cost": 0.00023
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 28892,
+        "completion_tokens": 17,
+        "total_tokens": 28909,
+        "cost": 0.0063121,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 27536,
+          "cache_write_tokens": 1353,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0063121,
+          "upstream_inference_prompt_cost": 0.0061421,
+          "upstream_inference_completions_cost": 0.00017
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 29031,
+        "completion_tokens": 24,
+        "total_tokens": 29055,
+        "cost": 0.0034824,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 28889,
+          "cache_write_tokens": 139,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0034824,
+          "upstream_inference_prompt_cost": 0.0032424,
+          "upstream_inference_completions_cost": 0.00024
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      {
+        "prompt_tokens": 29873,
+        "completion_tokens": 1180,
+        "total_tokens": 31053,
+        "cost": 0.0168138,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 29028,
+          "cache_write_tokens": 842,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0168138,
+          "upstream_inference_prompt_cost": 0.0050138,
+          "upstream_inference_completions_cost": 0.0118
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 142,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      }
+    ],
+    "elapsed_sec": 27.235,
+    "storage": "external adapter local pending, not Profy database",
+    "source_functions_modified": false,
+    "native_promoted": false,
+    "semantic_applicability_verified": false,
+    "missing_implementations": {
+      "capability_gap_classifier": "No callable implementation identified in the received source.",
+      "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+      "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+    }
+  },
+  "development": {
+    "label": "development",
+    "task": "3d-scan-calc",
+    "completed": true,
+    "error": null,
+    "elapsed_sec": 90.097,
+    "output_received": true,
+    "native_zip_sha256": "fc66d7e5360cd9e7200885bc34794bd98ce647a3c1028996f54b591a021bd01d",
+    "file_hashes": {
+      "output/fs/root/mass_report.json": "f9ff22bf9b74ce455cedb6adb5e5640e3ea014bf35c681dedced36bdcb8dcb31"
+    },
+    "skill_sha256": "8b618f30fc1a1e604a0c63c46de6b944e36a67ebc891b1bf107d276b31e9680c",
+    "target_skill_read_verified": false,
+    "external_skill_tools_observed": [],
+    "supplied_benchmark_skills": true,
+    "tokens": {
+      "input_tokens": 158283,
+      "output_tokens": 2498,
+      "total_tokens": 160781,
+      "cache_read_tokens": 138676,
+      "cache_write_tokens": 19577,
+      "llm_turns": 10,
+      "tool_calls": 10
+    },
+    "profy_cost_usd": null,
+    "score": {
+      "original_returncode": 0,
+      "strict": 1,
+      "tests": 2,
+      "passed": 2,
+      "failed": 0,
+      "skipped": 0,
+      "all_static_hashes_before_after_verified": true,
+      "solver_output_unchanged": true,
+      "grading_context_only": true,
+      "original_source_sha256": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+      "fixed_grader_command_verified": true,
+      "cloud_only": true,
+      "native_artifact_received": true
+    }
+  },
+  "status": "development_not_improved",
+  "stop_optimization": false
+}

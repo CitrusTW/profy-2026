@@ -180,6 +180,5 @@
   ],
   "actual_development_results": {},
   "data_boundary": "Original Profy context and DEV histories stay in the workspace. Their request hashes and history counts are in provenance. No keys, company source, evaluation answers or verifier are included.",
-  "missing_original_implementations": null,
-  "repository_validation_record": null
+  "missing_original_implementations": null
 }

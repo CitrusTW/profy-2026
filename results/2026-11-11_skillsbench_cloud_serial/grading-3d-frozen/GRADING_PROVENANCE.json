@@ -1,0 +1,26 @@
+{
+  "original_verifier_sha256": "0129d7f08adddad68bd2e93f0aaea79d6b2e05d7b2f2aaa06f17d4b71804b9ff",
+  "assertions_preserved": 5,
+  "path_bindings_only": [
+    {
+      "from": "/root/mass_report.json",
+      "to": "fs/root/mass_report.json"
+    },
+    {
+      "from": "/root/scan_data.stl",
+      "to": "fs/root/scan_data.stl"
+    },
+    {
+      "from": "/root/mass_report.json",
+      "to": "fs/root/mass_report.json"
+    }
+  ],
+  "static_hashes": {
+    "bound_verifier/test_outputs.py": "a92cacf60dd8669205ced2d53b1346291732c35fd1dc9bc295ad8a60d8c136bb",
+    "fs/root/scan_data.stl": "d7f6193b534e9feacd21e8de1fd193c1cf7cf22f80915bb04b86a89e0dbc17a8",
+    "fs/root/material_density_table.md": "72a9aca1b634f8cf9d6e29beed47f8d31796d727a3017b616b32e10d953d9f64",
+    "fs/root/mass_report.json": "f9ff22bf9b74ce455cedb6adb5e5640e3ea014bf35c681dedced36bdcb8dcb31"
+  },
+  "bundle_sha256": "54bbf1a487add30f501ef1004a8c2c726b0d54e162033ba7695c0bfaa143cf2a",
+  "not_solver_or_evolution_input": true
+}

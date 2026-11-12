@@ -30,6 +30,19 @@ MODEL = 'gpt-6.1-sol'
 def sha(raw):
     return hashlib.sha256(raw).hexdigest()
 
+def attached_skill_read(event, no_skills, names):
+    if no_skills or event.get('tool_name')!='skills_read':return False
+    package=(event.get('parameters') or {}).get('package','')
+    parts=Path(package).parts
+    return len(parts)>=2 and '..' not in parts and parts[-2]=='bench_skills' and parts[-1] in names
+
+def target_file_read(event,name):
+    if event.get('tool_name')=='skills_read':
+        return attached_skill_read(event,False,{name})
+    if event.get('tool_name')!='read':return False
+    parts=Path((event.get('parameters') or {}).get('file_path','')).parts
+    return '..' not in parts and tuple(parts[-3:])==('bench_skills',name,'SKILL.md')
+
 
 def save(path, data):
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -251,11 +264,14 @@ After writing the original requested outputs under output/, package only those a
             manifest = unpack_output(archive, f)
             assert manifest['input_sha256'] == sha(input_path.read_bytes())
         target_hash = sha((candidate if candidate is not None else self.target.read_text()).encode()) if not no_skills else None
-        read_match = any(e.get('type') == 'tool_call.result' and e.get('tool_name') == 'read' and (candidate if candidate is not None else self.target.read_text()).strip() in '\n'.join(self.strings(e.get('result'))) for e in events) if not no_skills else None
+        names={p.parent.name for p in (self.bench/task/'environment/skills').glob('*/SKILL.md')}
+        attached_ids={e.get('tool_call_id') for e in events if e.get('type')=='tool_call.in_progress' and attached_skill_read(e,no_skills,names)}
+        target_ids={e.get('tool_call_id') for e in events if e.get('type')=='tool_call.in_progress' and target_file_read(e,self.skill_name)}
+        read_match = any(e.get('type') == 'tool_call.result' and e.get('tool_call_id') in target_ids and (candidate if candidate is not None else self.target.read_text()).strip() in '\n'.join(self.strings(e.get('result'))) for e in events) if not no_skills else None
         seen_hashes = re.findall(r'SBP_ACTIVE_SKILL_SHA256:\s*([0-9a-f]{64})', texts)
         metrics = {key: sum(e.get(field, 0) or 0 for e in usages) for key, field in [('input_tokens', 'prompt_tokens'), ('output_tokens', 'completion_tokens'), ('total_tokens', 'total_tokens'), ('cache_read_tokens', 'cache_read_tokens'), ('cache_write_tokens', 'cache_write_tokens')]}
         metrics.update({'llm_turns': len(usages), 'tool_calls': len(calls)})
-        result = {'label': label, 'task': task, 'completed': completed, 'error': error, 'elapsed_sec': round(time.monotonic()-began, 3), 'output_received': manifest is not None, 'native_zip_sha256': sha(archive) if archive else None, 'file_hashes': manifest['files'] if manifest else {}, 'skill_sha256': target_hash, 'target_skill_read_verified': bool(read_match and target_hash in seen_hashes) if not no_skills else None, 'external_skill_tools_observed': [n for n in calls.values() if 'skill' in n.lower()], 'supplied_benchmark_skills': not no_skills, 'tokens': metrics, 'profy_cost_usd': None}
+        result = {'label': label, 'task': task, 'completed': completed, 'error': error, 'elapsed_sec': round(time.monotonic()-began, 3), 'output_received': manifest is not None, 'native_zip_sha256': sha(archive) if archive else None, 'file_hashes': manifest['files'] if manifest else {}, 'skill_sha256': target_hash, 'target_skill_read_verified': bool(read_match) if not no_skills else None, 'skill_hash_marker_verified':target_hash in seen_hashes if not no_skills else None,'read_verification_method':'Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately','external_skill_tools_observed': [n for cid,n in calls.items() if 'skill' in n.lower() and cid not in attached_ids], 'supplied_benchmark_skills': not no_skills, 'tokens': metrics, 'profy_cost_usd': None}
         save(f/'usage.json', usages); save(f/'run_summary.json', result)
         result['score'] = self.grade(task, f)
         save(f/'result.json', result)

@@ -3,10 +3,13 @@ import argparse,json
 from pathlib import Path
 from run import Study,save
 
-SCRIPT='''import os,sys,json,shutil,importlib.util,hashlib,zipfile
+SCRIPT='''import os,sys,json,shutil,importlib.util,hashlib,zipfile,subprocess,platform
 from pathlib import Path
 p=Path('output');p.mkdir(exist_ok=True)
 d={'uid':os.getuid(),'platform':sys.platform,'root_writable':os.access('/root',os.W_OK),'free_bytes':shutil.disk_usage('.').free,'commands':{k:shutil.which(k) for k in ['python3','node','npm','apt-get','sudo','libreoffice','ssconvert','docker','uv','git']},'modules':{k:bool(importlib.util.find_spec(k)) for k in ['pytest','numpy','scipy','pandas','openpyxl','cvxpy','fitz']}}
+d['machine']=platform.machine()
+d['sudo_noninteractive']=subprocess.run(['sudo','-n','true'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,timeout=5).returncode==0 if shutil.which('sudo') else False
+d['userspace_tools']={k:shutil.which(k) for k in ['proot','skopeo','umoci','unshare','busybox']}
 f=p/'capabilities.json';f.write_text(json.dumps(d,indent=2))
 m={'input_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'files':{str(f):hashlib.sha256(f.read_bytes()).hexdigest()}}
 with zipfile.ZipFile('deliverables.zip','w') as z:z.write(f,str(f));z.writestr('manifest.json',json.dumps(m))

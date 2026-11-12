@@ -1,0 +1,9 @@
+{
+  "existing_API_keys_allowed": true,
+  "serial_only": true,
+  "new_purchases": false,
+  "local_Docker_builds": false,
+  "max_total_round_id": 30,
+  "evolved_skill_archiving_authorized": true,
+  "paper_edits": false
+}

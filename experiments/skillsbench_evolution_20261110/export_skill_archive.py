@@ -15,9 +15,9 @@ def export():
     entries=[];index=[]
     def add(path,text):entries.append({'path':path,'mode':'100644','type':'blob','content':text})
     def js(path,data):add(path,json.dumps(data,ensure_ascii=False,indent=2)+'\n')
-    families={'threejs':'threejs-to-obj','economic-dispatch':'grid-dispatch-operator'}
+    families={'threejs':'threejs-to-obj','economic-dispatch':'grid-dispatch-operator','mesh-analysis':'3d-scan-calc'}
     resources={}
-    for task in ['threejs-to-obj','grid-dispatch-operator','energy-market-pricing']:
+    for task in ['threejs-to-obj','grid-dispatch-operator','energy-market-pricing','3d-scan-calc']:
         for source in sorted((BENCH/task/'environment/skills').glob('*/SKILL.md')):
             name=source.parent.name
             add('skills/with-skills/'+name+'/SKILL.md',source.read_text()) if name not in resources else None
@@ -32,7 +32,16 @@ def export():
         p=RUNS/run/f'round-{number:02d}/evolution/candidate_SKILL.md'
         candidates.append((f'round-{number:02d}','threejs',p,number==5))
     candidates.append(('round-06','economic-dispatch',NETWORK/'round-06/evolution/candidate_SKILL.md',True))
+    cloud=WORKSPACE/'01_任务结果/2026-11-11_skillsbench_cloud_serial/mesh-evolution'
+    selected_mesh=None
+    for p in sorted(cloud.glob('round-*/evolution/candidate_SKILL.md')):
+        state=read(p.parent.parent/'ROUND.json') or {}
+        selected=state.get('status')=='small_scope_success_confirmed'
+        label=p.parent.parent.name
+        candidates.append((label,'mesh-analysis',p,selected))
+        if selected:selected_mesh=label
     for label,name,skill,selected in candidates:
+        if name=='mesh-analysis':selected=label==selected_mesh
         evo=skill.parent;folder=evo.parent;provenance=read(evo/'provenance.json') or {};summary=read(evo/'summary.json') or {}
         tools=[]
         for response in sorted(evo.glob('response_*.json')):
@@ -61,17 +70,19 @@ def export():
         if selected:add('skills/with-CogniLife-skills/'+name+'/SKILL.md',skill.read_text())
         index.append({'version':label,'skill':name,'model':summary.get('model'),'selected':selected,'sha256':digest(skill),'path':target})
     js('skills/VERSION_INDEX.json',index)
-    js('skills/with-CogniLife-skills/CONDITION.json',{'base':'../with-skills','overrides':{'threejs':'round-05','economic-dispatch':'round-06'},'other_supplied_skills':'Same original files as with-skills; no unrelated threejs skill is added to other tasks.'})
+    overrides={'threejs':'round-05','economic-dispatch':'round-06'}
+    if selected_mesh:overrides['mesh-analysis']=selected_mesh
+    js('skills/with-CogniLife-skills/CONDITION.json',{'base':'../with-skills','overrides':overrides,'other_supplied_skills':'Same original files as with-skills; no unrelated threejs skill is added to other tasks.'})
     add('skills/README.md','''# 三组skills和全部进化版本
 
 | 目录 | 是什么 | 先看什么 |
 | --- | --- | --- |
 | no-skills/ | 不提供benchmark skills | CONDITION.json, 没有虚构SKILL.md |
 | with-skills/ | 已跑任务使用的原版公开skills | 各skill的SKILL.md和SOURCE_MANIFEST.json |
-| with-CogniLife-skills/ | 最终采用的进化版 | threejs第5轮、economic-dispatch第6轮 |
+| with-CogniLife-skills/ | 最终采用的进化版 | CONDITION.json逐项记录采用哪轮 |
 | evolution-history/ | 全部历史候选, 包括未采用版本 | 每版SKILL.md、EVOLUTION_RECORD.json和可核对的parent diff |
 
-三组配置都在这里. 进化历史另外保留了早期两份候选和第1至6轮候选, 不把旧模型或失败版改名当成最新版. VERSION_INDEX.json列出各版模型、hash和是否采用.
+三组配置都在这里. 进化历史保留早期候选和后续各轮候选, 不把旧模型或失败版改名当成最新版. VERSION_INDEX.json列出各版模型、hash和是否采用.
 
 原版非SKILL.md脚本、模板和资源不复制进本repo. SOURCE_MANIFEST.json记录它们在固定公开版本中的来源和hash. 运行时应从该来源取得, 再用进化版SKILL.md覆盖同名文件. 这里不是独立打包好的第三方运行环境.
 

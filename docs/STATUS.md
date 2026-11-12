@@ -6,11 +6,11 @@
 2. economic-dispatch第6轮在开发题grid-dispatch-operator上两次6/6. 原版306608 tokens, 候选114602, 确认86932.
 3. 冻结第6轮skill后评测energy-market-pricing: no-skills / with-skills / with-CogniLife-skills均4/4, tokens分别204038 / 181580 / 98354.
 4. 通用文件传输适配器在3d-scan-calc上完成原版skills单组验证2/2. 这还不是完整三组实验.
-5. 已定位并保存8份历史候选, 当前采用threejs第5轮和economic-dispatch第6轮. 原版skills、无skills配置也有独立目录.
+5. 已定位并保存9份历史候选, 当前采用threejs第5轮和economic-dispatch第6轮. 原版skills、无skills配置也有独立目录.
 
 ## 正在做
 
-迁移到现有Profy云端, 先验证固定模型输出能否由原评分程序在独立会话中评分. 当前仅云端工具检查完成: Linux、Python、Node、pytest、numpy、scipy等可用, 无Docker和LibreOffice. 不把工具检查记为benchmark成绩.
+已在独立Profy会话用原评分验证固定3D答案2/2, 核对原测试路径绑定、答案和数据的前后hash. 第7轮候选也在云端评分2/2, 使用新skill的实际文件正文已核实; tokens为160781, 对比原版161063仅少约0.18%, 不采用为成功版, 继续调. 后续本例要求至少5%降幅并再次确认, 这是开发阶段门槛, 不修改原评分. 云端完整系统环境仍未验证, 不能据此标记全库可跑. 全部串行, 不再构建本机环境.
 
 ## 没有完成
 

@@ -1,0 +1,16 @@
+{
+  "original_returncode": 0,
+  "strict": 1,
+  "tests": 2,
+  "passed": 2,
+  "failed": 0,
+  "skipped": 0,
+  "all_static_hashes_before_after_verified": true,
+  "solver_output_unchanged": true,
+  "grading_context_only": true,
+  "native_zip_sha256": "09b86ad3d68acb1ef27496f39cd1ced7a42594b2827f67be98ffd6b7187629e3",
+  "fixed_grading_command_verified": true,
+  "delivery_only_command_verified": true,
+  "grading_reexecuted_for_delivery": false,
+  "separate_grading_session": true
+}

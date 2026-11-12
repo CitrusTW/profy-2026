@@ -273,6 +273,5 @@
     "capability_gap_classifier": "No callable implementation identified in the received source.",
     "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
     "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
-  },
-  "repository_validation_record": "experiments/skillsbench_evolution_20261110/ITERATIVE_RESULTS.json"
+  }
 }
