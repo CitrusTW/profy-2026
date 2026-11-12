@@ -30,3 +30,5 @@
 
 - I-001 preserves the existing Deployment context first three author-provided sentences; only its last sentence is narrowed to ADV Full outputs and AppendixC. No repeat paragraph or new marketing numbers. Manuscript uses anonymous platform/model-gateway descriptions to retain the standing anonymity rule; exact Profy/OpenRouter providers remain in private provenance.
 - Updated paper-builder draft for actual1--3 counts, dual limit policies, skill-specific versions, missing original method components and historical gpt-4.1 counterexample. It has not edited or copied the paper yet; scheduled per I-002.
+
+- New shock-demand frozen run: original reward0, receipt says0passed/5failed, but unchanged pytest final stdout says7failed. The old no-skills receipt/stdout also disagree (3/2 versus5/2). No score or verifier repaired; retain both and add automatically parsed count-audit sidecars. Strict reward unchanged. This is a logging-count discrepancy, not a new scoring result.
