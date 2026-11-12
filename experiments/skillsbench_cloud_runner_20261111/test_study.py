@@ -34,6 +34,8 @@ class StudyTests(unittest.TestCase):
         result={'type':'tool_call.result','tool_name':'awaitbash','result':'CGL_CASE_READY:{"task":"example"}'}
         self.assertEqual(setup_receipts([result,result],lambda x:[x]),[{'task':'example'}])
         self.assertEqual(setup_receipts([{'type':'output.text.delta','result':result['result']}],lambda x:[x]),[])
+        truncated={**result,'result':'CGL_CASE_READY:{"task":"exam'}
+        self.assertEqual(setup_receipts([truncated],lambda x:[x]),[])
     def test_plain_read_cannot_silently_import_builtin_skill(self):
         event=lambda p:{'tool_name':'read','parameters':{'file_path':p}}
         self.assertTrue(forbidden_skill_read(event('/mnt/skills/public/xlsx/SKILL.md'),True,['xlsx']))

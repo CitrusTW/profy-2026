@@ -4,6 +4,13 @@ from pathlib import Path
 from remote_setup import cloud_only,digest
 from remote_native import changed_files,root_file
 
+def pytest_counts(stdout):
+    for line in reversed(stdout.splitlines()):
+        if not line.startswith('='):continue
+        counts={k:int(v) for v,k in re.findall(r'(\d+) (passed|failed|skipped|error)(?=[, =])',line)}
+        if counts:return counts
+    return {}
+
 def main():
     cloud_only();base=Path.cwd();state=json.loads((base/'case_context.json').read_text())
     config=json.loads(gzip.decompress((base/'grade_config.json.gz').read_bytes()))
@@ -18,6 +25,12 @@ def main():
     def run(args,timeout=120):return subprocess.run(args,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,timeout=timeout)
     def file_sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
     try:
+        dependency=state['dependency_receipt']
+        if set(dependency)=={'file','sha256'}:
+            source=work/dependency['file']
+            assert source.name=='dependency_receipt.json' and file_sha(source)==dependency['sha256']
+            shutil.copyfile(source,out/'dependency_receipt.json')
+            report['dependency_receipt']=json.loads(source.read_text())
         for rel,h in state['supplied_skill_hashes'].items():assert file_sha(base/rel)==h,'Supplied skill changed during solving'
         # No verifier is extracted until all actual changed task files are exported.
         for path in changed_files(state):
@@ -54,6 +67,12 @@ def main():
             summary=json.loads((logs/'ctrf.json').read_text())['results']['summary']
             for key in ['tests','passed','failed','skipped']:report[key]=summary.get(key,0)
         elif config['expects_ctrf']:raise RuntimeError('Original pytest report missing: preserve raw reward, mark grading infrastructure error')
+        else:
+            # Some original scripts install the plugin but do not request a report.
+            counts=pytest_counts(graded.stdout)
+            if counts:
+                report.update(passed=counts.get('passed',0),failed=counts.get('failed',0)+counts.get('error',0),skipped=counts.get('skipped',0),test_count_source='original pytest final stdout summary')
+                report['tests']=report['passed']+report['failed']+report['skipped']
         after={p.relative_to(verifier).as_posix():file_sha(p) for p in verifier.rglob('*') if p.is_file()}
         assert after==expected,'Verifier source changed'
         report['original_source_before_after_verified']=True

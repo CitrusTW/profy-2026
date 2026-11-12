@@ -135,6 +135,8 @@ def prepare(base,meta,buffer):
         (work/'dependency_receipt.json').write_text(json.dumps(receipt,indent=2))
         state={'backend':'native-owned','runtime_difference':'Native Profy host, not the official Ubuntu image. Solver uses uid1000 without path interception or mount namespaces. All apt installs use --no-install-recommends as a disclosed native adaptation. Host system-site-packages and pre-existing apt packages remain visible. Blocked declared packages are omitted and may not be used. Existing platform uv replaces Dockerfile uv installers. This runner is not a security sandbox.','workspace':str(base),'work':str(work),'runtime':str(runtime),'cli':[],'container':None,'image_id':None,'shell':'/bin/bash','input_sha256':meta['input_sha256'],'original_file_sha256':inputs,'skill_sha256':target_sha,'benchmark_pin':meta['benchmark_pin'],'task':meta['task'],'workdir':spec['workdir'],'cwd':str(cwd),'task_roots':{'/root':str(work/'root'),'/app':str(work/'app')},'task_python':str(python),'task_path':str(venv/'bin')+':'+os.environ.get('PATH','/usr/local/bin:/usr/bin:/bin'),'native_package_versions':package_versions,'dependency_receipt':receipt,'runtime_adaptations':spec.get('adaptations',[]),'supplied_skill_hashes':meta['skill_hashes']}
         assert all(file_sha(task_directory(work,p))==h for p,h in inputs.items())
+        # Keep the setup receipt below the tool output limit; retain full dependencies as a file.
+        state['dependency_receipt']={'file':'dependency_receipt.json','sha256':file_sha(work/'dependency_receipt.json')}
         (base/'case_context.json').write_text(json.dumps(state,indent=2))
         shutil.rmtree(source)
         for entry in meta['transport']:(base/entry['name']).unlink()

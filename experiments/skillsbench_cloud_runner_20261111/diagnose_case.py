@@ -18,7 +18,7 @@ out=base/'diagnostic_output';out.mkdir(exist_ok=True);f=out/'diagnostic.json';f.
 manifest={'input_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'files':{'output/diagnostic.json':hashlib.sha256(f.read_bytes()).hexdigest()}}
 delivery=base/'outputs';delivery.mkdir(exist_ok=True)
 with zipfile.ZipFile(delivery/'deliverables.zip','w') as z:z.write(f,'output/diagnostic.json');z.writestr('manifest.json',json.dumps(manifest))
-print('SBP_NATIVE_ZIP_SHA256:'+hashlib.sha256((delivery/'deliverables.zip').read_bytes()).hexdigest());print('[OUTPUT] outputs/deliverables.zip')
+print('SBP_NATIVE_ZIP_SHA256:'+hashlib.sha256((delivery/'deliverables.zip').read_bytes()).hexdigest());print('[OUTPUT] '+str((delivery/'deliverables.zip').resolve()))
 '''
 
 if __name__=='__main__':

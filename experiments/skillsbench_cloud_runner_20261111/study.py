@@ -57,7 +57,9 @@ def setup_receipts(events,strings):
         for text in strings(event.get('result')):
             for line in text.splitlines():
                 if line.startswith('CGL_CASE_READY:'):
-                    value=json.loads(line.split(':',1)[1]);receipts[json.dumps(value,sort_keys=True)]=value
+                    try:value=json.loads(line.split(':',1)[1])
+                    except json.JSONDecodeError:continue
+                    receipts[json.dumps(value,sort_keys=True)]=value
     return list(receipts.values())
 
 class DockerStudy(LibraryStudy):
@@ -151,6 +153,8 @@ For a preview use python3 remote_tools.py get with the same quoted heredoc, whos
             if e.get('type')=='tool_call.in_progress' and e.get('tool_name') not in ['read','bash','awaitbash','skills_read']:raise RuntimeError('Unexpected solver tool')
             if e.get('type')=='tool_call.in_progress' and e.get('tool_name')=='bash' and host_command_kind(e['parameters']['command'].strip()) not in ['setup','container']:raise RuntimeError('Unapproved host shell command')
         ready=setup_receipts(events,self.strings)
+        recovery=folder/'SETUP_CONTEXT_RECOVERY.json'
+        if not ready and recovery.exists():ready=[json.loads(recovery.read_text())]
         if len(ready)!=1:raise RuntimeError('No unique setup receipt; no grading call started')
         state=ready[0];session=json.loads((folder/'session.json').read_text())
         assert state['input_sha256']==config['input_sha256'] and state['task']==task
@@ -160,7 +164,7 @@ For a preview use python3 remote_tools.py get with the same quoted heredoc, whos
         rows=tracked_files(self.bench.parent,task,'verifier');raw=archive_rows(rows)
         if len(raw)>450000:raise ValueError('Verifier attachment exceeds existing grading transport bound')
         payload=MemoryUpload('original_verifier.tar.gz',raw)
-        control={'expected_context':state,'verifier_archive_sha256':sha(raw),'source_hashes':{n:sha(b) for n,b,m in rows},'expects_ctrf':any(n=='test.sh' and b'ctrf' in b for n,b,m in rows)}
+        control={'expected_context':state,'verifier_archive_sha256':sha(raw),'source_hashes':{n:sha(b) for n,b,m in rows},'expects_ctrf':any(n=='test.sh' and b'--ctrf' in b for n,b,m in rows)}
         grader=Probe(argparse.Namespace(**{**vars(self.args),'out':str(root),'dev_task':task,'skill_name':self.skill_name,'hard_timeout_sec':1200}))
         files=[payload,MemoryUpload('grade_config.json.gz',gzip.compress(json.dumps(control).encode()))]+[HERE/n for n in GRADE_FILES]
         uploads=[]

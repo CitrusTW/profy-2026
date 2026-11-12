@@ -1,0 +1,77 @@
+{
+  "label": "no-skills",
+  "task": "protein-expression-analysis",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 282.754,
+  "output_received": true,
+  "native_zip_sha256": "789380f816b8764d2033217d3e7dc92600bb71f9d8b046c40322659efd93e96e",
+  "file_hashes": {
+    "output/original_verifier_stdout.log": "5e13d953780a7900b94519dd2c21d8e510a45962de05273373cdb93c27cdd9eb",
+    "output/score_receipt.json": "245c5011d5c51b90679cd07c093da4ff6875955d70f3b7346e34c4bf7bae4749",
+    "output/fs/root/protein_expression.xlsx": "b5beb5b310b724d3ff3759268fcfd52ef2e3babeba82f85582bef936b5ab84f6",
+    "output/fs/root/work/expected.json": "1295020ac1b5613b8686672f735b135af9d6d00971d13b1ad0bf62d1af93cced",
+    "output/fs/root/work/recalculated/protein_expression.xlsx": "6aa79d3b458fee797a389bf43816c5f7d2b39939566a19001e87c49359154890",
+    "output/fs/root/work/recalculated_final/protein_expression.xlsx": "89bc5f1d22c56395f88e26c5cfda67618450dd34304c3e4ba048987116724327"
+  },
+  "skill_sha256": null,
+  "target_skill_read_verified": null,
+  "skill_hash_marker_verified": null,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": false,
+  "tokens": {
+    "input_tokens": 178473,
+    "output_tokens": 4718,
+    "total_tokens": 183191,
+    "cache_read_tokens": 147760,
+    "cache_write_tokens": 30689,
+    "llm_turns": 8,
+    "tool_calls": 7
+  },
+  "profy_cost_usd": null,
+  "score": {
+    "original_verifier": true,
+    "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+    "task": "protein-expression-analysis",
+    "pre_grade_file_hashes": {
+      "/root/protein_expression.xlsx": "b5beb5b310b724d3ff3759268fcfd52ef2e3babeba82f85582bef936b5ab84f6",
+      "/root/work/expected.json": "1295020ac1b5613b8686672f735b135af9d6d00971d13b1ad0bf62d1af93cced",
+      "/root/work/recalculated/protein_expression.xlsx": "6aa79d3b458fee797a389bf43816c5f7d2b39939566a19001e87c49359154890",
+      "/root/work/recalculated_final/protein_expression.xlsx": "89bc5f1d22c56395f88e26c5cfda67618450dd34304c3e4ba048987116724327"
+    },
+    "original_source_hashes": {
+      "test.sh": "60f676cbdbb817230e5f47be4c756d2089d88b77904d19385bb674a8ff37912a",
+      "test_outputs.py": "810fec4eec42c34e9b8faaa14786182a63c32dd753fe11e6af0d1db8c2e23712"
+    },
+    "cleanup_errors": [],
+    "runtime_backend": "native-owned",
+    "runtime_difference": "Native Profy host, not the official Ubuntu image. Solver uses uid1000 without path interception or mount namespaces. All apt installs use --no-install-recommends as a disclosed native adaptation. Host system-site-packages and pre-existing apt packages remain visible. Blocked declared packages are omitted and may not be used. Existing platform uv replaces Dockerfile uv installers. This runner is not a security sandbox.",
+    "dependency_receipt": {
+      "see": "original-grader/score_receipt.json"
+    },
+    "original_input_hashes": {
+      "/root/protein_expression.xlsx": "95d5d1d9ed1920b2e22143866ca932c88aa14eafe7dd0ad998594868961faf21"
+    },
+    "original_returncode": 0,
+    "grading_backend": "private kernel mount namespace; original test.sh unchanged",
+    "uv_dependency_provisioning": "Existing fixed grader provisions official uv==0.9.7 in its private runtime; original installer still runs",
+    "grader_uv_version": "uv 0.9.7",
+    "original_reward": 1.0,
+    "strict": 1,
+    "tests": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "temporary_paths_removed": true,
+    "packages_remain_only_in_temporary_provider_environment": true,
+    "test_count_source": "original pytest stdout: 6 passed",
+    "adapter_receipt_error": "RuntimeError: Original pytest report missing: preserve raw reward, mark grading infrastructure error",
+    "original_source_before_after_verified": false,
+    "original_source_audit": "Original hashes checked before scoring and verifier mounted read-only; post-run check was skipped by the adapter false-positive CTRF assertion. No post-run hash claim.",
+    "answer_files_unchanged_by_grader": null
+  },
+  "condition_valid": true,
+  "new_solver_run_for_recovery": false,
+  "receipt_format": "full dependency metadata truncated in setup; recovered from provider artifact"
+}

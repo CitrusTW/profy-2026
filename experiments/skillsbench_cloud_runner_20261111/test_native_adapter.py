@@ -5,6 +5,11 @@ from native_support import archive_rows,choose_target,copy_targets,extract_input
 from remote_native import changed_files,root_file
 
 class NativeAdapterTests(unittest.TestCase):
+    def test_original_pytest_stdout_without_ctrf(self):
+        from remote_grade import pytest_counts
+        self.assertEqual(pytest_counts('All tests passed!\n==== 6 passed, 2 warnings in 2.73s ====\n'),{'passed':6})
+        self.assertEqual(pytest_counts('=== 1 failed, 5 passed in 1s ===\n'),{'failed':1,'passed':5})
+        self.assertEqual(pytest_counts(''),{})
     def test_recovery_selection_transport_and_staging_exclude_groundtruth(self):
         spec=registry()['xlsx-recover-data']
         rows=[('Dockerfile',b'FROM ubuntu:24.04\nCOPY nasa_budget_incomplete.xlsx /root/nasa_budget_incomplete.xlsx\n',0o644),('nasa_budget_incomplete.xlsx',b'incomplete public bytes',0o644),('groundtruth/complete.xlsx',b'never transmit',0o644),('skills/pdf/SKILL.md',b'original pdf',0o644)]

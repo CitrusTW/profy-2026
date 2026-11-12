@@ -1,0 +1,16 @@
+{
+  "task": "protein-expression-analysis",
+  "label": "no-skills",
+  "model": "gpt-6.1-sol",
+  "adapter": "cloud-native-owned-files-v2",
+  "adapter_source_sha256": {
+    "native_support.py": "4ef285130fa2e84f79a08c1e072f45d414bc6076e96277cb05c32d915cafdfa3",
+    "remote_grade.py": "2933a85a837c9455b87a3adb04fd68b82c651742a0a51398abb623ac3a3aa737",
+    "remote_namespace_grade.py": "d760a66888977c1e52bec1cd84008afb0b1a6409b2d3a828140f63fa87666f5e",
+    "remote_native.py": "e5957e9c57d7210ddc38f192d6a2709c691e6865f0076a8f6353b7a424c29913",
+    "remote_setup.py": "2048f4fb10f692de86fcd82835112d3f01842c255a9800907395be1b9212cc99",
+    "remote_tools.py": "d0211c1907c65f03d80ae000985fc7a5b1c44ca317db7d8ac47186df451ec58a",
+    "study.py": "c5b3c36b79c5085bf5d2b1bbd6f0e0a58b32e6300d5ce45e537ee2b50f3f6aaa",
+    "task_specs.json": "c7bc5540a65dd54aab0c67008ef54435adb45ff3c3dde1e53202e1cae3b113e0"
+  }
+}
