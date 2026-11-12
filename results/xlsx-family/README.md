@@ -5,8 +5,9 @@
 | 组别 | 原得分 | 原检查 | 求解 tokens | 状态 |
 | --- | ---: | ---: | ---: | --- |
 | no-skills | 1.0 | 27/27 | 155489 | 已完成有效原评分 |
-| with-skills | 待返回 | 待返回 | 待返回 | 原版 xlsx skill 运行中 |
-| with-CogniLife-skills | 待运行 | 待运行 | 待运行 | 第10轮尚未开始 |
+| with-skills | 1.0 | 27/27 | 248816 | 已完成 |
+| with-CogniLife-skills 第11轮开发 | 1.0 | 27/27 | 109337 | 达标 |
+| 同一新 skill 确认 | 1.0 | 27/27 | 133351 | 达标并固定 |
 
 no-skills 的准备和求解对话共151.985秒, 不包括附件上传和评分, 8个 model turns / 7次工具调用. tokens 包含该组的准备和求解对话, 不包含评分、故障诊断或后续 Evolution; 费用美元数未由 API 返回, 不估算.
 
@@ -21,4 +22,10 @@ no-skills 的准备和求解对话共151.985秒, 不包括附件上传和评分,
 
 环境是 Profy Debian + Gnumeric/LibreOffice Calc, 求解用 PRoot 对应原路径, 评分在私有 kernel mount namespace 中运行原 test.sh, 预装原脚本需要的 uv0.9.7. 这与官方 Ubuntu Docker image 有差别; 三组采用同一方案和软件版本, 单独报告为 Profy 下的外部适配.
 
-这道题用于开发和后续候选选择. 目前没有三组结果, 也没有新的泛化结论. 另有4道题已完成三组, 不把本题第一组混算成第5道三组完成.
+这道题用于开发和后续候选选择. 本题已完成三组开发验证和一次候选确认, 另有4道题已有三组记录. 本题不是独立泛化结果; 未参与进化的其他公开题还没有跑完.
+
+## 第10轮与第11轮
+
+第10轮候选27/27, 但291458总tokens高于原版, 未采用, 完整SKILL.md与记录保留在 [round-10](round-10/ROUND.json). 第11轮由原Evolution组件读取原版与第10轮的完整开发求解记录后产生, 没有手工改写技能正文, 没有读取评分历史或隐藏答案. [开发与确认记录](round-11/ROUND.json), [固定版本与边界](FROZEN.json), [完整新SKILL.md](../../skills/with-CogniLife-skills/xlsx/SKILL.md).
+
+第11轮两次比原版少56.06% / 46.41%总tokens, 比no-skills也少29.68% / 14.24%. 这是同一道开发题的选择结果, 需要换题检验. 第10/11轮OpenRouter Evolution费用由API实际返回, 分别0.1345174 / 0.1410002美元; Profy费用没有返回, 不推算.

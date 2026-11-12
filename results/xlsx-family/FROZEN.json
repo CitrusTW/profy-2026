@@ -1,0 +1,13 @@
+{
+  "round": 11,
+  "task": "weighted-gdp-calc",
+  "skill_sha256": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+  "selection_uses_development_only": true,
+  "native_promoted": false,
+  "semantic_applicability_verified": false,
+  "missing_implementations": {
+    "capability_gap_classifier": "No callable implementation identified in the received source.",
+    "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+    "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+  }
+}

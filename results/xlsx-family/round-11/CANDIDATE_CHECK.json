@@ -1,0 +1,62 @@
+{
+  "kind": "offline structural and DEV evidence check, not semantic verification",
+  "checks": {
+    "configured_evolver_model": true,
+    "configured_evolver_endpoint": true,
+    "original_gate_admitted": true,
+    "parent_version_matches": true,
+    "recorded_request_model": true,
+    "first_request_matches_provenance": true,
+    "candidate_matches_pending": true,
+    "candidate_changed_from_parent": true,
+    "preselected_target_only": true,
+    "candidate_body_size": true,
+    "candidate_frontmatter": true,
+    "dev_original execution": true,
+    "dev_original skill read": true,
+    "dev_original scoring complete": true,
+    "dev_original strict consistent": true,
+    "dev_candidate execution": true,
+    "dev_candidate skill read": true,
+    "dev_candidate scoring complete": true,
+    "dev_candidate strict consistent": true,
+    "development_quality_nondegrading": true
+  },
+  "structural_and_dev_pass": true,
+  "failed_checks": [],
+  "measured_development": {
+    "total_tokens": {
+      "before": 248816,
+      "after": 109337,
+      "delta": -139479
+    },
+    "tool_calls": {
+      "before": 10,
+      "after": 5,
+      "delta": -5
+    },
+    "llm_turns": {
+      "before": 11,
+      "after": 6,
+      "delta": -5
+    }
+  },
+  "development_efficiency_gate": {
+    "measured_total_tokens_available": true,
+    "measured_total_tokens_strictly_lower": true,
+    "scope": "Single DEV observation, not statistical evidence or dollar-cost comparison.",
+    "rule_origin": "New external experiment safeguard motivated by documented objective; not a received original implementation."
+  },
+  "eligible_for_paid_evaluation": true,
+  "measured_efficiency_is_original_gate": false,
+  "semantic_applicability_verified": false,
+  "native_promoted": false,
+  "full_paper_method_verified": false,
+  "missing_implementations": {
+    "capability_gap_classifier": "No callable implementation identified in the received source.",
+    "semantic_applicability_check": "No executable check that learned advice applies to another task was identified.",
+    "native_acceptance_and_promotion": "Not connected: local pending storage is not native acceptance or promotion."
+  },
+  "candidate_sha256": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+  "parent_sha256": "9bdc1fee81f3be9cb34ac49f8890c094a3855d3d0236783d10e0ea6df1515e01"
+}

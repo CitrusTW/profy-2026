@@ -1,0 +1,33 @@
+{
+  "original_verifier": true,
+  "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+  "task": "weighted-gdp-calc",
+  "pre_grade_file_hashes": {
+    "/root/gdp.xlsx": "9c2b8e69cd4fe20f8af2c42f0a760479e73d3e049fda26ebdb308aee97ca0cf8",
+    "/root/work/calculated/recalc.xlsx": "ff46a7f0727a21be657c7ad2d3f178150b3cae4c0a23aa2c9584c5ba77262d84",
+    "/root/work/formulas.json": "46f65cb3098c86b545f69ec751645b09fcdb4785eaeea4bb8f663138d80d2bba",
+    "/root/work/original.xlsx": "fb8873433c7206cf431a01d2dec7e943b91d3faacfe2ce4c30b9de65c8842caa",
+    "/root/work/recalc.xlsx": "2ac0831b34506b9377a901e7b91750924f2668e60e6a52931b92c85d82c4297c"
+  },
+  "original_source_hashes": {
+    "test.sh": "f6d94159004f2dcf9488d3f80920a60675f7b45fb22353592fa9b3a61c24843a",
+    "test_outputs.py": "94b1b6089c1c143cb1f54c5110cfe932e2d85194c19286c7201f5c29c2c87055"
+  },
+  "cleanup_errors": [],
+  "runtime_backend": "native-proot",
+  "runtime_difference": "Profy Debian with original task files and unmodified original verifier, not the official Ubuntu Docker image",
+  "original_returncode": 0,
+  "grading_backend": "private kernel mount namespace; original test.sh unchanged",
+  "uv_dependency_provisioning": "Official uv==0.9.7 wheel installed before grading; original installer still runs",
+  "grader_uv_version": "uv 0.9.7",
+  "original_reward": 1.0,
+  "strict": 1,
+  "tests": 27,
+  "passed": 27,
+  "failed": 0,
+  "skipped": 0,
+  "original_source_before_after_verified": true,
+  "answer_files_unchanged_by_grader": true,
+  "temporary_paths_removed": true,
+  "packages_remain_only_in_temporary_provider_environment": true
+}

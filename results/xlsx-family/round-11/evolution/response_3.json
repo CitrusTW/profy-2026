@@ -1,0 +1,57 @@
+{
+  "id": "gen-1794460166-0p8K426C5otph2vjDyDR",
+  "object": "chat.completion",
+  "created": 1794460166,
+  "model": "openai/gpt-6.1-sol",
+  "provider": "OpenAI",
+  "system_fingerprint": null,
+  "service_tier": "default",
+  "choices": [
+    {
+      "index": 0,
+      "logprobs": null,
+      "finish_reason": "tool_calls",
+      "native_finish_reason": "completed",
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "refusal": null,
+        "reasoning": null,
+        "tool_calls": [
+          {
+            "type": "function",
+            "index": 0,
+            "id": "call_oSBBdkzfi19qowHeJrsZftNc",
+            "function": {
+              "name": "skill",
+              "arguments": "{\"action\":\"activate\",\"name\":\"expert/xlsx\"}"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 56430,
+    "completion_tokens": 23,
+    "total_tokens": 56453,
+    "cost": 0.0063371,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 56236,
+      "cache_write_tokens": 191,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.0063371,
+      "upstream_inference_prompt_cost": 0.0061071,
+      "upstream_inference_completions_cost": 0.00023
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 0,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  }
+}

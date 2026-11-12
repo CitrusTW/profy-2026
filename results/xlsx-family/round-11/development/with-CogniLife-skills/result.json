@@ -1,0 +1,70 @@
+{
+  "label": "with-CogniLife-skills",
+  "task": "weighted-gdp-calc",
+  "completed": true,
+  "error": null,
+  "elapsed_sec": 128.17,
+  "output_received": true,
+  "native_zip_sha256": "06df6935ff62e72e0d577be24f23d2289a0dc500a13101bac8756f1b7a4da4a3",
+  "file_hashes": {
+    "output/original_verifier_stdout.log": "8979a6b1e23588337051c13840fba6c227260e4cff72a843d77eee19777f00a7",
+    "output/score_receipt.json": "86849313907351bb84aca9a52484a1ff0757785713d2f9de999dd67221bcc1bb",
+    "output/fs/root/gdp.xlsx": "9c2b8e69cd4fe20f8af2c42f0a760479e73d3e049fda26ebdb308aee97ca0cf8",
+    "output/fs/root/work/original.xlsx": "fb8873433c7206cf431a01d2dec7e943b91d3faacfe2ce4c30b9de65c8842caa",
+    "output/fs/root/work/recalc.xlsx": "484d53e8836d775f5e319fd401da6cbf458adbf787ce54e8d70944fde0b71b6c",
+    "output/fs/root/work/update_gdp.py": "3252f66b098208477e3125b4bb06d30c17ceb15452d45cb66407c83af6d7509b",
+    "output/fs/root/work/calculated/recalc.xlsx": "ab1296131b054d20d944b5118c904eed79b15e5a90d242dcc125ba51cf5ec783"
+  },
+  "skill_sha256": "51ca8a2ff044812e60ca830e9951d17219a66c736004edc99729d157f275cf1a",
+  "target_skill_read_verified": true,
+  "skill_hash_marker_verified": true,
+  "read_verification_method": "Entire native-returned body at the attached target path matches the supplied candidate; printed hashes are recorded separately",
+  "external_skill_tools_observed": [],
+  "supplied_benchmark_skills": true,
+  "tokens": {
+    "input_tokens": 106344,
+    "output_tokens": 2993,
+    "total_tokens": 109337,
+    "cache_read_tokens": 79385,
+    "cache_write_tokens": 26941,
+    "llm_turns": 6,
+    "tool_calls": 5
+  },
+  "profy_cost_usd": null,
+  "score": {
+    "original_verifier": true,
+    "benchmark_pin": "f860ecf02ef53412a030f8661c83d644b739ff01",
+    "task": "weighted-gdp-calc",
+    "pre_grade_file_hashes": {
+      "/root/gdp.xlsx": "9c2b8e69cd4fe20f8af2c42f0a760479e73d3e049fda26ebdb308aee97ca0cf8",
+      "/root/work/calculated/recalc.xlsx": "ab1296131b054d20d944b5118c904eed79b15e5a90d242dcc125ba51cf5ec783",
+      "/root/work/original.xlsx": "fb8873433c7206cf431a01d2dec7e943b91d3faacfe2ce4c30b9de65c8842caa",
+      "/root/work/recalc.xlsx": "484d53e8836d775f5e319fd401da6cbf458adbf787ce54e8d70944fde0b71b6c",
+      "/root/work/update_gdp.py": "3252f66b098208477e3125b4bb06d30c17ceb15452d45cb66407c83af6d7509b"
+    },
+    "original_source_hashes": {
+      "test.sh": "f6d94159004f2dcf9488d3f80920a60675f7b45fb22353592fa9b3a61c24843a",
+      "test_outputs.py": "94b1b6089c1c143cb1f54c5110cfe932e2d85194c19286c7201f5c29c2c87055"
+    },
+    "cleanup_errors": [],
+    "runtime_backend": "native-proot",
+    "runtime_difference": "Profy Debian with original task files and unmodified original verifier, not the official Ubuntu Docker image",
+    "original_returncode": 0,
+    "grading_backend": "private kernel mount namespace; original test.sh unchanged",
+    "uv_dependency_provisioning": "Official uv==0.9.7 wheel installed before grading; original installer still runs",
+    "grader_uv_version": "uv 0.9.7",
+    "original_reward": 1.0,
+    "strict": 1,
+    "tests": 27,
+    "passed": 27,
+    "failed": 0,
+    "skipped": 0,
+    "original_source_before_after_verified": true,
+    "answer_files_unchanged_by_grader": true,
+    "temporary_paths_removed": true,
+    "packages_remain_only_in_temporary_provider_environment": true
+  },
+  "artifact_collection_phase": "fixed original grading after solving",
+  "grader_same_platform_session": true,
+  "condition_valid": true
+}
