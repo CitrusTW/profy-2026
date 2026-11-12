@@ -1,0 +1,1 @@
+{"model": "deepseek/deepseek-v4-flash", "messages": [{"role": "user", "content": "广东历史类，502分，位次58000，家里希望学医或者师范，将来回老家县城工作，预算有限不考虑中外合办"}], "temperature": 0.7, "max_tokens": 4096}

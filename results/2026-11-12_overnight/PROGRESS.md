@@ -129,3 +129,5 @@ I004 original-order next-run probe: {"instruction": "I-004", "started_epoch": 17
 - 2026-11-12T17:50:28.580141+00:00 draft2 ready: compiled6 main/25total pages;395 numerical references verified, all old85 proxy numbers preserved in appendix, new clean ADV Figure2, lessons and final frozen Skills cohort. Original/Overleaf/OpenReview unchanged. Profy requests remain stopped.
 
 2026-11-12T17:57:33.901368+00:00 I010 baseline task ADV_001 processed; calls=2, receipt USD=0.0007532186, unknown-cost calls=0.
+
+2026-11-12T17:58:36.168183+00:00 I010 baseline task ADV_002 processed; calls=4, receipt USD=0.0014019213, unknown-cost calls=0.
