@@ -1,7 +1,7 @@
 # STATUS
-- Updated (America/Los_Angeles): 2026-11-12T08:42:16.088212-08:00
+- Updated (America/Los_Angeles): 2026-11-12T08:42:43.289576-08:00
 - Last applied instruction: I-006 (in progress)
-- Latest read: I-006; checkpoint: I006-draft1-ready-body6pages-total21-numeric479checks-anonymous
+- Latest read: I-006; checkpoint: I006-watcher-v11-draft-delivery
 - Current work: I006 manuscript revision copy and original-order Profy recovery probes; frozen skills, no new evolution.
 - Next: continue one next-planned-run probe every30min; if accepted, resume serial schedule and supplement supply B/C original-verifier grading. Draft1 due11:00PST, reviewer11:15; final15:30; no new run after13:30.
 - ETA: SkillsBench completion unknown because API unavailable; ADV complete; paper state below.
